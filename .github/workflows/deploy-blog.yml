@@ -35,6 +35,17 @@ jobs:
         # npm ci 类似于 npm-install ，但它旨在用于自动化环境，如测试平台，持续集成和部署，比常规安装更严格，项目中必须有package-lock.json
         run: npm ci
 
+      - name: Mirror the Github organization repos to Gitee.
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: 'github/yangchunjian'                            # 这里改为自己github账号名称，如github/yangchunjian
+          dst: 'gitee/yangchunjian'                            # 这里改为gitee上账号名称，如gitee/yangchunjian
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY20230718 }}    # 这是生成的私钥，下面第3步会讲
+          dst_token: ${{ secrets.GITEE_TOKEN20230718 }}        # 这是gitee上生成的token，下面会讲
+          force_update: true
+          static_list: "ujava"                    # 同步的仓库名称，这里为JavaInterview，意思是会自动同步该仓库到gitee下同名仓库
+          debug: true
+
       - name: Build docs
         env:
           NODE_OPTIONS: --max_old_space_size=8192
