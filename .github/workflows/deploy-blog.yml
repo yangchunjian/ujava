@@ -30,11 +30,6 @@ jobs:
           node-version: 18
           cache: npm
 
-      - name: Install Dependencies
-        # run 表示告诉任务在运行器上执行一个命令
-        # npm ci 类似于 npm-install ，但它旨在用于自动化环境，如测试平台，持续集成和部署，比常规安装更严格，项目中必须有package-lock.json
-        run: npm ci
-
       - name: Mirror the Github organization repos to Gitee.
         uses: Yikun/hub-mirror-action@master
         with:
