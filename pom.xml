@@ -12,8 +12,8 @@
     <url>https://github.com/yangchunjian/ujava</url>
 
     <modules>
-        <module>ujava-all</module>
         <module>ujava-base</module>
+        <module>ujava-all</module>
     </modules>
 
     <properties>
