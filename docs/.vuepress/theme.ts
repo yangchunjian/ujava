@@ -6,7 +6,7 @@ export default hopeTheme({
   hostname: "https://ujava.cn",
 
   author: {
-    name: "uJava",
+    name: "ujava",
     url: "https://ujava.cn",
   },
 

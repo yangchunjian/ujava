@@ -5,8 +5,8 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "uJava",
-  description: "uJava工具",
+  title: "ujava",
+  description: "ujava工具",
 
   theme,
 

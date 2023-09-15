@@ -8,7 +8,7 @@ bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: 项目名称
-tagline: uJava工具
+tagline: ujava工具
 actions:
   - text: 使用指南 💡
     link: ./demo/
@@ -259,5 +259,5 @@ highlights:
 #        link: https://theme-hope.vuejs.press/zh/guide/advanced/pwa.html
 #
 copyright: false
-footer: 版权所有 © 2023-present uJava
+footer: 版权所有 © 2023-present ujava
 ---
