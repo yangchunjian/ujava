@@ -27,4 +27,6 @@ export default navbar([
     icon: "book",
     link: "https://yangchunjian.com",
   },
+  "/author/",
+
 ]);
