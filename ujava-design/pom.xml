@@ -8,9 +8,8 @@
         <artifactId>ujava-parent</artifactId>
         <version>1.0.0</version>
     </parent>
-
-    <artifactId>ujava-all</artifactId>
+    <artifactId>ujava-design</artifactId>
     <name>${project.artifactId}</name>
-    <description>ujava工具集合</description>
+    <description>ujava设计模式等工具</description>
 
 </project>

@@ -8,7 +8,7 @@
         <artifactId>ujava-parent</artifactId>
         <version>1.0.0</version>
     </parent>
-    <artifactId>ujava-base</artifactId>
+    <artifactId>ujava-common</artifactId>
     <name>${project.artifactId}</name>
     <description>ujava核心，包括集合、字符串、Bean等工具</description>
 
