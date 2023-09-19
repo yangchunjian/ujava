@@ -26,7 +26,7 @@ if [ ! -n "$old_version" ]; then
 fi
 
 # 替换README.md中的版本
-sed -i "s/${old_version}/${new_version}/g" $pwd/README.md
+sed -i "" "s/${old_version}/${new_version}/g" $pwd/README.md
 
 # 保留新版本号
 echo "$new_version" > $pwd/bin/version.txt
