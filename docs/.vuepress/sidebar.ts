@@ -4,16 +4,16 @@ export default sidebar({
   "/": [
     "",
     {
-      text: "案例",
+      text: "设计模式",
       icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
+      prefix: "design/",
+      link: "design/",
       children: "structure",
     },
     {
-      text: "文档",
+      text: "思想",
       icon: "book",
-      prefix: "guide/",
+      prefix: "mind/",
       children: "structure",
     },
     // "slides",
