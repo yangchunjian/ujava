@@ -6,7 +6,7 @@
     <parent>
         <groupId>cn.ujava</groupId>
         <artifactId>ujava-parent</artifactId>
-        <version>1.0.0</version>
+        <version>2.0.0</version>
     </parent>
     <artifactId>ujava-design</artifactId>
     <name>${project.artifactId}</name>

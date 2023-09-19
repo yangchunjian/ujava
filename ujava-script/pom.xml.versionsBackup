@@ -6,10 +6,10 @@
     <parent>
         <groupId>cn.ujava</groupId>
         <artifactId>ujava-parent</artifactId>
-        <version>2.0.0</version>
+        <version>1.0.0</version>
     </parent>
-    <artifactId>ujava-common</artifactId>
+    <artifactId>ujava-script</artifactId>
     <name>${project.artifactId}</name>
-    <description>ujava核心，包括集合、字符串、Bean等工具</description>
+    <description>ujava脚本等工具</description>
 
 </project>
