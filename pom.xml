@@ -14,10 +14,10 @@
     <url>https://github.com/yangchunjian/ujava</url>
 
     <modules>
+        <module>ujava-all</module>
         <module>ujava-common</module>
         <module>ujava-design</module>
         <module>ujava-script</module>
-        <module>ujava-all</module>
     </modules>
 
     <properties>

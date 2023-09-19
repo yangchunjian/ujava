@@ -120,20 +120,20 @@ UJava = Hu + tool，是原公司项目底层代码剥离后的开源库，“Hu�
 <dependency>
     <groupId>cn.ujava</groupId>
     <artifactId>ujava-all</artifactId>
-    <version>2.0.0</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 
 ### 🍐Gradle
 ```
-implementation 'cn.ujava:ujava-all:2.0.0'
+implementation 'cn.ujava:ujava-all:3.0.0'
 ```
 
 ### 📥下载jar
 
 点击以下链接，下载`ujava-all-X.X.X.jar`即可：
 
-- [Maven中央库](https://repo1.maven.org/maven2/cn/ujava/ujava-all/2.0.0/)
+- [Maven中央库](https://repo1.maven.org/maven2/cn/ujava/ujava-all/3.0.0/)
 
 > 🔔️注意
 > UJava 5.x支持JDK8+，对Android平台没有测试，不能保证所有工具类或工具方法可用。
