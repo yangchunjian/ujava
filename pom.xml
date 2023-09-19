@@ -148,7 +148,7 @@
                         <plugin>
                             <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-source-plugin</artifactId>
-                            <version>2.2.1</version>
+                            <version>3.2.1</version>
                             <executions>
                                 <execution>
                                     <id>attach-sources</id>
@@ -161,16 +161,16 @@
                         <plugin>
                             <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-javadoc-plugin</artifactId>
-                            <version>2.10.4</version>
+                            <version>3.2.0</version>
                             <executions>
                                 <execution>
                                     <phase>package</phase>
                                     <goals>
                                         <goal>jar</goal>
                                     </goals>
-                                    <configuration>
-                                        <additionalparam>-Xdoclint:none</additionalparam>
-                                    </configuration>
+<!--                                    <configuration>-->
+<!--                                        <additionalparam>-Xdoclint:none</additionalparam>-->
+<!--                                    </configuration>-->
                                 </execution>
                             </executions>
                         </plugin>
