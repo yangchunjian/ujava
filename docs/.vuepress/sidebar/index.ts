@@ -23,7 +23,7 @@ export default sidebar({
       children: [
         "adapter",
         "bridge",
-        "vistitor",
+        "visitor",
       ],
     },
     {
