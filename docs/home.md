@@ -1,0 +1,22 @@
+---
+icon: creative
+title: UJava（Java学习&面试指南）
+---
+
+::: tip 友情提示
+
+- **设计模式**：
+
+:::
+
+<div align="center">
+
+
+[GitHub](https://github.com/yangchunjian/UJava) | [Gitee](https://gitee.com/yangchunjian/UJava)
+
+</div>
+
+
+## Java
+
+### 基础
