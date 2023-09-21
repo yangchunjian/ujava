@@ -57,5 +57,5 @@ jobs:
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY20230718 }}  	# 这是生成的私钥，下面第3步会讲
           dst_token:  ${{ secrets.GITEE_TOKEN20230718 }}     	# 这是gitee上生成的token，下面会讲
           force_update: true
-          static_list: "ujava"   					# 同步的仓库名称，这里为JavaInterview，意思是会自动同步该仓库到gitee下同名仓库
+          static_list: "ujava"   					# 同步的仓库名称，这里为ujava，意思是会自动同步该仓库到gitee下同名仓库
           debug: true
