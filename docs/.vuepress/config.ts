@@ -5,7 +5,8 @@ import theme from "./theme.js";
 export default defineUserConfig({
   base: "/",
 
-  title: "UJava【Java学习 + Java面试】",
+  title: "UJava",
+  // title: "UJava【Java学习 + Java面试】",
   description:
       " 【Java学习 + Java面试】首选UJava！  ",
   lang: "zh-CN",
