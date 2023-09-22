@@ -3,8 +3,7 @@ import theme from "./theme.js";
 // import { searchProPlugin } from 'vuepress-plugin-search-pro';
 
 export default defineUserConfig({
-
-  dest: "./dist",
+  base: "/",
 
   title: "UJava【Java学习 + Java面试】",
   description:
