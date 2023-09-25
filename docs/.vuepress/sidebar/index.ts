@@ -5,7 +5,7 @@ import { aboutTheAuthor } from "./about-the-author.js";
 export default sidebar({
   // 应该把更精确的路径放置在前边
 
-  "/auth/": aboutTheAuthor,
+  "/about-the-author/": aboutTheAuthor,
   // 必须放在最后面
   "/": [
     {
