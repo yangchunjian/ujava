@@ -44,6 +44,7 @@ export default sidebar({
           icon: "star",
           children: [
             "visitor",
+            "responsibility",
           ],
         }
       ],
