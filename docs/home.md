@@ -1,6 +1,6 @@
 ---
-icon: creative
 title: UJava（Java学习&面试指南）
+icon: laptop-code
 ---
 
 ::: tip 友情提示

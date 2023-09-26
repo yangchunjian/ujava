@@ -1,7 +1,7 @@
 ---
 title: 常见问题
 category: 走近项目
-icon: help
+icon: laptop-code
 ---
 
 ## UJava 是否支持 RSS？
