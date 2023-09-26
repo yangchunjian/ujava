@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const author = arraySidebar([
   {
     text: "简介",
-    icon: "experience",
+    icon: "star",
     collapsible: false,
     children: [
       "author0",
@@ -11,7 +11,7 @@ export const author = arraySidebar([
   },
   {
     text: "经历",
-    icon: "chat",
+    icon: "star",
     collapsible: false,
     children: [
       "author1",
