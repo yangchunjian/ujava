@@ -1,6 +1,6 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-export const aboutTheAuthor = arraySidebar([
+export const author = arraySidebar([
   {
     text: "简介",
     icon: "experience",

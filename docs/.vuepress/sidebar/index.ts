@@ -1,11 +1,11 @@
 import { sidebar } from "vuepress-theme-hope";
 
-import { aboutTheAuthor } from "./about-the-author.js";
+import { author } from "./author.js";
 
 export default sidebar({
   // 应该把更精确的路径放置在前边
 
-  "/about-the-author/": aboutTheAuthor,
+  "/author/": author,
   // 必须放在最后面
   "/": [
     {
