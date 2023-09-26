@@ -21,9 +21,31 @@ export default sidebar({
       collapsible: true,
       prefix: "design/",
       children: [
-        "adapter",
-        "bridge",
-        "visitor",
+        {
+          text: "创建型",
+          prefix: "create/",
+          icon: "star",
+          children: [
+            "builder",
+          ],
+        },
+        {
+          text: "结构型",
+          prefix: "structure/",
+          icon: "star",
+          children: [
+            "adapter",
+            "bridge",
+          ],
+        },
+        {
+          text: "行为型",
+          prefix: "action/",
+          icon: "star",
+          children: [
+            "visitor",
+          ],
+        }
       ],
     },
     {
