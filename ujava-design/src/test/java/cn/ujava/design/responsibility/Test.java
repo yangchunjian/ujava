@@ -11,7 +11,7 @@ class Test {
     }
 
     @org.junit.jupiter.api.Test
-    void testAdapter() {
+    void test() {
 
 
         Handler handler1 = new ConcreteHandler1();

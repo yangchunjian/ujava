@@ -17,7 +17,7 @@ class Test {
     }
 
     @org.junit.jupiter.api.Test
-    void testAdapter() {
+    void test() {
         Adaptee adaptee = new Adaptee();
         Target target = new Adapter(adaptee);
         target.request();

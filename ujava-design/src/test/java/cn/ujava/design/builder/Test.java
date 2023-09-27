@@ -11,7 +11,7 @@ class Test {
     }
 
     @org.junit.jupiter.api.Test
-    void testAdapter() {
+    void test() {
 
         Car car = new CarBuilder().setMake("1").build();
 
