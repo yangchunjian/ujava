@@ -1,5 +1,5 @@
 ---
-title: 适配器模式
+title: 访问者模式
 index: false
 icon: laptop-code
 category:
