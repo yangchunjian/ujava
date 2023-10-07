@@ -26,6 +26,8 @@ export default sidebar({
           prefix: "create/",
           icon: "star",
           children: [
+            "singleton",
+            "prototype",
             "builder",
           ],
         },
@@ -36,6 +38,8 @@ export default sidebar({
           children: [
             "adapter",
             "bridge",
+            "composite",
+            "decorator",
           ],
         },
         {
@@ -43,8 +47,26 @@ export default sidebar({
           prefix: "action/",
           icon: "star",
           children: [
+            "command",
+            "interpreter",
+            "iterator",
+            "mediator",
+            "memento",
+            "observer",
+            "state",
+            "strategy",
+            "template",
             "visitor",
             "responsibility",
+          ],
+        },
+        {
+          text: "其他型",
+          prefix: "other/",
+          icon: "star",
+          children: [
+            "filter",
+            "nullobject",
           ],
         }
       ],
