@@ -31,6 +31,7 @@ export default sidebar({
             "factory",
             "abstractfactory",
             "builder",
+            "proxy",
           ],
         },
         {
@@ -42,6 +43,8 @@ export default sidebar({
             "bridge",
             "composite",
             "decorator",
+            "facade",
+            "flyweight",
           ],
         },
         {
@@ -55,11 +58,11 @@ export default sidebar({
             "mediator",
             "memento",
             "observer",
+            "responsibility",
             "state",
             "strategy",
             "template",
             "visitor",
-            "responsibility",
           ],
         },
         {
