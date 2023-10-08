@@ -2,7 +2,7 @@
 	<a href="https://ujava.cn/"><img src="https://cdn.jsdelivr.net/gh/looly/ujava-site/images/logo.jpg" width="45%"></a>
 </p>
 <p align="center">
-	<strong>🍬A set of tools that keep Java sweet.</strong>
+	<strong>🍬A set of design pattern.</strong>
 </p>
 <p align="center">
 	👉 <a href="https://ujava.cn">https://ujava.cn/</a> 👈
@@ -52,13 +52,12 @@
 
 ## 📚简介
 
-`UJava`是一个功能丰富且易用的**Java工具库**，通过诸多实用工具类的使用，旨在帮助开发者快速、便捷地完成各类开发任务。
-这些封装的工具涵盖了字符串、数字、集合、编码、日期、文件、IO、加密、数据库JDBC、JSON、HTTP客户端等一系列操作，
+`UJava`是一个功能丰富且易用的**Java设计模式库**，旨在帮助开发者快速、便捷地使用设计模式完成各类开发任务。
 可以满足各种不同的开发需求。
 
 ### 🎁UJava名称的由来
 
-UJava = Hu + tool，是原公司项目底层代码剥离后的开源库，“Hu”是公司名称的表示，tool表示工具。UJava谐音“糊涂”，一方面简洁易懂，一方面寓意“难得糊涂”。
+UJava = U + Java，是基于设计经验的开源库，“U”是You的表示，Java表示语言。UJava谐音“你的语言”，简洁易懂。
 
 ### 🍺UJava理念
 
@@ -70,7 +69,7 @@ UJava = Hu + tool，是原公司项目底层代码剥离后的开源库，“Hu�
 -------------------------------------------------------------------------------
 
 ## 🛠️包含组件
-一个Java基础工具类，对文件、流、加密解密、转码、正则、线程、XML等JDK方法进行封装，组成各种Util工具类，同时提供以下组件：
+提供以下组件：
 
 | 模块            | 介绍                                             |
 |---------------|------------------------------------------------|
@@ -85,9 +84,7 @@ UJava = Hu + tool，是原公司项目底层代码剥离后的开源库，“Hu�
 
 ## 📝文档
 
-[📘中文文档](https://www.ujava.cn/docs/)
-
-[📘中文备用文档](https://plus.ujava.cn/)
+[📘中文文档](https://www.ujava.cn/)
 
 [📙参考API](https://apidoc.gitee.com/yangchunjian/ujava/)
 
@@ -101,13 +98,6 @@ UJava = Hu + tool，是原公司项目底层代码剥离后的开源库，“Hu�
 
 [Gitee上捐赠](https://gitee.com/yangchunjian/ujava)
 
-### 👕周边商店
-
-你也可以通过购买UJava的周边商品来支持UJava维护哦！
-
-我们提供了印有UJava Logo的周边商品，欢迎点击购买支持：
-
-👉 [UJava 周边商店](https://market.m.taobao.com/apps/market/content/index.html?wh_weex=true&contentId=331724720170) 👈
 
 -------------------------------------------------------------------------------
 
@@ -136,8 +126,7 @@ implementation 'cn.ujava:ujava-all:3.0.3'
 - [Maven中央库](https://repo1.maven.org/maven2/cn/ujava/ujava-all/3.0.3/)
 
 > 🔔️注意
-> UJava 5.x支持JDK8+，对Android平台没有测试，不能保证所有工具类或工具方法可用。
-> 如果你的项目使用JDK7，请使用UJava 4.x版本（不再更新）
+> UJava 3.x支持JDK8+。
 
 ### 🚽编译安装
 
@@ -184,10 +173,9 @@ UJava的源码分为两个分支，功能如下：
 UJava欢迎任何人为UJava添砖加瓦，贡献代码，不过维护者是一个强迫症患者，为了照顾病人，需要提交的pr（pull request）符合一些规范，规范如下：
 
 1. 注释完备，尤其每个新增的方法应按照Java文档规范标明方法说明、参数说明、返回值说明等信息，必要时请添加单元测试，如果愿意，也可以加上你的大名。
-2. UJava的缩进按照Eclipse（~~不要跟我说IDEA多好用，维护者非常懒，学不会~~，IDEA真香，改了Eclipse快捷键后舒服多了）默认（tab）缩进，所以请遵守（不要和我争执空格与tab的问题，这是一个病人的习惯）。
-3. 新加的方法不要使用第三方库的方法，UJava遵循无依赖原则（除非在extra模块中加方法工具）。
-4. 请pull request到`dev`分支。UJava在5.x版本后使用了新的分支：`main`是主分支，表示已经发布中央库的版本，这个分支不允许pr，也不允许修改。
-5. 我们如果关闭了你的issue或pr，请不要诧异，这是我们保持问题处理整洁的一种方式，你依旧可以继续讨论，当有讨论结果时我们会重新打开。
+2. 新加的方法不要使用第三方库的方法，UJava遵循无依赖原则（除非在extra模块中加方法工具）。
+3. 请pull request到`dev`分支。UJava在5.x版本后使用了新的分支：`main`是主分支，表示已经发布中央库的版本，这个分支不允许pr，也不允许修改。
+4. 我们如果关闭了你的issue或pr，请不要诧异，这是我们保持问题处理整洁的一种方式，你依旧可以继续讨论，当有讨论结果时我们会重新打开。
 
 -------------------------------------------------------------------------------
 
@@ -195,8 +183,3 @@ UJava欢迎任何人为UJava添砖加瓦，贡献代码，不过维护者是一�
 
 [![Stargazers over time](https://starchart.cc/yangchunjian/ujava.svg)](https://starchart.cc/yangchunjian/ujava)
 
-## 📌 知识星球
-
-<div align="center">
-	<img src="https://ujava.cn/images/yangchunjian/zsxq.jpg" height="150">
-</div>
