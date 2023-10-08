@@ -28,6 +28,8 @@ export default sidebar({
           children: [
             "singleton",
             "prototype",
+            "factory",
+            "abstractfactory",
             "builder",
           ],
         },
