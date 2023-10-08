@@ -11,5 +11,11 @@
     <artifactId>ujava-design</artifactId>
     <name>${project.artifactId}</name>
     <description>ujava设计模式等工具</description>
-
+    <dependencies>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+    </dependencies>
 </project>
