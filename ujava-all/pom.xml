@@ -6,7 +6,7 @@
     <parent>
         <groupId>cn.ujava</groupId>
         <artifactId>ujava-parent</artifactId>
-        <version>3.0.3</version>
+        <version>3.0.4</version>
     </parent>
 
     <artifactId>ujava-all</artifactId>
