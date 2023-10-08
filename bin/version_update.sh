@@ -12,7 +12,7 @@ if [ ! -n "$1" ]; then
 fi
 
 # 替换所有模块pom.xml中的版本
-mvn versions:set -DnewVersion=$1
+mvn versions:set -DgenerateBackupPoms=false -DnewVersion=$1
 
 # 不带-SNAPSHOT的版本号，用于替换其它地方
 version=${1%-SNAPSHOT}
