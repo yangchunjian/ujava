@@ -10,12 +10,12 @@ bgImageStyle:
 heroText: 项目名称
 tagline: ujava工具
 actions:
-  - text: 使用指南 💡
-    link: ./demo/
+  - text: 必读 💡
+    link: ./required/
     type: primary
 
-  - text: 文档
-    link: ./guide/
+  - text: 设计 💡
+    link: ./design/
 
 highlights:
   - header: 精简思想
