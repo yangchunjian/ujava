@@ -83,7 +83,7 @@ parse_arguments()
         bin/version_update.sh $2
         exit 0
         ;;
-        --deploy)
+        -d|--deploy)
         #上传制品库
         bin/deploy.sh
         exit 0
