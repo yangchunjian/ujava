@@ -46,6 +46,12 @@ exit_on_err()
 
 parse_arguments()
 {
+    #没有参数返回提示信息
+    if [ $# -eq 0 ]; then
+            usage
+            exit 0
+    fi
+    #有参数做解析
     POSITIONAL=()
     while [[ $# -gt 0 ]]
     do
@@ -83,6 +89,7 @@ parse_arguments()
         exit 0
         ;;
         *)    # unknown option
+        echo -e "\033[33m\033[01m\033[05m unknown option $1,please make option right \033[0m"
         POSITIONAL+=("$1") # save it in an array for later
         shift # past argument
         ;;
