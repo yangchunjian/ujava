@@ -11,5 +11,11 @@
     <artifactId>ujava-script</artifactId>
     <name>${project.artifactId}</name>
     <description>ujava脚本等工具</description>
-
+    <dependencies>
+        <dependency>
+            <groupId>cn.ujava</groupId>
+            <artifactId>ujava-common</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
 </project>
