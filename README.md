@@ -133,7 +133,7 @@ implementation 'cn.ujava:ujava-all:6.0.0'
 访问UJava的Gitee主页：[https://gitee.com/yangchunjian/ujava](https://gitee.com/yangchunjian/ujava) 下载整个项目源码（main或dev分支都可）然后进入UJava项目目录执行：
 
 ```sh
-./ujava.sh install
+./ujava.sh --install
 ```
 
 然后就可以使用Maven引入了。
