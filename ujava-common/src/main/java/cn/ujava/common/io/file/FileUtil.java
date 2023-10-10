@@ -23,6 +23,7 @@ import cn.ujava.common.io.resource.ResourceUtil;
 import cn.ujava.common.io.stream.BOMInputStream;
 import cn.ujava.common.io.unit.DataSizeUtil;
 import cn.ujava.common.lang.Assert;
+import cn.ujava.common.lang.Console;
 import cn.ujava.common.net.url.URLUtil;
 import cn.ujava.common.reflect.ClassUtil;
 import cn.ujava.common.regex.ReUtil;
@@ -34,7 +35,6 @@ import cn.ujava.common.util.CharsetUtil;
 import cn.ujava.common.util.ObjUtil;
 import cn.ujava.common.util.SystemUtil;
 
-import java.io.FileWriter;
 import java.io.*;
 import java.net.URI;
 import java.net.URL;
@@ -553,7 +553,7 @@ public class FileUtil extends PathUtil {
 		if (!isFile(file)) {
 			throw new IORuntimeException("Input must be a File");
 		}
-		try (final LineNumberReader lineNumberReader = new LineNumberReader(new FileReader(file))) {
+		try (final LineNumberReader lineNumberReader = new LineNumberReader(new java.io.FileReader(file))) {
 			// 设置起始为1
 			lineNumberReader.setLineNumber(1);
 			// 跳过文件中内容
@@ -824,7 +824,7 @@ public class FileUtil extends PathUtil {
 
 	/**
 	 * 在默认临时文件目录下创建临时文件，创建后的文件名为 prefix[Random].tmp。
-	 * 默认临时文件目录由系统属性 {@code java.io.tmpdir} 指定。
+	 * 默认临时文件目录由系统属性 {@code tmpdir} 指定。
 	 * 在 UNIX 系统上，此属性的默认值通常是 {@code "tmp"} 或 {@code "vartmp"}；
 	 * 在 Microsoft Windows 系统上，它通常是 {@code "C:\\WINNT\\TEMP"}。
 	 * 调用 Java 虚拟机时，可以为该系统属性赋予不同的值，但不保证对该属性的编程更改对该方法使用的临时目录有任何影响。
@@ -839,7 +839,7 @@ public class FileUtil extends PathUtil {
 
 	/**
 	 * 在默认临时文件目录下创建临时文件，创建后的文件名为 prefix[Random].suffix。
-	 * 默认临时文件目录由系统属性 {@code java.io.tmpdir} 指定。
+	 * 默认临时文件目录由系统属性 {@code tmpdir} 指定。
 	 * 在 UNIX 系统上，此属性的默认值通常是 {@code "tmp"} 或 {@code "vartmp"}；
 	 * 在 Microsoft Windows 系统上，它通常是 {@code "C:\\WINNT\\TEMP"}。
 	 * 调用 Java 虚拟机时，可以为该系统属性赋予不同的值，但不保证对该属性的编程更改对该方法使用的临时目录有任何影响。
@@ -856,7 +856,7 @@ public class FileUtil extends PathUtil {
 
 	/**
 	 * 在默认临时文件目录下创建临时文件，创建后的文件名为 prefix[Random].suffix。
-	 * 默认临时文件目录由系统属性 {@code java.io.tmpdir} 指定。
+	 * 默认临时文件目录由系统属性 {@code tmpdir} 指定。
 	 * 在 UNIX 系统上，此属性的默认值通常是 {@code "tmp"} 或 {@code "vartmp"}；
 	 * 在 Microsoft Windows 系统上，它通常是 {@code "C:\\WINNT\\TEMP"}。
 	 * 调用 Java 虚拟机时，可以为该系统属性赋予不同的值，但不保证对该属性的编程更改对该方法使用的临时目录有任何影响。
@@ -906,7 +906,7 @@ public class FileUtil extends PathUtil {
 				file.createNewFile();
 			}
 			return file;
-		} catch (final IOException e) { // fixes java.io.WinNTFileSystem.createFileExclusively access denied
+		} catch (final IOException e) { // fixes WinNTFileSystem.createFileExclusively access denied
 			throw new IORuntimeException(e);
 		}
 	}
@@ -2062,7 +2062,7 @@ public class FileUtil extends PathUtil {
 	 * @throws IORuntimeException IO异常
 	 */
 	public static BufferedWriter getWriter(final File file, final Charset charset, final boolean isAppend) throws IORuntimeException {
-		return java.io.FileWriter.of(file, charset).getWriter(isAppend);
+		return FileWriter.of(file, charset).getWriter(isAppend);
 	}
 
 	/**
@@ -2160,7 +2160,7 @@ public class FileUtil extends PathUtil {
 	 * @throws IORuntimeException IO异常
 	 */
 	public static File writeString(final String content, final File file, final Charset charset) throws IORuntimeException {
-		return java.io.FileWriter.of(file, charset).write(content);
+		return FileWriter.of(file, charset).write(content);
 	}
 
 	/**
@@ -2212,7 +2212,7 @@ public class FileUtil extends PathUtil {
 	 * @throws IORuntimeException IO异常
 	 */
 	public static File appendString(final String content, final File file, final Charset charset) throws IORuntimeException {
-		return java.io.FileWriter.of(file, charset).append(content);
+		return FileWriter.of(file, charset).append(content);
 	}
 
 	/**
@@ -2361,7 +2361,7 @@ public class FileUtil extends PathUtil {
 	 * @throws IORuntimeException IO异常
 	 */
 	public static <T> File writeLines(final Collection<T> list, final File file, final Charset charset, final boolean isAppend) throws IORuntimeException {
-		return java.io.FileWriter.of(file, charset).writeLines(list, isAppend);
+		return FileWriter.of(file, charset).writeLines(list, isAppend);
 	}
 
 	/**
@@ -2376,7 +2376,7 @@ public class FileUtil extends PathUtil {
 	 * @since 4.0.5
 	 */
 	public static File writeUtf8Map(final Map<?, ?> map, final File file, final String kvSeparator, final boolean isAppend) throws IORuntimeException {
-		return java.io.FileWriter.of(file, CharsetUtil.UTF_8).writeMap(map, kvSeparator, isAppend);
+		return FileWriter.of(file, CharsetUtil.UTF_8).writeMap(map, kvSeparator, isAppend);
 	}
 
 	/**
@@ -2392,7 +2392,7 @@ public class FileUtil extends PathUtil {
 	 * @since 4.0.5
 	 */
 	public static File writeMap(final Map<?, ?> map, final File file, final Charset charset, final String kvSeparator, final boolean isAppend) throws IORuntimeException {
-		return java.io.FileWriter.of(file, charset).writeMap(map, kvSeparator, isAppend);
+		return FileWriter.of(file, charset).writeMap(map, kvSeparator, isAppend);
 	}
 
 	/**
@@ -2432,7 +2432,7 @@ public class FileUtil extends PathUtil {
 	 * @throws IORuntimeException IO异常
 	 */
 	public static File writeBytes(final byte[] data, final File dest, final int off, final int len, final boolean isAppend) throws IORuntimeException {
-		return java.io.FileWriter.of(dest).write(data, off, len, isAppend);
+		return FileWriter.of(dest).write(data, off, len, isAppend);
 	}
 
 	/**
@@ -2459,7 +2459,7 @@ public class FileUtil extends PathUtil {
 	 * @since 5.5.6
 	 */
 	public static File writeFromStream(final InputStream in, final File dest, final boolean isCloseIn) throws IORuntimeException {
-		return java.io.FileWriter.of(dest).writeFromStream(in, isCloseIn);
+		return FileWriter.of(dest).writeFromStream(in, isCloseIn);
 	}
 
 	/**
