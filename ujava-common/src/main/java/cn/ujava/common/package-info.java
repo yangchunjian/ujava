@@ -11,7 +11,7 @@
  */
 
 /**
- * UJava核心方法及数据结构包
+ * UJava通用工具等
  *
  * @author ujava
  *

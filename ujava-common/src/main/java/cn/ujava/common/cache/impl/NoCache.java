@@ -22,7 +22,7 @@ import java.util.Iterator;
  *
  * @param <K> 键类型
  * @param <V> 值类型
- * @author ujava, jodd, VampireAchao
+ * @author ujava, 
  */
 public class NoCache<K, V> implements Cache<K, V> {
 	private static final long serialVersionUID = 1L;

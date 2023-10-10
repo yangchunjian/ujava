@@ -10,6 +10,6 @@
     </parent>
     <artifactId>ujava-common</artifactId>
     <name>${project.artifactId}</name>
-    <description>ujava核心，包括集合、字符串、Bean等工具</description>
+    <description>ujava通用工具等</description>
 
 </project>

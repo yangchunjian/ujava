@@ -23,7 +23,7 @@ import java.util.Iterator;
  *
  * @param <K> 键类型
  * @param <V> 值类型
- * @author ujava, jodd, VampireAchao
+ * @author ujava, 
  */
 public interface Cache<K, V> extends Iterable<V>, Serializable {
 
