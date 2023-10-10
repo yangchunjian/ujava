@@ -110,20 +110,20 @@ UJava = U + Java，是基于设计经验的开源库，“U”是You的表示，
 <dependency>
     <groupId>cn.ujava</groupId>
     <artifactId>ujava-all</artifactId>
-    <version>3.0.4</version>
+    <version>6.0.0</version>
 </dependency>
 ```
 
 ### 🍐Gradle
 ```
-implementation 'cn.ujava:ujava-all:3.0.4'
+implementation 'cn.ujava:ujava-all:6.0.0'
 ```
 
 ### 📥下载jar
 
 点击以下链接，下载`ujava-all-X.X.X.jar`即可：
 
-- [Maven中央库](https://repo1.maven.org/maven2/cn/ujava/ujava-all/3.0.4/)
+- [Maven中央库](https://repo1.maven.org/maven2/cn/ujava/ujava-all/6.0.0/)
 
 > 🔔️注意
 > UJava 3.x支持JDK8+。

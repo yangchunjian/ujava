@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UJAVA_SCRIPT_VERSION=3.0.4
+UJAVA_SCRIPT_VERSION=6.0.0
 
 
 # the usage
@@ -24,7 +24,7 @@ Options and Arguments:
 EXAMPLES:
   ./ujava.sh --help
   ./ujava.sh --deploy
-  ./ujava.sh --version 3.0.4
+  ./ujava.sh --version 6.0.0
   ./ujava.sh --package
   ./ujava.sh --doc
   ./ujava.sh --install
