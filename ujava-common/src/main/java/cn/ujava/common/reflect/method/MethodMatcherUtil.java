@@ -16,7 +16,6 @@ import cn.ujava.common.annotation.AnnotatedElementUtil;
 import cn.ujava.common.array.ArrayUtil;
 import cn.ujava.common.reflect.ClassUtil;
 import cn.ujava.common.text.CharSequenceUtil;
-import org.jetbrains.annotations.NotNull;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -578,7 +577,6 @@ public class MethodMatcherUtil {
 
 	// endregion
 
-	@NotNull
 	private static MethodMatcher mostSpecificStrictParameterTypesMatcher(
 		final Class<?>[] parameterTypes, final BiPredicate<Class<?>, Class<?>> typeMatcher) {
 		Objects.requireNonNull(parameterTypes);
