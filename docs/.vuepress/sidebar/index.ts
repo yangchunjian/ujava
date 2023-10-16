@@ -77,6 +77,16 @@ export default sidebar({
       ],
     },
     {
+      text: "开发标准",
+      icon: "star",
+      collapsible: true,
+      prefix: "standard/",
+      children: [
+        "code",
+        "log",
+      ],
+    },
+    {
       text: "Java",
       icon: "star",
       collapsible: true,
