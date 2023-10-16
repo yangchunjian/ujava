@@ -83,7 +83,7 @@ export default sidebar({
       prefix: "standard/",
       children: [
         "code",
-        "log",
+        "exception",
       ],
     },
     {

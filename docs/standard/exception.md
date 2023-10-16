@@ -1,5 +1,5 @@
 ---
-title: 日志规范
+title: 异常规范
 index: false
 icon: laptop-code
 category:
