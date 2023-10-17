@@ -3,7 +3,7 @@ title: 设计标准
 index: false
 icon: laptop-code
 category:
-  - 设计模式
+  - 开发标准
 ---
 
 ## 简介
