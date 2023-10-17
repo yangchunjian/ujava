@@ -13,7 +13,7 @@ Usage:
        [-v <value>] [--version <value>]
        [-p] [--package]
        [--doc] [--install]
-
+       [-r]
 Options and Arguments:
  -h,--help                      Print usage
  -d,--deploy                    deploy to central repository
@@ -21,6 +21,8 @@ Options and Arguments:
  -p,--package                   Make jar package by Maven
     --doc                       Generate Java doc api for UJava, you can see it in target dir
     --install                   Install UJava to your local Maven repository
+ -r,--run                       run project
+
 EXAMPLES:
   ./ujava.sh --help
   ./ujava.sh --deploy
@@ -86,6 +88,11 @@ parse_arguments()
         -d|--deploy)
         #上传制品库
         bin/deploy.sh
+        exit 0
+        ;;
+        -r|--run)
+        #上传制品库
+        bin/run.sh
         exit 0
         ;;
         *)    # unknown option
