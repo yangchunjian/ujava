@@ -11,7 +11,7 @@ Usage:
     $0 [-h] [--help]
        [-d] [--deploy]
        [-v <value>] [--version <value>]
-       [-p] [--package]
+       [-p] [--package][--push]
        [--doc] [--install]
        [-r]
 Options and Arguments:
@@ -21,6 +21,7 @@ Options and Arguments:
  -p,--package                   Make jar package by Maven
     --doc                       Generate Java doc api for UJava, you can see it in target dir
     --install                   Install UJava to your local Maven repository
+    --push                      push to origin main
  -r,--run                       run project
 
 EXAMPLES:
@@ -30,6 +31,8 @@ EXAMPLES:
   ./ujava.sh --package
   ./ujava.sh --doc
   ./ujava.sh --install
+  ./ujava.sh --push
+  ./ujava.sh --run
 
 WIKI:
   https://ujava.cn/
@@ -74,6 +77,10 @@ parse_arguments()
         ;;
         -p|--package)
         bin/package.sh
+        exit 0
+        ;;
+        --push)
+        bin/push.sh
         exit 0
         ;;
         -v|--version)
