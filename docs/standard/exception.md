@@ -121,7 +121,7 @@ private static final Log log = LogFactory.getLog(Test.class);
 
 #### 2.【强制】日志文件至少保存 15 天，因为有些异常具备以“周”为频次发生的特点。对于当天日志，以 “应用名.log”来保存，保存在/{统一目录}/{应用名}/logs/目录下，过往日志格式为：{logname}.log.{保存日期}，日期格式：yyyy-MM-dd
 
-正例：以 mppserver 应用为例，日志保存/home/admin/mppserver/logs/mppserver.log，历史日志名称为 mppserver.log.2021-11-28
+* 正例：以 mppserver 应用为例，日志保存/home/admin/mppserver/logs/mppserver.log，历史日志名称为 mppserver.log.2021-11-28
 
 #### 3.【强制】根据国家法律，网络运行状态、网络安全事件、个人敏感信息操作等相关记录，留存的日志不少于六个月，并且进行网络多机备份。
 #### 4.【强制】应用中的扩展日志（如打点、临时监控、访问日志等）命名方式：
