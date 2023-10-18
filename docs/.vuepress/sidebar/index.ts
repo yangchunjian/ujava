@@ -86,6 +86,11 @@ export default sidebar({
         "exception",
         "unit",
         "security",
+        "database",
+        "project",
+        "design",
+        "noun",
+        "errorcode",
       ],
     },
     {
