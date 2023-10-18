@@ -149,7 +149,7 @@ logger.debug("Current ID is: {} and name is: {}", id, getName());
 
 ```
 #### 7.【强制】避免重复打印日志，浪费磁盘空间，务必在日志配置文件中设置 additivity=false
-正例：<logger name="com.taobao.dubbo.config" additivity="false">
+正例：<logger name="com.taobao.dubbo.config" additivity="false"></logger>
 #### 8.【强制】生产环境禁止使用 System.out 或 System.err 输出或使用 e.printStackTrace() 打印异常堆栈。
 说明：标准日志输出与标准错误输出文件每次 Jboss 重启时才滚动，如果大量输出送往这两个文件，容易造成文件大小超过操作系统大小限制。
 #### 9.【强制】异常信息应该包括两类信息：案发现场信息和异常堆栈信息。如果不处理，那么通过关键字throws 往上抛出。

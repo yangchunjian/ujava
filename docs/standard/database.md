@@ -8,7 +8,7 @@ category:
 
 ## (一) 建表规约
 #### 1.【强制】表达是与否概念的字段，必须使用 is_xxx 的方式命名，数据类型是 unsigned tinyint（1 表示是，0 表示否）。
-注意：POJO 类中的任何布尔类型的变量，都不要加 is 前缀，所以，需要在<resultMap>设置从 is_xxx 到 Xxx 的映射关系。数据库表示是与否的值，使用 tinyint 类型，坚持 is_xxx 的命名方式是为了明确其取值含义与取值范围。
+注意：POJO 类中的任何布尔类型的变量，都不要加 is 前缀，所以，需要在<resultMap></resultMap>设置从 is_xxx 到 Xxx 的映射关系。数据库表示是与否的值，使用 tinyint 类型，坚持 is_xxx 的命名方式是为了明确其取值含义与取值范围。
 * 说明：任何字段如果为非负数，必须是 unsigned。
 * 正例：表达逻辑删除的字段名 is_deleted，1 表示删除，0 表示未删除。
 #### 2.【强制】表名、字段名必须使用小写字母或数字，禁止出现数字开头禁止两个下划线中间只出现数字。数据库字段名的修改代价很大，因为无法进行预发布，所以字段名称需要慎重考虑。
@@ -131,7 +131,7 @@ SELECT CHARACTER_LENGTH("轻松工作")；--返回为 4
 * 3）无用字段增加网络消耗，尤其是 text 类型的字段。
 #### 2.【强制】POJO 类的布尔属性不能加 is，而数据库字段必须加 is_，要求在 resultMap 中进行字段与属性之间的映射。
 说明：参见定义 POJO 类以及数据库字段定义规定，在 sql.xml 增加映射，是必须的。
-#### 3.【强制】不要用 resultClass 当返回参数，即使所有类属性名与数据库字段一一对应，也需要定义<resultMap>；反过来，每一个表也必然有一个<resultMap>与之对应。
+#### 3.【强制】不要用 resultClass 当返回参数，即使所有类属性名与数据库字段一一对应，也需要定义<resultMap></resultMap>；反过来，每一个表也必然有一个<resultMap></resultMap>与之对应。
 说明：配置映射关系，使字段与 DO 类解耦，方便维护。
 #### 4.【强制】sql.xml 配置参数使用：#{}，#param# 不要使用 ${} 此种方式容易出现 SQL 注入。
 #### 5.【强制】iBATIS 自带的 queryForList(String statementName，int start，int size) 不推荐使用。
@@ -148,6 +148,9 @@ map.put("size", size);
 #### 6.【强制】不允许直接拿 HashMap 与 Hashtable 作为查询结果集的输出。
 反例：某同学为避免写一个<resultMap>xxx</resultMap>，直接使用 Hashtable 来接收数据库返回结果，结果出现日常是把 bigint 转成 Long 值，而线上由于数据库版本不一样，解析成 BigInteger，导致线上问题。
 #### 7.【强制】更新数据表记录时，必须同时更新记录对应的 update_time 字段值为当前时间。
-#### 8.【推荐】不要写一个大而全的数据更新接口。传入为 POJO 类，不管是不是自己的目标更新字段，都进行update table set c1 = value1 , c2 = value2 , c3 = value3；这是不对的。执行 SQL 时，不要更新无改动的字段，一是易出错；二是效率低；三是增加 binlog 存储。
+#### 8.【推荐】不要写一个大而全的数据更新接口。
+
+传入为 POJO 类，不管是不是自己的目标更新字段，都进行update table set c1 = value1 , c2 = value2 , c3 = value3；这是不对的。执行 SQL 时，不要更新无改动的字段，一是易出错；二是效率低；三是增加 binlog 存储。
+
 #### 9.【参考】@Transactional 事务不要滥用。事务会影响数据库的 QPS，另外使用事务的地方需要考虑各方面的回滚方案，包括缓存回滚、搜索引擎回滚、消息补偿、统计修正等。
-#### 10.【参考】<isEqual>中的 compareValue 是与属性值对比的常量，一般是数字，表示相等时带上此条件；<isNotEmpty>表示不为空且不为 null 时执行；<isNotNull>表示不为 null 值时执行。
+#### 10.【参考】<isEqual></isEqual>中的 compareValue 是与属性值对比的常量，一般是数字，表示相等时带上此条件；<isNotEmpty></isNotEmpty>表示不为空且不为 null 时执行；<isNotNull></isNotNull>表示不为 null 值时执行。

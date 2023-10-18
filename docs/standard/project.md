@@ -49,7 +49,7 @@ category:
 #### 3.【强制】线上应用不要依赖 SNAPSHOT 版本（安全包除外）；正式发布的类库必须先去中央仓库进行查证，使 RELEASE 版本号有延续性，且版本号不允许覆盖升级。
 说明：不依赖 SNAPSHOT 版本是保证应用发布的幂等性。另外，也可以加快编译时的打包构建。
 #### 4.【强制】二方库的新增或升级，保持除功能点之外的其它 jar 包仲裁结果不变。如果有改变，必须明确评估和验证。
-说明：在升级时，进行 dependency:resolve 前后信息比对，如果仲裁结果完全不一致，那么通过 dependency:tree 命 令，找出差异点，进行<exclude>排除 jar 包。
+说明：在升级时，进行 dependency:resolve 前后信息比对，如果仲裁结果完全不一致，那么通过 dependency:tree 命 令，找出差异点，进行<exclude></exclude>排除 jar 包。
 #### 5.【强制】二方库里可以定义枚举类型，参数可以使用枚举类型，但是接口返回值不允许使用枚举类型或者包含枚举类型的 POJO 对象。
 #### 6.【强制】二方库定制包的命名方式，在规定的版本号之后加“-英文说明[序号]”，英文说明可以是部门简称、业务名称，序号直接紧跟在英文说明之后，表示此定制包的顺序号。
 说明：fastjson 给 SCM 定制的版本号：1.0.0-SCM1。注：请尽可能在应用端来解决类冲突和加载问题，避免随意发布此类定制包。
@@ -57,9 +57,10 @@ category:
 说明：依赖 springframework-core，-context，-beans，它们都是同一个版本，可以定义一个变量来保存版本： ${spring.version}，定义依赖的时候，引用该版本。
 #### 8.【强制】禁止在子项目的 pom 依赖中出现相同的 GroupId，相同的 ArtifactId，但是不同的 Version。
 说明：在本地调试时会使用各子项目指定的版本号，但是合并成一个 war，只能有一个版本号出现在最后的 lib 目录 中。曾经出现过线下调试是正确的，发布到线上却出故障的先例。
-#### 9.【推荐】底层基础技术框架、核心数据管理平台、或近硬件端系统谨慎引入第三方实现。 10.【推荐】所有 pom 文件中的依赖声明放在<dependencies>语句块中，所有版本仲裁放在<dependencyManagement>语句块中。
+#### 9.【推荐】底层基础技术框架、核心数据管理平台、或近硬件端系统谨慎引入第三方实现。 
+#### 10.【推荐】所有 pom 文件中的依赖声明放在<dependencies></dependencies>语句块中，所有版本仲裁放在<dependencyManagement></dependencyManagement>语句块中。
 
-说明：<dependencyManagement>里只是声明版本，并不实现引入，因此子项目需要显式的声明依赖，version 和 scope 都读取自父 pom。而<dependencies>所有声明在主 pom 的<dependencies>里的依赖都会自动引入，并默认被所有的子项目继承。
+说明：<dependencyManagement></dependencyManagement>里只是声明版本，并不实现引入，因此子项目需要显式的声明依赖，version 和 scope 都读取自父 pom。而<dependencies></dependencies>所有声明在主 pom 的<dependencies></dependencies>里的依赖都会自动引入，并默认被所有的子项目继承。
 #### 11.【推荐】二方库不要有配置项，最低限度不要再增加配置项。
 #### 12.【推荐】不要使用不稳定的工具包或者 Utils 类。
 说明：不稳定指的是提供方无法做到向下兼容，在编译阶段正常，但在运行时产生异常，因此，尽量使用业界稳定的二方工具包。 
