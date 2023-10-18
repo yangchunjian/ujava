@@ -84,6 +84,8 @@ export default sidebar({
       children: [
         "code",
         "exception",
+        "unit",
+        "security",
       ],
     },
     {
