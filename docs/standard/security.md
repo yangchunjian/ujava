@@ -3,7 +3,7 @@ title: 安全规范
 index: false
 icon: laptop-code
 category:
-  - 开发标准
+  - 设计标准
 ---
 
 #### 1.【强制】隶属于用户个人的页面或者功能必须进行权限控制校验。

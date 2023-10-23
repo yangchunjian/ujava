@@ -3,7 +3,7 @@ title: 工程规范
 index: false
 icon: laptop-code
 category:
-  - 开发标准
+  - 设计标准
 ---
 
 ## (一) 应用分层
