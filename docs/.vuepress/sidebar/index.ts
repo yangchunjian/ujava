@@ -77,7 +77,7 @@ export default sidebar({
       ],
     },
     {
-      text: "设计标准",
+      text: "设计规范",
       icon: "star",
       collapsible: true,
       prefix: "standard/",

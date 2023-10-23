@@ -3,7 +3,7 @@ title: 测试规范
 index: false
 icon: laptop-code
 category:
-  - 设计标准
+  - 设计规范
 ---
 
 #### 1.【强制】好的单元测试必须遵守 AIR 原则。

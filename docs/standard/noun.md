@@ -3,7 +3,7 @@ title: 名词规范
 index: false
 icon: laptop-code
 category:
-  - 设计标准
+  - 设计规范
 ---
 
 #### 1. POJO（Plain Ordinary Java Object）：在本规约中，POJO 专指只有 setter / getter / toString 的简单类，包括DO / DTO / BO / VO 等。

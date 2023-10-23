@@ -3,7 +3,7 @@ title: 编程规范
 index: false
 icon: laptop-code
 category:
-  - 设计标准
+  - 设计规范
 ---
 
 ## (一) 命名风格

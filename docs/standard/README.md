@@ -1,9 +1,9 @@
 ---
-title: 设计标准
+title: 设计规范
 index: false
 icon: laptop-code
 category:
-  - 设计标准
+  - 设计规范
 ---
 
 ## 简介

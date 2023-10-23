@@ -3,7 +3,7 @@ title: 设计规范
 index: false
 icon: laptop-code
 category:
-  - 设计标准
+  - 设计规范
 ---
 
 #### 1.【强制】存储方案和底层数据结构的设计获得评审一致通过，并沉淀成为文档。
