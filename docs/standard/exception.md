@@ -6,8 +6,7 @@ category:
   - 开发标准
 ---
 
-## （一) 错误码
-
+## 一、错误码
 #### 1.【强制】错误码的制定原则：快速溯源、沟通标准化。
 说明：错误码想得过于完美和复杂，就像康熙字典的生僻字一样，用词似乎精准，但是字典不容易随身携带且简单易懂。
 
@@ -42,7 +41,7 @@ category:
 说明：数字是一个整体，每位数字的地位和含义是相同的。
 
 反例：一个五位数字 12345，第 1 位是错误等级，第 2 位是错误来源，345 是编号，人的大脑不会主动地拆开并分辨每位数字的不同含义。
-## (二) 异常处理
+## 二、异常处理
 #### 1.【强制】Java 类库中定义的可以通过预检查方式规避的 RuntimeException 异常不应该通过 catch 的方式来处理，比如：NullPointerException，IndexOutOfBoundsException 等等。
 说明：无法通过预检查的异常除外，比如，在解析字符串形式的数字时，可能存在数字格式错误，不得不通过 catch NumberFormatException 来实现。
 
@@ -99,16 +98,14 @@ public int method() { return Integer 对象; }，如果为 null，自动解箱�
 正例：使用 JDK8 的 Optional 类来防止 NPE 问题。
 #### 12.【推荐】定义时区分 unchecked / checked 异常，避免直接抛出 new RuntimeException()，更不允许
 抛出 Exception 或者 Throwable，应使用有业务含义的自定义异常。推荐业界已定义过的自定义异常，如：DAOException / ServiceException 等。
-#### 13.【参考】对于公司外的 http / api 开放接口必须使用错误码，而应用内部推荐异常抛出；跨应用间
-RPC 调用优先考虑使用 Result 方式，封装 isSuccess() 方法、错误码、错误简短信息；应用内部推荐异常抛出。
+#### 13.【参考】对于公司外的 http / api 开放接口必须使用错误码，而应用内部推荐异常抛出；跨应用间RPC 调用优先考虑使用 Result 方式，封装 isSuccess() 方法、错误码、错误简短信息；应用内部推荐异常抛出。
 
 说明：关于 RPC 方法返回方式使用 Result 方式的理由： 
 * 1）使用抛异常返回方式，调用方如果没有捕获到就会产生运行时错误。 
 * 2）如果不加栈信息，只是 new 自定义异常，加入自己的理解的 error message，对于调用端解决问题的帮助不会太多。
 如果加了栈信息，在频繁调用出错的情况下，数据序列化和传输的性能损耗也是问题。 
-## (三) 日志规约
-#### 1.【强制】应用中不可直接使用日志系统（Log4j、Logback）中的 API，而应依赖使用日志框架（SLF4J、
-JCL—Jakarta Commons Logging）中的 API，使用门面模式的日志框架，有利于维护和各个类的日志处理方式统一。
+## 三、日志规约
+#### 1.【强制】应用中不可直接使用日志系统（Log4j、Logback）中的 API，而应依赖使用日志框架（SLF4J、JCL—Jakarta Commons Logging）中的 API，使用门面模式的日志框架，有利于维护和各个类的日志处理方式统一。
 
 说明：日志框架（SLF4J、JCL--Jakarta Commons Logging）的使用方式（推荐使用 SLF4J），使用 SLF4J：
 ```java
