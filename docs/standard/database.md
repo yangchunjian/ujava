@@ -1,5 +1,5 @@
 ---
-title: 数据库规范
+title: 库表规范
 index: false
 icon: laptop-code
 category:
