@@ -94,6 +94,18 @@ export default sidebar({
       ],
     },
     {
+      text: "设计实践",
+      icon: "star",
+      collapsible: true,
+      prefix: "practice/",
+      children: [
+        "mvc",
+        "mvvm",
+        "ddd",
+        "responsive",
+      ],
+    },
+    {
       text: "Java",
       icon: "star",
       collapsible: true,
