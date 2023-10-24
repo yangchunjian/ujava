@@ -1,1 +1,0 @@
-import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o,c as r,a as e,b as s}from"./app-3f5f9b9e.js";const a={},c=e("h2",{id:"简介",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#简介","aria-hidden":"true"},"#"),s(" 简介")],-1),n=[c];function _(i,d){return o(),r("div",null,n)}const f=t(a,[["render",_],["__file","responsive.html.vue"]]);export{f as default};
