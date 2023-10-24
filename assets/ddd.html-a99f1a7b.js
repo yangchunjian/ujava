@@ -1,1 +1,0 @@
-import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o as a,c as o,a as e,b as r}from"./app-7d230d5f.js";const c={},d=e("h2",{id:"简介",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#简介","aria-hidden":"true"},"#"),r(" 简介")],-1),s=[d];function n(_,i){return a(),o("div",null,s)}const f=t(c,[["render",n],["__file","ddd.html.vue"]]);export{f as default};
