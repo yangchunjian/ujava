@@ -27,6 +27,18 @@ export default sidebar({
       ],
     },
     {
+      text: "设计原理",
+      icon: "star",
+      collapsible: true,
+      prefix: "principle/",
+      children: [
+          "first",
+          "second",
+          "third",
+          "four",
+      ],
+    },
+    {
       text: "设计模式",
       icon: "star",
       collapsible: true,
