@@ -7,8 +7,8 @@ bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
-heroText: 项目名称
-tagline: ujava工具
+heroText: 设计项目
+tagline: ujava设计项目工具
 actions:
   - text: 必读 💡
     link: ./required/
