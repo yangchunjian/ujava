@@ -16,6 +16,17 @@ export default sidebar({
       children: ["faq","history"],
     },
     {
+      text: "设计思想",
+      icon: "star",
+      collapsible: true,
+      prefix: "mind/",
+      children: [
+          "first",
+          "second",
+          "third",
+      ],
+    },
+    {
       text: "设计模式",
       icon: "star",
       collapsible: true,
