@@ -37,6 +37,7 @@ export default sidebar({
           "third",
           "four",
           "five",
+          "six",
       ],
     },
     {
