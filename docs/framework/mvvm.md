@@ -3,7 +3,7 @@ title: MVVM框架
 index: false
 icon: laptop-code
 category:
-  - 设计实践
+  - 设计框架
 ---
 
 ## 简介
@@ -87,7 +87,8 @@ MVVM（Model-View-ViewModel）和MVC（Model-View-Controller）都是用于构�
 #### 角色和职责分配
 
 * MVC：在MVC中，Model表示应用程序的数据和业务逻辑，View负责展示数据并与用户进行交互，Controller充当着View和Model之间的中介，负责处理用户输入并更新Model和View之间的数据传递。
-* MVVM：在MVVM中，Model同样表示应用程序的数据和业务逻辑，View仍然负责展示数据并与用户进行交互，但ViewModel取代了Controller的角色，它充当着View和Model之间的桥梁，负责将Model中的数据转换成View可用的形式，并通过数据绑定实现数据的同步更新。
+*
+MVVM：在MVVM中，Model同样表示应用程序的数据和业务逻辑，View仍然负责展示数据并与用户进行交互，但ViewModel取代了Controller的角色，它充当着View和Model之间的桥梁，负责将Model中的数据转换成View可用的形式，并通过数据绑定实现数据的同步更新。
 
 #### 数据绑定
 

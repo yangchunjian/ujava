@@ -122,15 +122,24 @@ export default sidebar({
             ],
         },
         {
-            text: "设计实践",
+            text: "设计框架",
             icon: "star",
             collapsible: true,
-            prefix: "practice/",
+            prefix: "framework/",
             children: [
                 "mvc",
                 "mvvm",
                 "ddd",
                 "responsive",
+            ],
+        },
+        {
+            text: "设计高频",
+            icon: "star",
+            collapsible: true,
+            prefix: "highfreq/",
+            children: [
+                "cache",
             ],
         },
         {
