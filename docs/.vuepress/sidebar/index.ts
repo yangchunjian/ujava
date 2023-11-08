@@ -140,6 +140,7 @@ export default sidebar({
             prefix: "highfreq/",
             children: [
                 "cache",
+                "faulttolerant",
             ],
         },
         {
