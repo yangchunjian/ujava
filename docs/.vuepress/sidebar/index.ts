@@ -141,6 +141,7 @@ export default sidebar({
             children: [
                 "cache",
                 "faulttolerant",
+                "databaseindex",
             ],
         },
         {
