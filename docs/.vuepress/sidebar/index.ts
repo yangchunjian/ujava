@@ -24,6 +24,7 @@ export default sidebar({
                 "first",
                 "second",
                 "third",
+                "four",
             ],
         },
         {
