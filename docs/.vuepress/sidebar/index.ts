@@ -41,7 +41,9 @@ export default sidebar({
                 "seven",
                 "eight",
                 "nine",
+                "obj",
                 "concurrency",
+                "concurrency-faq",
             ],
         },
         {
