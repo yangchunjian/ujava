@@ -41,6 +41,7 @@ export default sidebar({
                 "seven",
                 "eight",
                 "nine",
+                "concurrency",
             ],
         },
         {
