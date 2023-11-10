@@ -150,6 +150,15 @@ export default sidebar({
             ],
         },
         {
+            text: "设计算法",
+            icon: "star",
+            collapsible: true,
+            prefix: "algorithm/",
+            children: [
+                "common",
+            ],
+        },
+        {
             text: "Java",
             icon: "star",
             collapsible: true,
