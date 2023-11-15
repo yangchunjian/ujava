@@ -151,6 +151,7 @@ export default sidebar({
                 "databaseindex",
                 "consider",
                 "summary",
+                "effect",
             ],
         },
         {
