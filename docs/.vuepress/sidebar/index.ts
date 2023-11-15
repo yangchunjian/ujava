@@ -47,6 +47,7 @@ export default sidebar({
                 "concurrency-faq",
                 "callback",
                 "uml",
+                "theory",
             ],
         },
         {
