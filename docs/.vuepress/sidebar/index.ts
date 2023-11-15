@@ -148,6 +148,7 @@ export default sidebar({
                 "cache",
                 "faulttolerant",
                 "databaseindex",
+                "consider",
             ],
         },
         {
