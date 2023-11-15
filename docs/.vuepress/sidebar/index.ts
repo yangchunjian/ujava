@@ -150,6 +150,7 @@ export default sidebar({
                 "faulttolerant",
                 "databaseindex",
                 "consider",
+                "summary",
             ],
         },
         {
