@@ -156,6 +156,7 @@ export default sidebar({
                 "design",
                 "hash",
                 "experience",
+                "attention",
             ],
         },
         {
