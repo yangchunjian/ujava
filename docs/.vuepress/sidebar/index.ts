@@ -154,6 +154,7 @@ export default sidebar({
                 "effect",
                 "tool",
                 "design",
+                "hash",
             ],
         },
         {
