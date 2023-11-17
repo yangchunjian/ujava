@@ -155,6 +155,7 @@ export default sidebar({
                 "tool",
                 "design",
                 "hash",
+                "experience",
             ],
         },
         {
