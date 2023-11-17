@@ -152,6 +152,7 @@ export default sidebar({
                 "consider",
                 "summary",
                 "effect",
+                "tool",
             ],
         },
         {
