@@ -153,6 +153,7 @@ export default sidebar({
                 "summary",
                 "effect",
                 "tool",
+                "design",
             ],
         },
         {
