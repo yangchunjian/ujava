@@ -1,1 +1,0 @@
-import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o as a,c as o,a as e,b as r}from"./app-72ba0d5e.js";const c={},n=e("h2",{id:"设计算法",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#设计算法","aria-hidden":"true"},"#"),r(" 设计算法")],-1),s=[n];function _(d,i){return a(),o("div",null,s)}const f=t(c,[["render",_],["__file","index.html.vue"]]);export{f as default};
