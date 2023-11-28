@@ -158,6 +158,7 @@ export default sidebar({
                 "experience",
                 "attention1",
                 "attention2",
+                "overall",
             ],
         },
         {
