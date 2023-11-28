@@ -1,9 +1,9 @@
 ---
-tite: 系统总体结构设计
-index: fase
-icon: aptop-code
+title: 系统总体结构设计
+index: false
+icon: laptop-code
 category:
-  - 设计高频
+- 设计高频
 ---
 
 ## 简介
