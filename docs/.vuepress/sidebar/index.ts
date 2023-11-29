@@ -1,3 +1,4 @@
+// @ts-ignore
 import {sidebar} from "vuepress-theme-hope";
 
 import {author} from "./author.js";
@@ -159,6 +160,7 @@ export default sidebar({
                 "attention1",
                 "attention2",
                 "overall",
+                "container",
             ],
         },
         {
