@@ -173,29 +173,12 @@ export default sidebar({
             ],
         },
         {
-            text: "Java",
+            text: "设计Java",
             icon: "star",
             collapsible: true,
             prefix: "java/",
             children: [
-                {
-                    text: "基础",
-                    prefix: "basis/",
-                    icon: "star",
-                    children: [
-                        "01",
-                        "02",
-                        "03",
-                        {
-                            text: "重要知识点",
-                            icon: "star",
-                            collapsible: true,
-                            children: [
-                                "why-there-only-value-passing-in-java",
-                            ],
-                        },
-                    ],
-                },
+                "why-there-only-value-passing-in-java"
             ],
         }
     ],

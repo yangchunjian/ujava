@@ -17,5 +17,5 @@ icon: laptop-code
 </div>
 
 
-## 设计项目
+## 项目设计
 

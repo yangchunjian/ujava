@@ -1,10 +1,10 @@
 ---
 title: 常见问题
-category: 走近项目
+category: 必读
 icon: laptop-code
 ---
 
-## UJava 是否支持 RSS？
+## UJava是什么
 
-必须支持！推荐 RSS 订阅本网站获取最新更新。
+UJava是项目设计过程中的精华沉淀，是项目设计过程中遇到问题和解决方案的仓库，也是项目设计工具
 
