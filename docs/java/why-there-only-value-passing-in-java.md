@@ -3,7 +3,7 @@ title: Java值传递
 category: Java
 icon: laptop-code
 tag:
-  - Java基础
+  - 设计Java
 ---
 
 开始之前，我们先来搞懂下面这两个概念：

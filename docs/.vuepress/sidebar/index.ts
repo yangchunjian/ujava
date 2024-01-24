@@ -178,6 +178,7 @@ export default sidebar({
             collapsible: true,
             prefix: "java/",
             children: [
+                "package",
                 "why-there-only-value-passing-in-java"
             ],
         }
