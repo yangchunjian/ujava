@@ -246,7 +246,7 @@ javax.lang.model.type.TypeVisitor
 
 ## 状态模式
 
-通过改变对象内部的状态，使得你可以在运⾏时动态改变⼀个对象的⾏ 为
+通过改变对象内部的状态，使得你可以在运⾏时动态改变⼀个对象的⾏为
 
 ```java
 java.util.Iterator
