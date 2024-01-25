@@ -1,256 +1,318 @@
 ---
-title: JDK中用到的设计模式
+title: JDK源码中用到的23种设计模式
 category: Java
 icon: laptop-code
 tag:
   - 设计Java
 ---
 
+<!-- TOC -->
+* [创建模式](#创建模式)
+  * [Singleton(单例)](#singleton单例)
+  * [Abstract factory(抽象工厂)](#abstract-factory抽象工厂)
+  * [Factory(工厂方法)](#factory工厂方法)
+  * [Builder(建造者)](#builder建造者)
+  * [Prototype(原型)](#prototype原型)
+* [结构模式](#结构模式)
+  * [Adapter(适配器)](#adapter适配器)
+  * [Composite(组合)](#composite组合)
+  * [Decorator(装饰器)](#decorator装饰器)
+  * [Facade(门面)](#facade门面)
+  * [Flyweight(享元模式)](#flyweight享元模式)
+  * [Proxy(代理)](#proxy代理)
+* [行为模式](#行为模式)
+  * [Chain of Responsibility(责任链)](#chain-of-responsibility责任链)
+  * [Command(命令)](#command命令)
+  * [Interpreter(解释器)](#interpreter解释器)
+  * [Iterator(迭代器)](#iterator迭代器)
+  * [Mediator(中介)](#mediator中介)
+  * [Memento(快照-备忘录模式)](#memento快照-备忘录模式)
+  * [Observer(观察者)](#observer观察者)
+  * [State(状态)](#state状态)
+  * [Strategy(策略)](#strategy策略)
+  * [Template(模板)](#template模板)
+  * [Visitor(访问者)](#visitor访问者)
+<!-- TOC -->
 
-## 桥接模式
 
-这个模式将抽象和抽象操作的实现进⾏了解耦，这样使得抽象和实现可以 独⽴地变化。
+# 创建模式
 
-在 Java 应⽤中，对于桥接模式有⼀个⾮常典型的例⼦，就是应⽤程序使⽤
-JDBC 驱动程序进⾏开发的⽅式。所谓驱动程序，指的是按照预先约定好
-的接⼝来操作计算机系统或者是外围设备的程序。
+## Singleton(单例)
 
-## 适配器模式
-
-⽤来把⼀个接⼝转化成另⼀个接⼝。使得原本由于接⼝不兼容⽽不能⼀起 ⼯作的那些类可以在⼀起⼯作。
+只允许一个实例。
 ```java
-java.util.Arrays#asList()
+java.lang.Runtime # getRuntime()
+java.awt.Toolkit # getDefaultToolkit()
+java.awt.GraphicsEnvironment # getLocalGraphicsEnvironment()
+java.awt.Desktop # getDesktop()
+java.lang.System # getSecurityManager()
+
+```
+
+
+## Abstract factory(抽象工厂)
+
+创建一组有关联的对象实例。
+```java
+java.util.Calendar # getInstance()
+java.util.Arrays # asList()
+java.util.ResourceBundle # getBundle(String baseName)
+java.sql.DriverManager # getConnection(String url)
+java.sql.Connection # createStatement()
+java.sql.Statement # executeQuery(String sql)
+java.text.NumberFormat # getInstance()
+javax.xml.transform.TransformerFactory # newInstance()
+javax.xml.parsers.DocumentBuilderFactory # newInstance()
+javax.xml.parsers.DocumentBuilderFactory # newInstance()
+
+```
+
+
+## Factory(工厂方法)
+
+按照需求返回一个类型的实例。
+```java
+java.lang.Proxy # newProxyInstance()
+java.lang.Object # toString()
+java.lang.Class # newInstance()
+java.lang.reflect.Array # newInstance()
+java.lang.reflect.Constructor # newInstance()
+java.lang.Boolean # valueOf(String s)
+java.lang.Class # forName(String className)
+java.util.Calendar # getInstance()
+java.util.ResourceBundle # getBundle()
+java.text.NumberFormat # getInstance()
+java.nio.charset.Charset # forName()
+java.net.URLStreamHandlerFactory # createURLStreamHandler(String)
+javax.xml.bind.JAXBContext # createMarshaller()
+
+```
+
+
+## Builder(建造者)
+
+主要用来简化一个复杂对象的创建。
+```java
+java.lang.StringBuilder # append(Object obj)(非线程安全)
+java.lang.StringBuffer # append(Object obj)(线程安全)
+javax.swing.GroupLayout.Group # addComponent()
+java.nio.ByteBuffer # put()
+所有的实现 java.lang.Appendable
+
+```
+
+
+## Prototype(原型)
+
+使用自己的实例创建另外一个实例。
+```java
+java.lang.Object # clone()
+java.lang.Cloneable;
+
+```
+
+# 结构模式
+
+## Adapter(适配器)
+
+可通过创建方法识别采用不同抽象/接口类型的实例，并返回自己/抽象/接口类型的实现，其装饰/覆盖给定实例。
+```java
+java.util.Arrays # asList()
+javax.swing.JTable(TableModel)
 java.io.InputStreamReader(InputStream)
 java.io.OutputStreamWriter(OutputStream)
+javax.xml.bind.annotation.adapters.XmlAdapter # marshal()
+javax.xml.bind.annotation.adapters.XmlAdapter # unmarshal()
+java.util.Collections # list()
+java.util.Collections # enumeration()
 
 ```
 
-## 组合模式
 
-⼜叫做部分-整体模式，使得客户端看来单个对象和对象的组合是同等的。 换句话说，某个类型的⽅法同时也接受⾃身类型作为参数。
+
+## Composite(组合)
+
+让使用者将单独对象和组合对象混用。
 ```java
-java.util.Map#putAll(Map)
-java.util.List#addAll(Collection)
-java.util.Set#addAll(Collection)
+javax.swing.JComponent # add(Component comp)
+java.awt.Container # add(Component comp)
+java.util.Map # putAll(Map m)
+java.util.List # addAll(Collection c)
+java.util.Set # addAll(Collection c)
+javax.faces.component.UIComponent # getChildren()
 
 ```
 
-## 装饰者模式
 
-动态的给⼀个对象附加额外的功能，这也是⼦类的⼀种替代⽅式。可以看 到，在创建⼀个类型的时候，同时也传⼊同⼀类型的对象。这在 JDK ⾥随 处可⻅，你会发现它⽆处不在，所以下⾯这个列表只是⼀⼩部分。
+## Decorator(装饰器)
 
+为一个对象动态地加上一系列动作，而不需要因为这些动作的不同产生大量的继承类。
 ```java
 java.io.BufferedInputStream(InputStream)
 java.io.DataInputStream(InputStream)
 java.io.BufferedOutputStream(OutputStream)
 java.util.zip.ZipOutputStream(OutputStream)
-java.util.Collections#checkedList|Map|Set|SortedSet|SortedMap
+java.util.Collections # checkedList(List list, Class type)
+java.util.Collections的checkedXXX()，synchronizedXXX()和unmodifiableXXX()方法
+javax.servlet.http.HttpServletRequestWrapper 和 HttpServletResponseWrapper
+
+
 ```
 
-## 享元模式
+## Facade(门面)
 
-使⽤缓存来加速⼤量⼩对象的访问时间。
-
+一个简单的接口包装一组组件、接口、抽象或者子系统。
 ```java
-java.lang.Integer#valueOf(int)
-java.lang.Boolean#value
-java.lang.Integer#valueOf(int)   -127-128
-java.lang.Boolean#valueOf(boolean)
-java.lang.Byte#valueOf(byte)
-java.lang.Character#valueOf(char)
+java.lang.Class
+javax.faces.webapp.FacesServlet
+
+```
+
+## Flyweight(享元模式)
+
+使用缓存来加速大量小对象的访问时间。
+```java
+java.lang.Integer # valueOf(int)
+java.lang.Boolean # valueOf(boolean)
+java.lang.Byte # valueOf(byte)
+java.lang.Character # valueOf(char)
 
 ```
 
 
-## 代理模式
 
-代理模式是⽤⼀个简单的对象来代替⼀个复杂的或者创建耗时的对象。
+## Proxy(代理)
+
+用一个简单的对象代替一个复杂的对象。
 ```java
 java.lang.reflect.Proxy
-RMI
+java.rmi.*
+javax.ejb.EJB
+javax.inject.Inject
+javax.persistence.PersistenceContext
 
 ```
 
-## 抽象⼯⼚模式
 
-抽象⼯⼚模式提供了⼀个协议来⽣成⼀系列的相关或者独⽴的对象，⽽不 ⽤指定具体对象的类型。它使得应⽤程序能够和使⽤的框架的具体实现进 ⾏解耦。这在 JDK 或者许多框架⽐如 Spring 中都随处可⻅。它们也很容 易识别，⼀个创建新对象的⽅法，返回的却是接⼝或者抽象类的，就是抽 象⼯⼚模式了。
+# 行为模式
+
+## Chain of Responsibility(责任链)
+
+一个对象在一个链接传递直到被处理。
 ```java
-java.util.Calendar#getInstance()
-java.util.Arrays#asList()
-java.util.ResourceBundle#getBundle()
-java.sql.DriverManager#getConnection()
-java.sql.Connection#createStatement()
-java.sql.Statement#executeQuery()
-java.text.NumberFormat#getInstance()
-javax.xml.transform.TransformerFactory#newInstance()
+java.util.logging.Logger # log()
+javax.servlet.Filter # doFilter()
 
 ```
 
-## 建造者模式
+## Command(命令)
 
-定义了⼀个新的类来构建另⼀个类的实例，以简化复杂对象的创建。建造 模式通常也使⽤⽅法链接来实现。
+将一系列命令封装成在一个类中。
 ```java
-java.lang.StringBuilder#append()
-java.lang.StringBuffer#append()
-java.sql.PreparedStatement
-javax.swing.GroupLayout.Group#addComponent()
+所有的实现 java.lang.Runnable
+所有的实现 javax.swing.Action
 
 ```
 
-## ⼯⼚⽅法
 
-就是⼀个返回具体对象的⽅法。
-```java
-java.lang.Proxy#newProxyInstance()
-java.lang.Object#toString()
-java.lang.Class#newInstance()
-java.lang.reflect.Array#newInstance()
-java.lang.reflect.Constructor#newInstance()
-java.lang.Boolean#valueOf(String)
-java.lang.Class#forName()
+## Interpreter(解释器)
 
-```
-
-## 原型模式
-
-使得类的实例能够⽣成⾃身的拷⻉。如果创建⼀个对象的实例⾮常复杂且 耗时时，就可以使⽤这种模式，⽽不重新创建⼀个新的实例，你可以拷⻉ ⼀个对象并直接修改它。
-
-```java
-java.lang.Object#clone()
-java.lang.Cloneable
-
-```
-
-## 单例模式
-
-⽤来确保类只有⼀个实例。 Joshua Bloch 在 Effetive Java 中建议到，还有 ⼀种⽅法就是使⽤枚举。
-
-```java
-
-java.lang.Runtime#getRuntime()
-java.awt.Toolkit#getDefaultToolkit()
-java.awt.GraphicsEnvironment#getLocalGraphicsEnvironment()
-java.awt.Desktop#getDesktop()
-```
-
-
-
-
-## 责任链模式
-
-通过把请求从⼀个对象传递到链条中下⼀个对象的⽅式，直到请求被处理
-完毕，以实现对象间的解耦
-
-```java
-java.util.logging.Logger#log()
-javax.servlet.Filter#doFilter()
-
-```
-
-## 命令模式
-
-将操作封装到对象内，以便存储，传递和返回。
-```java
-java.lang.Runnable
-javax.swing.Action
-
-```
-
-## 解释器模式
-
-这个模式通常定义了⼀个语⾔的语法，然后解析相应语法的语句
+定义语言的文法，并且建立一个解释器来解释该语言中的句子。
 ```java
 java.util.Pattern
 java.text.Normalizer
-java.text.Format
+所有子类 java.text.Format
+所有子类 javax.el.ELResolver
 
 ```
 
-## 迭代器模式
 
-提供⼀个⼀致的⽅法来顺序访问集合中的对象，这个⽅法与底层的集合的 具体实现⽆关。
+## Iterator(迭代器)
 
+对象遍历。
 ```java
-
 java.util.Iterator
 java.util.Enumeration
+java.util.Scanner
 
 ```
 
-## 中介者模式
 
-通过使⽤⼀个中间对象来进⾏消息分发以及减少类之间的直接依赖。
+## Mediator(中介)
+
+用一个中介对象来封装一系列关于对象交互行为。
 ```java
 java.util.Timer
-java.util.concurrent.Executor#execute()
-java.util.concurrent.ExecutorService#submit()
-java.lang.reflect.Method#invoke()
+java.util.concurrent.Executor # execute()
+java.util.concurrent.ExecutorService（invokeXXX()和submit()方法）
+java.util.concurrent.ScheduledExecutorService（所有scheduleXXX()方法）
+java.lang.reflect.Method # invoke()
 
 ```
 
-## 备忘录模式
 
-⽣成对象状态的⼀个快照，以便对象可以恢复原始状态⽽不⽤暴露⾃身的
-内容。 Date 对象通过⾃身内部的⼀个 long 值来实现备忘录模式。
+## Memento(快照-备忘录模式)
 
+保存另外一个对象内部状态拷贝的对象
 ```java
 java.util.Date
 java.io.Serializable
 
 ```
 
-## 观察者模式
 
-它使得⼀个对象可以灵活的将消息发送给感兴趣的对象。
+## Observer(观察者)
+
+事件监听器。
 ```java
-java.util.EventListener
-javax.servlet.http.HttpSessionBindingListener
-javax.servlet.http.HttpSessionAttributeListener
+java.util.EventListener  
+javax.servlet.http.HttpSessionBindingListener  
+javax.servlet.http.HttpSessionAttributeListener  
 javax.faces.event.PhaseListener
 
 ```
 
-## 策略模式
 
-使⽤这个模式来将⼀组算法封装成⼀系列对象。通过传递这些对象可以灵
-活的改变程序的功能。
+## State(状态)
+
+不同的状态，不同的行为；或者说每个状态有相应的行为。
 ```java
-java.util.Comparator#compare()
+java.util.Iterator  
+javax.faces.lifecycle.LifeCycle # execute()
+
+```
+
+## Strategy(策略)
+
+定义一系列算法，把这些算法一个一个封装成单独的类。
+```java
+java.util.Comparator # compare()
 javax.servlet.http.HttpServlet
-javax.servlet.Filter#doFilter()
+javax.servlet.Filter # doFilter()
 
 ```
 
-## 模板⽅法模式
+## Template(模板)
 
-让⼦类可以重写⽅法的⼀部分，⽽不是整个重写，你可以控制⼦类需要重 写那些操作。
-
+定义一个操作中算法的骨架，将一些步骤的执行延迟到其子类中。
 ```java
-java.util.Collections#sort()
-java.io.InputStream#skip()
-java.io.InputStream#read()
-java.util.AbstractList#indexOf()
+java.util.Collections # sort()
+java.io.InputStream # skip()
+java.io.InputStream # read()
+java.util.AbstractList # indexOf()
 
 ```
 
-## 访问者模式
+## Visitor(访问者)
 
-提供⼀个⽅便的可维护的⽅式来操作⼀组对象。它使得你在不改变操作的 对象前提下，可以修改或者扩展对象的⾏为。
+作用于某个对象群中各个对象的操作，它可以使你在不改变这些对象本身的情况下，定义作用于这些对象的新操作。
 ```java
-javax.lang.model.element.Element and
-javax.lang.model.element.ElementVisitor
-javax.lang.model.type.TypeMirror and
+javax.lang.model.element.Element
+javax.lang.model.element.ElementVisitor  
+javax.lang.model.type.TypeMirror
 javax.lang.model.type.TypeVisitor
 
 ```
 
-## 状态模式
 
-通过改变对象内部的状态，使得你可以在运⾏时动态改变⼀个对象的⾏为
-
-```java
-java.util.Iterator
-javax.faces.lifecycle.LifeCycle#execute()
-
-```
 
