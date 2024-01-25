@@ -179,7 +179,8 @@ export default sidebar({
             prefix: "java/",
             children: [
                 "package",
-                "why-there-only-value-passing-in-java"
+                "why-there-only-value-passing-in-java",
+                "jdkdesign",
             ],
         }
     ],
