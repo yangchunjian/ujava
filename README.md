@@ -1,8 +1,8 @@
 <p align="center">
-	<a href="https://ujava.cn/"><img src="https://cdn.jsdelivr.net/gh/looly/ujava-site/images/logo.jpg" width="45%"></a>
+	<a href="https://ujava.cn/"><img src="https://cdn.jsdelivr.net/gh/yangchunjian/resources@0.0.1/logo.svg" width="45%"></a>
 </p>
 <p align="center">
-	<strong>🍬A set of design pattern.</strong>
+	<strong>🍬A set of architecture design.</strong>
 </p>
 <p align="center">
 	👉 <a href="https://ujava.cn">https://ujava.cn/</a> 👈

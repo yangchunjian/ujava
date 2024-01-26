@@ -1,14 +1,14 @@
 ---
 home: true
 icon: home
-title: 项目设计
+title: 架构设计
 heroImage: /logo.svg
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
-heroText: 项目设计
-tagline: 项目设计工具UJava
+heroText: 架构设计
+tagline: 架构设计工具UJava
 actions:
   - text: 必读 💡
     link: ./required/
