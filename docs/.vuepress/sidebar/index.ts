@@ -181,6 +181,7 @@ export default sidebar({
                 "package",
                 "why-there-only-value-passing-in-java",
                 "jdkdesign",
+                "reentrantlock",
             ],
         }
     ],
