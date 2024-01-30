@@ -182,6 +182,7 @@ export default sidebar({
                 "why-there-only-value-passing-in-java",
                 "jdkdesign",
                 "reentrantlock",
+                "uml",
             ],
         }
     ],
