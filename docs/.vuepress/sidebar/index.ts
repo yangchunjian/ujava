@@ -183,6 +183,7 @@ export default sidebar({
                 "jdkdesign",
                 "reentrantlock",
                 "uml",
+                "basecore",
             ],
         }
     ],
