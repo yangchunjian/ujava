@@ -161,6 +161,8 @@ export default sidebar({
                 "attention2",
                 "overall",
                 "container",
+                "togaf",
+                "business",
             ],
         },
         {
