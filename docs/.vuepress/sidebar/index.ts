@@ -49,6 +49,7 @@ export default sidebar({
                 "callback",
                 "uml",
                 "theory",
+                "webflux",
             ],
         },
         {
