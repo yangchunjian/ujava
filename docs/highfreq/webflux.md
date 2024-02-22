@@ -32,7 +32,7 @@ Spring WebFlux 是一个异步非阻塞式 IO 模型，通过少量的容器线�
 
 ### 1. Reactive Stream
 
-   相信你应该注意到上面的一个名词 反应式流(Reactive Stream)。是什么意思呐？
+相信你应该注意到上面的一个名词 反应式流(Reactive Stream)。是什么意思呐？
 
 我们先看下这个概念：
 
@@ -102,7 +102,7 @@ public class HelloController {
 ```
 
 
-启动项目，浏览器访问这个 /hello 接口，控制台输出如下：
+启动项目，浏览器访问这个` /hello` 接口，控制台输出如下：
 
 * 接口耗时：0
 * 可以看到：在 WebFlux 接口中，请求不会被阻塞，所以服务端的接口耗时为 0。
