@@ -164,6 +164,7 @@ export default sidebar({
                 "togaf",
                 "business",
                 "modelrelation",
+                "reactor",
             ],
         },
         {
