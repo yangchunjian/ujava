@@ -126,9 +126,8 @@ public Flux<String> flux() {
 
 ```
 
-Flux 也是一个 Publisher，它可以由一个数组产生，需要注意的是，这里返回的 Content-Type 是 MediaType.TEXT_EVENT_STREAM_VALUE，即 text/event-stream。
 
-text/event-stream 是服务器向浏览器推送消息的一种方案，这种方案和我们所熟知的 WebSocket 有一些差别。暂时先不写了。
+> Flux 也是一个 Publisher，它可以由一个数组产生，需要注意的是，这里返回的 Content-Type 是 MediaType.TEXT_EVENT_STREAM_VALUE，即 text/event-stream。 text/event-stream 是服务器向浏览器推送消息的一种方案，这种方案和我们所熟知的 WebSocket 有一些差别。暂时先不写了。
 
 ## 操作数据库
 
