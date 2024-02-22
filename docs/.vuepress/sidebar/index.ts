@@ -163,6 +163,7 @@ export default sidebar({
                 "container",
                 "togaf",
                 "business",
+                "modelrelation",
             ],
         },
         {
