@@ -5,7 +5,7 @@ icon: laptop-code
 
 ::: tip 友情提示
 
-持续更新中~
+架构设计持续更新中~
 :::
 
 <div align="center">
