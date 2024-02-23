@@ -27,7 +27,15 @@ export default hopeTheme({
   footer: "",
 
   displayFooter: true,
+  blog: {
+    medias: {
+      // GitHub 已经内置了图标
+      GitHub: "https://github.com/yangchunjian",
+      // 微信
+      Wechat: "https://www.yjava.cn/imgs/dearlocation.jpeg",
 
+    },
+  },
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
