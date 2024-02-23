@@ -27,15 +27,7 @@ export default hopeTheme({
   footer: "",
 
   displayFooter: true,
-  blog: {
-    medias: {
-      // GitHub 已经内置了图标
-      GitHub: "https://github.com/yangchunjian",
-      // 微信
-      Wechat: "https://www.yjava.cn/imgs/dearlocation.jpeg",
 
-    },
-  },
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
@@ -47,6 +39,15 @@ export default hopeTheme({
     editLink: "在 GitHub 上编辑此页",
   },
 
+  blog: {
+    intro: "/author/",
+    sidebarDisplay: "mobile",
+    medias: {
+      Github: "https://github.com/yangchunjian",
+      Gitee: "https://gitee.com/yangchunjian",
+      Wechat: "https://www.yjava.cn/imgs/dearlocation.jpeg",
+    },
+  },
   plugins: {
     // You should generate and use your own comment service
     // comment: {
@@ -57,6 +58,22 @@ export default hopeTheme({
     //   categoryId: "DIC_kwDOG_Pt2M4COD69",
     // },
 
+
+    blog: true,
+    copyright: {
+      author: "UJava(ujava.cn)",
+      license: "MIT",
+      triggerLength: 100,
+      maxLength: 700,
+      canonical: "https://ujava.cn/",
+      global: true,
+    },
+
+    feed: {
+      atom: true,
+      json: true,
+      rss: true,
+    },
     // All features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
@@ -98,61 +115,5 @@ export default hopeTheme({
       vuePlayground: true,
     },
 
-    // uncomment these if you want a pwa
-    // pwa: {
-    //   favicon: "/favicon.ico",
-    //   cacheHTML: true,
-    //   cachePic: true,
-    //   appendBase: true,
-    //   apple: {
-    //     icon: "/assets/icon/apple-icon-152.png",
-    //     statusBarColor: "black",
-    //   },
-    //   msTile: {
-    //     image: "/assets/icon/ms-icon-144.png",
-    //     color: "#ffffff",
-    //   },
-    //   manifest: {
-    //     icons: [
-    //       {
-    //         src: "/assets/icon/chrome-mask-512.png",
-    //         sizes: "512x512",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-mask-192.png",
-    //         sizes: "192x192",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-512.png",
-    //         sizes: "512x512",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-192.png",
-    //         sizes: "192x192",
-    //         type: "image/png",
-    //       },
-    //     ],
-    //     shortcuts: [
-    //       {
-    //         name: "Demo",
-    //         short_name: "Demo",
-    //         url: "/demo/",
-    //         icons: [
-    //           {
-    //             src: "/assets/icon/guide-maskable.png",
-    //             sizes: "192x192",
-    //             purpose: "maskable",
-    //             type: "image/png",
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
-    // },
   },
 });
