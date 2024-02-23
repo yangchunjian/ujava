@@ -1191,10 +1191,10 @@
       "title": "UJava",
       "url": "https://ujava.cn/home.html",
       "id": "https://ujava.cn/home.html",
-      "summary": "友情提示 （Java学习&amp;设计）持续更新中~ GitHub | Gitee",
-      "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">友情提示</p>\n<blockquote>\n<p>（Java学习&amp;设计）持续更新中~</p>\n</blockquote>\n</div>\n<div align=\"center\">\n<p><a href=\"https://github.com/yangchunjian/ujava\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> | <a href=\"https://gitee.com/yangchunjian/ujava\" target=\"_blank\" rel=\"noopener noreferrer\">Gitee</a></p>\n</div>\n",
+      "summary": "友情提示 持续更新中~ GitHub | Gitee",
+      "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">友情提示</p>\n<p>持续更新中~</p>\n</div>\n<div align=\"center\">\n<p><a href=\"https://github.com/yangchunjian/ujava\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> | <a href=\"https://gitee.com/yangchunjian/ujava\" target=\"_blank\" rel=\"noopener noreferrer\">Gitee</a></p>\n</div>\n",
       "date_published": "2023-09-21T06:39:48.000Z",
-      "date_modified": "2024-02-23T09:05:51.000Z",
+      "date_modified": "2024-02-23T09:46:30.000Z",
       "authors": [],
       "tags": []
     },

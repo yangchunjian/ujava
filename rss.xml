@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Fri, 23 Feb 2024 09:05:30 GMT</pubDate>
-    <lastBuildDate>Fri, 23 Feb 2024 09:05:30 GMT</lastBuildDate>
+    <pubDate>Fri, 23 Feb 2024 09:46:15 GMT</pubDate>
+    <lastBuildDate>Fri, 23 Feb 2024 09:46:15 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -9632,13 +9632,11 @@ SimpleDateFormat，官方给出的解释：simple beautiful strong immutable thr
       <link>https://ujava.cn/home.html</link>
       <guid>https://ujava.cn/home.html</guid>
       <source url="https://ujava.cn/rss.xml">UJava</source>
-      <description>友情提示 （Java学习&amp;amp;设计）持续更新中~ GitHub | Gitee</description>
+      <description>友情提示 持续更新中~ GitHub | Gitee</description>
       <pubDate>Thu, 21 Sep 2023 06:39:48 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">友情提示</p>
-<blockquote>
-<p>（Java学习&amp;设计）持续更新中~</p>
-</blockquote>
+<p>持续更新中~</p>
 </div>
 <div align="center">
 <p><a href="https://github.com/yangchunjian/ujava" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://gitee.com/yangchunjian/ujava" target="_blank" rel="noopener noreferrer">Gitee</a></p>
