@@ -1,5 +1,6 @@
 ---
 title: 常见问题
+star: 1
 category: 必读
 icon: laptop-code
 ---
