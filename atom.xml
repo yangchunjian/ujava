@@ -3,7 +3,7 @@
   <id>https://ujava.cn/</id>
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
-  <updated>2024-02-25T01:07:03.256Z</updated>
+  <updated>2024-02-25T01:18:00.762Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -22,7 +22,7 @@
     <title type="text">企业级架构带来的模式改变</title>
     <id>https://ujava.cn/highfreq/modelchange.html</id>
     <link href="https://ujava.cn/highfreq/modelchange.html"/>
-    <updated>2024-02-23T07:12:07.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<p>数字化转型背景下，银行业务和IT技术融合发展的趋势愈发明显。企业级架构通过统一的方法论进行企业级分析、设计、规划和实施，有助于将业务和技术更好地结合在一起，建立一整套基于操作模型的标准化流程，进而成功执行和实现战略转型。企业级架构主要可分为业务架构与IT架构两大部分，其核心作用包括贯彻企业战略、促进业务和科技融合、消除部门竖井，以及统一方法、统一语言、统一标准等，最终潜移默化地持续提升整体效率。针对这一趋势，笔者结合价值评估、数据治理、业技融合、方法实践等视角，尝试分析了实施企业级架构所能带来的模式改变与价值提升。</p>
 <h2> 一、价值评估有章可循</h2>
 <p>近年来，金融科技与银行业务的依存关系愈发紧密，特别是各类新技术、新场景的不断涌现，推动用户体验持续完善、风控水平快速提升。然而，面对金融业务的快速发展，尽管科技部门采用了敏捷模式、外协模式不断提高产能，却依然很难达到需求方的期望。在此背景下，为有效缓解供需矛盾，需求价值评估环节应需而生，即当改造范围及工作量评估完成后，业务部门和科技部门在需求排期会再次进行沟通，以保证高优先级需求优先开发。但事实上，需求方大多以本部门利益为上，排期结论往往很难达成一致，其根本原因即在于价值评估没有贯穿在需求产生的过程中。</p>]]></summary>
@@ -63,7 +63,7 @@
     <title type="text">WebFlux详解</title>
     <id>https://ujava.cn/highfreq/webflux.html</id>
     <link href="https://ujava.cn/highfreq/webflux.html"/>
-    <updated>2024-02-22T07:49:15.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<p>因为想学习 Spring Cloud Gateway 来着，然后发现它是基于 Spring5.0+SpringBoot2.0+WebFlux等技术开发的。所以学之前才要来简单了解下 WebFlux 技术。</p>
 <p>然后要学习 WebFlux 时我发现又需要 Java 8 中的函数式编程、Stream 流等技术作为前置知识。环环相扣啊，套娃一样。</p>
 <p>所以前面还有两篇学习的文章：来系统学习下 lambda 表达式吧和来一起学习下 Java 8 的 Stream 流。</p>
@@ -174,7 +174,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">Reactor模型详解</title>
     <id>https://ujava.cn/highfreq/reactor.html</id>
     <link href="https://ujava.cn/highfreq/reactor.html"/>
-    <updated>2024-02-22T06:49:50.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 前言</h2>
 <p>说到NIO、Netty，Reactor模型一定是绕不开的，因为这种模式架构太经典了，但是好多人在学习的时候，往往会忽视基础的学习，一上来就是Netty，各种高大上，但是却没有静下心来好好看看Netty的基石——Reactor模型。本文就带着大家看看Reactor模型，让大家对Reactor模型有个浅显而又感性的认识。</p>
 <h2> 一、经典的同步阻塞模型</h2>
@@ -268,7 +268,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">企业级架构建模之浅谈三大模型关系</title>
     <id>https://ujava.cn/highfreq/modelrelation.html</id>
     <link href="https://ujava.cn/highfreq/modelrelation.html"/>
-    <updated>2024-02-22T02:04:39.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<p>通俗来说，产品泛指银行销售给客户的服务，并通过与客户签订具体产品合约获取利益。产品模型站在企业视角，确定与产品相关的业务规则、限额、约束、期限、价格等要素，形成自上而下以产品线、产品组、基础产品、产品组件和产品条件的结构化模型表达。</p>
 <p>企业级架构三大模型从不同视角描述整个业务体系，将企业战略分解细化到各个业务领域的具体环节，对原本分割的部分进行系统化表达，同时弥补了产品、流程及数据间信息的不一致。<br>
 产品模型是企业定制化产品的集合，阐述企业提供的服务是什么</p>
@@ -316,7 +316,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">一文搞懂业务架构、技术架构、数据架构、运维架构、物理架构理清不同视角的架构</title>
     <id>https://ujava.cn/highfreq/business.html</id>
     <link href="https://ujava.cn/highfreq/business.html"/>
-    <updated>2024-02-21T03:01:36.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>在学习架构时，我认为首先要理清楚架构的视角，因为你所认知的架构和别人所说的架构可能是两码事。对于不同职位的视角是不一样的，比如开发而言他更多的看到的是开发架构；对售前人员，他可能更多的看到的是业务架构；对于运维人员，他看到的可能是运维架构；而对于技术支持和部署人员，他更多的看到的网络和物理架构。</p>
 <h2> 架构的视角</h2>
@@ -385,7 +385,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">企业架构TOGAF内容框架</title>
     <id>https://ujava.cn/highfreq/togaf.html</id>
     <link href="https://ujava.cn/highfreq/togaf.html"/>
-    <updated>2024-02-21T03:07:45.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<figure><figcaption>img_24.png</figcaption></figure>
 <h2> 一、内容框架概述</h2>
 <p>TOGAF 9之前的版本中没有企业架构的具体内容相关的论述，需要与其他具有企业架构内容描述的框架（例如Zachman框架）进行配合。随着内容框架（Content Framework）的引入，以及企业架构开发方法与该内容框架的相互结合，TOGAF已经成为一个独立完备的企业架构框架标准。</p>
@@ -2147,7 +2147,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">几种常见web容器</title>
     <id>https://ujava.cn/highfreq/container.html</id>
     <link href="https://ujava.cn/highfreq/container.html"/>
-    <updated>2023-11-29T11:50:17.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>应用服务器：tomcat</p>
 <p>常用应用服务器：WebLogic、WebSphere、Apache、JBoss、GlassFish</p>
@@ -2212,7 +2212,7 @@ Enterprise标准的安全性引入大型网络应用的开发、集成、部署�
     <title type="text">系统总体结构设计</title>
     <id>https://ujava.cn/highfreq/overall.html</id>
     <link href="https://ujava.cn/highfreq/overall.html"/>
-    <updated>2023-11-28T05:48:57.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>系统设计工作应该自顶向下地进行。首先设计总体结构，然后再逐层深入，直至进行每一个模块的设计。总体设计主要是指在系统分析的基础上，对整个系统的划分（子系统）、机器设备（包括软、硬设备）的配置、数据的存贮规律以及整个系统实现规划等方面进行合理的安排。</p>
 <h2> 一、系统设计的任务</h2>
@@ -2427,7 +2427,7 @@ Enterprise标准的安全性引入大型网络应用的开发、集成、部署�
     <title type="text">设计注意事项一</title>
     <id>https://ujava.cn/highfreq/attention1.html</id>
     <link href="https://ujava.cn/highfreq/attention1.html"/>
-    <updated>2023-11-17T11:45:50.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h2> 架构的本质</h2>
 <p>其实总结下来就一句话：<strong>架构本质上其实就是一种指导型的约束，约定整体和部分、部分和部分之间的关系，以使整体更加稳定，更加可靠。</strong></p>
@@ -2577,7 +2577,7 @@ Enterprise标准的安全性引入大型网络应用的开发、集成、部署�
     <title type="text">设计注意事项二</title>
     <id>https://ujava.cn/highfreq/attention2.html</id>
     <link href="https://ujava.cn/highfreq/attention2.html"/>
-    <updated>2023-11-17T11:45:50.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h2> 一.设计原则</h2>
 <p>架构设计我我们平时写代码不一样，两者的差异主要体现在“不确定性”上。对于编程来说，本质上是确定的，对于同样一段代码，不管是谁写的，不管什么时候执行，执行的结果应该都是确定的；而对于架构设计来说，本质上是不确定，并没有像编程语言那样的语法来进行约束，更多的时候是面对多种可能性时进行选择。</p>
@@ -2646,7 +2646,7 @@ Enterprise标准的安全性引入大型网络应用的开发、集成、部署�
     <title type="text">设计实践经验</title>
     <id>https://ujava.cn/highfreq/experience.html</id>
     <link href="https://ujava.cn/highfreq/experience.html"/>
-    <updated>2023-11-17T11:18:05.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <ul>
 <li>记录道具来源等的 source 字段时，可以使用（类名+方法名） / （包名+方法名）的组合，可以清晰地区分来源。并且可以灵活地增加新的渠道/动作。</li>
@@ -2704,7 +2704,7 @@ OAuth2.0 协议来实现多渠道认证。
     <title type="text">一致性Hash算法</title>
     <id>https://ujava.cn/highfreq/hash.html</id>
     <link href="https://ujava.cn/highfreq/hash.html"/>
-    <updated>2023-11-17T10:57:00.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>在分布式系统中，数据的存储和访问是很重要的问题。为了提高系统的可用性和扩展性，常常需要将数据分布到不同的节点上，而且这些节点也可能会动态地加入或离开集群。一致性哈希算法就是一种常用的解决方案，它可以解决节点的动态变化和负载均衡的问题。</p>
 <p>本文将深入探讨一致性哈希算法的底层原理，包括其基本思想、关键步骤以及优缺点等，同时结合实际场景进行举例说明。</p>
@@ -2850,7 +2850,7 @@ OAuth2.0 协议来实现多渠道认证。
     <title type="text">系统设计原则</title>
     <id>https://ujava.cn/highfreq/design.html</id>
     <link href="https://ujava.cn/highfreq/design.html"/>
-    <updated>2023-11-17T10:34:42.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>好的系统是迭代出来的。先解决核心问题，预测未来可能出现的问题，对现有的问题有方案，对未来的问题有预案。不是一上来就按1亿用户量设计，也不要过度复杂化系统。</p>
 <p>业务千变万化，技术层出不穷，设计理念也是百花齐放，看起来似乎很难有一套通用的规范来适用所有的架构设计场景。但是总是有一些原则是可以通用的。</p>
@@ -3105,7 +3105,7 @@ Server发起了多少次http请求计算的，一次鼠标可能触发多个http
     <title type="text">设计时可使用的工具</title>
     <id>https://ujava.cn/highfreq/tool.html</id>
     <link href="https://ujava.cn/highfreq/tool.html"/>
-    <updated>2023-11-17T10:18:13.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h2> JUnit test</h2>
 <p>JUnit是一个用于编写和运行Java单元测试的框架。它提供了一组注解和断言方法，使得编写和执行单元测试变得更加简单和方便。JUnit可以帮助开发人员验证代码的正确性，捕获和修复潜在的缺陷，并确保代码在修改过程中不会破坏现有的功能。</p>
@@ -3220,7 +3220,7 @@ Memory Analyzer（MAT）等工具进行进一步的分析，而无需执行正�
     <title type="text">影响项目的要素及经验总结</title>
     <id>https://ujava.cn/highfreq/effect.html</id>
     <link href="https://ujava.cn/highfreq/effect.html"/>
-    <updated>2023-11-15T09:28:58.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>项目失败的因素主要分为以下几类</p>
 <h2> 技术原因</h2>
@@ -3295,7 +3295,7 @@ Memory Analyzer（MAT）等工具进行进一步的分析，而无需执行正�
     <title type="text">概要设计和详细设计</title>
     <id>https://ujava.cn/highfreq/summary.html</id>
     <link href="https://ujava.cn/highfreq/summary.html"/>
-    <updated>2023-11-15T09:23:27.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概要设计和详细设计</h2>
 <p>在软件设计中，大家经常问到的一个问题是：概要设计应该怎样一个概要法，详细设计应该怎样一个详细法？</p>
 <p>一般公司的研发流程是瀑布型的，这个模型中的分析、设计阶段是基于经典的结构化方法。<br>
@@ -3654,7 +3654,7 @@ variations），找出预计有变化或不稳定的点，我们为这些变化�
     <title type="text">设计考量</title>
     <id>https://ujava.cn/highfreq/consider.html</id>
     <link href="https://ujava.cn/highfreq/consider.html"/>
-    <updated>2023-11-15T08:17:57.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h2> 1、系统拆分</h2>
 <p>有句古话 “牵一发而动全身”。</p>
@@ -4604,7 +4604,7 @@ ConcurrentHashMap 体现了一些提升并发性能的技巧：减少串行化�
     <title type="text">设计数据库索引</title>
     <id>https://ujava.cn/highfreq/databaseindex.html</id>
     <link href="https://ujava.cn/highfreq/databaseindex.html"/>
-    <updated>2023-11-08T09:25:08.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>建立最优的数据库索引是提升数据库查询性能的重要手段。在某种意义上，索引就是磁盘记录在内存中的缓存。索引要做的事情，就是快速找到匹配条件的记录行，并尽可能减少磁盘读写次数。本文总结数据库索引相关的知识及实践。</p>
 <h2> 基本知识</h2>
@@ -4719,7 +4719,7 @@ SET @@optimizer_switch='mrr=on,mrr_cost_based=on';</p>
     <title type="text">设计容错</title>
     <id>https://ujava.cn/highfreq/faulttolerant.html</id>
     <link href="https://ujava.cn/highfreq/faulttolerant.html"/>
-    <updated>2023-11-08T09:07:52.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>在某种程度上来说，软件的复杂性是应对无处不在的错误所带来的。要想在不可靠的硬件、软件和网络的基础上构建可靠的系统，容错是必不可少的。</p>
 <h2> 错误源</h2>
@@ -5094,7 +5094,7 @@ Blend可以很容易设计界面并生成xml代码</li>
     <title type="text">设计高频</title>
     <id>https://ujava.cn/highfreq/</id>
     <link href="https://ujava.cn/highfreq/"/>
-    <updated>2023-11-08T08:55:23.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 设计高频</h2>
 <p>列举常见的设计高频等</p>
 ]]></summary>
@@ -5108,7 +5108,7 @@ Blend可以很容易设计界面并生成xml代码</li>
     <title type="text">设计缓存</title>
     <id>https://ujava.cn/highfreq/cache.html</id>
     <link href="https://ujava.cn/highfreq/cache.html"/>
-    <updated>2023-11-08T08:55:23.000Z</updated>
+    <updated>2024-02-25T01:16:48.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>实际应用中，一些数据在短期内会反复多次访问。比如循环访问、热点畅销商品、爆热优惠活动。在一次下单中，提交中的订单基本信息会被反复访问、刚创建的订单很快会被查询多次。</p>
 <p>数据在短期内被反复访问的场景下，缓存可用来提升查询性能。缓存是用一个小而快的存储来存放一个大而慢的存储的数据子集，在查询时通过缓存命中而提升性能。缓存是最基本的计算思想之一。在计算机系统的各个层次结构上，缓存无处不在。</p>
