@@ -4,7 +4,7 @@ category: 必读
 icon: laptop-code
 ---
 
-> 项目内容持续在更新迭代
+> 架构内容持续在更新迭代
 
 
 
