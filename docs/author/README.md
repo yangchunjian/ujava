@@ -3,13 +3,10 @@ title: 作者
 index: false
 icon: laptop-code
 category:
-- 介绍
+  - 介绍
 ---
 
-## 简介
+## [基本信息](./author0)
 
-xxx
+## [工作经历](./author1)
 
-## 经历
-
-xxx

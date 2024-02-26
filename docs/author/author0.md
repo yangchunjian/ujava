@@ -1,5 +1,5 @@
 ---
-title: 作者
+title: 基本信息
 index: false
 icon: laptop-code
 category:
@@ -8,8 +8,4 @@ category:
 
 ## 简介
 
-xxx
-
-## 经历
-
-xxx
+性别：男
