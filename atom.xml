@@ -3,7 +3,7 @@
   <id>https://ujava.cn/</id>
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
-  <updated>2024-02-26T05:25:58.270Z</updated>
+  <updated>2024-02-26T05:57:44.299Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -11037,37 +11037,29 @@ SimpleDateFormat，官方给出的解释：simple beautiful strong immutable thr
     <published>2023-09-21T06:39:48.000Z</published>
   </entry>
   <entry>
-    <title type="text">作者</title>
+    <title type="text">基本信息</title>
     <id>https://ujava.cn/author/author0.html</id>
     <link href="https://ujava.cn/author/author0.html"/>
-    <updated>2023-09-21T06:39:48.000Z</updated>
+    <updated>2024-02-26T05:58:11.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
-<p>xxx</p>
-<h2> 经历</h2>
-<p>xxx</p>
+<p>性别：男</p>
 ]]></summary>
     <content type="html"><![CDATA[<h2> 简介</h2>
-<p>xxx</p>
-<h2> 经历</h2>
-<p>xxx</p>
+<p>性别：男</p>
 ]]></content>
     <category term="介绍"/>
     <published>2023-09-21T06:39:48.000Z</published>
   </entry>
   <entry>
-    <title type="text">作者</title>
+    <title type="text">工作经历</title>
     <id>https://ujava.cn/author/author1.html</id>
     <link href="https://ujava.cn/author/author1.html"/>
-    <updated>2023-09-21T06:39:48.000Z</updated>
+    <updated>2024-02-26T05:58:11.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
-<p>xxx</p>
-<h2> 经历</h2>
-<p>xxx</p>
+<p>公司：某厂</p>
 ]]></summary>
     <content type="html"><![CDATA[<h2> 简介</h2>
-<p>xxx</p>
-<h2> 经历</h2>
-<p>xxx</p>
+<p>公司：某厂</p>
 ]]></content>
     <category term="介绍"/>
     <published>2023-09-21T06:39:48.000Z</published>

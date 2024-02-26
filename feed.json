@@ -1225,26 +1225,26 @@
       "tags": []
     },
     {
-      "title": "作者",
+      "title": "基本信息",
       "url": "https://ujava.cn/author/author0.html",
       "id": "https://ujava.cn/author/author0.html",
-      "summary": "简介 xxx 经历 xxx",
-      "content_html": "<h2> 简介</h2>\n<p>xxx</p>\n<h2> 经历</h2>\n<p>xxx</p>\n",
+      "summary": "简介 性别：男",
+      "content_html": "<h2> 简介</h2>\n<p>性别：男</p>\n",
       "date_published": "2023-09-21T06:39:48.000Z",
-      "date_modified": "2023-09-21T06:39:48.000Z",
+      "date_modified": "2024-02-26T05:58:11.000Z",
       "authors": [],
       "tags": [
         "介绍"
       ]
     },
     {
-      "title": "作者",
+      "title": "工作经历",
       "url": "https://ujava.cn/author/author1.html",
       "id": "https://ujava.cn/author/author1.html",
-      "summary": "简介 xxx 经历 xxx",
-      "content_html": "<h2> 简介</h2>\n<p>xxx</p>\n<h2> 经历</h2>\n<p>xxx</p>\n",
+      "summary": "简介 公司：某厂",
+      "content_html": "<h2> 简介</h2>\n<p>公司：某厂</p>\n",
       "date_published": "2023-09-21T06:39:48.000Z",
-      "date_modified": "2023-09-21T06:39:48.000Z",
+      "date_modified": "2024-02-26T05:58:11.000Z",
       "authors": [],
       "tags": [
         "介绍"

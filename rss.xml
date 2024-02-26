@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Mon, 26 Feb 2024 05:25:58 GMT</pubDate>
-    <lastBuildDate>Mon, 26 Feb 2024 05:25:58 GMT</lastBuildDate>
+    <pubDate>Mon, 26 Feb 2024 05:57:44 GMT</pubDate>
+    <lastBuildDate>Mon, 26 Feb 2024 05:57:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -9843,31 +9843,27 @@ SimpleDateFormat，官方给出的解释：simple beautiful strong immutable thr
 ]]></content:encoded>
     </item>
     <item>
-      <title>作者</title>
+      <title>基本信息</title>
       <link>https://ujava.cn/author/author0.html</link>
       <guid>https://ujava.cn/author/author0.html</guid>
-      <source url="https://ujava.cn/rss.xml">作者</source>
-      <description>简介 xxx 经历 xxx</description>
+      <source url="https://ujava.cn/rss.xml">基本信息</source>
+      <description>简介 性别：男</description>
       <category>介绍</category>
       <pubDate>Thu, 21 Sep 2023 06:39:48 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 简介</h2>
-<p>xxx</p>
-<h2> 经历</h2>
-<p>xxx</p>
+<p>性别：男</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>作者</title>
+      <title>工作经历</title>
       <link>https://ujava.cn/author/author1.html</link>
       <guid>https://ujava.cn/author/author1.html</guid>
-      <source url="https://ujava.cn/rss.xml">作者</source>
-      <description>简介 xxx 经历 xxx</description>
+      <source url="https://ujava.cn/rss.xml">工作经历</source>
+      <description>简介 公司：某厂</description>
       <category>介绍</category>
       <pubDate>Thu, 21 Sep 2023 06:39:48 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 简介</h2>
-<p>xxx</p>
-<h2> 经历</h2>
-<p>xxx</p>
+<p>公司：某厂</p>
 ]]></content:encoded>
     </item>
     <item>
