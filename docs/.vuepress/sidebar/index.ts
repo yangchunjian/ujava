@@ -169,6 +169,7 @@ export default sidebar({
                 "webflux",
                 "modelchange",
                 "serverless",
+                "springcloud",
             ],
         },
         {
