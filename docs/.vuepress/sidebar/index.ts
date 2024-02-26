@@ -168,6 +168,7 @@ export default sidebar({
                 "reactor",
                 "webflux",
                 "modelchange",
+                "serverless",
             ],
         },
         {
