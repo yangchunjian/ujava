@@ -172,6 +172,7 @@ export default sidebar({
                 "springcloud",
                 "devops",
                 "jenkins",
+                "k8s",
             ],
         },
         {
