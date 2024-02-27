@@ -171,6 +171,7 @@ export default sidebar({
                 "serverless",
                 "springcloud",
                 "devops",
+                "jenkins",
             ],
         },
         {
