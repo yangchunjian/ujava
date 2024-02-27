@@ -170,6 +170,7 @@ export default sidebar({
                 "modelchange",
                 "serverless",
                 "springcloud",
+                "devops",
             ],
         },
         {
