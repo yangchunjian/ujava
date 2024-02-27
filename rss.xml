@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Tue, 27 Feb 2024 06:12:57 GMT</pubDate>
-    <lastBuildDate>Tue, 27 Feb 2024 06:12:57 GMT</lastBuildDate>
+    <pubDate>Tue, 27 Feb 2024 06:40:31 GMT</pubDate>
+    <lastBuildDate>Tue, 27 Feb 2024 06:40:31 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -21,6 +21,183 @@
     <category>思想</category>
     <category>设计模式</category>
     <category>介绍</category>
+    <item>
+      <title>Jenkins详解</title>
+      <link>https://ujava.cn/highfreq/jenkins.html</link>
+      <guid>https://ujava.cn/highfreq/jenkins.html</guid>
+      <source url="https://ujava.cn/rss.xml">Jenkins详解</source>
+      <description>1.背景 在实际开发中，我们经常要一边开发一边测试，当然这里说的测试并不是程序员对自己代码的单元测试，而是同组程序员将代码提交后，由测试人员测试； 或者前后端分离后，经常会修改接口，然后重新部署； 这些情况都会涉及到频繁的打包部署； 手动打包常规步骤： 1.提交代码 2.问一下同组小伙伴有没有要提交的代码 3.拉取代码并打包（war包，或者jar包） 4.上传到Linux服务器 5.查看当前程序是否在运行 6.关闭当前程序 7.启动新的jar包 8.观察日志看是否启动成功 9.如果有同事说，自己还有代码没有提交......再次重复1到8的步骤！！！！！（一上午没了）</description>
+      <category>设计高频</category>
+      <pubDate>Tue, 27 Feb 2024 06:40:40 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 1.背景</h2>
+<p>在实际开发中，我们经常要一边开发一边测试，当然这里说的测试并不是程序员对自己代码的单元测试，而是同组程序员将代码提交后，由测试人员测试；</p>
+<p>或者前后端分离后，经常会修改接口，然后重新部署；</p>
+<p>这些情况都会涉及到频繁的打包部署；</p>
+<p>手动打包常规步骤：</p>
+<ul>
+<li>1.提交代码</li>
+<li>2.问一下同组小伙伴有没有要提交的代码</li>
+<li>3.拉取代码并打包（war包，或者jar包）</li>
+<li>4.上传到Linux服务器</li>
+<li>5.查看当前程序是否在运行</li>
+<li>6.关闭当前程序</li>
+<li>7.启动新的jar包</li>
+<li>8.观察日志看是否启动成功</li>
+<li>9.如果有同事说，自己还有代码没有提交......再次重复1到8的步骤！！！！！（一上午没了）</li>
+</ul>
+<p>那么，有一种工具能够实现，将代码提交到git后就自动打包部署勒，答案是肯定的：Jenkins</p>
+<p>当然除了Jenkins以外，也还有其他的工具可以实现自动化部署，如Hudson等</p>
+<p>只是Jenkins相对来说，使用得更广泛。</p>
+<h2> 2.Jenkins服务器搭建及基本配置</h2>
+<h3> 2.1.简介</h3>
+<p>Jenkins是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
+<h3> 2.2.Jenkins自动化部署实现原理</h3>
+<figure><figcaption>img_70.png</figcaption></figure>
+<h3> 2.3.Jenkins部署环境</h3>
+<p>基本环境：</p>
+<ul>
+<li>1.jdk环境，Jenkins是java语言开发的，因需要jdk环境。</li>
+<li>2.git/svn客户端，因一般代码是放在git/svn服务器上的，我们需要拉取代码。</li>
+<li>3.maven客户端，因一般java程序是由maven工程，需要maven打包，当然也有其他打包方式，如：gradle</li>
+</ul>
+<p>以上是自动化部署java程序jenkins需要的基本环境，请自己提前安装好，下面着重讲解Jenkins的安装部署配置。</p>
+<h3> 2.4.Jenkins安装</h3>
+<ul>
+<li>1.下载安装包jenkins.war；</li>
+<li>2.在安装包根路径下，运行命令 java -jar jenkins.war --httpPort=8080，（linux环境、Windows环境都一样）； 补充:一个童鞋遇到的问题,反馈说,git自动触发时报错403,启动加如下参数可以解决问题 nohup java -jar -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION=true /usr/local/jenkins/jenkins.war --httpPort=8080 &amp;</li>
+<li>3.打开浏览器进入链接 <a href="http://localhost:8080" target="_blank" rel="noopener noreferrer">http://localhost:8080</a>.</li>
+<li>4.填写初始密码，激活系统</li>
+</ul>
+<figure><figcaption>img_71.png</figcaption></figure>
+<ul>
+<li>5.进入插件安装选择</li>
+</ul>
+<p>这里建议选择，推荐安装的插件，保证基本常用的功能可以使用。</p>
+<figure><figcaption>img_72.png</figcaption></figure>
+<p>选择后，进入插件安装页面<br>
+</p>
+<ul>
+<li>
+<p>6.设置初始用户和密码<br>
+</p>
+</li>
+<li>
+<p>7.进入系统，安装完成<br>
+</p>
+</li>
+</ul>
+<p>注意，如果还是进入不了系统，需要稍等一下，或者刷新页面，如果还是进入不了，需要重新启动jenkinds服务器。</p>
+<h2> 2.5.Jenkins基本配置</h2>
+<h3> 2.5.1.系统初始化配置</h3>
+<figure><figcaption>img_76.png</figcaption></figure>
+<p><strong>1.Configure System (系统设置)</strong></p>
+<p>在系统设置这里，我们只需要设置最后面的一项，配置远程服务器地址，</p>
+<p>即我们代码最终运行的服务器地址信息，就像我们之前手动部署时使用xshell登录Linux服务器一样，</p>
+<p>当然这里是可以配置多台远程Linux服务器的，配置完成后点击保存即可，为后面我们配置自动化部署做准备，配置如下图<br>
+</p>
+<p><strong>2.Configure Global Security (全局安全配置)</strong></p>
+<p>a.配置用户相关的权限</p>
+<figure><figcaption>img_78.png</figcaption></figure>
+<p>b.配置钩子程序（当用代码更新时通知）访问权限，避免报403错误</p>
+<p>默认是勾选上了的，这里去掉勾选</p>
+<figure><figcaption>img_79.png</figcaption></figure>
+<p><strong>3.Global Tool Configuration (全局工具配置 )</strong></p>
+<p>a.配置maven的全局settings路径<br>
+</p>
+<p>b.配置jdk<br>
+</p>
+<p>c.配置git</p>
+<figure><figcaption>img_82.png</figcaption></figure>
+<p>d.配置maven的安装路径</p>
+<figure><figcaption>img_83.png</figcaption></figure>
+<p><strong>4.配置必要插件</strong></p>
+<p>主要是检查如下这两个插件是否已安装</p>
+<ul>
+<li>插件1：Publish over SSH</li>
+<li>插件2：Deploy to container Plugin</li>
+</ul>
+<figure><figcaption>img_84.png</figcaption></figure>
+<p>添加图片注释，不超过 140 字（可选）</p>
+<p>到这里，我们配置一个自动化部署的的java程序（springBoot+maven+gitHub），基本必要配置就差不多了，后面配置过程中如果需要在配置。</p>
+<h2> 3.Jenkins自动化部署（springBoot+maven+gitHub）项目</h2>
+<h3> 3.1.Jenkins服务器上创建项目和配置</h3>
+<p>大体步骤：General(基础配置)--》源码管理--》构建触发器--》构建环境--》构建--》构建后操作</p>
+<p><strong>1.创建一个工程</strong></p>
+<figure><figcaption>img_85.png</figcaption></figure>
+<p><strong>2.General(基础配置)</strong></p>
+<p>仅需填写标准部分，其他可不填写</p>
+<figure><figcaption>img_86.png</figcaption></figure>
+<p><strong>3.源码管理</strong><br>
+</p>
+<p>上图中点击“添加”按钮添加一组账号和密码<br>
+</p>
+<p><strong>4.构建触发器</strong></p>
+<figure><figcaption>img_89.png</figcaption></figure>
+<p>如上图：当前项目的回调地址为：</p>
+<p><a href="http://localhost:8080/job/jenkinsSpringBootDemo/build?token=token_demo2" target="_blank" rel="noopener noreferrer">http://localhost:8080/job/jenkinsSpringBootDemo/build?token=token_demo2</a></p>
+<p>只要执行这个地址（在浏览器上访问改地址），该项目就会发起一次构建项目，即拉取代码打包部署操作，</p>
+<p>在实际中，是由git服务器回调改地址，在后面讲git服务器配置时详细讲解 ，</p>
+<p>值得注意的是，如果你是学习测试，使用的是GitHub服务，要确保你的回调地址已经试外网映射过的，即往外网可以访问</p>
+<p><strong>5.构建环境（无需配置）</strong></p>
+<p><strong>6.构建</strong></p>
+<figure><figcaption>img_90.png</figcaption></figure>
+<p><strong>7.构建后操作</strong></p>
+<p>构建后操作的意思是，jar打包好后，要将jar发送到哪里去，发送后去和启动等</p>
+<p>这里需要提前在需要部署的服务器上配置好路径，写好启动和停止项目的脚本，并设置为可以执行的脚本，</p>
+<p>其实就是我们平时在Linux上手动部署项目操作的脚本<br>
+</p>
+<p>案例中给出的stop.sh脚本如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>案例中给出的start.sh脚本如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>到此，Jenkinds服务器配置完成，接下来我还有要配置Linux服务器和Git服务器。</p>
+<h3> 3.2.Linux服务器配置</h3>
+<p>在Liux服务上，上传上文中的两个脚本，用于启动和停止</p>
+<figure><figcaption>img_92.png</figcaption></figure>
+<h3> 3.3.GitHub服务器配置</h3>
+<p>在GitHub服务器上的指定项目里面配置上文中提到的回调地址</p>
+<p>特别注意：为了保证回调地址网可以使用，</p>
+<p>我已经将地址：<a href="http://localhost:8080/job/jenkinsSpringBootDemo/build?token=token_demo2%EF%BC%8C" target="_blank" rel="noopener noreferrer">http://localhost:8080/job/jenkinsSpringBootDemo/build?token=token_demo2，</a></p>
+<p>通过花生壳进行外网映射为：<a href="http://zhishidi.imwork.net/job/jenkinsSpringBootDemo/build?token=token_demo2" target="_blank" rel="noopener noreferrer">http://zhishidi.imwork.net/job/jenkinsSpringBootDemo/build?token=token_demo2</a></p>
+<p>所以，下面配置的是外网映射地址。</p>
+<figure><figcaption>img_93.png</figcaption></figure>
+<p>到这里所有配置搞定，只需修改代码，提交到git,然后访问程序看是否生效。</p>
+<h2> 4.测试</h2>
+<p><strong>1.测试代码</strong><br>
+</p>
+<p><strong>2.提交代码到git,触发构建</strong></p>
+<p><strong>3.在GitHub服务器上去看，是否已经触发</strong><br>
+</p>
+<p><strong>4.在Jenkins的控制台查看是否，正在构建</strong></p>
+<p>从下图中可以看出，正在构建</p>
+<figure><figcaption>img_96.png</figcaption></figure>
+<p><strong>5.查看当次构建的控制台日志</strong></p>
+<figure><figcaption>img_97.png</figcaption></figure>
+<p>说明已经启动成功</p>
+<p><strong>6.查看Linux服务器，是否上传代码</strong></p>
+<figure><figcaption>img_98.png</figcaption></figure>
+<p><strong>7.在Linux上使用命令jps，查看是否启动</strong></p>
+<figure><figcaption>img_99.png</figcaption></figure>
+<p><strong>8.浏览器上访问，看是否能用</strong></p>
+<figure><figcaption>img_100.png</figcaption></figure>
+<p>说明，已经正常启动可以使用。</p>
+<p><strong>9.再次确认是否能自动化部署</strong></p>
+<p>修改代码，重新提交代码，循环1到8步查看。</p>
+<p>如果测试结果是你预期的，那么自动化部署成功。</p>
+<h2> 5.总结&amp;资料下载</h2>
+<h3> 5.1.总结</h3>
+<p>自动化部署Jenkins，作为一款工具，有着非常强大的功能，</p>
+<p>上面我们只是讲了生产上做Java自动化部署的一个主要流程，</p>
+<p>其他的功能，大家可以参看官方文档：Jenkins 用户手册</p>
+<p>但是，本着学习是为了解决生产的原则，</p>
+<p>个人建议，用到Jenkins的什么功能就学什么就可以了，</p>
+<p>没必要把Jenkins的所有功能都学完在使用，</p>
+<p>就如同我们使用word文档一样，并没有系统的他word文档学完后，在开始使用，而是用到什么功能就学习什么功能！</p>
+<h3> 5.2.相关资料</h3>
+<ul>
+<li>1.案例中的源码地址：<a href="https://github.com/processfactory/demo01.git" target="_blank" rel="noopener noreferrer">https://github.com/processfactory/demo01.git</a></li>
+<li>2.官方文档：Jenkins 用户手册</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>DevOps基本概念</title>
       <link>https://ujava.cn/highfreq/devops.html</link>
@@ -9941,95 +10118,6 @@ SimpleDateFormat，官方给出的解释：simple beautiful strong immutable thr
       <content:encoded><![CDATA[<blockquote>
 <p>架构内容持续在更新迭代</p>
 </blockquote>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>设计模式</title>
-      <link>https://ujava.cn/design/</link>
-      <guid>https://ujava.cn/design/</guid>
-      <source url="https://ujava.cn/rss.xml">设计模式</source>
-      <description>简介 设计模式的起源可以追溯到20世纪80年代，当时面向对象编程开始流行。在这个时期，一些软件开发者开始注意到他们在不同的项目中遇到了相同的问题，并且他们开始寻找可重用的解决方案。这些解决方案被称为设计模式。最早提出设计模式的人是Erich Gamma、Richard Helm、Ralph Johnson和John Vlissides，他们在1994年出版了一本名为《设计模式：可复用面向对象软件的基础》的书，这本书成为了设计模式领域的经典著作。自那时以来，设计模式已经成为软件开发中非常重要的概念，并且在不同的编程语言和开发框架中都得到了广泛的应用。</description>
-      <category>设计模式</category>
-      <pubDate>Tue, 19 Sep 2023 02:56:33 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 简介</h2>
-<p>设计模式的起源可以追溯到20世纪80年代，当时面向对象编程开始流行。在这个时期，一些软件开发者开始注意到他们在不同的项目中遇到了相同的问题，并且他们开始寻找可重用的解决方案。这些解决方案被称为设计模式。最早提出设计模式的人是Erich<br>
-Gamma、Richard Helm、Ralph Johnson和John<br>
-Vlissides，他们在1994年出版了一本名为《设计模式：可复用面向对象软件的基础》的书，这本书成为了设计模式领域的经典著作。自那时以来，设计模式已经成为软件开发中非常重要的概念，并且在不同的编程语言和开发框架中都得到了广泛的应用。</p>
-<p>四位作者合称 GOF（四人帮，全拼 Gang of Four）。他们所提出的设计模式主要是基于以下的面向对象设计原则。</p>
-<ul>
-<li>对接口编程而不是对实现编程。</li>
-<li>优先使用对象组合而不是继承。</li>
-</ul>
-<p>设计模式是常见的软件设计问题的可重用解决方案。它们提供了一种解决开发人员在设计软件应用程序时经常遇到的问题的方法。设计模式有几种类型，包括创建型、结构型和行为型模式。</p>
-<ul>
-<li>创建型模式用于以灵活和高效的方式创建对象。包括Singleton模式、工厂模式和抽象工厂模式等。</li>
-<li>结构型模式用于组合类和对象以形成更大的结构。包括适配器模式、桥接模式和装饰器模式等。</li>
-<li>行为型模式用于处理类或对象之间的通信和控制流。包括观察者模式、策略模式和模板方法模式。</li>
-<li>设计模式是软件开发中非常有用的工具，可以提高代码的可重用性和可维护性，同时也可以提高开发人员的工作效率。</li>
-</ul>
-<h2> 设计模式的六大原则</h2>
-<ul>
-<li>单一职责原则（SRP）：一个类只应该有一个引起它变化的原因。</li>
-<li>开放封闭原则（OCP）：软件实体（类、模块、函数等）应该对扩展开放，对修改关闭。<code>对扩展开放，对修改关闭</code>。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是<code>为了使程序的扩展性好，易于维护和升级</code>。想要达到这样的效果，我们需要使用接口和抽象类。</li>
-<li>里氏替换原则（LSP）：子类型必须能够替换掉它们的父类型。里氏代换原则是面向对象设计的基本原则之一。 里氏代换原则中说，<code>任何基类可以出现的地方，子类一定可以出现</code>。LSP 是继承复用的基石，<code>只有当派生类可以替换掉基类，且软件单位的功能不受到影响时，基类才能真正被复用，而派生类也能够在基类的基础上增加新的行为</code>。里氏代换原则是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化，而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。</li>
-<li>依赖倒置原则（DIP）：高层模块不应该依赖于低层模块，两者都应该依赖于抽象接口；抽象接口不应该依赖于具体实现，具体实现应该依赖于抽象接口。是开闭原则的基础，具体内容：<code>针对接口编程，依赖于抽象而不依赖于具体</code>。</li>
-<li>接口隔离原则（ISP）：不应该强迫一个类实现它不需要的接口，应该将接口拆分成更小和更具体的部分，以便客户端只需要知道它们感兴趣的部分。<code>使用多个隔离的接口，比使用单个接口要好</code>。它还有另外一个意思是：降低类之间的耦合度。便于升级和维护的软件设计思想，它强调降低依赖，降低耦合。</li>
-<li>迪米特法则（LOD）：一个对象应该对其他对象有尽可能少的了解，通常称为“最少知识原则”。又称最少知道原则，<code>一个实体应当尽量少地与其他实体之间发生相互作用</code>，使得系统功能模块相对独立。</li>
-<li>合成复用原则（CRP）：尽量<code>使用合成/聚合的方式</code>，而不是使用继承。</li>
-</ul>
-<h3> 一、创建型模式</h3>
-<p>这种模式<code>提供了一种在创建对象的同时隐藏创建逻辑的方式</code>，而不是使用 new 运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。包括（工厂模式，抽象工厂模式，单例模式，建造者模式，原型模式）</p>
-<ul>
-<li>1、单例模式（Singleton Pattern）
-<ul>
-<li>1）饿汉式</li>
-<li>2）懒汉式，双检锁</li>
-<li>3）静态内部类</li>
-<li>4）枚举</li>
-</ul>
-</li>
-<li>2、原型模式（Prototype Pattern）</li>
-<li>3、工厂模式（Factory Pattern）</li>
-<li>4、抽象工厂模式（Abstract Factory Pattern）</li>
-<li>5、建造者模式（Builder Pattern）</li>
-</ul>
-<h3> 二、结构型模式</h3>
-<p>这种模式<code>关注类和对象的组合</code>。继承的概念被用来组合接口和定义组合对象获得新功能的方式。包括（适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式）</p>
-<ul>
-<li>1、适配器模式（Adapter Pattern）</li>
-<li>2、组合模式（Composite Pattern）</li>
-<li>3、装饰器模式（Decorator Pattern）</li>
-<li>4、外观模式（Facade Pattern）</li>
-<li>5、享元模式（Flyweight Pattern）</li>
-<li>6、代理模式（Proxy Pattern）
-<ul>
-<li>1）静态代理</li>
-<li>2）jdk动态代理</li>
-<li>3）cglib动态代理</li>
-</ul>
-</li>
-<li>7、桥接模式（Bridge Pattern）</li>
-</ul>
-<h3> 三、行为型模式</h3>
-<p>这些设计模式<code>特别关注对象之间的通信</code>。包括（策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式）</p>
-<ul>
-<li>1、责任链模式（Chain of Responsibility Pattern）</li>
-<li>2、命令模式（Command Pattern）</li>
-<li>3、解释器模式（Interpreter Pattern）</li>
-<li>4、迭代器模式（Iterator Pattern）</li>
-<li>5、观察者模式（Observer Pattern）</li>
-<li>6、状态模式（State Pattern）</li>
-<li>7、模板模式（Template Pattern）</li>
-<li>8、中介者模式（Mediator Pattern）</li>
-<li>9、备忘录模式（Memento Pattern）</li>
-<li>10、访问者模式（Visitor Pattern）</li>
-<li>11、策略模式（Strategy Pattern）</li>
-</ul>
-<h2> 其他</h2>
-<ul>
-<li>1、过滤器模式（Filter Pattern）</li>
-<li>2、空对象模式（Null Object Pattern）</li>
-</ul>
 ]]></content:encoded>
     </item>
   </channel>
