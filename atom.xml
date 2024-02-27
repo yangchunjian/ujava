@@ -3,7 +3,7 @@
   <id>https://ujava.cn/</id>
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
-  <updated>2024-02-27T06:40:31.826Z</updated>
+  <updated>2024-02-27T07:30:59.633Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -22,7 +22,7 @@
     <title type="text">Jenkins详解</title>
     <id>https://ujava.cn/highfreq/jenkins.html</id>
     <link href="https://ujava.cn/highfreq/jenkins.html"/>
-    <updated>2024-02-27T06:40:40.000Z</updated>
+    <updated>2024-02-27T07:30:24.000Z</updated>
     <summary type="html"><![CDATA[<h2> 1.背景</h2>
 <p>在实际开发中，我们经常要一边开发一边测试，当然这里说的测试并不是程序员对自己代码的单元测试，而是同组程序员将代码提交后，由测试人员测试；</p>
 <p>或者前后端分离后，经常会修改接口，然后重新部署；</p>
@@ -97,8 +97,8 @@
 </li>
 </ul>
 <p>注意，如果还是进入不了系统，需要稍等一下，或者刷新页面，如果还是进入不了，需要重新启动jenkinds服务器。</p>
-<h2> 2.5.Jenkins基本配置</h2>
-<h3> 2.5.1.系统初始化配置</h3>
+<h3> 2.5.Jenkins基本配置</h3>
+<h4> 2.5.1.系统初始化配置</h4>
 <figure><figcaption>img_76.png</figcaption></figure>
 <p><strong>1.Configure System (系统设置)</strong></p>
 <p>在系统设置这里，我们只需要设置最后面的一项，配置远程服务器地址，</p>

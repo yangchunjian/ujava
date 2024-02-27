@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Tue, 27 Feb 2024 06:40:31 GMT</pubDate>
-    <lastBuildDate>Tue, 27 Feb 2024 06:40:31 GMT</lastBuildDate>
+    <pubDate>Tue, 27 Feb 2024 07:30:59 GMT</pubDate>
+    <lastBuildDate>Tue, 27 Feb 2024 07:30:59 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -87,8 +87,8 @@
 </li>
 </ul>
 <p>注意，如果还是进入不了系统，需要稍等一下，或者刷新页面，如果还是进入不了，需要重新启动jenkinds服务器。</p>
-<h2> 2.5.Jenkins基本配置</h2>
-<h3> 2.5.1.系统初始化配置</h3>
+<h3> 2.5.Jenkins基本配置</h3>
+<h4> 2.5.1.系统初始化配置</h4>
 <figure><figcaption>img_76.png</figcaption></figure>
 <p><strong>1.Configure System (系统设置)</strong></p>
 <p>在系统设置这里，我们只需要设置最后面的一项，配置远程服务器地址，</p>
