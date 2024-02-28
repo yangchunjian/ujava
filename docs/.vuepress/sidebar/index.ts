@@ -7,6 +7,8 @@ export default sidebar({
     // 应该把更精确的路径放置在前边
 
     "/author/": author,
+    "/data/": "structure",
+
     // 必须放在最后面
     "/": [
         {
