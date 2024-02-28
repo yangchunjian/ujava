@@ -188,7 +188,7 @@ k8s运行需要容器运行环境，每个节点都需要安装Docker
 * service-cidr：为Service分配的IP地址段
 * pod-network-cidr：为pod分配的IP地址段
 
-```java
+```sql
 # 所有节点添加
 echo "192.168.5.10  cluster-endpoint" >> /etc/hosts
 # 只在主节点执行
@@ -214,7 +214,7 @@ registry.cn-hangzhou.aliyuncs.com/google_containers/coredns                   1.
 registry.cn-hangzhou.aliyuncs.com/google_containers/pause                     3.2        80d28bedfe5d   3 years ago     683kB
 ```
 成功界面：
-```java
+```sql
 Your Kubernetes control-plane has initialized successfully!
  
 To start using your cluster, you need to run the following as a regular user:
@@ -238,7 +238,7 @@ kubeadm join 192.168.5.10:6443 --token kdy4ka.jz5otwd1l3l2of5v \
 ```
 
 要使非root用户运行kubectl，请执行以下命令，这也是上面kubeadm init输出的一部分：
-```java
+```sql
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
