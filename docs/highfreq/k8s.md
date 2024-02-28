@@ -11,7 +11,7 @@ tag:
 
 ## 一、K8S简介
 
-Kubernetes中文官网：Kubernetes
+Kubernetes中文官网：[Kubernetes](https://kubernetes.io/zh/)
 
 GitHub：github.com/kubernetes/kubernetes
 
