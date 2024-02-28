@@ -61,7 +61,7 @@ kubeadm工具
 
 ![img_104.png](img_104.png)
 
-### 环境配置
+ 环境配置
 
 修改hosts配置
 
