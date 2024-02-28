@@ -7,8 +7,6 @@ export default sidebar({
     // 应该把更精确的路径放置在前边
 
     "/author/": author,
-    // "/data/": "structure",
-
     // 必须放在最后面
     "/": [
         {
@@ -176,14 +174,6 @@ export default sidebar({
                 "jenkins",
                 "k8s",
             ],
-        },
-        {
-            text: "设计数据",
-            icon: "star",
-            collapsible: true,
-            prefix: "data/",
-            children: "structure",
-
         },
         {
             text: "设计算法",
