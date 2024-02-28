@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Wed, 28 Feb 2024 01:14:03 GMT</pubDate>
-    <lastBuildDate>Wed, 28 Feb 2024 01:14:03 GMT</lastBuildDate>
+    <pubDate>Wed, 28 Feb 2024 02:35:24 GMT</pubDate>
+    <lastBuildDate>Wed, 28 Feb 2024 02:35:24 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -65,7 +65,7 @@
 </ul>
 <p>集群规划</p>
 <figure><figcaption>img_104.png</figcaption></figure>
-<h3> 环境配置</h3>
+<p>环境配置</p>
 <p>修改hosts配置</p>
 <p>配置所有节点的IP和域名映射</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置SSH免密登录</p>
