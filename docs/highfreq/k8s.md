@@ -233,8 +233,7 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
  
 Then you can join any number of worker nodes by running the following on each as root:
  
-kubeadm join 192.168.5.10:6443 --token kdy4ka.jz5otwd1l3l2of5v \
-    --discovery-token-ca-cert-hash sha256:d40fe1c0af2bef8143106d27d418a4b7026f1f79a6dfe30cb4691d35755719ad
+kubeadm join 192.168.5.10:6443 --token kdy4ka.jz5otwd1l3l2of5v --discovery-token-ca-cert-hash sha256:d40fe1c0af2bef8143106d27d418a4b7026f1f79a6dfe30cb4691d35755719ad
 ```
 
 要使非root用户运行kubectl，请执行以下命令，这也是上面kubeadm init输出的一部分：
@@ -256,8 +255,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 
 所有Node节点执行如下命令：
 ```java
-kubeadm join 192.168.5.10:6443 --token kdy4ka.jz5otwd1l3l2of5v \
-    --discovery-token-ca-cert-hash sha256:d40fe1c0af2bef8143106d27d418a4b7026f1f79a6dfe30cb4691d35755719ad
+kubeadm join 192.168.5.10:6443 --token kdy4ka.jz5otwd1l3l2of5v --discovery-token-ca-cert-hash sha256:d40fe1c0af2bef8143106d27d418a4b7026f1f79a6dfe30cb4691d35755719ad
 ```
 
 查看token列表，可观察到每个token的剩余有效时间
@@ -340,8 +338,10 @@ service/mynginx      NodePort    10.105.55.49   <none>        80:30161/TCP   50s
 ```
 
 访问nginx
-
+```sql
 浏览器输入<任意一个节点IP>:<port>，都可以访问nginx首页表示测试成功。
+```
+
 ![img_106.png](img_106.png)
 
 
@@ -352,15 +352,15 @@ k8s官方提供了一个简单的Dashboard，主要提供工作负载，服务�
 Github：github.com/kubernetes/dashboard
 
 通过kubectl命令安装
-```java
+```sql
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/aio/deploy/recommended.yaml
 ```
 对外暴露访问端口，由--type=ClusterIP修改为--type=NodePort
-```java
+```sql
 kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
 ```
 查看service
-```java
+```sql
 [root@node1 ~]# kubectl get svc -A|grep dashboard
 kubernetes-dashboard   dashboard-metrics-scraper   ClusterIP   10.102.247.36   <none>        8000/TCP                 16h
 kubernetes-dashboard   kubernetes-dashboard        NodePort    10.96.38.129    <none>        443:31128/TCP            16h
