@@ -6,6 +6,214 @@
   "description": " 【Java学习 + Java面试】首选UJava！  ",
   "items": [
     {
+      "title": "安排执行断言模式",
+      "url": "https://ujava.cn/design/other/aaa.html",
+      "id": "https://ujava.cn/design/other/aaa.html",
+      "summary": "概述 安排执行断言模式(Arrange/Act/Assert(AAA))是个单元测试模式",
+      "content_html": "<h2> 概述</h2>\n<p>安排执行断言模式(Arrange/Act/Assert(AAA))是个单元测试模式</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "抽象文档模式",
+      "url": "https://ujava.cn/design/other/abstractdocument.html",
+      "id": "https://ujava.cn/design/other/abstractdocument.html",
+      "summary": "概述 抽象文档模式(abstract document)允许处理其他非静态属性。此模式使用特征的概念来实现类型安全，并将不同类的属性分离到一组接口中。",
+      "content_html": "<h2> 概述</h2>\n<p>抽象文档模式(abstract document)允许处理其他非静态属性。此模式使用特征的概念来实现类型安全，并将不同类的属性分离到一组接口中。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "活动对象模式",
+      "url": "https://ujava.cn/design/other/activeobject.html",
+      "id": "https://ujava.cn/design/other/activeobject.html",
+      "summary": "概述 活动对象模式(active object)有助于在不使用“同步”方法的情况下解决同步困难。活动对象将包含线程安全的数据结构（如 BlockingQueue），用于通过将方法的逻辑移动到调用器（通常是 Runnable）并将其存储在 DSA 中来同步方法调用。",
+      "content_html": "<h2> 概述</h2>\n<p>活动对象模式(active object)有助于在不使用“同步”方法的情况下解决同步困难。活动对象将包含线程安全的数据结构（如 BlockingQueue），用于通过将方法的逻辑移动到调用器（通常是 Runnable）并将其存储在 DSA 中来同步方法调用。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "非循环访问者模式",
+      "url": "https://ujava.cn/design/other/acyclicvisitor.html",
+      "id": "https://ujava.cn/design/other/acyclicvisitor.html",
+      "summary": "概述 非循环访问者模式(acyclic visitor)允许将新函数添加到现有类层次结构中，而不会影响这些层次结构，并且不会通过使 Visitor 基类退化来创建 GoF(Gang of Four) Visitor(访问者) 模式固有的依赖关系循环",
+      "content_html": "<h2> 概述</h2>\n<p>非循环访问者模式(acyclic visitor)允许将新函数添加到现有类层次结构中，而不会影响这些层次结构，并且不会通过使 Visitor 基类退化来创建 GoF(Gang<br>\nof Four) Visitor(访问者) 模式固有的依赖关系循环</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "大使模式",
+      "url": "https://ujava.cn/design/other/ambassadorpattern.html",
+      "id": "https://ujava.cn/design/other/ambassadorpattern.html",
+      "summary": "概述 大使模式(ambassador pattern)创建一个帮助程序服务，该服务代表客户端发送网络请求。它通常用于基于云的应用程序中，以卸载远程服务的功能。 大使服务可以看作是与客户端位于同一位置的进程外代理。与代理设计模式类似，大使服务为另一个远程服务提供接口。除了接口之外，大使还提供额外的功能和特性，特别是卸载了常见的连接任务。这通常包括监控、日志记录、路由、安全等。这在代码库难以修改的旧应用程序中非常有用，并允许改进应用程序的网络功能。",
+      "content_html": "<h2> 概述</h2>\n<p>大使模式(ambassador pattern)创建一个帮助程序服务，该服务代表客户端发送网络请求。它通常用于基于云的应用程序中，以卸载远程服务的功能。<br>\n大使服务可以看作是与客户端位于同一位置的进程外代理。与代理设计模式类似，大使服务为另一个远程服务提供接口。除了接口之外，大使还提供额外的功能和特性，特别是卸载了常见的连接任务。这通常包括监控、日志记录、路由、安全等。这在代码库难以修改的旧应用程序中非常有用，并允许改进应用程序的网络功能。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "异步方法调用模式",
+      "url": "https://ujava.cn/design/other/asynmethodinvocation.html",
+      "id": "https://ujava.cn/design/other/asynmethodinvocation.html",
+      "summary": "概述 异步方法调用(asynchronous method invocation)是一种模式，在等待任务结果时，调用线程不会被阻塞。该模式提供多个独立任务的并行处理，并通过回调或等待所有工作完成来检索结果。",
+      "content_html": "<h2> 概述</h2>\n<p>异步方法调用(asynchronous method invocation)是一种模式，在等待任务结果时，调用线程不会被阻塞。该模式提供多个独立任务的并行处理，并通过回调或等待所有工作完成来检索结果。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "放弃设计模式",
+      "url": "https://ujava.cn/design/other/balkingdesign.html",
+      "id": "https://ujava.cn/design/other/balkingdesign.html",
+      "summary": "概述 在放弃设计模式(Balking Design Pattern) 中，如果对象的方法在处于不适当的状态时被调用，则该方法将返回而不执行任何操作。使用此模式的对象通常只处于一种容易暂时停止的状态，但持续时间未知",
+      "content_html": "<h2> 概述</h2>\n<p>在放弃设计模式(Balking Design Pattern) 中，如果对象的方法在处于不适当的状态时被调用，则该方法将返回而不执行任何操作。使用此模式的对象通常只处于一种容易暂时停止的状态，但持续时间未知</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T03:01:44.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "业务委托模式",
+      "url": "https://ujava.cn/design/other/businessdelegate.html",
+      "id": "https://ujava.cn/design/other/businessdelegate.html",
+      "summary": "概述 业务委托模式(business delegate)在表示层和业务层之间添加了一个抽象层。通过使用该模式，我们获得了层之间的松散耦合。业务委托封装了有关如何查找、连接到构成应用程序的业务对象并与之交互的知识。 业务委托使用的一些服务是直接实例化的，有些服务可以通过服务查找来检索。业务委托本身也可能包含业务逻辑，可能会将多个服务调用、异常处理、重试等捆绑在一起。",
+      "content_html": "<h2> 概述</h2>\n<p>业务委托模式(business delegate)在表示层和业务层之间添加了一个抽象层。通过使用该模式，我们获得了层之间的松散耦合。业务委托封装了有关如何查找、连接到构成应用程序的业务对象并与之交互的知识。<br>\n业务委托使用的一些服务是直接实例化的，有些服务可以通过服务查找来检索。业务委托本身也可能包含业务逻辑，可能会将多个服务调用、异常处理、重试等捆绑在一起。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "字节码模式",
+      "url": "https://ujava.cn/design/other/bytecode.html",
+      "id": "https://ujava.cn/design/other/bytecode.html",
+      "summary": "概述 字节码模式(bytecode pattern) 的目的是通过将数据编码为虚拟机的指令来为行为提供数据的灵活性。指令集定义了可以执行的低级操作。一系列指令被编码为字节序列。虚拟机一次执行一个指令，使用堆栈作为中间值。通过组合指令，可以定义复杂的高级行为。 当需要定义大量行为并且实现引擎不是一个好的选择时，应该使用此模式，因为它太低级别了，由于编译时间慢或其他工具问题，迭代它需要很长时间。它有太多的信任。如果要确保所定义的行为不会破坏游戏，则需要将其从代码库的其余部分沙盒化。",
+      "content_html": "<h2> 概述</h2>\n<p>字节码模式(bytecode pattern)<br>\n的目的是通过将数据编码为虚拟机的指令来为行为提供数据的灵活性。指令集定义了可以执行的低级操作。一系列指令被编码为字节序列。虚拟机一次执行一个指令，使用堆栈作为中间值。通过组合指令，可以定义复杂的高级行为。<br>\n当需要定义大量行为并且实现引擎不是一个好的选择时，应该使用此模式，因为它太低级别了，由于编译时间慢或其他工具问题，迭代它需要很长时间。它有太多的信任。如果要确保所定义的行为不会破坏游戏，则需要将其从代码库的其余部分沙盒化。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "缓存模式",
+      "url": "https://ujava.cn/design/other/caching.html",
+      "id": "https://ujava.cn/design/other/caching.html",
+      "summary": "概述 缓存模式(caching)描述了如何通过不在资源使用后立即释放资源来避免昂贵的资源重新获取。这些资源保留了它们的身份，保存在一些快速访问存储中，并被重新使用以避免再次获取它们。此模式中有四种主要的缓存策略/技术；每个人都有自己的优点和缺点。它们是在单个事务中将数据写入高速缓存和数据库的写操作，将数据立即写入数据库而不是高速缓存的绕写操作，最初将数据写入高速缓冲存储器的后写操作，而数据仅在高速缓冲存储器满时写入数据库，并将保持两个数据源中的数据同步的责任推给应用程序本身。read-through策略也包含在上述四种策略中——如果存在，则将数据从缓存返回给调用方，否则从DB查询并将其存储到缓存中以备将来使用。 这些策略决定了缓存中的数据何时应写回后备存储（即数据库），并有助于保持两个数据源的同步/最新。这种模式可以提高性能，也有助于保持缓存中的数据与底层数据存储中的数据之间的一致性。",
+      "content_html": "<h2> 概述</h2>\n<p>缓存模式(caching)描述了如何通过不在资源使用后立即释放资源来避免昂贵的资源重新获取。这些资源保留了它们的身份，保存在一些快速访问存储中，并被重新使用以避免再次获取它们。此模式中有四种主要的缓存策略/技术；每个人都有自己的优点和缺点。它们是在单个事务中将数据写入高速缓存和数据库的写操作，将数据立即写入数据库而不是高速缓存的绕写操作，最初将数据写入高速缓冲存储器的后写操作，而数据仅在高速缓冲存储器满时写入数据库，并将保持两个数据源中的数据同步的责任推给应用程序本身。read-through策略也包含在上述四种策略中——如果存在，则将数据从缓存返回给调用方，否则从DB查询并将其存储到缓存中以备将来使用。<br>\n这些策略决定了缓存中的数据何时应写回后备存储（即数据库），并有助于保持两个数据源的同步/最新。这种模式可以提高性能，也有助于保持缓存中的数据与底层数据存储中的数据之间的一致性。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "回调模式",
+      "url": "https://ujava.cn/design/other/callback.html",
+      "id": "https://ujava.cn/design/other/callback.html",
+      "summary": "概述 回调模式(callback)对于函数被视为一等公民的函数语言来说更为原生。在Java 8之前，可以使用简单的（类似的命令）接口来模拟回调。",
+      "content_html": "<h2> 概述</h2>\n<p>回调模式(callback)对于函数被视为一等公民的函数语言来说更为原生。在Java 8之前，可以使用简单的（类似的命令）接口来模拟回调。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "回路生成器模式",
+      "url": "https://ujava.cn/design/other/circuitbuilder.html",
+      "id": "https://ujava.cn/design/other/circuitbuilder.html",
+      "summary": "概述 回路生成器模式(Circuit Builder)的目的是稳健地处理远程故障，也就是说，如果一个服务依赖于n个其他服务，并且其中m个服务失败，我们应该能够通过确保用户仍然可以使用实际工作的服务来从故障中恢复，并且资源不会被不工作的服务无用地占用。然而，我们也应该能够检测出m个故障服务何时重新开始运行，以便我们能够使用它",
+      "content_html": "<h2> 概述</h2>\n<p>回路生成器模式(Circuit Builder)的目的是稳健地处理远程故障，也就是说，如果一个服务依赖于n个其他服务，并且其中m个服务失败，我们应该能够通过确保用户仍然可以使用实际工作的服务来从故障中恢复，并且资源不会被不工作的服务无用地占用。然而，我们也应该能够检测出m个故障服务何时重新开始运行，以便我们能够使用它</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "客户端会话模式",
+      "url": "https://ujava.cn/design/other/clientsession.html",
+      "id": "https://ujava.cn/design/other/clientsession.html",
+      "summary": "概述 客户端会话模式(Client-Session)允许将会话数据存储在客户端，并在每次请求时将这些数据发送到服务器。",
+      "content_html": "<h2> 概述</h2>\n<p>客户端会话模式(Client-Session)允许将会话数据存储在客户端，并在每次请求时将这些数据发送到服务器。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "收集参数设计模式",
+      "url": "https://ujava.cn/design/other/collectingparameter.html",
+      "id": "https://ujava.cn/design/other/collectingparameter.html",
+      "summary": "概述 收集参数设计模式(Collecting Parameter)旨在返回一个结果，该结果是多种方法的协作结果。此设计模式使用一个“收集参数”，该参数传递给多个函数，在从一个方法传递到另一个方法时累积结果。这与Composed Method设计模式不同，后者通过多种方法修改单个集合。",
+      "content_html": "<h2> 概述</h2>\n<p>收集参数设计模式(Collecting Parameter)旨在返回一个结果，该结果是多种方法的协作结果。此设计模式使用一个“收集参数”，该参数传递给多个函数，在从一个方法传递到另一个方法时累积结果。这与Composed Method设计模式不同，后者通过多种方法修改单个集合。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "集合管道模式",
+      "url": "https://ujava.cn/design/other/collectionpipeline.html",
+      "id": "https://ujava.cn/design/other/collectionpipeline.html",
+      "summary": "概述 集合管道模式(Collection Pipeline) 在命令式编程中，大多数类型的数据处理通常使用for和while循环。函数组合是一种简单的技术，可以对模块化函数进行排序，以创建更复杂的操作。当您在序列中运行数据时，您就有了一个收集管道。函数组合和收集管道模式使您能够创建复杂的程序，其中数据从上游流到下游，并通过一系列转换进行传递。",
+      "content_html": "<h2> 概述</h2>\n<p>集合管道模式(Collection Pipeline)</p>\n<p>在命令式编程中，大多数类型的数据处理通常使用for和while循环。函数组合是一种简单的技术，可以对模块化函数进行排序，以创建更复杂的操作。当您在序列中运行数据时，您就有了一个收集管道。函数组合和收集管道模式使您能够创建复杂的程序，其中数据从上游流到下游，并通过一系列转换进行传递。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
+      "title": "上下文对象模式",
+      "url": "https://ujava.cn/design/other/contextobject.html",
+      "id": "https://ujava.cn/design/other/contextobject.html",
+      "summary": "概述 在上下文对象模式(context object)中，来自底层协议特定类/系统的信息和数据被解耦，并以有组织的格式存储到与协议无关的对象中。该模式确保上下文对象中包含的数据可以在软件系统的不同层之间共享和进一步结构化。",
+      "content_html": "<h2> 概述</h2>\n<p>在上下文对象模式(context object)中，来自底层协议特定类/系统的信息和数据被解耦，并以有组织的格式存储到与协议无关的对象中。该模式确保上下文对象中包含的数据可以在软件系统的不同层之间共享和进一步结构化。</p>\n",
+      "date_published": "2024-02-29T02:52:33.000Z",
+      "date_modified": "2024-02-29T02:52:33.000Z",
+      "authors": [],
+      "tags": [
+        "设计模式"
+      ]
+    },
+    {
       "title": "K8S简介",
       "url": "https://ujava.cn/highfreq/k8s.html",
       "id": "https://ujava.cn/highfreq/k8s.html",
@@ -1095,212 +1303,6 @@
       "authors": [],
       "tags": [
         "设计模式"
-      ]
-    },
-    {
-      "title": "观察者模式",
-      "url": "https://ujava.cn/design/action/observer.html",
-      "id": "https://ujava.cn/design/action/observer.html",
-      "summary": "概述 介绍：Java观察者模式是一种行为设计模式，它定义了一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖它的对象都会得到通知并自动更新。该模式适用于需要在对象间建立动态的、松散耦合的关系的场景，例如事件处理等。定义对象间的一种一对多的依赖关系,当一个对象的状态发生改变时, 所有依赖于它的对象都得到通知并被自动更新。观察者 有多个 , 被观察的 主题对象 只有一个。 场景： 一个对象（目标对象）的状态发生改变，所有的依赖对象（观察者对象）都将得到通知，进行广播通知。 需要在系统中创建一个触发链，使得事件拥有跨域通知（跨越两种观察者的类型） 当一个对象的状态发生改变时，需要通知其他对象并更新它们的状态。 当一个对象需要将自己的状态变化通知给其他对象，但是又不希望与这些对象之间产生紧密的耦合关系。 当一个对象的改变需要同时改变其他对象的状态，而且不知道具体有多少对象需要改变。 当一个对象的改变需要其他对象的协助，但是不希望这些对象与自己产生紧密的耦合关系。 当一个对象的改变会引起一系列的连锁反应，而且这些连锁反应的具体实现不希望被该对象所知道。 当一个对象需要向其他对象提供一种数据更新的方式，而且这种更新方式需要在不同的时间点通知不同的对象。",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：Java观察者模式是一种行为设计模式，它定义了一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖它的对象都会得到通知并自动更新。该模式适用于需要在对象间建立动态的、松散耦合的关系的场景，例如事件处理等。定义对象间的一种一对多的依赖关系,<strong>当一个对象的状态发生改变时, 所有依赖于它的对象都得到通知并被自动更新</strong>。观察者 有多个 , 被观察的 主题对象 只有一个。</p>\n<p><strong>场景</strong>：</p>\n<ul>\n<li>一个对象（目标对象）的状态发生改变，所有的依赖对象（观察者对象）都将得到通知，进行广播通知。</li>\n<li>需要在系统中创建一个<strong>触发链，使得事件拥有跨域通知</strong>（跨越两种观察者的类型）</li>\n<li>当一个对象的状态发生改变时，需要通知其他对象并更新它们的状态。</li>\n<li>当一个对象需要将自己的状态变化通知给其他对象，但是又不希望与这些对象之间产生紧密的耦合关系。</li>\n<li>当一个对象的改变需要同时改变其他对象的状态，而且不知道具体有多少对象需要改变。</li>\n<li>当一个对象的改变需要其他对象的协助，但是不希望这些对象与自己产生紧密的耦合关系。</li>\n<li>当一个对象的改变会引起一系列的连锁反应，而且这些连锁反应的具体实现不希望被该对象所知道。</li>\n<li>当一个对象需要向其他对象提供一种数据更新的方式，而且这种更新方式需要在不同的时间点通知不同的对象。</li>\n</ul>\n<p>JDK的util包中。MVC(Modew-View-Controller)架构中也应用了观察者模式，其中模型（Model）可以对应观察者模式中的观察目标，而视图（View）对应于观察者，控制器（Controller）就是中介者模式的应用</p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.<strong>抽象耦合</strong> : 在 观察者 和 被观察者 之间 , 建立了一个 抽象的 耦合 ; 由于 耦合 是抽象的 , 可以很容易 扩展 观察者 和 被观察者 ;</li>\n<li>2.<strong>广播通信</strong> : 观察者模式 支持 广播通信 , 类似于消息广播 , 如果需要接收消息 , 只需要注册一下即可</li>\n</ul>\n<p><strong>不足</strong>：</p>\n<ul>\n<li>1.<strong>依赖过多</strong> : 观察者 之间 细节依赖 过多 , 会增加 时间消耗 和 程序的复杂程度 ;</li>\n<li>2.<strong>循环调用</strong> : 避免 循环调用 , 观察者 与 被观察者 之间 绝对不允许循环依赖 , 否则会触发 二者 之间的循环调用 , 导致系统崩溃 ;</li>\n</ul>\n<p>总之，观察者模式适用于需要在对象间建立动态的、松散耦合的关系的场景，例如事件处理、GUI编程、消息队列等。</p>\n<h2> Java自带观察者模式介绍</h2>\n<p>Java提供的一种内置的观察者模式实现。它使用了Java中的Observable类和Observer接口来实现观察者模式。</p>\n<p>Observable类是一个抽象类，它表示一个可观察的对象，具有添加、删除和通知观察者的方法。当Observable对象的状态发生改变时，会调用它的notifyObservers()方法，通知所有的观察者对象，并更新它们的状态。Observable类还提供了setChanged()方法和clearChanged()方法，用于标记Observable对象的状态是否发生了改变。</p>\n<p>Observer接口表示观察者对象，具有更新状态的方法update()。当Observable对象的状态发生改变时，会调用观察者对象的update()方法，传递更新的数据。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
-      "date_published": "2023-10-07T10:53:31.000Z",
-      "date_modified": "2023-10-12T12:18:57.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "状态模式",
-      "url": "https://ujava.cn/design/action/state.html",
-      "id": "https://ujava.cn/design/action/state.html",
-      "summary": "概述 介绍：Java状态模式是一种行为型设计模式，它允许对象在内部状态改变时改变它的行为。状态模式将状态封装成独立的类，并将请求委托给当前状态对象，从而实现状态的切换和状态行为的变化。 又称状态对象(Pattern of Objects for States)模式，是一种对象的行为模式。状态模式允许一个对象在其内部状态改变的时候改变其行为。这个对象看上去就像是改变了它的类一样。 本质：根据状态来分离和选择行为 场景： 一个由一个或多个动态变化的属性导致发生不同行为的对象，在与外部事件产生互动时，其内部状态就会改变，从而使得系统的行为也随之发生变化，那么这个对象，就是有状态的对象 代码中包含大量与对象状态有关的条件语句，像是if else或switch case语句，且这些条件执行与否依赖于该对象的状态。 当一个对象的行为取决于它的状态，并且它必须在运行时根据状态改变它的行为时。 当一个对象需要根据状态改变它的数据和方法时。 当一个对象需要在多个状态之间切换，并且每个状态都有不同的行为时。",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：Java状态模式是一种行为型设计模式，它允许对象在内部状态改变时改变它的行为。状态模式将状态封装成独立的类，并将请求委托给当前状态对象，从而实现状态的切换和状态行为的变化。<br>\n又称状态对象(Pattern of Objects for States)模式，是一种对象的行为模式。状态模式允许一个对象在其内部状态改变的时候改变其行为。这个对象看上去就像是改变了它的类一样。 <strong>本质：根据状态来分离和选择行为</strong></p>\n<p><strong>场景</strong>：</p>\n<ul>\n<li>一个由一个或多个动态变化的属性导致发生不同行为的对象，在与外部事件产生互动时，其内部状态就会改变，从而使得系统的行为也随之发生变化，那么这个对象，就是有状态的对象</li>\n<li><strong>代码中包含大量与对象状态有关的条件语句</strong>，像是if else或switch case语句，<strong>且这些条件执行与否依赖于该对象的状态</strong>。</li>\n<li>当一个对象的行为取决于它的状态，并且它必须在运行时根据状态改变它的行为时。</li>\n<li>当一个对象需要根据状态改变它的数据和方法时。</li>\n<li>当一个对象需要在多个状态之间切换，并且每个状态都有不同的行为时。</li>\n</ul>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.<strong>简化应用逻辑控</strong>, 把负责逻辑控制的代码分散到单独的状态类中，不用再关注代码执行状态的逻辑，只需要关注整个对象的状态就好，使得代码结构化和意图更清晰，从而简化应用的逻辑控制</li>\n<li>2.<strong>更好地分离状态和行为</strong>，  状态模式通过设置所有状态类的公共接口，把状态和状态对应的行为分离开，把所有与一个特定的状态相关的行为都放入一个对象中，使得应用程序在控制的时候，只需要关心状态的切换，而不用关心这个状态对应的真正处理。</li>\n<li>3.<strong>更好的扩展性</strong>， 引入了状态处理的公共接口后，使得扩展新的状态变得非常容易，只需要新增加一个实现状态处理的公共接口的实现类，然后在进行状态维护的地方，设置状态变化到这个新的状态即可</li>\n<li>4.<strong>显式化进行状态转换</strong>，为不同的状态引入独立的对象，使得状态的转换变得更加明确。而且状态对象可以保证上下文不会发生内部状态不一致的情况，因为上下文中只有一个变量来记录状态对象，只要为这一个变量赋值就可以了</li>\n</ul>\n<p><strong>不足</strong>：</p>\n<ul>\n<li>1.一个状态对应一个状态处理类，会使得程序引入太多的状态类，这样程序变得杂乱。</li>\n<li>2.<strong>没有遵守开闭原则</strong>，引入新的新的状态会导致原有状态的修改</li>\n<li>3.没有很好的处理耦合关系</li>\n</ul>\n<p><strong>注意</strong>：</p>\n<ul>\n<li>状态模式可以增加类的数量，因此需要在设计时考虑类的数量和复杂性。</li>\n<li>状态模式需要对状态进行封装，因此需要在设计时考虑状态的可扩展性和可维护性。</li>\n</ul>\n",
-      "date_published": "2023-10-07T10:53:31.000Z",
-      "date_modified": "2023-10-12T12:18:57.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "组合模式",
-      "url": "https://ujava.cn/design/structure/composite.html",
-      "id": "https://ujava.cn/design/structure/composite.html",
-      "summary": "概述 介绍：组合模式是一种结构型设计模式，它允许你将对象组合成树形结构以表示“部分-整体”的层次结构。这种模式使得客户端可以统一对待单个对象和对象组合。组合模式所应用的就是树形结构以表达“部分/整体”的层次结构。主要是用来处理树形结构数据，与其说是一种设计模式，倒不如说是对业务场景的一种数据结构和算法的抽象。在组合模式中，有两种基本类型的对象：叶节点和组合节点。叶节点表示树形结构中的单个对象，而组合节点则表示树形结构中的对象组合。组合节点可以包含其他组合节点和/或叶节点，形成一个递归的树形结构。",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：组合模式是一种结构型设计模式，它允许你将对象组合成<code>树形结构以表示“部分-整体”的层次结构</code>。这种模式使得客户端可以统一对待单个对象和对象组合。组合模式所应用的就是树形结构以表达“部分/整体”的层次结构。主要是用来处理树形结构数据，<code>与其说是一种设计模式，倒不如说是对业务场景的一种数据结构和算法的抽象</code>。在组合模式中，有两种基本类型的对象：叶节点和组合节点。叶节点表示树形结构中的单个对象，而组合节点则表示树形结构中的对象组合。组合节点可以包含其他组合节点和/或叶节点，形成一个递归的树形结构。</p>\n<p><strong>场景</strong>：</p>\n<ul>\n<li>1.适用于处理树形结构</li>\n<li>2.忽略差异 : 希望客户端<code>可以忽略 组合对象 与 单个对象 的差异</code></li>\n</ul>\n<p><code>SpringMVC框架中，Security Oauth2框架中</code></p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.定义层次 : 清楚地 定义 分层次 的 复杂对象 , 表示 对象 的 全部 或 部分 层次</li>\n<li>2.忽略层次 : 让 客户端 忽略 层次之间的差异 , 方便对 整个层次结构 进行控制</li>\n<li>3.简化客户端代码</li>\n<li>4.符合开闭原则</li>\n</ul>\n<p><strong>不足</strong>：</p>\n<ul>\n<li>1.限制类型复杂 : <code>限制类型时 , 比较复杂</code></li>\n<li>2.使设计变得更加抽象</li>\n</ul>\n",
-      "date_published": "2023-10-07T10:17:42.000Z",
-      "date_modified": "2023-10-12T11:19:18.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "装饰器模式",
-      "url": "https://ujava.cn/design/structure/decorator.html",
-      "id": "https://ujava.cn/design/structure/decorator.html",
-      "summary": "概述 介绍：装饰器模式是一种结构性设计模式，它允许您在不影响同一类的其他对象的行为的情况下，静态或动态地向单个对象添加行为。 当您想要在运行时添加或删除对象的功能时，或者当您想要减少创建不同行为组合所需的子类数量时，此模式非常有用。在Java中，使用继承和组合的结合来实现装饰器模式。 具体来说，您需要创建一个基类或接口来定义对象的核心行为，然后创建一个或多个装饰器类来向对象添加附加行为。 每个装饰器类都具有对其装饰的对象的引用，并且它可以在委托给对象的原始行为之前或之后修改对象的行为。 允许向一个现有的对象添加新的功能，同时又不改变其结构。主要解决继承关系过于复杂的问题，通过组合来替代继承，给原始类动态添加增强功能。",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：装饰器模式是一种结构性设计模式，它允许您在不影响同一类的其他对象的行为的情况下，静态或动态地向单个对象添加行为。 当您想要在运行时添加或删除对象的功能时，或者当您想要减少创建不同行为组合所需的子类数量时，此模式非常有用。在Java中，使用继承和组合的结合来实现装饰器模式。 具体来说，您需要创建一个基类或接口来定义对象的核心行为，然后创建一个或多个装饰器类来向对象添加附加行为。 每个装饰器类都具有对其装饰的对象的引用，并且它可以在委托给对象的原始行为之前或之后修改对象的行为。<br>\n<code>允许向一个现有的对象添加新的功能，同时又不改变其结构</code>。主要解决继承关系过于复杂的问题，<code>通过组合来替代继承，给原始类动态添加增强功能</code>。</p>\n<p><strong>场景</strong>：</p>\n<ul>\n<li>在不想增加很多子类的情况下扩展类时可用。</li>\n<li>想要动态的为类增加功能</li>\n<li>在不修改现有代码的情况下，向现有类添加新的功能。</li>\n<li>在运行时动态地向对象添加新的行为。</li>\n<li>以不同的方式组合对象，以实现不同的行为。</li>\n</ul>\n<p><code>在Mybatis中Executor接口</code>，是一个承上启下的执行器，在执行的过程中就会有本地缓存的一个使用，所以Mybatis使用上缓存的情况下，要在原有执行的方法上做增强（缓存），就考虑到装饰器模式来做缓存。</p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.饰类和被装饰类可以独立发展，而不会相互耦合。是继承的一个替代模式。</li>\n<li>2.装饰模式<code>可以动态地扩展或撤销一个实现类的功能</code></li>\n</ul>\n<p><strong>不足</strong>：会出现更多的代码，更多的类，增加程序复杂性</p>\n<p><strong>注意</strong>：</p>\n<ul>\n<li>装饰器类需要实现与被装饰对象相同的接口，以便可以对被装饰对象进行包装。</li>\n<li>装饰器类应该在调用被装饰对象的方法之前或之后添加新的行为。</li>\n<li>不要创建过多的装饰器对象，否则会导致代码变得复杂难以维护。</li>\n</ul>\n",
-      "date_published": "2023-10-07T10:17:42.000Z",
-      "date_modified": "2023-10-12T11:19:18.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "迭代器模式",
-      "url": "https://ujava.cn/design/action/iterator.html",
-      "id": "https://ujava.cn/design/action/iterator.html",
-      "summary": "概述 介绍：Java迭代器模式是一种行为设计模式，它提供了一种访问集合对象元素的方法，而不需要暴露该对象的内部表示。该模式适用于需要遍历集合对象的场景，例如数组、列表、树等。迭代器模式也叫游标模式，它用来遍历集合对象。这里说的“集合对象”，我们也可以叫“容器”“聚合对象”，实际上就是包含一组对象的对象，比如，数组、链表、树、图、跳表。迭代器模式主要作用是解耦容器代码和遍历代码。简单来说，不同种类的对象可能需要不同的遍历方式，我们对每一种类型的对象配一个迭代器，最后多个迭代器合成一个。 场景：",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：Java迭代器模式是一种行为设计模式，它提供了一种访问集合对象元素的方法，而不需要暴露该对象的内部表示。该模式适用于需要遍历集合对象的场景，例如数组、列表、树等。迭代器模式也叫游标模式，它用来<strong>遍历集合对象</strong>。这里说的“集合对象”，我们也可以叫“容器”“聚合对象”，实际上就是包含一组对象的对象，比如，数组、链表、树、图、跳表。迭代器模式主要作用是解耦容器代码和遍历代码。简单来说，不同种类的对象可能需要不同的遍历方式，我们对每一种类型的对象配一个迭代器，最后多个迭代器合成一个。</p>\n<p><strong>场景</strong>：</p>\n<ul>\n<li>1.访问一个集合对象的内容而无需暴露它的内部表示</li>\n<li>\n<ol start=\"2\">\n<li>为遍历不同的集合结构提供一个统一的访问接口</li>\n</ol>\n</li>\n</ul>\n<p>JAVA 中的 iterator。</p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.它支持以不同的方式遍历一个聚合对象。</li>\n<li>2.迭代器<strong>简化了聚合类</strong></li>\n<li>3.在同一个聚合上可以有多个遍历</li>\n<li>4.在迭代器模式中，<strong>增加新的聚合类和迭代器类都很方便，无须修改原有代码</strong></li>\n</ul>\n<p><strong>不足</strong>：由于迭代器模式将存储数据和遍历数据的职责分离，<strong>增加新的聚合类需要对应增加新的迭代器类，类的个数成对增加，这在一定程度上增加了系统的复杂性</strong></p>\n",
-      "date_published": "2023-09-27T06:04:38.000Z",
-      "date_modified": "2023-10-12T12:18:57.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "解释器模式",
-      "url": "https://ujava.cn/design/action/interpreter.html",
-      "id": "https://ujava.cn/design/action/interpreter.html",
-      "summary": "概述 介绍：Java解释器模式是一种行为设计模式，它定义了一种语言和该语言的解释器，使得可以使用该语言来表达一些特定的操作。该模式适用于需要解释一些特定语言的场景，例如编译器、表达式计算器等。给分析对象定义一个语言，并定义该语言的文法表示，再设计一个解析器来解释语言中的句子。也就是说，用编译语言的方式来分析应用中的实例。这种模式实现了文法表达式处理的接口，该接口解释一个特定的上下文。 在Java中，可以使用抽象语法树（AST）来表示语言表达式，并使用解释器来执行这些表达式。解释器模式通常包括以下几个组件：",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：Java解释器模式是一种行为设计模式，它定义了一种语言和该语言的解释器，使得可以使用该语言来表达一些特定的操作。该模式适用于需要解释一些特定语言的场景，例如编译器、表达式计算器等。给分析对象定义一个语言，并定义该语言的文法表示，再设计一个解析器来解释语言中的句子。也就是说，<strong>用编译语言的方式来分析应用中的实例</strong>。这种模式实现了文法表达式处理的接口，该接口解释一个特定的上下文。<br>\n在Java中，可以使用抽象语法树（AST）来表示语言表达式，并使用解释器来执行这些表达式。解释器模式通常包括以下几个组件：</p>\n<ul>\n<li>抽象表达式（Abstract Expression）：定义了一个抽象的解释器接口，该接口包含了解释器需要实现的方法。</li>\n<li>终结符表达式（Terminal Expression）：实现了抽象表达式接口的终结符，用于表示语言中的基本操作或值。</li>\n<li>非终结符表达式（Non-Terminal Expression）：实现了抽象表达式接口的非终结符，用于表示语言中的复杂操作。</li>\n<li>上下文（Context）：包含了解释器需要的一些全局信息，例如变量、函数等。</li>\n<li>解释器（Interpreter）：使用上述组件来解释语言表达式，并执行相应的操作。</li>\n</ul>\n<p><strong>场景</strong>：</p>\n<ul>\n<li>1.解释器模式适用场景 : <strong>某个 特定类型问题 发生频率 足够高</strong> ;</li>\n<li>\n<ol start=\"2\">\n<li><strong>日志处理</strong> : 使用 脚本语言 或 编程语言 处理日志时 , 有很多服务 会产生 大量的日志 , 需要 对日志进行解析 , 生成报表 ;各个服务的日志格式不同 , 数据中的要素相同 , 这种情况下 , 通过程序解决上述问题 , 主要的解决方案就是使用解释器模式 ;</li>\n</ol>\n</li>\n</ul>\n<p>Spring 框架中 SpelExpressionParser 就使用解释器模式。日常项目中 , 解释器模式使用情况很少 ;解释器一般是 开源包 , 如 Express4J , JEP ;</p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.<strong>扩展性好</strong>。由于在解释器模式中使用类来表示语言的文法规则，因此可以通过继承等机制来改变或扩展文法</li>\n<li>2.<strong>容易实现</strong>。在语法树中的每个表达式节点类都是相似的，所以实现其文法较为容易</li>\n</ul>\n<p><strong>不足</strong>：</p>\n<ul>\n<li>1.执行效率较低。解释器模式中通常使用大量的循环和递归调用，当要解释的句子较复杂时，其运行速度很慢，且代码的调试过程也比较麻烦。</li>\n<li>2.会引起类膨胀。解释器模式中的每条规则至少需要定义一个类，当包含的文法规则很多时，类的个数将急剧增加，导致系统难以管理与维护。</li>\n<li>3.可应用的场景比较少。在软件开发中，需要定义语言文法的应用实例非常少，所以这种模式很少被使用到。</li>\n</ul>\n",
-      "date_published": "2023-09-27T00:38:16.000Z",
-      "date_modified": "2023-10-12T12:18:57.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "命令模式",
-      "url": "https://ujava.cn/design/action/command.html",
-      "id": "https://ujava.cn/design/action/command.html",
-      "summary": "概述 介绍：命令模式是一种行为设计模式，它允许将请求封装为一个对象，从而使不同的请求可以使用不同的参数进行参数化，队列或日志请求，以及支持可撤销的操作。在Java中，命令模式的实现通常涉及一个命令接口和一个或多个具体命令类，这些类实现了命令接口，并在其execute()方法中定义了实际的命令逻辑。此外，命令模式还可能涉及一个调用者类，该类将一个或多个命令对象与接收者对象关联起来，并在需要时调用它们的execute()方法。 命令模式是一种非常灵活和可扩展的模式，可以用于许多不同的应用程序场景。将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，对请求排队或者记录请求日志，可以提供灵敏的撤销和恢复公共能。在命令模式中，会将一个请求封装为一个对象，以便使用不同参数来表示不同的请求（即命名），同时命令模式也支持可撤销的操作",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：命令模式是一种行为设计模式，它允许将请求封装为一个对象，从而使不同的请求可以使用不同的参数进行参数化，队列或日志请求，以及支持可撤销的操作。在Java中，命令模式的实现通常涉及一个命令接口和一个或多个具体命令类，这些类实现了命令接口，并在其execute()方法中定义了实际的命令逻辑。此外，命令模式还可能涉及一个调用者类，该类将一个或多个命令对象与接收者对象关联起来，并在需要时调用它们的execute()方法。 命令模式是一种非常灵活和可扩展的模式，可以用于许多不同的应用程序场景。将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，对请求排队或者记录请求日志，可以提供灵敏的撤销和恢复公共能。在命令模式中，会将一个请求封装为一个对象，以便使用不同参数来表示不同的请求（即命名），同时命令模式也支持可撤销的操作</p>\n<p><strong>场景</strong>：需要将请求调用者和请求接收者解耦，使得调用者和接收者不直接交互；需要在不同的时间指定请求、将请求排队和执行请求；需要支持命令的撤销操作和恢复操作，需要将一组操作组合在一起，即支持宏命令</p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.降低系统的耦合度。</li>\n<li>2.新的命令可以很容易地加入到系统中。</li>\n<li>3.可以比较容易地设计一个命令队列和宏命令（组合命令）。</li>\n<li>4.可以方便地实现对请求的Undo和Redo。</li>\n</ul>\n<p><strong>不足</strong>：使用命令模式可能会导致某些系统有过多的具体命令类。因为针对每一个命令都需要设计一个具体命令类，因此某些系统可能需要大量具体命令类，这将影响命令模式的使用</p>\n",
-      "date_published": "2023-09-27T00:33:41.000Z",
-      "date_modified": "2023-10-12T12:18:57.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "责任链模式",
-      "url": "https://ujava.cn/design/action/responsibility.html",
-      "id": "https://ujava.cn/design/action/responsibility.html",
-      "summary": "概述 介绍：如果有多个对象有机会处理请求，责任链可使请求的发送者和接受者解耦，请求沿着责任链传递，直到有一个对象处理了它为止 场景： 1.多个对象可以处理同一个请求，但具体由哪个对象处理则在运行时动态决定。 在请求处理者不明确的情况下向对个对象中的一个提交一个请求。 需要动态处理一组对象处理请求。",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：如果有多个对象有机会处理请求，<strong>责任链可使请求的发送者和接受者解耦，请求沿着责任链传递，直到有一个对象处理了它为止</strong></p>\n<p><strong>场景</strong>：</p>\n<ul>\n<li>1.多个对象可以处理同一个请求，但具体由哪个对象处理则在运行时动态决定。</li>\n<li>\n<ol start=\"2\">\n<li>在请求处理者不明确的情况下向对个对象中的一个提交一个请求。</li>\n</ol>\n</li>\n<li>\n<ol start=\"3\">\n<li>需要<strong>动态处理一组对象处理请求</strong>。</li>\n</ol>\n</li>\n</ul>\n<p>常用在框架开发中，用来<strong>实现过滤器、拦截器</strong>功能，让框架的使用者在不需要修改框架源码的情况下，添加新的过滤、拦截功能。 Servlet 中的过滤器 Filter</p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.<strong>解耦</strong> : 请求的 发送者 和 接收者 解耦 ; 接收者 是 请求的处理者 ;</li>\n<li>2.<strong>动态组合</strong> : 责任链 可以 动态组合 , 使用配置 设置责任链的 顺序及 是否出现 ; <strong>可以随时对责任链排序 , 随时增加拆除责任链中的某个请求对象</strong> ;</li>\n</ul>\n<p><strong>不足</strong>：</p>\n<ul>\n<li>1.性能 : 如果 责任链 太长 , 或责任链中请求的 处理时间过长 , 可能会 影响性能 ;</li>\n<li>2.个数 : 责任链 可能过多 ;</li>\n</ul>\n<p>责任链模式是一种行为设计模式，它允许将请求沿着处理链进行传递，直到有一个处理程序处理它为止。在Java中实现责任链模式通常需要以下几个步骤：</p>\n<ul>\n<li>定义一个处理器接口，该接口包含一个处理请求的方法。</li>\n<li>创建一个抽象处理器类，它实现处理器接口，并包含一个指向下一个处理器的引用。</li>\n<li>创建具体的处理器类，它们继承自抽象处理器类，并实现处理请求的方法。</li>\n<li>在客户端代码中，创建处理器链，并将请求发送到链的第一个处理器。</li>\n</ul>\n",
-      "date_published": "2023-09-26T10:05:54.000Z",
-      "date_modified": "2023-10-12T12:18:57.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "访问者模式",
-      "url": "https://ujava.cn/design/action/visitor.html",
-      "id": "https://ujava.cn/design/action/visitor.html",
-      "summary": "概述 介绍：Java访问者模式是一种行为型设计模式，它允许你在不修改对象结构的前提下定义新的操作。访问者模式将对象结构和操作分离开来，使得操作可以独立地应用于对象结构中的元素。在访问者模式中，有两个主要角色：访问者和元素。访问者定义了对元素进行操作的方法，而元素则提供了接受访问者的方法。指将作用域某种数据结构中的各元素的操作分离出来封装成独立的类，使其在不改变数据结构的前提下可以添加作用于这些元素的新的操作。封装 作用于 某种 数据结构 的 各元素 操作 , 数据结构指的是 List , Set , Map 等 ;在 不改变 元素类 的前提下 , 定义 作用于 元素 的操作",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：Java访问者模式是一种行为型设计模式，它允许你在不修改对象结构的前提下定义新的操作。访问者模式将对象结构和操作分离开来，使得操作可以独立地应用于对象结构中的元素。在访问者模式中，有两个主要角色：访问者和元素。访问者定义了对元素进行操作的方法，而元素则提供了接受访问者的方法。指<strong>将作用域某种数据结构中的各元素的操作分离出来封装成独立的类</strong>，使其在<strong>不改变数据结构的前提下可以添加作用于这些元素的新的操作</strong>。封装 作用于 某种 数据结构 的 各元素 操作 , 数据结构指的是 List , Set , Map 等 ;在 不改变 元素类 的前提下 , 定义 作用于 元素 的操作</p>\n<p><strong>场景</strong>：</p>\n<ul>\n<li>一个对象结构包含多个类型的对象，<strong>希望对这些对象实施一些依赖其具体类型的操作</strong></li>\n<li>在访问者中针对每一种具体的类型都提供了一个访问操作，不同类型的对象可以有不同的访问操作</li>\n<li>需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作污染这些对象的类，也不希望在增加新操作时修改这些类</li>\n<li>对象结构比较稳定，但经常需要在此对象结构上定义新的操作。</li>\n<li>需要对一个对象结构中的对象进行很多不同的且不相关的操作，而不希望这些操作“污染”这些对象的类。</li>\n<li>对象结构中对象的类很少改变，但经常需要在这些对象上定义新的操作。</li>\n<li>需要在运行时根据对象的类型执行不同的操作。</li>\n<li>需要对对象结构中的所有对象进行某种类型的处理，但是对象所采取的处理方式根据对象类型不同而异。</li>\n<li>常见的使用访问者模式的场景包括：编译器的语法分析、XML文档解析、静态分析器、模型验证器、模型转换器等。</li>\n</ul>\n<p>JDK源码中，Files 类提供了 walkFileTree() 方法。Spring源码中PropertySourcesPlaceholderConfigurer 允许我们用 Properties 文件中的属性来定义应用上下文</p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.将元素对象的访问行为集中到一个访问者对象中，而不是分散在一个个的元素类中。类的职责更加清晰，有利于对象结构中元素对象的复用，相同的对象结构可以供多个不同的访问者访问</li>\n<li>2.<strong>增加新的访问操作就意味着增加一个新的具体访问者类</strong>，方便扩展，无须修改源代码，符合开闭原则</li>\n</ul>\n<p><strong>不足</strong>：</p>\n<ul>\n<li>1.<strong>增加新的元素类很困难</strong>。在访问者模式中，每增加一个新的元素类都意味着要在抽象访问者角色中增加一个新的抽象操作，并在每一个具体访问者类中增加相应的具体操作，这违背了开闭原则的要求。</li>\n<li>2.<strong>破坏封装</strong>。访问者模式要求访问者对象访问并调用每一个元素对象的操作，这意味着元素对象有时候必须暴露一些自己的内部操作和内部状态，否则无法供访问者访问。</li>\n</ul>\n",
-      "date_published": "2023-09-26T09:45:59.000Z",
-      "date_modified": "2023-10-12T12:18:57.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "建造者模式",
-      "url": "https://ujava.cn/design/create/builder.html",
-      "id": "https://ujava.cn/design/create/builder.html",
-      "summary": "概述 介绍：建造者模式是一种创建型设计模式，它允许您通过一步一步地构建复杂对象来创建不同类型的对象。它使用一个建造者类来封装对象的创建过程并将其分解为多个简单的步骤。这使得您可以通过更改这些步骤来创建不同类型的对象。 用来创建复杂对象，可以通过设置不同的可选参数，“定制化”地创建不同的对象。与工厂模式不同的是，建造者的目的在于把复杂构造过程从不同对象展现中抽离出来，使得同样的构造工序可以展现出不同的产品对象。建造者模式注重零部件的组装过程，而工厂方法模式更注重零部件的创建过程，但两者可以结合使用",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：建造者模式是一种创建型设计模式，它允许您通过一步一步地构建复杂对象来创建不同类型的对象。它使用一个建造者类来封装对象的创建过程并将其分解为多个简单的步骤。这使得您可以通过更改这些步骤来创建不同类型的对象。 <code>用来创建复杂对象</code>，可以通过设置不同的可选参数，“定制化”地创建不同的对象。与工厂模式不同的是，建造者的目的在于把复杂构造过程从不同对象展现中抽离出来，使得同样的构造工序可以展现出不同的产品对象。<code>建造者模式注重零部件的组装过程，而工厂方法模式更注重零部件的创建过程</code>，但两者可以结合使用</p>\n<p><strong>场景</strong>：创建组装复杂对象。StringBuilder 类中提供了 append() 方法，这就是一种链式创建对象的方法，开放构造步骤，最后调用 toString() 方法就可以获得一个完整的对象。MyBatis 中 SqlSessionFactoryBuiler 类用到了建造者模式</p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.各个具体的<code>建造者相互独立，有利于系统的扩展</code></li>\n<li>2.客户端不必知道产品内部组成的细节，便于<code>控制细节风险</code></li>\n</ul>\n<p><strong>不足</strong>：</p>\n<ul>\n<li>1.产品的组成部分必须相同，这限制了其使用范围</li>\n<li>2.如果产品的内部变化复杂，该模式会增加很多的建造者类</li>\n</ul>\n",
-      "date_published": "2023-09-26T09:45:59.000Z",
-      "date_modified": "2023-10-12T10:40:39.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "适配器模式",
-      "url": "https://ujava.cn/design/structure/adapter.html",
-      "id": "https://ujava.cn/design/structure/adapter.html",
-      "summary": "概述 介绍：适配器模式是一种结构型设计模式，它允许将一个类的接口转换成客户端所期望的另一个接口。适配器模式的主要目的是解决两个不兼容接口之间的接口转换问题，使得原本由于接口不匹配而无法工作的类可以协同工作。 适配器模式是用来做适配的，它将不兼容的接口转换为可兼容的接口，让原本由于接口不兼容而不能一起工作的类可以一起工作。适配器模式有两种实现方式：类适配器和对象适配器。其中，类适配器使用继承关系来实现，对象适配器使用组合关系来实现。 适配器模式的核心思想是创建一个适配器类，该适配器类实现了客户端期望的目标接口，并持有一个对被适配者对象的引用。适配器类通过调用被适配者对象的方法来实现目标接口的方法，从而完成接口的适配。它允许不兼容的接口之间进行通信。适配器模式通过将一个类的接口转换为客户端所期望的另一个接口来实现这一点。这种模式可以在不修改现有代码的情况下重用现有类。 适配器模式可以帮助我们在不修改现有代码的情况下重用现有类，并且可以使不兼容的接口之间进行通信。",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：适配器模式是一种结构型设计模式，它允许将一个类的接口转换成客户端所期望的另一个接口。适配器模式的主要目的是解决两个不兼容接口之间的接口转换问题，使得原本由于接口不匹配而无法工作的类可以协同工作。<br>\n适配器模式是用来做适配的，它将不兼容的接口转换为可兼容的接口，让原本由于接口不兼容而不能一起工作的类可以一起工作。适配器模式有两种实现方式：类适配器和对象适配器。其中，类适配器使用继承关系来实现，对象适配器使用组合关系来实现。<br>\n适配器模式的核心思想是创建一个适配器类，该适配器类实现了客户端期望的目标接口，并持有一个对被适配者对象的引用。适配器类通过调用被适配者对象的方法来实现目标接口的方法，从而完成接口的适配。它允许不兼容的接口之间进行通信。适配器模式通过将一个类的接口转换为客户端所期望的另一个接口来实现这一点。这种模式可以在不修改现有代码的情况下重用现有类。<br>\n适配器模式可以帮助我们在不修改现有代码的情况下重用现有类，并且可以使不兼容的接口之间进行通信。</p>\n<p><strong>场景</strong>：<br>\n适配器模式将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p>\n<ul>\n<li>1.封装有缺陷的接口设计</li>\n<li>2.统一多个类的接口设计</li>\n<li>3.替换依赖的外部系统</li>\n<li>4.兼容老版本接口</li>\n<li>5.适配不同格式的数据</li>\n</ul>\n<p>在Spring 的 AOP 面向切面编程 中</p>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.更好的复用性，系统需要使用现有的类，而此类的接口不符合系统的需要,那么通过适配器模式就可以让这些功能得到更好的复用。</li>\n<li>2.透明、简单，客户端可以调用同一接口，因而对客户端来说是透明的</li>\n<li>3.更好的扩展性，在实现适配器功能的时候，可以调用自己开发的功能，从而自然地扩展系统的功能</li>\n<li>4.解耦性，目标类和适配者类解耦，通过引入一个适配器类重用现有的适配者类，而无需修改原有代码</li>\n</ul>\n<p><strong>不足</strong>：过多的使用适配器，会让系统非常零乱，不易整体进行把握</p>\n",
-      "date_published": "2023-09-26T09:45:59.000Z",
-      "date_modified": "2023-10-12T11:19:18.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "桥接模式",
-      "url": "https://ujava.cn/design/structure/bridge.html",
-      "id": "https://ujava.cn/design/structure/bridge.html",
-      "summary": "概述 介绍：桥接模式是一种将抽象化和实现化解耦的设计模式。它使用了封装、聚合以及继承等基本技术，将两个独立变化的维度通过抽象化的方式进行桥接，从而降低了它们之间的耦合度，使得系统更加灵活。将抽象部分与它的实现部分分离，使它们都可以独立地变化。是用组合关系代替继承关系来实现，从而降低了抽象和实现这两个可变维度的耦合度。 场景： 1.抽象和具体实现之间 , 需要增加更多灵活性的情况。 2.不希望使用继承 , 或 因多层继承导致系统类的个数增加。 3.一个类存在 2 个或更多的 独立变化维度 , 并且这些维度都需要独立扩展。源码中JDBC 规范和不同数据库厂商驱动都用的桥接模式",
-      "content_html": "<h2> 概述</h2>\n<p><strong>介绍</strong>：桥接模式是一种将<strong>抽象化和实现化解耦</strong>的设计模式。它使用了封装、聚合以及继承等基本技术，将两个独立变化的维度通过抽象化的方式进行桥接，从而降低了它们之间的耦合度，使得系统更加灵活。将抽象部分与它的实现部分分离，使它们都可以独立地变化。<code>是用组合关系代替继承关系来实现，从而降低了抽象和实现这两个可变维度的耦合度</code>。</p>\n<p><strong>场景</strong>：</p>\n<ul>\n<li>1.抽象和具体实现之间 , 需要增加更多灵活性的情况。</li>\n<li>2.不希望使用继承 , 或 因多层继承导致系统类的个数增加。</li>\n<li>3.一个类存在 2 个或更多的 独立变化维度 , 并且这些维度都需要独立扩展。<code>源码中JDBC 规范和不同数据库厂商驱动都用的桥接模式</code></li>\n</ul>\n<p><strong>优点</strong>：</p>\n<ul>\n<li>1.抽象与实现分离，扩展能力强</li>\n<li>2.符合开闭原则</li>\n<li>3.符合合成复用原则</li>\n<li>4.实现细节透明化</li>\n</ul>\n<p><strong>不足</strong>：由于聚合关系建立在抽象层，要求开发者针对抽象化进行设计与编程，能正确地识别出系统中两个独立变化的维度，这<code>增加了系统的理解与设计难度</code></p>\n",
-      "date_published": "2023-09-26T09:45:59.000Z",
-      "date_modified": "2023-10-12T10:40:39.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "UJava",
-      "url": "https://ujava.cn/home.html",
-      "id": "https://ujava.cn/home.html",
-      "summary": "友情提示 架构设计持续更新中~ GitHub | Gitee",
-      "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">友情提示</p>\n<p>架构设计持续更新中~</p>\n</div>\n<div align=\"center\">\n<p><a href=\"https://github.com/yangchunjian/ujava\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> | <a href=\"https://gitee.com/yangchunjian/ujava\" target=\"_blank\" rel=\"noopener noreferrer\">Gitee</a></p>\n</div>\n",
-      "date_published": "2023-09-21T06:39:48.000Z",
-      "date_modified": "2024-02-23T09:47:06.000Z",
-      "authors": [],
-      "tags": []
-    },
-    {
-      "title": "基本信息",
-      "url": "https://ujava.cn/author/author0.html",
-      "id": "https://ujava.cn/author/author0.html",
-      "summary": "简介 性别：男",
-      "content_html": "<h2> 简介</h2>\n<p>性别：男</p>\n",
-      "date_published": "2023-09-21T06:39:48.000Z",
-      "date_modified": "2024-02-26T05:58:11.000Z",
-      "authors": [],
-      "tags": [
-        "介绍"
-      ]
-    },
-    {
-      "title": "工作经历",
-      "url": "https://ujava.cn/author/author1.html",
-      "id": "https://ujava.cn/author/author1.html",
-      "summary": "简介 公司：某厂",
-      "content_html": "<h2> 简介</h2>\n<p>公司：某厂</p>\n",
-      "date_published": "2023-09-21T06:39:48.000Z",
-      "date_modified": "2024-02-26T05:58:11.000Z",
-      "authors": [],
-      "tags": [
-        "介绍"
-      ]
-    },
-    {
-      "title": "常见问题",
-      "url": "https://ujava.cn/required/faq.html",
-      "id": "https://ujava.cn/required/faq.html",
-      "summary": "UJava是什么 UJava是架构设计过程中的精华沉淀，是架构设计过程中遇到问题和解决方案的仓库，也是架构设计工具",
-      "content_html": "<h2> UJava是什么</h2>\n<p>UJava是架构设计过程中的精华沉淀，是架构设计过程中遇到问题和解决方案的仓库，也是架构设计工具</p>\n",
-      "date_published": "2023-09-21T06:39:48.000Z",
-      "date_modified": "2024-02-25T01:07:20.000Z",
-      "authors": [],
-      "tags": [
-        "必读"
       ]
     }
   ]
