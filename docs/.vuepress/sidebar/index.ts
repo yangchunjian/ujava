@@ -214,14 +214,7 @@ export default sidebar({
             icon: "star",
             collapsible: true,
             prefix: "java/",
-            children: [
-                "package",
-                "why-there-only-value-passing-in-java",
-                "jdkdesign",
-                "reentrantlock",
-                "uml",
-                "basecore",
-            ],
+            children: "structure",
         }
     ],
 });
