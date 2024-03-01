@@ -12,7 +12,7 @@ category:
 
 <VPBanner
     title="UJava"
-    content="如果您没有架构经验，请从设计模式开始。"
+    content="如果您没有架构经验，可先从设计模式开始~"
     logo="./light.svg"
     :actions='[
         {
