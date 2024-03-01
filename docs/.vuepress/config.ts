@@ -2,6 +2,8 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { searchPlugin } from "@vuepress/plugin-search";
+// @ts-ignore
+import { componentsPlugin } from "vuepress-plugin-components";
 
 // import { searchProPlugin } from 'vuepress-plugin-search-pro';
 
@@ -67,7 +69,9 @@ export default defineUserConfig({
         },
       },
     }),
-
+    componentsPlugin({
+      // 插件选项
+    }),
   ],
 
   pagePatterns: ["**/*.md", "!**/*.snippet.md", "!.vuepress", "!node_modules"],
