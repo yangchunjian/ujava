@@ -29,7 +29,7 @@ export default hopeTheme({
   footer: "",
 
   displayFooter: true,
-
+  breadcrumb: false,
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
