@@ -14,7 +14,7 @@ export default sidebar({
             icon: "star",
             collapsible: true,
             prefix: "required/",
-            children: ["faq", "history"],
+            children: "structure",
         },
         {
             text: "设计思想",
