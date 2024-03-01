@@ -1,1 +1,0 @@
-import{_ as n}from"./plugin-vue_export-helper-x3n3nnut.js";import{r as t,o,c,d as r}from"./app-fPQGtSPO.js";const a={};function s(l,_){const e=t("VPBanner");return o(),c("div",null,[r(e,{title:"UJava",content:"如果您没有架构经验，请从设计模式开始。",logo:"./light.svg",actions:[{text:"设计模式",link:"/design/"}]})])}const d=n(a,[["render",s],["__file","index.html.vue"]]);export{d as default};
