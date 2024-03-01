@@ -11,7 +11,7 @@ heroText: 架构设计
 tagline: 架构设计工具UJava
 actions:
   - text: 必读 💡
-    link: ./required/faq/
+    link: ./required/faq
     type: primary
 
   - text: 设计 💡
