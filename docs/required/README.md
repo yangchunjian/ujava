@@ -10,13 +10,14 @@ category:
   - 基础知识
 ---
 
-```component VPBanner
-title: 逐步架构设计
-content: 如果您没有架构经验，请从设计模式开始。
-background: var(--bg-10)
-color: var(--banner-text)
-actions:
-  - text: 设计模式
-    link: ../design/
-```
-
+<VPBanner
+    title="UJava"
+    content="如果您没有架构经验，请从设计模式开始。"
+    logo="./light.svg"
+    :actions='[
+        {
+            text: "设计模式",
+            link:"/design/",
+        },
+    ]'
+/>
