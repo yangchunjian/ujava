@@ -10,11 +10,11 @@ bgImageStyle:
 heroText: 架构设计
 tagline: 架构设计工具UJava
 actions:
-  - text: 必读 💡
-    link: ./required/faq
+  - text: 快速上手 💡
+    link: ./required/
     type: primary
 
-  - text: 设计 💡
+  - text: 架构设计 💡
     link: ./design/
 
 highlights:

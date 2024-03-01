@@ -10,7 +10,7 @@ export default sidebar({
     // 必须放在最后面
     "/": [
         {
-            text: "必读",
+            text: "快速上手",
             icon: "star",
             collapsible: true,
             prefix: "required/",
