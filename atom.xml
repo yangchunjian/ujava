@@ -3,7 +3,7 @@
   <id>https://ujava.cn/</id>
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
-  <updated>2024-03-01T06:13:46.648Z</updated>
+  <updated>2024-03-01T06:52:50.796Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -8040,16 +8040,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">快速上手</title>
     <id>https://ujava.cn/required/</id>
     <link href="https://ujava.cn/required/"/>
-    <updated>2024-03-01T06:11:41.000Z</updated>
-    <summary type="html"><![CDATA[<div class="language-component line-numbers-mode" data-ext="component"><pre class="language-component"><code>title: 逐步架构设计
-content: 如果您没有架构经验，请从设计模式开始。
-background: var(--bg-10)
-color: var(--banner-text)
-actions:
-  - text: 设计模式
-    link: ../design/
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
-    <content type="html"><![CDATA[<div class="language-component line-numbers-mode" data-ext="component"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <updated>2024-03-01T06:50:59.000Z</updated>
     <category term="快速上手"/>
     <category term="基础知识"/>
     <published>2023-10-23T11:22:31.000Z</published>

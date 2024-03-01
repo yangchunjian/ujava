@@ -1192,10 +1192,9 @@
       "title": "快速上手",
       "url": "https://ujava.cn/required/",
       "id": "https://ujava.cn/required/",
-      "summary": "title: 逐步架构设计 content: 如果您没有架构经验，请从设计模式开始。 background: var(--bg-10) color: var(--banner-text) actions: - text: 设计模式 link: ../design/",
-      "content_html": "<div class=\"language-component line-numbers-mode\" data-ext=\"component\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
+      "content_html": "",
       "date_published": "2023-10-23T11:22:31.000Z",
-      "date_modified": "2024-03-01T06:11:41.000Z",
+      "date_modified": "2024-03-01T06:50:59.000Z",
       "authors": [],
       "tags": [
         "快速上手",

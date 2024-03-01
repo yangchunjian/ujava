@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Fri, 01 Mar 2024 06:13:46 GMT</pubDate>
-    <lastBuildDate>Fri, 01 Mar 2024 06:13:46 GMT</lastBuildDate>
+    <pubDate>Fri, 01 Mar 2024 06:52:50 GMT</pubDate>
+    <lastBuildDate>Fri, 01 Mar 2024 06:52:50 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计模式</category>
@@ -7538,11 +7538,9 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
       <link>https://ujava.cn/required/</link>
       <guid>https://ujava.cn/required/</guid>
       <source url="https://ujava.cn/rss.xml">快速上手</source>
-      <description>title: 逐步架构设计 content: 如果您没有架构经验，请从设计模式开始。 background: var(--bg-10) color: var(--banner-text) actions: - text: 设计模式 link: ../design/</description>
       <category>快速上手</category>
       <category>基础知识</category>
       <pubDate>Mon, 23 Oct 2023 11:22:31 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="language-component line-numbers-mode" data-ext="component"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>设计规范</title>
