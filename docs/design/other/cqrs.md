@@ -1,6 +1,6 @@
 ---
 title: 命令查询职责分离(CQRS)模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

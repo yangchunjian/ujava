@@ -1,6 +1,6 @@
 ---
 title: 码值规范
-index: false
+
 icon: laptop-code
 category:
   - 设计规范

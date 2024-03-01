@@ -1,6 +1,6 @@
 ---
 title: 设计原理:架构模式
-index: false
+
 icon: laptop-code
 category:
   - 设计原理

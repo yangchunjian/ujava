@@ -1,6 +1,6 @@
 ---
 title: 回路生成器模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

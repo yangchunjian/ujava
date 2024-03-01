@@ -1,6 +1,6 @@
 ---
 title: 概要设计和详细设计
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

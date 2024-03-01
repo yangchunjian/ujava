@@ -1,6 +1,6 @@
 ---
 title: DevOps基本概念
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

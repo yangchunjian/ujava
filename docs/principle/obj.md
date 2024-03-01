@@ -1,6 +1,6 @@
 ---
 title: 设计原理:对象与并发
-index: false
+
 icon: laptop-code
 category:
   - 设计原理

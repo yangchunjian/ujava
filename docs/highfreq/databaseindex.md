@@ -1,6 +1,6 @@
 ---
 title: 设计数据库索引
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

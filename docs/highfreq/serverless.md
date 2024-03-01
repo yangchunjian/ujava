@@ -1,6 +1,6 @@
 ---
 title: 什么是serverless
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

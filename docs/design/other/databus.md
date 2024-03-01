@@ -1,6 +1,6 @@
 ---
 title: 数据总线模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

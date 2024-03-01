@@ -1,6 +1,6 @@
 ---
 title: 设计原理:编程概要
-index: false
+
 icon: laptop-code
 category:
   - 设计原理

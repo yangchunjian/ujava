@@ -1,6 +1,6 @@
 ---
 title: 设计实践经验
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

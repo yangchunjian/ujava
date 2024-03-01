@@ -1,6 +1,6 @@
 ---
 title: 设计考量
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

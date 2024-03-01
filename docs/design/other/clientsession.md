@@ -1,6 +1,6 @@
 ---
 title: 客户端会话模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

@@ -1,6 +1,6 @@
 ---
 title: 内在价值模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

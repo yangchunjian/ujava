@@ -1,6 +1,6 @@
 ---
 title: 抽象工厂模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

@@ -1,6 +1,6 @@
 ---
 title: 企业级架构建模之浅谈三大模型关系
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

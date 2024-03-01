@@ -1,6 +1,6 @@
 ---
 title: 第三梯队思想
-index: false
+
 icon: laptop-code
 category:
 - 设计思想

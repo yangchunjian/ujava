@@ -1,6 +1,6 @@
 ---
 title: 系统设计原则
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

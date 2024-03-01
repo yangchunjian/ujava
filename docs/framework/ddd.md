@@ -1,6 +1,6 @@
 ---
 title: DDD框架
-index: false
+
 icon: laptop-code
 category:
   - 设计框架

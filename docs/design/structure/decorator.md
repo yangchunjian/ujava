@@ -1,6 +1,6 @@
 ---
 title: 装饰器模式
-index: false
+
 icon: laptop-code
 category:
 - 设计模式

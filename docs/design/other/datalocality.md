@@ -1,6 +1,6 @@
 ---
 title: 数据本地化模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

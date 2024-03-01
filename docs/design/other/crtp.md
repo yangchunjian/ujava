@@ -1,6 +1,6 @@
 ---
 title: 奇异递归模板(CRTP)模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

@@ -1,6 +1,6 @@
 ---
 title: 非循环访问者模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

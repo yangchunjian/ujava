@@ -1,6 +1,6 @@
 ---
 title: 设计容错
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

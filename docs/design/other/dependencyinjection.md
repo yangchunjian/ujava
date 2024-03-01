@@ -1,6 +1,6 @@
 ---
 title: 依赖注入模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

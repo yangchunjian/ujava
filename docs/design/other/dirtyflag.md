@@ -1,6 +1,6 @@
 ---
 title: 脏标志行为模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

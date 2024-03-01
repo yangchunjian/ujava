@@ -1,6 +1,6 @@
 ---
 title: 柯里化(Currying)模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

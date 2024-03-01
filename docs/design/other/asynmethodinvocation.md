@@ -1,6 +1,6 @@
 ---
 title: 异步方法调用模式
-index: false
+
 icon: laptop-code
 category:
   - 设计模式

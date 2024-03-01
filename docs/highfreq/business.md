@@ -1,6 +1,6 @@
 ---
 title: 一文搞懂业务架构、技术架构、数据架构、运维架构、物理架构理清不同视角的架构
-index: false
+
 icon: laptop-code
 category:
   - 设计高频

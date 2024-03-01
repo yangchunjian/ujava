@@ -1,6 +1,6 @@
 ---
 title: SpringCloud详解
-index: false
+
 icon: laptop-code
 category:
   - 设计高频
