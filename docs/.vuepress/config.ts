@@ -67,36 +67,7 @@ export default defineUserConfig({
         },
       },
     }),
-    // searchProPlugin({
-    //   // 索引全部内容
-    //   indexContent: true,
-    //   // 为分类和标签添加索引
-    //   customFields: [
-    //     {
-    //       getter: (page) => page.frontmatter.category,
-    //       formatter: "分类：$content",
-    //     },
-    //     {
-    //       getter: (page) => page.frontmatter.tag,
-    //       formatter: "标签：$content",
-    //     },
-    //   ],
-    // }),
-    // searchProPlugin({
-    //   indexContent: true,
-    //   indexOptions: {
-    //     tokenize: (text, fieldName) =>
-    //       fieldName === "id" ? [text] : cut(text, true),
-    //   },
-    //   customFields: [
-    //     {
-    //       getter: ({ frontmatter }) =>
-    //         <string | undefined>frontmatter.category ?? null,
-    //       formatter: "分类: $content",
-    //     },
-    //   ],
-    //   suggestDelay: 60,
-    // }),
+
   ],
 
   pagePatterns: ["**/*.md", "!**/*.snippet.md", "!.vuepress", "!node_modules"],

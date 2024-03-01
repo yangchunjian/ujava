@@ -59,6 +59,24 @@ export default hopeTheme({
     // },
 
 
+    components: {
+      // 你想使用的组件
+      components: [
+        "ArtPlayer",
+        "Badge",
+        "BiliBili",
+        "CodePen",
+        "PDF",
+        "Replit",
+        "Share",
+        "SiteInfo",
+        "StackBlitz",
+        "VPBanner",
+        "VPCard",
+        "VidStack",
+        "XiGua",
+      ],
+    },
     blog: true,
     copyright: {
       author: "UJava(ujava.cn)",

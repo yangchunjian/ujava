@@ -1,6 +1,6 @@
 ---
 title: 快速上手
-icon: signs-post
+icon: laptop-code
 star: true
 sticky: 10
 dir:
