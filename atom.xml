@@ -3,7 +3,7 @@
   <id>https://ujava.cn/</id>
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
-  <updated>2024-03-01T05:36:59.159Z</updated>
+  <updated>2024-03-01T05:59:14.870Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -14,6 +14,8 @@
   <category term="设计算法"/>
   <category term="设计思想"/>
   <category term="设计框架"/>
+  <category term="快速上手"/>
+  <category term="基础知识"/>
   <category term="设计规范"/>
   <entry>
     <title type="text">委托模式</title>
@@ -8035,6 +8037,24 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <published>2023-10-31T10:25:33.000Z</published>
   </entry>
   <entry>
+    <title type="text">快速上手</title>
+    <id>https://ujava.cn/required/</id>
+    <link href="https://ujava.cn/required/"/>
+    <updated>2024-03-01T05:57:34.000Z</updated>
+    <summary type="html"><![CDATA[<div class="language-component line-numbers-mode" data-ext="component"><pre class="language-component"><code>title: 逐步架构设计
+content: 如果您没有架构经验，请从设计模式开始。
+background: var(--bg-10)
+color: var(--banner-text)
+actions:
+  - text: 设计模式
+    link: ../design/
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<div class="language-component line-numbers-mode" data-ext="component"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <category term="快速上手"/>
+    <category term="基础知识"/>
+    <published>2023-10-23T11:22:31.000Z</published>
+  </entry>
+  <entry>
     <title type="text">设计规范</title>
     <id>https://ujava.cn/standard/design.html</id>
     <link href="https://ujava.cn/standard/design.html"/>
@@ -10263,21 +10283,5 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
 ]]></content>
     <category term="设计规范"/>
     <published>2023-10-16T12:01:48.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">设计规范</title>
-    <id>https://ujava.cn/standard/</id>
-    <link href="https://ujava.cn/standard/"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 简介</h2>
-<p>标准依次分为【强制】、【推荐】、【参考】三大类。在延伸的信息中，“说明”对规约做了适当扩展和解释；“正例”提倡什么样的编码和实现方式；“反例”说明需要提防的雷区，以及真实的错误案例。</p>
-<p>标准的愿景是码出高效，码出质量。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 简介</h2>
-<p>标准依次分为【强制】、【推荐】、【参考】三大类。在延伸的信息中，“说明”对规约做了适当扩展和解释；“正例”提倡什么样的编码和实现方式；“反例”说明需要提防的雷区，以及真实的错误案例。</p>
-<p>标准的愿景是码出高效，码出质量。</p>
-]]></content>
-    <category term="设计规范"/>
-    <published>2023-10-16T11:56:58.000Z</published>
   </entry>
 </feed>

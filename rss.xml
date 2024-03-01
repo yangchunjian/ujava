@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Fri, 01 Mar 2024 05:36:59 GMT</pubDate>
-    <lastBuildDate>Fri, 01 Mar 2024 05:36:59 GMT</lastBuildDate>
+    <pubDate>Fri, 01 Mar 2024 05:59:14 GMT</pubDate>
+    <lastBuildDate>Fri, 01 Mar 2024 05:59:14 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计模式</category>
@@ -17,6 +17,8 @@
     <category>设计算法</category>
     <category>设计思想</category>
     <category>设计框架</category>
+    <category>快速上手</category>
+    <category>基础知识</category>
     <category>设计规范</category>
     <item>
       <title>委托模式</title>
@@ -7532,6 +7534,17 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
 ]]></content:encoded>
     </item>
     <item>
+      <title>快速上手</title>
+      <link>https://ujava.cn/required/</link>
+      <guid>https://ujava.cn/required/</guid>
+      <source url="https://ujava.cn/rss.xml">快速上手</source>
+      <description>title: 逐步架构设计 content: 如果您没有架构经验，请从设计模式开始。 background: var(--bg-10) color: var(--banner-text) actions: - text: 设计模式 link: ../design/</description>
+      <category>快速上手</category>
+      <category>基础知识</category>
+      <pubDate>Mon, 23 Oct 2023 11:22:31 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="language-component line-numbers-mode" data-ext="component"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>设计规范</title>
       <link>https://ujava.cn/standard/design.html</link>
       <guid>https://ujava.cn/standard/design.html</guid>
@@ -9083,19 +9096,6 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
 <p>说明：国际化团队或海外部署的服务器由于字符集问题，使用全英文来注释和描述日志错误信息。</p>
 <h4> 14.【推荐】为了保护用户隐私，日志文件中的用户敏感信息需要进行脱敏处理。</h4>
 <p>说明：日志排查问题时，推荐使用订单号、UUID 之类的唯一编号进行查询。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>设计规范</title>
-      <link>https://ujava.cn/standard/</link>
-      <guid>https://ujava.cn/standard/</guid>
-      <source url="https://ujava.cn/rss.xml">设计规范</source>
-      <description>简介 标准依次分为【强制】、【推荐】、【参考】三大类。在延伸的信息中，“说明”对规约做了适当扩展和解释；“正例”提倡什么样的编码和实现方式；“反例”说明需要提防的雷区，以及真实的错误案例。 标准的愿景是码出高效，码出质量。</description>
-      <category>设计规范</category>
-      <pubDate>Mon, 16 Oct 2023 11:56:58 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 简介</h2>
-<p>标准依次分为【强制】、【推荐】、【参考】三大类。在延伸的信息中，“说明”对规约做了适当扩展和解释；“正例”提倡什么样的编码和实现方式；“反例”说明需要提防的雷区，以及真实的错误案例。</p>
-<p>标准的愿景是码出高效，码出质量。</p>
 ]]></content:encoded>
     </item>
   </channel>
