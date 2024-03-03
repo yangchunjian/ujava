@@ -1,5 +1,6 @@
 ---
-title: 快速上手icon: laptop-code
+title: 快速上手
+icon: laptop-code
 star: true
 sticky: 10
 dir:
