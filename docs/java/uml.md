@@ -1,6 +1,7 @@
 ---
 title: Java UML类图
-category: Javaicon: laptop-code
+category: Java
+icon: laptop-code
 tag:
   - 设计Java
 ---

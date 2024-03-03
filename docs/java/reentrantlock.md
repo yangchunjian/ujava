@@ -1,6 +1,7 @@
 ---
 title: Java ReentrantLock锁的设计思想
-category: Javaicon: laptop-code
+category: Java
+icon: laptop-code
 tag:
   - 设计Java
 ---

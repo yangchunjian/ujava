@@ -1,6 +1,7 @@
 ---
 title: Java的四个核心思想
-category: Javaicon: laptop-code
+category: Java
+icon: laptop-code
 tag:
   - 设计Java
 ---
