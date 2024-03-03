@@ -1,9 +1,10 @@
 ---
 title: 领域模型模式
-
 icon: laptop-code
 category:
-  - 设计模式
+- 设计模式
+tag:
+- 设计模式
 ---
 
 ## 概述

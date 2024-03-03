@@ -1,6 +1,5 @@
 ---
 title: 系统总体结构设计
-
 icon: laptop-code
 category:
 - 设计高频

@@ -1,6 +1,5 @@
 ---
 title: 设计原理:从指令到软件
-
 icon: laptop-code
 category:
   - 设计原理

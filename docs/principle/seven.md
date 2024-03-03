@@ -1,6 +1,5 @@
 ---
 title: 设计原理:如何表达和维护大型逻辑
-
 icon: laptop-code
 category:
   - 设计原理

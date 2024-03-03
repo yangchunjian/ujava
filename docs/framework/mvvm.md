@@ -1,6 +1,5 @@
 ---
 title: MVVM框架
-
 icon: laptop-code
 category:
   - 设计框架

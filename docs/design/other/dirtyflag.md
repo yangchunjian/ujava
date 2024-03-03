@@ -1,9 +1,10 @@
 ---
 title: 脏标志行为模式
-
 icon: laptop-code
 category:
-  - 设计模式
+- 设计模式
+tag:
+- 设计模式
 ---
 
 ## 概述

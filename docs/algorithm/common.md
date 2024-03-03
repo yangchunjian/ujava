@@ -1,6 +1,5 @@
 ---
 title: 设计算法:常见算法
-
 icon: laptop-code
 category:
   - 设计算法

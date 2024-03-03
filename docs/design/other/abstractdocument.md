@@ -1,8 +1,9 @@
 ---
 title: 抽象文档模式
-
 icon: laptop-code
 category:
+- 设计模式
+tag:
 - 设计模式
 ---
 

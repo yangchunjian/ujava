@@ -1,6 +1,5 @@
 ---
 title: 第四梯队思想
-
 icon: laptop-code
 category:
 - 设计思想

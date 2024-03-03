@@ -1,6 +1,5 @@
 ---
 title: 设计思想
-
 icon: laptop-code
 category:
 - 设计思想

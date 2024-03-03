@@ -1,9 +1,10 @@
 ---
 title: 奇异递归模板(CRTP)模式
-
 icon: laptop-code
 category:
-  - 设计模式
+- 设计模式
+tag:
+- 设计模式
 ---
 
 ## 概述

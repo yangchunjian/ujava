@@ -1,6 +1,5 @@
 ---
 title: 影响项目的要素及经验总结
-
 icon: laptop-code
 category:
   - 设计高频

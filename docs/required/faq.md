@@ -1,8 +1,7 @@
 ---
 title: 常见问题
 star: 1
-category: 必读
-icon: laptop-code
+category: 必读icon: laptop-code
 ---
 
 ## UJava是什么

@@ -1,6 +1,5 @@
 ---
 title: 库表规范
-
 icon: laptop-code
 category:
   - 设计规范

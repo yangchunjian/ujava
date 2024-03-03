@@ -1,7 +1,6 @@
 ---
 title: Java核心包结构设计思想
-category: Java
-icon: laptop-code
+category: Javaicon: laptop-code
 tag:
   - 设计Java
 ---

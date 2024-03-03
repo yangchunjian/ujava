@@ -1,8 +1,9 @@
 ---
 title: 装饰器模式
-
 icon: laptop-code
 category:
+- 设计模式
+tag:
 - 设计模式
 ---
 

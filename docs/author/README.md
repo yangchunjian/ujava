@@ -1,6 +1,5 @@
 ---
 title: 作者
-
 icon: laptop-code
 category:
   - 介绍

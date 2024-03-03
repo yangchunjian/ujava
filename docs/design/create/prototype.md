@@ -1,8 +1,9 @@
 ---
 title: 原型模式
-
 icon: laptop-code
 category:
+- 设计模式
+tag:
 - 设计模式
 ---
 

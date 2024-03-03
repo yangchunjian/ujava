@@ -1,6 +1,5 @@
 ---
 title: 设计原理:抽象
-
 icon: laptop-code
 category:
   - 设计原理

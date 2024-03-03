@@ -1,6 +1,5 @@
 ---
 title: 一致性Hash算法
-
 icon: laptop-code
 category:
   - 设计高频

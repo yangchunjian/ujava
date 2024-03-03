@@ -1,6 +1,5 @@
 ---
 title: 第一性原理:结构化抽象
-
 icon: laptop-code
 category:
   - 设计原理

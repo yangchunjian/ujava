@@ -1,6 +1,5 @@
 ---
 title: 企业级架构带来的模式改变
-
 icon: laptop-code
 category:
   - 设计高频

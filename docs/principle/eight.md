@@ -1,6 +1,5 @@
 ---
 title: 设计原理:代码可复用性问题兼谈团队协作
-
 icon: laptop-code
 category:
   - 设计原理

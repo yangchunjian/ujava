@@ -1,6 +1,5 @@
 ---
 title: 安全规范
-
 icon: laptop-code
 category:
   - 设计规范

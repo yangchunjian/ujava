@@ -1,6 +1,5 @@
 ---
 title: 编程规范
-
 icon: laptop-code
 category:
   - 设计规范

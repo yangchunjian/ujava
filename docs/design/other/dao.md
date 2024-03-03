@@ -1,9 +1,10 @@
 ---
 title: 数据访问对象(DAO)模式
-
 icon: laptop-code
 category:
-  - 设计模式
+- 设计模式
+tag:
+- 设计模式
 ---
 
 ## 概述

@@ -1,7 +1,6 @@
 ---
 title: JDK源码中用到的23种设计模式
-category: Java
-icon: laptop-code
+category: Javaicon: laptop-code
 tag:
   - 设计Java
 ---

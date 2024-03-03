@@ -1,8 +1,11 @@
 ---
 title: 安排执行断言模式
-
 icon: laptop-code
 category:
+- 设计模式
+tag:
+- 设计模式
+tag:
   - 设计模式
 ---
 
