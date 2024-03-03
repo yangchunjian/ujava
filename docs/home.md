@@ -1,5 +1,6 @@
 ---
-title: UJava（架构设计）icon: laptop-code
+title: UJava（架构设计）
+icon: laptop-code
 ---
 
 ::: tip 友情提示
