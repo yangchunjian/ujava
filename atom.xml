@@ -3,7 +3,7 @@
   <id>https://ujava.cn/</id>
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
-  <updated>2024-03-01T09:50:37.779Z</updated>
+  <updated>2024-03-03T03:08:26.428Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -18,10 +18,24 @@
   <category term="基础知识"/>
   <category term="设计规范"/>
   <entry>
+    <title type="text">事件聚合器模式</title>
+    <id>https://ujava.cn/design/other/eventaggregator.html</id>
+    <link href="https://ujava.cn/design/other/eventaggregator.html"/>
+    <updated>2024-03-03T03:00:03.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>当客户端想要订阅事件时，具有大量对象的系统可能会导致复杂性。客户端必须为每个对象单独查找和注册，如果每个对象都有多个事件，则每个事件都需要单独的订阅。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>当客户端想要订阅事件时，具有大量对象的系统可能会导致复杂性。客户端必须为每个对象单独查找和注册，如果每个对象都有多个事件，则每个事件都需要单独的订阅。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-03T03:00:03.000Z</published>
+  </entry>
+  <entry>
     <title type="text">委托模式</title>
     <id>https://ujava.cn/design/other/delegate.html</id>
     <link href="https://ujava.cn/design/other/delegate.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>委托模式提供了一种机制，用于抽象出所需操作的实现和控制。</p>
 ]]></summary>
@@ -35,7 +49,7 @@
     <title type="text">依赖注入模式</title>
     <id>https://ujava.cn/design/other/dependencyinjection.html</id>
     <link href="https://ujava.cn/design/other/dependencyinjection.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>依赖注入模式处理对象如何处理其依赖关系。该模式实现了所谓的反转控制原理。控制反转有两个具体规则： - 高级模块不应依赖于低级模块。两者都应该依赖于抽象。- 抽象不应依赖于细节。细节应取决于抽象。</p>
 ]]></summary>
@@ -49,7 +63,7 @@
     <title type="text">脏标志行为模式</title>
     <id>https://ujava.cn/design/other/dirtyflag.html</id>
     <link href="https://ujava.cn/design/other/dirtyflag.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>脏标志行为模式允许您避免无论如何都需要再次执行的昂贵操作。这是一个简单的模式，实际上只是解释了如何向类添加一个布尔值，您可以在属性更改时设置该值。这将使您的班级知道，它之前可能计算过的任何结果都需要在请求时再次计算。重新计算结果后，可以清除布尔值。<br>
 在深入研究使用此模式之前，需要考虑一些要点：</p>
@@ -76,7 +90,7 @@
     <title type="text">领域模型模式</title>
     <id>https://ujava.cn/design/other/domainmodel.html</id>
     <link href="https://ujava.cn/design/other/domainmodel.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>领域模型模式是比事务脚本和表模块更复杂的组织域逻辑的解决方案。它提供了一种面向对象的方式来处理复杂的逻辑。而不是使用一个过程来处理用户操作的所有业务逻辑（如事务脚本），而是有多个对象，每个对象都处理与其相关的域逻辑的一部分。域模型模式和表模块模式之间的显著区别在于，在表模块中，单个类封装了表中存储的所有记录的所有域逻辑，而在域模型中，每个类仅表示基础表中的一条记录。</p>
 ]]></summary>
@@ -90,7 +104,7 @@
     <title type="text">双缓冲模式</title>
     <id>https://ujava.cn/design/other/doublebuffering.html</id>
     <link href="https://ujava.cn/design/other/doublebuffering.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>双缓冲是一个术语，用于描述具有两个缓冲区的设备。使用多个缓冲区可提高设备的整体吞吐量，并有助于防止出现瓶颈。</p>
 ]]></summary>
@@ -104,7 +118,7 @@
     <title type="text">双重检查锁模式</title>
     <id>https://ujava.cn/design/other/doublechecklock.html</id>
     <link href="https://ujava.cn/design/other/doublechecklock.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>双重检查锁定是一种并发设计模式，用于通过首先测试锁定条件（“锁定提示”）而不实际获取锁来减少获取锁的开销。只有当锁定条件检查指示需要锁定时，实际的锁定逻辑才会继续进行。</p>
 ]]></summary>
@@ -118,7 +132,7 @@
     <title type="text">双分派模式</title>
     <id>https://ujava.cn/design/other/doubledispatch.html</id>
     <link href="https://ujava.cn/design/other/doubledispatch.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>当带有参数的消息发送到对象时，结果行为由接收方中该方法的实现定义。有时，行为也必须由参数的类型决定。<br>
 实现此目的的一种方法是为 methods 参数创建多个 instanceof-checks。但是，这会产生维护问题。添加新类型时，我们还需要更改方法的实现并添加新的 instanceof-check。这违反了单一责任原则——一个类应该只有一个理由来改变。<br>
@@ -136,7 +150,7 @@
     <title type="text">内在价值模式</title>
     <id>https://ujava.cn/design/other/embeddedvalue.html</id>
     <link href="https://ujava.cn/design/other/embeddedvalue.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>许多小对象在 OO 系统中有意义，但在数据库中没有意义。示例包括货币感知货币对象（金额、货币）和日期范围。尽管默认的想法是将对象保存为表格，但任何理智的人都不会想要货币值表。<br>
 嵌入值将对象的值映射到对象所有者记录中的字段。</p>
@@ -152,7 +166,7 @@
     <title type="text">转换器模式</title>
     <id>https://ujava.cn/design/other/converter.html</id>
     <link href="https://ujava.cn/design/other/converter.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>转换器(Converter)模式是一种行为设计模式，它允许在相应类型（例如DTO和逻辑同构类型的域表示）之间进行双向转换的通用方式。此外，该模式还引入了一种在类型之间转换对象集合的通用方法。</p>
 ]]></summary>
@@ -166,7 +180,7 @@
     <title type="text">命令查询职责分离(CQRS)模式</title>
     <id>https://ujava.cn/design/other/cqrs.html</id>
     <link href="https://ujava.cn/design/other/cqrs.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>CQRS：命令查询职责分离。一种用于将查询服务与命令或写入服务分离的模式。这个模式很简单，但有很多后果。例如，它可以用于处理复杂的域，或者使用其他难以用经典方式实现的体系结构。</p>
 ]]></summary>
@@ -180,7 +194,7 @@
     <title type="text">奇异递归模板(CRTP)模式</title>
     <id>https://ujava.cn/design/other/crtp.html</id>
     <link href="https://ujava.cn/design/other/crtp.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>CRTP 全称 ： Curiously Recurring Template Pattern，也就是常说的奇异递归模板模式</p>
 ]]></summary>
@@ -194,7 +208,7 @@
     <title type="text">柯里化(Currying)模式</title>
     <id>https://ujava.cn/design/other/currying.html</id>
     <link href="https://ujava.cn/design/other/currying.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>Currying将具有多个参数的函数分解为具有单个参数的多个函数。只传递了部分参数的curried函数称为部分应用程序。部分应用程序非常有用，因为它可以用于以简洁的方式创建专门的函数。</p>
 ]]></summary>
@@ -208,7 +222,7 @@
     <title type="text">数据访问对象(DAO)模式</title>
     <id>https://ujava.cn/design/other/dao.html</id>
     <link href="https://ujava.cn/design/other/dao.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>数据访问对象（DAO）是一个为某种类型的数据库或其他持久性机制提供抽象接口的对象。通过将应用程序调用映射到持久层，DAO在不公开数据库细节的情况下提供了一些特定的数据操作。这种隔离支持单一责任原则。它将特定于域的对象和数据类型（DAO的公共接口）方面的数据访问应用程序需求与特定DBMS如何满足这些需求区分开来。</p>
 <p>使用DAO模式，我们可以使用各种方法调用来检索/添加/删除/更新数据，而无需直接与数据源交互。下面的示例演示了基本的CRUD操作：选择、添加、更新和删除。</p>
@@ -224,7 +238,7 @@
     <title type="text">数据总线模式</title>
     <id>https://ujava.cn/design/other/databus.html</id>
     <link href="https://ujava.cn/design/other/databus.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p><a href="http://wiki.c2.com/?DataBusPattern" target="_blank" rel="noopener noreferrer">http://wiki.c2.com/?DataBusPattern</a></p>
 <p>数据总线模式提供了一种方法，在该方法中，应用程序的不同部分可以在彼此之间传递消息，而不需要知道对方的存在。</p>
@@ -240,7 +254,7 @@
     <title type="text">数据本地化模式</title>
     <id>https://ujava.cn/design/other/datalocality.html</id>
     <link href="https://ujava.cn/design/other/datalocality.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>当您遇到性能问题时，请使用数据本地化模式。利用这一点，通过提高数据位置性来提高性能</p>
 <p>按照处理顺序将数据保存在连续内存中。</p>
@@ -256,7 +270,7 @@
     <title type="text">数据映射器模式</title>
     <id>https://ujava.cn/design/other/datamapper.html</id>
     <link href="https://ujava.cn/design/other/datamapper.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>数据映射器（DM）是将内存中的对象与数据库分离的一层软件。它的职责是在两者之间传输数据，并将它们相互隔离。使用Data Mapper，内存中的对象甚至不必知道存在数据库；它们不需要SQL接口代码，当然也不需要数据库模式的知识。（数据库架构总是不知道使用它的对象。）由于它是Mapper的一种形式，Data Mapper本身甚至对域层来说是未知的。</p>
 ]]></summary>
@@ -270,7 +284,7 @@
     <title type="text">数据传输对象模式</title>
     <id>https://ujava.cn/design/other/datatransferobject.html</id>
     <link href="https://ujava.cn/design/other/datatransferobject.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>数据传输对象模式是一种设计模式，其中数据传输对象用于一起提供相关信息，以避免对每条信息进行多次调用。</p>
 ]]></summary>
@@ -284,7 +298,7 @@
     <title type="text">安排执行断言模式</title>
     <id>https://ujava.cn/design/other/aaa.html</id>
     <link href="https://ujava.cn/design/other/aaa.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:06:41.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>安排执行断言模式(Arrange/Act/Assert(AAA))是个单元测试模式</p>
 ]]></summary>
@@ -298,7 +312,7 @@
     <title type="text">抽象文档模式</title>
     <id>https://ujava.cn/design/other/abstractdocument.html</id>
     <link href="https://ujava.cn/design/other/abstractdocument.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>抽象文档模式(abstract document)允许处理其他非静态属性。此模式使用特征的概念来实现类型安全，并将不同类的属性分离到一组接口中。</p>
 ]]></summary>
@@ -312,7 +326,7 @@
     <title type="text">活动对象模式</title>
     <id>https://ujava.cn/design/other/activeobject.html</id>
     <link href="https://ujava.cn/design/other/activeobject.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>活动对象模式(active object)有助于在不使用“同步”方法的情况下解决同步困难。活动对象将包含线程安全的数据结构（如 BlockingQueue），用于通过将方法的逻辑移动到调用器（通常是 Runnable）并将其存储在 DSA 中来同步方法调用。</p>
 ]]></summary>
@@ -326,7 +340,7 @@
     <title type="text">非循环访问者模式</title>
     <id>https://ujava.cn/design/other/acyclicvisitor.html</id>
     <link href="https://ujava.cn/design/other/acyclicvisitor.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>非循环访问者模式(acyclic visitor)允许将新函数添加到现有类层次结构中，而不会影响这些层次结构，并且不会通过使 Visitor 基类退化来创建 GoF(Gang<br>
 of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
@@ -342,7 +356,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">大使模式</title>
     <id>https://ujava.cn/design/other/ambassadorpattern.html</id>
     <link href="https://ujava.cn/design/other/ambassadorpattern.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>大使模式(ambassador pattern)创建一个帮助程序服务，该服务代表客户端发送网络请求。它通常用于基于云的应用程序中，以卸载远程服务的功能。<br>
 大使服务可以看作是与客户端位于同一位置的进程外代理。与代理设计模式类似，大使服务为另一个远程服务提供接口。除了接口之外，大使还提供额外的功能和特性，特别是卸载了常见的连接任务。这通常包括监控、日志记录、路由、安全等。这在代码库难以修改的旧应用程序中非常有用，并允许改进应用程序的网络功能。</p>
@@ -358,7 +372,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">异步方法调用模式</title>
     <id>https://ujava.cn/design/other/asynmethodinvocation.html</id>
     <link href="https://ujava.cn/design/other/asynmethodinvocation.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>异步方法调用(asynchronous method invocation)是一种模式，在等待任务结果时，调用线程不会被阻塞。该模式提供多个独立任务的并行处理，并通过回调或等待所有工作完成来检索结果。</p>
 ]]></summary>
@@ -372,7 +386,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">放弃设计模式</title>
     <id>https://ujava.cn/design/other/balkingdesign.html</id>
     <link href="https://ujava.cn/design/other/balkingdesign.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:06:41.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>在放弃设计模式(Balking Design Pattern) 中，如果对象的方法在处于不适当的状态时被调用，则该方法将返回而不执行任何操作。使用此模式的对象通常只处于一种容易暂时停止的状态，但持续时间未知</p>
 ]]></summary>
@@ -386,7 +400,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">业务委托模式</title>
     <id>https://ujava.cn/design/other/businessdelegate.html</id>
     <link href="https://ujava.cn/design/other/businessdelegate.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>业务委托模式(business delegate)在表示层和业务层之间添加了一个抽象层。通过使用该模式，我们获得了层之间的松散耦合。业务委托封装了有关如何查找、连接到构成应用程序的业务对象并与之交互的知识。<br>
 业务委托使用的一些服务是直接实例化的，有些服务可以通过服务查找来检索。业务委托本身也可能包含业务逻辑，可能会将多个服务调用、异常处理、重试等捆绑在一起。</p>
@@ -402,7 +416,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">字节码模式</title>
     <id>https://ujava.cn/design/other/bytecode.html</id>
     <link href="https://ujava.cn/design/other/bytecode.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>字节码模式(bytecode pattern)<br>
 的目的是通过将数据编码为虚拟机的指令来为行为提供数据的灵活性。指令集定义了可以执行的低级操作。一系列指令被编码为字节序列。虚拟机一次执行一个指令，使用堆栈作为中间值。通过组合指令，可以定义复杂的高级行为。<br>
@@ -420,7 +434,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">缓存模式</title>
     <id>https://ujava.cn/design/other/caching.html</id>
     <link href="https://ujava.cn/design/other/caching.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>缓存模式(caching)描述了如何通过不在资源使用后立即释放资源来避免昂贵的资源重新获取。这些资源保留了它们的身份，保存在一些快速访问存储中，并被重新使用以避免再次获取它们。此模式中有四种主要的缓存策略/技术；每个人都有自己的优点和缺点。它们是在单个事务中将数据写入高速缓存和数据库的写操作，将数据立即写入数据库而不是高速缓存的绕写操作，最初将数据写入高速缓冲存储器的后写操作，而数据仅在高速缓冲存储器满时写入数据库，并将保持两个数据源中的数据同步的责任推给应用程序本身。read-through策略也包含在上述四种策略中——如果存在，则将数据从缓存返回给调用方，否则从DB查询并将其存储到缓存中以备将来使用。<br>
 这些策略决定了缓存中的数据何时应写回后备存储（即数据库），并有助于保持两个数据源的同步/最新。这种模式可以提高性能，也有助于保持缓存中的数据与底层数据存储中的数据之间的一致性。</p>]]></summary>
@@ -435,7 +449,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">回调模式</title>
     <id>https://ujava.cn/design/other/callback.html</id>
     <link href="https://ujava.cn/design/other/callback.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>回调模式(callback)对于函数被视为一等公民的函数语言来说更为原生。在Java 8之前，可以使用简单的（类似的命令）接口来模拟回调。</p>
 ]]></summary>
@@ -449,7 +463,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">回路生成器模式</title>
     <id>https://ujava.cn/design/other/circuitbuilder.html</id>
     <link href="https://ujava.cn/design/other/circuitbuilder.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>回路生成器模式(Circuit Builder)的目的是稳健地处理远程故障，也就是说，如果一个服务依赖于n个其他服务，并且其中m个服务失败，我们应该能够通过确保用户仍然可以使用实际工作的服务来从故障中恢复，并且资源不会被不工作的服务无用地占用。然而，我们也应该能够检测出m个故障服务何时重新开始运行，以便我们能够使用它</p>
 ]]></summary>
@@ -463,7 +477,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">客户端会话模式</title>
     <id>https://ujava.cn/design/other/clientsession.html</id>
     <link href="https://ujava.cn/design/other/clientsession.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>客户端会话模式(Client-Session)允许将会话数据存储在客户端，并在每次请求时将这些数据发送到服务器。</p>
 ]]></summary>
@@ -477,7 +491,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">收集参数设计模式</title>
     <id>https://ujava.cn/design/other/collectingparameter.html</id>
     <link href="https://ujava.cn/design/other/collectingparameter.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>收集参数设计模式(Collecting Parameter)旨在返回一个结果，该结果是多种方法的协作结果。此设计模式使用一个“收集参数”，该参数传递给多个函数，在从一个方法传递到另一个方法时累积结果。这与Composed Method设计模式不同，后者通过多种方法修改单个集合。</p>
 ]]></summary>
@@ -491,7 +505,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">集合管道模式</title>
     <id>https://ujava.cn/design/other/collectionpipeline.html</id>
     <link href="https://ujava.cn/design/other/collectionpipeline.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>集合管道模式(Collection Pipeline)</p>
 <p>在命令式编程中，大多数类型的数据处理通常使用for和while循环。函数组合是一种简单的技术，可以对模块化函数进行排序，以创建更复杂的操作。当您在序列中运行数据时，您就有了一个收集管道。函数组合和收集管道模式使您能够创建复杂的程序，其中数据从上游流到下游，并通过一系列转换进行传递。</p>
@@ -507,7 +521,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">上下文对象模式</title>
     <id>https://ujava.cn/design/other/contextobject.html</id>
     <link href="https://ujava.cn/design/other/contextobject.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概述</h2>
 <p>在上下文对象模式(context object)中，来自底层协议特定类/系统的信息和数据被解耦，并以有组织的格式存储到与协议无关的对象中。该模式确保上下文对象中包含的数据可以在软件系统的不同层之间共享和进一步结构化。</p>
 ]]></summary>
@@ -521,7 +535,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">K8S简介</title>
     <id>https://ujava.cn/highfreq/k8s.html</id>
     <link href="https://ujava.cn/highfreq/k8s.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 一、K8S简介</h2>
 <p>Kubernetes中文官网：<a href="https://kubernetes.io/zh/" target="_blank" rel="noopener noreferrer">Kubernetes</a></p>
 <p>GitHub：<a href="http://github.com/kubernetes/kubernetes" target="_blank" rel="noopener noreferrer">github.com/kubernetes/kubernetes</a></p>
@@ -636,7 +650,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">Jenkins详解</title>
     <id>https://ujava.cn/highfreq/jenkins.html</id>
     <link href="https://ujava.cn/highfreq/jenkins.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 1.背景</h2>
 <p>在实际开发中，我们经常要一边开发一边测试，当然这里说的测试并不是程序员对自己代码的单元测试，而是同组程序员将代码提交后，由测试人员测试；</p>
 <p>或者前后端分离后，经常会修改接口，然后重新部署；</p>
@@ -828,7 +842,7 @@ of Four) Visitor(访问者) 模式固有的依赖关系循环</p>
     <title type="text">DevOps基本概念</title>
     <id>https://ujava.cn/highfreq/devops.html</id>
     <link href="https://ujava.cn/highfreq/devops.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 1. DevOps</h2>
 <p>维基百科定义：DevOps是一组过程、方法与系统的统称，用于促进 开发、技术运营 和 质量保障（QA） 部门之间的沟通、协作与整合。我理解DevOps是一种软件管理思维模式。</p>
 <p>为什么会有DevOps呢，或者说软件开发领域是怎么样演变出DevOps这个概念的呢？</p>
@@ -886,7 +900,7 @@ CI/CD是伴随着DevOps出现的两个词汇，CI是Continuous Integration（持
     <title type="text">SpringCloud详解</title>
     <id>https://ujava.cn/highfreq/springcloud.html</id>
     <link href="https://ujava.cn/highfreq/springcloud.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<p>SpringCloud是一个基于SpringBoot的分布式系统开发框架，它能够帮助我们快速、稳定地构建分布式系统。本篇博客将对SpringCloud进行详细解析，介绍SpringCloud的主要组件和相关应用场景，同时提供代码示例以帮助读者更好地掌握SpringCloud的实际开发应用。</p>
 <h2> 一、SpringCloud概述</h2>
 <p>SpringCloud：<a href="https://spring.io/projects/spring-cloud" target="_blank" rel="noopener noreferrer">SpringCloud官网</a></p>]]></summary>
@@ -959,7 +973,7 @@ Spring Cloud 的优势是显而易见的。因此对于想研究微服务架构�
     <title type="text">什么是serverless</title>
     <id>https://ujava.cn/highfreq/serverless.html</id>
     <link href="https://ujava.cn/highfreq/serverless.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 1 什么是severless ?</h2>
 <p>Serverless（无服务器架构）是指服务端逻辑由开发者实现，运行在无状态的计算容器中，由事件触发，完全被第三方管理，其业务层面的状态则存储在数据库或其他介质中。</p>
 <figure><figcaption>img_58.png</figcaption></figure>
@@ -1096,7 +1110,7 @@ Serverless 的使用场景示例如：</p>
     <title type="text">企业级架构带来的模式改变</title>
     <id>https://ujava.cn/highfreq/modelchange.html</id>
     <link href="https://ujava.cn/highfreq/modelchange.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<p>数字化转型背景下，银行业务和IT技术融合发展的趋势愈发明显。企业级架构通过统一的方法论进行企业级分析、设计、规划和实施，有助于将业务和技术更好地结合在一起，建立一整套基于操作模型的标准化流程，进而成功执行和实现战略转型。企业级架构主要可分为业务架构与IT架构两大部分，其核心作用包括贯彻企业战略、促进业务和科技融合、消除部门竖井，以及统一方法、统一语言、统一标准等，最终潜移默化地持续提升整体效率。针对这一趋势，笔者结合价值评估、数据治理、业技融合、方法实践等视角，尝试分析了实施企业级架构所能带来的模式改变与价值提升。</p>
 <h2> 一、价值评估有章可循</h2>
 <p>近年来，金融科技与银行业务的依存关系愈发紧密，特别是各类新技术、新场景的不断涌现，推动用户体验持续完善、风控水平快速提升。然而，面对金融业务的快速发展，尽管科技部门采用了敏捷模式、外协模式不断提高产能，却依然很难达到需求方的期望。在此背景下，为有效缓解供需矛盾，需求价值评估环节应需而生，即当改造范围及工作量评估完成后，业务部门和科技部门在需求排期会再次进行沟通，以保证高优先级需求优先开发。但事实上，需求方大多以本部门利益为上，排期结论往往很难达成一致，其根本原因即在于价值评估没有贯穿在需求产生的过程中。</p>]]></summary>
@@ -1137,7 +1151,7 @@ Serverless 的使用场景示例如：</p>
     <title type="text">WebFlux详解</title>
     <id>https://ujava.cn/highfreq/webflux.html</id>
     <link href="https://ujava.cn/highfreq/webflux.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<p>因为想学习 Spring Cloud Gateway 来着，然后发现它是基于 Spring5.0+SpringBoot2.0+WebFlux等技术开发的。所以学之前才要来简单了解下 WebFlux 技术。</p>
 <p>然后要学习 WebFlux 时我发现又需要 Java 8 中的函数式编程、Stream 流等技术作为前置知识。环环相扣啊，套娃一样。</p>
 <p>所以前面还有两篇学习的文章：来系统学习下 lambda 表达式吧和来一起学习下 Java 8 的 Stream 流。</p>
@@ -1248,7 +1262,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">Reactor模型详解</title>
     <id>https://ujava.cn/highfreq/reactor.html</id>
     <link href="https://ujava.cn/highfreq/reactor.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 前言</h2>
 <p>说到NIO、Netty，Reactor模型一定是绕不开的，因为这种模式架构太经典了，但是好多人在学习的时候，往往会忽视基础的学习，一上来就是Netty，各种高大上，但是却没有静下心来好好看看Netty的基石——Reactor模型。本文就带着大家看看Reactor模型，让大家对Reactor模型有个浅显而又感性的认识。</p>
 <h2> 一、经典的同步阻塞模型</h2>
@@ -1342,7 +1356,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">企业级架构建模之浅谈三大模型关系</title>
     <id>https://ujava.cn/highfreq/modelrelation.html</id>
     <link href="https://ujava.cn/highfreq/modelrelation.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<p>通俗来说，产品泛指银行销售给客户的服务，并通过与客户签订具体产品合约获取利益。产品模型站在企业视角，确定与产品相关的业务规则、限额、约束、期限、价格等要素，形成自上而下以产品线、产品组、基础产品、产品组件和产品条件的结构化模型表达。</p>
 <p>企业级架构三大模型从不同视角描述整个业务体系，将企业战略分解细化到各个业务领域的具体环节，对原本分割的部分进行系统化表达，同时弥补了产品、流程及数据间信息的不一致。<br>
 产品模型是企业定制化产品的集合，阐述企业提供的服务是什么</p>
@@ -1390,7 +1404,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">一文搞懂业务架构、技术架构、数据架构、运维架构、物理架构理清不同视角的架构</title>
     <id>https://ujava.cn/highfreq/business.html</id>
     <link href="https://ujava.cn/highfreq/business.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>在学习架构时，我认为首先要理清楚架构的视角，因为你所认知的架构和别人所说的架构可能是两码事。对于不同职位的视角是不一样的，比如开发而言他更多的看到的是开发架构；对售前人员，他可能更多的看到的是业务架构；对于运维人员，他看到的可能是运维架构；而对于技术支持和部署人员，他更多的看到的网络和物理架构。</p>
 <h2> 架构的视角</h2>
@@ -1459,7 +1473,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">企业架构TOGAF内容框架</title>
     <id>https://ujava.cn/highfreq/togaf.html</id>
     <link href="https://ujava.cn/highfreq/togaf.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<figure><figcaption>img_24.png</figcaption></figure>
 <h2> 一、内容框架概述</h2>
 <p>TOGAF 9之前的版本中没有企业架构的具体内容相关的论述，需要与其他具有企业架构内容描述的框架（例如Zachman框架）进行配合。随着内容框架（Content Framework）的引入，以及企业架构开发方法与该内容框架的相互结合，TOGAF已经成为一个独立完备的企业架构框架标准。</p>
@@ -2449,7 +2463,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">Java的四个核心思想</title>
     <id>https://ujava.cn/java/basecore.html</id>
     <link href="https://ujava.cn/java/basecore.html"/>
-    <updated>2024-01-31T00:48:57.000Z</updated>
+    <updated>2024-03-03T03:03:42.000Z</updated>
     <summary type="html"><![CDATA[<p>Java已经成为一个庞大而复杂的技术平台，对于开发人员而言，要想更好的掌握Java技术，深入理解底层的技术处理细节必不可少。对核心概念和思想的掌握可以帮助我们举一反三、触类旁通，有助于提升我们对整个Java平台的理解力。这里所介绍的是Java技术平台的几个核心概念，其中所蕴含的思想有助于我们更深刻的理解Java技术。</p>
 <h2> Java虚拟机</h2>
 <p>Java虚拟机的主要任务是装载class文件并且执行其中的字节码。Java虚拟机包含一个类装载器，它可以从程序和API中装载class文件。Java API中只有程序执行时需要的那些类才会被装载。字节码由执行引擎来执行。</p>]]></summary>
@@ -2490,7 +2504,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">Java UML类图</title>
     <id>https://ujava.cn/java/uml.html</id>
     <link href="https://ujava.cn/java/uml.html"/>
-    <updated>2024-01-30T01:34:07.000Z</updated>
+    <updated>2024-03-03T03:03:42.000Z</updated>
     <summary type="html"><![CDATA[<h2> 面向对象概念</h2>
 <p>面向对象是一种更优秀的程序设计方法，它的基本思想是使用类、对象、继承、封装、消息等基本概念进行程序设计。</p>
 <p>它从现实世界中客观存在的事物出发来构造软件系统，并在系统构造中尽可能运用人类的自然思维方式，强调直接以现实世界中的事物为中心来思考，认识问题，并根据这些事物的本质特点，把它们抽象地表示为系统中的类，作为系统的基本构成单元，这使得软件系统的组件可以直接映像到客观世界，并保持客观世界中事物及其相互关系的本来面貌。</p>
@@ -2609,7 +2623,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">Java ReentrantLock锁的设计思想</title>
     <id>https://ujava.cn/java/reentrantlock.html</id>
     <link href="https://ujava.cn/java/reentrantlock.html"/>
-    <updated>2024-01-29T08:13:44.000Z</updated>
+    <updated>2024-03-03T03:03:42.000Z</updated>
     <summary type="html"><![CDATA[<h2> 一、开头</h2>
 <p>在并发编程领域，有两大核心问题：一个是互斥，即同一时刻只允许一个线程访问共享资源；另一个是同步，即线程之间如何通信、协作。<br>
 主要原因是，对于多线程实现实现并发，一直以来，多线程都存在2个问题：</p>
@@ -2812,7 +2826,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">JDK源码中用到的23种设计模式</title>
     <id>https://ujava.cn/java/jdkdesign.html</id>
     <link href="https://ujava.cn/java/jdkdesign.html"/>
-    <updated>2024-01-25T01:31:49.000Z</updated>
+    <updated>2024-03-03T03:03:42.000Z</updated>
     <summary type="html"><![CDATA[<!-- TOC -->
 <ul>
 <li><a href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F">创建模式</a>
@@ -2943,7 +2957,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">Java核心包结构设计思想</title>
     <id>https://ujava.cn/java/package.html</id>
     <link href="https://ujava.cn/java/package.html"/>
-    <updated>2024-01-24T03:14:02.000Z</updated>
+    <updated>2024-03-03T03:03:42.000Z</updated>
     <summary type="html"><![CDATA[<p>在研读 JDK 源码之前，先了解 JDK 几个核心包的设计思想，将有助于我们理解当初的设计者们的意图，让我们更能体会到设计者的良苦用心。</p>
 <h2> 1 java.lang 语言包</h2>
 <p>提供利用 Java 编程语言进行程序设计的基础类。最重要的类是 Object（类层次结构的根）和 Class（其实例表示正在运行的应用程序中的类）。</p>
@@ -3144,7 +3158,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">Java值传递</title>
     <id>https://ujava.cn/java/why-there-only-value-passing-in-java.html</id>
     <link href="https://ujava.cn/java/why-there-only-value-passing-in-java.html"/>
-    <updated>2024-01-24T03:14:02.000Z</updated>
+    <updated>2024-03-03T03:03:42.000Z</updated>
     <summary type="html"><![CDATA[<p>开始之前，我们先来搞懂下面这两个概念：</p>
 <ul>
 <li>形参&amp;实参</li>
@@ -3221,7 +3235,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
     <title type="text">几种常见web容器</title>
     <id>https://ujava.cn/highfreq/container.html</id>
     <link href="https://ujava.cn/highfreq/container.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>应用服务器：tomcat</p>
 <p>常用应用服务器：WebLogic、WebSphere、Apache、JBoss、GlassFish</p>
@@ -3286,7 +3300,7 @@ Enterprise标准的安全性引入大型网络应用的开发、集成、部署�
     <title type="text">系统总体结构设计</title>
     <id>https://ujava.cn/highfreq/overall.html</id>
     <link href="https://ujava.cn/highfreq/overall.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>系统设计工作应该自顶向下地进行。首先设计总体结构，然后再逐层深入，直至进行每一个模块的设计。总体设计主要是指在系统分析的基础上，对整个系统的划分（子系统）、机器设备（包括软、硬设备）的配置、数据的存贮规律以及整个系统实现规划等方面进行合理的安排。</p>
 <h2> 一、系统设计的任务</h2>
@@ -3501,7 +3515,7 @@ Enterprise标准的安全性引入大型网络应用的开发、集成、部署�
     <title type="text">设计注意事项一</title>
     <id>https://ujava.cn/highfreq/attention1.html</id>
     <link href="https://ujava.cn/highfreq/attention1.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h2> 架构的本质</h2>
 <p>其实总结下来就一句话：<strong>架构本质上其实就是一种指导型的约束，约定整体和部分、部分和部分之间的关系，以使整体更加稳定，更加可靠。</strong></p>
@@ -3651,7 +3665,7 @@ Enterprise标准的安全性引入大型网络应用的开发、集成、部署�
     <title type="text">设计注意事项二</title>
     <id>https://ujava.cn/highfreq/attention2.html</id>
     <link href="https://ujava.cn/highfreq/attention2.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h2> 一.设计原则</h2>
 <p>架构设计我我们平时写代码不一样，两者的差异主要体现在“不确定性”上。对于编程来说，本质上是确定的，对于同样一段代码，不管是谁写的，不管什么时候执行，执行的结果应该都是确定的；而对于架构设计来说，本质上是不确定，并没有像编程语言那样的语法来进行约束，更多的时候是面对多种可能性时进行选择。</p>
@@ -3720,7 +3734,7 @@ Enterprise标准的安全性引入大型网络应用的开发、集成、部署�
     <title type="text">设计实践经验</title>
     <id>https://ujava.cn/highfreq/experience.html</id>
     <link href="https://ujava.cn/highfreq/experience.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <ul>
 <li>记录道具来源等的 source 字段时，可以使用（类名+方法名） / （包名+方法名）的组合，可以清晰地区分来源。并且可以灵活地增加新的渠道/动作。</li>
@@ -3778,7 +3792,7 @@ OAuth2.0 协议来实现多渠道认证。
     <title type="text">一致性Hash算法</title>
     <id>https://ujava.cn/highfreq/hash.html</id>
     <link href="https://ujava.cn/highfreq/hash.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>在分布式系统中，数据的存储和访问是很重要的问题。为了提高系统的可用性和扩展性，常常需要将数据分布到不同的节点上，而且这些节点也可能会动态地加入或离开集群。一致性哈希算法就是一种常用的解决方案，它可以解决节点的动态变化和负载均衡的问题。</p>
 <p>本文将深入探讨一致性哈希算法的底层原理，包括其基本思想、关键步骤以及优缺点等，同时结合实际场景进行举例说明。</p>
@@ -3924,7 +3938,7 @@ OAuth2.0 协议来实现多渠道认证。
     <title type="text">系统设计原则</title>
     <id>https://ujava.cn/highfreq/design.html</id>
     <link href="https://ujava.cn/highfreq/design.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>好的系统是迭代出来的。先解决核心问题，预测未来可能出现的问题，对现有的问题有方案，对未来的问题有预案。不是一上来就按1亿用户量设计，也不要过度复杂化系统。</p>
 <p>业务千变万化，技术层出不穷，设计理念也是百花齐放，看起来似乎很难有一套通用的规范来适用所有的架构设计场景。但是总是有一些原则是可以通用的。</p>
@@ -4179,7 +4193,7 @@ Server发起了多少次http请求计算的，一次鼠标可能触发多个http
     <title type="text">设计时可使用的工具</title>
     <id>https://ujava.cn/highfreq/tool.html</id>
     <link href="https://ujava.cn/highfreq/tool.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h2> JUnit test</h2>
 <p>JUnit是一个用于编写和运行Java单元测试的框架。它提供了一组注解和断言方法，使得编写和执行单元测试变得更加简单和方便。JUnit可以帮助开发人员验证代码的正确性，捕获和修复潜在的缺陷，并确保代码在修改过程中不会破坏现有的功能。</p>
@@ -4294,7 +4308,7 @@ Memory Analyzer（MAT）等工具进行进一步的分析，而无需执行正�
     <title type="text">影响项目的要素及经验总结</title>
     <id>https://ujava.cn/highfreq/effect.html</id>
     <link href="https://ujava.cn/highfreq/effect.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>项目失败的因素主要分为以下几类</p>
 <h2> 技术原因</h2>
@@ -4369,7 +4383,7 @@ Memory Analyzer（MAT）等工具进行进一步的分析，而无需执行正�
     <title type="text">概要设计和详细设计</title>
     <id>https://ujava.cn/highfreq/summary.html</id>
     <link href="https://ujava.cn/highfreq/summary.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 概要设计和详细设计</h2>
 <p>在软件设计中，大家经常问到的一个问题是：概要设计应该怎样一个概要法，详细设计应该怎样一个详细法？</p>
 <p>一般公司的研发流程是瀑布型的，这个模型中的分析、设计阶段是基于经典的结构化方法。<br>
@@ -4522,7 +4536,7 @@ Memory Analyzer（MAT）等工具进行进一步的分析，而无需执行正�
     <title type="text">设计原理:六大设计原则</title>
     <id>https://ujava.cn/principle/theory.html</id>
     <link href="https://ujava.cn/principle/theory.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h2> 一、单一职责原则</h2>
 <p>单一职责原则：英文名称是Single Responsiblity Principle，简称是SRP。定义：应该有且仅有一个原因引起类的变更。</p>
@@ -4728,7 +4742,7 @@ variations），找出预计有变化或不稳定的点，我们为这些变化�
     <title type="text">设计考量</title>
     <id>https://ujava.cn/highfreq/consider.html</id>
     <link href="https://ujava.cn/highfreq/consider.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h2> 1、系统拆分</h2>
 <p>有句古话 “牵一发而动全身”。</p>
@@ -4891,7 +4905,7 @@ redis或zookeeper)<br>
     <title type="text">设计原理:UML图</title>
     <id>https://ujava.cn/principle/uml.html</id>
     <link href="https://ujava.cn/principle/uml.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>众所周知，软件开发是一个分阶段进行的过程。不同的开发阶段需要使用不同的模型图来描述业务场景和设计思路，在不同的阶段输出不同的设计文档也是必不可少的，例如，在需求分析阶段需要输出领域模型和业务模型，在架构阶段需要输出物理架构设计，在详细设计阶段需要输出数据库设计等。这样做可以更好地实践软件开发，并提高软件开发的实用性。</p>
 <p>软件建模与设计过程可以分为三个阶段：需求分析、架构设计和详细设计。在这三个阶段中，大量使用符合 UML 规范的模型图，其中常用的有<br>
@@ -4973,7 +4987,7 @@ UML 模型图本身并不难掌握，但如何在正确的场合下用适当的 
     <title type="text">设计算法:常见算法</title>
     <id>https://ujava.cn/algorithm/common.html</id>
     <link href="https://ujava.cn/algorithm/common.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 设计算法</h2>
 <h2> 1、递归与分治</h2>
 <p>1.1 递归算法：直接或者间接不断反复调用自身来达到解决问题的方法。这就要求原始问题可以分解成相同问题的子问题。</p>
@@ -5047,7 +5061,7 @@ UML 模型图本身并不难掌握，但如何在正确的场合下用适当的 
     <title type="text">第四梯队思想</title>
     <id>https://ujava.cn/mind/four.html</id>
     <link href="https://ujava.cn/mind/four.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h1> 第四梯队思想</h1>
 <h2> 1.面向过程编程</h2>
 <p>“面向过程”(Procedure Oriented)是一种以过程为中心的编程思想。这些都是以什么正在发生为目标进行编程，不同于面向对象的是谁在受影响。与面向对象明显的不同就是封装、继承、类。</p>
@@ -5104,7 +5118,7 @@ UML 模型图本身并不难掌握，但如何在正确的场合下用适当的 
     <title type="text">设计原理:回调</title>
     <id>https://ujava.cn/principle/callback.html</id>
     <link href="https://ujava.cn/principle/callback.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>回调是强大的编程模式之一。 它可以实现调用反转，在子函数中调用高层的函数（通常是由高层函数来调用底层的子函数），<br>
 获得更灵活的调用关系。通常用于框架、代码复用等场合。 在这里， 函数可以作为参数传入子函数，可以由子函数进行调用和返回。回调函数可以用<br>
@@ -5146,7 +5160,7 @@ B 函数的调用称为回调。</p>
     <title type="text">设计原理:基本陷阱、原理及解决方案</title>
     <id>https://ujava.cn/principle/concurrency-faq.html</id>
     <link href="https://ujava.cn/principle/concurrency-faq.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>为什么要使用并发 ？ 有三点足够信服的理由：</p>
 <p>性能提升。单核 CPU 的性能基本抵达瓶颈，充分挖掘多核 CPU 的能力，使得性能提升变成水平可扩展的。<br>
@@ -5324,7 +5338,7 @@ t.join 方法来同步线程之间的活动，使主线程必须在所有子线�
     <title type="text">设计原理:对象与并发</title>
     <id>https://ujava.cn/principle/obj.html</id>
     <link href="https://ujava.cn/principle/obj.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>具备一些基本必要的思想是重要的。这些思想会影响我们的思考方式，以及设计和编写程序的决策。</p>
 <ol>
@@ -5430,7 +5444,7 @@ Java 的线程类， 或者 Linux 系统的进程函数 fork 。<br>
     <title type="text">设计原理:并发</title>
     <id>https://ujava.cn/principle/concurrency.html</id>
     <link href="https://ujava.cn/principle/concurrency.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>并发，就是在同一时间段内有多个任务同时进行着。这些任务或者互不影响互不干扰，或者共同协作来完成一个更大的任务。</p>
 <p>比如我在做项目 A，修改工程 a ; 你在做项目 B, 修改工程 b 。我们各自做完自己的项目后上线。我和你做的事情就是并发的。如果我和你修改同一个工程，就可能需要协调处理冲突。并发是一种高效的运作方式，但往往也要处理并发带来的冲突和协作。</p>
@@ -5666,7 +5680,7 @@ ConcurrentHashMap 体现了一些提升并发性能的技巧：减少串行化�
     <title type="text">设计数据库索引</title>
     <id>https://ujava.cn/highfreq/databaseindex.html</id>
     <link href="https://ujava.cn/highfreq/databaseindex.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>建立最优的数据库索引是提升数据库查询性能的重要手段。在某种意义上，索引就是磁盘记录在内存中的缓存。索引要做的事情，就是快速找到匹配条件的记录行，并尽可能减少磁盘读写次数。本文总结数据库索引相关的知识及实践。</p>
 <h2> 基本知识</h2>
@@ -5781,7 +5795,7 @@ SET @@optimizer_switch='mrr=on,mrr_cost_based=on';</p>
     <title type="text">设计容错</title>
     <id>https://ujava.cn/highfreq/faulttolerant.html</id>
     <link href="https://ujava.cn/highfreq/faulttolerant.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>在某种程度上来说，软件的复杂性是应对无处不在的错误所带来的。要想在不可靠的硬件、软件和网络的基础上构建可靠的系统，容错是必不可少的。</p>
 <h2> 错误源</h2>
@@ -5943,7 +5957,7 @@ MySQL 来完成、需要测试恢复；物理备份通常是不可读的二进�
     <title type="text">设计框架</title>
     <id>https://ujava.cn/framework/</id>
     <link href="https://ujava.cn/framework/"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 设计框架</h2>
 <p>列举常见的设计框架等</p>
 ]]></summary>
@@ -5957,7 +5971,7 @@ MySQL 来完成、需要测试恢复；物理备份通常是不可读的二进�
     <title type="text">DDD框架</title>
     <id>https://ujava.cn/framework/ddd.html</id>
     <link href="https://ujava.cn/framework/ddd.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>领域驱动设计是Eric Evans在2004年发表的Domain Driven Design（领域驱动设计，DDD)著作中提出的一种从系统分析到软件建模的一套方法论。以领域为核心驱动力的设计体系。</p>
 <p>从领域驱动定义来看，领域驱动设计-软件核心复杂性应对之道，从Eric 定义中可以看出，领域驱动设计是为了解决复杂的软件设计，而且只是解决软件复杂性的一种方式，并不是唯一选择。另外不是所有的业务服务都合适做DDD架构，DDD适合产品化，可持续迭代，业务逻辑足够复杂的业务系统，对于系统初期业务逻辑相对比较简单的应用，传统MVC架构更具有优势，可以减少一部分认知成本与开发成本。而且领域驱动设计并不是万金油，只是解决复杂软件的一种方案，领域驱动设计本身只提供了理论思想，具体的落地方案一定是结合具体的业务场景实现的。目前市面上也有很多依据领域驱动思想落地的开源框架可以参考。</p>]]></summary>
@@ -5984,7 +5998,7 @@ MySQL 来完成、需要测试恢复；物理备份通常是不可读的二进�
     <title type="text">MVC框架</title>
     <id>https://ujava.cn/framework/mvc.html</id>
     <link href="https://ujava.cn/framework/mvc.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>MVC是三个单词的首字母缩写，它们是Model（模型）、View（视图）和Controller（控制）。</p>
 <h4> 1、视图</h4>
@@ -6042,7 +6056,7 @@ Model)处理。比如一个订单的视图只接受来自模型的数据并显�
     <title type="text">MVVM框架</title>
     <id>https://ujava.cn/framework/mvvm.html</id>
     <link href="https://ujava.cn/framework/mvvm.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>MVVM是Model-View-ViewModel的简写，它本质上是MVC的改进版。MVVM（Model-View-ViewModel）框架的由来是MVP（Model-View-Presenter）模式与WPF结合的应用方式时发展演变过来的一种新型架构框架。</p>
 <p>MVVM是一种用于构建用户界面的软件架构模式，它的名称代表着三个组成部分：Model（模型）、View（视图）和ViewModel（视图模型）。MVVM的主要目标是将应用程序的UI与其底层数据模型分离，通过数据绑定实现数据和UI的自动同步，从而降低代码的耦合度，提高应用程序的可维护性和可测试性。</p>]]></summary>
@@ -6133,7 +6147,7 @@ Blend可以很容易设计界面并生成xml代码</li>
     <title type="text">响应式编程/反应式编程</title>
     <id>https://ujava.cn/framework/responsive.html</id>
     <link href="https://ujava.cn/framework/responsive.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>响应式编程是一种面向数据流和变化传播的编程范式。这意味着可以在编程语言中很方便地表达静态或动态的数据流，而相关的计算模型会自动将变化的值通过数据流进行传播。</p>
 <p>在开发应⽤程序代码时，我们可以编写两种⻛格的代码，即命令式和响应式。</p>
@@ -6156,7 +6170,7 @@ Blend可以很容易设计界面并生成xml代码</li>
     <title type="text">设计高频</title>
     <id>https://ujava.cn/highfreq/</id>
     <link href="https://ujava.cn/highfreq/"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 设计高频</h2>
 <p>列举常见的设计高频等</p>
 ]]></summary>
@@ -6170,7 +6184,7 @@ Blend可以很容易设计界面并生成xml代码</li>
     <title type="text">设计缓存</title>
     <id>https://ujava.cn/highfreq/cache.html</id>
     <link href="https://ujava.cn/highfreq/cache.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>实际应用中，一些数据在短期内会反复多次访问。比如循环访问、热点畅销商品、爆热优惠活动。在一次下单中，提交中的订单基本信息会被反复访问、刚创建的订单很快会被查询多次。</p>
 <p>数据在短期内被反复访问的场景下，缓存可用来提升查询性能。缓存是用一个小而快的存储来存放一个大而慢的存储的数据子集，在查询时通过缓存命中而提升性能。缓存是最基本的计算思想之一。在计算机系统的各个层次结构上，缓存无处不在。</p>
@@ -6480,7 +6494,7 @@ DefaultSingletonBeanRegistry 中的 singletonObjects 单例缓存，可用来解
     <title type="text">设计原理:定时器</title>
     <id>https://ujava.cn/principle/nine.html</id>
     <link href="https://ujava.cn/principle/nine.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>从单机角度，定时任务实现主要有以下 3 种方案：</p>
 <ul>
@@ -6635,7 +6649,7 @@ TimerThread其实就是一个任务调度线程，首先从TaskQueue里面获取
     <title type="text">设计原理:代码可复用性问题兼谈团队协作</title>
     <id>https://ujava.cn/principle/eight.html</id>
     <link href="https://ujava.cn/principle/eight.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>工作了一两年的软件工程师，大概没有不听说过“可复用性”的概念。可复用性可以从两个视角来体现：</p>
 <ul>
@@ -6813,7 +6827,7 @@ Service 里，因为 Controller 和 Dao 的职责比较固定，逻辑也偏少�
     <title type="text">设计原理:如何表达和维护大型逻辑</title>
     <id>https://ujava.cn/principle/seven.html</id>
     <link href="https://ujava.cn/principle/seven.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>让我们暂时撇开平台、框架、技术、设计模式、对象思想、敏捷开发论等。 追问程序本质。</p>
 <p>从本质上来说， 程序就是一系列有序执行的指令集合。 如何将指令集合组织成可靠可用可信赖的软件（美妙的逻辑之塔）， 这是个问题。</p>
@@ -6964,7 +6978,7 @@ B 都修改某个资源的状态。 接口 A 在做某项操作执行必须执�
     <title type="text">设计原理:架构模式</title>
     <id>https://ujava.cn/principle/six.html</id>
     <link href="https://ujava.cn/principle/six.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>架构模式是系统组件及组件交互的模式，决定了处理数据和领域对象的全局控制结构。组件化是使用架构模式的前提。</p>
 <h2> 模式清单</h2>
@@ -7007,7 +7021,7 @@ Eclipse, Emacs, Firefox, Chrome 等。</p>
     <title type="text">设计原理:从指令到软件</title>
     <id>https://ujava.cn/principle/five.html</id>
     <link href="https://ujava.cn/principle/five.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>软件的构造，本质上就是组件与组合。组件是实现了特定功能的逻辑单元（程序），组合则是将“小组件集成为大组件，将大组件集成为整个应用系统”的联结方式。只要学过编程语言的人，大抵是会构造或大或小的组件的，那么组合结构就决定了程序是如何构成或优雅或拙劣的软件的。本文想探讨下软件是如何组合起来的。</p>
 <h2> 路线图</h2>
@@ -7104,7 +7118,7 @@ Eclipse, Emacs, Firefox, Chrome 等。</p>
     <title type="text">设计原理</title>
     <id>https://ujava.cn/principle/</id>
     <link href="https://ujava.cn/principle/"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 设计原理</h2>
 ]]></summary>
     <content type="html"><![CDATA[<h2> 设计原理</h2>
@@ -7116,7 +7130,7 @@ Eclipse, Emacs, Firefox, Chrome 等。</p>
     <title type="text">第一性原理:结构化抽象</title>
     <id>https://ujava.cn/principle/first.html</id>
     <link href="https://ujava.cn/principle/first.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>软件设计的第一性原理，是结构化抽象。术生于道，技术生于原理。</p>
 </blockquote>
@@ -7264,7 +7278,7 @@ API 调用的例子。 可以测量这个 API 的平均耗时，耗时分布，�
     <title type="text">设计原理:编程概要</title>
     <id>https://ujava.cn/principle/four.html</id>
     <link href="https://ujava.cn/principle/four.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <h4> 0与1</h4>
 <p>在可预见的很长一段时间，计算世界仍然是由 0 和 1 组成的。 无论是字母、数字、图表、网页、动画、超酷炫的特效等，在计算底层看来，都是流畅的一系列01数字串，就像硬件只会看到一团极其壮丽的电子流一样。我们的旅程从这里出发。</p>
@@ -7515,7 +7529,7 @@ API 调用的例子。 可以测量这个 API 的平均耗时，耗时分布，�
     <title type="text">设计原理:抽象</title>
     <id>https://ujava.cn/principle/second.html</id>
     <link href="https://ujava.cn/principle/second.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 抽象（编程的实质）</h2>
 <p>抽象是针对问题的特征对现实事物的紧密相关的属性的提炼过程及结果。程序中弥漫着大大小小的抽象。 分页控件是对分页功能的抽象，<br>
 Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对底层多核处理器的抽象， 拦截器，回调函数， Socket , 管道， 消息，<br>
@@ -7567,7 +7581,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">设计原理:代码抽象与分层</title>
     <id>https://ujava.cn/principle/third.html</id>
     <link href="https://ujava.cn/principle/third.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>抽象与分层，是计算与程序世界里最根本的思想。逻辑之始。</p>
 </blockquote>
@@ -7806,7 +7820,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">第一梯队思想</title>
     <id>https://ujava.cn/mind/first.html</id>
     <link href="https://ujava.cn/mind/first.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h1> 第一梯队思想</h1>
 <p>第一梯队思想，是计算机编程领域最为核心而根本的思想。因其威力强大，且无处不在，简直是天神般的存在。</p>
 <h2> 编程</h2>
@@ -7923,7 +7937,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">第二梯队思想</title>
     <id>https://ujava.cn/mind/second.html</id>
     <link href="https://ujava.cn/mind/second.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h1> 第二梯队思想</h1>
 <p>第二梯队思想，虽然不如第一梯队思想那么通用广泛，却也是编程领域的重要思想，有着举足轻重的地位。</p>
 <h2> 递归</h2>
@@ -7973,7 +7987,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">第三梯队思想</title>
     <id>https://ujava.cn/mind/third.html</id>
     <link href="https://ujava.cn/mind/third.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h1> 第三梯队思想</h1>
 <p>第三梯队思想，是程序执行流程的高层构建块，能够用来构建灵活而强大的指令流程。</p>
 <h2> 管道</h2>
@@ -8040,7 +8054,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">快速上手</title>
     <id>https://ujava.cn/required/</id>
     <link href="https://ujava.cn/required/"/>
-    <updated>2024-03-01T07:37:58.000Z</updated>
+    <updated>2024-03-03T03:06:41.000Z</updated>
     <summary type="text">必读章节 常见问题 (faq.md); 网站历史 (history.md);</summary>
     <category term="快速上手"/>
     <category term="基础知识"/>
@@ -8050,7 +8064,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">设计规范</title>
     <id>https://ujava.cn/standard/design.html</id>
     <link href="https://ujava.cn/standard/design.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h4> 1.【强制】存储方案和底层数据结构的设计获得评审一致通过，并沉淀成为文档。</h4>
 <p>说明：有缺陷的底层数据结构容易导致系统风险上升，可扩展性下降，重构成本也会因历史数据迁移和系统平滑过渡而陡然增加，所以，存储方案和数据结构需要认真地进行设计和评审，生产环境提交执行后，需要进行 double check。</p>
 <p>正例：评审内容包括存储介质选型、表结构设计能否满足技术方案、存取性能和存储空间能否满足业务发展、表或字段之间的辩证关系、字段名称、字段类型、索引等；数据结构变更（如在原有表中新增字段）也需要在评审通过后上线。</p>
@@ -8120,7 +8134,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">码值规范</title>
     <id>https://ujava.cn/standard/errorcode.html</id>
     <link href="https://ujava.cn/standard/errorcode.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> 用户类</h2>
 <table>
 <thead>
@@ -9647,7 +9661,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">名词规范</title>
     <id>https://ujava.cn/standard/noun.html</id>
     <link href="https://ujava.cn/standard/noun.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h4> 1. POJO（Plain Ordinary Java Object）：在本规约中，POJO 专指只有 setter / getter / toString 的简单类，包括DO / DTO / BO / VO 等。</h4>
 <h4> 2. DO（Data Object）：阿里巴巴专指数据库表一 一对应的 POJO 类。此对象与数据库表结构一 一对应，通过 DAO 层向上传输数据源对象。</h4>
 <h4> 3. PO（Persistent Object）：也指数据库表一 一对应的 POJO 类。此对象与数据库表结构一 一对应，通过 DAO 层向上传输数据源对象。</h4>
@@ -9679,7 +9693,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">工程规范</title>
     <id>https://ujava.cn/standard/project.html</id>
     <link href="https://ujava.cn/standard/project.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> (一) 应用分层</h2>
 <h4> 1.【推荐】根据业务架构实践，结合业界分层规范与流行技术框架分析，推荐分层结构如图所示，默认上层依赖于下层，箭头关系表示可直接依赖，如：开放 API 层可以依赖于 Web 层（Controller 层），也可以直接依赖于 Service 层，依此类推：</h4>
 <figure><figcaption>img.png</figcaption></figure>
@@ -9840,7 +9854,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">库表规范</title>
     <id>https://ujava.cn/standard/database.html</id>
     <link href="https://ujava.cn/standard/database.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h2> (一) 建表规约</h2>
 <h4> 1.【强制】表达是与否概念的字段，必须使用 is_xxx 的方式命名，数据类型是 unsigned tinyint（1 表示是，0 表示否）。</h4>
 <p>注意：POJO 类中的任何布尔类型的变量，都不要加 is 前缀，所以，需要在设置从 is_xxx 到 Xxx 的映射关系。数据库表示是与否的值，使用 tinyint 类型，坚持 is_xxx 的命名方式是为了明确其取值含义与取值范围。</p>
@@ -10038,7 +10052,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">安全规范</title>
     <id>https://ujava.cn/standard/security.html</id>
     <link href="https://ujava.cn/standard/security.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h4> 1.【强制】隶属于用户个人的页面或者功能必须进行权限控制校验。</h4>
 <p>说明：防止没有做水平权限校验就可随意访问、修改、删除别人的数据，比如查看他人的私信内容。</p>
 <h4> 2.【强制】用户敏感数据禁止直接展示，必须对展示数据进行脱敏。</h4>
@@ -10082,7 +10096,7 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
     <title type="text">测试规范</title>
     <id>https://ujava.cn/standard/unit.html</id>
     <link href="https://ujava.cn/standard/unit.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
+    <updated>2024-03-03T03:00:03.000Z</updated>
     <summary type="html"><![CDATA[<h4> 1.【强制】好的单元测试必须遵守 AIR 原则。</h4>
 <p>说明：单元测试在线上运行时，感觉像空气（AIR）一样感觉不到，但在测试质量的保障上，却是非常关键的。好的单元测试宏观上来说，具有自动化、独立性、可重复执行的特点。</p>
 <ul>
@@ -10144,136 +10158,5 @@ Extjs 中 store 是对组件的数据管理者的抽象， Java 并发库是对�
 ]]></content>
     <category term="设计规范"/>
     <published>2023-10-18T07:40:27.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">异常规范</title>
-    <id>https://ujava.cn/standard/exception.html</id>
-    <link href="https://ujava.cn/standard/exception.html"/>
-    <updated>2024-03-01T03:13:51.000Z</updated>
-    <summary type="html"><![CDATA[<h2> (一)、错误码</h2>
-<h4> 1.【强制】错误码的制定原则：快速溯源、沟通标准化。</h4>
-<p>说明：错误码想得过于完美和复杂，就像康熙字典的生僻字一样，用词似乎精准，但是字典不容易随身携带且简单易懂。</p>
-<p>正例：错误码回答的问题是谁的错？错在哪？</p>
-<ul>
-<li>1）错误码必须能够快速知晓错误来源，可快速判断是谁的问题。</li>
-<li>2）错误码必须能够进行清晰地比对（代码中容易 equals）。</li>
-<li>3）错误码有利于团队快速对错误原因达到一致认知。</li>
-</ul>
-<h4> 2.【强制】错误码不体现版本号和错误等级信息。</h4>]]></summary>
-    <content type="html"><![CDATA[<h2> (一)、错误码</h2>
-<h4> 1.【强制】错误码的制定原则：快速溯源、沟通标准化。</h4>
-<p>说明：错误码想得过于完美和复杂，就像康熙字典的生僻字一样，用词似乎精准，但是字典不容易随身携带且简单易懂。</p>
-<p>正例：错误码回答的问题是谁的错？错在哪？</p>
-<ul>
-<li>1）错误码必须能够快速知晓错误来源，可快速判断是谁的问题。</li>
-<li>2）错误码必须能够进行清晰地比对（代码中容易 equals）。</li>
-<li>3）错误码有利于团队快速对错误原因达到一致认知。</li>
-</ul>
-<h4> 2.【强制】错误码不体现版本号和错误等级信息。</h4>
-<p>说明：错误码以不断追加的方式进行兼容。错误等级由日志和错误码本身的释义来决定。</p>
-<h4> 3.【强制】全部正常，但不得不填充错误码时返回五个零：00000。</h4>
-<h4> 4.【强制】错误码为字符串类型，共 5 位，分成两个部分：错误产生来源+四位数字编号。</h4>
-<p>说明：错误产生来源分为 <code>A/B/C</code>，</p>
-<ul>
-<li>A 表示错误来源于用户，比如参数错误，用户安装版本过低，用户支付超时等问题；</li>
-<li>B 表示错误来源于当前系统，往往是业务逻辑出错，或程序健壮性差等问题；</li>
-<li>C 表示错误来源于第三方服务，比如 CDN 服务出错，消息投递超时等问题；四位数字编号从 0001 到 9999，大类之间的步长间距预留 100。</li>
-</ul>
-<h4> 5.【强制】编号不与公司业务架构，更不与组织架构挂钩，以先到先得的原则在统一平台上进行，审批生效，编号即被永久固定。</h4>
-<h4> 6.【强制】错误码使用者避免随意定义新的错误码。</h4>
-<p>说明：尽可能在原有错误码附表中找到语义相同或者相近的错误码在代码中使用即可。</p>
-<h4> 7.【强制】错误码不能直接输出给用户作为提示信息使用。</h4>
-<p>说明：堆栈（stack_trace）、错误信息(error_message) 、错误码（error_code）、提示信息（user_tip）是一个有效关联并互相转义的和谐整体，但是请勿互相越俎代庖。</p>
-<h4> 8.【推荐】错误码之外的业务信息由 error_message 来承载，而不是让错误码本身涵盖过多具体业务属性。</h4>
-<h4> 9.【推荐】在获取第三方服务错误码时，向上抛出允许本系统转义，由 C 转为 B，并且在错误信息上带上原有的第三方错误码。</h4>
-<h4> 10.【参考】错误码分为一级宏观错误码、二级宏观错误码、三级宏观错误码。</h4>
-<p>说明：在无法更加具体确定的错误场景中，可以直接使用一级宏观错误码，分别是：A0001（用户端错误）、B0001（系统执行出错）、C0001（调用第三方服务出错）。</p>
-<p>正例：调用第三方服务出错是一级，中间件错误是二级，消息服务出错是三级。</p>
-<h4> 11.【参考】错误码的后三位编号与 HTTP 状态码没有任何关系。</h4>
-<h4> 12.【参考】错误码有利于不同文化背景的开发者进行交流与代码协作。</h4>
-<p>说明：英文单词形式的错误码不利于非英语母语国家（如阿拉伯语、希伯来语、俄罗斯语等）之间的开发者互相协作。</p>
-<h4> 13.【参考】错误码即人性，感性认知+口口相传，使用纯数字来进行错误码编排不利于感性记忆和分类。</h4>
-<p>说明：数字是一个整体，每位数字的地位和含义是相同的。</p>
-<p>反例：一个五位数字 12345，第 1 位是错误等级，第 2 位是错误来源，345 是编号，人的大脑不会主动地拆开并分辨每位数字的不同含义。</p>
-<h2> (二)、异常处理</h2>
-<h4> 1.【强制】Java 类库中定义的可以通过预检查方式规避的 RuntimeException 异常不应该通过 catch 的方式来处理，比如：NullPointerException，IndexOutOfBoundsException 等等。</h4>
-<p>说明：无法通过预检查的异常除外，比如，在解析字符串形式的数字时，可能存在数字格式错误，不得不通过 catch NumberFormatException 来实现。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 2.【强制】异常捕获后不要用来做流程控制，条件控制。</h4>
-<p>说明：异常设计的初衷是解决程序运行中的各种意外情况，且异常的处理效率比条件判断方式要低很多。</p>
-<h4> 3.【强制】catch 时请分清稳定代码和非稳定代码，稳定代码指的是无论如何不会出错的代码。对于非稳定代码的 catch 尽可能进行区分异常类型，再做对应的异常处理。</h4>
-<p>说明：对大段代码进行 try-catch，使程序无法根据不同的异常做出正确的应激反应，也不利于定位问题，这是一种不负责任的表现。</p>
-<p>正例：用户注册的场景中，如果用户输入非法字符，或用户名称已存在，或用户输入密码过于简单，在程序上作出分门别类的判断，并提示给用户。</p>
-<h4> 4.【强制】捕获异常是为了处理它，不要捕获了却什么都不处理而抛弃之，如果不想处理它，请将该异常抛给它的调用者。最外层的业务使用者，必须处理异常，将其转化为用户可以理解的内容。</h4>
-<h4> 5.【强制】事务场景中，抛出异常被 catch 后，如果需要回滚，一定要注意手动回滚事务。</h4>
-<h4> 6.【强制】finally 块必须对资源对象、流对象进行关闭，有异常也要做 try-catch。</h4>
-<p>说明：如果 JDK7，可以使用 try-with-resources 方式。</p>
-<h4> 7.【强制】不要在 finally 块中使用 return</h4>
-<p>说明：try 块中的 return 语句执行成功后，并不马上返回，而是继续执行 finally 块中的语句，如果此处存在 return 语句， 则会在此直接返回，无情丢弃掉 try 块中的返回点。</p>
-<p>反例：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 8.【强制】捕获异常与抛异常，必须是完全匹配，或者捕获异常是抛异常的父类。</h4>
-<p>说明：如果预期对方抛的是绣球，实际接到的是铅球，就会产生意外情况。</p>
-<h4> 9.【强制】在调用 RPC、二方包、或动态生成类的相关方法时，捕捉异常使用 Throwable 类进行拦截。</h4>
-<p>说明：通过反射机制来调用方法，如果找不到方法，抛出 NoSuchMethodException。什么情况会抛出NoSuchMethodError 呢？二方包在类冲突时，仲裁机制可能导致引入非预期的版本使类的方法签名不匹配，或者在字节码修改框架（比如：ASM）动态创建或修改类时，修改了相应的方法签名。这些情况，即使代码编译期是正确的，但在代码运行期时，会抛出 NoSuchMethodError。</p>
-<p>反例：足迹服务引入了高版本的 spring，导致运行到某段核心逻辑时，抛出 NoSuchMethodError 错误，catch 用的 类却是 Exception，堆栈向上抛，影响到上层业务。这是一个非核心功能点影响到核心应用的典型反例。</p>
-<h4> 10.【推荐】方法的返回值可以为 null，不强制返回空集合，或者空对象等，必须添加注释充分说明什么情况下会返回 null 值。</h4>
-<p>说明：本规约明确防止 NPE 是调用者的责任。即使被调用方法返回空集合或者空对象，对调用者来说，也并非高枕无忧，必须考虑到远程调用失败，运行时异常等场景返回 null 的情况。</p>
-<h4> 11.【推荐】防止 NPE，是程序员的基本修养，注意 NPE 产生的场景：</h4>
-<ul>
-<li>1）返回类型为基本数据类型，return 包装数据类型的对象时，自动拆箱有可能产生 NPE<br>
-反例：</li>
-</ul>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul>
-<li>2）数据库的查询结果可能为 null。</li>
-<li>3）集合里的元素即使 isNotEmpty，取出的数据元素也可能为 null。</li>
-<li>4）远程调用返回对象时，一律要求进行空指针判断，防止 NPE。</li>
-<li>5）对于 Session 中获取的数据，建议进行 NPE 检查，避免空指针。</li>
-<li>6）级联调用 obj.getA().getB().getC()；一连串调用，易产生 NPE。</li>
-</ul>
-<p>正例：使用 JDK8 的 Optional 类来防止 NPE 问题。</p>
-<h4> 12.【推荐】定义时区分 <code>unchecked / checked</code> 异常，避免直接抛出 new RuntimeException()，更不允许</h4>
-<p>抛出 Exception 或者 Throwable，应使用有业务含义的自定义异常。推荐业界已定义过的自定义异常，如：<code>DAOException / ServiceException </code>等。</p>
-<h4> 13.【参考】对于公司外的 <code>http / api</code> 开放接口必须使用错误码，而应用内部推荐异常抛出；跨应用间RPC 调用优先考虑使用 Result 方式，封装 isSuccess() 方法、错误码、错误简短信息；应用内部推荐异常抛出。</h4>
-<p>说明：关于 RPC 方法返回方式使用 Result 方式的理由：</p>
-<ul>
-<li>1）使用抛异常返回方式，调用方如果没有捕获到就会产生运行时错误。</li>
-<li>2）如果不加栈信息，只是 new 自定义异常，加入自己的理解的 error message，对于调用端解决问题的帮助不会太多。<br>
-如果加了栈信息，在频繁调用出错的情况下，数据序列化和传输的性能损耗也是问题。</li>
-</ul>
-<h2> (三)、日志规约</h2>
-<h4> 1.【强制】应用中不可直接使用日志系统（Log4j、Logback）中的 API，而应依赖使用日志框架（SLF4J、JCL—Jakarta Commons Logging）中的 API，使用门面模式的日志框架，有利于维护和各个类的日志处理方式统一。</h4>
-<p>说明：日志框架（SLF4J、JCL--Jakarta Commons Logging）的使用方式（推荐使用 SLF4J），使用 SLF4J：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 2.【强制】日志文件至少保存 15 天，因为有些异常具备以“周”为频次发生的特点。对于当天日志，以 “应用名.log”来保存，保存在<code>/{统一目录}/{应用名}/logs/目录</code>下，过往日志格式为：{logname}.log.{保存日期}，日期格式：yyyy-MM-dd</h4>
-<p>正例：以 mppserver 应用为例，日志保存<code>/home/admin/mppserver/logs/mppserver.log</code>，历史日志名称为 mppserver.log.2021-11-28</p>
-<h4> 3.【强制】根据国家法律，网络运行状态、网络安全事件、个人敏感信息操作等相关记录，留存的日志不少于六个月，并且进行网络多机备份。</h4>
-<h4> 4.【强制】应用中的扩展日志（如打点、临时监控、访问日志等）命名方式：</h4>
-<p>appName_logType_logName.log。logType：日志类型，如 <code>stats / monitor / access</code> 等；</p>
-<p>logName：日志描述。这种命名的好处：通过文件名就可知道日志文件属于什么应用，什么类型，什么目的，也有利于归类查找。</p>
-<p>说明：推荐对日志进行分类，将错误日志和业务日志分开放，便于开发人员查看，也便于通过日志对系统进行及时监控。</p>
-<p>正例：mppserver 应用中单独监控时区转换异常，如：mppserver_monitor_timeZoneConvert.log</p>
-<h4> 5.【强制】在日志输出时，字符串变量之间的拼接使用占位符的方式。</h4>
-<p>说明：因为 String 字符串的拼接会使用 StringBuilder 的 append() 方式，有一定的性能损耗。使用占位符仅是替换动作，可以有效提升性能。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4> 6.【强制】对于 <code>trace / debug / info</code> 级别的日志输出，必须进行日志级别的开关判断：</h4>
-<p>说明：虽然在 debug(参数) 的方法体内第一行代码 isDisabled(Level.DEBUG_INT) 为真时（Slf4j 的常见实现 Log4j 和Logback），就直接 return，但是参数可能会进行字符串拼接运算。此外，如果 debug(getName()) 这种参数内有getName() 方法调用，无谓浪费方法调用的开销。</p>
-<p>正例：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 7.【强制】避免重复打印日志，浪费磁盘空间，务必在日志配置文件中设置 additivity=false</h4>
-<p>正例：<code>&lt;logger name="com.taobao.dubbo.config" additivity="false"&gt;&lt;/logger&gt;</code></p>
-<h4> 8.【强制】生产环境禁止使用 System.out 或 System.err 输出或使用 e.printStackTrace() 打印异常堆栈。</h4>
-<p>说明：标准日志输出与标准错误输出文件每次 Jboss 重启时才滚动，如果大量输出送往这两个文件，容易造成文件大小超过操作系统大小限制。</p>
-<h4> 9.【强制】异常信息应该包括两类信息：案发现场信息和异常堆栈信息。如果不处理，那么通过关键字throws 往上抛出。</h4>
-<p>正例：logger.error("inputParams: {} and errorMessage: {}", 各类参数或者对象 toString(), e.getMessage(), e);</p>
-<h4> 10.【强制】日志打印时禁止直接用 JSON 工具将对象转换成 String。</h4>
-<p>说明：如果对象里某些 get 方法被覆写，存在抛出异常的情况，则可能会因为打印日志而影响正常业务流程的执行。</p>
-<p>正例：打印日志时仅打印出业务相关属性值或者调用其对象的 toString() 方法。</p>
-<h4> 11.【推荐】谨慎地记录日志。生产环境禁止输出 debug 日志；有选择地输出 info 日志；如果使用 warn来记录刚上线时的业务行为信息，一定要注意日志输出量的问题，避免把服务器磁盘撑爆，并记得及时删除这些观察日志。</h4>
-<p>说明：大量地输出无效日志，不利于系统性能提升，也不利于快速定位错误点。记录日志时请思考：这些日志真的有人看吗？看到这条日志你能做什么？能不能给问题排查带来好处？</p>
-<h4> 12.【推荐】可以使用 warn 日志级别来记录用户输入参数错误的情况，避免用户投诉时，无所适从。如非必要，请不要在此场景打出 error 级别，避免频繁报警。</h4>
-<p>说明：注意日志输出的级别，error 级别只记录系统逻辑出错、异常或者重要的错误信息。</p>
-<h4> 13.【推荐】尽量用英文来描述日志错误信息，如果日志中的错误信息用英文描述不清楚的话使用中文描述即可，否则容易产生歧义。</h4>
-<p>说明：国际化团队或海外部署的服务器由于字符集问题，使用全英文来注释和描述日志错误信息。</p>
-<h4> 14.【推荐】为了保护用户隐私，日志文件中的用户敏感信息需要进行脱敏处理。</h4>
-<p>说明：日志排查问题时，推荐使用订单号、UUID 之类的唯一编号进行查询。</p>
-]]></content>
-    <category term="设计规范"/>
-    <published>2023-10-16T12:01:48.000Z</published>
   </entry>
 </feed>
