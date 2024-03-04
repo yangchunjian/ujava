@@ -22,7 +22,7 @@ icon: laptop-code
 
 <!-- @include: ../README.md -->
 
-@tab 英文文档
+@tab 英文文档#english
 <!-- @include: ../README-EN.md -->
 
 :::
