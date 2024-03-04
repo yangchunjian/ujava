@@ -13,8 +13,12 @@ export default sidebar({
             text: "必读",
             icon: "star",
             collapsible: true,
-            prefix: "required/",
-            children: "structure",
+            children: [
+                "/required/README",
+                "/home",
+                "/required/faq",
+                "/required/history",
+            ],
         },
         {
             text: "设计思想",

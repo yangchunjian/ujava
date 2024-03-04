@@ -1,11 +1,11 @@
 ---
-title: UJava（架构设计）
+title: 项目介绍
 icon: laptop-code
 ---
 
 ::: tip 友情提示
 
-架构设计持续更新中~
+UJava(架构设计)持续更新中~
 :::
 
 <div align="center">

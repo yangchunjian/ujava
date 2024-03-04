@@ -11,7 +11,7 @@ category:
 ---
 
 <VPBanner
-    title="UJava"
+    title="UJava(架构设计)"
     content="如果您没有架构经验，可先从设计模式开始~"
     logo="./bg/light2.svg"
     :actions='[
@@ -25,7 +25,7 @@ category:
 
 ## 必读章节
 
-- [项目介绍](intro.md)
+- [项目介绍](/home/)
 
 - [常见问题](faq.md)
 
