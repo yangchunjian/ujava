@@ -1,3 +1,4 @@
+<div align="center">
 <p align="center">
 	<a href="https://ujava.cn/"><img src="https://cdn.jsdelivr.net/gh/yangchunjian/resources@0.0.1/logo.svg" width="45%"></a>
 
@@ -38,7 +39,7 @@
 		<img src="https://img.shields.io/github/stars/yangchunjian/ujava.svg?style=social" alt="github star"/>
 	</a>
 </p>
-
+</div>
 <br/>
 
 -------------------------------------------------------------------------------
