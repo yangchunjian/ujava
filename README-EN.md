@@ -48,7 +48,7 @@
 
 -------------------------------------------------------------------------------
 
-## 📚 brief introduction
+## 📚 Brief Introduction
 UJava is a feature rich and easy-to-use Java design pattern library designed to help developers quickly and conveniently use design patterns to complete various development tasks.
 It can meet various development needs.
 ### 🎁 The Origin of UJava Names
@@ -67,13 +67,13 @@ Provide the following components:
 |UJava common | General components|
 Each module can be introduced separately according to requirements, or all modules can be introduced through the 'uJava all' method.
 -------------------------------------------------------------------------------
-## 📝 document
+## 📝 Document
 [ 📘 Chinese document](https://www.ujava.cn/)
 [ 📙 Reference API](https://apidoc.gitee.com/yangchunjian/ujava)
 
 -------------------------------------------------------------------------------
 
-## 📦 install
+## 📦 Install
 ### 🍊 Maven
 Add the following content to the dependencies of pom.xml in the project:
 ```XML
