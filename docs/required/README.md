@@ -25,6 +25,8 @@ category:
 
 ## 必读章节
 
+- [项目介绍](intro.md)
+
 - [常见问题](faq.md)
 
 - [网站历史](history.md)
