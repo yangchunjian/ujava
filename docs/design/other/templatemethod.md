@@ -1,5 +1,5 @@
 ---
-title: 模版方法(Template method)模式
+title: 模版方法模式
 icon: laptop-code
 category:
   - 设计模式

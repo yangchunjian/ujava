@@ -1,5 +1,5 @@
 ---
-title: 读者容错(Tolerant Reader)模式
+title: 读者容错模式
 icon: laptop-code
 category:
   - 设计模式
