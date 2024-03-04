@@ -6,11 +6,30 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Mon, 04 Mar 2024 09:30:44 GMT</pubDate>
-    <lastBuildDate>Mon, 04 Mar 2024 09:30:44 GMT</lastBuildDate>
+    <pubDate>Mon, 04 Mar 2024 10:05:15 GMT</pubDate>
+    <lastBuildDate>Mon, 04 Mar 2024 10:05:15 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>必读</category>
     <category>设计模式</category>
+    <item>
+      <title>项目介绍</title>
+      <link>https://ujava.cn/required/intro.html</link>
+      <guid>https://ujava.cn/required/intro.html</guid>
+      <source url="https://ujava.cn/rss.xml">项目介绍</source>
+      <description>友情提示 架构设计持续更新中~ GitHub | Gitee</description>
+      <category>必读</category>
+      <pubDate>Mon, 04 Mar 2024 10:03:17 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="hint-container tip">
+<p class="hint-container-title">友情提示</p>
+<p>架构设计持续更新中~</p>
+</div>
+<div align="center">
+<p><a href="https://github.com/yangchunjian/ujava" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://gitee.com/yangchunjian/ujava" target="_blank" rel="noopener noreferrer">Gitee</a></p>
+</div>
+
+]]></content:encoded>
+    </item>
     <item>
       <title>反应器(Reactor)模式</title>
       <link>https://ujava.cn/design/other/reactor.html</link>
@@ -1289,18 +1308,6 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
       <pubDate>Thu, 29 Feb 2024 06:34:22 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 概述</h2>
 <p>转换器(Converter)模式是一种行为设计模式，它允许在相应类型（例如DTO和逻辑同构类型的域表示）之间进行双向转换的通用方式。此外，该模式还引入了一种在类型之间转换对象集合的通用方法。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>命令查询职责分离(CQRS)模式</title>
-      <link>https://ujava.cn/design/other/cqrs.html</link>
-      <guid>https://ujava.cn/design/other/cqrs.html</guid>
-      <source url="https://ujava.cn/rss.xml">命令查询职责分离(CQRS)模式</source>
-      <description>概述 CQRS：命令查询职责分离。一种用于将查询服务与命令或写入服务分离的模式。这个模式很简单，但有很多后果。例如，它可以用于处理复杂的域，或者使用其他难以用经典方式实现的体系结构。</description>
-      <category>设计模式</category>
-      <pubDate>Thu, 29 Feb 2024 06:34:22 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>CQRS：命令查询职责分离。一种用于将查询服务与命令或写入服务分离的模式。这个模式很简单，但有很多后果。例如，它可以用于处理复杂的域，或者使用其他难以用经典方式实现的体系结构。</p>
 ]]></content:encoded>
     </item>
   </channel>
