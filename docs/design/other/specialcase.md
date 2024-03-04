@@ -1,5 +1,5 @@
 ---
-title: 特殊例子(Special Case)模式
+title: 特殊例子模式
 icon: laptop-code
 category:
   - 设计模式

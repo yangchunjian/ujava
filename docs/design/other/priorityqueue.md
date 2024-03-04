@@ -1,5 +1,5 @@
 ---
-title: 优先级队列(Priority Queue)模式
+title: 优先级队列模式
 icon: laptop-code
 category:
   - 设计模式

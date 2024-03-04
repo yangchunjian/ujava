@@ -1,5 +1,5 @@
 ---
-title: 资源获取即初始化(Resource Acquisition Is Initialization)模式
+title: 资源获取即初始化模式
 icon: laptop-code
 category:
   - 设计模式

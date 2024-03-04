@@ -1,5 +1,5 @@
 ---
-title: 对象池(Object Pool)模式
+title: 对象池模式
 icon: laptop-code
 category:
   - 设计模式

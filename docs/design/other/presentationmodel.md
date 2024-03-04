@@ -1,5 +1,5 @@
 ---
-title: 演示模型(Presentation Model)模式
+title: 演示模型模式
 icon: laptop-code
 category:
   - 设计模式

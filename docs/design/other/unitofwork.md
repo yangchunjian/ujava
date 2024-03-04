@@ -1,5 +1,5 @@
 ---
-title: 工作单元(Unit Of Work)模式
+title: 工作单元模式
 icon: laptop-code
 category:
   - 设计模式

@@ -1,5 +1,5 @@
 ---
-title: 更新方法(Update Method)模式
+title: 更新方法模式
 icon: laptop-code
 category:
   - 设计模式

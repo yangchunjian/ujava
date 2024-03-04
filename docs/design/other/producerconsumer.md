@@ -1,5 +1,5 @@
 ---
-title: 生产者消费者(Producer Consumer)模式
+title: 生产者消费者模式
 icon: laptop-code
 category:
   - 设计模式

@@ -1,5 +1,5 @@
 ---
-title: 事务脚本(Type-Object)模式
+title: 事务脚本模式
 icon: laptop-code
 category:
   - 设计模式

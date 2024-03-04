@@ -1,5 +1,5 @@
 ---
-title: 数据访问对象(DAO)模式
+title: 数据访问对象模式
 icon: laptop-code
 category:
 - 设计模式

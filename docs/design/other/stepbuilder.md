@@ -1,5 +1,5 @@
 ---
-title: 步骤建立者(Step Builder)模式
+title: 步骤建立者模式
 icon: laptop-code
 category:
   - 设计模式

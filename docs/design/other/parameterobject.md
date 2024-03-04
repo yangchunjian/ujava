@@ -1,5 +1,5 @@
 ---
-title: 参数对象(Parameter Object)模式
+title: 参数对象模式
 icon: laptop-code
 category:
   - 设计模式

@@ -1,5 +1,5 @@
 ---
-title: 分离接口(Separated Interface)模式
+title: 分离接口模式
 icon: laptop-code
 category:
   - 设计模式

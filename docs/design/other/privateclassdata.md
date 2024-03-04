@@ -1,5 +1,5 @@
 ---
-title: 私有类数据(Private Class Data)模式
+title: 私有类数据模式
 icon: laptop-code
 category:
   - 设计模式

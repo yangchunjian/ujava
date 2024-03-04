@@ -1,5 +1,5 @@
 ---
-title: 读写锁(Reader Writer Lock)模式
+title: 读写锁模式
 icon: laptop-code
 category:
   - 设计模式

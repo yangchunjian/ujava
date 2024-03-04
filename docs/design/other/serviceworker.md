@@ -1,5 +1,5 @@
 ---
-title: 服务工作者(Service to Worker)模式
+title: 服务工作者模式
 icon: laptop-code
 category:
   - 设计模式

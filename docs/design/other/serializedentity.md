@@ -1,5 +1,5 @@
 ---
-title: 序列化实体(Serialized Entity)模式
+title: 序列化实体模式
 icon: laptop-code
 category:
   - 设计模式

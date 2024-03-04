@@ -1,5 +1,5 @@
 ---
-title: 页面控制(Page Controller)模式
+title: 页面控制模式
 icon: laptop-code
 category:
   - 设计模式

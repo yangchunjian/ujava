@@ -1,5 +1,5 @@
 ---
-title: 版本号(Version Number)模式
+title: 版本号模式
 icon: laptop-code
 category:
   - 设计模式

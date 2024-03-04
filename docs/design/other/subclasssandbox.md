@@ -1,5 +1,5 @@
 ---
-title: 子类沙盒(Subclass Sandbox)模式
+title: 子类沙盒模式
 icon: laptop-code
 category:
   - 设计模式

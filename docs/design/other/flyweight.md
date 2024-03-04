@@ -1,5 +1,5 @@
 ---
-title: flyweight模式
+title: Flyweight模式
 icon: laptop-code
 category:
   - 设计模式

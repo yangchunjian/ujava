@@ -1,5 +1,5 @@
 ---
-title: 本地线程存储(Thread-local storage)模式
+title: 本地线程存储模式
 icon: laptop-code
 category:
   - 设计模式

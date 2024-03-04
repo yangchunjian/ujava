@@ -1,5 +1,5 @@
 ---
-title: 线程池(Thread Pool)模式
+title: 线程池模式
 icon: laptop-code
 category:
   - 设计模式

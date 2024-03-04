@@ -1,5 +1,5 @@
 ---
-title: 服务层(Service Layer)模式
+title: 服务层模式
 icon: laptop-code
 category:
   - 设计模式

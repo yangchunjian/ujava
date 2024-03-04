@@ -1,5 +1,5 @@
 ---
-title: 服务定位(Service Locator)模式
+title: 服务定位模式
 icon: laptop-code
 category:
   - 设计模式

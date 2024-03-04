@@ -1,5 +1,5 @@
 ---
-title: 对象母亲(Object Mother)模式
+title: 对象母亲模式
 icon: laptop-code
 category:
   - 设计模式

@@ -1,5 +1,5 @@
 ---
-title: flux模式
+title: Flux模式
 icon: laptop-code
 category:
   - 设计模式

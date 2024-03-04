@@ -1,5 +1,5 @@
 ---
-title: 部分响应(Partial Response)模式
+title: 部分响应模式
 icon: laptop-code
 category:
   - 设计模式

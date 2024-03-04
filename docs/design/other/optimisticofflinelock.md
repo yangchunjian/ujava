@@ -1,5 +1,5 @@
 ---
-title: 乐观线下锁(Optimistic Offline Lock)模式
+title: 乐观线下锁模式
 icon: laptop-code
 category:
   - 设计模式

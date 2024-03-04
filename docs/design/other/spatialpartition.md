@@ -1,5 +1,5 @@
 ---
-title: 空间分区(Spatial Partition)模式
+title: 空间分区模式
 icon: laptop-code
 category:
   - 设计模式

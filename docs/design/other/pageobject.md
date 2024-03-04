@@ -1,5 +1,5 @@
 ---
-title: 页面对象(Page Object)模式
+title: 页面对象模式
 icon: laptop-code
 category:
   - 设计模式

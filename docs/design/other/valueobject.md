@@ -1,5 +1,5 @@
 ---
-title: 值对象(Value Object)模式
+title: 值对象模式
 icon: laptop-code
 category:
   - 设计模式

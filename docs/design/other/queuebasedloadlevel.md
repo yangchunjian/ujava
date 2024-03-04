@@ -1,5 +1,5 @@
 ---
-title: 基于队列的负载均衡(Queue based load leveling)模式
+title: 基于队列的负载均衡模式
 icon: laptop-code
 category:
   - 设计模式
