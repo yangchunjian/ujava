@@ -292,13 +292,13 @@
       ]
     },
     {
-      "title": "模版方法(Template method)模式",
+      "title": "模版方法模式",
       "url": "https://ujava.cn/design/other/templatemethod.html",
       "id": "https://ujava.cn/design/other/templatemethod.html",
       "summary": "概述 在操作中定义算法的骨架，将一些步骤推迟到子类中。样板 方法允许子类在不更改算法的情况下重新定义算法的某些步骤 结构",
       "content_html": "<h2> 概述</h2>\n<p>在操作中定义算法的骨架，将一些步骤推迟到子类中。样板<br>\n方法允许子类在不更改算法的情况下重新定义算法的某些步骤<br>\n结构</p>\n",
       "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T06:36:55.000Z",
+      "date_modified": "2024-03-04T07:22:04.000Z",
       "authors": [],
       "tags": [
         "设计模式"
@@ -344,13 +344,13 @@
       ]
     },
     {
-      "title": "读者容错(Tolerant Reader)模式",
+      "title": "读者容错模式",
       "url": "https://ujava.cn/design/other/tolerantreader.html",
       "id": "https://ujava.cn/design/other/tolerantreader.html",
       "summary": "概述 Tolerant Reader是一种集成模式，有助于创建健壮的通信系统。这个想法 是在从另一个服务读取数据时尽可能宽容。这样，当 交流模式发生变化，读者一定不能断。",
       "content_html": "<h2> 概述</h2>\n<p>Tolerant Reader是一种集成模式，有助于创建健壮的通信系统。这个想法<br>\n是在从另一个服务读取数据时尽可能宽容。这样，当<br>\n交流模式发生变化，读者一定不能断。</p>\n",
       "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T06:36:55.000Z",
+      "date_modified": "2024-03-04T07:22:04.000Z",
       "authors": [],
       "tags": [
         "设计模式"

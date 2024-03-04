@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Mon, 04 Mar 2024 07:18:19 GMT</pubDate>
-    <lastBuildDate>Mon, 04 Mar 2024 07:18:19 GMT</lastBuildDate>
+    <pubDate>Mon, 04 Mar 2024 07:24:18 GMT</pubDate>
+    <lastBuildDate>Mon, 04 Mar 2024 07:24:18 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计模式</category>
@@ -306,10 +306,10 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
 ]]></content:encoded>
     </item>
     <item>
-      <title>模版方法(Template method)模式</title>
+      <title>模版方法模式</title>
       <link>https://ujava.cn/design/other/templatemethod.html</link>
       <guid>https://ujava.cn/design/other/templatemethod.html</guid>
-      <source url="https://ujava.cn/rss.xml">模版方法(Template method)模式</source>
+      <source url="https://ujava.cn/rss.xml">模版方法模式</source>
       <description>概述 在操作中定义算法的骨架，将一些步骤推迟到子类中。样板 方法允许子类在不更改算法的情况下重新定义算法的某些步骤 结构</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -359,10 +359,10 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
 ]]></content:encoded>
     </item>
     <item>
-      <title>读者容错(Tolerant Reader)模式</title>
+      <title>读者容错模式</title>
       <link>https://ujava.cn/design/other/tolerantreader.html</link>
       <guid>https://ujava.cn/design/other/tolerantreader.html</guid>
-      <source url="https://ujava.cn/rss.xml">读者容错(Tolerant Reader)模式</source>
+      <source url="https://ujava.cn/rss.xml">读者容错模式</source>
       <description>概述 Tolerant Reader是一种集成模式，有助于创建健壮的通信系统。这个想法 是在从另一个服务读取数据时尽可能宽容。这样，当 交流模式发生变化，读者一定不能断。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
