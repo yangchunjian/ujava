@@ -15,7 +15,18 @@ icon: laptop-code
 </div>
 
 
+
+::: tabs
+
+@tab:active 中文文档
+
 <!-- @include: ../README.md -->
+
+@tab 英文文档
+<!-- @include: ../README-EN.md -->
+
+:::
+
 
 
 
