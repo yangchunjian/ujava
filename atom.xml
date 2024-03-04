@@ -3,13 +3,183 @@
   <id>https://ujava.cn/</id>
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
-  <updated>2024-03-04T02:18:27.081Z</updated>
+  <updated>2024-03-04T03:08:06.094Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
   <category term="设计模式"/>
   <category term="设计高频"/>
   <category term="Java"/>
+  <entry>
+    <title type="text">页面对象(Page Object)模式</title>
+    <id>https://ujava.cn/design/other/pageobject.html</id>
+    <link href="https://ujava.cn/design/other/pageobject.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>Page 对象封装 UI，隐藏应用程序（通常是 Web 应用程序）的基础 UI 小组件，并提供特定于应用程序的 API，以允许操作测试所需的 UI<br>
+组件。这样一来，它允许测试类本身专注于测试逻辑。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>Page 对象封装 UI，隐藏应用程序（通常是 Web 应用程序）的基础 UI 小组件，并提供特定于应用程序的 API，以允许操作测试所需的 UI<br>
+组件。这样一来，它允许测试类本身专注于测试逻辑。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">参数对象(Parameter Object)模式</title>
+    <id>https://ujava.cn/design/other/parameterobject.html</id>
+    <link href="https://ujava.cn/design/other/parameterobject.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>Java 语言的语法不允许使用参数的预定义值声明方法。在 Java 中实现默认方法参数的最佳选择可能是使用方法重载。方法重载允许您声明多个具有相同名称但参数数量不同的方法。但是，当方法接受多个参数时，方法重载作为默认参数值解决方案的主要问题就会显现出来。为每个可能的参数组合创建重载方法可能很麻烦。为了解决此问题，使用了 Parameter Object 模式。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>Java 语言的语法不允许使用参数的预定义值声明方法。在 Java 中实现默认方法参数的最佳选择可能是使用方法重载。方法重载允许您声明多个具有相同名称但参数数量不同的方法。但是，当方法接受多个参数时，方法重载作为默认参数值解决方案的主要问题就会显现出来。为每个可能的参数组合创建重载方法可能很麻烦。为了解决此问题，使用了 Parameter Object 模式。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">部分响应(Partial Response)模式</title>
+    <id>https://ujava.cn/design/other/partialresponse.html</id>
+    <link href="https://ujava.cn/design/other/partialresponse.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>根据需要将部分响应从服务器发送到客户端。客户端将指定它需要服务器的字段，而不是提供资源的所有详细信息。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>根据需要将部分响应从服务器发送到客户端。客户端将指定它需要服务器的字段，而不是提供资源的所有详细信息。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">管道(Pipeline)模式</title>
+    <id>https://ujava.cn/design/other/pipeline.html</id>
+    <link href="https://ujava.cn/design/other/pipeline.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>通过提供初始输入并将处理后的输出传递给下一阶段使用，允许在一系列阶段中处理数据。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>通过提供初始输入并将处理后的输出传递给下一阶段使用，允许在一系列阶段中处理数据。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">毒丸(Poison Pill)模式</title>
+    <id>https://ujava.cn/design/other/poisonpill.html</id>
+    <link href="https://ujava.cn/design/other/poisonpill.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>毒丸（Poison Pill）是已知的预定义数据项，允许为单独的分布式消费过程提供正常关闭。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>毒丸（Poison Pill）是已知的预定义数据项，允许为单独的分布式消费过程提供正常关闭。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">演示模型(Presentation Model)模式</title>
+    <id>https://ujava.cn/design/other/presentationmodel.html</id>
+    <link href="https://ujava.cn/design/other/presentationmodel.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>演示模型将视图的状态和行为拉出到作为演示的一部分的模型类中。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>演示模型将视图的状态和行为拉出到作为演示的一部分的模型类中。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">优先级队列(Priority Queue)模式</title>
+    <id>https://ujava.cn/design/other/priorityqueue.html</id>
+    <link href="https://ujava.cn/design/other/priorityqueue.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>对发送到服务的请求进行优先级排序，以便比优先级较低的请求更快地接收和处理优先级较高的请求。此模式在为各个客户端提供不同服务级别保证的应用程序中非常有用。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>对发送到服务的请求进行优先级排序，以便比优先级较低的请求更快地接收和处理优先级较高的请求。此模式在为各个客户端提供不同服务级别保证的应用程序中非常有用。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">私有类数据(Private Class Data)模式</title>
+    <id>https://ujava.cn/design/other/privateclassdata.html</id>
+    <link href="https://ujava.cn/design/other/privateclassdata.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>私有类数据设计模式旨在通过限制属性的可见性来减少属性的暴露。它通过将类属性封装在单个 Data 对象中来减少类属性的数量。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>私有类数据设计模式旨在通过限制属性的可见性来减少属性的暴露。它通过将类属性封装在单个 Data 对象中来减少类属性的数量。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">生产者消费者(Producer Consumer)模式</title>
+    <id>https://ujava.cn/design/other/producerconsumer.html</id>
+    <link href="https://ujava.cn/design/other/producerconsumer.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>生产者消费者设计模式是一种经典的并发模式，它通过将工作标识与工作执行分开来减少生产者和消费者之间的耦合。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>生产者消费者设计模式是一种经典的并发模式，它通过将工作标识与工作执行分开来减少生产者和消费者之间的耦合。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">承诺(Promise)模式</title>
+    <id>https://ujava.cn/design/other/promise.html</id>
+    <link href="https://ujava.cn/design/other/promise.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>Promise 表示创建 Promise 时不一定知道的值的代理。它允许您将依赖承诺与异步操作的最终成功值或失败原因相关联。Promise 是一种编写异步代码的方法，该代码看起来仍然像是以同步方式执行。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>Promise 表示创建 Promise 时不一定知道的值的代理。它允许您将依赖承诺与异步操作的最终成功值或失败原因相关联。Promise 是一种编写异步代码的方法，该代码看起来仍然像是以同步方式执行。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">属性(Property)模式</title>
+    <id>https://ujava.cn/design/other/property.html</id>
+    <link href="https://ujava.cn/design/other/property.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>使用现有对象作为父对象创建对象和新对象的层次结构。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>使用现有对象作为父对象创建对象和新对象的层次结构。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">基于队列的负载均衡(Queue based load leveling)模式</title>
+    <id>https://ujava.cn/design/other/queuebasedloadlevel.html</id>
+    <link href="https://ujava.cn/design/other/queuebasedloadlevel.html"/>
+    <updated>2024-03-04T03:06:02.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 概述</h2>
+<p>使用充当任务与其调用的服务之间的缓冲区的队列，以平滑可能导致服务失败或任务超时的间歇性重负载。此模式有助于最大程度地减少需求高峰对任务和服务的可用性和响应能力的影响。</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 概述</h2>
+<p>使用充当任务与其调用的服务之间的缓冲区的队列，以平滑可能导致服务失败或任务超时的间歇性重负载。此模式有助于最大程度地减少需求高峰对任务和服务的可用性和响应能力的影响。</p>
+]]></content>
+    <category term="设计模式"/>
+    <published>2024-03-04T03:06:02.000Z</published>
+  </entry>
   <entry>
     <title type="text">页面控制(Page Controller)模式</title>
     <id>https://ujava.cn/design/other/pagecontroller.html</id>
@@ -3172,1694 +3342,5 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
 ]]></content>
     <category term="Java"/>
     <published>2024-01-31T00:48:57.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Java UML类图</title>
-    <id>https://ujava.cn/java/uml.html</id>
-    <link href="https://ujava.cn/java/uml.html"/>
-    <updated>2024-03-03T03:03:42.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 面向对象概念</h2>
-<p>面向对象是一种更优秀的程序设计方法，它的基本思想是使用类、对象、继承、封装、消息等基本概念进行程序设计。</p>
-<p>它从现实世界中客观存在的事物出发来构造软件系统，并在系统构造中尽可能运用人类的自然思维方式，强调直接以现实世界中的事物为中心来思考，认识问题，并根据这些事物的本质特点，把它们抽象地表示为系统中的类，作为系统的基本构成单元，这使得软件系统的组件可以直接映像到客观世界，并保持客观世界中事物及其相互关系的本来面貌。</p>
-<h3> 扩展：面向功能概念</h3>
-<p>结构化程序设计方法主张按功能来分析系统需求，其主要原则可概括为自顶向下、逐步求精、模块化等。结构化程序设计首先采用结构化分析方法对系统进行需求分析，然后使用结构化设计方法对系统进行概要设计、详细设计，最后采用结构化编程方法来实现系统。</p>]]></summary>
-    <content type="html"><![CDATA[<h2> 面向对象概念</h2>
-<p>面向对象是一种更优秀的程序设计方法，它的基本思想是使用类、对象、继承、封装、消息等基本概念进行程序设计。</p>
-<p>它从现实世界中客观存在的事物出发来构造软件系统，并在系统构造中尽可能运用人类的自然思维方式，强调直接以现实世界中的事物为中心来思考，认识问题，并根据这些事物的本质特点，把它们抽象地表示为系统中的类，作为系统的基本构成单元，这使得软件系统的组件可以直接映像到客观世界，并保持客观世界中事物及其相互关系的本来面貌。</p>
-<h3> 扩展：面向功能概念</h3>
-<p>结构化程序设计方法主张按功能来分析系统需求，其主要原则可概括为自顶向下、逐步求精、模块化等。结构化程序设计首先采用结构化分析方法对系统进行需求分析，然后使用结构化设计方法对系统进行概要设计、详细设计，最后采用结构化编程方法来实现系统。</p>
-<p>因为结构化程序设计方法主张按功能把软件系统逐步细分，因此这种方法也被称为面向功能的程序设计方法；结构化程序设计的每个功能都负责对数据进行一次处理，每个功能都接受一些数据，处理完后输出一些数据，这种处理方式也被称为面向数据流的处理方式。</p>
-<p>结构化程序设计里最小的程序单元是函数，每个函数都负责完成一个功能，用以接收一些输入数据，函数对这些输入数据进行处理，处理结束后输出一些数据。整个软件系统由一个个函数组成，其中作为程序入口的函数被称为主函数，主函数依次调用其他普通函数，普通函数之间依次调用，从而完成整个软件系统的功能。</p>
-<p>每个函数都是具有输入、输出的子系统，函数的输入数据包括函数形参、全局变量和常量等，函数的输出数据包括函数返回值以及传出参数等。结构化程序设计方式有如下两个局限性：</p>
-<ul>
-<li>设计不够直观，与人类习惯思维不一致。采用结构化程序分析、设计时，开发者需要将客观世界模型分解成一个个功能，每个功能用以完成一定的数据处理。</li>
-<li>适应性差，可扩展性不强。由于结构化设计采用自顶向下的设计方式，所以当用户的需求发生改变，或需要修改现有的实现方式时，都需要自顶向下地修改模块结构，这种方式的维护成本相当高</li>
-</ul>
-<h2> 面向对象的三大特性</h2>
-<p>面向对象的程序设计方法具有三个基本特征：封装、继承、多态</p>
-<ul>
-<li>封装指的是将对象的实现细节隐藏起来，然后通过一些公用方法来暴露该对象的功能</li>
-<li>继承是面向对象实现软件复用的重要手段，当子类继承父类后，子类作为一种特殊的父类，将直接获得父类的属性和方法</li>
-<li>多态指的是子类对象可以直接赋给父类变量，但运行时依然表现出子类的行为特征，这意味着同一个类型的对象在执行同一个方法时，可能表现出多种行为特征<br>
-注意：如果说是对象的四大特性，那么还需要把抽象加上</li>
-</ul>
-<p>抽象也是面向对象的重要部分，抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只是考虑部分问题。例如，需要考察Person对象时，不可能在程序中把Person的所有细节都定义出来，通常只能定义Person的部分数据、部分行为特征，而这些数据、行为特征是软件系统所关心的部分。</p>
-<h2> 封装</h2>
-<p>封装指的是将对象的实现细节隐藏起来，然后通过一些公用方法来暴露该对象的功能</p>
-<p>封装是面向对象编程语言对客观世界的模拟，在客观世界里，对象的状态信息都被隐藏在对象内部，外界无法直接操作和修改。对一个类或对象实现良好的封装，可以实现以下目的：</p>
-<ul>
-<li>隐藏类的实现细节；</li>
-<li>让使用者只能通过事先预定的方法来访问数据，从而可以在该方法里加入控制逻辑，限制对成员变量的不合理访问；</li>
-<li>可进行数据检查，从而有利于保证对象信息的完整性；</li>
-<li>便于修改，提高代码的可维护性。</li>
-</ul>
-<h3> 封装的实现</h3>
-<p>为了实现良好的封装，需要从两个方面考虑：</p>
-<ul>
-<li>将对象的成员变量和实现细节隐藏起来，不允许外部直接访问；</li>
-<li>把方法暴露出来，让方法来控制对这些成员变量进行安全的访问和操作。<br>
-封装实际上有两个方面的含义：把该隐藏的隐藏起来，把该暴露的暴露出来。这两个方面都需要通过使用Java提供的访问控制符来实现。</li>
-</ul>
-<h2> 继承</h2>
-<p>继承是面向对象实现软件复用的重要手段，当子类继承父类后，子类作为一种特殊的父类，将直接获得父类的属性和方法</p>
-<p>继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。</p>
-<p>继承实现了 IS-A 关系，例如 Cat 和 Animal 就是一种 IS-A 关系，因此 Cat 可以继承自 Animal，从而获得 Animal 非 private 的属性和方法。</p>
-<h3> 继承的实现</h3>
-<p>Cat 可以当做 Animal 来使用，也就是说可以使用 Animal 引用 Cat 对象。父类引用指向子类对象称为 向上转型 。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> C++和Java继承区别</h3>
-<p>首先，Java是单继承的，指的是Java中一个类只能有一个直接的父类。Java不能多继承，则是说Java中一个类不能直接继承多个父类。</p>
-<p>其次，Java在设计时借鉴了C++的语法，而C++是支持多继承的。</p>
-<p>Java语言之所以摒弃了多继承的这项特征，是因为多继承容易产生混淆。</p>
-<p>比如，两个父类中包含相同的方法时，子类在调用该方法或重写该方法时就会迷惑。</p>
-<p>准确来说，Java是可以实现"多继承"的。因为尽管一个类只能有一个直接父类，但是却可以有任意多个间接的父类。这样的设计方式，避免了多继承时所产生的混淆</p>
-<p>继承应该遵循里氏替换原则，子类对象必须能够替换掉所有父类对象。</p>
-<h2> 多态</h2>
-<p>多态指的是子类对象可以直接赋给父类变量，但运行时依然表现出子类的行为特征，这意味着同一个类型的对象在执行同一个方法时，可能表现出多种行为特征</p>
-<p>因为子类其实是一种特殊的父类，因此Java允许把一个子类对象直接赋给一个父类引用变量，无须任何类型转换，或者被称为向上转型，向上转型由系统自动完成。</p>
-<p>当把一个子类对象直接赋给父类引用变量时，例如 BaseClass obj = new SubClass(); ，这个obj引用变量的编译时类型是BaseClass，而运行时类型是SubClass，当运行时调用该引用变量的方法时，其方法行为总是表现出子类方法的行为特征，而不是父类方法的行为特征，这就可能出现：相同类型的变量、调用同一个方法时呈现出多种不同的行为特征，这就是多态。</p>
-<h3> 多态的实现</h3>
-<p>多态的实现离不开继承，在设计程序时，我们可以将参数的类型定义为父类型。</p>
-<p>在调用程序时，则可以根据实际情况，传入该父类型的某个子类型的实例，这样就实现了多态。</p>
-<ul>
-<li>对于父类型，可以有三种形式，即普通的类、抽象类、接口</li>
-<li>对于子类型，则要根据它自身的特征，重写父类的某些方法，或实现抽象类/接口的某些抽象方法<br>
-具体案例如下：</li>
-</ul>
-<p>多态可以提高程序的可扩展性，在设计程序时让代码更加简洁而优雅。</p>
-<p>例如我要设计一个司机类，他可以开轿车、巴士、卡车等等，示例代码如下：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在设计上述代码时，我已采用了重载机制，将方法名进行了统一。这样在进行调用时，无论要开什么交通工具，都是通过 driver.drive(obj) 这样的方式来调用，对调用者足够的友好。</p>
-<p>但对于程序的开发者来说，这显得繁琐，因为实际上这个司机可以驾驶更多的交通工具。</p>
-<p>当系统需要为这个司机增加车型时，开发者就需要相应的增加driver方法，类似的代码会堆积的越来越多，显得臃肿。</p>
-<p>采用多态的方式来设计上述程序，就会变得简洁很多。我们可以为所有的交通工具定义一个父类Vehicle，然后按照如下的方式设计drive方法。调用时，我们可以传入Vehicle类型的实例，也可以传入任意的Vehicle子类型的实例，对于调用者来说一样的方便，但对于开发者来说，代码却变得十分的简洁了。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 类(对象)之间的关系</h2>
-<h3> UML类图</h3>
-<p>类之间的关系，类与接口之间关系可以分一下几种</p>
-<ul>
-<li>泛化关系(Generalization)</li>
-<li>实现关系 (Realization)</li>
-<li>聚合关系 (Aggregation)</li>
-<li>组合关系 (Composition)</li>
-<li>关联关系 (Association)</li>
-<li>依赖关系 (Dependency)</li>
-</ul>
-<figure><figcaption>img_19.png</figcaption></figure>
-<h3> 泛化关系 (Generalization)</h3>
-<p>用来描述继承关系，在 Java 中使用 extends 关键字。</p>
-<figure><figcaption>img_18.png</figcaption></figure>
-<h3> 实现关系 (Realization)</h3>
-<p>用来实现一个接口，在 Java 中使用 implement 关键字。</p>
-<figure><figcaption>img_20.png</figcaption></figure>
-<h3> 聚合关系 (Aggregation)</h3>
-<p>表示整体由部分组成，但是整体和部分不是强依赖的，整体不存在了部分还是会存在。</p>
-<figure><figcaption>img_21.png</figcaption></figure>
-<h3> 组合关系 (Composition)</h3>
-<p>和聚合不同，组合中整体和部分是强依赖的，整体不存在了部分也不存在了。比如公司和部门，公司没了部门就不存在了。但是公司和员工就属于聚合关系了，因为公司没了员工还在。<br>
-</p>
-<h3> 关联关系 (Association)</h3>
-<p>表示不同类对象之间有关联，这是一种静态关系，与运行过程的状态无关，在最开始就可以确定。</p>
-<p>因此也可以用 1 对 1、多对 1、多对多这种关联关系来表示。比如学生和学校就是一种关联关系，一个学校可以有很多学生，但是一个学生只属于一个学校，因此这是一种多对一的关系，在运行开始之前就可以确定。</p>
-<figure><figcaption>img_23.png</figcaption></figure>
-<h3> 依赖关系 (Dependency)</h3>
-<p>和关联关系不同的是，依赖关系是在运行过程中起作用的。</p>
-<p>A 类和 B 类是依赖关系主要有三种形式：</p>
-<ul>
-<li>A 类是 B 类中的(某中方法的)局部变量；</li>
-<li>A 类是 B 类方法当中的一个参数；</li>
-<li>A 类向 B 类发送消息，从而影响 B 类发生变化；</li>
-</ul>
-<figure><figcaption>img_24.png</figcaption></figure>
-]]></content>
-    <category term="Java"/>
-    <published>2024-01-30T01:34:07.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Java ReentrantLock锁的设计思想</title>
-    <id>https://ujava.cn/java/reentrantlock.html</id>
-    <link href="https://ujava.cn/java/reentrantlock.html"/>
-    <updated>2024-03-03T03:03:42.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 一、开头</h2>
-<p>在并发编程领域，有两大核心问题：一个是互斥，即同一时刻只允许一个线程访问共享资源；另一个是同步，即线程之间如何通信、协作。<br>
-主要原因是，对于多线程实现实现并发，一直以来，多线程都存在2个问题：</p>
-<ul>
-<li>线程之间内存共享，需要通过加锁进行控制，但是加锁会导致性能下降，同时复杂的加锁机制也会增加编程编码难度</li>
-<li>过多线程造成线程之间的上下文切换，导致效率低下</li>
-</ul>
-<p>因此，在并发编程领域中，一直有一个很重要的设计原则： “ 不要通过内存共享来实现通信，而应该通过通信来实现内存共享。”<br>
-简单来说，就是尽可能通过消息通信，而不是内存共享来实现进程或者线程之间的同步。</p>]]></summary>
-    <content type="html"><![CDATA[<h2> 一、开头</h2>
-<p>在并发编程领域，有两大核心问题：一个是互斥，即同一时刻只允许一个线程访问共享资源；另一个是同步，即线程之间如何通信、协作。<br>
-主要原因是，对于多线程实现实现并发，一直以来，多线程都存在2个问题：</p>
-<ul>
-<li>线程之间内存共享，需要通过加锁进行控制，但是加锁会导致性能下降，同时复杂的加锁机制也会增加编程编码难度</li>
-<li>过多线程造成线程之间的上下文切换，导致效率低下</li>
-</ul>
-<p>因此，在并发编程领域中，一直有一个很重要的设计原则： “ 不要通过内存共享来实现通信，而应该通过通信来实现内存共享。”<br>
-简单来说，就是尽可能通过消息通信，而不是内存共享来实现进程或者线程之间的同步。</p>
-<h2> 二、关健术语</h2>
-<p>本文用到的一些关键词语以及常用术语，主要如下：</p>
-<ul>
-<li>并发(Concurrent): 在操作系统中，是指一个时间段中有几个程序都处于已启动运行到运行完毕之间，且这几个程序都是在同一个处理机上运行。</li>
-<li>并行(Parallel): 当系统有一个以上CPU时，当一个CPU执行一个进程时，另一个CPU可以执行另一个进程，两个进程互不抢占CPU资源，可以同时进行。</li>
-<li>信号量(Semaphore):  是在多线程环境下使用的一种设施，是可以用来保证两个或多个关键代码段不被并发调用，也是作系统用来解决并发中的互斥和同步问题的一种方法。</li>
-<li>信号量机制(Semaphores)： 用来解决同步/互斥的问题的，它是1965年,荷兰学者 Dijkstra提出了一种卓有成效的实现进程互斥与同步的方法。</li>
-<li>管程(Monitor) :  一般是指管理共享变量以及对共享变量的操作过程，让它们支持并发的一种机制。</li>
-<li>互斥(Mutual Exclusion)：一个公共资源同一时刻只能被一个进程或线程使用，多个进程或线程不能同时使用公共资源。即就是同一时刻只允许一个线程访问共享资源的问题。</li>
-<li>同步(Synchronization)：两个或两个以上的进程或线程在运行过程中协同步调，按预定的先后次序运行。即就是线程之间如何通信、协作的问题。</li>
-<li>对象池(Object Pool): 指的是一次性创建出 N 个对象，之后所有的线程重复利用这 N 个对象，当然对象在被释放前，也是不允许其他线程使用的, 一般指保存实例对象的容器。</li>
-</ul>
-<h2> 三、基本概述</h2>
-<p>在Java领域中，我们可以将锁大致分为基于Java语法层面(关键词)实现的锁和基于JDK层面实现的锁。</p>
-<p>在Java领域中, 尤其是在并发编程领域，对于多线程并发执行一直有两大核心问题：同步和互斥。其中：</p>
-<ul>
-<li>互斥(Mutual Exclusion)：一个公共资源同一时刻只能被一个进程或线程使用，多个进程或线程不能同时使用公共资源。即就是同一时刻只允许一个线程访问共享资源的问题。</li>
-<li>同步(Synchronization)：两个或两个以上的进程或线程在运行过程中协同步调，按预定的先后次序运行。即就是线程之间如何通信、协作的问题。<br>
-针对对于这两大核心问题，利用管程是能够解决和实现的，因此可以说，管程是并发编程的万能钥匙。<br>
-虽然，Java在基于语法层面(synchronized 关键字)实现了对管程技术,但是从使用方式和性能上来说，内置锁(synchronized 关键字)的粒度相对过大，不支持超时和中断等问题。<br>
-为了弥补这些问题，从JDK层面对其“重复造轮子”，在JDK内部对其重新设计和定义，甚至实现了新的特性。<br>
-在Java领域中，从JDK源码分析来看，基于JDK层面实现的锁大致主要可以分为以下4种方式：</li>
-</ul>
-<figure><figcaption>img_10.png</figcaption></figure>
-<ul>
-<li>基于Lock接口实现的锁：JDK1.5版本提供的ReentrantLock类</li>
-<li>基于ReadWriteLock接口实现的锁：JDK1.5版本提供的ReentrantReadWriteLock类</li>
-<li>基于AQS基础同步器实现的锁：JDK1.5版本提供的并发相关的同步器Semaphore，CyclicBarrier以及CountDownLatch等�</li>
-<li>基于自定义API操作实现的锁：JDK1.8版本中提供的StampedLock类<br>
-从阅读源码不难发现，在Java SDK 并发包主要通过AbstractQueuedSynchronizer(AQS)实现多线程同步机制的封装与定义，而通过Lock 和 Condition 两个接口来实现管程，其中 Lock 用于解决互斥问题，Condition 用于解决同步问题。</li>
-</ul>
-<h3> 1.AQS基础同步器基本理论</h3>
-<p>在Java领域中,同步器是专门为多线程并发设计的同步机制，主要是多线程并发执行时线程之间通过某种共享状态来实现同步，只有当状态满足这种条件时线程才往下执行的一种同步机制。</p>
-<figure><figcaption>img_11.png</figcaption></figure>
-<p>一个标准的AQS同步器主要有同步状态机制，等待队列，条件队列，独占模式，共享模式等五大核心要素组成。<br>
-在Java领域中，JDK的JUC(java.util.concurrent.)包中提供了各种并发工具，但是大部分同步工具的实现基于AbstractQueuedSynchronizer类实现，其内部结构主要如下：</p>
-<ul>
-<li>
-<p>同步状态机制(Synchronization Status)：主要用于实现锁(Lock)机制，是指同步状态，其要求对于状态的更新必须原子性的</p>
-</li>
-<li>
-<p>等待队列(Wait Queue)：主要用于存放等待线程获取到的锁资源，并且把线程维护到一个Node(节点)里面和维护一个非阻塞的CHL Node FIFO(先进先出)队列，主要是采用自旋锁+CAS操作来保证节点插入和移除的原子性操作。</p>
-</li>
-<li>
-<p>条件队列(Condition Queue)：用于实现锁的条件机制，一般主要是指替换“等待-通知”工作机制，主要是通过ConditionObject对象实现Condition接口提供的方法实现。</p>
-</li>
-<li>
-<p>独占模式(Exclusive Mode)：主要用于实现独占锁，主要是基于静态内部类Node的常量标志EXCLUSIVE来标识该节点是独占模式</p>
-</li>
-<li>
-<p>共享模式(Shared Mode)：主要用于实现共享锁，主要是基于静态内部类Node的常量标志SHARED来标识该节点是共享模式<br>
-我们可以得到一个比较通用的并发同步工具基础模型，大致包含如下几个内容，其中：<br>
-</p>
-</li>
-<li>
-<p>条件变量(Conditional Variable)： 利用线程间共享的变量进行同步的一种工作机制</p>
-</li>
-<li>
-<p>共享变量((Shared Variable))：一般指对象实体对象的成员变量和属性</p>
-</li>
-<li>
-<p>阻塞队列(Blocking Queue)：共享变量(Shared Variable)及其对共享变量的操作统一封装</p>
-</li>
-<li>
-<p>等待队列(Wait Queue)：每个条件变量都对应有一个等待队列(Wait Queue),内部需要实现入队操作(Enqueue)和出队操作(Dequeue)方法</p>
-</li>
-<li>
-<p>变量状态描述机(Synchronization Status)：描述条件变量和共享变量之间状态变化，又可以称其为同步状态</p>
-</li>
-<li>
-<p>工作模式(Operation Mode)： 线程资源具有排他性，因此定义独占模式和共享模式两种工作模式<br>
-综上所述，条件变量和等待队列的作用是解决线程之间的同步问题；共享变量与阻塞队列的作用是解决线程之间的互斥问题。</p>
-</li>
-</ul>
-<h3> 2. JDK显式锁统一概念模型</h3>
-<p>在并发编程领域，有两大核心问题：一个是互斥，即同一时刻只允许一个线程访问共享资源；另一个是同步，即线程之间如何通信、协作。</p>
-<figure><figcaption>img_13.png</figcaption></figure>
-<p>综合Java领域中的并发锁的各种实现与应用分析来看，一把锁或者一种锁，基本上都会包含以下几个方面：</p>
-<ul>
-<li>锁的同步器工作机制：主要是考虑共享模式还是独享模式，是否支持超时机制，以及是否支持超时机制？</li>
-<li>锁的同步器工作模式：主要是基于AQS基础同步器封装内部同步器，是否考虑公平/非公平模式？</li>
-<li>锁的状态变量机制： 主要锁的状态设置，是否共享状态变量？</li>
-<li>锁的队列封装定义：主要是指等待队列和条件队列，是否需要条件队列或者等待队列定义？</li>
-<li>锁的底层实现操作： 主要是指底层CL锁和CAS操作，是否需要考虑自旋锁或者CAS操作实例对象方法？</li>
-<li>锁的组合实现新锁： 主要是基于独占锁和共享锁，是否考虑对应API自定义操作实现？<br>
-综上所述，大致可以根据上述这些方向，我们便可以清楚知道Java领域中各种锁实现的基本理论时和实现思想。</li>
-</ul>
-<h3> 3.ReentrantLock(可重入锁)的设计与实现</h3>
-<p>在Java领域中，ReentrantLock(可重入锁)是针对于Java多线程并发控制中对一个线程可以多次对某个锁进行加锁操作，主要是基于内置的AQS基础抽象队列同步器实现的一种并发控制工具类。</p>
-<figure><figcaption>img_14.png</figcaption></figure>
-<p>一般来说，对于同一个线程是否可以重复占有同一个锁对象的角度来分，大致主要可以分为可重入锁与不可重入锁。其中：</p>
-<ul>
-<li>可重入锁：一个线程可以多次抢占同一个锁，也就意味着能够支持一个线程对资源的重复加锁，或者说，一个线程可以多次进入同一个锁所同步的临界区代码块。</li>
-<li>不可重入锁：一个线程只能抢占一次同一个锁，也就意味着在同一时刻只能有一个线程获取到锁，而其他获取锁的线程只能等待，只有拥有锁的线程释放了锁后，其他的线程才能够获取锁。</li>
-</ul>
-<p>ReentrantLock是JDK中显式锁一个主要基于Lock接口API实现的基础实现类，拥有与内置锁(synchronized)相同的并发性和内存语义，同时提供了限时抢占、可中断抢占等一些高级锁特性。<br>
-除此之外，ReentrantLock基于内置的AQS基础抽象队列同步器实现，在线程参与锁资源竞争比较激烈的场景下，能表现出比内置锁较佳的性能。<br>
-而且，ReentrantLock是一种独占锁，在独占模式下只能逐一使用锁，也就是说，任意时刻最多只会有一个线程持有锁的控制权。</p>
-<ol>
-<li>
-<h4> 设计思想</h4>
-</li>
-</ol>
-<figure><figcaption>img_15.png</figcaption></figure>
-<p>ReentrantLock类最早是在JDK1.5版本提供的，从设计思想上来看，主要包括同步器工作模式，获取锁方法，释放锁方法以及定义Condition队列方法等4个核心要素。其中：</p>
-<ul>
-<li>实现Lock接口 ：主要基于Lock接口API实现对应方法，拥有与内置锁(synchronized)相同的并发性和内存语义，用于支持和解决解决互斥问题。</li>
-<li>同步器工作模式：基于AQS基础抽象队列同步器封装内置实现一个静态的内置同步器抽象类，然后基于这个抽象类分别实现了公平同步器和非公平同步器，用来指定和描述同步器工作模式是公平模式还是非公平模式。</li>
-<li>公平/非公平模式：主要描述的是多个线程在同时获取锁时是否按照先到先得的顺序获取锁，如果是则为公平模式，否则为非公平模式。</li>
-<li>获取锁方法：主要定义了一个lock()方法来获取锁，表示假如锁已经被其他线程占有或持有，其当前获取锁的线程则进入等待状态。</li>
-<li>释放锁方法：主要定义了一个unlock()方法来释放锁，表示假如锁已经被其他线程放弃或释放，其当前获取锁的线程则获得该锁。</li>
-<li>定义Condition队列操作方法： 主要是基于Condition接口来定义一个方法实现锁的条件机制，用于支持线程的阻塞和唤醒功能即就是解决同步问题，也就是我们说的线程间的通信方式。</li>
-<li>定义等待队列操作方法： 主要是依据条件队列来时进行对应的操作，间接适配AQS基础同步器中对于等待队列的功能，保证获取锁的顺序的公平性</li>
-</ul>
-<ol start="2">
-<li>
-<h4> 基本实现</h4>
-</li>
-</ol>
-<figure><figcaption>img_16.png</figcaption></figure>
-<p>在ReentrantLock类的JDK1.8版本中，对于ReentrantLock的基本实现如下：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>内部同步器：基于AQS基础同步器封装和定义了一个静态内部Sync抽象类，其中抽象了一个内置锁lock()方法</li>
-<li>同步器工作模式：提供了 2个构造方法，其中无参数构造方法表示的是默认的工作模式，有参数构造方法主要依据参数来实现指定的工作模式</li>
-<li>获取锁： 主要是提供了lock()方法，调用的静态内部Sync抽象类内置锁lock()方法，而本质上是AQS同步器中的acquire()方法</li>
-<li>释放锁： 主要是提供了unlock()方法，而本质上是调用的AQS同步器中的release()方法</li>
-<li>创建条件队列： 主要是基于Condition接口定义了newCondition() 方法，调用的静态内部Sync抽象类ewCondition()方法，而本质上是调用的AQS同步器中的ConditionObject中的newCondition()方法</li>
-</ul>
-<p><strong>2.1 基于AQS同步器封装静态内部Sync抽象类</strong></p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>Sync类：FairSync公平同步器和NonfairSync非公平同步器的抽象父类。</li>
-<li>校验isHeldExclusively()方法： ReentrantLock锁是属于独占模式，需要当前锁持有线程与当前线程是否一致</li>
-<li>nonfairTryAcquire()方法： 一般主要用于非公平模式获取锁，其核心是compareAndSetState方法和setExclusiveOwnerThread方法</li>
-<li>tryRelease()方法： 其公平/非公平模式都是通过ryRelease()来释放锁操作</li>
-<li>newCondition()方法： 基于AQS同步器的ConditionObject对象封装实现，提供给 ReentrantLock类使用</li>
-<li>私有readObject()方法：对于输入的对象进行流化处理</li>
-</ul>
-<p>特别需要注意的是，我们需要重点关注nonfairTryAcquire()方法和tryRelease()方法，其中：</p>
-<ul>
-<li>获取非公平锁 nonfairTryAcquire()方法：主要是用于获取AQS的状态变量status，其默认取值范围是0和1，其中，0表示未被加锁，1表示已经被加锁</li>
-<li>如果状态变量status=0，使用compareAndSetState方法进行CAS原子修改操作，把状态变量修改为1，并且通过setExclusiveOwnerThread设置当前线程为锁的持有线程</li>
-<li>如果状态变量status=1，表示当前线程为锁的持有线程，正在进入锁重入操作，状态变量累加1，超过重入次数时，会抛出throw new Error(“Maximum lock count exceeded”)</li>
-<li>释放锁tryRelease()方法：主要是检查当前线程是否为锁持有线程，随后AQS同步器状态变量减1，如果不是 throw new IllegalMonitorStateException()</li>
-<li>如果状态变量status=0，表示锁已经释放成功，通过setExclusiveOwnerThread设置锁的持有线程为null，也就是置空锁的持有线程</li>
-<li>如果状态变量status !=0,  需要状态变量递减1即可，直到锁已经释放成功</li>
-</ul>
-<p><strong>2.2 基于Sync抽象类封装FairSync公平同步器</strong></p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>实现方式： 主要基于AQS封装的内部静态抽象Sync同步类实现，使用的AQS的独占模式。</li>
-<li>主要方法： 主要提供了lock()和tryAcquire()方法，其严格意义上来说，仅仅只是实现了tryAcquire()方法，但是最关键的使用hasQueuedPredecessors来保证了锁的公平性。</li>
-<li>锁获取方式： 主要是采用完全通过队列来实现实现公平机制，即就是检查是否存在等待队列，如果队列之中已经存在其他线程，直接放弃操作。</li>
-</ul>
-<p><strong>2.3 基于Sync抽象类封装NonfairSync非公平同步器</strong></p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>实现方式： 主要基于AQS封装的内部静态抽象Sync同步类实现，使用的AQS的独占模式。</li>
-<li>主要方法： 主要提供了lock()和tryAcquire()方法，其严格意义上来说，仅仅只是实现了tryAcquire()方法，直接调用了Sync同步类的nonfairTryAcquire()方法。</li>
-<li>锁获取方式： 主要是采用闯入策略来打破锁的公平，也就是一般准备获取锁的线程会先尝试获取锁，失败之后才进入队列中。</li>
-</ul>
-<h2> 3. 具体实现</h2>
-<p><br>
-在ReentrantLock类的JDK1.8版本中，对于ReentrantLock的具体实现如下：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>获取锁的方法：主要提供了一般模式lock()方法，支持可中断机制lockInterruptibly()方法，无参数tryLock()方法以及有参数的支持超时机制的tryLock(long timeout, TimeUnit unit)方法</li>
-<li>释放锁的方法：主要是unlock()方法，间接调用是内部同步器中的release()方法</li>
-<li>条件队列操作：主要提供了获取队列中的线程对象getQueuedThreads()，检测队列入队hasWaiters(Condition condition) 方法，以及</li>
-<li>等待队列操作：主要提供了获取队列中的线程对象getWaitingThreads(Condition condition)，检测队列入队hasQueuedThread(Thread thread) 方法，以及获取队列长度getQueueLength()方法和getWaitingThreads(Condition condition)方法</li>
-<li>其他检测判断：主要有判断是否公平模式isFair()方法，是否当前线程独占isHeldByCurrentThread()方法，以及是否加锁 isLocked()等</li>
-</ul>
-<p>需要注意的是，在JDK1.8版本之后，对于ReentrantLock的实现有些细微的变化，感兴趣的可自行参考相关版本的源码进行对比分析。</p>
-<p>综上所述，从一定意义上讲，ReentrantLock是一种可重入的独占(互斥)锁，属于AQS基础抽象队列同步器中独占模式孵化的产物，支持公平模式与非公平模式，默认采用非公平模式。</p>
-<h2> 最后</h2>
-<p>通过对Java领域中，JDK内部提供的各种锁的实现来看，一直围绕的核心主要还是基于AQS基础同步器来实现的，但是AQS基础同步器不是一种非它不可的技术标准规范，更多的只是一套技术参考指南。</p>
-<p>但是，实际上，Java对于锁的实现与运用远远不止这些，还有相位器(Phaser)和交换器(Exchanger),以及在Java JDK1.8版本之前并发容器ConcurrentHashMap中使用的分段锁(Segment)。</p>
-<p>不论是何种实现和应用，在Java并发编程领域来讲，都是围绕线程安全问题的角度去考虑的，只是针对于各种各样的业务场景做的具体的实现。</p>
-<p>一定意义上来讲，对线程加锁只是并发编程的实现方式之一，相对于实际应用来说，Java领域中的锁都只是一种单一应用的锁，只是给我们掌握Java并发编程提供一种思想没，三言两语也不可能详尽。</p>
-<p>到此为止，这算是对于Java领域中并发锁的最终章，文中表述均为个人看法和个人理解，如有不到之处，忘请谅解也请给予批评指正。</p>
-]]></content>
-    <category term="Java"/>
-    <published>2024-01-29T08:06:37.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">JDK源码中用到的23种设计模式</title>
-    <id>https://ujava.cn/java/jdkdesign.html</id>
-    <link href="https://ujava.cn/java/jdkdesign.html"/>
-    <updated>2024-03-03T03:03:42.000Z</updated>
-    <summary type="html"><![CDATA[<!-- TOC -->
-<ul>
-<li><a href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F">创建模式</a>
-<ul>
-<li><a href="#singleton%E5%8D%95%E4%BE%8B">Singleton(单例)</a></li>
-<li><a href="#abstract-factory%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82">Abstract factory(抽象工厂)</a></li>
-<li><a href="#factory%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95">Factory(工厂方法)</a></li>
-<li><a href="#builder%E5%BB%BA%E9%80%A0%E8%80%85">Builder(建造者)</a></li>
-<li><a href="#prototype%E5%8E%9F%E5%9E%8B">Prototype(原型)</a></li>
-</ul>
-</li>
-<li><a href="#%E7%BB%93%E6%9E%84%E6%A8%A1%E5%BC%8F">结构模式</a>
-<ul>
-<li><a href="#adapter%E9%80%82%E9%85%8D%E5%99%A8">Adapter(适配器)</a></li>
-<li><a href="#composite%E7%BB%84%E5%90%88">Composite(组合)</a></li>
-<li><a href="#decorator%E8%A3%85%E9%A5%B0%E5%99%A8">Decorator(装饰器)</a></li>
-<li><a href="#facade%E9%97%A8%E9%9D%A2">Facade(门面)</a></li>
-<li><a href="#flyweight%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F">Flyweight(享元模式)</a></li>
-<li><a href="#proxy%E4%BB%A3%E7%90%86">Proxy(代理)</a></li>
-</ul>
-</li>
-<li><a href="#%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%BC%8F">行为模式</a>
-<ul>
-<li><a href="#chain-of-responsibility%E8%B4%A3%E4%BB%BB%E9%93%BE">Chain of Responsibility(责任链)</a></li>
-<li><a href="#command%E5%91%BD%E4%BB%A4">Command(命令)</a></li>
-<li><a href="#interpreter%E8%A7%A3%E9%87%8A%E5%99%A8">Interpreter(解释器)</a></li>
-<li><a href="#iterator%E8%BF%AD%E4%BB%A3%E5%99%A8">Iterator(迭代器)</a></li>
-<li><a href="#mediator%E4%B8%AD%E4%BB%8B">Mediator(中介)</a></li>
-<li><a href="#memento%E5%BF%AB%E7%85%A7-%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F">Memento(快照-备忘录模式)</a></li>
-<li><a href="#observer%E8%A7%82%E5%AF%9F%E8%80%85">Observer(观察者)</a></li>
-<li><a href="#state%E7%8A%B6%E6%80%81">State(状态)</a></li>
-<li><a href="#strategy%E7%AD%96%E7%95%A5">Strategy(策略)</a></li>
-<li><a href="#template%E6%A8%A1%E6%9D%BF">Template(模板)</a></li>
-<li><a href="#visitor%E8%AE%BF%E9%97%AE%E8%80%85">Visitor(访问者)</a></li>
-</ul>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<!-- TOC -->
-<ul>
-<li><a href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F">创建模式</a>
-<ul>
-<li><a href="#singleton%E5%8D%95%E4%BE%8B">Singleton(单例)</a></li>
-<li><a href="#abstract-factory%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82">Abstract factory(抽象工厂)</a></li>
-<li><a href="#factory%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95">Factory(工厂方法)</a></li>
-<li><a href="#builder%E5%BB%BA%E9%80%A0%E8%80%85">Builder(建造者)</a></li>
-<li><a href="#prototype%E5%8E%9F%E5%9E%8B">Prototype(原型)</a></li>
-</ul>
-</li>
-<li><a href="#%E7%BB%93%E6%9E%84%E6%A8%A1%E5%BC%8F">结构模式</a>
-<ul>
-<li><a href="#adapter%E9%80%82%E9%85%8D%E5%99%A8">Adapter(适配器)</a></li>
-<li><a href="#composite%E7%BB%84%E5%90%88">Composite(组合)</a></li>
-<li><a href="#decorator%E8%A3%85%E9%A5%B0%E5%99%A8">Decorator(装饰器)</a></li>
-<li><a href="#facade%E9%97%A8%E9%9D%A2">Facade(门面)</a></li>
-<li><a href="#flyweight%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F">Flyweight(享元模式)</a></li>
-<li><a href="#proxy%E4%BB%A3%E7%90%86">Proxy(代理)</a></li>
-</ul>
-</li>
-<li><a href="#%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%BC%8F">行为模式</a>
-<ul>
-<li><a href="#chain-of-responsibility%E8%B4%A3%E4%BB%BB%E9%93%BE">Chain of Responsibility(责任链)</a></li>
-<li><a href="#command%E5%91%BD%E4%BB%A4">Command(命令)</a></li>
-<li><a href="#interpreter%E8%A7%A3%E9%87%8A%E5%99%A8">Interpreter(解释器)</a></li>
-<li><a href="#iterator%E8%BF%AD%E4%BB%A3%E5%99%A8">Iterator(迭代器)</a></li>
-<li><a href="#mediator%E4%B8%AD%E4%BB%8B">Mediator(中介)</a></li>
-<li><a href="#memento%E5%BF%AB%E7%85%A7-%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F">Memento(快照-备忘录模式)</a></li>
-<li><a href="#observer%E8%A7%82%E5%AF%9F%E8%80%85">Observer(观察者)</a></li>
-<li><a href="#state%E7%8A%B6%E6%80%81">State(状态)</a></li>
-<li><a href="#strategy%E7%AD%96%E7%95%A5">Strategy(策略)</a></li>
-<li><a href="#template%E6%A8%A1%E6%9D%BF">Template(模板)</a></li>
-<li><a href="#visitor%E8%AE%BF%E9%97%AE%E8%80%85">Visitor(访问者)</a></li>
-</ul>
-</li>
-</ul>
-<!-- TOC -->
-<h1> 创建模式</h1>
-<h2> Singleton(单例)</h2>
-<p>只允许一个实例。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Abstract factory(抽象工厂)</h2>
-<p>创建一组有关联的对象实例。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Factory(工厂方法)</h2>
-<p>按照需求返回一个类型的实例。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Builder(建造者)</h2>
-<p>主要用来简化一个复杂对象的创建。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Prototype(原型)</h2>
-<p>使用自己的实例创建另外一个实例。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1> 结构模式</h1>
-<h2> Adapter(适配器)</h2>
-<p>可通过创建方法识别采用不同抽象/接口类型的实例，并返回自己/抽象/接口类型的实现，其装饰/覆盖给定实例。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Composite(组合)</h2>
-<p>让使用者将单独对象和组合对象混用。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Decorator(装饰器)</h2>
-<p>为一个对象动态地加上一系列动作，而不需要因为这些动作的不同产生大量的继承类。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Facade(门面)</h2>
-<p>一个简单的接口包装一组组件、接口、抽象或者子系统。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Flyweight(享元模式)</h2>
-<p>使用缓存来加速大量小对象的访问时间。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Proxy(代理)</h2>
-<p>用一个简单的对象代替一个复杂的对象。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1> 行为模式</h1>
-<h2> Chain of Responsibility(责任链)</h2>
-<p>一个对象在一个链接传递直到被处理。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Command(命令)</h2>
-<p>将一系列命令封装成在一个类中。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Interpreter(解释器)</h2>
-<p>定义语言的文法，并且建立一个解释器来解释该语言中的句子。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Iterator(迭代器)</h2>
-<p>对象遍历。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Mediator(中介)</h2>
-<p>用一个中介对象来封装一系列关于对象交互行为。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Memento(快照-备忘录模式)</h2>
-<p>保存另外一个对象内部状态拷贝的对象</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Observer(观察者)</h2>
-<p>事件监听器。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> State(状态)</h2>
-<p>不同的状态，不同的行为；或者说每个状态有相应的行为。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Strategy(策略)</h2>
-<p>定义一系列算法，把这些算法一个一个封装成单独的类。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Template(模板)</h2>
-<p>定义一个操作中算法的骨架，将一些步骤的执行延迟到其子类中。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Visitor(访问者)</h2>
-<p>作用于某个对象群中各个对象的操作，它可以使你在不改变这些对象本身的情况下，定义作用于这些对象的新操作。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
-    <category term="Java"/>
-    <published>2024-01-25T00:56:50.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Java核心包结构设计思想</title>
-    <id>https://ujava.cn/java/package.html</id>
-    <link href="https://ujava.cn/java/package.html"/>
-    <updated>2024-03-03T03:03:42.000Z</updated>
-    <summary type="html"><![CDATA[<p>在研读 JDK 源码之前，先了解 JDK 几个核心包的设计思想，将有助于我们理解当初的设计者们的意图，让我们更能体会到设计者的良苦用心。</p>
-<h2> 1 java.lang 语言包</h2>
-<p>提供利用 Java 编程语言进行程序设计的基础类。最重要的类是 Object（类层次结构的根）和 Class（其实例表示正在运行的应用程序中的类）。</p>
-<p>把基本类型的值当成一个对象来表示通常很有必要。包装器类 Boolean、Character、Integer、Long、Float 和 Double 就是用于这个目的。例如，一个 Double 类型的对象包含了一个类型为 double 的字段，这表示如果引用某个值，则可以将该值存储在引用类型的变量中。这些类还提供了大量用于转换基值的方法，并支持一些标准方法，比如 equals 和 hashCode。Void 类是一个非实例化的类，它保持一个对表示基本类型 void 的 Class 对象的引用。</p>]]></summary>
-    <content type="html"><![CDATA[<p>在研读 JDK 源码之前，先了解 JDK 几个核心包的设计思想，将有助于我们理解当初的设计者们的意图，让我们更能体会到设计者的良苦用心。</p>
-<h2> 1 java.lang 语言包</h2>
-<p>提供利用 Java 编程语言进行程序设计的基础类。最重要的类是 Object（类层次结构的根）和 Class（其实例表示正在运行的应用程序中的类）。</p>
-<p>把基本类型的值当成一个对象来表示通常很有必要。包装器类 Boolean、Character、Integer、Long、Float 和 Double 就是用于这个目的。例如，一个 Double 类型的对象包含了一个类型为 double 的字段，这表示如果引用某个值，则可以将该值存储在引用类型的变量中。这些类还提供了大量用于转换基值的方法，并支持一些标准方法，比如 equals 和 hashCode。Void 类是一个非实例化的类，它保持一个对表示基本类型 void 的 Class 对象的引用。</p>
-<p>类 Math 提供了常用的数学函数，比如正弦、余弦和平方根。类似地，类 String 和 StringBuffer 提供了常用的字符串操作。</p>
-<p>类 ClassLoader、Process、Runtime、SecurityManager 和 System 提供了管理类的动态加载、外部进程创建、主机环境查询（比如时间）和安全策略实施等“系统操作”。</p>
-<p>类 Throwable 包含了可能由 throw 语句抛出的对象。Throwable 的子类表示错误和异常。</p>
-<p><strong>字符编码</strong></p>
-<p>java.nio.charset.Charset 类的规范描述了字符编码的命名约定，以及每个 Java 平台实现必须支持的标准编码集。</p>
-<h2> 2 java.util</h2>
-<p><strong>简介</strong></p>
-<p>包含 collection 框架、遗留的 collection 类、事件模型、日期和时间工具、国际化和各种实用的工具类（字符串标记生成器、随机数生成器和位数组）。</p>
-<p>限于篇幅和重要性，我们这里只讨论最常用的 collection 容器类库的设计规划。</p>
-<p>Java平台包括一个集合框架。集合是代表一组对象的对象（例如经典的Vector类）。集合框架是用于表示和操作集合的统一体系结构，使集合可以独立于实现细节进行操作。</p>
-<p>集合框架的主要优点是：</p>
-<ul>
-<li>通过提供数据结构和算法来减少编程工作，因此不必自己实现它们</li>
-<li>通过提供数据结构和算法的高性能实现来提高性能。因为每个接口的各种实现都是可互换的，所以可以通过切换实现来调整程序</li>
-<li>通过建立公共语言来回传递集合，从而在不相关的API之间提供互操作性</li>
-<li>通过要求您学习多个临时集合API，减少了学习API所需的工作量</li>
-<li>通过不需要生成临时集合API，减少了设计和实现API所需的工作量</li>
-<li>通过为集合和用于操作集合的算法提供标准接口，促进软件重用</li>
-</ul>
-<p>集合框架包括：</p>
-<ul>
-<li>Collection接口。表示不同类型的集合，例如set，list和map。这些接口构成了框架的基础</li>
-<li>通用实现。集合接口的主要实现</li>
-<li>旧版实现。改造了早期版本的Vector和Hashtable的收集类，以实现集合接口</li>
-<li>特殊用途的实现。设计用于特殊情况的实现。这些实现显示非标准的性能特征，使用限制或行为</li>
-<li>并发实现。专为高度并发使用而设计的实现，下一节具体描述</li>
-<li>包装器实现。向其他实现中添加功能，例如同步</li>
-<li>便利的实现。集合接口的高性能“微型实现”</li>
-<li>抽象实现。集合接口的部分实现可简化自定义实现</li>
-<li>算法。对集合执行有用功能的静态方法，例如对列表进行排序</li>
-<li>基础设施。为集合接口提供基本支持的接口</li>
-<li>数组实用程序。原始类型和引用对象数组的实用程序函数。严格来讲，它不是集合框架的一部分，而是与集合框架同时添加到Java平台，并且依赖于某些相同的基础结构。</li>
-</ul>
-<p><strong>集合接口</strong></p>
-<p>分为两组。最基本的接口java.util.Collection具有以下子类或接口：<br>
-</p>
-<p>其他集合接口基于java.util.Map，而不是真实的集合。但是，这些接口包含集合视图操作，使它们可以作为集合进行操作。map具有以下子类：<br>
-</p>
-<p>集合接口中的许多修改方法都标记为可选。允许实现不执行这些操作中的一项或多项，如果尝试执行，则会抛出运行时异常（UnsupportedOperationException）。每个实现的文档必须指定支持哪些可选操作。引入了一些术语以帮助该规范：</p>
-<ul>
-<li>
-<p>不支持修改操作（例如添加，删除和清除）的集合称为unmodifiable。非不可修改的集合是modifiable</p>
-</li>
-<li>
-<p>另外保证不可见Collection对象中的任何更改的集合称为immutable。非不可更改的集合是mutable</p>
-</li>
-<li>
-<p>即使元素可以更改，也要保证其大小保持不变的列表称为 fixed-size。非固定大小的列表称为variable-size。</p>
-</li>
-<li>
-<p>支持快速（通常为固定时间）索引元素访问的列表称为random access列表。不支持快速索引元素访问的列表称为sequential access列表。 RandomAccess标记接口使列表能够公布它们支持随机访问的事实。这使得通用算法在应用于随机或顺序访问列表时，可以更改其行为以提供良好的性能。<br>
-一些实现限制了可以存储哪些元素（或在Maps中，键和值）。可能的限制包括要求元素：</p>
-</li>
-<li>
-<p>属于特定类型</p>
-</li>
-<li>
-<p>不为空</p>
-</li>
-<li>
-<p>服从一些任意谓词<br>
-尝试添加违反实现限制的元素会导致运行时异常，通常是ClassCastException，IllegalArgumentException或NullPointerException。尝试删除或测试是否存在违反实现限制的元素会导致异常。一些受限制的集合允许这种用法。</p>
-</li>
-</ul>
-<p><strong>集合实现</strong></p>
-<p>实现collection接口的类通常以Implementation-style Interface的形式来命名。下表总结了通用实现：<br>
-</p>
-<p>通用实现支持集合接口中的所有可选操作，并且对它们可能包含的元素没有限制。它们是不同步的，但是Collections类包含称为同步包装器的静态工厂，可用于将同步添加到许多未同步的集合中。所有新的实现都有fail-fast迭代器，该迭代器检测无效的并发修改，并且快速而干净地失败（而不是行为异常）。</p>
-<p>AbstractCollection，AbstractSet，AbstractList，AbstractSequentialList和AbstractMap类提供了核心集合接口的基本实现，以最大程度地减少实现它们所需的工作量。这些类的API文档精确地描述了每种方法的实现方式，因此，在特定实现的基本操作得以执行的情况下，实现者知道必须重写哪些方法。</p>
-<p><strong>并发容器</strong></p>
-<p>使用来自多个线程的集合的应用程序必须经过仔细地编程。通常，这称为并发编程。 Java平台包括对并发编程的广泛支持。</p>
-<p>集合是如此频繁地使用，以至于各种并发友好接口和集合的实现都包含在API中。这些类型超出了前面讨论的同步包装程序的范围，可提供并发编程中经常需要的功能。</p>
-<p>这些并发感知接口可用：<br>
-</p>
-<p>可以使用以下并发感知实现类。</p>
-<figure><figcaption>img_4.png</figcaption></figure>
-<p><strong>设计目标</strong></p>
-<p>主要设计目标是生产一种尺寸更小且更重要的是“概念重量”的API。至关重要的是，新功能与当前的Java程序员似乎并没有太大区别。它必须增加现有设施，而不是更换它们。同时，新的API必须足够强大才能提供先前描述的所有优点。</p>
-<p>为了使核心接口的数量保持较小，接口不会尝试捕获诸如可变性，可修改性和可缩放性之类的细微差别。相反，核心接口中的某些调用是可选的，从而使实现可以引发UnsupportedOperationException来指示它们不支持指定的可选操作。集合实现者必须清楚地记录实现支持哪些可选操作。</p>
-<p>为了使每个核心接口中的方法数量保持较小，接口仅在满足以下任一条件时才包含方法：</p>
-<ul>
-<li>这是真正的基本操作：可以合理定义其他基本操作的基本操作</li>
-<li>有一个令人信服的性能原因，为什么重要的实现要覆盖它</li>
-</ul>
-<p>至关重要的是，所有合理的馆藏表现形式必须能够良好地互操作。这包括数组，如果不更改语言就不能直接实现Collection接口。因此，该框架包括以下方法：使集合能够移动到数组中，将数组视为集合，将map视为集合。</p>
-<h2> 3 java.util.concurrent</h2>
-<p>从JDK1.5版本开始提供：在并发编程中很常用的实用工具类。该包涵盖几个小的、已标准化的可扩展框架，以及一些提供有用功能的类，没有这些类，这些功能会很难实现或实现起来冗长乏味。</p>
-<p>下面简要描述主要的组件。</p>
-<h3> 3.1 执行器（Executors）</h3>
-<p><strong>接口</strong></p>
-<p>Executor 是一个简单的标准化接口，用于定义类似于线程的自定义子系统，包括线程池、异步 IO 和轻量级任务框架。</p>
-<p>根据所使用的具体 Executor 类的不同，任务们可能在新创建的线程中、已有的任务执行线程中或者调用 execute() 的线程中执行，并且可能顺序或并发执行。</p>
-<ul>
-<li>ExecutorService 提供了多个完整的异步任务执行框架。</li>
-</ul>
-<figure><figcaption>img_5.png</figcaption></figure>
-<p>ExecutorService 管理任务的排队和安排，并允许受控的关闭。ScheduledExecutorService 子接口及相关的接口添加了对延迟的和定期任务执行的支持。ExecutorService 提供了安排异步执行的方法，可执行由 Callable 表示的任何函数，结果类似于 Runnable。</p>
-<p>Future 返回函数的结果，允许确定执行是否完成，并提供取消任务执行的方法。</p>
-<p>RunnableFuture 是拥有 run 方法的 Future，run 方法执行时将设置其结果。</p>
-<p><strong>实现</strong></p>
-<p>类 ThreadPoolExecutor 和 ScheduledThreadPoolExecutor 提供可调的、灵活的线程池。Executors 类提供大多数 Executor 的常见类型和配置的工厂方法，以及使用它们的几种实用工具方法。其他基于 Executor 的实用工具包括具体实现类 FutureTask，它提供了 Future 的常见可扩展实现，以及 ExecutorCompletionService 有助于协调对异步任务组的处理。</p>
-<p>ForkJoinPool类提供了一个Executor，主要用于处理ForkJoinTask及其子类的实例。这些类使用工作窃取调度程序，该任务调度程序可满足符合计算密集型并行处理中经常存在的限制的任务的高吞吐量。</p>
-<h3> 3.2 队列</h3>
-<p>ConcurrentLinkedQueue 类提供了高效的、可伸缩的、线程安全的非阻塞 FIFO 队列。ConcurrentLinkedDeque类与此类似，但是还支持Deque接口。</p>
-<p>java.util.concurrent 包中的五个实现都支持扩展的 BlockingQueue 接口。该接口定义了 put 和 take 的阻塞版本：<br>
-</p>
-<p>这些不同的类覆盖了生产者-消费者、消息传递、任务并行执行和相关并发设计的大多数常见模型的上下文。</p>
-<p>扩展接口TransferQueue及其实现LinkedTransferQueue引入了同步的传输方法（以及相关功能），生产者可以选择阻塞等待其消费者。</p>
-<p>BlockingDeque 接口继承了 BlockingQueue，以支持 FIFO 和 LIFO（基于栈）操作。LinkedBlockingDeque 类就提供了这样一个实现。</p>
-<h3> 3.3 超时</h3>
-<p>TimeUnit 类为指定和控制基于超时的操作提供了多层粒度（包括纳秒级）。该包中的大多数类除了包含不确定的等待之外，都包含了基于超时机制的操作。</p>
-<p>在使用超时的所有场景中，超时规定了在表明已超时前，该方法应等待的最少时间。超时后，实现类们会“尽力”检测超时。当然了，在检测到超时和超时后再次真正地执行线程之间可能还要经过一段不确定的时间。接受超时期参数的所有方法将小于等于 0 的值视为根本不会等待。要“永远”等待，可以使用 Long.MAX_VALUE 值。</p>
-<h3> 3.4 同步器</h3>
-<p>五个类可辅助实现常见的专用同步语法。</p>
-<ul>
-<li>Semaphore 是一个经典的并发工具</li>
-<li>CountDownLatch 是一个非常简单但又常用的工具，在持有给定数目的信号、事件或条件前一直阻塞</li>
-<li>CyclicBarrier 是一个可重置的多路同步点，在某些并行编程风格中很有用</li>
-<li>Phaser 提供了更灵活的屏障形式，可用于控制多个线程之间的分阶段计算。</li>
-<li>Exchanger 允许两个线程在一个会合点交换对象，它在多流水线设计中是有用的</li>
-</ul>
-<h3> 3.5 并发容器</h3>
-<p>除队列外，此包还提供了设计用于多线程上下文中的容器实现：</p>
-<figure><figcaption>img_7.png</figcaption></figure>
-<p>当期望许多线程访问同一个给定容器时，ConcurrentHashMap 通常优于同步的 HashMap，ConcurrentSkipListMap 通常优于同步的 TreeMap。当期望的读请求数和遍历请求远大于对list的更新时，CopyOnWriteArrayList 优于同步的 ArrayList。</p>
-<p>此包中与某些类一起使用的 “Concurrent” 前缀是一种速记，暗示着与类似的“同步化”的类有所不同。例如Hashtable 和 Collections.synchronizedMap(new HashMap()) 是同步化的，但 ConcurrentHashMap 则是“并发的（Concurrent）”。并发容器是线程安全的，但不受单个独占锁的管理。在 ConcurrentHashMap 这一特定场景下，它可以安全地允许任意次数的并发读，以及数目可调的并发写。适用场景如下：</p>
-<ul>
-<li>需要通过单个锁防止对容器的所有访问时，“同步”类是很有用的，其代价是较差的可伸缩性</li>
-<li>在期望多线程访问公共的容器的其他情况中，通常“concurrent”版本要更好</li>
-<li>当容器是未共享的，或者仅持有其他锁时容器才可访问时，非同步的普通容器则要更好。</li>
-</ul>
-<p>大多数并发容器的实现（包括大多数队列）与常规的 java.util 包中的约定也不同，因为它们的迭代器Iterators和Spliterators提供了弱一致的，而不是fast-fail的遍历：</p>
-<ul>
-<li>他们可能会与其他操作并发进行</li>
-<li>他们永远不会抛ConcurrentModificationException</li>
-<li>它们被保证可以遍历在构造时就已经存在的元素恰好一次，并且可以（但不保证）反映出构造后的任何修改。</li>
-</ul>
-<h3> 3.6 内存一致性属性</h3>
-<ul>
-<li>
-<p>Java语言规范的第 17 章定义了内存操作（例如对共享变量的读写）的 happens-before （先行发生，以下简称 HB）关系<br>
-<br>
-只有写操作HB读操作时，才保证一个线程写结果对另一个线程的读是可见的。synchronized 和 volatile 构造以及Thread.start() 和 Thread.join() 方法可以形成HB关系。尤其是：</p>
-</li>
-<li>
-<p>线程中，按照程序的顺序，前面的操作先行发生于后面的操作</p>
-</li>
-<li>
-<p>监视器锁上的解锁（退出 synchronized 块或方法）HB同一监视器锁上后续（时间概念上的）的加锁（进入synchronized 块或方法）。并且因为 happen-before 关系是可传递的，所以解锁之前的线程的所有操作 happen-before 加锁后的所有操作</p>
-</li>
-<li>
-<p>对某volatile字段的写操作HB每个后续（时间上的先后）对相同字段的读。volatile 字段的读写与进入和退出监视器具有相似的内存一致性效果，但并不需要互斥锁</p>
-</li>
-<li>
-<p>在线程对象上调用start()方法HB该启动了的线程中的任意动作</p>
-</li>
-<li>
-<p>线程中的所有操作HB从该线程上的 join 成功返回的任何其他线程</p>
-</li>
-</ul>
-<p>java.util.concurrent 中所有类的方法及其子包扩展了这些对更高级别同步的保证。尤其是：</p>
-<ul>
-<li>线程中将一个对象放入任何并发容器之前的操作 HB 从另一线程中的容器访问或移除该元素的后续操作</li>
-<li>线程中向 Executor 提交 Runnable 之前的操作 HB 其执行开始。同样适用于向 ExecutorService 提交 Callables</li>
-<li>异步计算（由 Future 接口表示）所采取的操作  HB 通过另一线程中 Future.get() 获取结果的后续的操作</li>
-<li>“释放”同步储存方法（如 Lock.unlock、Semaphore.release 和 CountDownLatch.countDown）之前的操作 happen-before 另一线程中相同同步储存对象成功“获取”方法（如 Lock.lock、Semaphore.acquire、Condition.await 和 CountDownLatch.await）的后续操作。</li>
-<li>对于通过 Exchanger 成功交换对象的每个线程对，每个线程中 exchange() 之前的操作 HB 另一线程中对应 exchange() 后续的操作。</li>
-</ul>
-<h2> 4 java.util.concurrent.locks</h2>
-<p>该包的接口和类提供了用于锁和等待条件的框架，这些条件不同于内置的同步和监视器。该框架允许使用锁和条件来实现更大的灵活性，但以更复杂的语法为代价。</p>
-<p>Lock 接口支持那些语义不同（重入、公平等）的锁规则，可以在非阻塞式结构的上下文（包括 hand-over-hand 和锁重排算法）中使用这些规则。主要的实现为 ReentrantLock。</p>
-<p>ReadWriteLock 接口以类似方式定义了一些读线程可以共享而写线程独占的锁。此包只提供了一个实现，即 ReentrantReadWriteLock，因为它适用于大部分的标准用法上下文。但程序员可以创建自己的、适用于非标准要求的实现。</p>
-<p>Condition 接口描述了可能会与锁有关联的条件变量。这些变量在用法上与使用 Object.wait 访问的隐式监视器类似，但提供了更强大的功能。需要特别指出的是，一个 Lock 可能与多个 Condition 对象关联。为了避免兼容性问题，Condition 方法的名称与对应的 Object 版本中的不同。</p>
-<p>AbstractQueuedSynchronizer 类是一个非常有用的超类，可用来定义锁以及依赖于排队阻塞线程的其他同步器。 AbstractQueuedLongSynchronizer 类提供相同的功能但扩展了对同步状态的 64 位的支持。两者都扩展了类 AbstractOwnableSynchronizer（一个帮助记录当前保持独占同步的线程的简单类）。LockSupport 类提供了更低级别的阻塞和解除阻塞支持，这对那些实现自己的定制锁的开发人员很有用。</p>
-<h2> 5 <a href="http://java.io" target="_blank" rel="noopener noreferrer">java.io</a></h2>
-<p>通过数据流、序列化和文件系统提供系统输入和输出，<a href="http://Java.io" target="_blank" rel="noopener noreferrer">Java.io</a> 包几乎包含了所有操作输入、输出需要的类。所有这些流类代表了输入的数据源和输出的目标对象。</p>
-<p>除非另有说明，否则向此包的任何类或接口中的构造方法或方法传递 null 参数时，都将抛出 NullPointerException。</p>
-<p>流可以理解为数据的序列：</p>
-<ul>
-<li>输入流，从一个源读数据</li>
-<li>输出流，向一个目标写数据<br>
-流支持很多种格式，比如：基本类型、对象、数组等。下图展示了该包的内容从数据源、操作目标等角度可大致分类如下：</li>
-</ul>
-<figure><figcaption>img_9.png</figcaption></figure>
-]]></content>
-    <category term="Java"/>
-    <published>2024-01-24T03:14:02.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Java值传递</title>
-    <id>https://ujava.cn/java/why-there-only-value-passing-in-java.html</id>
-    <link href="https://ujava.cn/java/why-there-only-value-passing-in-java.html"/>
-    <updated>2024-03-03T03:03:42.000Z</updated>
-    <summary type="html"><![CDATA[<p>开始之前，我们先来搞懂下面这两个概念：</p>
-<ul>
-<li>形参&amp;实参</li>
-<li>值传递&amp;引用传递</li>
-</ul>
-<h2> 形参&amp;实参</h2>
-<p>方法的定义可能会用到 <strong>参数</strong>（有参的方法），参数在程序语言中分为：</p>
-<ul>
-<li><strong>实参（实际参数，Arguments）</strong>：用于传递给函数/方法的参数，必须有确定的值。</li>
-<li><strong>形参（形式参数，Parameters）</strong>：用于定义函数/方法，接收实参，不需要有确定的值。</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<p>开始之前，我们先来搞懂下面这两个概念：</p>
-<ul>
-<li>形参&amp;实参</li>
-<li>值传递&amp;引用传递</li>
-</ul>
-<h2> 形参&amp;实参</h2>
-<p>方法的定义可能会用到 <strong>参数</strong>（有参的方法），参数在程序语言中分为：</p>
-<ul>
-<li><strong>实参（实际参数，Arguments）</strong>：用于传递给函数/方法的参数，必须有确定的值。</li>
-<li><strong>形参（形式参数，Parameters）</strong>：用于定义函数/方法，接收实参，不需要有确定的值。</li>
-</ul>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 值传递&amp;引用传递</h2>
-<p>程序设计语言将实参传递给方法（或函数）的方式分为两种：</p>
-<ul>
-<li><strong>值传递</strong>：方法接收的是实参值的拷贝，会创建副本。</li>
-<li><strong>引用传递</strong>：方法接收的直接是实参所引用的对象在堆中的地址，不会创建副本，对形参的修改将影响到实参。</li>
-</ul>
-<p>很多程序设计语言（比如 C++、 Pascal )提供了两种参数传递的方式，不过，在 Java 中只有值传递。</p>
-<h2> 为什么 Java 只有值传递？</h2>
-<p><strong>为什么说 Java 只有值传递呢？</strong> 不需要太多废话，我通过 3 个例子来给大家证明。</p>
-<h3> 案例 1：传递基本类型参数</h3>
-<p>代码：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>输出：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>解析：</p>
-<p>在 <code>swap()</code> 方法中，<code>a</code>、<code>b</code> 的值进行交换，并不会影响到 <code>num1</code>、<code>num2</code>。因为，<code>a</code>、<code>b</code> 的值，只是从 <code>num1</code>、<code>num2</code> 的复制过来的。也就是说，a、b 相当于 <code>num1</code>、<code>num2</code> 的副本，副本的内容无论怎么修改，都不会影响到原件本身。</p>
-<p>通过上面例子，我们已经知道了一个方法不能修改一个基本数据类型的参数，而对象引用作为参数就不一样，请看案例 2。</p>
-<h3> 案例 2：传递引用类型参数 1</h3>
-<p>代码：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>输出：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>解析：</p>
-<p>看了这个案例很多人肯定觉得 Java 对引用类型的参数采用的是引用传递。</p>
-<p>实际上，并不是的，这里传递的还是值，不过，这个值是实参的地址罢了！</p>
-<p>也就是说 <code>change</code> 方法的参数拷贝的是 <code>arr</code> （实参）的地址，因此，它和 <code>arr</code> 指向的是同一个数组对象。这也就说明了为什么方法内部对形参的修改会影响到实参。</p>
-<p>为了更强有力地反驳 Java 对引用类型的参数采用的不是引用传递，我们再来看下面这个案例！</p>
-<h3> 案例 3：传递引用类型参数 2</h3>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>输出:</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>解析：</p>
-<p>怎么回事？？？两个引用类型的形参互换并没有影响实参啊！</p>
-<p><code>swap</code> 方法的参数 <code>person1</code> 和 <code>person2</code> 只是拷贝的实参 <code>xiaoZhang</code> 和 <code>xiaoLi</code> 的地址。因此， <code>person1</code> 和 <code>person2</code> 的互换只是拷贝的两个地址的互换罢了，并不会影响到实参 <code>xiaoZhang</code> 和 <code>xiaoLi</code> 。</p>
-<h2> 引用传递是怎么样的？</h2>
-<p>看到这里，相信你已经知道了 Java 中只有值传递，是没有引用传递的。<br>
-但是，引用传递到底长什么样呢？下面以 <code>C++</code> 的代码为例，让你看一下引用传递的庐山真面目。</p>
-<div class="language-C++ line-numbers-mode" data-ext="C++"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>输出结果：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>分析：可以看到，在 <code>incr</code> 函数中对形参的修改，可以影响到实参的值。要注意：这里的 <code>incr</code> 形参的数据类型用的是 <code>int&amp;</code> 才为引用传递，如果是用 <code>int</code> 的话还是值传递哦！</p>
-<h2> 为什么 Java 不引入引用传递呢？</h2>
-<p>引用传递看似很好，能在方法内就直接把实参的值修改了，但是，为什么 Java 不引入引用传递呢？</p>
-<p><strong>注意：以下为个人观点看法，并非来自于 Java 官方：</strong></p>
-<ol>
-<li>出于安全考虑，方法内部对值进行的操作，对于调用者都是未知的（把方法定义为接口，调用方不关心具体实现）。你也想象一下，如果拿着银行卡去取钱，取的是 100，扣的是 200，是不是很可怕。</li>
-<li>Java 之父 James Gosling 在设计之初就看到了 C、C++ 的许多弊端，所以才想着去设计一门新的语言 Java。在他设计 Java 的时候就遵循了简单易用的原则，摒弃了许多开发者一不留意就会造成问题的“特性”，语言本身的东西少了，开发者要学习的东西也少了。</li>
-</ol>
-<h2> 总结</h2>
-<p>Java 中将实参传递给方法（或函数）的方式是 <strong>值传递</strong>：</p>
-<ul>
-<li>如果参数是基本类型的话，很简单，传递的就是基本类型的字面量值的拷贝，会创建副本。</li>
-<li>如果参数是引用类型，传递的就是实参所引用的对象在堆中地址值的拷贝，同样也会创建副本。</li>
-</ul>
-]]></content>
-    <category term="Java"/>
-    <published>2024-01-24T01:45:54.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">几种常见web容器</title>
-    <id>https://ujava.cn/highfreq/container.html</id>
-    <link href="https://ujava.cn/highfreq/container.html"/>
-    <updated>2024-03-03T03:00:03.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 简介</h2>
-<p>应用服务器：tomcat</p>
-<p>常用应用服务器：WebLogic、WebSphere、Apache、JBoss、GlassFish</p>
-<p>Jboss作为Java EE应用服务器，它不但是Servlet容器，而且是EJB容器，从而受到企业级开发人员的欢迎，从而弥补了Tomcat只是一个Servlet容器的缺憾。</p>
-<p>在商用应用服务器里主要有：Weblogic、Websphere，其中Weblogic我也使用过很长一段时间，当时也只用其当Servlet容器，然而就在同等条件下，在性能及易用性等方面，要比Tomcat优秀很多。</p>
-<p>glassfish是Sun公司推出的Java EE服务器，一个比较活跃的开源社区，不断的通过社区的反馈来提高其的可用性，经过glassfish<br>
-v1、glassfish v2 到今天的glassfish v3，它已经走向成熟。Glassfish是一个免费、开放源代码的应用服务，它实现了Java EE 5，Java EE 5<br>
-平台包括了以下最新技术：EJB 3.0、JSF 1.2、Servlet 2.5、JSP 2.1、JAX-WS 2.0、JAXB 2.0、 Java Persistence 1.0、Common Annonations<br>
-1.0、StAX<br>
-1.0等。支持集群，通过内存中会话状态复制，增强了部署体系结构的可用性与可伸缩性，它对集群有着很好的支持，可以简单到通过添加机器，就可轻松的提高网站的带负载能力。在解析能力方面，它对html的吞吐能力与apache服务器不分上下，就是tomcat所不能比的，支持目录部署，热部署，解决了tomcat对热部署能力的缺陷。在版本方面做的更加人性化，有开发时用的简化版，专门用于部署web项目的版本，还要完全符合j2ee标准的版本。</p>]]></summary>
-    <content type="html"><![CDATA[<h2> 简介</h2>
-<p>应用服务器：tomcat</p>
-<p>常用应用服务器：WebLogic、WebSphere、Apache、JBoss、GlassFish</p>
-<p>Jboss作为Java EE应用服务器，它不但是Servlet容器，而且是EJB容器，从而受到企业级开发人员的欢迎，从而弥补了Tomcat只是一个Servlet容器的缺憾。</p>
-<p>在商用应用服务器里主要有：Weblogic、Websphere，其中Weblogic我也使用过很长一段时间，当时也只用其当Servlet容器，然而就在同等条件下，在性能及易用性等方面，要比Tomcat优秀很多。</p>
-<p>glassfish是Sun公司推出的Java EE服务器，一个比较活跃的开源社区，不断的通过社区的反馈来提高其的可用性，经过glassfish<br>
-v1、glassfish v2 到今天的glassfish v3，它已经走向成熟。Glassfish是一个免费、开放源代码的应用服务，它实现了Java EE 5，Java EE 5<br>
-平台包括了以下最新技术：EJB 3.0、JSF 1.2、Servlet 2.5、JSP 2.1、JAX-WS 2.0、JAXB 2.0、 Java Persistence 1.0、Common Annonations<br>
-1.0、StAX<br>
-1.0等。支持集群，通过内存中会话状态复制，增强了部署体系结构的可用性与可伸缩性，它对集群有着很好的支持，可以简单到通过添加机器，就可轻松的提高网站的带负载能力。在解析能力方面，它对html的吞吐能力与apache服务器不分上下，就是tomcat所不能比的，支持目录部署，热部署，解决了tomcat对热部署能力的缺陷。在版本方面做的更加人性化，有开发时用的简化版，专门用于部署web项目的版本，还要完全符合j2ee标准的版本。</p>
-<h2> webSphere</h2>
-<p>WebSphere是 IBM 的集成软件平台。它包含了编写、运行和监视全天候的工业强度的随需应变 Web<br>
-应用程序和跨平台、跨产品解决方案所需要的整个中间件基础设施，如服务器、服务和工具。WebSphere 提供了可靠、灵活和健壮的集成软件。</p>
-<h2> JBoss</h2>
-<p>JBoss是一个管理EJB的容器和服务器，支持EJB1.1、EJB2.0和EJB3.0的规范。但JBoss核心服务不包括支持servlet/JSP的WEB容器，一般与Tomcat或Jetty绑定使用。2006年,Jboss公司被Redhat公司收购。</p>
-<h2> Tomcat</h2>
-<p>Tomcat是Apache 软件基金会的Jakarta 项目中的一个核心项目，由Apache、Sun 和其他一些公司及个人共同开发而成。由于有了Sun<br>
-的参与和支持，最新的Servlet 和JSP 规范总是能在Tomcat 中得到体现，Tomcat 5 支持最新的Servlet 2.4 和JSP 2.0 规范。因为Tomcat<br>
-技术先进、性能稳定，而且免费，因而深受Java 爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web 应用服务器。</p>
-<p>JBoss与Tomcat的是完全开源的</p>
-<p>WebLogic与WebSphere都是对业内多种标准的全面支持，包括EJB、JSB、JMS、JDBC、XML和WML，使Web应用系统的实施更为简单，并且保护了投资，同时也使基于标准的解决方案的开发更加简便。</p>
-<h4> 扩展性的不同：</h4>
-<p>WebLogic和WebSphere都是以其高扩展的架构体系闻名于业内，包括客户机连接的共享、资源 pooling以及动态网页和EJB组件群集。</p>
-<h4> 应用范围的区别：</h4>
-<p>Tomcat 是一个小型的轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。</p>
-<p>WebLogic和WebSphere是商业软件，功能齐全强大，主要应用于大型企业的大型项目。</p>
-<p>JBOSS 主要应用于EJB服务的中小型公司。</p>
-<h4> JBoss还具有如下六大优点：</h4>
-<p>1、JBoss是免费的，开放源代码J2EE的实现，它通过LGPL许可证进行发布。</p>
-<p>2、JBoss需要的内存和硬盘空间比较小。</p>
-<p>3、安装非常简单。先解压缩JBoss打包文件再配置一些环境变量就可以了。</p>
-<p>4、JBoss能够"热部署"，部署BEAN只是简单拷贝BEAN的JAR文件到部署路径下就可以了。如果没有加载就加载它；如果已经加载了就卸载掉，然后LOAD这个新的。</p>
-<p>5、JBoss与Web服务器在同一个Java虚拟机中运行，Servlet调用EJB不经过网络，从而大大提高运行效率，提升安全性能。</p>
-<p>6、用户可以直接实施J2EE-EAR，而不是以前分别实施EJB-JAR和Web-WAR，非常方便。</p>
-<p>JBoss的安装和配置可以直接拷贝使用，但是要改动 %JBoss-HOME%\bin\run.bat里JAVA-HOME的设置，改成本机JDK的目录。运行run.bat来启动JBoss</p>
-<h2> Weblogic</h2>
-<p>WebLogic是美国bea公司出品的一个application<br>
-server确切的说是一个基于j2ee架构的中间件，webserver是用来构建网站的必要软件用来解析发布网页等功能，它是用纯java开发的。weblogic本来不是由bea发明的，是它从别人手中买过来，然后再加工扩展。目前weblogic在世界application<br>
-server市场上占有最大的份额，其他还有象IBM的websphere，免费的tomcat、resin等中间件。</p>
-<p>BEA WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。将Java的动态功能和Java<br>
-Enterprise标准的安全性引入大型网络应用的开发、集成、部署和管理之中。</p>
-<p>BEA WebLogic Server拥有处理关键Web应用系统问题所需的性能 、可扩展性和高可用性。</p>
-<p>与BEA WebLogic Commerce ServerTM配合使用， BEA WebLogic Server可为部署适应性个性化电子商务应用系统提供完善的解决方案。</p>
-<p>BEA WebLogic Server具有开发和部署关键任务电子商务Web应用系统 所需的多种特色和优势</p>
-<p>WebLogic: WebLogic<br>
-是一套基于JAVA功能强大的电子商务套件，提供了许多功能强大的中间件以方便编程人员编写的JSP、SERVLET等电子商务应用，可以为企业提供一个完整的商务应用解决方案。不适合开发阶段，太慢了，适合于运行环境（收费）。</p>
-]]></content>
-    <category term="设计高频"/>
-    <published>2023-11-29T11:50:17.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">系统总体结构设计</title>
-    <id>https://ujava.cn/highfreq/overall.html</id>
-    <link href="https://ujava.cn/highfreq/overall.html"/>
-    <updated>2024-03-03T03:00:03.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 简介</h2>
-<p>系统设计工作应该自顶向下地进行。首先设计总体结构，然后再逐层深入，直至进行每一个模块的设计。总体设计主要是指在系统分析的基础上，对整个系统的划分（子系统）、机器设备（包括软、硬设备）的配置、数据的存贮规律以及整个系统实现规划等方面进行合理的安排。</p>
-<h2> 一、系统设计的任务</h2>
-<ol>
-<li>系统设计的概念</li>
-</ol>
-<p>系统设计又称为物理设计，是开发管理信息系统的第二阶段，系统设计通常可分为两个阶段进行，首先是总体设计，其任务是设计系统的框架和概貌，并向用户单位和领导部门作详细报告并认可，在此基础上进行第二阶段――详细设计，这两部分工作是互相联系的，需要交叉进行，本章将这两个部分内容结合起来进行介绍。</p>]]></summary>
-    <content type="html"><![CDATA[<h2> 简介</h2>
-<p>系统设计工作应该自顶向下地进行。首先设计总体结构，然后再逐层深入，直至进行每一个模块的设计。总体设计主要是指在系统分析的基础上，对整个系统的划分（子系统）、机器设备（包括软、硬设备）的配置、数据的存贮规律以及整个系统实现规划等方面进行合理的安排。</p>
-<h2> 一、系统设计的任务</h2>
-<ol>
-<li>系统设计的概念</li>
-</ol>
-<p>系统设计又称为物理设计，是开发管理信息系统的第二阶段，系统设计通常可分为两个阶段进行，首先是总体设计，其任务是设计系统的框架和概貌，并向用户单位和领导部门作详细报告并认可，在此基础上进行第二阶段――详细设计，这两部分工作是互相联系的，需要交叉进行，本章将这两个部分内容结合起来进行介绍。</p>
-<p>系统设计是开发人员进行的工作，他们将系统设计阶段得到的目标系统的逻辑模型转换为目标系统的物理模型，该阶段得到工作成果――系统设计说明书是下一个阶段系统实施的工作依据。</p>
-<ol start="2">
-<li>系统设计的主要内容</li>
-</ol>
-<p>系统设计的主要任务是进行总体设计和详细设计。下面分别说明它们的具体内容。</p>
-<p>(1) 总体设计</p>
-<p>总体设计包括系统模块结构设计和计算机物理系统的配置方案设计。</p>
-<ol>
-<li>系统模块结构设计</li>
-</ol>
-<p>系统模块结构设计的任务是划分子系统，然后确定子系统的模块结构，并画出模块结构图。在这个过程中必须考虑以下几个问题：</p>
-<p>如何将一个系统划分成多个子系统；</p>
-<p>每个子系统如何划分成多个模块；</p>
-<p>如何确定子系统之间、模块之间传送的数据及其调用关系；</p>
-<p>如何评价并改进模块结构的质量。</p>
-<ol start="2">
-<li>计算机物理系统配置方案设计</li>
-</ol>
-<p>在进行总体设计时，还要进行计算机物理系统具体配置方案的设计，要解决计算机软硬件系统的配置、通信网络系统的配置、机房设备的配置等问题。计算机物理系统具体配置方案要经过用户单位和领导部门的同意才可进行实施。</p>
-<p>开发管理信息系统的大量经验教训说明，选择计算机软硬件设备不能光看广告或资料介绍，必须进行充分的调查研究，最好应向使用过该软硬件设备的单位了解运行情况及优缺点，并征求有关专家的意见，然后进行论证，最后写出计算机物理系统配置方案报告。</p>
-<p>从我国的实际情况看，不少单位是先买计算机然后决定开发。这种不科学的、盲目的做法是不可取的，它会造成极大浪费。因为，计算机更新换代是非常快的，就是在开发初期和在开发的中后期系统实施阶段购买计算机设备，价格差别就会很大。因此，在开发管理信息系统过程中应在系统设计的总体设计阶段才具体设计计算机物理系统的配置方案。</p>
-<p>(2) 详细设计</p>
-<p>在总体设计基础上，第二步进行的是详细设计，主要有处理过程设计以确定每个模块内部的详细执行过程，包括局部数据组织、控制流、每一步的具体加工要求等，一般来说，处理过程模块详细设计的难度已不太大，关键是用一种合适的方式来描述每个模块的执行过程，常用的有流程图、问题分析图、IPO图和过程设计语言等；除了处理过程设计，还有代码设计、界面设计、数据库设计、输入输出设计等。</p>
-<p>(3) 编写系统设计说明书</p>
-<p>系统设计阶段的结果是系统设计说明书，它主要由模块结构图、模块说明书和其它详细设计的内容组成。</p>
-<h2> 系统设计的方法与工具</h2>
-<p>系统设计的工作复杂又细致，总体设计阶段需要进行系统模块结构设计，要将一个大系统分解成不同层次、多个模块组成的系统，在详细设计阶段要在模块结构设计的基础上，给出每个模块实现方法的细节，并对模块的输入、输出和处理过程作详细描述，以便在系统实施阶段进行程序设计时可以把这个描述直接“翻译”成用某种程序设计语言书写的程序。系统设计在技术上有相当的难度，为此需要有一定的设计方法和设计工具来指导。70年代以来，出现了多种设计方法，其中结构化设计方法是较为典型的方法，本章将对该设计方法进行论述并介绍几个常用的设计工具。</p>
-<h2> 一、结构化设计的方法</h2>
-<p>结构化设计（STRUCTURED DESIGN, 简称SD)<br>
-方法是使用最广的一种设计方法，由美国IBM公司的W·STEVENS、G·MYERS和·CONSTANTINE等人提出。该方法适合于软件系统的总体设计和详细设计，特别是将一个复杂的系统转换成模块化结构系统，该方法具有它的优势。在使用过程中可将结构化设计方法与结构化分析（SA)<br>
-方法及编程阶段的结构化程序设计方法(SP)前后衔接起来，SD方法具有以下特点：</p>
-<p>1．相对独立、功能单一的模块结构</p>
-<p>结构化设计的基本思想是将系统设计成由多个相对独立、功能单一的模块组成的结构。由于模块之间相对独立，每一模块就可以单独地被理解、编写、测试、排错和修改,从而有效地防止错误在模块之间扩散蔓延，提高了系统的质量(<br>
-可维护性、可靠性等)。因此，大大简化了系统研制开发的工作。</p>
-<p>2．“块内联系大、块间联系小”的模块性能标准</p>
-<p>“模块内部联系要大，模块之间联系要小”，这是结构化设计中衡量模块“相对独立”性能的标准。事实上，块内联系和块间联系是同一件事的两个方面。系统中各组成成分之间是有联系的，若把联系密切的成分组织在同一模块中，块内联系高了，块间联系自然就少了。反之，若把密切相关的一些组成成分分散在各个模块中，势必造成很高的块间联系，这将影响系统的可维护性。所以，在系统设计过程中一定要以结构化设计的模块性能标准为指导。</p>
-<p>3．采用模块结构图的描述方式</p>
-<p>结构化设计方法使用的描述方式是模块结构图。</p>
-<h2> 系统模块结构设计</h2>
-<p>总体设计的另外一个主要内容是合理地进行系统模块结构的分析和定义，将一个复杂的系统设计转为若干个子系统和一系列基本模块的设计，并通过模块结构图把分解的子系统和一个个模块按层次结构联系起来。下面来介绍如何进行模块的分解、如何从数据流图导出模块结构图以及模块结构图的改进。</p>
-<h4> 一、模块分解的原则和依据</h4>
-<p>系统逻辑模型中数据流图中的模块是逻辑处理模块，模型中没有说明模块的物理构成和实现途径，同时也看不出模块的层次分解关系，为此在系统结构设计中要将数据流图上的各个逻辑处理模块进一步分解，用模块结构图确定系统的层次结构关系，并将系统的逻辑模型转变为物理模型。</p>
-<ol>
-<li>“耦合小，内聚大”的基本原则</li>
-</ol>
-<p>在结构化设计中，采用自顶向下，逐步细化的方法将系统分解成为一些相对独立、功能单一的模块。如何度量模块之间的独立性呢？</p>
-<p>在一个管理信息系统中，系统的各组成部分之间总是存在着各种联系的，将系统或子系统划分成若干模块，则一个模块内部的联系就是块内联系，而穿越模块边界的联系就是块间联系。由于模块之间的互相联系越多，模块的独立性就越少，因此，引入模块耦合和内聚的概念。</p>
-<p>耦合表示模块之间联系的程度。紧密耦合表示模块之间联系非常强，松散耦合表示模块之间联系比较弱，非耦合则表示模块之间无任何联系，是完全独立的。</p>
-<p>内聚表示模块内部各成分之间的联系程度。</p>
-<p>一般说来，在系统中各模块的内聚越大，则模块间的耦合越小。但这种关系并不是绝对的。耦合小使得模块间尽可能相对独立，从而各模块可以单独开发和维护。内聚大使得模块的可理解性和维护性大大增强。因此，在模块的分解中应尽量减少模块的耦合，力求增加模块的内聚。</p>
-<ol start="2">
-<li>对子系统或模块进行划分的依据</li>
-</ol>
-<p>一个合理的子系统或模块划分，应该是内部联系强，子系统或模块间尽可能独立，接口明确、简单，尽量适应用户的组织体系，有适当的共用性。也就是上面所说的“耦合小，内聚大”。按照结构化设计的思想，对模块或子系统进行划分的依据通常有以下几种：</p>
-<p>(1)按逻辑划分，把相类似的处理逻辑功能放在一个子系统或模块里。例如，把“对所有业务输入数据进行编辑”的功能放在一个子系统或模块里。那么不管是库存、还是财务，只要有业务输入数据都由这个子系统或模块来校错、编辑。</p>
-<p>(2)按时间划分，把要在同一时间段执行的各种处理结合成一个子系统或模块。</p>
-<p>(3)按过程划分，即按工作流程划分。从控制流程的角度看，同一子系统或模块的许多功能都应该是相关的。</p>
-<p>(4)按通信划分，把相互需要较多通讯的处理结合成一个子系统或模块。这样可减少子系统间或模块间的通讯，使接口简单。</p>
-<p>(5)按职能划分，即按管理的功能。例如，财务、物资、销售子系统，或输入记帐凭证、计算机优解子系统或模块等等。</p>
-<p>一般来说，按职能划分子系统，按逻辑划分模块的方式是比较合理和方便的</p>
-<h2> 详细设计</h2>
-<p>进行了系统的总体设计后即可在此基础上进行系统的详细设计了，即各种输入、输出、处理和数据存储等的详细设计。下面分别介绍详细设计的内容。</p>
-<h4> 一、代码设计</h4>
-<p>代码是用来表示事物名称、属性和状态等的符号。在管理信息系统中，代码是人和机器的共同语言，是系统进行信息分类、校对、统计和检索的依据。代码设计就是要设计出一套能为系统各部门公用的、优化的代码系统，这是实现计算机管理的一个前提条件。</p>
-<ol>
-<li>代码设计的原则</li>
-</ol>
-<p>代码设计是一项重要的工作，合理的编码结构是使管理信息系统具有生命力的重要因素。设计代码的基本原则是：</p>
-<p>(1) 具备唯一确定性。每一个代码都仅代表唯一的实体或属性。</p>
-<p>(2) 标准化与通用性。凡国家和主管部门对某些信息分类和代码有统一规定和要求的，则应采用标准形式的代码，以使其通用化。</p>
-<p>(3) 可扩充且易修改。要考虑今后的发展，为增加新代码留有余地。当某个代码在条件或代表的实体改变时，容易进行变更。</p>
-<p>(4) 短小精悍即选择最小值代码。代码的长度会影响所占据的内存空间、处理速度以及输入时的出错概率，因此要尽量短小。</p>
-<p>(5) 具有规律性、便于编码和识别。代码应具有逻辑性强，直观性好的特点，便于用户识别和记忆。</p>
-<ol start="2">
-<li>分类方法</li>
-</ol>
-<p>目前最常用的分类方案有两种，一种是线分类方法，一种是面分类方法。在实际应用中根据具体情况各有其不同的用途。</p>
-<p>线分类方法：首先给定母项，然后下分若干子项，由对象的母项分大集合，由大集合确定小集合，最后落实到具体对象</p>
-<p>特点：结构清晰，容易识别和记忆，易查找；适应于手工系统；</p>
-<p>缺点：结构不灵活，柔性差。</p>
-<p>线分类时要掌握两个原则：唯一性和不交叉性。</p>
-<p>例：公司生产组织结构。</p>
-<p>面分类方法：它主要从面的角度来考虑分类</p>
-<p>面分类的特点：</p>
-<p>柔性好，面上的增、删、改很容易；</p>
-<p>可实现按任意组配面的信息检索，对机器处理有良好的适应性；</p>
-<p>缺点是不易直观识别，不便于记忆。</p>
-<p>系统设计报告</p>
-<p>系统设计阶段的成果是系统设计报告， 其主要是各种设计方案和设计图表，它是下一步系统实现的基础。</p>
-<h4> 一、系统设计的成果</h4>
-<p>系统设计阶段的成果归纳起来一般有 (点击这里观看“各开发环节之间的关系”动画演示)：</p>
-<p>1.系统总体结构图（包括总体结构图，子系统结构图，计算机流程图等）。</p>
-<p>2.系统设备配置图（系统设备配置图： 主要是计算机系统图，设备在各生产岗位的分布图，主机、网络、终端联系图等）。</p>
-<p>3.系统分布编码方案（分类方案、编码系统）。</p>
-<p>4.数据库结构图（DB的结构，主要指表与表之间的结构，表内部结构（字段、域、数据字典等）。</p>
-<p>5.HIPO图（层次化模块控制图、IPO图等等）。</p>
-<p>6.系统详细设计方案说明书。</p>
-<h2> 二、系统设计说明书的组成</h2>
-<ol>
-<li>引言</li>
-</ol>
-<p>(1) 摘要 系统的目标名称和功能等的说明</p>
-<p>(2) 背景</p>
-<ul>
-<li>项目开发者</li>
-<li>用户</li>
-<li>本项目和其它系统或机构的关系和联系</li>
-</ul>
-<p>(3) 系统环境与限制</p>
-<ul>
-<li>硬件、软件和运行环境方面的限制</li>
-<li>保密和安全的限制</li>
-<li>有关系统软件文本</li>
-<li>有关网络协议标准文本</li>
-</ul>
-<p>(4) 参考资料和专门术语说明</p>
-<h2> 2.系统设计方案</h2>
-<p>(1) 模块设计</p>
-<ul>
-<li>系统的模块结构图</li>
-<li>各个模块的IPO图(包括各模块的名称、功能、调用关系、局部数据项和详细的算法说明等)</li>
-</ul>
-<p>(2) 代码设计</p>
-<p>各类代码的类型、名称、功能、使用范围和使用要求等的设计说明书</p>
-<p>(3) 输入设计</p>
-<p>输入项目</p>
-<p>输入人员(指出所要求的输入操作人员的水平与技术专长，说明与输入数据有关的接口软件及其来源)</p>
-<p>主要功能要求(从满足正确、迅速、简单、经济、方便使用者等方面达到要求的说明)</p>
-<p>输入校验(关于各类输入数据的校验方法的说明)</p>
-<p>(4) 输出设计</p>
-<p>输出项目</p>
-<p>输出接受者</p>
-<p>输出要求(所用设备介质、输出格式、数值范围和精度要求等)</p>
-<p>(5) 文件(数据库)设计说明</p>
-<p>概述(目标、主要功能)</p>
-<p>需求规定(精度、有效性、时间要求及其它专门要求)</p>
-<p>运行环境要求(设备支撑软件，安全保密等要求)</p>
-<p>逻辑结构设计(有关文件及其记录、数据项的标识、定义、长度和它们之间的关系)</p>
-<p>物理结构设计(有关文件的存贮要求、访问方法、存贮单位、设计考虑和保密处理等)</p>
-<p>(6) 模型库和方法库设计(本系统所选用的数学模型和方法以及简要说明)</p>
-<p>(7) 安全保密设计</p>
-<p>(8) 物理系统配置方案报告</p>
-<p>硬件配置设计</p>
-<p>通信与网络配置设计</p>
-<p>软件配置设计</p>
-<p>机房配置设计</p>
-<p>(9) 系统实施方案及说明</p>
-<p>实施方案</p>
-<p>实施计划(包括工作任务的分解、进度安排和经费预算)</p>
-<p>实施方案的审批(说明经过审批的实施方案概况和审批人员的姓名)</p>
-<p>3.案例</p>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>模块名称</th>
-<th>主要用途</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>无线寻呼管理信息系统-系统设计说明书</td>
-<td>研究开发5-10万用户寻呼机管理信息系统，它可以进行普通寻呼服务；漫游寻呼服务；群呼服务；试机服务；定时服务；系统管理；运行管理。</td>
-</tr>
-<tr>
-<td>2</td>
-<td>库存管理系统-系统设计说明书</td>
-<td>研发库存控制系统的主要目的:1）为顾客订货提供更好的服务；2）控制库存水平；3）决定向厂家订货的时间和批量。</td>
-</tr>
-<tr>
-<td>3</td>
-<td>百货商店业务管理信息系统-系统设计</td>
-<td>实现登记、整理数据，处理核对顾客订货单；向经理提供各种业务统计报表；提供各级查询；销售、采购、会计各部门的业务数据处理实现自动化。</td>
-</tr>
-<tr>
-<td>4</td>
-<td>铁道财务会计管理信息系统-系统设计</td>
-<td>运用系统的方法以计算机和现代通信技术为基本信息处理手段和工具的，能为全国铁道财务会计核算、管理、决策提供信息服务的人—机系统。</td>
-</tr>
-<tr>
-<td>5</td>
-<td>高校选课辅助决策</td>
-<td>本选课系统能够使学生在INTERNET上自主、便捷、准确地进行全校性课程选择的一种软件。学生在选择选修课前，可以上网进行查询，当学生输入其学号与密码后，系统便调出其所有相关信息，包括已修课程、已修课程的成绩、专业培养计划、全校性可选课程，系统进行综合分析后，得到一些可行的方案，供选课学生参考，并提出合理建议。</td>
-</tr>
-<tr>
-<td>6</td>
-<td>条形材料选材优化</td>
-<td>要制造器件,必须先制造一定的零件,而这些零件又由某种原材料截取而得到。例如：用某一种条形材料锯成数种需要的零件，求最少的用料数量。使用运筹学线性规划的思想和解决方法。</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    <category term="设计高频"/>
-    <published>2023-11-23T10:50:49.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">设计注意事项一</title>
-    <id>https://ujava.cn/highfreq/attention1.html</id>
-    <link href="https://ujava.cn/highfreq/attention1.html"/>
-    <updated>2024-03-03T03:00:03.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 简介</h2>
-<h2> 架构的本质</h2>
-<p>其实总结下来就一句话：<strong>架构本质上其实就是一种指导型的约束，约定整体和部分、部分和部分之间的关系，以使整体更加稳定，更加可靠。</strong></p>
-<p>分为三部分：</p>
-<ul>
-<li>整体：部分的组成，强调合力。</li>
-<li>规则：强调部分之前有关联关系，有规则，有约束。</li>
-<li>通信：强调部分之间有往来，有交互。</li>
-</ul>
-<figure><figcaption>img_18.png</figcaption></figure>
-<h2> 架构的分类</h2>
-<p>实际上架构有很多种类型，比如业务架构，应用架构，技术架构，数据架构等，甚至单个架构，我们站在不同的角度上，也会有不同的看法，其中的复杂度也是各不一样的。</p>]]></summary>
-    <content type="html"><![CDATA[<h2> 简介</h2>
-<h2> 架构的本质</h2>
-<p>其实总结下来就一句话：<strong>架构本质上其实就是一种指导型的约束，约定整体和部分、部分和部分之间的关系，以使整体更加稳定，更加可靠。</strong></p>
-<p>分为三部分：</p>
-<ul>
-<li>整体：部分的组成，强调合力。</li>
-<li>规则：强调部分之前有关联关系，有规则，有约束。</li>
-<li>通信：强调部分之间有往来，有交互。</li>
-</ul>
-<figure><figcaption>img_18.png</figcaption></figure>
-<h2> 架构的分类</h2>
-<p>实际上架构有很多种类型，比如业务架构，应用架构，技术架构，数据架构等，甚至单个架构，我们站在不同的角度上，也会有不同的看法，其中的复杂度也是各不一样的。</p>
-<h2> 业务架构</h2>
-<p>业务架构是指企业或机构的业务逻辑、流程、组织结构等方面的设计。它着重于企业业务运营的需求和目标，将业务需求转化为技术解决方案。业务架构的设计需要考虑企业的战略规划、组织结构、业务流程、客户需求等多个方面。</p>
-<p>例如：一个银行的业务架构设计需要考虑银行的基本业务逻辑、流程和组织结构，如存款、贷款、投资、支付等，以及银行的安全性、可靠性和效率等方面的需求。</p>
-<h2> 应用架构</h2>
-<p>应用架构是指企业或机构的信息系统中的应用程序、系统、服务等方面的设计。它着重于解决企业业务运营中的具体问题，将业务需求转化为具体的应用程序。应用架构的设计需要考虑企业的业务需求、用户体验、系统性能、安全风险等多个方面。</p>
-<p>例如：一个电商网站的应用架构设计需要考虑用户购物、订单管理、库存管理、支付等多个应用程序的设计，以及这些应用程序之间的交互和集成。</p>
-<h2> 技术架构</h2>
-<p>技术架构是指企业或机构的信息系统中的技术实现、系统架构、软件设计等方面的设计。它着重于解决企业业务运营中的技术问题，如系统的稳定性、可扩展性、可维护性等。</p>
-<p>例如：一个电商网站的技术架构设计需要考虑系统的负载均衡、容错容灾、CDN缓存、自动化部署等多个方面的技术实现。</p>
-<h2> 数据架构</h2>
-<p>数据架构是指企业或机构的信息系统中的数据存储、数据处理、数据安全等方面的设计。它着重于解决企业业务运营中的数据问题，如数据的一致性、完整性、安全性等。</p>
-<p>例如：一个电商网站的数据架构设计需要考虑数据的分层存储、数据备份和恢复、数据加密和权限管理等多个方面的设计，以确保数据的安全和可靠性。</p>
-<h2> 架构设计要考虑的因素</h2>
-<p>架构设计过程中我们要考虑的因素，整体可以分为两大类，一类是功能性因素，一类是非功能性因素。</p>
-<h2> 功能性因素</h2>
-<p>无论什么架构设计，我们首先是要考虑必须满足我们的业务需求，否则我们的设计都是空中楼阁。功能需求会直接决定我们的业务架构设计。所以我们的架构必须完整性地，正确地对业务实现支撑。</p>
-<h2> 非功能性因素</h2>
-<p>满足了功能性因素以后，我们就得要考虑怎么能够稳定地，可靠地，可持续性地支持我们的业务功能，比如性能，可靠性，扩展性，兼容性等等。</p>
-<ul>
-<li>可靠性
-<ul>
-<li>为了更好的服务于功能，我们需要确保架构能够稳定、高效的运行。不会时不时的出现服务崩溃或者不可用的情况。</li>
-</ul>
-</li>
-<li>可用性
-<ul>
-<li>同样的，服务对外要始终处于可用的状态，即使单个服务实例出现问题，我们依然可以正常的对外提供服务。</li>
-</ul>
-</li>
-<li>扩展性
-<ul>
-<li>功能性需求不是一层不变的，尤其在当今盛行敏捷的时代，需求不是一次性提出的。我们需要对系统、服务的整体能力有全面的定位和把控。这就需要我们的架构在新的需求出现的时候，可以方便的进行扩展支持。</li>
-</ul>
-</li>
-<li>治理能力
-<ul>
-<li>好的架构一定是方便运营、管理和监控的。甚至微观到工程管理，代码一定是易于维护、扩展、协同的。</li>
-</ul>
-</li>
-<li>响应性能
-<ul>
-<li>一般的，功能性需求都会对性能有一定的预期。这个业务要我们在架构上做很多工作，比如读写分离、缓存、异步等等的介入，以满足整体架构的响应能力。</li>
-</ul>
-</li>
-</ul>
-<figure><figcaption>img_19.png</figcaption></figure>
-<h2> 设计原则</h2>
-<ul>
-<li>价值为王：系统架构设计应该以实现业务价值为目标，始终关注用户需求和业务场景，确保设计出的系统能够满足用户需求和业务场景，为企业创造价值。</li>
-<li>以终为始：在进行系统架构设计时，需要明确系统的目标和愿景，并以此为起点，进行设计和实现。以确保系统的设计和实现都是为了实现业务价值，满足用户需求。</li>
-<li>分治原则：将系统划分为多个子系统或模块，每个子系统或模块都可以独立地进行开发、测试、部署和维护。这样可以降低系统的复杂度，提高系统的可维护性和可扩展性。</li>
-<li>服务自治：每个服务都应该具备独立的能力，能够独立地进行开发、测试、部署和维护。这样可以提高服务的可用性和可靠性，降低系统的耦合度。</li>
-<li>拥抱变化：系统架构设计应该能够适应业务需求的变化和市场的变化，具备快速响应和灵活应变的能力。</li>
-<li>系统安全性：系统架构设计应该充分考虑系统的安全性，包括数据安全、应用安全、系统安全等方面，确保系统的安全性和稳定性。</li>
-<li>不作不死：系统架构设计应该遵循“最小化变更范围”原则，避免过度设计和复杂度的出现，从而提高系统的可维护性和可扩展性。</li>
-</ul>
-<h2> 常见的架构设计方案</h2>
-<p>之前比较流行的是MVC，MVC有很多的优点，但是缺点也不少：</p>
-<ul>
-<li>视图与控制器的连接过紧，视图如果不依赖控制器，那么它的应用就会十分有限，这妨碍了他们的独立。</li>
-<li>模型对视图数据的访问效率较低，工作量大，并且有一些高级的界面工具或构造器不支持MVC框架。</li>
-<li>MVC架构使得我们面向视图开发，但是视图的变化是不可控的，容易受到用户主观的影响。同时复杂系统必然存在纷繁复杂的依赖，依赖不可能存在于视图，最终表现为接口依赖。</li>
-</ul>
-<p>所以现在比较流行如下几种方案：</p>
-<figure><figcaption>img_20.png</figcaption></figure>
-<h2> 领域驱动架构</h2>
-<p>领域驱动设计是通过将软件实现与核心业务概念的演进紧密相连，从而实现复杂需求的软件开发方法。</p>
-<p>领域驱动设计包括三要素：</p>
-<ul>
-<li>专业知识：就是前期在与客户沟通需求过程中，学习到的关于业务方面的知识。 这类知识并不仅仅只是对需求的理解，更多的要思考业务需求实际要解决的是什么问题。</li>
-<li>抽象能力：一般指发现核心业务对象，简化问题空间的能力。</li>
-<li>细分问题：把业务问题细化为更小更容易处理的子问题。<br>
-领域驱动设计，使得我们不再用数据进行驱动，而是使用领域进行驱动。遇到问题，我们先进行领域上的划分和拆解。这个问题属于哪个问题域，或者需要拆解到哪些问题域里面去，然后再通过领域的组合以及依赖，完成最终问题的解决。</li>
-</ul>
-<h2> 微服务架构</h2>
-<p>微服务架构是一种软件开发架构，它将应用程序拆分成小型、独立的微服务，每个微服务都有自己的功能集，并运行在其独立的进程中。</p>
-<p>微服务架构有以下优点：</p>
-<ul>
-<li>开发人员可以只关注整个结构中的其中某一层，可以很容易的用新的实现来替换原有层次的实现，可以降低层与层之间的依赖，有利于标准化。</li>
-<li>有利于各层逻辑的复用，如PetShop可经过简单的配置实现Sqlserver和Oracle之间的转换。</li>
-<li>扩展性强，不同层负责不同的层面，有利于系统的扩展和维护。</li>
-<li>安全性高，用户端只能通过逻辑层来访问数据层，减少了入口点，把很多危险的系统功能都屏蔽了。</li>
-<li>项目结构更清楚，分工更明确，有利于后期的维护和升级。</li>
-</ul>
-<h2> 云原生架构</h2>
-<figure><figcaption>img_21.png</figcaption></figure>
-<p>云原生架构是一种创新的软件开发方法，专为充分利用云计算模型而设计。</p>
-<p>云原生架构通过结合使用云计算和各种云服务来创建具有更大可扩展性的可定制模块化基础架构，从而提高了团队的效率，生产力和协作能力。</p>
-<p>云原生架构的核心原则：</p>
-<ul>
-<li>云原生架构是一种设计方法，利用AWS等EC2，S3，Lambda等云服务来支持动态，敏捷的应用程序开发技术，这些技术采用模块化方法通过一套基于云的套件来构建，运行和更新软件微服务与整体应用程序基础架构。</li>
-<li>微服务和容器化通过简化云提供商之间的转移或独立地以不同的语言或框架部署服务而没有冲突或停机的情况，从而支持云本机应用程序的敏捷性和动态性。</li>
-<li>将微服务架构集成到应用程序开发中可支持协作，效率和生产力，因为DevOps团队能够同时独立处理应用程序的不同组件或实现新功能而又不牺牲稳定性。</li>
-</ul>
-<h2> DevOps架构</h2>
-<figure><figcaption>img_22.png</figcaption></figure>
-<p>DevOps架构，它旨在加强软件产品开发与交付过程中的协作、自动化、持续性和监控等方面，以实现更高效、更迅速和更可靠的软件交付。</p>
-<p>DevOps通常包括以下核心组成部分：</p>
-<ul>
-<li>持续集成：将代码频繁地集成到一个共享的代码库中，并对代码进行自动化测试，以确保代码质量和稳定性，并及时发现和解决错误。</li>
-<li>持续交付：通过自动化测试、构建、部署和运行环节，实现快速、可靠和可重复的软件发布，从而减少手动操作和人工干预带来的错误和风险。</li>
-<li>自动化运维：将基础设施的管理、配置和维护工作自动化，并将其作为代码、脚本或配置文件存储在版本控制系统中，以便快速搭建、复制和修改环境。</li>
-<li>容器化技术：使用容器化技术（如Docker）将应用程序和其依赖项打包成独立的、可移植的容器，在不同的环境中快速部署和运行。</li>
-<li>监控和日志分析：通过对软件运行时数据进行采集、储存、分析和可视化，监控系统状态、性能和安全等方面的指标，并及时发现和修复问题。</li>
-</ul>
-<h2> 大数据架构</h2>
-<figure><figcaption>img_23.png</figcaption></figure>
-<p>大数据架构是一种面向海量数据、高并发、高可靠、高性能的计算和存储系统架构，用于管理和处理大规模的结构化、半结构化和非结构化数据。它具有以下几个特点：</p>
-<ul>
-<li>高可扩展性：大数据架构应该能够轻松地扩展到海量数据和高并发请求下。</li>
-<li>高容错性：大数据架构应该在硬件、网络和软件故障等异常情况下保证系统稳定性。</li>
-<li>实时计算：大数据架构需要支持实时计算和流式处理，以满足复杂的业务场景。</li>
-<li>数据安全：大数据架构需要保证数据的机密性、完整性和可用性，避免数据泄露和损坏。</li>
-<li>成本效益：大数据架构应该充分考虑成本问题，尽可能利用开源技术和云平台来降低系统运维和资源开销。<br>
-比如常见的大数据架构包括<code>Hadoop、Spark、Storm、Kafka</code><br>
-等开源软件，它们可以被组合在一起形成一个完整的数据处理流水线。例如，Hadoop可以提供分布式文件系统HDFS和MapReduce计算模型，Spark可以提供内存计算和机器学习功能，Storm可以提供实时数据处理功能，Kafka可以提供高可靠的消息队列服务。使用这些开源软件和云平台，企业可以构建出适合自己场景的大数据处理系统，提升自身的业务竞争力。</li>
-</ul>
-]]></content>
-    <category term="设计高频"/>
-    <published>2023-11-17T11:45:50.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">设计注意事项二</title>
-    <id>https://ujava.cn/highfreq/attention2.html</id>
-    <link href="https://ujava.cn/highfreq/attention2.html"/>
-    <updated>2024-03-03T03:00:03.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 简介</h2>
-<h2> 一.设计原则</h2>
-<p>架构设计我我们平时写代码不一样，两者的差异主要体现在“不确定性”上。对于编程来说，本质上是确定的，对于同样一段代码，不管是谁写的，不管什么时候执行，执行的结果应该都是确定的；而对于架构设计来说，本质上是不确定，并没有像编程语言那样的语法来进行约束，更多的时候是面对多种可能性时进行选择。</p>
-<p>示例：</p>
-<ul>
-<li>是要选择业界最先进的技术，还是选择团队目前最熟悉的技术？</li>
-<li>是要选 MySQL 还是 MongoDB？团队对 MySQL 很熟悉，但是 MongoDB 更加适合业务场景？</li>
-<li>淘宝的电商网站架构很完善，我们新做一个电商网站，是否简单地照搬淘宝就可以了？</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<h2> 简介</h2>
-<h2> 一.设计原则</h2>
-<p>架构设计我我们平时写代码不一样，两者的差异主要体现在“不确定性”上。对于编程来说，本质上是确定的，对于同样一段代码，不管是谁写的，不管什么时候执行，执行的结果应该都是确定的；而对于架构设计来说，本质上是不确定，并没有像编程语言那样的语法来进行约束，更多的时候是面对多种可能性时进行选择。</p>
-<p>示例：</p>
-<ul>
-<li>是要选择业界最先进的技术，还是选择团队目前最熟悉的技术？</li>
-<li>是要选 MySQL 还是 MongoDB？团队对 MySQL 很熟悉，但是 MongoDB 更加适合业务场景？</li>
-<li>淘宝的电商网站架构很完善，我们新做一个电商网站，是否简单地照搬淘宝就可以了？</li>
-</ul>
-<h4> 1.合适原则</h4>
-<blockquote>
-<p>合适优于业界领先。</p>
-</blockquote>
-<p>在进行架构设计的同时，需要考虑自身业务，而不是一味的去参照业界顶尖的规模，如：QQ、微信、淘宝架构。真正优秀的架构都是在企业当前人力、条件、业务等各种约束下设计出来的，能够合理地将资源整合在一起并发挥出最大功效，并且能够快速落地。</p>
-<h4> 2.简单原则</h4>
-<blockquote>
-<p>简单优于复杂。</p>
-</blockquote>
-<p>软件架构设计是一门技术活，当我们进行架构设计时，会自然而然地想把架构做精美、做复杂，这样才能体现我们的技术实力，也才能够将架构做成一件艺术品。然而，“复杂”在制造领域代表先进，在建筑领域代表领先，但在软件领域，却恰恰相反，代表的是“问题”。</p>
-<p>软件复杂度的体现，主要有以下两个方面：</p>
-<p>结构的复杂性<br>
-– 组成复杂系统的组件数量更多；<br>
-– 组件之间的关系也更加复杂。</p>
-<p>其问题主要有：</p>
-<ul>
-<li>（1）组件越多，就越有可能其中某个组件出现故障，从而导致系统故障。</li>
-<li>（2）某个组件改动，会影响关联的所有组件。</li>
-<li>（3）定位一个复杂系统中的问题总是比简单系统更加困难。</li>
-</ul>
-<h4> 逻辑的复杂性</h4>
-<p>逻辑的复杂性来源于一个组件集中了太多的功能，修改协作困难；并且，其中某些业务还可能使用了一些复杂的算法，导致难以理解、修改困难。</p>
-<p>一个组件集中了太多功能，就会表现出一些逻辑复杂性的特征，为了解决这个问题，一般的手段是进行组件的拆分，但随着组件的细化，又会引入结构复杂性的一些特征，所以，在做结构设计的时候，需要权衡这两者。</p>
-<h4> 3.演化原则</h4>
-<blockquote>
-<p>演化优于一步到位。</p>
-</blockquote>
-<p>维基百科对“软件架构”的定义如下：</p>
-<blockquote>
-<p>从和目的、主题、材料和结构的联系上来说，软件架构可以和建筑物的架构相比拟。</p>
-</blockquote>
-<p>这个定义中，将建筑和软件架构做了一个比较，但是，两者之间是有一个本质区别的：对于建筑来说，永恒是主题；而对于软件来说，变化才是主题。<br>
-也就是说，软件架构的本质是：软件架构需要根据业务发展不断变化，所以，我们在做软件架构设计的时候，不要试图一步到位设计一个软件架构，期望不管业务如何变化，架构都稳如磐石。</p>
-<p>架构设计的过程基本上可以总结为下面三个历程：</p>
-<ul>
-<li>首先，设计出来的架构要满足当时的业务需要。</li>
-<li>其次，架构要不断地在实际应用过程中迭代，保留优秀的设计，修复有缺陷的设计，改正错误的设计，去掉无用的设计，使得架构逐渐完善。--<br>
-小重构</li>
-<li>最后，当业务发生变化时，架构要扩展、重构，甚至重写；代码也许会重写，但有价值的经验、教训、逻辑、设计等（类似生物体内的基因）却可以在新架构中延续。--<br>
-大重构</li>
-</ul>
-<p>我们在做架构设计的时候，切勿贪大求全，或者盲目的照搬大公司的做法，而是要牢记软件架构的本质（软件架构需要根据业务发展不断变化）。认真分析当前业务的特点，明确业务面临的主要问题，设计合理的架构，快速落地以满足业务需要，然后在运行过程中不断完善架构，不断随着业务演化架构。</p>
-]]></content>
-    <category term="设计高频"/>
-    <published>2023-11-17T11:45:50.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">设计实践经验</title>
-    <id>https://ujava.cn/highfreq/experience.html</id>
-    <link href="https://ujava.cn/highfreq/experience.html"/>
-    <updated>2024-03-03T03:00:03.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 简介</h2>
-<ul>
-<li>记录道具来源等的 source 字段时，可以使用（类名+方法名） / （包名+方法名）的组合，可以清晰地区分来源。并且可以灵活地增加新的渠道/动作。</li>
-<li>涉及金额、钱的字段，使用整型，以分为单位。也可以考虑使用 Decimal 类型来存储金额字段，避免因为精度问题导致计算错误。同时也可以考虑使用货币格式化库，方便对金额进行格式化显示。</li>
-<li>使用 HTTP DELETE 方法来实现删除单条数据，这样更符合 RESTful 风格，同时也可以考虑使用 HTTP POST 方法来实现批量删除、复杂请求。</li>
-<li>使用异步日志组件来进行日志记录，避免在主进程中进行日志记录导致性能问题。</li>
-<li>将账号系统与认证系统进行分离，避免账号系统变得复杂。同时可以考虑使用第三方认证平台来进行认证，避免自行开发认证系统的复杂度。另外，可以考虑使用<br>
-OAuth2.0 协议来实现多渠道认证。
-<ul>
-<li>账号系统在设计维度上一般主要有 登录方式、渠道。</li>
-<li>合并登录方式 登录方式以手机号为中心 合并。</li>
-<li>渠道分组，按渠道分组分区分服。</li>
-</ul>
-</li>
-<li>事务的开启，根据等级不同，会对数据进行不同范围的上锁；使用行级锁来实现事务控制，避免对整个表进行锁定导致性能问题。</li>
-<li>go的每一个err都需要进行处理，不处理就会跳过。json解析、mysql查询等，使用错误处理库来统一处理错误，避免在代码中到处返回错误。同时可以考虑使用日志库来记录错误信息，方便进行错误追踪和问题定位。</li>
-<li>业务逻辑分离不错乱，上层交给下层方法统一处理的业务，上层业务不要再另外处理下层的业务；将不同业务模块的代码分离开来，通过模块化的方式进行统一处理和管理，以避免代码重复和混乱。</li>
-<li>使用Redis分布式锁时，加入重试机制以及超时机制，以确保锁的获取和释放能够及时有效。</li>
-<li>一个事务要整体一致，比如一个物品的购买和多个物品的购买，最后只进行一次账户扣减操作，只分为余额充足和余额不足两种情况；根据具体业务需求进行设计和优化，以确保事务的原子性、一致性和持久性。</li>
-<li>如果需要对redis中设置了过期时间的数据进行修改，要考虑到修改途中数据过期的情况。这时候可以给key带上一些标识，比如每天领取次数限制的数据，设置key时带上日期，避免因为临界值时间出现的数据错乱。</li>
-<li>业务价值不强但消耗性能相对大的功能，这样的情况往往不需要性能优秀，一般有较大的容忍性。要在尽可能保证主业务稳定运行的情况下，实现此类功能的运行：比如一个消息存储的业务，所需要的读写性能可能都非常大，这时候可以尽量不引入新的存储介质，使用分库分表加分布式文件存储持久化来实现。</li>
-<li>mysql的delete操作，是不释放表空间的。只是做了逻辑上的标记删除，在磁盘上数据并没有被真正删除。这样的设计是因为：如果在磁盘上移除之后，很多其它的记录需要在磁盘上重新排列，这会消耗大量的性能。(<br>
-例如：一个大表，存在索引，删除了其中一行，那么整个索引结构就会发生变化，随之而来的改变索引结构，必将带来磁盘 IO)。这时候想要释放可以选择</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<h2> 简介</h2>
-<ul>
-<li>记录道具来源等的 source 字段时，可以使用（类名+方法名） / （包名+方法名）的组合，可以清晰地区分来源。并且可以灵活地增加新的渠道/动作。</li>
-<li>涉及金额、钱的字段，使用整型，以分为单位。也可以考虑使用 Decimal 类型来存储金额字段，避免因为精度问题导致计算错误。同时也可以考虑使用货币格式化库，方便对金额进行格式化显示。</li>
-<li>使用 HTTP DELETE 方法来实现删除单条数据，这样更符合 RESTful 风格，同时也可以考虑使用 HTTP POST 方法来实现批量删除、复杂请求。</li>
-<li>使用异步日志组件来进行日志记录，避免在主进程中进行日志记录导致性能问题。</li>
-<li>将账号系统与认证系统进行分离，避免账号系统变得复杂。同时可以考虑使用第三方认证平台来进行认证，避免自行开发认证系统的复杂度。另外，可以考虑使用<br>
-OAuth2.0 协议来实现多渠道认证。
-<ul>
-<li>账号系统在设计维度上一般主要有 登录方式、渠道。</li>
-<li>合并登录方式 登录方式以手机号为中心 合并。</li>
-<li>渠道分组，按渠道分组分区分服。</li>
-</ul>
-</li>
-<li>事务的开启，根据等级不同，会对数据进行不同范围的上锁；使用行级锁来实现事务控制，避免对整个表进行锁定导致性能问题。</li>
-<li>go的每一个err都需要进行处理，不处理就会跳过。json解析、mysql查询等，使用错误处理库来统一处理错误，避免在代码中到处返回错误。同时可以考虑使用日志库来记录错误信息，方便进行错误追踪和问题定位。</li>
-<li>业务逻辑分离不错乱，上层交给下层方法统一处理的业务，上层业务不要再另外处理下层的业务；将不同业务模块的代码分离开来，通过模块化的方式进行统一处理和管理，以避免代码重复和混乱。</li>
-<li>使用Redis分布式锁时，加入重试机制以及超时机制，以确保锁的获取和释放能够及时有效。</li>
-<li>一个事务要整体一致，比如一个物品的购买和多个物品的购买，最后只进行一次账户扣减操作，只分为余额充足和余额不足两种情况；根据具体业务需求进行设计和优化，以确保事务的原子性、一致性和持久性。</li>
-<li>如果需要对redis中设置了过期时间的数据进行修改，要考虑到修改途中数据过期的情况。这时候可以给key带上一些标识，比如每天领取次数限制的数据，设置key时带上日期，避免因为临界值时间出现的数据错乱。</li>
-<li>业务价值不强但消耗性能相对大的功能，这样的情况往往不需要性能优秀，一般有较大的容忍性。要在尽可能保证主业务稳定运行的情况下，实现此类功能的运行：比如一个消息存储的业务，所需要的读写性能可能都非常大，这时候可以尽量不引入新的存储介质，使用分库分表加分布式文件存储持久化来实现。</li>
-<li>mysql的delete操作，是不释放表空间的。只是做了逻辑上的标记删除，在磁盘上数据并没有被真正删除。这样的设计是因为：如果在磁盘上移除之后，很多其它的记录需要在磁盘上重新排列，这会消耗大量的性能。(<br>
-例如：一个大表，存在索引，删除了其中一行，那么整个索引结构就会发生变化，随之而来的改变索引结构，必将带来磁盘 IO)。这时候想要释放可以选择</li>
-</ul>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这个操作相对比较耗费性能，要谨慎操作。在数据量超千万的表中进行释放，一定要保证cpu核数至少大于等于2。因为这时候会占用1core的资源全部用来处理。时长可能超过5min。</p>
-]]></content>
-    <category term="设计高频"/>
-    <published>2023-11-17T11:18:05.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">一致性Hash算法</title>
-    <id>https://ujava.cn/highfreq/hash.html</id>
-    <link href="https://ujava.cn/highfreq/hash.html"/>
-    <updated>2024-03-03T03:00:03.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 简介</h2>
-<p>在分布式系统中，数据的存储和访问是很重要的问题。为了提高系统的可用性和扩展性，常常需要将数据分布到不同的节点上，而且这些节点也可能会动态地加入或离开集群。一致性哈希算法就是一种常用的解决方案，它可以解决节点的动态变化和负载均衡的问题。</p>
-<p>本文将深入探讨一致性哈希算法的底层原理，包括其基本思想、关键步骤以及优缺点等，同时结合实际场景进行举例说明。</p>
-<h2> 产生背景</h2>
-<p>考虑这么一种场景：</p>
-<p>我们有三台缓存服务器编号node0、node1、node2，现在有 3000 万个key，希望可以将这些个 key 均匀的缓存到三台机器上，你会想到什么方案呢？</p>]]></summary>
-    <content type="html"><![CDATA[<h2> 简介</h2>
-<p>在分布式系统中，数据的存储和访问是很重要的问题。为了提高系统的可用性和扩展性，常常需要将数据分布到不同的节点上，而且这些节点也可能会动态地加入或离开集群。一致性哈希算法就是一种常用的解决方案，它可以解决节点的动态变化和负载均衡的问题。</p>
-<p>本文将深入探讨一致性哈希算法的底层原理，包括其基本思想、关键步骤以及优缺点等，同时结合实际场景进行举例说明。</p>
-<h2> 产生背景</h2>
-<p>考虑这么一种场景：</p>
-<p>我们有三台缓存服务器编号node0、node1、node2，现在有 3000 万个key，希望可以将这些个 key 均匀的缓存到三台机器上，你会想到什么方案呢？</p>
-<p>我们可能首先想到的方案是：取模算法hash（key）% N，即：对 key 进行 hash 运算后取模，N 是机器的数量；</p>
-<p>这样，对 key 进行 hash 后的结果对 3 取模，得到的结果一定是 0、1 或者 2，正好对应服务器node0、node1、node2，存取数据直接找对应的服务器即可，简单粗暴，完全可以解决上述的问题；</p>
-<figure><figcaption>img_7.png</figcaption></figure>
-<p>取模算法虽然使用简单，但对机器数量取模，在集群扩容和收缩时却有一定的局限性：因为在生产环境中根据业务量的大小，调整服务器数量是常有的事；</p>
-<p>而服务器数量 N 发生变化后hash（key）% N计算的结果也会随之变化！</p>
-<figure><figcaption>img_8.png</figcaption></figure>
-<p>比如：一个服务器节点挂了，计算公式从hash（key）% 3变成了hash（key）% 2，结果会发生变化，此时想要访问一个 key，这个 key 的缓存位置大概率会发生改变，那么之前缓存 key 的数据也会失去作用与意义；</p>
-<p>大量缓存在同一时间失效，造成缓存的雪崩，进而导致整个缓存系统的不可用，这基本上是不能接受的；</p>
-<p>为了解决优化上述情况，一致性 hash 算法应运而生~</p>
-<h2> 什么是一致性哈希算法</h2>
-<p>一致性哈希算法是一种用于分布式系统中的数据分片和负载均衡的算法。它将整个哈希空间划分为一个环，并且每个节点在这个环上都有一个对应的位置。当需要读写某个数据时，先将其进行哈希运算得到一个哈希值，然后根据这个哈希值在环上找到对应的节点，从而实现数据的定位。</p>
-<p>一致性哈希算法的优点在于：当新增或删除节点时，只会影响到环上的一小部分节点，因此不会像传统的哈希算法那样造成大量的数据迁移和重新分片。同时，由于节点数较多，请求可以被更好地平均分配，从而实现了负载均衡的效果。</p>
-<p>另外，一致性哈希算法还可以通过增加虚拟节点来解决节点不均衡的问题，从而进一步提高负载均衡的效果。</p>
-<h2> 一致性哈希算法原理</h2>
-<p>一致性哈希算法在 1997 年由麻省理工学院提出，是一种特殊的哈希算法，在移除或者添加一个服务器时，能够尽可能小地改变已存在的服务请求与处理请求服务器之间的映射关系；</p>
-<p>一致性哈希解决了简单哈希算法在分布式哈希表（Distributed Hash Table，DHT）中存在的动态伸缩等问题；</p>
-<p>一致性 hash 算法本质上也是一种取模算法；</p>
-<p>不过，不同于上边按服务器数量取模，一致性 hash 是对固定值 2^32 取模；</p>
-<p>IPv4 的地址是 4 组 8 位 2 进制数组成，所以用 2^32 可以保证每个 IP 地址会有唯一的映射；</p>
-<ol>
-<li>hash 环<br>
-我们可以将这2^32个值抽象成一个圆环 ⭕️，圆环的正上方的点代表 0，顺时针排列，以此类推：1、2、3…直到2^32-1，而这个由 2 的 32 次方个点组成的圆环统称为hash环；</li>
-</ol>
-<figure><figcaption>img_9.png</figcaption></figure>
-<ol start="2">
-<li>服务器映射到 hash 环<br>
-在对服务器进行映射时，使用hash（服务器ip）% 2^32，即：</li>
-</ol>
-<p>使用服务器 IP 地址进行 hash 计算，用哈希后的结果对2^32取模，结果一定是一个 0 到2^32-1之间的整数；</p>
-<p>而这个整数映射在 hash 环上的位置代表了一个服务器，依次将node0、node1、node2三个缓存服务器映射到 hash 环上；</p>
-<figure><figcaption>img_10.png</figcaption></figure>
-<ol start="3">
-<li>对象 key 映射到服务器<br>
-在对对应的 Key 映射到具体的服务器时，需要首先计算 Key 的 Hash 值：hash（key）% 2^32；</li>
-</ol>
-<p>注：此处的 Hash 函数可以和之前计算服务器映射至 Hash 环的函数不同，只要保证取值范围和 Hash 环的范围相同即可（即：2^32）；</p>
-<p>将 Key 映射至服务器遵循下面的逻辑：</p>
-<p>从缓存对象 key 的位置开始，沿顺时针方向遇到的第一个服务器，便是当前对象将要缓存到的服务器；</p>
-<p>假设我们有 “semlinker”、“kakuqo”、“lolo”、“fer” 四个对象，分别简写为 o1、o2、o3 和 o4；</p>
-<p>首先，使用哈希函数计算这个对象的 hash 值，值的范围是 [0, 2^32-1]：</p>
-<figure><figcaption>img_11.png</figcaption></figure>
-<p>图中对象的映射关系如下：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>同时 3 台缓存服务器，分别为 CS1、CS2 和 CS3：</p>
-<figure><figcaption>img_12.png</figcaption></figure>
-<p>则可知，各对象和服务器的映射关系如下：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>即：</p>
-<figure><figcaption>img_13.png</figcaption></figure>
-<p>以上便是一致性 Hash 的工作原理；</p>
-<blockquote>
-<p>可以看到，一致性 Hash 就是：将原本单个点的 Hash 映射，转变为了在一个环上的某个片段上的映射！</p>
-</blockquote>
-<h2> 服务器扩缩容场景</h2>
-<ol>
-<li>服务器减少</li>
-</ol>
-<p>假设 CS3 服务器出现故障导致服务下线，这时原本存储于 CS3 服务器的对象 o4，需要被重新分配至 CS2 服务器，其它对象仍存储在原有的机器上：</p>
-<figure><figcaption>img_14.png</figcaption></figure>
-<p>此时受影响的数据只有 CS2 和 CS3 服务器之间的部分数据！</p>
-<ol start="2">
-<li>服务器增加</li>
-</ol>
-<p>假如业务量激增，我们需要增加一台服务器 CS4，经过同样的 hash 运算，该服务器最终落于 t1 和 t2 服务器之间，具体如下图所示：</p>
-<figure><figcaption>img_15.png</figcaption></figure>
-<p>此时，只有 t1 和 t2 服务器之间的部分对象需要重新分配；</p>
-<p>在以上示例中只有 o3 对象需要重新分配，即它被重新到 CS4 服务器；</p>
-<p>在前面我们已经说过：如果使用简单的取模方法，当新添加服务器时可能会导致大部分缓存失效，而使用一致性哈希算法后，这种情况得到了较大的改善，因为只有少部分对象需要重新分配！</p>
-<h2> 数据偏斜&amp;服务器性能平衡问题</h2>
-<ol>
-<li>引出问题</li>
-</ol>
-<p>在上面给出的例子中，各个服务器几乎是平均被均摊到 Hash 环上；</p>
-<p>但是在实际场景中很难选取到一个 Hash 函数这么完美的将各个服务器散列到 Hash 环上；</p>
-<p>此时，在服务器节点数量太少的情况下，很容易因为节点分布不均匀而造成数据倾斜问题；</p>
-<p>如下图被缓存的对象大部分缓存在node-4服务器上，导致其他节点资源浪费，系统压力大部分集中在node-4节点上，这样的集群是非常不健康的：</p>
-<figure><figcaption>img_16.png</figcaption></figure>
-<p>同时，还有另一个问题：</p>
-<p>在上面新增服务器 CS4 时，CS4 只分担了 CS1 服务器的负载，服务器 CS2 和 CS3 并没有因为 CS4 服务器的加入而减少负载压力；如果 CS4 服务器的性能与原有服务器的性能一致甚至可能更高，那么这种结果并不是我们所期望的；</p>
-<ol start="2">
-<li>虚拟节点</li>
-</ol>
-<p>针对上面的问题，我们可以通过：引入虚拟节点来解决负载不均衡的问题：</p>
-<p>即将每台物理服务器虚拟为一组虚拟服务器，将虚拟服务器放置到哈希环上，如果要确定对象的服务器，需先确定对象的虚拟服务器，再由虚拟服务器确定物理服务器；</p>
-<p>如下图所示：</p>
-<figure><figcaption>img_17.png</figcaption></figure>
-<p>在图中：o1 和 o2 表示对象，v1 ~ v6 表示虚拟服务器，s1 ~ s3 表示实际的物理服务器；</p>
-<ol start="3">
-<li>虚拟节点的计算</li>
-</ol>
-<p>虚拟节点的 hash 计算通常可以采用：对应节点的 IP 地址加数字编号后缀 hash（10.24.23.227#1) 的方式；</p>
-<p>举个例子，node-1 节点 IP 为 10.24.23.227，正常计算node-1的 hash 值：</p>
-<ul>
-<li>
-<p>hash（10.24.23.227#1）% 2^32<br>
-假设我们给 node-1 设置三个虚拟节点，node-1#1、node-1#2、node-1#3，对它们进行 hash 后取模：</p>
-</li>
-<li>
-<p>hash（10.24.23.227#1）% 2^32</p>
-</li>
-<li>
-<p>hash（10.24.23.227#2）% 2^32</p>
-</li>
-<li>
-<p>hash（10.24.23.227#3）% 2^32</p>
-</li>
-</ul>
-<p>注意：</p>
-<ul>
-<li>分配的虚拟节点个数越多，映射在 hash 环上才会越趋于均匀，节点太少的话很难看出效果；</li>
-<li>引入虚拟节点的同时也增加了新的问题，要做虚拟节点和真实节点间的映射，对象key-&gt;虚拟节点-&gt;实际节点之间的转换；</li>
-</ul>
-<h2> 使用场景</h2>
-<p>一致性 hash 在分布式系统中应该是实现负载均衡的首选算法，它的实现比较灵活，既可以在客户端实现，也可以在中间件上实现，比如日常使用较多的缓存中间件memcached和redis集群都有用到它；</p>
-<p>memcached 的集群比较特殊，严格来说它只能算是伪集群，因为它的服务器之间不能通信，请求的分发路由完全靠客户端来的计算出缓存对象应该落在哪个服务器上，而它的路由算法用的就是一致性 hash；</p>
-<p>还有 redis 集群中 hash 槽的概念，虽然实现不尽相同，但思想万变不离其宗，看完本篇的一致性 hash，你再去理解 redis 槽位就轻松多了；</p>
-<p>其它的应用场景还有很多：</p>
-<ul>
-<li>RPC框架Dubbo用来选择服务提供者</li>
-<li>分布式关系数据库分库分表：数据与节点的映射关系</li>
-<li>LVS负载均衡调度器</li>
-<li>……</li>
-</ul>
-<h2> 小结</h2>
-<p>一致性哈希是一种用于分布式系统中数据负载均衡的算法。在分布式系统中，多个服务器节点需要负责处理不同的请求，但由于每个请求的负载大小不同，因此会导致服务器节点的负载不平衡，一些节点可能会过度负载，而另一些节点则占用较少的资源。这就需要一种算法来平衡各个节点之间的负载。</p>
-<p>一致性哈希算法通过将服务器节点和请求都映射到一个固定的哈希环上，使得每个请求可以被映射到一个特定的服务器节点上。同时，在哈希环上沿顺时针方向查找离该请求最近的服务器节点，并将该请求路由到该节点上，从而实现了负载均衡。一致性哈希算法还支持添加或删除服务器节点，同时保持大部分请求仍然能够映射到原来的节点上，以避免数据迁移带来的复杂性和成本。</p>
-<p>总之，一致性哈希算法可以提高分布式系统的可扩展性和可靠性，减少系统崩溃等问题的风险，从而更好地满足大规模应用所需的高吞吐量和低延迟要求。</p>
-]]></content>
-    <category term="设计高频"/>
-    <published>2023-11-17T10:57:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">系统设计原则</title>
-    <id>https://ujava.cn/highfreq/design.html</id>
-    <link href="https://ujava.cn/highfreq/design.html"/>
-    <updated>2024-03-03T03:00:03.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 简介</h2>
-<p>好的系统是迭代出来的。先解决核心问题，预测未来可能出现的问题，对现有的问题有方案，对未来的问题有预案。不是一上来就按1亿用户量设计，也不要过度复杂化系统。</p>
-<p>业务千变万化，技术层出不穷，设计理念也是百花齐放，看起来似乎很难有一套通用的规范来适用所有的架构设计场景。但是总是有一些原则是可以通用的。</p>
-<p>在设计系统时，应该多思考墨菲定律:</p>
-<ul>
-<li>任何事情都没有表面看起来那么简单</li>
-<li>所有的事情都会比你预计的时间长</li>
-<li>可能会出错的事一定会出错</li>
-<li>如果你担心某种情况发生，那么它就更有可能发生</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<h2> 简介</h2>
-<p>好的系统是迭代出来的。先解决核心问题，预测未来可能出现的问题，对现有的问题有方案，对未来的问题有预案。不是一上来就按1亿用户量设计，也不要过度复杂化系统。</p>
-<p>业务千变万化，技术层出不穷，设计理念也是百花齐放，看起来似乎很难有一套通用的规范来适用所有的架构设计场景。但是总是有一些原则是可以通用的。</p>
-<p>在设计系统时，应该多思考墨菲定律:</p>
-<ul>
-<li>任何事情都没有表面看起来那么简单</li>
-<li>所有的事情都会比你预计的时间长</li>
-<li>可能会出错的事一定会出错</li>
-<li>如果你担心某种情况发生，那么它就更有可能发生</li>
-</ul>
-<p>在系统划分时，也要思考康威定律:</p>
-<ul>
-<li>系统架构是公司组织架构的反映</li>
-<li>应该按照业务闭环进行系统拆分/组织架构划分，实现闭环/高内聚/低耦合，减少沟通成本</li>
-<li>如果沟通出现问题，那么就应该考虑进行系统和组织架构的调整</li>
-<li>在合适时机进行系统拆分，不要一开始就把系统/服务拆得非常细，虽然闭环，但是每个人维护的系统多，维护成本高该处使用的url网络请求的数据。</li>
-</ul>
-<h2> 一、系统的技术设计原则</h2>
-<h3> 1.1.高并发原则</h3>
-<h4> 1.1.1.无状态</h4>
-<p>如果设计的是无状态的，那么应用比较容易进行水平扩展。</p>
-<p>实际生产环境可能是这样的：应用无状态，配置文件有状态。比如，不同的机房需要读取不同的数据源，此时，就需要通过配置文件或配置中心指定。比如后台系统使用session共享机制保证分布式部署。</p>
-<h4> 1.1.2.拆分</h4>
-<p>在系统设计时，要考虑到系统是否做拆分。如果资源有限，并且用户并没有那么多，可以做一个大而全的系统。</p>
-<p>而高并发的应用，通常是要做拆分的。拆分可以依据多个维度：</p>
-<ul>
-<li>系统维度 ：如订单、库存、商品系统等</li>
-<li>功能维度 ：如，对登录系统再拆分，划分为 ：验证码登录、微信登录、密码登录等功能。</li>
-<li>读写维度 ：针对读写再做分离，读服务可以使用缓存、写服务使用分库分表。</li>
-</ul>
-<h4> 1.1.3.服务化</h4>
-<p>首先判断单点服务是否可以满足。如果不能满足，集群可以吗？使用Nginx做负载均衡是否可以解决？</p>
-<p>服务越来越多，是否要使用服务自动注册与发现？某些服务访问量太大，导致整个系统不可用，要不要上服务降级和限流？哪些是主要服务？</p>
-<h4> 1.1.4.消息队列</h4>
-<p>消息队列的作用有三个 ：削峰、解耦、异步。</p>
-<p>使用消息队列可以实现服务解耦（一对多消费）、异步处理、流量削峰/缓冲等。但是订阅者太多，那么订阅单个消息队列就会成为瓶颈，此时需要考虑对消息队列进行多个镜像复制。</p>
-<p>使用消息队列时，需要注意消息丢失、重复接收的场景。这对于不能容忍生产失败的业务场景来说，一定要做好后续的数据处理工作，比如持久化数据同时要增加日志、报警等，或者在生产失败后发送http请求来保证成功。还有消息重复问题，特别是一些分布式消息队列，出于对性能和开销的考虑，在一些场景下会发送消息重复接收，需要在代码层面进行防重处理。</p>
-<h4> 1.1.5.缓存</h4>
-<p>缓存对读服务来说，是扛流量的必选技术。不同的场景缓存不同的信息，以解决不同的问题：</p>
-<ul>
-<li>浏览器端缓存</li>
-<li>客户端缓存</li>
-<li>CDN缓存</li>
-<li>接入层缓存: 使用Nginx做一层缓存</li>
-<li>应用层缓存</li>
-<li>分布式缓存</li>
-<li>异步与并发:某些资源实时性没那么高，可以考虑使用异步加载，如用户评价、商品打分这种。获取多个资源时，采用并发的方式获取，可以大大的加快访问速度。</li>
-</ul>
-<h4> 1.1.6.数据异构</h4>
-<p>所谓数据异构，是把数据按需（数据结构、存取方式、存取形式）异地构建存储。比如将mysql里面的数据缓存到redis里面去，就是一种数据异构的方式。</p>
-<p>分库分表中有一个最为常见的场景，为了提升数据库的查询能力，我们都会对数据库做分库分表操作。比如订单库，开始的时候是按照订单ID维度去分库分表，那么后来的业务需求按照商家维度去查询。相同的数据需要做多种异构可以使用MQ机制接收数据的变更，然后存储到合适的存储引擎，如订单id纬度的分库分表、商家纬度的分库分表、用户纬度的分库分表、redis、Elasticsearch等。</p>
-<p>另外，还需要考虑对历史订单数据进行归档处理，以提升服务的性能和稳定性。而有些数据异构的意义不大，如库存架构，可以考虑异步加载，或者合并并发请求。</p>
-<p>总结起来大概有以下几种场景：</p>
-<ul>
-<li>
-<p>数据库镜像</p>
-</li>
-<li>
-<p>数据库实时备份</p>
-</li>
-<li>
-<p>多级索引</p>
-</li>
-<li>
-<p>search build（比如分库分表后的多维度数据查询）</p>
-</li>
-<li>
-<p>业务cache刷新</p>
-</li>
-<li>
-<p>价格、库存变化等重要业务消息<br>
-常见的异构方式：</p>
-</li>
-<li>
-<p>完全克隆。做数据备份。将数据库A，全部拷贝一份到数据库B，这样的使用场景是离线统计跑任务脚本的时候可以。缺点也很突出，不适用于持续增长的数据。</p>
-</li>
-<li>
-<p>binlog方式。比如使用比较广泛的canal是基于mysql数据库binlog的增量订阅和消费组件。订阅mysql的binlog日志，消费这些日志做主从同步、缓存更新。</p>
-</li>
-<li>
-<p>MQ方式。业务数据写入DB的同时，也发送MQ一份，也就是业务里面实现双写，消费MQ的数据做各种异构处理。这种方式比较简单，但也很难保证数据一致性，对简单的业务场景可以采用这种方式。</p>
-</li>
-</ul>
-<h3> 1.2.高可用原则</h3>
-<h4> 1.2.1.降级</h4>
-<p>对于一个高可用服务，很重要的一个设计就是降级开关，提前写好降级逻辑。</p>
-<p>可以手动降级，也可以自动降级。自动降级触发的条件可以使用：超时的请求数超过阈值、异常的请求数超过阈值时。阈值具体设置为多少，通过压测初步确认，上线观察后，再次调整。</p>
-<p>降级的手段：停止读数据库、准确结果转为近似结果、使用静态结果、同步转异步、功能裁剪、禁止写（高峰期减少不必要的写）、分用户降级、工作量证明POW(<br>
-验证码、数学题、拼图、滑块)。</p>
-<p>主要依据如下思路：</p>
-<ul>
-<li>开关集中化管理：通过推送机制把开关推送到各个应用。</li>
-<li>可降级的多级读服务：可以指定服务调用降级为只读本地缓存、只读分布式缓存、只读默认数据。</li>
-<li>开关前置化: 如架构是Nginx—&gt;Apache，可以将开关前置到Nginx接入层，在Nginx层做开关，请求流量汇源后端应用或者只是一小部分流量回源</li>
-<li>业务降级：当高并发流量来袭，保证核心业务是正常的，并保障数据最终一致性即可。这样就把一些同步调用改成异步调用，优先处理高优先级数据或特殊特征的数据，合理分配进入系统的流量，以保障系统可用。</li>
-</ul>
-<h4> 1.2.2.限流</h4>
-<p>当监控发现外部流量超过阈值或内部资源使用达到阈值（通过压测、上线观察、调整）时，告知各系统限流打开。</p>
-<p>限流的目的是防止恶意请求流量，或者防止流量超出系统峰值。思路如下：</p>
-<ul>
-<li>
-<p>基于请求的限流：</p>
-<ul>
-<li>限制请求总量。如腾讯会议最多500人。</li>
-<li>限制时间量。如一个时间窗口内最多接受100个请求。</li>
-</ul>
-</li>
-<li>
-<p>基于关键资源的限流：</p>
-<ul>
-<li>统计连接数、线程数、cup等硬件参数。难点是如何确定哪些是关键资源、阈值是多少。</li>
-<li>使用池化技术：线程池、连接池；使用队列排队；</li>
-</ul>
-</li>
-</ul>
-<p>相关限流的算法：</p>
-<ul>
-<li>滑动时间窗口：有突刺</li>
-<li>漏桶: 请求进入队列的速度不受限制，但是超过队列的大小就拒绝，请求出队列的速度固定。请求会匀速出队列。</li>
-<li>令牌桶：系统会以一个恒定的速度往桶里放入令牌，而如果请求需要被处理，则需要先从桶里获取一个令牌，当桶里没有令牌可取时，则拒绝服务。有突刺。<br>
-有些大流量是正常的用户，这种是要临时的水平扩容。</li>
-</ul>
-<p>原则是限制流量穿透到后端薄弱的应用层</p>
-<h4> 1.2.3.熔断</h4>
-<p>熔断发生的三个必要条件，缺一不可，必须全部满足才能开启 hystrix 的熔断功能：</p>
-<ul>
-<li>
-<p>有一个统计的时间周期，滚动窗口；如1000毫秒</p>
-</li>
-<li>
-<p>请求次数必须达到一定数量；如20次</p>
-</li>
-<li>
-<p>失败率达到阈值；如50%<br>
-熔断器的三个状态：</p>
-</li>
-<li>
-<p>关闭状态。关闭状态时用户请求是可以到达服务提供方的。</p>
-</li>
-<li>
-<p>开启状态。开启状态时用户请求是不能到达服务提供方的，直接会走降级方法。</p>
-</li>
-<li></li>
-</ul>
-<p>半开状态。当熔断器开启时，过一段时间后，熔断器就会由开启状态变成半开状态。半开状态的熔断器是可以接受用户请求并把请求传递给服务提供方的，这时候如果远程调用返回成功，那么熔断器就会有半开状态变成关闭状态，反之，如果调用失败，熔断器就会有半开状态变成开启状态。<br>
-Hystrix功能建议在并发比较高的方法上使用，并不是所有方法都得使用的。</p>
-<p>Sentinel的熔断策略是根据响应时间，响应时间超过阈值，熔断开关打开。</p>
-<h4> 1.2.4.恢复</h4>
-<p>撤出限流、消除降级、关闭熔断</p>
-<p>熔断使用半开状态，完成吞吐量爬升、缓存预热。</p>
-<p>灰度发布，限流阈值逐步提升。</p>
-<h4> 1.2.5.隔离</h4>
-<ul>
-<li>数据隔离：数据按照重要性排序、分库</li>
-<li>机器隔离：给重要的用户单独配置服务器，用用户标识去路由</li>
-<li>线程池隔离：线程池分配。hystrix</li>
-<li>信号量隔离：计数器。hystrix</li>
-<li>集群隔离：服务分组（注册中心）、秒杀</li>
-<li>机房隔离：3个服务。局域网IP、路由。</li>
-<li>读写隔离：主从</li>
-<li>动静隔离：识别静态资源。nginx CDN</li>
-<li>爬虫隔离：对IP的访问频率</li>
-<li>冷热隔离：秒杀、抢购。读：缓存；写：缓存+队列</li>
-</ul>
-<h4> 1.2.6.异地多活</h4>
-<p>异地机房部署相同的服务，同时对外提供服务（不是备份）。防止因为停电、火灾、水灾、地震、战争等问题导致服务不可用。</p>
-<p>异地多活通常考虑RTT(round trip time):网络请求一个来回消耗的传输时间。光纤光速计算 300000 KM/s，两个机房如果一个在上海，一个在新疆，隔5000KM，<br>
-rtt = 300000 / 5000 * 2 = 120毫秒的往返时延。</p>
-<p>多活要求：</p>
-<ul>
-<li>
-<p>请求任何一个节点，都能正常响应</p>
-</li>
-<li>
-<p>某些系统故障，用户访问其他系统也能访问<br>
-分类：</p>
-</li>
-<li>
-<p>同城异区：距离较近，可以防止停电、机房起火</p>
-</li>
-<li>
-<p>跨域异地：距离较近，可以防止停电、机房起火、火灾、水灾、地震。</p>
-</li>
-<li>
-<p>跨国异地（隔离）：延迟，已经无法让系统提供服务了。通常在异国开展业务，数据和服务就放在异国，和国内数据是隔离的。<br>
-异地多活容易出现数据不一致问题，要保证核心业务的多活。如用户系统有注册、登陆、修改用户信息等功能，保证正常注册、登陆多活，修改用户信息可以根据时间合并数据。</p>
-</li>
-</ul>
-<h4> 1.2.7.可回滚</h4>
-<p>灰度发布。版本化机制，当程序出错时，回滚到上一个版本。</p>
-<h2> 二、业务设计原则</h2>
-<h3> 2.1.防重、幂等</h3>
-<p>重复提交业务，消息中间件重复消费消息。使用分布式锁、数据库唯一键等保证。</p>
-<h3> 2.2.模块复用</h3>
-<p>相同的功能只开发一次，模块化。不要到处拷贝相同的代码。</p>
-<h3> 2.3.可追溯</h3>
-<p>可以快速追踪到问题涉及的这个数据链路，快速定位问题。traceId</p>
-<h3> 2.4.反馈原则</h3>
-<p>给出精确友好的结果反馈。如http接口调用异常时尽量给出精确的异常原因，降低内外部沟通成本。</p>
-<h3> 2.5.流程可定义</h3>
-<p>相关工作有明确的流程规范</p>
-<h3> 2.6.系统审批化</h3>
-<p>系统变更需要审批</p>
-<h3> 2.7.文档和注释</h3>
-<p>完善文档和注释</p>
-<h3> 2.8.备份</h3>
-<ul>
-<li>代码备份：git、分支</li>
-<li>数据备份：运维备份，操作记录备份。</li>
-<li>人员备份：不因个人离职导致项目停滞。</li>
-</ul>
-<h3> 2.9.规范</h3>
-<p>制定规范，定期review。</p>
-<h2> 三、系统性能常见指标</h2>
-<h3> 3.1.响应时间（Response time）</h3>
-<p>响应时间就是用户感受软件系统为其服务所耗费的时间，对于网站系统来说，响应时间就是从点击了一个页面计时开始，到这个页面完全在浏览器里展现计时结束的这一段时间间隔，看起来很简单，但其实在这段响应时间内，软件系统在幕后经过了一系列的处理工作，贯穿了整个系统节点。</p>
-<p>根据“管辖区域”不同，响应时间可以细分为：</p>
-<ul>
-<li>服务器端响应时间这个时间指的是服务器完成交易请求执行的时间，不包括客户端到服务器端的反应（请求和耗费在网络上的通信时间），这个服务器端响应时间可以度量服务器的处理能力。</li>
-<li>网络响应时间，这是网络硬件传输交易请求和交易结果所耗费的时间。</li>
-<li>客户端响应时间，这是客户端在构建请求和展现交易结果时所耗费的时间，对于普通的瘦客户端Web应用来说，这个时间很短，通常可以忽略不计；但是对于胖客户端Web应用来说，比如Java<br>
-applet、AJAX，由于客户端内嵌了大量的逻辑处理，耗费的时间有可能很长，从而成为系统的瓶颈，这是要注意的一个地方。<br>
-那么客户感受的响应时间其实是等于客户端响应时间+服务器端响应时间+网络响应时间。细分的目的是为了方便定位性能瓶颈出现在哪个节点上。</li>
-</ul>
-<h3> 3.2.吞吐量（Throughput）</h3>
-<p>吞吐量是我们常见的一个软件性能指标，对于软件系统来说，“吞”进去的是请求，“吐”出来的是结果，而吞吐量反映的就是软件系统的“饭量”，也就是系统的处理能力，具体说来，就是指软件系统在每单位时间内能处理多少个事务/请求/单位数据等。但它的定义比较灵活，在不同的场景下有不同的诠释，比如数据库的吞吐量指的是单位时间内，不同SQL语句的执行数量；而网络的吞吐量指的是单位时间内在网络上传输的数据流量。吞吐量的大小由负载（如用户的数量）或行为方式来决定。举个例子，下载文件比浏览网页需要更高的网络吞吐量。</p>
-<h3> 3.3.资源使用率（Resource utilization）</h3>
-<p>常见的资源有：CPU占用率、内存使用率、磁盘I/O、网络I/O。</p>
-<h3> 3.4.点击数（Hits per second）</h3>
-<p>点击数是衡量Web Server处理能力的一个很有用的指标。需要明确的是：点击数不是我们通常理解的用户鼠标点击次数，而是按照客户端向Web<br>
-Server发起了多少次http请求计算的，一次鼠标可能触发多个http请求，这需要结合具体的Web系统实现来计算。</p>
-<h3> 3.3.并发用户数（Concurrent users）</h3>
-<p>并发用户数用来度量服务器并发容量和同步协调能力。在客户端指一批用户同时执行一个操作。并发数反映了软件系统的并发处理能力，和吞吐量不同的是，它大多是占用套接字、句柄等操作系统资源。</p>
-<p>另外，度量软件系统的性能指标还有系统恢复时间等，其实凡是用户有关资源和时间的要求都可以被视作性能指标，都可以作为软件系统的度量，而性能测试就是为了验证这些性能指标是否被满足。</p>
-<h2> 四、总结</h2>
-<p>一个系统的设计，不仅需要考虑实现业务功能，还要保证系统高并发、高可用等。在系统容量规划（流量、容量等）、SLA制定（吞吐量、响应时间、可用性、降级方案等）、压测方案（线上、test等）、监控报警（机器负载、响应时间、可用率等）、应急预案（容灾、降级、限流、隔离、切流量、可回滚）等方面，也要有一些原则来进行设计。</p>
-]]></content>
-    <category term="设计高频"/>
-    <published>2023-11-17T10:34:42.000Z</published>
   </entry>
 </feed>
