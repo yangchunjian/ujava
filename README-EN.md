@@ -101,7 +101,7 @@ Then you can use Maven to introduce it.
 
 -------------------------------------------------------------------------------
 
-##🏗 Add bricks and tiles
+## 🏗 Add bricks and tiles
 ### 🎋 Branch Description
 The source code of UJava is divided into two branches, with the following functions:
 |Branch | Function|
@@ -128,7 +128,7 @@ UJava welcomes anyone to contribute code and contribute to it, but the maintaine
 4. If we close your issue or PR, please don't be surprised. This is one way for us to keep the problem handling clean. You can still continue the discussion, and we will reopen it when there are discussion results.
 -------------------------------------------------------------------------------
 
-## ⭐Star UJava
+## ⭐ Star UJava
 
 [![Stargazers over time](https://starchart.cc/yangchunjian/ujava.svg)](https://starchart.cc/yangchunjian/ujava)
 
