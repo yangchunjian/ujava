@@ -4,7 +4,7 @@
 
 </p>
 <p align="center">
-	<strong>🍬A set of architecture design.</strong>
+	<strong>🍬Architecture design tools.</strong>
 </p>
 <p align="center">
 	👉 <a href="https://ujava.cn">https://ujava.cn/</a> 👈

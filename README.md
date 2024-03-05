@@ -6,7 +6,7 @@
 [//]: # (	<a href="https://ujava.cn/"><img src="https://cdn.jsdelivr.net/gh/yangchunjian/resources@0.0.1/logo.svg" width="45%"></a>)
 </p>
 <p align="center">
-	<strong>🍬A set of architecture design.</strong>
+	<strong>🍬架构设计工具.</strong>
 </p>
 <p align="center">
 	👉 <a href="https://ujava.cn">https://ujava.cn/</a> 👈
