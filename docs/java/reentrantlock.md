@@ -381,7 +381,7 @@ public class ReentrantLock implements Lock, java.io.Serializable {
 * 主要方法： 主要提供了lock()和tryAcquire()方法，其严格意义上来说，仅仅只是实现了tryAcquire()方法，直接调用了Sync同步类的nonfairTryAcquire()方法。
 * 锁获取方式： 主要是采用闯入策略来打破锁的公平，也就是一般准备获取锁的线程会先尝试获取锁，失败之后才进入队列中。
 
-## 3. 具体实现
+## 四、具体实现
 
 ![img_17.png](img_17.png)
 在ReentrantLock类的JDK1.8版本中，对于ReentrantLock的具体实现如下：
@@ -574,7 +574,7 @@ private final Sync sync;
 
 综上所述，从一定意义上讲，ReentrantLock是一种可重入的独占(互斥)锁，属于AQS基础抽象队列同步器中独占模式孵化的产物，支持公平模式与非公平模式，默认采用非公平模式。
 
-## 最后
+## 五、最后
 
 通过对Java领域中，JDK内部提供的各种锁的实现来看，一直围绕的核心主要还是基于AQS基础同步器来实现的，但是AQS基础同步器不是一种非它不可的技术标准规范，更多的只是一套技术参考指南。
 
