@@ -1,6 +1,6 @@
 <div align="center">
 <p align="center">
-	<a href="https://ujava.cn/"><img src="https://cdn.jsdelivr.net/gh/yangchunjian/resources@0.0.1/logo.svg" width="45%"></a>
+	<a href="https://ujava.cn/"><img src="https://ujava.cn/logo/logo.svg" width="45%"></a>
 
 </p>
 <p align="center">

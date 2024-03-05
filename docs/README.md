@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 架构设计
-heroImage: /logo.svg
+heroImage: /logo/logo.svg
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
