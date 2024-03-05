@@ -1,7 +1,7 @@
 <div align="center">
 
 <p align="center">
-	<a href="https://ujava.cn/"><img src="https://ujava.cn/logo/logo.svg" width="300px"></a>
+	<img src="https://ujava.cn/logo/logo.svg" style="width:300px; height:210px">
 
 [//]: # (	<a href="https://ujava.cn/"><img src="https://cdn.jsdelivr.net/gh/yangchunjian/resources@0.0.1/logo.svg" width="45%"></a>)
 </p>
