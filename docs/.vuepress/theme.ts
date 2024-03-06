@@ -27,7 +27,7 @@ export default hopeTheme({
   // sidebar
   sidebar,
   footer: "",
-
+  fullscreen: true,
   displayFooter: true,
   breadcrumb: false,
   encrypt: {
