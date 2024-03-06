@@ -9,14 +9,14 @@ export default hopeTheme({
   hostname: "https://ujava.cn",
 
   author: {
-    name: "ujava",
-    url: "https://ujava.cn",
+    name: "UJava",
+    url: "https://ujava.cn/article/",
   },
 
   iconAssets: "fontawesome-with-brands",
 
   logo: "/logo/logo.svg",
-
+  favicon: "/favicon.ico",
   repo: "yangchunjian/ujava",
 
   docsDir: "docs",
@@ -62,6 +62,26 @@ export default hopeTheme({
 
 
     components: {
+
+      rootComponents: {
+        // https://plugin-components.vuejs.press/zh/guide/utilities/notice.html#%E7%94%A8%E6%B3%95
+        // notice: [
+        //   {
+        //     path: "/",
+        //     title: "项目介绍",
+        //     showOnce: true,
+        //     content:
+        //         "项目介绍相关内容~",
+        //     actions: [
+        //       {
+        //         text: "开始阅读",
+        //         link: "/home.html",
+        //         type: "primary",
+        //       },
+        //     ],
+        //   },
+        // ],
+      },
       // 你想使用的组件
       components: [
         "ArtPlayer",
