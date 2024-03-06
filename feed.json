@@ -4,6 +4,7 @@
   "home_page_url": "https://ujava.cn/",
   "feed_url": "https://ujava.cn/feed.json",
   "description": " 【Java学习 + Java面试】首选UJava！  ",
+  "favicon": "https://ujava.cn/favicon.ico",
   "items": [
     {
       "title": "反应器(Reactor)模式",

@@ -3,7 +3,8 @@
   <id>https://ujava.cn/</id>
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
-  <updated>2024-03-06T06:45:47.050Z</updated>
+  <icon>https://ujava.cn/favicon.ico</icon>
+  <updated>2024-03-06T09:42:36.587Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
