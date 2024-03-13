@@ -2,6 +2,7 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   { text: "快速上手", icon: "star", link: "/required/" },
+  { text: "设计思想", icon: "star", link: "/mind/" },
   { text: "设计模式", icon: "star", link: "/design/" },
   {
     text: "网站相关",
