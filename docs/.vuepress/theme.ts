@@ -32,7 +32,8 @@ export default hopeTheme({
   breadcrumb: false,
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["1234"],
+      "/encrypt/": ["654321"],
+      "/author/author1.html": ["654321"],
     },
   },
 
