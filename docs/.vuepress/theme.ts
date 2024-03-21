@@ -19,6 +19,7 @@ export default hopeTheme({
   favicon: "/favicon.ico",
   // repo: "yangchunjian/ujava",
   lastUpdated: false,
+  contributors: false,
   docsDir: "docs",
 
   // navbar
