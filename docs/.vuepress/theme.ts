@@ -17,7 +17,7 @@ export default hopeTheme({
 
   logo: "/logo/logo.svg",
   favicon: "/favicon.ico",
-  repo: "yangchunjian/ujava",
+  // repo: "yangchunjian/ujava",
 
   docsDir: "docs",
 
@@ -38,9 +38,9 @@ export default hopeTheme({
   },
 
   // page meta
-  metaLocales: {
-    editLink: "编辑此页",
-  },
+  // metaLocales: {
+  //   editLink: "编辑此页",
+  // },
 
   blog: {
     intro: "/author/",
