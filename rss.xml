@@ -6,11 +6,28 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Sun, 17 Mar 2024 01:35:11 GMT</pubDate>
-    <lastBuildDate>Sun, 17 Mar 2024 01:35:11 GMT</lastBuildDate>
+    <pubDate>Thu, 21 Mar 2024 13:08:42 GMT</pubDate>
+    <lastBuildDate>Thu, 21 Mar 2024 13:08:42 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>设计高频</category>
     <category>设计模式</category>
+    <item>
+      <title>设计限流</title>
+      <link>https://ujava.cn/highfreq/throttling.html</link>
+      <guid>https://ujava.cn/highfreq/throttling.html</guid>
+      <source url="https://ujava.cn/rss.xml">设计限流</source>
+      <description>简介 漏桶和令牌桶的区别 漏桶 img_109.png 令牌桶 img_110.png</description>
+      <category>设计高频</category>
+      <pubDate>Thu, 21 Mar 2024 13:06:03 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 简介</h2>
+<p>漏桶和令牌桶的区别</p>
+<h2> 漏桶</h2>
+<figure><figcaption>img_109.png</figcaption></figure>
+<h2> 令牌桶</h2>
+<figure><figcaption>img_110.png</figcaption></figure>
+]]></content:encoded>
+    </item>
     <item>
       <title>反应器(Reactor)模式</title>
       <link>https://ujava.cn/design/other/reactor.html</link>
@@ -1289,18 +1306,6 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
       <pubDate>Thu, 29 Feb 2024 06:34:22 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 概述</h2>
 <p>转换器(Converter)模式是一种行为设计模式，它允许在相应类型（例如DTO和逻辑同构类型的域表示）之间进行双向转换的通用方式。此外，该模式还引入了一种在类型之间转换对象集合的通用方法。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>命令查询职责分离(CQRS)模式</title>
-      <link>https://ujava.cn/design/other/cqrs.html</link>
-      <guid>https://ujava.cn/design/other/cqrs.html</guid>
-      <source url="https://ujava.cn/rss.xml">命令查询职责分离(CQRS)模式</source>
-      <description>概述 CQRS：命令查询职责分离。一种用于将查询服务与命令或写入服务分离的模式。这个模式很简单，但有很多后果。例如，它可以用于处理复杂的域，或者使用其他难以用经典方式实现的体系结构。</description>
-      <category>设计模式</category>
-      <pubDate>Thu, 29 Feb 2024 06:34:22 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>CQRS：命令查询职责分离。一种用于将查询服务与命令或写入服务分离的模式。这个模式很简单，但有很多后果。例如，它可以用于处理复杂的域，或者使用其他难以用经典方式实现的体系结构。</p>
 ]]></content:encoded>
     </item>
   </channel>

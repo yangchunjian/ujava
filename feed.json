@@ -7,6 +7,19 @@
   "favicon": "https://ujava.cn/favicon.ico",
   "items": [
     {
+      "title": "设计限流",
+      "url": "https://ujava.cn/highfreq/throttling.html",
+      "id": "https://ujava.cn/highfreq/throttling.html",
+      "summary": "简介 漏桶和令牌桶的区别 漏桶 img_109.png 令牌桶 img_110.png",
+      "content_html": "<h2> 简介</h2>\n<p>漏桶和令牌桶的区别</p>\n<h2> 漏桶</h2>\n<figure><figcaption>img_109.png</figcaption></figure>\n<h2> 令牌桶</h2>\n<figure><figcaption>img_110.png</figcaption></figure>\n",
+      "date_published": "2024-03-21T13:06:03.000Z",
+      "date_modified": "2024-03-21T13:06:03.000Z",
+      "authors": [],
+      "tags": [
+        "设计高频"
+      ]
+    },
+    {
       "title": "反应器(Reactor)模式",
       "url": "https://ujava.cn/design/other/reactor.html",
       "id": "https://ujava.cn/design/other/reactor.html",
@@ -1286,19 +1299,6 @@
       "id": "https://ujava.cn/design/other/converter.html",
       "summary": "概述 转换器(Converter)模式是一种行为设计模式，它允许在相应类型（例如DTO和逻辑同构类型的域表示）之间进行双向转换的通用方式。此外，该模式还引入了一种在类型之间转换对象集合的通用方法。",
       "content_html": "<h2> 概述</h2>\n<p>转换器(Converter)模式是一种行为设计模式，它允许在相应类型（例如DTO和逻辑同构类型的域表示）之间进行双向转换的通用方式。此外，该模式还引入了一种在类型之间转换对象集合的通用方法。</p>\n",
-      "date_published": "2024-02-29T06:34:22.000Z",
-      "date_modified": "2024-03-03T03:00:03.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "命令查询职责分离(CQRS)模式",
-      "url": "https://ujava.cn/design/other/cqrs.html",
-      "id": "https://ujava.cn/design/other/cqrs.html",
-      "summary": "概述 CQRS：命令查询职责分离。一种用于将查询服务与命令或写入服务分离的模式。这个模式很简单，但有很多后果。例如，它可以用于处理复杂的域，或者使用其他难以用经典方式实现的体系结构。",
-      "content_html": "<h2> 概述</h2>\n<p>CQRS：命令查询职责分离。一种用于将查询服务与命令或写入服务分离的模式。这个模式很简单，但有很多后果。例如，它可以用于处理复杂的域，或者使用其他难以用经典方式实现的体系结构。</p>\n",
       "date_published": "2024-02-29T06:34:22.000Z",
       "date_modified": "2024-03-03T03:00:03.000Z",
       "authors": [],
