@@ -8,4 +8,3 @@ category:
 ## 简介
 
 * 昵称：UJava
-* 性别：男
