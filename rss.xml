@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Thu, 21 Mar 2024 15:21:52 GMT</pubDate>
-    <lastBuildDate>Thu, 21 Mar 2024 15:21:52 GMT</lastBuildDate>
+    <pubDate>Fri, 22 Mar 2024 03:29:55 GMT</pubDate>
+    <lastBuildDate>Fri, 22 Mar 2024 03:29:55 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -17,15 +17,15 @@
       <link>https://ujava.cn/highfreq/throttling.html</link>
       <guid>https://ujava.cn/highfreq/throttling.html</guid>
       <source url="https://ujava.cn/rss.xml">设计限流</source>
-      <description>简介 漏桶和令牌桶的区别 漏桶 img_109.png 令牌桶 img_110.png</description>
+      <description>简介 漏桶和令牌桶的区别 漏桶 漏桶 令牌桶 令牌桶</description>
       <category>设计高频</category>
       <pubDate>Thu, 21 Mar 2024 13:06:03 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 简介</h2>
 <p>漏桶和令牌桶的区别</p>
 <h2> 漏桶</h2>
-<figure><figcaption>img_109.png</figcaption></figure>
+<figure><figcaption>漏桶</figcaption></figure>
 <h2> 令牌桶</h2>
-<figure><figcaption>img_110.png</figcaption></figure>
+<figure><figcaption>令牌桶</figcaption></figure>
 ]]></content:encoded>
     </item>
     <item>
