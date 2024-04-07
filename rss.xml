@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://ujava.cn/ujava/rss.xsl"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://ujava.cn/rss.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <atom:link href="https://ujava.cn/ujava/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://ujava.cn/rss.xml" rel="self" type="application/rss+xml"/>
     <title>UJava</title>
-    <link>https://ujava.cn/ujava/</link>
+    <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Sun, 07 Apr 2024 13:35:17 GMT</pubDate>
-    <lastBuildDate>Sun, 07 Apr 2024 13:35:17 GMT</lastBuildDate>
+    <pubDate>Sun, 07 Apr 2024 14:04:18 GMT</pubDate>
+    <lastBuildDate>Sun, 07 Apr 2024 14:04:18 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
     <category>设计模式</category>
     <item>
       <title>Mock单测方式</title>
-      <link>https://ujava.cn/ujava/highfreq/mock.html</link>
-      <guid>https://ujava.cn/ujava/highfreq/mock.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">Mock单测方式</source>
+      <link>https://ujava.cn/highfreq/mock.html</link>
+      <guid>https://ujava.cn/highfreq/mock.html</guid>
+      <source url="https://ujava.cn/rss.xml">Mock单测方式</source>
       <description>简介 通过Mock方式，测试编写的程序 通用类定义 @SpringBootTest(classes = Application.class) @RunWith(SpringJUnit4ClassRunner.class) @Slf4j public class BaseTest { @BeforeClass public static void before() { } }</description>
       <category>设计高频</category>
       <pubDate>Mon, 25 Mar 2024 03:10:48 GMT</pubDate>
@@ -30,9 +30,9 @@
     </item>
     <item>
       <title>设计限流</title>
-      <link>https://ujava.cn/ujava/highfreq/throttling.html</link>
-      <guid>https://ujava.cn/ujava/highfreq/throttling.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">设计限流</source>
+      <link>https://ujava.cn/highfreq/throttling.html</link>
+      <guid>https://ujava.cn/highfreq/throttling.html</guid>
+      <source url="https://ujava.cn/rss.xml">设计限流</source>
       <description>简介 漏桶和令牌桶的区别 漏桶 漏桶 令牌桶 令牌桶</description>
       <category>设计高频</category>
       <pubDate>Thu, 21 Mar 2024 13:06:03 GMT</pubDate>
@@ -46,9 +46,9 @@
     </item>
     <item>
       <title>反应器(Reactor)模式</title>
-      <link>https://ujava.cn/ujava/design/other/reactor.html</link>
-      <guid>https://ujava.cn/ujava/design/other/reactor.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">反应器(Reactor)模式</source>
+      <link>https://ujava.cn/design/other/reactor.html</link>
+      <guid>https://ujava.cn/design/other/reactor.html</guid>
+      <source url="https://ujava.cn/rss.xml">反应器(Reactor)模式</source>
       <description>概述 Reactor设计模式处理由一个或多个客户端并发传递到应用程序的服务请求。应用程序可以注册特定的处理程序以进行处理，这些处理程序由reactor在特定事件上调用。事件处理程序的调度由初始化调度器执行，该调度器管理已注册的事件处理程序。服务请求的多路分解由同步事件多路分解器执行。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -58,9 +58,9 @@
     </item>
     <item>
       <title>读写锁模式</title>
-      <link>https://ujava.cn/ujava/design/other/readerwriterlock.html</link>
-      <guid>https://ujava.cn/ujava/design/other/readerwriterlock.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">读写锁模式</source>
+      <link>https://ujava.cn/design/other/readerwriterlock.html</link>
+      <guid>https://ujava.cn/design/other/readerwriterlock.html</guid>
+      <source url="https://ujava.cn/rss.xml">读写锁模式</source>
       <description>概述 当访问数据结构模式时，常规锁不会区分“读锁”和“写锁” 由许多读取数据的线程组成，每个线程都必须锁定数据，这会产生不必要的序列化。 众所周知，读写器锁的存在解决了这个问题 “多个并发读卡器，单个写入器锁”，用于由多个线程同时读取数据组成 并且只允许一个线程写入或修改数据。所有其他人（读者或作者）将被阻止，而作者 正在修改或写入数据，并被取消阻止，直到写入程序完成写入。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -75,9 +75,9 @@
     </item>
     <item>
       <title>注册(Registry)模式</title>
-      <link>https://ujava.cn/ujava/design/other/registry.html</link>
-      <guid>https://ujava.cn/ujava/design/other/registry.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">注册(Registry)模式</source>
+      <link>https://ujava.cn/design/other/registry.html</link>
+      <guid>https://ujava.cn/design/other/registry.html</guid>
+      <source url="https://ujava.cn/rss.xml">注册(Registry)模式</source>
       <description>概述 存储单个类的对象，并提供对它们的全局访问点。 与Multiton模式类似，唯一的区别是在注册表中对对象的数量没有限制。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -88,9 +88,9 @@
     </item>
     <item>
       <title>存储库(Repository)模式</title>
-      <link>https://ujava.cn/ujava/design/other/repository.html</link>
-      <guid>https://ujava.cn/ujava/design/other/repository.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">存储库(Repository)模式</source>
+      <link>https://ujava.cn/design/other/repository.html</link>
+      <guid>https://ujava.cn/design/other/repository.html</guid>
+      <source url="https://ujava.cn/rss.xml">存储库(Repository)模式</source>
       <description>概述 存储库层添加在域和数据映射层之间，以将域对象与 数据库访问代码的详细信息，并最大限度地减少查询代码的分散和重复。这个 存储库模式在域类数量很大或很重的系统中特别有用 利用查询。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -103,9 +103,9 @@
     </item>
     <item>
       <title>资源获取即初始化模式</title>
-      <link>https://ujava.cn/ujava/design/other/resourceacquisitioninit.html</link>
-      <guid>https://ujava.cn/ujava/design/other/resourceacquisitioninit.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">资源获取即初始化模式</source>
+      <link>https://ujava.cn/design/other/resourceacquisitioninit.html</link>
+      <guid>https://ujava.cn/design/other/resourceacquisitioninit.html</guid>
+      <source url="https://ujava.cn/rss.xml">资源获取即初始化模式</source>
       <description>概述 资源获取即初始化模式可用于实现异常安全的资源管理。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -115,9 +115,9 @@
     </item>
     <item>
       <title>重试(Retry)模式</title>
-      <link>https://ujava.cn/ujava/design/other/retry.html</link>
-      <guid>https://ujava.cn/ujava/design/other/retry.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">重试(Retry)模式</source>
+      <link>https://ujava.cn/design/other/retry.html</link>
+      <guid>https://ujava.cn/design/other/retry.html</guid>
+      <source url="https://ujava.cn/rss.xml">重试(Retry)模式</source>
       <description>概述 透明地重试涉及与外部资源通信的某些操作， 特别是在网络上，将调用代码与重试实现细节隔离开来。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -128,9 +128,9 @@
     </item>
     <item>
       <title>角色对象(Role Object)模式</title>
-      <link>https://ujava.cn/ujava/design/other/roleobject.html</link>
-      <guid>https://ujava.cn/ujava/design/other/roleobject.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">角色对象(Role Object)模式</source>
+      <link>https://ujava.cn/design/other/roleobject.html</link>
+      <guid>https://ujava.cn/design/other/roleobject.html</guid>
+      <source url="https://ujava.cn/rss.xml">角色对象(Role Object)模式</source>
       <description>概述 通过透明附加的角色对象使对象适应不同客户端的需求，每个对象代表一个角色 对象必须在该客户端的上下文中播放。对象动态管理其角色集。通过将角色表示为 单独的对象、不同的上下文是分开的，并且简化了系统配置。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -142,9 +142,9 @@
     </item>
     <item>
       <title>事务(Saga)模式</title>
-      <link>https://ujava.cn/ujava/design/other/saga.html</link>
-      <guid>https://ujava.cn/ujava/design/other/saga.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">事务(Saga)模式</source>
+      <link>https://ujava.cn/design/other/saga.html</link>
+      <guid>https://ujava.cn/design/other/saga.html</guid>
+      <source url="https://ujava.cn/rss.xml">事务(Saga)模式</source>
       <description>概述 这种模式用于分布式服务，以原子方式执行一组操作。 这是数据库中事务的模拟，但就微服务架构而言，这是执行的 在分布式环境中</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -156,9 +156,9 @@
     </item>
     <item>
       <title>分离接口模式</title>
-      <link>https://ujava.cn/ujava/design/other/separatedinterface.html</link>
-      <guid>https://ujava.cn/ujava/design/other/separatedinterface.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">分离接口模式</source>
+      <link>https://ujava.cn/design/other/separatedinterface.html</link>
+      <guid>https://ujava.cn/design/other/separatedinterface.html</guid>
+      <source url="https://ujava.cn/rss.xml">分离接口模式</source>
       <description>概述 在不同的包中分离接口定义和实现。这允许客户端 完全不知道实现。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -169,9 +169,9 @@
     </item>
     <item>
       <title>序列化实体模式</title>
-      <link>https://ujava.cn/ujava/design/other/serializedentity.html</link>
-      <guid>https://ujava.cn/ujava/design/other/serializedentity.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">序列化实体模式</source>
+      <link>https://ujava.cn/design/other/serializedentity.html</link>
+      <guid>https://ujava.cn/design/other/serializedentity.html</guid>
+      <source url="https://ujava.cn/rss.xml">序列化实体模式</source>
       <description>概述 序列化实体模式。 序列化实体模式使我们能够轻松地将Java对象持久化到数据库中。它使用Serializable接口和DAO模式。序列化实体模式将首先使用Serializable将Java对象转换为一组字节，然后使用DAO模式将这组字节作为BLOB存储到数据库中。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -182,9 +182,9 @@
     </item>
     <item>
       <title>雇工(Servant)模式</title>
-      <link>https://ujava.cn/ujava/design/other/servant.html</link>
-      <guid>https://ujava.cn/ujava/design/other/servant.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">雇工(Servant)模式</source>
+      <link>https://ujava.cn/design/other/servant.html</link>
+      <guid>https://ujava.cn/design/other/servant.html</guid>
+      <source url="https://ujava.cn/rss.xml">雇工(Servant)模式</source>
       <description>概述 Servant用于为一组类提供一些行为。 而不是在每个类中定义这种行为——或者当我们无法将其排除在外时 公共父类中的这种行为-它在Servant中定义过一次。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -196,9 +196,9 @@
     </item>
     <item>
       <title>服务层模式</title>
-      <link>https://ujava.cn/ujava/design/other/servicelayer.html</link>
-      <guid>https://ujava.cn/ujava/design/other/servicelayer.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">服务层模式</source>
+      <link>https://ujava.cn/design/other/servicelayer.html</link>
+      <guid>https://ujava.cn/design/other/servicelayer.html</guid>
+      <source url="https://ujava.cn/rss.xml">服务层模式</source>
       <description>概述 Servant用于为一组类提供一些行为。 而不是在每个类中定义这种行为——或者当我们无法将其排除在外时 公共父类中的这种行为-它在Servant中定义过一次。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -210,9 +210,9 @@
     </item>
     <item>
       <title>服务定位模式</title>
-      <link>https://ujava.cn/ujava/design/other/servicelocator.html</link>
-      <guid>https://ujava.cn/ujava/design/other/servicelocator.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">服务定位模式</source>
+      <link>https://ujava.cn/design/other/servicelocator.html</link>
+      <guid>https://ujava.cn/design/other/servicelocator.html</guid>
+      <source url="https://ujava.cn/rss.xml">服务定位模式</source>
       <description>概述 使用封装获取服务所涉及的过程 强抽象层。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -223,9 +223,9 @@
     </item>
     <item>
       <title>服务工作者模式</title>
-      <link>https://ujava.cn/ujava/design/other/serviceworker.html</link>
-      <guid>https://ujava.cn/ujava/design/other/serviceworker.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">服务工作者模式</source>
+      <link>https://ujava.cn/design/other/serviceworker.html</link>
+      <guid>https://ujava.cn/design/other/serviceworker.html</guid>
+      <source url="https://ujava.cn/rss.xml">服务工作者模式</source>
       <description>概述 将控制器和调度程序与视图和助手相结合，以处理客户端请求并准备一个动态演示作为响应。控制器将内容检索委托给助手，后者管理视图的中间模型的填充。调度器负责视图管理和导航，可以封装在控制器或单独的组件中。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -235,9 +235,9 @@
     </item>
     <item>
       <title>分区(Sharding)模式</title>
-      <link>https://ujava.cn/ujava/design/other/sharding.html</link>
-      <guid>https://ujava.cn/ujava/design/other/sharding.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">分区(Sharding)模式</source>
+      <link>https://ujava.cn/design/other/sharding.html</link>
+      <guid>https://ujava.cn/design/other/sharding.html</guid>
+      <source url="https://ujava.cn/rss.xml">分区(Sharding)模式</source>
       <description>概述 Sharding模式意味着将数据存储划分为水平分区或碎片。每个shard都有相同的模式，但拥有自己不同的数据子集。 shard本身就是一个数据存储（它可以包含许多不同类型实体的数据），在充当存储节点的服务器上运行。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -248,9 +248,9 @@ shard本身就是一个数据存储（它可以包含许多不同类型实体的
     </item>
     <item>
       <title>空间分区模式</title>
-      <link>https://ujava.cn/ujava/design/other/spatialpartition.html</link>
-      <guid>https://ujava.cn/ujava/design/other/spatialpartition.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">空间分区模式</source>
+      <link>https://ujava.cn/design/other/spatialpartition.html</link>
+      <guid>https://ujava.cn/design/other/spatialpartition.html</guid>
+      <source url="https://ujava.cn/rss.xml">空间分区模式</source>
       <description>概述 正如《游戏编程模式》一书中所解释的那样 Bob Nystrom认为，空间分区模式通过将对象存储在 按位置组织的数据结构。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -262,9 +262,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>特殊例子模式</title>
-      <link>https://ujava.cn/ujava/design/other/specialcase.html</link>
-      <guid>https://ujava.cn/ujava/design/other/specialcase.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">特殊例子模式</source>
+      <link>https://ujava.cn/design/other/specialcase.html</link>
+      <guid>https://ujava.cn/design/other/specialcase.html</guid>
+      <source url="https://ujava.cn/rss.xml">特殊例子模式</source>
       <description>概述 定义一些特殊情况，并将它们封装到提供不同特殊行为的子类中。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -274,9 +274,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>规范(Specification)模式</title>
-      <link>https://ujava.cn/ujava/design/other/specification.html</link>
-      <guid>https://ujava.cn/ujava/design/other/specification.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">规范(Specification)模式</source>
+      <link>https://ujava.cn/design/other/specification.html</link>
+      <guid>https://ujava.cn/design/other/specification.html</guid>
+      <source url="https://ujava.cn/rss.xml">规范(Specification)模式</source>
       <description>概述 规范模式将如何匹配候选对象的语句与候选对象分开 与之匹配的。它不仅在选择中有用，而且对 验证和按订单建造。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -288,9 +288,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>步骤建立者模式</title>
-      <link>https://ujava.cn/ujava/design/other/stepbuilder.html</link>
-      <guid>https://ujava.cn/ujava/design/other/stepbuilder.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">步骤建立者模式</source>
+      <link>https://ujava.cn/design/other/stepbuilder.html</link>
+      <guid>https://ujava.cn/design/other/stepbuilder.html</guid>
+      <source url="https://ujava.cn/rss.xml">步骤建立者模式</source>
       <description>概述 Builder模式的扩展，它完全指导用户创建对象，不会出现混淆。 用户体验将得到更大的改善，因为他只会看到下一步可用的方法，在正确的时间构建对象之前没有构建方法。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -301,9 +301,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>扼杀者(Strangler)模式</title>
-      <link>https://ujava.cn/ujava/design/other/strangler.html</link>
-      <guid>https://ujava.cn/ujava/design/other/strangler.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">扼杀者(Strangler)模式</source>
+      <link>https://ujava.cn/design/other/strangler.html</link>
+      <guid>https://ujava.cn/design/other/strangler.html</guid>
+      <source url="https://ujava.cn/rss.xml">扼杀者(Strangler)模式</source>
       <description>概述 通过逐步替换特定的功能，逐步迁移遗留系统 新的应用程序和服务。随着旧系统的功能被替换 系统最终覆盖了旧系统的所有功能，并可能具有自己的新功能，然后 扼杀旧系统，让你退役。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -316,9 +316,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>子类沙盒模式</title>
-      <link>https://ujava.cn/ujava/design/other/subclasssandbox.html</link>
-      <guid>https://ujava.cn/ujava/design/other/subclasssandbox.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">子类沙盒模式</source>
+      <link>https://ujava.cn/design/other/subclasssandbox.html</link>
+      <guid>https://ujava.cn/design/other/subclasssandbox.html</guid>
+      <source url="https://ujava.cn/rss.xml">子类沙盒模式</source>
       <description>概述 子类沙盒模式描述了一个基本思想，但没有很多详细的机制。当您有几个类似的子类时，您将需要该模式。如果你必须做一个微小的改变，那么就改变基类，而所有的子类都不应该被触及。因此基类必须能够提供派生类需要执行的所有操作。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -328,9 +328,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>表模块(Table Module)模式</title>
-      <link>https://ujava.cn/ujava/design/other/tablemodule.html</link>
-      <guid>https://ujava.cn/ujava/design/other/tablemodule.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">表模块(Table Module)模式</source>
+      <link>https://ujava.cn/design/other/tablemodule.html</link>
+      <guid>https://ujava.cn/design/other/tablemodule.html</guid>
+      <source url="https://ujava.cn/rss.xml">表模块(Table Module)模式</source>
       <description>概述 表模块通过数据库中每个表一个类来组织域逻辑，并且类的单个实例包含将对数据进行操作的各种过程。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -340,9 +340,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>模版方法模式</title>
-      <link>https://ujava.cn/ujava/design/other/templatemethod.html</link>
-      <guid>https://ujava.cn/ujava/design/other/templatemethod.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">模版方法模式</source>
+      <link>https://ujava.cn/design/other/templatemethod.html</link>
+      <guid>https://ujava.cn/design/other/templatemethod.html</guid>
+      <source url="https://ujava.cn/rss.xml">模版方法模式</source>
       <description>概述 在操作中定义算法的骨架，将一些步骤推迟到子类中。样板 方法允许子类在不更改算法的情况下重新定义算法的某些步骤 结构</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -354,9 +354,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>本地线程存储模式</title>
-      <link>https://ujava.cn/ujava/design/other/threadlocalstorage.html</link>
-      <guid>https://ujava.cn/ujava/design/other/threadlocalstorage.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">本地线程存储模式</source>
+      <link>https://ujava.cn/design/other/threadlocalstorage.html</link>
+      <guid>https://ujava.cn/design/other/threadlocalstorage.html</guid>
+      <source url="https://ujava.cn/rss.xml">本地线程存储模式</source>
       <description>概述 提供为每个线程提供一个变量副本的功能，使其线程安全。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -366,9 +366,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>线程池模式</title>
-      <link>https://ujava.cn/ujava/design/other/threadpool.html</link>
-      <guid>https://ujava.cn/ujava/design/other/threadpool.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">线程池模式</source>
+      <link>https://ujava.cn/design/other/threadpool.html</link>
+      <guid>https://ujava.cn/design/other/threadpool.html</guid>
+      <source url="https://ujava.cn/rss.xml">线程池模式</source>
       <description>概述 通常情况下，要执行的任务是短暂的，并且任务数量很大。 为每个任务创建一个新线程会使系统花费更多的时间来创建和销毁 线程而不是执行实际任务。线程池通过重用现有的 线程，并消除创建新线程的延迟。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -381,9 +381,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>节流(Throttling)模式</title>
-      <link>https://ujava.cn/ujava/design/other/throttling.html</link>
-      <guid>https://ujava.cn/ujava/design/other/throttling.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">节流(Throttling)模式</source>
+      <link>https://ujava.cn/design/other/throttling.html</link>
+      <guid>https://ujava.cn/design/other/throttling.html</guid>
+      <source url="https://ujava.cn/rss.xml">节流(Throttling)模式</source>
       <description>概述 确保给定的客户端访问服务资源的次数不能超过指定的限制。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -393,9 +393,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>读者容错模式</title>
-      <link>https://ujava.cn/ujava/design/other/tolerantreader.html</link>
-      <guid>https://ujava.cn/ujava/design/other/tolerantreader.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">读者容错模式</source>
+      <link>https://ujava.cn/design/other/tolerantreader.html</link>
+      <guid>https://ujava.cn/design/other/tolerantreader.html</guid>
+      <source url="https://ujava.cn/rss.xml">读者容错模式</source>
       <description>概述 Tolerant Reader是一种集成模式，有助于创建健壮的通信系统。这个想法 是在从另一个服务读取数据时尽可能宽容。这样，当 交流模式发生变化，读者一定不能断。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -407,9 +407,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>蹦床(Trampoline)模式</title>
-      <link>https://ujava.cn/ujava/design/other/trampoline.html</link>
-      <guid>https://ujava.cn/ujava/design/other/trampoline.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">蹦床(Trampoline)模式</source>
+      <link>https://ujava.cn/design/other/trampoline.html</link>
+      <guid>https://ujava.cn/design/other/trampoline.html</guid>
+      <source url="https://ujava.cn/rss.xml">蹦床(Trampoline)模式</source>
       <description>概述 Trampoline模式用于在不破坏堆栈的情况下在Java中递归地实现算法 并且交织功能的执行而不将它们硬编码在一起。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -420,9 +420,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>事务脚本模式</title>
-      <link>https://ujava.cn/ujava/design/other/transactionscript.html</link>
-      <guid>https://ujava.cn/ujava/design/other/transactionscript.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">事务脚本模式</source>
+      <link>https://ujava.cn/design/other/transactionscript.html</link>
+      <guid>https://ujava.cn/design/other/transactionscript.html</guid>
+      <source url="https://ujava.cn/rss.xml">事务脚本模式</source>
       <description>概述 事务脚本按过程组织业务逻辑，其中每个过程处理一个 来自演示文稿的请求。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -433,9 +433,9 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     </item>
     <item>
       <title>双(Twin)模式</title>
-      <link>https://ujava.cn/ujava/design/other/twin.html</link>
-      <guid>https://ujava.cn/ujava/design/other/twin.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">双(Twin)模式</source>
+      <link>https://ujava.cn/design/other/twin.html</link>
+      <guid>https://ujava.cn/design/other/twin.html</guid>
+      <source url="https://ujava.cn/rss.xml">双(Twin)模式</source>
       <description>概述 双模式是一种设计模式，它提供了一个标准的解决方案来模拟多个 java中的继承</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -446,9 +446,9 @@ java中的继承</p>
     </item>
     <item>
       <title>事务脚本模式</title>
-      <link>https://ujava.cn/ujava/design/other/typeobject.html</link>
-      <guid>https://ujava.cn/ujava/design/other/typeobject.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">事务脚本模式</source>
+      <link>https://ujava.cn/design/other/typeobject.html</link>
+      <guid>https://ujava.cn/design/other/typeobject.html</guid>
+      <source url="https://ujava.cn/rss.xml">事务脚本模式</source>
       <description>概述 当创建基类并从中继承的OOP概念不适用于当前情况时，类型对象模式就是我们使用的模式。当我们不知道预先需要什么类型，或者希望能够在不重复重新编译的情况下方便地修改或添加新类型时，就会发生这种情况。该模式提供了一种解决方案，允许通过创建一个类来灵活地创建所需的对象，该类具有一个表示对象“类型”的字段。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -458,9 +458,9 @@ java中的继承</p>
     </item>
     <item>
       <title>工作单元模式</title>
-      <link>https://ujava.cn/ujava/design/other/unitofwork.html</link>
-      <guid>https://ujava.cn/ujava/design/other/unitofwork.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">工作单元模式</source>
+      <link>https://ujava.cn/design/other/unitofwork.html</link>
+      <guid>https://ujava.cn/design/other/unitofwork.html</guid>
+      <source url="https://ujava.cn/rss.xml">工作单元模式</source>
       <description>概述 当业务事务完成时，所有更新都作为一个大的工作单元发送 一次性持久化，以最大限度地减少数据库往返。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -471,9 +471,9 @@ java中的继承</p>
     </item>
     <item>
       <title>更新方法模式</title>
-      <link>https://ujava.cn/ujava/design/other/updatemethod.html</link>
-      <guid>https://ujava.cn/ujava/design/other/updatemethod.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">更新方法模式</source>
+      <link>https://ujava.cn/design/other/updatemethod.html</link>
+      <guid>https://ujava.cn/design/other/updatemethod.html</guid>
+      <source url="https://ujava.cn/rss.xml">更新方法模式</source>
       <description>概述 更新方法模式通过告诉每个对象一次处理一帧行为来模拟独立对象的集合。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -483,9 +483,9 @@ java中的继承</p>
     </item>
     <item>
       <title>值对象模式</title>
-      <link>https://ujava.cn/ujava/design/other/valueobject.html</link>
-      <guid>https://ujava.cn/ujava/design/other/valueobject.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">值对象模式</source>
+      <link>https://ujava.cn/design/other/valueobject.html</link>
+      <guid>https://ujava.cn/design/other/valueobject.html</guid>
+      <source url="https://ujava.cn/rss.xml">值对象模式</source>
       <description>概述 提供遵循值语义而不是引用语义的对象。 这意味着值对象的相等性不是基于身份的。两个值对象是 当它们具有相同的值时相等，而不一定是同一对象。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -497,9 +497,9 @@ java中的继承</p>
     </item>
     <item>
       <title>版本号模式</title>
-      <link>https://ujava.cn/ujava/design/other/versionnumber.html</link>
-      <guid>https://ujava.cn/ujava/design/other/versionnumber.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">版本号模式</source>
+      <link>https://ujava.cn/design/other/versionnumber.html</link>
+      <guid>https://ujava.cn/design/other/versionnumber.html</guid>
+      <source url="https://ujava.cn/rss.xml">版本号模式</source>
       <description>概述 版本号模式有助于解决应用程序中的并发冲突。通常，当多个客户端试图同时更新同一记录时，这些冲突会出现在数据库操作中。解决此类冲突需要确定对象是否已更改。因此，我们需要一个版本号，该版本号随着底层数据（例如数据库）的每次更改而递增。存储库可以使用版本号来检查外部更改并向用户报告并发问题。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
@@ -509,9 +509,9 @@ java中的继承</p>
     </item>
     <item>
       <title>页面对象模式</title>
-      <link>https://ujava.cn/ujava/design/other/pageobject.html</link>
-      <guid>https://ujava.cn/ujava/design/other/pageobject.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">页面对象模式</source>
+      <link>https://ujava.cn/design/other/pageobject.html</link>
+      <guid>https://ujava.cn/design/other/pageobject.html</guid>
+      <source url="https://ujava.cn/rss.xml">页面对象模式</source>
       <description>概述 Page 对象封装 UI，隐藏应用程序（通常是 Web 应用程序）的基础 UI 小组件，并提供特定于应用程序的 API，以允许操作测试所需的 UI 组件。这样一来，它允许测试类本身专注于测试逻辑。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -522,9 +522,9 @@ java中的继承</p>
     </item>
     <item>
       <title>参数对象模式</title>
-      <link>https://ujava.cn/ujava/design/other/parameterobject.html</link>
-      <guid>https://ujava.cn/ujava/design/other/parameterobject.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">参数对象模式</source>
+      <link>https://ujava.cn/design/other/parameterobject.html</link>
+      <guid>https://ujava.cn/design/other/parameterobject.html</guid>
+      <source url="https://ujava.cn/rss.xml">参数对象模式</source>
       <description>概述 Java 语言的语法不允许使用参数的预定义值声明方法。在 Java 中实现默认方法参数的最佳选择可能是使用方法重载。方法重载允许您声明多个具有相同名称但参数数量不同的方法。但是，当方法接受多个参数时，方法重载作为默认参数值解决方案的主要问题就会显现出来。为每个可能的参数组合创建重载方法可能很麻烦。为了解决此问题，使用了 Parameter Object 模式。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -534,9 +534,9 @@ java中的继承</p>
     </item>
     <item>
       <title>部分响应模式</title>
-      <link>https://ujava.cn/ujava/design/other/partialresponse.html</link>
-      <guid>https://ujava.cn/ujava/design/other/partialresponse.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">部分响应模式</source>
+      <link>https://ujava.cn/design/other/partialresponse.html</link>
+      <guid>https://ujava.cn/design/other/partialresponse.html</guid>
+      <source url="https://ujava.cn/rss.xml">部分响应模式</source>
       <description>概述 根据需要将部分响应从服务器发送到客户端。客户端将指定它需要服务器的字段，而不是提供资源的所有详细信息。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -546,9 +546,9 @@ java中的继承</p>
     </item>
     <item>
       <title>管道(Pipeline)模式</title>
-      <link>https://ujava.cn/ujava/design/other/pipeline.html</link>
-      <guid>https://ujava.cn/ujava/design/other/pipeline.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">管道(Pipeline)模式</source>
+      <link>https://ujava.cn/design/other/pipeline.html</link>
+      <guid>https://ujava.cn/design/other/pipeline.html</guid>
+      <source url="https://ujava.cn/rss.xml">管道(Pipeline)模式</source>
       <description>概述 通过提供初始输入并将处理后的输出传递给下一阶段使用，允许在一系列阶段中处理数据。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -558,9 +558,9 @@ java中的继承</p>
     </item>
     <item>
       <title>毒丸(Poison Pill)模式</title>
-      <link>https://ujava.cn/ujava/design/other/poisonpill.html</link>
-      <guid>https://ujava.cn/ujava/design/other/poisonpill.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">毒丸(Poison Pill)模式</source>
+      <link>https://ujava.cn/design/other/poisonpill.html</link>
+      <guid>https://ujava.cn/design/other/poisonpill.html</guid>
+      <source url="https://ujava.cn/rss.xml">毒丸(Poison Pill)模式</source>
       <description>概述 毒丸（Poison Pill）是已知的预定义数据项，允许为单独的分布式消费过程提供正常关闭。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -570,9 +570,9 @@ java中的继承</p>
     </item>
     <item>
       <title>演示模型模式</title>
-      <link>https://ujava.cn/ujava/design/other/presentationmodel.html</link>
-      <guid>https://ujava.cn/ujava/design/other/presentationmodel.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">演示模型模式</source>
+      <link>https://ujava.cn/design/other/presentationmodel.html</link>
+      <guid>https://ujava.cn/design/other/presentationmodel.html</guid>
+      <source url="https://ujava.cn/rss.xml">演示模型模式</source>
       <description>概述 演示模型将视图的状态和行为拉出到作为演示的一部分的模型类中。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -582,9 +582,9 @@ java中的继承</p>
     </item>
     <item>
       <title>优先级队列模式</title>
-      <link>https://ujava.cn/ujava/design/other/priorityqueue.html</link>
-      <guid>https://ujava.cn/ujava/design/other/priorityqueue.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">优先级队列模式</source>
+      <link>https://ujava.cn/design/other/priorityqueue.html</link>
+      <guid>https://ujava.cn/design/other/priorityqueue.html</guid>
+      <source url="https://ujava.cn/rss.xml">优先级队列模式</source>
       <description>概述 对发送到服务的请求进行优先级排序，以便比优先级较低的请求更快地接收和处理优先级较高的请求。此模式在为各个客户端提供不同服务级别保证的应用程序中非常有用。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -594,9 +594,9 @@ java中的继承</p>
     </item>
     <item>
       <title>私有类数据模式</title>
-      <link>https://ujava.cn/ujava/design/other/privateclassdata.html</link>
-      <guid>https://ujava.cn/ujava/design/other/privateclassdata.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">私有类数据模式</source>
+      <link>https://ujava.cn/design/other/privateclassdata.html</link>
+      <guid>https://ujava.cn/design/other/privateclassdata.html</guid>
+      <source url="https://ujava.cn/rss.xml">私有类数据模式</source>
       <description>概述 私有类数据设计模式旨在通过限制属性的可见性来减少属性的暴露。它通过将类属性封装在单个 Data 对象中来减少类属性的数量。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -606,9 +606,9 @@ java中的继承</p>
     </item>
     <item>
       <title>生产者消费者模式</title>
-      <link>https://ujava.cn/ujava/design/other/producerconsumer.html</link>
-      <guid>https://ujava.cn/ujava/design/other/producerconsumer.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">生产者消费者模式</source>
+      <link>https://ujava.cn/design/other/producerconsumer.html</link>
+      <guid>https://ujava.cn/design/other/producerconsumer.html</guid>
+      <source url="https://ujava.cn/rss.xml">生产者消费者模式</source>
       <description>概述 生产者消费者设计模式是一种经典的并发模式，它通过将工作标识与工作执行分开来减少生产者和消费者之间的耦合。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -618,9 +618,9 @@ java中的继承</p>
     </item>
     <item>
       <title>承诺(Promise)模式</title>
-      <link>https://ujava.cn/ujava/design/other/promise.html</link>
-      <guid>https://ujava.cn/ujava/design/other/promise.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">承诺(Promise)模式</source>
+      <link>https://ujava.cn/design/other/promise.html</link>
+      <guid>https://ujava.cn/design/other/promise.html</guid>
+      <source url="https://ujava.cn/rss.xml">承诺(Promise)模式</source>
       <description>概述 Promise 表示创建 Promise 时不一定知道的值的代理。它允许您将依赖承诺与异步操作的最终成功值或失败原因相关联。Promise 是一种编写异步代码的方法，该代码看起来仍然像是以同步方式执行。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -630,9 +630,9 @@ java中的继承</p>
     </item>
     <item>
       <title>属性(Property)模式</title>
-      <link>https://ujava.cn/ujava/design/other/property.html</link>
-      <guid>https://ujava.cn/ujava/design/other/property.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">属性(Property)模式</source>
+      <link>https://ujava.cn/design/other/property.html</link>
+      <guid>https://ujava.cn/design/other/property.html</guid>
+      <source url="https://ujava.cn/rss.xml">属性(Property)模式</source>
       <description>概述 使用现有对象作为父对象创建对象和新对象的层次结构。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -642,9 +642,9 @@ java中的继承</p>
     </item>
     <item>
       <title>基于队列的负载均衡模式</title>
-      <link>https://ujava.cn/ujava/design/other/queuebasedloadlevel.html</link>
-      <guid>https://ujava.cn/ujava/design/other/queuebasedloadlevel.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">基于队列的负载均衡模式</source>
+      <link>https://ujava.cn/design/other/queuebasedloadlevel.html</link>
+      <guid>https://ujava.cn/design/other/queuebasedloadlevel.html</guid>
+      <source url="https://ujava.cn/rss.xml">基于队列的负载均衡模式</source>
       <description>概述 使用充当任务与其调用的服务之间的缓冲区的队列，以平滑可能导致服务失败或任务超时的间歇性重负载。此模式有助于最大程度地减少需求高峰对任务和服务的可用性和响应能力的影响。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
@@ -654,9 +654,9 @@ java中的继承</p>
     </item>
     <item>
       <title>页面控制模式</title>
-      <link>https://ujava.cn/ujava/design/other/pagecontroller.html</link>
-      <guid>https://ujava.cn/ujava/design/other/pagecontroller.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">页面控制模式</source>
+      <link>https://ujava.cn/design/other/pagecontroller.html</link>
+      <guid>https://ujava.cn/design/other/pagecontroller.html</guid>
+      <source url="https://ujava.cn/rss.xml">页面控制模式</source>
       <description>概述 这是一种一个页面通向一个逻辑文件的方法，该文件处理网站上的操作或请求。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 02:16:14 GMT</pubDate>
@@ -666,9 +666,9 @@ java中的继承</p>
     </item>
     <item>
       <title>层模式</title>
-      <link>https://ujava.cn/ujava/design/other/layers.html</link>
-      <guid>https://ujava.cn/ujava/design/other/layers.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">层模式</source>
+      <link>https://ujava.cn/design/other/layers.html</link>
+      <guid>https://ujava.cn/design/other/layers.html</guid>
+      <source url="https://ujava.cn/rss.xml">层模式</source>
       <description>概述 层是一种体系结构模式，其中软件职责在不同的 应用程序的层。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -679,9 +679,9 @@ java中的继承</p>
     </item>
     <item>
       <title>懒加载模式</title>
-      <link>https://ujava.cn/ujava/design/other/lazyloading.html</link>
-      <guid>https://ujava.cn/ujava/design/other/lazyloading.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">懒加载模式</source>
+      <link>https://ujava.cn/design/other/lazyloading.html</link>
+      <guid>https://ujava.cn/design/other/lazyloading.html</guid>
+      <source url="https://ujava.cn/rss.xml">懒加载模式</source>
       <description>概述 延迟加载是一种设计模式，通常用于将对象的初始化推迟到需要它的时间点。如果使用得当，它有助于提高程序运行的效率。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -691,9 +691,9 @@ java中的继承</p>
     </item>
     <item>
       <title>领导者选举模式</title>
-      <link>https://ujava.cn/ujava/design/other/leaderelection.html</link>
-      <guid>https://ujava.cn/ujava/design/other/leaderelection.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">领导者选举模式</source>
+      <link>https://ujava.cn/design/other/leaderelection.html</link>
+      <guid>https://ujava.cn/design/other/leaderelection.html</guid>
+      <source url="https://ujava.cn/rss.xml">领导者选举模式</source>
       <description>概述 领导者选举模式通常用于云系统设计。它有助于确保任务实例正确选择领导实例，并且不会相互冲突、导致共享资源争用或无意中干扰其他任务实例正在执行的工作。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -703,9 +703,9 @@ java中的继承</p>
     </item>
     <item>
       <title>领导者跟随者模式</title>
-      <link>https://ujava.cn/ujava/design/other/leaderfollowers.html</link>
-      <guid>https://ujava.cn/ujava/design/other/leaderfollowers.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">领导者跟随者模式</source>
+      <link>https://ujava.cn/design/other/leaderfollowers.html</link>
+      <guid>https://ujava.cn/design/other/leaderfollowers.html</guid>
+      <source url="https://ujava.cn/rss.xml">领导者跟随者模式</source>
       <description>概述 领导者/跟随者（Leader/Followers） 模式提供了一个并发模型，在该模型中，多个线程可以有效地取消多路复用事件，并调度处理线程共享的 IO 句柄的事件处理程序。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -715,9 +715,9 @@ java中的继承</p>
     </item>
     <item>
       <title>锁定对象模式</title>
-      <link>https://ujava.cn/ujava/design/other/lockableobject.html</link>
-      <guid>https://ujava.cn/ujava/design/other/lockableobject.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">锁定对象模式</source>
+      <link>https://ujava.cn/design/other/lockableobject.html</link>
+      <guid>https://ujava.cn/design/other/lockableobject.html</guid>
+      <source url="https://ujava.cn/rss.xml">锁定对象模式</source>
       <description>概述 可锁定对象设计模式可确保只有一个用户使用目标对象。与内置的同步机制（例如使用“synchronized”关键字）相比，此模式可以在不确定的时间内锁定对象，并且与请求的持续时间无关。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -727,9 +727,9 @@ java中的继承</p>
     </item>
     <item>
       <title>日志整合模式</title>
-      <link>https://ujava.cn/ujava/design/other/logaggregation.html</link>
-      <guid>https://ujava.cn/ujava/design/other/logaggregation.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">日志整合模式</source>
+      <link>https://ujava.cn/design/other/logaggregation.html</link>
+      <guid>https://ujava.cn/design/other/logaggregation.html</guid>
+      <source url="https://ujava.cn/rss.xml">日志整合模式</source>
       <description>概述 集中、简化和优化日志管理流程，以便快速获得见解，快速识别和解决问题，并有效监控系统的整体运行状况。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -739,9 +739,9 @@ java中的继承</p>
     </item>
     <item>
       <title>标记接口模式</title>
-      <link>https://ujava.cn/ujava/design/other/markerinterface.html</link>
-      <guid>https://ujava.cn/ujava/design/other/markerinterface.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">标记接口模式</source>
+      <link>https://ujava.cn/design/other/markerinterface.html</link>
+      <guid>https://ujava.cn/design/other/markerinterface.html</guid>
+      <source url="https://ujava.cn/rss.xml">标记接口模式</source>
       <description>概述 使用空界面作为标记来区分经过特殊处理的对象。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -751,9 +751,9 @@ java中的继承</p>
     </item>
     <item>
       <title>主从模式</title>
-      <link>https://ujava.cn/ujava/design/other/masterworker.html</link>
-      <guid>https://ujava.cn/ujava/design/other/masterworker.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">主从模式</source>
+      <link>https://ujava.cn/design/other/masterworker.html</link>
+      <guid>https://ujava.cn/design/other/masterworker.html</guid>
+      <source url="https://ujava.cn/rss.xml">主从模式</source>
       <description>概述 当手头的问题可以通过划分为多个部分来解决时，可以使用Master Worker模式，这些部分需要经过相同的计算，并且可能需要聚合才能得到最终结果。并行处理是使用一个由一个主机和一些工人组成的系统来执行的，其中主机在工人之间分配工作，从他们那里得到结果，并同化所有结果以给出最终结果。唯一的通信是在主机和工作程序之间——没有工作程序在彼此之间通信，用户只与主机通信以完成所需的工作。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -763,9 +763,9 @@ java中的继承</p>
     </item>
     <item>
       <title>元数据对象关系映射模式</title>
-      <link>https://ujava.cn/ujava/design/other/metadatamapping.html</link>
-      <guid>https://ujava.cn/ujava/design/other/metadatamapping.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">元数据对象关系映射模式</source>
+      <link>https://ujava.cn/design/other/metadatamapping.html</link>
+      <guid>https://ujava.cn/design/other/metadatamapping.html</guid>
+      <source url="https://ujava.cn/rss.xml">元数据对象关系映射模式</source>
       <description>概述 保存元数据中对象关系映射的详细信息。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -775,9 +775,9 @@ java中的继承</p>
     </item>
     <item>
       <title>模块模式</title>
-      <link>https://ujava.cn/ujava/design/other/module.html</link>
-      <guid>https://ujava.cn/ujava/design/other/module.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">模块模式</source>
+      <link>https://ujava.cn/design/other/module.html</link>
+      <guid>https://ujava.cn/design/other/module.html</guid>
+      <source url="https://ujava.cn/rss.xml">模块模式</source>
       <description>概述 模块模式用于实现软件模块的概念，由模块化编程定义，在对概念的不完全直接支持的编程语言中。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -787,9 +787,9 @@ java中的继承</p>
     </item>
     <item>
       <title>单体(monad)模式</title>
-      <link>https://ujava.cn/ujava/design/other/monad.html</link>
-      <guid>https://ujava.cn/ujava/design/other/monad.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">单体(monad)模式</source>
+      <link>https://ujava.cn/design/other/monad.html</link>
+      <guid>https://ujava.cn/design/other/monad.html</guid>
+      <source url="https://ujava.cn/rss.xml">单体(monad)模式</source>
       <description>概述 基于线性代数的单子模式代表了将运算逐步链接在一起的方式。绑定函数可以描述为基于“相同类型”合约将一个人的输出传递给另一个人的输入。 从形式上讲，monad 由一个类型构造函数 M 和两个操作组成： bind - 将 monadic 对象和一个函数从普通对象转换为 monadic 值并返回 monadic value return - 它接受普通类型对象并返回包装在 monadic 值中的此对象。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -804,9 +804,9 @@ java中的继承</p>
     </item>
     <item>
       <title>单态(MonoState)模式</title>
-      <link>https://ujava.cn/ujava/design/other/monostate.html</link>
-      <guid>https://ujava.cn/ujava/design/other/monostate.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">单态(MonoState)模式</source>
+      <link>https://ujava.cn/design/other/monostate.html</link>
+      <guid>https://ujava.cn/design/other/monostate.html</guid>
+      <source url="https://ujava.cn/rss.xml">单态(MonoState)模式</source>
       <description>概述 强制执行一种行为，例如在所有实例之间共享相同的状态。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -816,9 +816,9 @@ java中的继承</p>
     </item>
     <item>
       <title>多态(Multiton)模式</title>
-      <link>https://ujava.cn/ujava/design/other/multiton.html</link>
-      <guid>https://ujava.cn/ujava/design/other/multiton.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">多态(Multiton)模式</source>
+      <link>https://ujava.cn/design/other/multiton.html</link>
+      <guid>https://ujava.cn/design/other/multiton.html</guid>
+      <source url="https://ujava.cn/rss.xml">多态(Multiton)模式</source>
       <description>概述 确保类只有有限数量的实例，并提供对它们的全局访问点。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -828,9 +828,9 @@ java中的继承</p>
     </item>
     <item>
       <title>静音(Mute Idiom)模式</title>
-      <link>https://ujava.cn/ujava/design/other/muteidiom.html</link>
-      <guid>https://ujava.cn/ujava/design/other/muteidiom.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">静音(Mute Idiom)模式</source>
+      <link>https://ujava.cn/design/other/muteidiom.html</link>
+      <guid>https://ujava.cn/design/other/muteidiom.html</guid>
+      <source url="https://ujava.cn/rss.xml">静音(Mute Idiom)模式</source>
       <description>概述 提供一个模板来抑制任何已声明但不能发生或只应记录的异常； 同时执行一些业务逻辑。该模板消除了重复写入“try-catch”块的需要。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -841,9 +841,9 @@ java中的继承</p>
     </item>
     <item>
       <title>模型视图控制器(MVC)模式</title>
-      <link>https://ujava.cn/ujava/design/other/mvc.html</link>
-      <guid>https://ujava.cn/ujava/design/other/mvc.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">模型视图控制器(MVC)模式</source>
+      <link>https://ujava.cn/design/other/mvc.html</link>
+      <guid>https://ujava.cn/design/other/mvc.html</guid>
+      <source url="https://ujava.cn/rss.xml">模型视图控制器(MVC)模式</source>
       <description>概述 将用户界面分为三个相互关联的组件：模型、视图和控制器。让模型管理数据，视图显示数据，控制器调解更新数据并重新绘制显示。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -853,9 +853,9 @@ java中的继承</p>
     </item>
     <item>
       <title>模型视图反应(MVI)模式</title>
-      <link>https://ujava.cn/ujava/design/other/mvi.html</link>
-      <guid>https://ujava.cn/ujava/design/other/mvi.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">模型视图反应(MVI)模式</source>
+      <link>https://ujava.cn/design/other/mvi.html</link>
+      <guid>https://ujava.cn/design/other/mvi.html</guid>
+      <source url="https://ujava.cn/rss.xml">模型视图反应(MVI)模式</source>
       <description>概述 MVI 是原始 MVC 体系结构模式的派生。MVI 不使用主动控制器，而是使用称为 intent 的反应式组件：它是一个将用户输入事件转换为模型更新的组件。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -865,9 +865,9 @@ java中的继承</p>
     </item>
     <item>
       <title>模型视图分离(MVP)模式</title>
-      <link>https://ujava.cn/ujava/design/other/mvp.html</link>
-      <guid>https://ujava.cn/ujava/design/other/mvp.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">模型视图分离(MVP)模式</source>
+      <link>https://ujava.cn/design/other/mvp.html</link>
+      <guid>https://ujava.cn/design/other/mvp.html</guid>
+      <source url="https://ujava.cn/rss.xml">模型视图分离(MVP)模式</source>
       <description>概述 应用“关注点分离”原则，使开发人员能够构建和测试用户界面。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -877,9 +877,9 @@ java中的继承</p>
     </item>
     <item>
       <title>模型视图视图模型(MVVM)模式</title>
-      <link>https://ujava.cn/ujava/design/other/mvvm.html</link>
-      <guid>https://ujava.cn/ujava/design/other/mvvm.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">模型视图视图模型(MVVM)模式</source>
+      <link>https://ujava.cn/design/other/mvvm.html</link>
+      <guid>https://ujava.cn/design/other/mvvm.html</guid>
+      <source url="https://ujava.cn/rss.xml">模型视图视图模型(MVVM)模式</source>
       <description>概述 应用“关注点分离”将逻辑与UI组件分开，并允许开发人员在不影响逻辑的情况下处理UI，反之亦然。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -889,9 +889,9 @@ java中的继承</p>
     </item>
     <item>
       <title>裸对象(Naked Objects)模式</title>
-      <link>https://ujava.cn/ujava/design/other/nakedobjects.html</link>
-      <guid>https://ujava.cn/ujava/design/other/nakedobjects.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">裸对象(Naked Objects)模式</source>
+      <link>https://ujava.cn/design/other/nakedobjects.html</link>
+      <guid>https://ujava.cn/design/other/nakedobjects.html</guid>
+      <source url="https://ujava.cn/rss.xml">裸对象(Naked Objects)模式</source>
       <description>概述 裸对象设计模式是一种基于直接操作思想为软件应用程序构建用户界面（UI）的方法。这意味着用户可以直接与应用程序的底层域对象交互，而无需任何中介UI元素。 裸对象模式是通过以一种既有意义又可访问的方式向用户公开域对象来实现的。这通常是通过根据域对象定义自动生成UI来完成的。UI以简单明了的方式向用户显示域对象，允许用户创建、检索、更新和删除对象，以及调用对象上的方法。 裸对象模式具有许多优点，包括： 1.减少开发时间和成本：裸对象模式可以显著减少开发和维护软件应用程序所需的时间和成本。这是因为UI是自动生成的，并且域对象被设计为用户可见且可操作。 2.授权用户：裸对象模式允许用户直接访问应用程序的底层域对象。这使他们能够以自然和直观的方式与应用程序进行交互。 3.增加了灵活性和适应性：裸对象模式具有高度的灵活性和适应性。这是因为UI是根据域对象定义生成的，这意味着UI可以随着域模型的发展而轻松更改。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -911,9 +911,9 @@ java中的继承</p>
     </item>
     <item>
       <title>对象母亲模式</title>
-      <link>https://ujava.cn/ujava/design/other/objectmother.html</link>
-      <guid>https://ujava.cn/ujava/design/other/objectmother.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">对象母亲模式</source>
+      <link>https://ujava.cn/design/other/objectmother.html</link>
+      <guid>https://ujava.cn/design/other/objectmother.html</guid>
+      <source url="https://ujava.cn/rss.xml">对象母亲模式</source>
       <description>概述 它用于定义具有独立构建器和工厂接口的不可变内容的工厂。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -923,9 +923,9 @@ java中的继承</p>
     </item>
     <item>
       <title>对象池模式</title>
-      <link>https://ujava.cn/ujava/design/other/objectpool.html</link>
-      <guid>https://ujava.cn/ujava/design/other/objectpool.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">对象池模式</source>
+      <link>https://ujava.cn/design/other/objectpool.html</link>
+      <guid>https://ujava.cn/design/other/objectpool.html</guid>
+      <source url="https://ujava.cn/rss.xml">对象池模式</source>
       <description>概述 当对象的创建成本很高且仅在短时间内需要它们时，使用对象池模式是有利的。对象池为实例化对象提供缓存，跟踪哪些对象正在使用，哪些对象可用。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -935,9 +935,9 @@ java中的继承</p>
     </item>
     <item>
       <title>乐观线下锁模式</title>
-      <link>https://ujava.cn/ujava/design/other/optimisticofflinelock.html</link>
-      <guid>https://ujava.cn/ujava/design/other/optimisticofflinelock.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">乐观线下锁模式</source>
+      <link>https://ujava.cn/design/other/optimisticofflinelock.html</link>
+      <guid>https://ujava.cn/design/other/optimisticofflinelock.html</guid>
+      <source url="https://ujava.cn/rss.xml">乐观线下锁模式</source>
       <description>概述 提供避免在关系数据库中同时更改一条记录的能力。</description>
       <category>设计模式</category>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
@@ -947,9 +947,9 @@ java中的继承</p>
     </item>
     <item>
       <title>Flux模式</title>
-      <link>https://ujava.cn/ujava/design/other/flux.html</link>
-      <guid>https://ujava.cn/ujava/design/other/flux.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">Flux模式</source>
+      <link>https://ujava.cn/design/other/flux.html</link>
+      <guid>https://ujava.cn/design/other/flux.html</guid>
+      <source url="https://ujava.cn/rss.xml">Flux模式</source>
       <description>概述 Flux避开MVC，转而支持单向数据流。当 用户与视图交互，视图通过中心传播动作 调度器，到保存应用程序数据和业务的各种存储 逻辑，更新所有受影响的视图。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -962,9 +962,9 @@ java中的继承</p>
     </item>
     <item>
       <title>Flyweight模式</title>
-      <link>https://ujava.cn/ujava/design/other/flyweight.html</link>
-      <guid>https://ujava.cn/ujava/design/other/flyweight.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">Flyweight模式</source>
+      <link>https://ujava.cn/design/other/flyweight.html</link>
+      <guid>https://ujava.cn/design/other/flyweight.html</guid>
+      <source url="https://ujava.cn/rss.xml">Flyweight模式</source>
       <description>概述 使用共享可以有效地支持大量细粒度对象。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -974,9 +974,9 @@ java中的继承</p>
     </item>
     <item>
       <title>前端控制器模式</title>
-      <link>https://ujava.cn/ujava/design/other/frontcontroller.html</link>
-      <guid>https://ujava.cn/ujava/design/other/frontcontroller.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">前端控制器模式</source>
+      <link>https://ujava.cn/design/other/frontcontroller.html</link>
+      <guid>https://ujava.cn/design/other/frontcontroller.html</guid>
+      <source url="https://ujava.cn/rss.xml">前端控制器模式</source>
       <description>概述 为网站的所有请求引入一个通用处理程序。这样，我们就可以将安全性、国际化、路由和日志记录等常见功能封装在一个地方。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -986,9 +986,9 @@ java中的继承</p>
     </item>
     <item>
       <title>游戏循环模式</title>
-      <link>https://ujava.cn/ujava/design/other/gameloop.html</link>
-      <guid>https://ujava.cn/ujava/design/other/gameloop.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">游戏循环模式</source>
+      <link>https://ujava.cn/design/other/gameloop.html</link>
+      <guid>https://ujava.cn/design/other/gameloop.html</guid>
+      <source url="https://ujava.cn/rss.xml">游戏循环模式</source>
       <description>概述 游戏循环在游戏过程中持续运行。循环的每一圈，它都会处理用户输入 无阻塞，更新游戏状态，并渲染游戏。它追踪时间的流逝 控制游戏的速率。 这种模式将游戏时间的进展与用户输入和处理器速度解耦。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -1001,9 +1001,9 @@ java中的继承</p>
     </item>
     <item>
       <title>保护性暂停模式</title>
-      <link>https://ujava.cn/ujava/design/other/guardedsuspension.html</link>
-      <guid>https://ujava.cn/ujava/design/other/guardedsuspension.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">保护性暂停模式</source>
+      <link>https://ujava.cn/design/other/guardedsuspension.html</link>
+      <guid>https://ujava.cn/design/other/guardedsuspension.html</guid>
+      <source url="https://ujava.cn/rss.xml">保护性暂停模式</source>
       <description>概述 当您想对不处于正确状态的对象执行方法时，可以使用“保护”挂起模式来处理这种情况。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -1013,9 +1013,9 @@ java中的继承</p>
     </item>
     <item>
       <title>半同步半异步模式</title>
-      <link>https://ujava.cn/ujava/design/other/halfsyncasync.html</link>
-      <guid>https://ujava.cn/ujava/design/other/halfsyncasync.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">半同步半异步模式</source>
+      <link>https://ujava.cn/design/other/halfsyncasync.html</link>
+      <guid>https://ujava.cn/design/other/halfsyncasync.html</guid>
+      <source url="https://ujava.cn/rss.xml">半同步半异步模式</source>
       <description>概述 半同步/半异步模式将同步I/O与 系统中的异步I/O，以简化并发编程工作，而不需要 从而降低执行效率。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -1027,9 +1027,9 @@ java中的继承</p>
     </item>
     <item>
       <title>健康检查模式</title>
-      <link>https://ujava.cn/ujava/design/other/healthcheck.html</link>
-      <guid>https://ujava.cn/ujava/design/other/healthcheck.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">健康检查模式</source>
+      <link>https://ujava.cn/design/other/healthcheck.html</link>
+      <guid>https://ujava.cn/design/other/healthcheck.html</guid>
+      <source url="https://ujava.cn/rss.xml">健康检查模式</source>
       <description>概述 通过提供监测和诊断服务健康状况的方法，确保微服务架构中服务的稳定性和弹性。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -1039,9 +1039,9 @@ java中的继承</p>
     </item>
     <item>
       <title>六边形体系结构模式</title>
-      <link>https://ujava.cn/ujava/design/other/hexagonalarchitecture.html</link>
-      <guid>https://ujava.cn/ujava/design/other/hexagonalarchitecture.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">六边形体系结构模式</source>
+      <link>https://ujava.cn/design/other/hexagonalarchitecture.html</link>
+      <guid>https://ujava.cn/design/other/hexagonalarchitecture.html</guid>
+      <source url="https://ujava.cn/rss.xml">六边形体系结构模式</source>
       <description>概述 允许应用程序同样由用户、程序、自动测试或批处理脚本驱动，并在与其最终运行时设备和数据库隔离的情况下进行开发和测试。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -1051,9 +1051,9 @@ java中的继承</p>
     </item>
     <item>
       <title>同一性映射模式</title>
-      <link>https://ujava.cn/ujava/design/other/identitymap.html</link>
-      <guid>https://ujava.cn/ujava/design/other/identitymap.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">同一性映射模式</source>
+      <link>https://ujava.cn/design/other/identitymap.html</link>
+      <guid>https://ujava.cn/design/other/identitymap.html</guid>
+      <source url="https://ujava.cn/rss.xml">同一性映射模式</source>
       <description>概述 通过将每个加载的对象保持在地图中，确保每个对象只加载一次。 引用对象时使用地图查找对象。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -1064,9 +1064,9 @@ java中的继承</p>
     </item>
     <item>
       <title>拦截过滤器模式</title>
-      <link>https://ujava.cn/ujava/design/other/interceptingfilter.html</link>
-      <guid>https://ujava.cn/ujava/design/other/interceptingfilter.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">拦截过滤器模式</source>
+      <link>https://ujava.cn/design/other/interceptingfilter.html</link>
+      <guid>https://ujava.cn/design/other/interceptingfilter.html</guid>
+      <source url="https://ujava.cn/rss.xml">拦截过滤器模式</source>
       <description>概述 截取过滤器是一种有用的Java设计模式，用于预处理 或者在应用程序中对请求进行后处理。这些过滤器被创建并应用于 请求，然后再将其提供给目标应用程序。这样的使用示例包括认证， 这是在向应用程序发出请求之前必须处理的。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 08:20:09 GMT</pubDate>
@@ -1079,9 +1079,9 @@ java中的继承</p>
     </item>
     <item>
       <title>功能切换模式</title>
-      <link>https://ujava.cn/ujava/design/other/featuretoggle.html</link>
-      <guid>https://ujava.cn/ujava/design/other/featuretoggle.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">功能切换模式</source>
+      <link>https://ujava.cn/design/other/featuretoggle.html</link>
+      <guid>https://ujava.cn/design/other/featuretoggle.html</guid>
+      <source url="https://ujava.cn/rss.xml">功能切换模式</source>
       <description>概述 软件开发中使用的一种技术，用于在不更改代码的情况下控制和管理程序中特定特性或功能的推出。它可以根据程序中其他值的状态或属性充当功能的开关开关。这类似于 AB 测试，其中功能是根据位置或设备等属性推出的。实现此设计模式可能会增加代码复杂性，如果此设计模式用于逐步淘汰系统或功能，请务必记住删除冗余代码。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:41:37 GMT</pubDate>
@@ -1092,9 +1092,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>流接口模式</title>
-      <link>https://ujava.cn/ujava/design/other/fluentinterface.html</link>
-      <guid>https://ujava.cn/ujava/design/other/fluentinterface.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">流接口模式</source>
+      <link>https://ujava.cn/design/other/fluentinterface.html</link>
+      <guid>https://ujava.cn/design/other/fluentinterface.html</guid>
+      <source url="https://ujava.cn/rss.xml">流接口模式</source>
       <description>概述 流畅的界面提供了一个易于阅读的流畅界面，通常模仿特定领域的语言。使用此模式可以生成几乎可以像人类语言一样阅读的代码。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:41:37 GMT</pubDate>
@@ -1104,9 +1104,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>环绕执行模式</title>
-      <link>https://ujava.cn/ujava/design/other/executearound.html</link>
-      <guid>https://ujava.cn/ujava/design/other/executearound.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">环绕执行模式</source>
+      <link>https://ujava.cn/design/other/executearound.html</link>
+      <guid>https://ujava.cn/design/other/executearound.html</guid>
+      <source url="https://ujava.cn/rss.xml">环绕执行模式</source>
       <description>概述 环绕执行模式(Execute Around)惯用语将用户从某些操作中解放出来，这些操作应始终在业务方法之前和之后执行。一个很好的例子是资源分配和解除分配，让用户只指定如何处理资源。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:36:58 GMT</pubDate>
@@ -1116,9 +1116,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>扩展对象模式</title>
-      <link>https://ujava.cn/ujava/design/other/extensionobject.html</link>
-      <guid>https://ujava.cn/ujava/design/other/extensionobject.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">扩展对象模式</source>
+      <link>https://ujava.cn/design/other/extensionobject.html</link>
+      <guid>https://ujava.cn/design/other/extensionobject.html</guid>
+      <source url="https://ujava.cn/rss.xml">扩展对象模式</source>
       <description>概述 预计将来需要扩展对象的接口。其他接口由扩展对象定义。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:36:58 GMT</pubDate>
@@ -1128,9 +1128,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>扇出扇入模式</title>
-      <link>https://ujava.cn/ujava/design/other/fanoutfanin.html</link>
-      <guid>https://ujava.cn/ujava/design/other/fanoutfanin.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">扇出扇入模式</source>
+      <link>https://ujava.cn/design/other/fanoutfanin.html</link>
+      <guid>https://ujava.cn/design/other/fanoutfanin.html</guid>
+      <source url="https://ujava.cn/rss.xml">扇出扇入模式</source>
       <description>概述 (Fan-Out/Fan-In) 当源系统需要运行一个或多个将提取某些数据的长时间运行的进程时，将使用该模式。源不会阻止自己等待回复。 该模式将在多个服务或计算机中运行相同的函数来获取数据。这相当于在不同的数据块上多次调用该函数。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:36:58 GMT</pubDate>
@@ -1142,9 +1142,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>事件异步模式</title>
-      <link>https://ujava.cn/ujava/design/other/eventasynchronous.html</link>
-      <guid>https://ujava.cn/ujava/design/other/eventasynchronous.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">事件异步模式</source>
+      <link>https://ujava.cn/design/other/eventasynchronous.html</link>
+      <guid>https://ujava.cn/design/other/eventasynchronous.html</guid>
+      <source url="https://ujava.cn/rss.xml">事件异步模式</source>
       <description>概述 基于事件的异步模式提供了多线程应用程序的优势，同时隐藏了多线程设计中固有的许多复杂问题。使用支持此模式的类可以： 在“后台”执行耗时的任务，例如下载和数据库操作，而不会中断应用程序。 同时执行多个操作，每个操作完成后接收通知。 等待资源可用，而不停止（“挂起”）您的应用程序。 使用熟悉的事件和委托模型与挂起的异步操作进行通信。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:14:23 GMT</pubDate>
@@ -1160,9 +1160,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>事件驱动架构模式</title>
-      <link>https://ujava.cn/ujava/design/other/eventdrivenarchitecture.html</link>
-      <guid>https://ujava.cn/ujava/design/other/eventdrivenarchitecture.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">事件驱动架构模式</source>
+      <link>https://ujava.cn/design/other/eventdrivenarchitecture.html</link>
+      <guid>https://ujava.cn/design/other/eventdrivenarchitecture.html</guid>
+      <source url="https://ujava.cn/rss.xml">事件驱动架构模式</source>
       <description>概述 使用事件驱动架构向其他应用程序发送和通知对象的状态更改。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:14:23 GMT</pubDate>
@@ -1172,9 +1172,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>事件队列模式</title>
-      <link>https://ujava.cn/ujava/design/other/eventqueue.html</link>
-      <guid>https://ujava.cn/ujava/design/other/eventqueue.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">事件队列模式</source>
+      <link>https://ujava.cn/design/other/eventqueue.html</link>
+      <guid>https://ujava.cn/design/other/eventqueue.html</guid>
+      <source url="https://ujava.cn/rss.xml">事件队列模式</source>
       <description>概述 事件队列设计模式（也称为消息队列）的目的是解耦系统内事件的发送方和接收方之间的关系。通过将双方解耦，它们不会同时与事件队列交互。从本质上讲，事件队列以异步方式处理和处理请求，因此，该系统可以被描述为先进先出的设计模式模型。如果存在可访问性有限的资源（即音频或数据库），则事件队列是一种合适的模式，但是，您需要提供对查找此资源的所有请求的访问权限。从队列中访问事件时，程序还会将其从队列中删除。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:14:23 GMT</pubDate>
@@ -1184,9 +1184,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>事件溯源模式</title>
-      <link>https://ujava.cn/ujava/design/other/eventsourcing.html</link>
-      <guid>https://ujava.cn/ujava/design/other/eventsourcing.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">事件溯源模式</source>
+      <link>https://ujava.cn/design/other/eventsourcing.html</link>
+      <guid>https://ujava.cn/design/other/eventsourcing.html</guid>
+      <source url="https://ujava.cn/rss.xml">事件溯源模式</source>
       <description>概述 不要只在域中存储数据的当前状态，而是使用仅追加存储来记录对该数据执行的一系列操作。存储充当记录系统，可用于具体化域对象。这可以简化复杂域中的任务，避免同步数据模型和业务域，同时提高性能、可伸缩性和响应能力。它还可以为事务数据提供一致性，并维护完整的审计跟踪和历史记录，从而实现补偿操作。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:14:23 GMT</pubDate>
@@ -1196,9 +1196,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>事件聚合器模式</title>
-      <link>https://ujava.cn/ujava/design/other/eventaggregator.html</link>
-      <guid>https://ujava.cn/ujava/design/other/eventaggregator.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">事件聚合器模式</source>
+      <link>https://ujava.cn/design/other/eventaggregator.html</link>
+      <guid>https://ujava.cn/design/other/eventaggregator.html</guid>
+      <source url="https://ujava.cn/rss.xml">事件聚合器模式</source>
       <description>概述 当客户端想要订阅事件时，具有大量对象的系统可能会导致复杂性。客户端必须为每个对象单独查找和注册，如果每个对象都有多个事件，则每个事件都需要单独的订阅。</description>
       <category>设计模式</category>
       <pubDate>Sun, 03 Mar 2024 03:00:03 GMT</pubDate>
@@ -1208,9 +1208,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>委托模式</title>
-      <link>https://ujava.cn/ujava/design/other/delegate.html</link>
-      <guid>https://ujava.cn/ujava/design/other/delegate.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">委托模式</source>
+      <link>https://ujava.cn/design/other/delegate.html</link>
+      <guid>https://ujava.cn/design/other/delegate.html</guid>
+      <source url="https://ujava.cn/rss.xml">委托模式</source>
       <description>概述 委托模式提供了一种机制，用于抽象出所需操作的实现和控制。</description>
       <category>设计模式</category>
       <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
@@ -1220,9 +1220,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>依赖注入模式</title>
-      <link>https://ujava.cn/ujava/design/other/dependencyinjection.html</link>
-      <guid>https://ujava.cn/ujava/design/other/dependencyinjection.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">依赖注入模式</source>
+      <link>https://ujava.cn/design/other/dependencyinjection.html</link>
+      <guid>https://ujava.cn/design/other/dependencyinjection.html</guid>
+      <source url="https://ujava.cn/rss.xml">依赖注入模式</source>
       <description>概述 依赖注入模式处理对象如何处理其依赖关系。该模式实现了所谓的反转控制原理。控制反转有两个具体规则： - 高级模块不应依赖于低级模块。两者都应该依赖于抽象。- 抽象不应依赖于细节。细节应取决于抽象。</description>
       <category>设计模式</category>
       <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
@@ -1232,9 +1232,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>脏标志行为模式</title>
-      <link>https://ujava.cn/ujava/design/other/dirtyflag.html</link>
-      <guid>https://ujava.cn/ujava/design/other/dirtyflag.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">脏标志行为模式</source>
+      <link>https://ujava.cn/design/other/dirtyflag.html</link>
+      <guid>https://ujava.cn/design/other/dirtyflag.html</guid>
+      <source url="https://ujava.cn/rss.xml">脏标志行为模式</source>
       <description>概述 脏标志行为模式允许您避免无论如何都需要再次执行的昂贵操作。这是一个简单的模式，实际上只是解释了如何向类添加一个布尔值，您可以在属性更改时设置该值。这将使您的班级知道，它之前可能计算过的任何结果都需要在请求时再次计算。重新计算结果后，可以清除布尔值。 在深入研究使用此模式之前，需要考虑一些要点： 您需要考虑一些事项： （1） 您需要它吗？当要计算的结果难以计算或需要大量资源计算时，此设计模式非常有效。你想保存它们。您也不想连续多次计算它们，而只有最后一个才算数。 （2） 什么时候设置脏标志？确保每当重要属性发生更改时，在类本身中设置 dirty 标志。此属性应影响计算结果的结果，并且通过更改属性，使最后一个结果无效。 （3） 你什么时候清除脏标志？每当使用最新信息计算结果时，都应该清除脏标志，这似乎是显而易见的，但有时您可能希望清除该标志。</description>
       <category>设计模式</category>
       <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
@@ -1251,9 +1251,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>领域模型模式</title>
-      <link>https://ujava.cn/ujava/design/other/domainmodel.html</link>
-      <guid>https://ujava.cn/ujava/design/other/domainmodel.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">领域模型模式</source>
+      <link>https://ujava.cn/design/other/domainmodel.html</link>
+      <guid>https://ujava.cn/design/other/domainmodel.html</guid>
+      <source url="https://ujava.cn/rss.xml">领域模型模式</source>
       <description>概述 领域模型模式是比事务脚本和表模块更复杂的组织域逻辑的解决方案。它提供了一种面向对象的方式来处理复杂的逻辑。而不是使用一个过程来处理用户操作的所有业务逻辑（如事务脚本），而是有多个对象，每个对象都处理与其相关的域逻辑的一部分。域模型模式和表模块模式之间的显著区别在于，在表模块中，单个类封装了表中存储的所有记录的所有域逻辑，而在域模型中，每个类仅表示基础表中的一条记录。</description>
       <category>设计模式</category>
       <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
@@ -1263,9 +1263,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>双缓冲模式</title>
-      <link>https://ujava.cn/ujava/design/other/doublebuffering.html</link>
-      <guid>https://ujava.cn/ujava/design/other/doublebuffering.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">双缓冲模式</source>
+      <link>https://ujava.cn/design/other/doublebuffering.html</link>
+      <guid>https://ujava.cn/design/other/doublebuffering.html</guid>
+      <source url="https://ujava.cn/rss.xml">双缓冲模式</source>
       <description>概述 双缓冲是一个术语，用于描述具有两个缓冲区的设备。使用多个缓冲区可提高设备的整体吞吐量，并有助于防止出现瓶颈。</description>
       <category>设计模式</category>
       <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
@@ -1275,9 +1275,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>双重检查锁模式</title>
-      <link>https://ujava.cn/ujava/design/other/doublechecklock.html</link>
-      <guid>https://ujava.cn/ujava/design/other/doublechecklock.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">双重检查锁模式</source>
+      <link>https://ujava.cn/design/other/doublechecklock.html</link>
+      <guid>https://ujava.cn/design/other/doublechecklock.html</guid>
+      <source url="https://ujava.cn/rss.xml">双重检查锁模式</source>
       <description>概述 双重检查锁定是一种并发设计模式，用于通过首先测试锁定条件（“锁定提示”）而不实际获取锁来减少获取锁的开销。只有当锁定条件检查指示需要锁定时，实际的锁定逻辑才会继续进行。</description>
       <category>设计模式</category>
       <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
@@ -1287,9 +1287,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>双分派模式</title>
-      <link>https://ujava.cn/ujava/design/other/doubledispatch.html</link>
-      <guid>https://ujava.cn/ujava/design/other/doubledispatch.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">双分派模式</source>
+      <link>https://ujava.cn/design/other/doubledispatch.html</link>
+      <guid>https://ujava.cn/design/other/doubledispatch.html</guid>
+      <source url="https://ujava.cn/rss.xml">双分派模式</source>
       <description>概述 当带有参数的消息发送到对象时，结果行为由接收方中该方法的实现定义。有时，行为也必须由参数的类型决定。 实现此目的的一种方法是为 methods 参数创建多个 instanceof-checks。但是，这会产生维护问题。添加新类型时，我们还需要更改方法的实现并添加新的 instanceof-check。这违反了单一责任原则——一个类应该只有一个理由来改变。 而不是 instanceof-checks，更好的方法是对参数对象进行另一个虚拟调用。这样，可以轻松添加新功能，而无需修改现有实现（开闭原则）。</description>
       <category>设计模式</category>
       <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
@@ -1301,9 +1301,9 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
     </item>
     <item>
       <title>内在价值模式</title>
-      <link>https://ujava.cn/ujava/design/other/embeddedvalue.html</link>
-      <guid>https://ujava.cn/ujava/design/other/embeddedvalue.html</guid>
-      <source url="https://ujava.cn/ujava/rss.xml">内在价值模式</source>
+      <link>https://ujava.cn/design/other/embeddedvalue.html</link>
+      <guid>https://ujava.cn/design/other/embeddedvalue.html</guid>
+      <source url="https://ujava.cn/rss.xml">内在价值模式</source>
       <description>概述 许多小对象在 OO 系统中有意义，但在数据库中没有意义。示例包括货币感知货币对象（金额、货币）和日期范围。尽管默认的想法是将对象保存为表格，但任何理智的人都不会想要货币值表。 嵌入值将对象的值映射到对象所有者记录中的字段。</description>
       <category>设计模式</category>
       <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
