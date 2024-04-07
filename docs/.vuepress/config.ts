@@ -6,7 +6,7 @@ import { searchPlugin } from "@vuepress/plugin-search";
 // import { searchProPlugin } from 'vuepress-plugin-search-pro';
 
 export default defineUserConfig({
-  base: "/ujava",
+  base: `/ujava/`,
 
   title: "UJava",
   // title: "UJava【Java学习 + Java面试】",
