@@ -288,31 +288,32 @@ mockito 进化到了 3.4.0 版本以后，也开始对静态方法 mock 进行�
 首先确保 pom 文件中 mockito 相关 jar 包的版本（这里我用的版本是 3.7.7），如下：
 
 ```xml
+<dependency>
+  <groupId>org.mockito</groupId>
+  <artifactId>mockito-core</artifactId>
+  <version>3.7.7</version>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.mockito</groupId>
+  <artifactId>mockito-inline</artifactId>
+  <version>3.7.7</version>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.mockito</groupId>
+  <artifactId>mockito-junit-jupiter</artifactId>
+  <version>3.7.7</version>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.13</version>
+  <scope>test</scope>
+</dependency>
 
-<dependency>
-    <groupId>org.mockito</groupId>
-    <artifactId>mockito-core</artifactId>
-    <version>3.7.7</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-<groupId>org.mockito</groupId>
-<artifactId>mockito-inline</artifactId>
-<version>3.7.7</version>
-<scope>test</scope>
-</dependency>
-<dependency>
-<groupId>org.mockito</groupId>
-<artifactId>mockito-junit-jupiter</artifactId>
-<version>3.7.7</version>
-<scope>test</scope>
-</dependency>
-<dependency>
-<groupId>junit</groupId>
-<artifactId>junit</artifactId>
-<version>4.13</version>
-<scope>test</scope>
-</dependency>
+
 ```
 
 使用方式
