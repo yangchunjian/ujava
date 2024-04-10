@@ -377,7 +377,7 @@ PUT /school_index
 
 每个组件的作用，可参考下面的例子
 
-character filter：在一段文本进行分词之前，先进行预处理，比如说最常见的就是，过滤html标签（<span>hello</span> --> hello），& --> and（I&you --> I and you）
+character filter：在一段文本进行分词之前，先进行预处理，比如说最常见的就是，过滤html标签
 
 tokenizer：分词，hello you and me --> hello, you, and, me
 
