@@ -253,6 +253,7 @@ PUT /movie/_doc/3
 ```
 
 suggest 搜索：
+
 ```sql
 GET /movie/_search
 {
