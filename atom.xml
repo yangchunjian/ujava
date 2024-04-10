@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-04-10T08:57:23.321Z</updated>
+  <updated>2024-04-10T09:14:16.641Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -14,28 +14,26 @@
     <title type="text">ElasticSearch架构设计</title>
     <id>https://ujava.cn/highfreq/elasticsearch.html</id>
     <link href="https://ujava.cn/highfreq/elasticsearch.html"/>
-    <updated>2024-04-10T08:52:36.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 简介</h2>
+    <updated>2024-04-10T09:11:11.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 一、 简介</h2>
 <p>Elasticsearch 是一个分布式可扩展的实时搜索和分析引擎,一个建立在全文搜索引擎 Apache Lucene™ 基础上的搜索引擎.当然 Elasticsearch 并不仅仅是 Lucene 那么简单，它不仅包括了全文搜索功能，还可以进行以下工作:</p>
 <ul>
 <li>一个分布式的实时文档存储，每个字段可以被索引与搜索</li>
 <li>一个分布式实时分析搜索引擎</li>
 <li>能胜任上百个服务节点的扩展，并支持 PB 级别的结构化或者非结构化数据</li>
 </ul>
-<h2> 1.ES概览</h2>
 <h3> 1.ES优点</h3>
 <ul>
 <li>1.支持全文搜索，并基于倒排索引，检索速度特别快</li>
 <li>2.高可用性，支持集群部署，任何节点失效系统自动调整。</li>
 </ul>]]></summary>
-    <content type="html"><![CDATA[<h2> 简介</h2>
+    <content type="html"><![CDATA[<h2> 一、 简介</h2>
 <p>Elasticsearch 是一个分布式可扩展的实时搜索和分析引擎,一个建立在全文搜索引擎 Apache Lucene™ 基础上的搜索引擎.当然 Elasticsearch 并不仅仅是 Lucene 那么简单，它不仅包括了全文搜索功能，还可以进行以下工作:</p>
 <ul>
 <li>一个分布式的实时文档存储，每个字段可以被索引与搜索</li>
 <li>一个分布式实时分析搜索引擎</li>
 <li>能胜任上百个服务节点的扩展，并支持 PB 级别的结构化或者非结构化数据</li>
 </ul>
-<h2> 1.ES概览</h2>
 <h3> 1.ES优点</h3>
 <ul>
 <li>1.支持全文搜索，并基于倒排索引，检索速度特别快</li>
@@ -58,7 +56,7 @@
 <p>3.热点数据搜索</p>
 <p>如电商业务的商品搜索等。</p>
 <h3> 2.DSL语言高级查询</h3>
-<p>1.Query DSL概述</p>
+<h4> 1.Query DSL概述</h4>
 <p>Domain Specific Language 领域专用语言</p>
 <ul>
 <li>Elasticsearch provides a ful1 Query DSL based on JSON to define queries</li>
@@ -66,14 +64,14 @@
 </ul>
 <p>DSL由叶子查询子句和复合查询子句两种子句组成。</p>
 <figure><figcaption>img_111.png</figcaption></figure>
-<p><strong>2.模糊匹配</strong></p>
+<h4> 2.模糊匹配</h4>
 <p>模糊匹配主要是针对文本类型的字段，文本类型的字段会对内容进行分词，对查询时，也会对搜索条件进行分词，然后通过倒排索引查找到匹配的数据，模糊匹配主要通过match等参数来实现</p>
 <ul>
 <li>match : 通过match关键词模糊匹配条件内容</li>
 <li>prefix : 前缀匹配</li>
 <li>regexp : 通过正则表达式来匹配数据</li>
 </ul>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>3.精确匹配</strong></p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 3.精确匹配</h4>
 <ul>
 <li>term : 单个条件相等</li>
 <li>terms : 单个字段属于某个值数组内的值</li>
@@ -81,7 +79,7 @@
 <li>exists : 某个字段的值是否存在</li>
 <li>ids : 通过ID批量查询</li>
 </ul>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 4.聚合搜索</h3>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 4.聚合搜索</h4>
 <p><strong>1.bucket和metric</strong></p>
 <p>bucket就是一个聚合搜索时的数据分组。</p>
 <p>如：销售部门有员工张三和李四，开发部门有员工王五和赵六。那么根据部门分组聚合得到结果就是两个bucket。销售部门bucket中有张三和李四，开发部门 bucket中有王五和赵六。</p>
@@ -89,15 +87,15 @@
 <p>metric有多种统计，如：求和，最大值，最小值，平均值等。</p>
 <p>用一个大家容易理解的SQL语法来解释，如：select count() from table group by column。那么group by column分组后的每组数据就是bucket。对每个分组执行的count()就是metric。</p>
 <p>es最重要的核心功能是数据检索，统计分析我认为不是es最核心的功能，想这种离线统计应该由其他的替代方案去做，所以如果想了解更多es聚合搜索相关知识可以参考官网或者其他博客</p>
-<h2> 3.文档映射</h2>
+<h3> 3.文档映射</h3>
 <p>ES中映射可以分为动态映射和静态映射</p>
-<h3> 1.动态映射</h3>
+<h4> 1.动态映射</h4>
 <p>在关系数据库中，需要事先创建数据库，然后在该数据库下创建数据表，并创建表字段、类型、长度、主键等，最后才能基于表插入数据。而Elasticsearch中不需要定义Mapping映射（即关系型数据库的表、字段等），在文档写入Elasticsearch时，会根据文档字段自动识别类型，这种机制称之为动态映射。<br>
 动态映射规则如下：</p>
 <figure><figcaption>img_112.png</figcaption></figure>
-<h3> 2.静态映射</h3>
+<h4> 2.静态映射</h4>
 <p>静态映射是在Elasticsearch中也可以事先定义好映射，包含文档的各字段类型、分词器等，这种方式称之为静态映射。</p>
-<h3> 3.核心类型（Core datatype）</h3>
+<h4> 3.核心类型（Core datatype）</h4>
 <ul>
 <li>字符串：string，string类型包含 text 和 keyword。</li>
 <li>text：该类型被用来索引长文本，在创建索引前会将这些文本进行分词，转化为词的组合，建立索引；允许es来检索这些词，text类型不能用来排序和聚合。</li>
@@ -339,15 +337,15 @@ routing 是一个可变值，默认是文档的 _id</p>
 <p>默认 30 分钟自动执行一次 flush ，将文件系统缓存的数据刷入到磁盘。<br>
 但如果 translog 过大，也会触发 flush 。</p>
 <p>flush 操作就对应着 commit 的全过程，我们可以通过 es api，手动执行 flush 操作，手动将 os cache 中的数据 fsync 强刷到磁盘上去。</p>
-<h2> 4.es准实时机制</h2>
-<h3> 1.为什么叫 es 是准实时的？</h3>
+<h3> 4.es准实时机制</h3>
+<h4> 1.为什么叫 es 是准实时的？</h4>
 <p>NRT ，全称 near real-time 。默认是每隔 1 秒 refresh 一次的，所以 es 是准实时的，因为写入的数据 1 秒之后才能被看到。</p>
 <p>可以通过 es 的 restful api 或者 java api ，手动执行一次 refresh 操作，就是手动将 buffer 中的数据刷入 os cache 中，让数据立马就可以被搜索到。只要数据被输入 os cache 中，buffer 就会被清空了，因为不需要保留 buffer 了，数据在 translog 里面已经持久化到磁盘去一份了。</p>
-<h3> 2.es会数据丢失吗？</h3>
+<h4> 2.es会数据丢失吗？</h4>
 <p>可能会丢失有 5 秒的数据，停留在 buffer、translog os cache、segment file os cache 中，而不在磁盘上，此时如果备份到translog过程中宕机，会导致 5 秒的数据丢失。</p>
 <p>translog 其实也是先写入 os cache 的，默认每隔 5 秒刷一次到磁盘中去，所以默认情况下，可能有 5 秒的数据会仅仅停留在 buffer 或者 translog 文件的 os cache 中，如果此时机器挂了，会丢失 5 秒钟的数据。但是这样性能比较好，最多丢 5 秒的数据。<br>
 也可以将 translog 设置成每次写操作必须是直接 fsync 到磁盘，但是性能会差很多。</p>
-<h3> 5.es集群脑裂</h3>
+<h4> 3.es集群脑裂</h4>
 <p>关于集群脑裂的定义请参考我的另一篇博文</p>
 <p><a href="https://blog.csdn.net/sinat_34814635/article/details/129914369" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/sinat_34814635/article/details/129914369</a></p>
 <p>那么es是如何解决脑裂问题的？</p>
@@ -373,7 +371,7 @@ routing 是一个可变值，默认是文档的 _id</p>
 <p>Elasticsearch SQL提供了sql转换的功能，但是只能满足一些简单的查询，例如：不支持JOIN、不支持较复杂的子查询。官方还是推荐使用DSL语句来实现</p>
 <h3> 2.Java客户端</h3>
 <p>这个就自己看官网吧</p>
-<h3> 4.1 es和mysql的双写</h3>
+<h3> 3.es和mysql的双写</h3>
 <p>双写的流程：</p>
 <ul>
 <li>1.先写数据库，然后写es，es只存常搜索的索引字段。</li>
