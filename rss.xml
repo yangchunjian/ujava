@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Wed, 10 Apr 2024 09:14:16 GMT</pubDate>
-    <lastBuildDate>Wed, 10 Apr 2024 09:14:16 GMT</lastBuildDate>
+    <pubDate>Wed, 10 Apr 2024 09:30:24 GMT</pubDate>
+    <lastBuildDate>Wed, 10 Apr 2024 09:30:24 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -48,7 +48,7 @@
 <p>Elasticsearch 一个典型应用就是 ELK 日志分析系统。如nginx接入请求的访问日志纪录。</p>
 <p>3.热点数据搜索</p>
 <p>如电商业务的商品搜索等。</p>
-<h3> 2.DSL语言高级查询</h3>
+<h3> 4.DSL语言高级查询</h3>
 <h4> 1.Query DSL概述</h4>
 <p>Domain Specific Language 领域专用语言</p>
 <ul>
@@ -80,7 +80,7 @@
 <p>metric有多种统计，如：求和，最大值，最小值，平均值等。</p>
 <p>用一个大家容易理解的SQL语法来解释，如：select count() from table group by column。那么group by column分组后的每组数据就是bucket。对每个分组执行的count()就是metric。</p>
 <p>es最重要的核心功能是数据检索，统计分析我认为不是es最核心的功能，想这种离线统计应该由其他的替代方案去做，所以如果想了解更多es聚合搜索相关知识可以参考官网或者其他博客</p>
-<h3> 3.文档映射</h3>
+<h3> 5.文档映射</h3>
 <p>ES中映射可以分为动态映射和静态映射</p>
 <h4> 1.动态映射</h4>
 <p>在关系数据库中，需要事先创建数据库，然后在该数据库下创建数据表，并创建表字段、类型、长度、主键等，最后才能基于表插入数据。而Elasticsearch中不需要定义Mapping映射（即关系型数据库的表、字段等），在文档写入Elasticsearch时，会根据文档字段自动识别类型，这种机制称之为动态映射。<br>
@@ -97,13 +97,13 @@
 <li>日期型：date</li>
 <li>布尔型：boolean</li>
 </ul>
-<h2> 4.数据建模</h2>
+<h4> 4.数据建模</h4>
 <p>就是针对于关系型数据库的一对多数据模型，而我自己认为es的主要应用场景是全文搜索引擎，这种复杂的业务关系就应该由关系型数据库如mysql去完成数据建模和存储，而不是交给es去建模存储，当然es也是提供了Parent / Child相关机制继续数据建模，如果有场景使用到，自己去参考对应的官方文档了解即可，但我自己不建议这样做。</p>
-<h2> 5.分页查询</h2>
-<h3> 1.语法</h3>
+<h4> 5.分页查询</h4>
+<p>1.语法</p>
 <p>在存在大量数据时，一般我们进行查询都需要进行分页查询。例如：我们指定页码、并指定每页显示多少条数据，然后Elasticsearch返回对应页码的数据。</p>
 <p>在执行查询时，可以指定from（从第几条数据开始查起）和size（每页返回多少条）数据，就可以轻松完成分页。</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 2.scroll解决深分页问题</h3>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>2.scroll解决深分页问题</p>
 <p>前面使用from和size方式，查询在1W条数据以内都是OK的，但如果数据比较多的时候，会出现性能问题。Elasticsearch做了一个限制，不允许查询的是10000条以后的数据。如果要查询1W条以后的数据，需要使用Elasticsearch中提供的scroll游标来查询。</p>
 <p>在进行大量分页时，每次分页都需要将要查询的数据进行重新排序，这样非常浪费性能。</p>
 <p>使用scroll是将要用的数据一次性排序好，然后分批取出,性能要比from + size好得多。</p>
@@ -113,14 +113,14 @@
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>执行后，我们注意到，在响应结果中有一项：</p>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>后续，我们需要根据这个_scroll_id来进行查询</p>
 <p>第二次直接使用scroll id进行查询</p>
-<h2> 6.suggest search</h2>
+<h3> 6.suggest search</h3>
 <p>suggest search（completion suggest）：就是建议搜索或称为搜索建议，也可以叫做自动完成-auto completion。类似百度中的搜索联想提示功能。</p>
 <p>ES实现suggest的时候，性能非常高，其构建的不是倒排索引，也不是正排索引，就是纯的用于进行前缀搜索的一种特殊的数据结构，而且会全部放在内存中，所以suggest search进行的前缀搜索提示，性能是非常高。</p>
 <p>需要使用suggest的时候，必须在定义index时，为其mapping指定开启suggest。</p>
 <p>具体如下:</p>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>suggest 搜索：</p>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 二、ES核心原理</h2>
-<h3> 1.ES存储模型</h3>
+<p>ES存储模型</p>
 <p>Elasticsearch与关系数据库结构对应</p>
 <figure><figcaption>img_113.png</figcaption></figure>
 <p>ElasticSearch的对象模型，跟关系型数据库模型相比：</p>
@@ -141,7 +141,7 @@
 <li>标记（Token）：表示在字段中出现的词，由该词的文本、偏移量（开始和结束）以及类型组成；</li>
 </ul>
 <p>相当于是数据表的字段|列</p>
-<h3> 2.倒排索引</h3>
+<h3> 5.倒排索引</h3>
 <p>全文搜索引擎的技术原理被称为“倒排索引”（Inverted index），也常被称为反向索引、置入档案或反向档案，是一种索引方法，其基本原理是建立单词到文档的索引。</p>
 <p>之所以被称为“倒排”索引，是和“正排“索引相对的，“正排索引”的基本原理是建立文档到单词的索引。我们通过一个简单的样例来说明这两种索引的差异。</p>
 <p>假设我们有一个技术文章的网站，里面收集了各种技术文章，用户可以在网站浏览或者搜索文章。</p>
@@ -160,7 +160,7 @@
 <li>倒排索引中的词项根据字典顺序升序排列<br>
 Elasticsearch 也是 Master-slave 架构，也实现了数据的分片和备份。</li>
 </ul>
-<h3> 3.分词器</h3>
+<h3> 6.分词器</h3>
 <p>对于英文来说，分词比较简单，只需要按照单词的空格来进行分词。<br>
 如下所示<br>
 </p>
@@ -169,7 +169,7 @@ Elasticsearch 也是 Master-slave 架构，也实现了数据的分片和备份�
 <p>这里我们就想把这个分词方式修改一下，于是呢，就想到了ik分词器，有两种ik_smart和ik_max_word。</p>
 <p>ik_smart会将“清华大学”整个分为一个词，而ik_max_word会将“清华大学”分为“清华大学”，“清华”和“大学”，按需选其中之一就可以了。</p>
 <p>修改默认分词方法(这里修改school_index索引的默认分词为：ik_max_word)：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1.分词器工作流程<br>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>分词器工作流程<br>
 <br>
 分词器由三部分组成：</p>
 <ul>
@@ -181,7 +181,7 @@ Elasticsearch 也是 Master-slave 架构，也实现了数据的分片和备份�
 <p>character filter：在一段文本进行分词之前，先进行预处理，比如说最常见的就是，过滤html标签</p>
 <p>tokenizer：分词，hello you and me --&gt; hello, you, and, me</p>
 <p>token filter：lowercase，stop word，synonymom，liked --&gt; like，Tom --&gt; tom，a/the/an --&gt; 干掉，small --&gt; little</p>
-<p><strong>2.ES内置分词器</strong></p>
+<p>ES内置分词器</p>
 <ul>
 <li>Standard Analyzer - 默认分词器，按词切分，小写处理</li>
 <li>Simple Analyzer - 按照非字母切分(符号被过滤), 小写处理</li>
@@ -193,26 +193,26 @@ Elasticsearch 也是 Master-slave 架构，也实现了数据的分片和备份�
 <li>Customer Analyzer 自定义分词器</li>
 </ul>
 <p>每个内置分词器的作用，可参考下面的例子</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>3.定制分词器</strong></p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>3、定制化自己的分词器</strong></p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>4.IK热更新</strong><br>
-每次都是在es的扩展词典中，手动添加新词语，很坑</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>定制分词器</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>定制化自己的分词器</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>IK热更新</p>
+<p>每次都是在es的扩展词典中，手动添加新词语，很坑</p>
 <p>（1）每次添加完，都要重启es才能生效，非常麻烦</p>
 <p>（2）es是分布式的，可能有数百个节点，你不能每次都一个一个节点上面去修改</p>
 <p>es不停机，直接我们在外部某个地方添加新的词语，es中立即热加载到这些新词语<br>
 IKAnalyzer.cfg.xml</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 4.es评分机制</h2>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 7.es评分机制</h3>
 <p>当你通过关键字搜索相关文档时，可能会出现多个文档，这些文档的顺序是通过一个max_score属性的大小从高到低顺序展现出来的，max_score属性就是我们所说的评分。</p>
-<h3> 1.打分算法</h3>
+<p>打分算法</p>
 <p>relevance score算法，简单来说，就是计算出，一个索引中的文本，与搜索文本，他们之间的关联匹配程度</p>
 <p>Elasticsearch使用的是 term frequency/inverse document frequency算法，简称为TF/IDF算法</p>
-<h3> 总公式</h3>
+<p>总公式</p>
 <p>max_score = boost * idf * tf</p>
 <figure><figcaption>img_118.png</figcaption></figure>
 <p>对于查询权重我们可以自己定义</p>
 <p>如下面所示：</p>
 <figure><figcaption>img_119.png</figcaption></figure>
-<h3> 1.TF算法</h3>
+<p>TF算法</p>
 <p>Term frequency：搜索文本中的各个词条在field文本中出现了多少次，出现次数越多，就越相关</p>
 <ul>
 <li>搜索请求：hello world</li>
@@ -231,11 +231,7 @@ Inverse document frequency：搜索文本中的各个词条在整个索引的所
 <p>那么匹配world的doc得分就越高,越有可能排在搜索结果前面。</p>
 <p>Field-length norm：field长度，field越长，相关度越弱<br>
 搜索请求：hello world</p>
-<ul>
-<li title:helloarticle,content:......n个单词="">doc1：</li>
-<li title:myarticle,content:......n个单词，hiworld="">doc2：</li>
-</ul>
-<p>hello world在整个index中出现的次数是一样多的，那么doc1更相关，title field更短</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>hello world在整个index中出现的次数是一样多的，那么doc1更相关，title field更短</p>
 <p><strong>2.空间向量模型（vector space model）</strong></p>
 <p>每个doc vector计算出对query vector的弧度，最后基于这个弧度给出一个doc相对于query中多个term的总分数</p>
 <p>弧度越大，分数月底; 弧度越小，分数越高</p>
@@ -243,7 +239,7 @@ Inverse document frequency：搜索文本中的各个词条在整个索引的所
 <figure><figcaption>img_120.png</figcaption></figure>
 <p>了解即可，掌握对应的打分算法我自己认为就足够了，不用砖牛角尖</p>
 <h2> 三、ElasticSearch架构设计</h2>
-<h3> 1.es集群架构</h3>
+<p>es集群架构</p>
 <p>如下图 ，就是一个三个节点组成的es集群，p0、p1、p2表示一个节点中的分片，R0、R1、R2表示分片对应的副本<br>
 <br>
 在Elasticsearch主要分成两类节点，一类是Master，一类是DataNode。</p>
@@ -274,8 +270,8 @@ Inverse document frequency：搜索文本中的各个词条在整个索引的所
 <p>在Elasticsearch中，默认创建的索引为1个分片、每个分片有1个主分片和1个副本分片。</p>
 <p>每个分片都会有一个Primary Shard（主分片），也会有若干个Replica Shard（副本分片）</p>
 <p>Primary Shard和Replica Shard不在同一个节点上</p>
-<h2> 2.es集群读写流程</h2>
-<h3> <a href="http://1.es" target="_blank" rel="noopener noreferrer">1.es</a> 写数据流程</h3>
+<h3> 5.es集群读写流程</h3>
+<p>es 写数据流程</p>
 <figure><figcaption>img_122.png</figcaption></figure>
 <p>1.选择任意一个DataNode发送请求，例如：node2。此时，node2就成为一个coordinating node（协调节点）</p>
 <p>2.计算得到文档要写入的分片</p>
@@ -284,7 +280,7 @@ routing 是一个可变值，默认是文档的 _id</p>
 <p>3.coordinating node会进行路由，将请求转发给对应的primary shard所在的DataNode（假设primary shard在node1、replica shard在node2）</p>
 <p>4.node1节点上的Primary Shard处理请求，写入数据到索引库中，并将数据同步到Replica shard</p>
 <p>5.Primary Shard和Replica Shard都保存好了文档，返回client</p>
-<h3> <a href="http://2.es" target="_blank" rel="noopener noreferrer">2.es</a> 读数据流程</h3>
+<p>es 读数据流程</p>
 <figure><figcaption>img_123.png</figcaption></figure>
 <p>1.client发起查询请求，某个DataNode接收到请求，该DataNode就会成为协调节点（Coordinating Node）</p>
 <p>2.协调节点（Coordinating Node）将查询请求广播到每一个数据节点，这些数据节点的分片会处理该查询请求</p>
@@ -293,14 +289,14 @@ routing 是一个可变值，默认是文档的 _id</p>
 <p>5.协调节点向包含这些文档ID的分片发送get请求，对应的分片将文档数据返回给协调节点，最后协调节点将数据返回给客户端</p>
 <p>注意：写请求是写入 primary shard，然后同步给所有的 replica shard；读请求可以从 primary shard 或 replica shard 读取，采用的是随机轮询算法。</p>
 <p>自己总结：es的检索流程和mysql数据表查询非主键索引的思路有些相似，先从索引表查询出对应的主键索引值，在进行回表查询具体的行数据。</p>
-<h3> 3.es删除/更新数据底层原理</h3>
+<p>es删除/更新数据底层原理</p>
 <p>如果是删除操作，commit 的时候会生成一个 .del 文件，里面将某个 doc 标识为 deleted 状态，那么搜索的时候根据 .del 文件就知道这个 doc 是否被删除了。</p>
 <p>如果是更新操作，就是将原来的 doc 标识为 deleted 状态，然后新写入一条数据。</p>
-<h2> <a href="http://3.es" target="_blank" rel="noopener noreferrer">3.es</a> 底层写数据原理</h2>
+<p>es 底层写数据原理</p>
 <figure><figcaption>img_124.png</figcaption></figure>
 <p>简述：先写入内存 buffer，在 buffer 里的时候数据是搜索不到的；然后刷新到os cache中（同时将数据备份到translog日志文件），最后刷新到 segment file磁盘文件中</p>
 <p>总结一下，数据先写入内存 buffer，然后每隔 1s，将数据 refresh 到 os cache，到了 os cache 数据就能被搜索到（所以我们才说 es 从写入到能被搜索到，中间有 1s 的延迟）。每隔 5s，将数据写入 translog 文件作备份（这样如果机器宕机，内存数据全没，最多会有 5s 的数据丢失），translog 大到一定程度，或者默认每隔 30mins，会触发 commit 操作，将缓冲区的数据都 flush 到 segment file 磁盘文件中。最后存入到commit point磁盘文件中。</p>
-<h3> 1.refresh到文件系统缓存</h3>
+<p>refresh到文件系统缓存</p>
 <p>当数据写入到ES分片时，会首先写入到内存中，然后通过内存的buffer生成一个segment，并刷到文件系统缓存中。</p>
 <p>如果 buffer 快满了，或者到一定时间，就会将内存 buffer 数据 refresh 到一个新的 segment file中，但是此时数据不是直接进入 segment file 磁盘文件，而是先进入 os cache 。</p>
 <p>这个过程就是 refresh 。</p>
@@ -313,12 +309,12 @@ routing 是一个可变值，默认是文档的 _id</p>
 每次 merge 的时候，会将多个 segment file 合并成一个，同时这里会将标识为 deleted 的 doc 给物理删除掉（之前执行过的delete的数据），然后将新的 segment file 写入到一个 commit point磁盘 。</p>
 <p>知识扩展</p>
 <p>操作系统里面，磁盘文件其实都有一个东西，叫做 os cache ，即操作系统缓存，就是说数据写入磁盘文件之前，会先进入 os cache ，先进入操作系统级别的一个内存缓存中去。</p>
-<h3> 2.备份到translog磁盘</h3>
+<p>备份到translog磁盘</p>
 <p>刷新到translog文件以保障数据不丢失，translog的设计思想和mysql的redo log是相似的。</p>
 <p>每隔5s,从os cache 中同步到translog磁盘里面去做备份。</p>
 <p>那么translog 日志文件的作用是什么？</p>
 <p>你执行 commit 操作之前，数据要么是停留在 buffer 中，要么是停留在 os cache 中，无论是 buffer 还是 os cache 都是内存，一旦这台机器死了，内存中的数据就全丢了。所以需要将数据对应的操作写入一个专门的日志文件 translog 中，一旦此时机器宕机，再次重启的时候，es 会自动读取 translog 日志文件中的数据，恢复到内存 buffer 和 os cache 中去。</p>
-<h3> 3.flush到磁盘文件</h3>
+<p>flush到磁盘文件</p>
 <p>重复上面的步骤，新的数据不断进入 buffer 和 translog，不断将 buffer 数据写入一个又一个新的 segment file文件系统缓存中去，每次 refresh 完 buffer 清空，translog 保留。随着这个过程推进，translog 会变得越来越大。当 translog 达到一定长度的时候，就会触发 commit 操作。</p>
 <p>数据最终被flush到磁盘文件就完成了数据的最终归宿。</p>
 <figure><figcaption>img_125.png</figcaption></figure>
@@ -330,15 +326,15 @@ routing 是一个可变值，默认是文档的 _id</p>
 <p>默认 30 分钟自动执行一次 flush ，将文件系统缓存的数据刷入到磁盘。<br>
 但如果 translog 过大，也会触发 flush 。</p>
 <p>flush 操作就对应着 commit 的全过程，我们可以通过 es api，手动执行 flush 操作，手动将 os cache 中的数据 fsync 强刷到磁盘上去。</p>
-<h3> 4.es准实时机制</h3>
-<h4> 1.为什么叫 es 是准实时的？</h4>
+<p>es准实时机制</p>
+<p>为什么叫 es 是准实时的？</p>
 <p>NRT ，全称 near real-time 。默认是每隔 1 秒 refresh 一次的，所以 es 是准实时的，因为写入的数据 1 秒之后才能被看到。</p>
 <p>可以通过 es 的 restful api 或者 java api ，手动执行一次 refresh 操作，就是手动将 buffer 中的数据刷入 os cache 中，让数据立马就可以被搜索到。只要数据被输入 os cache 中，buffer 就会被清空了，因为不需要保留 buffer 了，数据在 translog 里面已经持久化到磁盘去一份了。</p>
-<h4> 2.es会数据丢失吗？</h4>
+<p>es会数据丢失吗？</p>
 <p>可能会丢失有 5 秒的数据，停留在 buffer、translog os cache、segment file os cache 中，而不在磁盘上，此时如果备份到translog过程中宕机，会导致 5 秒的数据丢失。</p>
 <p>translog 其实也是先写入 os cache 的，默认每隔 5 秒刷一次到磁盘中去，所以默认情况下，可能有 5 秒的数据会仅仅停留在 buffer 或者 translog 文件的 os cache 中，如果此时机器挂了，会丢失 5 秒钟的数据。但是这样性能比较好，最多丢 5 秒的数据。<br>
 也可以将 translog 设置成每次写操作必须是直接 fsync 到磁盘，但是性能会差很多。</p>
-<h4> 3.es集群脑裂</h4>
+<p>es集群脑裂</p>
 <p>关于集群脑裂的定义请参考我的另一篇博文</p>
 <p><a href="https://blog.csdn.net/sinat_34814635/article/details/129914369" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/sinat_34814635/article/details/129914369</a></p>
 <p>那么es是如何解决脑裂问题的？</p>
