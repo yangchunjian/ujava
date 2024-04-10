@@ -42,7 +42,7 @@ Elasticsearch 一个典型应用就是 ELK 日志分析系统。如nginx接入�
 
 如电商业务的商品搜索等。
 
-### 2.DSL语言高级查询
+### 4.DSL语言高级查询
 
 #### 1.Query DSL概述
 
@@ -116,7 +116,7 @@ metric有多种统计，如：求和，最大值，最小值，平均值等。
 
 es最重要的核心功能是数据检索，统计分析我认为不是es最核心的功能，想这种离线统计应该由其他的替代方案去做，所以如果想了解更多es聚合搜索相关知识可以参考官网或者其他博客
 
-### 3.文档映射
+### 5.文档映射
 
 ES中映射可以分为动态映射和静态映射
 
@@ -140,13 +140,13 @@ ES中映射可以分为动态映射和静态映射
 * 日期型：date
 * 布尔型：boolean
 
-## 4.数据建模
+#### 4.数据建模
 
 就是针对于关系型数据库的一对多数据模型，而我自己认为es的主要应用场景是全文搜索引擎，这种复杂的业务关系就应该由关系型数据库如mysql去完成数据建模和存储，而不是交给es去建模存储，当然es也是提供了Parent / Child相关机制继续数据建模，如果有场景使用到，自己去参考对应的官方文档了解即可，但我自己不建议这样做。
 
-## 5.分页查询
+#### 5.分页查询
 
-### 1.语法
+1.语法
 
 在存在大量数据时，一般我们进行查询都需要进行分页查询。例如：我们指定页码、并指定每页显示多少条数据，然后Elasticsearch返回对应页码的数据。
 
@@ -164,7 +164,7 @@ POST /es_db/_doc/_search
 }
 ```
 
-### 2.scroll解决深分页问题
+2.scroll解决深分页问题
 
 前面使用from和size方式，查询在1W条数据以内都是OK的，但如果数据比较多的时候，会出现性能问题。Elasticsearch做了一个限制，不允许查询的是10000条以后的数据。如果要查询1W条以后的数据，需要使用Elasticsearch中提供的scroll游标来查询。
 
@@ -200,7 +200,7 @@ GET /es_db/_search?scroll=1m
 
 第二次直接使用scroll id进行查询
 
-## 6.suggest search
+### 6.suggest search
 
 suggest search（completion suggest）：就是建议搜索或称为搜索建议，也可以叫做自动完成-auto completion。类似百度中的搜索联想提示功能。
 
@@ -270,7 +270,7 @@ GET /movie/_search
 
 ## 二、ES核心原理
 
-### 1.ES存储模型
+ES存储模型
 
 Elasticsearch与关系数据库结构对应
 
@@ -305,7 +305,7 @@ ElasticSearch的对象模型，跟关系型数据库模型相比：
 
 相当于是数据表的字段|列
 
-### 2.倒排索引
+### 5.倒排索引
 
 全文搜索引擎的技术原理被称为“倒排索引”（Inverted index），也常被称为反向索引、置入档案或反向档案，是一种索引方法，其基本原理是建立单词到文档的索引。
 
@@ -337,7 +337,7 @@ ElasticSearch的对象模型，跟关系型数据库模型相比：
 * 倒排索引中的词项根据字典顺序升序排列
 Elasticsearch 也是 Master-slave 架构，也实现了数据的分片和备份。
 
-### 3.分词器
+### 6.分词器
 
 对于英文来说，分词比较简单，只需要按照单词的空格来进行分词。
 如下所示
@@ -367,7 +367,7 @@ PUT /school_index
 }
 ```
 
-1.分词器工作流程
+分词器工作流程
 ![img_117.png](img_117.png)
 分词器由三部分组成：
 
@@ -383,7 +383,7 @@ tokenizer：分词，hello you and me --> hello, you, and, me
 
 token filter：lowercase，stop word，synonymom，liked --> like，Tom --> tom，a/the/an --> 干掉，small --> little
 
-**2.ES内置分词器**
+ES内置分词器
 
 * Standard Analyzer - 默认分词器，按词切分，小写处理
 * Simple Analyzer - 按照非字母切分(符号被过滤), 小写处理
@@ -407,7 +407,7 @@ whitespace analyzer：Set, the, shape, to, semi-transparent, by, calling, set_tr
 stop analyzer:移除停用词，比如a the it等等
 ```
 
-**3.定制分词器**
+定制分词器
 ```sql
 PUT /my_index
 {
@@ -437,7 +437,7 @@ GET /my_index/_analyze
 
 ```
 
-**3、定制化自己的分词器**
+定制化自己的分词器
 ```sql
 PUT /my_index
 {
@@ -485,7 +485,8 @@ PUT /my_index/_mapping/my_type
 
 ```
 
-**4.IK热更新**
+IK热更新
+
 每次都是在es的扩展词典中，手动添加新词语，很坑
 
 （1）每次添加完，都要重启es才能生效，非常麻烦
@@ -508,17 +509,17 @@ IKAnalyzer.cfg.xml
 </properties>
 ```
 
-## 4.es评分机制
+### 7.es评分机制
 
 当你通过关键字搜索相关文档时，可能会出现多个文档，这些文档的顺序是通过一个max_score属性的大小从高到低顺序展现出来的，max_score属性就是我们所说的评分。
 
-### 1.打分算法
+打分算法
 
 relevance score算法，简单来说，就是计算出，一个索引中的文本，与搜索文本，他们之间的关联匹配程度
 
 Elasticsearch使用的是 term frequency/inverse document frequency算法，简称为TF/IDF算法
 
-### 总公式
+总公式
 
 max_score = boost * idf * tf
 
@@ -530,7 +531,7 @@ max_score = boost * idf * tf
 
 ![img_119.png](img_119.png)
 
-### 1.TF算法
+TF算法
 
 Term frequency：搜索文本中的各个词条在field文本中出现了多少次，出现次数越多，就越相关
 
@@ -553,9 +554,11 @@ Inverse document frequency：搜索文本中的各个词条在整个索引的所
 
 Field-length norm：field长度，field越长，相关度越弱
 搜索请求：hello world
+```xml
+doc1：{ "title": "hello article", "content": "...... N个单词" }
+doc2：{ "title": "my article", "content": "...... N个单词，hi world" }
 
-* doc1：{ "title": "hello article", "content": "...... N个单词" }
-* doc2：{ "title": "my article", "content": "...... N个单词，hi world" }
+```
 
 hello world在整个index中出现的次数是一样多的，那么doc1更相关，title field更短
 
@@ -573,7 +576,7 @@ hello world在整个index中出现的次数是一样多的，那么doc1更相关
 
 ## 三、ElasticSearch架构设计
 
-### 1.es集群架构
+es集群架构
 
 如下图 ，就是一个三个节点组成的es集群，p0、p1、p2表示一个节点中的分片，R0、R1、R2表示分片对应的副本
 ![img_121.png](img_121.png)
@@ -625,9 +628,9 @@ Elasticsearch会自动管理分片，如果发现分片分布不均衡，就会�
 
 Primary Shard和Replica Shard不在同一个节点上
 
-## 2.es集群读写流程
+### 5.es集群读写流程
 
-### 1.es 写数据流程
+es 写数据流程
 
 ![img_122.png](img_122.png)
 
@@ -644,7 +647,7 @@ routing 是一个可变值，默认是文档的 _id
 
 5.Primary Shard和Replica Shard都保存好了文档，返回client
 
-### 2.es 读数据流程
+es 读数据流程
 
 ![img_123.png](img_123.png)
 
@@ -662,13 +665,13 @@ routing 是一个可变值，默认是文档的 _id
 
 自己总结：es的检索流程和mysql数据表查询非主键索引的思路有些相似，先从索引表查询出对应的主键索引值，在进行回表查询具体的行数据。
 
-### 3.es删除/更新数据底层原理
+es删除/更新数据底层原理
 
 如果是删除操作，commit 的时候会生成一个 .del 文件，里面将某个 doc 标识为 deleted 状态，那么搜索的时候根据 .del 文件就知道这个 doc 是否被删除了。
 
 如果是更新操作，就是将原来的 doc 标识为 deleted 状态，然后新写入一条数据。
 
-## 3.es 底层写数据原理
+es 底层写数据原理
 
 ![img_124.png](img_124.png)
 
@@ -676,7 +679,7 @@ routing 是一个可变值，默认是文档的 _id
 
 总结一下，数据先写入内存 buffer，然后每隔 1s，将数据 refresh 到 os cache，到了 os cache 数据就能被搜索到（所以我们才说 es 从写入到能被搜索到，中间有 1s 的延迟）。每隔 5s，将数据写入 translog 文件作备份（这样如果机器宕机，内存数据全没，最多会有 5s 的数据丢失），translog 大到一定程度，或者默认每隔 30mins，会触发 commit 操作，将缓冲区的数据都 flush 到 segment file 磁盘文件中。最后存入到commit point磁盘文件中。
 
-### 1.refresh到文件系统缓存
+refresh到文件系统缓存
 
 当数据写入到ES分片时，会首先写入到内存中，然后通过内存的buffer生成一个segment，并刷到文件系统缓存中。
 
@@ -700,7 +703,7 @@ buffer 每 refresh 一次，就会产生一个 segment file ，所以默认情�
 
 操作系统里面，磁盘文件其实都有一个东西，叫做 os cache ，即操作系统缓存，就是说数据写入磁盘文件之前，会先进入 os cache ，先进入操作系统级别的一个内存缓存中去。
 
-### 2.备份到translog磁盘
+备份到translog磁盘
 
 刷新到translog文件以保障数据不丢失，translog的设计思想和mysql的redo log是相似的。
 
@@ -710,7 +713,7 @@ buffer 每 refresh 一次，就会产生一个 segment file ，所以默认情�
 
 你执行 commit 操作之前，数据要么是停留在 buffer 中，要么是停留在 os cache 中，无论是 buffer 还是 os cache 都是内存，一旦这台机器死了，内存中的数据就全丢了。所以需要将数据对应的操作写入一个专门的日志文件 translog 中，一旦此时机器宕机，再次重启的时候，es 会自动读取 translog 日志文件中的数据，恢复到内存 buffer 和 os cache 中去。
 
-### 3.flush到磁盘文件
+flush到磁盘文件
 
 重复上面的步骤，新的数据不断进入 buffer 和 translog，不断将 buffer 数据写入一个又一个新的 segment file文件系统缓存中去，每次 refresh 完 buffer 清空，translog 保留。随着这个过程推进，translog 会变得越来越大。当 translog 达到一定长度的时候，就会触发 commit 操作。
 
@@ -731,22 +734,22 @@ commit 操作首先就是将 buffer 中现有数据 refresh 到 os cache 中去�
 
 flush 操作就对应着 commit 的全过程，我们可以通过 es api，手动执行 flush 操作，手动将 os cache 中的数据 fsync 强刷到磁盘上去。
 
-### 4.es准实时机制
+es准实时机制
 
-#### 1.为什么叫 es 是准实时的？
+为什么叫 es 是准实时的？
 
 NRT ，全称 near real-time 。默认是每隔 1 秒 refresh 一次的，所以 es 是准实时的，因为写入的数据 1 秒之后才能被看到。
 
 可以通过 es 的 restful api 或者 java api ，手动执行一次 refresh 操作，就是手动将 buffer 中的数据刷入 os cache 中，让数据立马就可以被搜索到。只要数据被输入 os cache 中，buffer 就会被清空了，因为不需要保留 buffer 了，数据在 translog 里面已经持久化到磁盘去一份了。
 
-#### 2.es会数据丢失吗？
+es会数据丢失吗？
 
 可能会丢失有 5 秒的数据，停留在 buffer、translog os cache、segment file os cache 中，而不在磁盘上，此时如果备份到translog过程中宕机，会导致 5 秒的数据丢失。
 
 translog 其实也是先写入 os cache 的，默认每隔 5 秒刷一次到磁盘中去，所以默认情况下，可能有 5 秒的数据会仅仅停留在 buffer 或者 translog 文件的 os cache 中，如果此时机器挂了，会丢失 5 秒钟的数据。但是这样性能比较好，最多丢 5 秒的数据。
 也可以将 translog 设置成每次写操作必须是直接 fsync 到磁盘，但是性能会差很多。
 
-#### 3.es集群脑裂
+es集群脑裂
 
 关于集群脑裂的定义请参考我的另一篇博文
 
