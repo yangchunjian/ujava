@@ -1,8 +1,10 @@
 ---
-title: 库表规范
+title: 规范库表
 icon: laptop-code
 category:
   - 设计规范
+tag:
+  - 规范
 ---
 
 ## (一) 建表规约

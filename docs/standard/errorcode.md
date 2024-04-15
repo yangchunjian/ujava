@@ -1,8 +1,11 @@
 ---
-title: 码值规范
+title: 规范码值
 icon: laptop-code
 category:
   - 设计规范
+tag:
+  - 规范
+
 ---
 
 ## 用户类

@@ -1,8 +1,10 @@
 ---
-title: 编程规范
+title: 规范编程
 icon: laptop-code
 category:
   - 设计规范
+tag:
+  - 规范
 ---
 
 ## (一) 命名风格

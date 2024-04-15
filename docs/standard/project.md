@@ -1,8 +1,11 @@
 ---
-title: 工程规范
+title: 规范工程
 icon: laptop-code
 category:
   - 设计规范
+tag:
+  - 规范
+
 ---
 
 ## (一) 应用分层
