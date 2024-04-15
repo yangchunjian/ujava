@@ -1,13 +1,11 @@
 ---
-title: 设计注意事项二
+title: 架构原则
 icon: laptop-code
 category:
-  - 设计高频
+  - 设计注意
 tag:
-  - 高频
+  - 注意
 ---
-
-## 简介
 
 ## 一.设计原则
 

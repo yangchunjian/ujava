@@ -1,5 +1,5 @@
 ---
-title: 设计原理:编程概要
+title: 编程概要
 icon: laptop-code
 category:
   - 设计原理

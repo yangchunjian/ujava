@@ -1,5 +1,5 @@
 ---
-title: 设计原理:对象与并发
+title: 对象与并发
 icon: laptop-code
 category:
   - 设计原理

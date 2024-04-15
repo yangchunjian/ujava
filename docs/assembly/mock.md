@@ -1,11 +1,10 @@
 ---
-title: Mock单测方式
+title: 组件Mock
 icon: laptop-code
 category:
-  - 设计高频
+  - 设计组件
 tag:
-  - 高频
-
+  - 组件
 ---
 
 ## 简介

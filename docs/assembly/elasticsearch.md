@@ -1,10 +1,10 @@
 ---
-title: ElasticSearch架构设计
+title: 组件ElasticSearch
 icon: laptop-code
 category:
-  - 设计高频
+  - 设计组件
 tag:
-  - 高频
+  - 组件
 ---
 
 ## 一、 简介
@@ -53,7 +53,7 @@ Domain Specific Language 领域专用语言
 
 DSL由叶子查询子句和复合查询子句两种子句组成。
 
-![img_111.png](img_111.png)
+![img_111.png](../highfreq/img_111.png)
 
 #### 2.模糊匹配
 
@@ -125,7 +125,7 @@ ES中映射可以分为动态映射和静态映射
 在关系数据库中，需要事先创建数据库，然后在该数据库下创建数据表，并创建表字段、类型、长度、主键等，最后才能基于表插入数据。而Elasticsearch中不需要定义Mapping映射（即关系型数据库的表、字段等），在文档写入Elasticsearch时，会根据文档字段自动识别类型，这种机制称之为动态映射。
 动态映射规则如下：
 
-![img_112.png](img_112.png)
+![img_112.png](../highfreq/img_112.png)
 
 #### 2.静态映射
 
@@ -274,7 +274,7 @@ ES存储模型
 
 Elasticsearch与关系数据库结构对应
 
-![img_113.png](img_113.png)
+![img_113.png](../highfreq/img_113.png)
 
 ElasticSearch的对象模型，跟关系型数据库模型相比：
 
@@ -315,7 +315,7 @@ ElasticSearch的对象模型，跟关系型数据库模型相比：
 
 正排索引示例：
 
-![img_114.png](img_114.png)
+![img_114.png](../highfreq/img_114.png)
 
 （注：文章内容仅为示范，文章内容实际上存储的是几千字的内容。）
 
@@ -323,7 +323,7 @@ ElasticSearch的对象模型，跟关系型数据库模型相比：
 
 倒排索引示例：
 
-![img_115.png](img_115.png)
+![img_115.png](../highfreq/img_115.png)
 
 （注：表格仅为示范，不是完整的倒排索引表格，实际上的倒排索引有成千上万行，因为每个单词就是一个索引。）
 
@@ -341,7 +341,7 @@ Elasticsearch 也是 Master-slave 架构，也实现了数据的分片和备份�
 
 对于英文来说，分词比较简单，只需要按照单词的空格来进行分词。
 如下所示
-![img_116.png](img_116.png)
+![img_116.png](../highfreq/img_116.png)
 
 如果要搜索hello这个关键词，则匹配的结果将是下面两个内容
 ```sql
@@ -368,7 +368,7 @@ PUT /school_index
 ```
 
 分词器工作流程
-![img_117.png](img_117.png)
+![img_117.png](../highfreq/img_117.png)
 分词器由三部分组成：
 
 * Character Filter：将文本中html标签剔除掉。
@@ -523,13 +523,13 @@ Elasticsearch使用的是 term frequency/inverse document frequency算法，简�
 
 max_score = boost * idf * tf
 
-![img_118.png](img_118.png)
+![img_118.png](../highfreq/img_118.png)
 
 对于查询权重我们可以自己定义
 
 如下面所示：
 
-![img_119.png](img_119.png)
+![img_119.png](../highfreq/img_119.png)
 
 TF算法
 
@@ -570,7 +570,7 @@ hello world在整个index中出现的次数是一样多的，那么doc1更相关
 
 如果是多个term，那么就是线性代数来计算，无法用图表示
 
-![img_120.png](img_120.png)
+![img_120.png](../highfreq/img_120.png)
 
 了解即可，掌握对应的打分算法我自己认为就足够了，不用砖牛角尖
 
@@ -579,7 +579,7 @@ hello world在整个index中出现的次数是一样多的，那么doc1更相关
 es集群架构
 
 如下图 ，就是一个三个节点组成的es集群，p0、p1、p2表示一个节点中的分片，R0、R1、R2表示分片对应的副本
-![img_121.png](img_121.png)
+![img_121.png](../highfreq/img_121.png)
 在Elasticsearch主要分成两类节点，一类是Master，一类是DataNode。
 
 ### 1.Master节点
@@ -632,7 +632,7 @@ Primary Shard和Replica Shard不在同一个节点上
 
 es 写数据流程
 
-![img_122.png](img_122.png)
+![img_122.png](../highfreq/img_122.png)
 
 1.选择任意一个DataNode发送请求，例如：node2。此时，node2就成为一个coordinating node（协调节点）
 
@@ -649,7 +649,7 @@ routing 是一个可变值，默认是文档的 _id
 
 es 读数据流程
 
-![img_123.png](img_123.png)
+![img_123.png](../highfreq/img_123.png)
 
 1.client发起查询请求，某个DataNode接收到请求，该DataNode就会成为协调节点（Coordinating Node）
 
@@ -673,7 +673,7 @@ es删除/更新数据底层原理
 
 es 底层写数据原理
 
-![img_124.png](img_124.png)
+![img_124.png](../highfreq/img_124.png)
 
 简述：先写入内存 buffer，在 buffer 里的时候数据是搜索不到的；然后刷新到os cache中（同时将数据备份到translog日志文件），最后刷新到 segment file磁盘文件中
 
@@ -719,7 +719,7 @@ flush到磁盘文件
 
 数据最终被flush到磁盘文件就完成了数据的最终归宿。
 
-![img_125.png](img_125.png)
+![img_125.png](../highfreq/img_125.png)
 
 commit操作流程
 
@@ -777,7 +777,7 @@ es是直到有足够的master候选节点时，才可以选举出一个master，
 
 ### 1.Elasticsearch SQL
 
-![img_126.png](img_126.png)
+![img_126.png](../highfreq/img_126.png)
 
 Elasticsearch SQL允许执行类SQL的查询，可以使用REST接口、命令行或者是JDBC，都可以使用SQL来进行数据的检索和数据的聚合。
 
@@ -828,7 +828,7 @@ Elasticsearch SQL提供了sql转换的功能，但是只能满足一些简单的
 
 如下图所示：
 
-![img_127.png](img_127.png)
+![img_127.png](../highfreq/img_127.png)
 
 ### 2.安装Kibana
 
@@ -842,6 +842,6 @@ Elasticsearch SQL提供了sql转换的功能，但是只能满足一些简单的
 
 访问下面地址：http://localhost:5601/app/dev_tools#/console 可进入管理后台
 
-![img_128.png](img_128.png)
+![img_128.png](../highfreq/img_128.png)
 
 ElasticSearch可视化工具之cerebro

@@ -1,11 +1,10 @@
 ---
-title: K8S简介
+title: 组件K8S
 icon: laptop-code
 category:
-  - 设计高频
+  - 设计组件
 tag:
-  - 高频
-
+  - 组件
 ---
 
 ## 一、K8S简介
@@ -17,15 +16,15 @@ GitHub：github.com/kubernetes/kubernetes
 Kubernetes简称为K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统，起源于Google 集群管理工具Borg。
 
 Kubernetes集群组件逻辑图
-![img_101.png](img_101.png)
+![img_101.png](../highfreq/img_101.png)
 
 k8s集群属于Master-Slave主从架构，Master节点负责集群管理和资源调度，用于运行控制平面组件(Control Plane Components)，Slave节点就是工作负载节点，一般称为Node节点，也叫Worker节点，主要负责运行Pod，一个Pod里可以同时运行多个容器，而容器一般封装的就是基于Dokcer打包的应用，Pod英文叫豌豆荚，每个容器就像是一颗豌豆，简单来说Pod就是一组容器。
 
 Master节点组件及功能
-![img_102.png](img_102.png) 
+![img_102.png](../highfreq/img_102.png) 
 
 Slave节点组件及功能
-![img_103.png](img_103.png)
+![img_103.png](../highfreq/img_103.png)
 
 
 安装部署
@@ -58,7 +57,7 @@ kubeadm工具
 
 集群规划
 
-![img_104.png](img_104.png)
+![img_104.png](../highfreq/img_104.png)
 
  环境配置
 
@@ -285,7 +284,7 @@ node3   Ready    worker                 15h   v1.20.9
 安装网络插件
 
 Calico是一套开源的纯三层的虚拟化网络解决方案，是目前K8s主流的网络方案。它把每个节点都作为一个虚拟路由器，把Pod当做路由器上一个终端设备为其分配一个IP地址，通过BGP协议生成路由规则，实现不同节点上的Pod网络互通。
-![Calico系统示意图](img_105.png)
+![Calico系统示意图](../highfreq/img_105.png)
 
 ```java
 # 下载calico.yaml并保存到本地
@@ -341,7 +340,7 @@ service/mynginx      NodePort    10.105.55.49   <none>        80:30161/TCP   50s
 浏览器输入<任意一个节点IP>:<port>，都可以访问nginx首页表示测试成功。
 ```
 
-![img_106.png](img_106.png)
+![img_106.png](../highfreq/img_106.png)
 
 
 ## 六、安装Dashboard
@@ -367,7 +366,7 @@ kubernetes-dashboard   kubernetes-dashboard        NodePort    10.96.38.129    <
 
 浏览器输入访问地址：https://192.168.5.10:31128/，需要token才能访问。
 
-![img_107.png](img_107.png)
+![img_107.png](../highfreq/img_107.png)
 
 创建访问账号
 ```java
@@ -428,6 +427,6 @@ token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IkhMMXFCMGVaVHVrV0hHampTRExxdHlMcjBvTVlX
 
 输入上面的token，进入dashboard首页
 
-![img_108.png](img_108.png)
+![img_108.png](../highfreq/img_108.png)
 
 

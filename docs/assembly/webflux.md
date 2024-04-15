@@ -1,11 +1,10 @@
 ---
-title: WebFlux详解
+title: 组件WebFlux
 icon: laptop-code
 category:
-  - 设计高频
+  - 设计组件
 tag:
-  - 高频
-
+  - 组件
 ---
 
 因为想学习 Spring Cloud Gateway 来着，然后发现它是基于 Spring5.0+SpringBoot2.0+WebFlux等技术开发的。所以学之前才要来简单了解下 WebFlux 技术。
@@ -22,7 +21,7 @@ tag:
 
 Spring Framework 中包含的原始 Web 框架 Spring Web MVC 是专门为 Servlet API 和 Servlet 容器构建的。反应式堆栈 Web 框架 Spring WebFlux 是在 5.0 版的后期添加的。它是完全非阻塞的，支持反应式流(Reactive Stream)背压，并在Netty，Undertow和Servlet 3.1 +容器等服务器上运行。
 
-![img_51.png](img_51.png)
+![img_51.png](../highfreq/img_51.png)
 
 上面的文字和图片都是来自官网的。从中我们可以大概知道 Spring WebFlux 是对标 Spring MVC 的。
 
@@ -75,7 +74,7 @@ Reactor 就是 Spring WebFlux 的首选 反应式库。
 上面说了那么多的概念，终于到了代码环节了，就先来简单的体验下代码是什么样子的吧。
 
 首先我们创建一个 Spring Boot 工程，需要注意的是，以往创建 Spring Boot 时我们都是选择 Spring Web 依赖，但是这次我们选择 Spring Reactive Web 依赖:
-![img_52.png](img_52.png)
+![img_52.png](../highfreq/img_52.png)
 
 
 1. Mono
@@ -143,7 +142,7 @@ R2DBC：R2DBC 是 Spring 官方在 Spring5 发布了响应式 Web 框架 Spring 
 
 选择这几个依赖，创建新的 project:
 
-![img_53.png](img_53.png)
+![img_53.png](../highfreq/img_53.png)
 
 pom.xml 文件里是这样的：
 ```java

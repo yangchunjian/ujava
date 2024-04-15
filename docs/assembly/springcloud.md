@@ -1,10 +1,10 @@
 ---
-title: SpringCloud详解
+title: 组件SpringCloud
 icon: laptop-code
 category:
-  - 设计高频
+  - 设计组件
 tag:
-  - 高频
+  - 组件
 ---
 
 SpringCloud是一个基于SpringBoot的分布式系统开发框架，它能够帮助我们快速、稳定地构建分布式系统。本篇博客将对SpringCloud进行详细解析，介绍SpringCloud的主要组件和相关应用场景，同时提供代码示例以帮助读者更好地掌握SpringCloud的实际开发应用。
@@ -21,7 +21,7 @@ Spring Cloud和Dubbo都是目前比较流行的微服务框架，它们各自有
 Spring Cloud是基于Spring Boot的一套微服务框架，提供了一系列工具和组件来快速构建和部署微服务应用。
 Dubbo则是阿里巴巴的开源RPC框架，专门为分布式服务架构设计，提供了高性能和可靠性的服务注册、发现和调用机制。
 下面是Spring Cloud和Dubbo的一些比较：
-![img_61.png](img_61.png)
+![img_61.png](../highfreq/img_61.png)
 
 总的来说，Spring Cloud更注重整个微服务架构的可扩展性和协调性，适合复杂业务场景。Dubbo则更注重性能和可靠性，适合高并发、大规模、分布式的场景。
 

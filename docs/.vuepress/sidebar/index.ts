@@ -33,6 +33,13 @@ export default sidebar({
             ],
         },
         {
+            text: "设计注意",
+            icon: "star",
+            collapsible: true,
+            prefix: "attention/",
+            children: "structure",
+        },
+        {
             text: "设计原理",
             icon: "star",
             collapsible: true,
@@ -93,6 +100,13 @@ export default sidebar({
             icon: "star",
             collapsible: true,
             prefix: "framework/",
+            children: "structure",
+        },
+        {
+            text: "设计组件",
+            icon: "star",
+            collapsible: true,
+            prefix: "assembly/",
             children: "structure",
         },
         {

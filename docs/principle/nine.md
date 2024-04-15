@@ -1,5 +1,5 @@
 ---
-title: 设计原理:定时器
+title: 定时器
 icon: laptop-code
 category:
   - 设计原理

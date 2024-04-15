@@ -1,5 +1,5 @@
 ---
-title: 设计原理:架构模式
+title: 架构模式
 icon: laptop-code
 category:
   - 设计原理

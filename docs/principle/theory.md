@@ -1,5 +1,5 @@
 ---
-title: 设计原理:六大设计原则
+title: 六大设计原则
 icon: laptop-code
 category:
   - 设计原理

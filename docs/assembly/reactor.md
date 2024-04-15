@@ -1,10 +1,10 @@
 ---
-title: Reactor模型详解
+title: 组件Reactor
 icon: laptop-code
 category:
-  - 设计高频
+  - 设计组件
 tag:
-  - 高频
+  - 组件
 ---
 
 ## 前言
@@ -12,7 +12,7 @@ tag:
 
 ## 一、经典的同步阻塞模型
 
-![img_46.png](img_46.png)
+![img_46.png](../highfreq/img_46.png)
 
 这是最为传统的Socket服务设计，有多个客户端连接服务端，服务端会开启很多线程，一个线程为一个客户端服务。
 
@@ -121,7 +121,7 @@ public class Client {
 
 ## 二、单reactor单线程设计
 
-![img_47.png](img_47.png)
+![img_47.png](../highfreq/img_47.png)
 
 这是最简单的Reactor模型，可以看到有多个客户端连接到Reactor，Reactor内部有一个dispatch（分发器）。
 
@@ -287,7 +287,7 @@ WorkHandler就是真正负责处理客户端写事件的了。
 
 ## 三、单reactor多线程设计
 
-![img_48.png](img_48.png)
+![img_48.png](../highfreq/img_48.png)
 
 可以看到，Reactor还是既要负责处理连接事件，又要负责处理客户端的写事件，不同的是，多了一个线程池的概念。
 
@@ -404,7 +404,7 @@ process thread:pool-1-thread-1
 
 ## 四、多reactor多线程设计
 
-![img_49.png](img_49.png)
+![img_49.png](../highfreq/img_49.png)
 
 这就是主从Reactor模型了，可以看到mainReactor只负责连接请求，而subReactor
 只负责处理客户端的写事件。
@@ -587,7 +587,7 @@ workHandler thread:Thread-1
 
 ## 五、Reactor模型结构图
 
-![img_50.png](img_50.png)
+![img_50.png](../highfreq/img_50.png)
 
 * Synchronous Event Demultiplexer：同步事件分离器，用于监听各种事件，调用方调用监听方法的时候会被阻塞，直到有事件发生，才会返回。对于Linux来说，同步事件分离器指的就是IO多路复用模型，比如epoll，poll 等， 对于Java NIO来说， 同步事件分离器对应的组件就是selector，对应的阻塞方法就是select。
 * Handler：本质上是文件描述符，是一个抽象的概念，可以简单的理解为一个一个事件，该事件可以来自于外部，比如客户端连接事件，客户端的写事件等等，也可以是内部的事件，比如操作系统产生的定时器事件等等。

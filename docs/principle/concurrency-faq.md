@@ -1,5 +1,5 @@
 ---
-title: 设计原理:基本陷阱、原理及解决方案
+title: 基本陷阱、原理及解决方案
 icon: laptop-code
 category:
   - 设计原理

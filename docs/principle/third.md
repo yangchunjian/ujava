@@ -1,5 +1,5 @@
 ---
-title: 设计原理:代码抽象与分层
+title: 代码抽象与分层
 icon: laptop-code
 category:
   - 设计原理
