@@ -6,12 +6,1235 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Mon, 15 Apr 2024 02:55:53 GMT</pubDate>
-    <lastBuildDate>Mon, 15 Apr 2024 02:55:53 GMT</lastBuildDate>
+    <pubDate>Mon, 15 Apr 2024 03:25:58 GMT</pubDate>
+    <lastBuildDate>Mon, 15 Apr 2024 03:25:58 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>设计组件</category>
+    <category>设计注意</category>
     <category>设计高频</category>
     <category>设计模式</category>
+    <item>
+      <title>组件DevOps</title>
+      <link>https://ujava.cn/assembly/devops.html</link>
+      <guid>https://ujava.cn/assembly/devops.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件DevOps</source>
+      <description>1. DevOps 维基百科定义：DevOps是一组过程、方法与系统的统称，用于促进 开发、技术运营 和 质量保障（QA） 部门之间的沟通、协作与整合。我理解DevOps是一种软件管理思维模式。 为什么会有DevOps呢，或者说软件开发领域是怎么样演变出DevOps这个概念的呢？ 项目管理模式的演变是受项目的规模大小影响的。 最初阶段，项目软件功能比较简单，工作量不大，程序员一个人可以完成规划、编码、构建、测试、发布、部署和维护所有阶段的工作。 后来，项目扩大，软件的规模也在逐渐变得庞大，采有传统瀑布流模型。团队里面除了软件开发工程师之外，又有了软件测试工程师，软件运维工程师，各个工种分工合作，一个阶段所有工作完成之后，再进入下一个阶段。</description>
+      <category>设计组件</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 1. DevOps</h2>
+<p>维基百科定义：DevOps是一组过程、方法与系统的统称，用于促进 开发、技术运营 和 质量保障（QA） 部门之间的沟通、协作与整合。我理解DevOps是一种软件管理思维模式。</p>
+<p>为什么会有DevOps呢，或者说软件开发领域是怎么样演变出DevOps这个概念的呢？</p>
+<p>项目管理模式的演变是受项目的规模大小影响的。</p>
+<p>最初阶段，项目软件功能比较简单，工作量不大，程序员一个人可以完成规划、编码、构建、测试、发布、部署和维护所有阶段的工作。<br>
+<br>
+后来，项目扩大，软件的规模也在逐渐变得庞大，采有传统瀑布流模型。团队里面除了软件开发工程师之外，又有了软件测试工程师，软件运维工程师，各个工种分工合作，一个阶段所有工作完成之后，再进入下一个阶段。</p>
+<p><br>
+再后来，随着项目的再次扩大，用户对系统的需求不断增加，与此同时，用户给的时间周期却越来越少，时间周期比较长的瀑布流模式不再适用，于是就出现了“敏捷开发”，为的就是小步快跑，持续迭代，快速发现问题，快速解决问题，快速和用户、业主进行确认。<br>
+<br>
+再然后，在现今这个时代，对变化进行响应的要求越来越高，可以一个项目几天就要迭代上线一版。而从上面的图也可以看到，敏捷开发大幅提升了软件开发的效率和版本更新的速度，但是它的效果仅限于开发环节，运维部署成为瓶颈。运维的核心就是维稳，不出问题，这导致了开发快速迭代的版本很难快速正式上线。</p>
+<p>这时候，DevOps这个概念才被提出和关注。从目标来看，DevOps就是让开发人员和运维人员更好地沟通合作，通过自动化流程来使得软件整体过程更加快捷和可靠。而从DevOps概念提出到现在，也不仅仅只是要打通开发和运维的壁垒了，而是扩大到整个项目团队涉及到所有角色，也包括了市场、需求等人员。</p>
+<p><br>
+DevOps 的三大支柱，即人（People）、流程（Process）和平台（Platform）。</p>
+<ul>
+<li>DevOps = 人 + 流程 + 平台</li>
+<li>人 + 流程 = 文化</li>
+<li>流程 + 平台 = 工具</li>
+<li>平台 + 人 = 赋能</li>
+</ul>
+<p>这是这个行业演变过程，也是一个公司从成立，到发展壮大的过程，一个公司的项目管理模式演变过程是整个行业演变过程的缩影，不同阶段有不同阶段的模式，达到一定阶段才有改变的必要，不过我们如果提前有这些了解，提前有所准备，那边在转变的过程中就可以少些弯路和内耗。</p>
+<p>DevOps要做就是使用技术工具按照标准化的流程统筹各个阶段的人和人的行为，实现快速交付。它的落地考验的不仅是一家企业的技术，更是管理水平和企业文化，需要一家公司从上到下进行思维转变，并且重新梳理全流程的规范和标准。技术（工具和平台）是最容易实现的，流程次之，思维转变反而最困难。</p>
+<p>虽然思维转变是最重要的，但是思维转变没法凭空而来，不可能看一下概念，听一下别人的描述就可以转变过来。只有身处在那样的环境，体会到确切的痛点，如一个公司随着规模的扩大，项目变得复杂，发现按照以前的项目执行方式每次都是亏钱，这样才有可能引发思考，如果这时再体验到相关地技术带来的便利和好处，这样才有可能引发思维的转变。</p>
+<p>对于开发人员个人而言，虽然DevOps实施落地中技术和工具是最简单的，但是我们还是要先了解技术和工具，从中体会它与我们日常工作流程的差别，引发思考，同时也为可能用到的时机进行准备积累。</p>
+<h2> 2. CI/CD</h2>
+<p>DevOps涉及开发的各个阶段，涉及到各个阶段的人，人的思维   转变是最难的，而标准的流程和规范是DevOps的基础，是将各个阶段的人和行为管理起来的根本，平台则是流程自动化的技术工具。其中，CI/CD是DevOps中最能体现流程化的一个阶段，旨在通过技术工具搭建标准自动化流水线过程，减少重复工作的资源浪费。</p>
+<p><br>
+CI/CD是伴随着DevOps出现的两个词汇，CI是Continuous Integration（持续集成），而CD对应多个英文，Continuous Delivery（持续交付）或Continuous Deployment（持续部署）。所谓持续就是即时和反复，为的就是及时发现问题，及时响应。</p>
+<p><strong>持续集成</strong>：</p>
+<p>持续集成是指多名开发者在开发不同功能代码的过程当中，可以频繁的将代码行合并到一起，然后进行自动化测试，并且不会相互影响工作。<br>
+</p>
+<p><strong>持续交付</strong>：</p>
+<p>持续交付是指在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境的「类生产环境」中。比如，我们完成单元测试后，可以把代码部署到连接数据库的 Staging 环境中更多的测试。如果代码没有问题，可以继续手动部署到生产环境中。<br>
+</p>
+<p><strong>持续部署</strong>：</p>
+<p>在持续交付的基础上，把部署到生产环境的过程自动化。如果你对比上图持续部署就可以发现持续部署和持续交付的区别就是最终部署到生产环境是自动化的。<br>
+</p>
+<p>从上面的几个图可以看出，要实现CI/CD最起码需要一个固定的流程和三个工具。流程需要规定从代码开发到生产环境需要经过哪些阶段，每个阶段需要做什么，如果一个阶段没有达到预期应该怎么做，这个流程不同公司会有所不同，也是每个企业管理方式的体现。最基本的三个工具包括源代码管理工具（SCM）、自动化构建平台，消息通知工具。</p>
+<p>平台工具各个公司各有不同，大家日常工作中也各有熟悉的工具，DevOps也不仅仅CI/CD需要平台工具，如项目管理、需求、原型和UI管理都需要工具，这里只是介绍CI/CD过程相关的。</p>
+<p>源代码管理工具一般选择 GitLab，也可以用Gitbilit等其他的，这些大家都应该很熟悉，毕竟是日常工作中必不可少要接触的。</p>
+<p>自动化构建平台成熟的有很多，GitLab也自带有CI/CD模块可以用，而这里要采有的是开源且发展历史长久，广泛使用和最好的CI/CD工具之一的Jenkins。</p>
+<p>消息通知可以用邮件，也可以通知到钉钉等办公软件中。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>组件ElasticSearch</title>
+      <link>https://ujava.cn/assembly/elasticsearch.html</link>
+      <guid>https://ujava.cn/assembly/elasticsearch.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件ElasticSearch</source>
+      <description>一、 简介 Elasticsearch 是一个分布式可扩展的实时搜索和分析引擎,一个建立在全文搜索引擎 Apache Lucene™ 基础上的搜索引擎.当然 Elasticsearch 并不仅仅是 Lucene 那么简单，它不仅包括了全文搜索功能，还可以进行以下工作: 一个分布式的实时文档存储，每个字段可以被索引与搜索 一个分布式实时分析搜索引擎 能胜任上百个服务节点的扩展，并支持 PB 级别的结构化或者非结构化数据 1.ES优点 1.支持全文搜索，并基于倒排索引，检索速度特别快 2.高可用性，支持集群部署，任何节点失效系统自动调整。</description>
+      <category>设计组件</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 一、 简介</h2>
+<p>Elasticsearch 是一个分布式可扩展的实时搜索和分析引擎,一个建立在全文搜索引擎 Apache Lucene™ 基础上的搜索引擎.当然 Elasticsearch 并不仅仅是 Lucene 那么简单，它不仅包括了全文搜索功能，还可以进行以下工作:</p>
+<ul>
+<li>一个分布式的实时文档存储，每个字段可以被索引与搜索</li>
+<li>一个分布式实时分析搜索引擎</li>
+<li>能胜任上百个服务节点的扩展，并支持 PB 级别的结构化或者非结构化数据</li>
+</ul>
+<h3> 1.ES优点</h3>
+<ul>
+<li>1.支持全文搜索，并基于倒排索引，检索速度特别快</li>
+<li>2.高可用性，支持集群部署，任何节点失效系统自动调整。</li>
+</ul>
+<h3> 2.ES缺点</h3>
+<ul>
+<li>1.对硬件要求较高，es比较吃内存，需要存储资源来支持大量数据的处理。</li>
+<li>2.不支持事务等ACID属性。</li>
+</ul>
+<h3> 3.ES使用场景</h3>
+<p>1.聊天消息</p>
+<ul>
+<li>数据量大，业务关系简单，会通过关键字搜索聊天信息</li>
+<li>非核心业务，不会频繁crud</li>
+<li>没有事务的场景，可以不用支持事务</li>
+</ul>
+<p>2.日志纪录</p>
+<p>Elasticsearch 一个典型应用就是 ELK 日志分析系统。如nginx接入请求的访问日志纪录。</p>
+<p>3.热点数据搜索</p>
+<p>如电商业务的商品搜索等。</p>
+<h3> 4.DSL语言高级查询</h3>
+<h4> 1.Query DSL概述</h4>
+<p>Domain Specific Language 领域专用语言</p>
+<ul>
+<li>Elasticsearch provides a ful1 Query DSL based on JSON to define queries</li>
+<li>Elasticsearch提供了基于JSON的DSL来定义查询。</li>
+</ul>
+<p>DSL由叶子查询子句和复合查询子句两种子句组成。</p>
+<figure><figcaption>img_111.png</figcaption></figure>
+<h4> 2.模糊匹配</h4>
+<p>模糊匹配主要是针对文本类型的字段，文本类型的字段会对内容进行分词，对查询时，也会对搜索条件进行分词，然后通过倒排索引查找到匹配的数据，模糊匹配主要通过match等参数来实现</p>
+<ul>
+<li>match : 通过match关键词模糊匹配条件内容</li>
+<li>prefix : 前缀匹配</li>
+<li>regexp : 通过正则表达式来匹配数据</li>
+</ul>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 3.精确匹配</h4>
+<ul>
+<li>term : 单个条件相等</li>
+<li>terms : 单个字段属于某个值数组内的值</li>
+<li>range : 字段属于某个范围内的值</li>
+<li>exists : 某个字段的值是否存在</li>
+<li>ids : 通过ID批量查询</li>
+</ul>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 4.聚合搜索</h4>
+<p><strong>1.bucket和metric</strong></p>
+<p>bucket就是一个聚合搜索时的数据分组。</p>
+<p>如：销售部门有员工张三和李四，开发部门有员工王五和赵六。那么根据部门分组聚合得到结果就是两个bucket。销售部门bucket中有张三和李四，开发部门 bucket中有王五和赵六。</p>
+<p>metric就是对一个bucket数据执行的统计分析。如上述案例中，开发部门有2个员工，销售部门有2个员工，这就是metric。</p>
+<p>metric有多种统计，如：求和，最大值，最小值，平均值等。</p>
+<p>用一个大家容易理解的SQL语法来解释，如：select count() from table group by column。那么group by column分组后的每组数据就是bucket。对每个分组执行的count()就是metric。</p>
+<p>es最重要的核心功能是数据检索，统计分析我认为不是es最核心的功能，想这种离线统计应该由其他的替代方案去做，所以如果想了解更多es聚合搜索相关知识可以参考官网或者其他博客</p>
+<h3> 5.文档映射</h3>
+<p>ES中映射可以分为动态映射和静态映射</p>
+<h4> 1.动态映射</h4>
+<p>在关系数据库中，需要事先创建数据库，然后在该数据库下创建数据表，并创建表字段、类型、长度、主键等，最后才能基于表插入数据。而Elasticsearch中不需要定义Mapping映射（即关系型数据库的表、字段等），在文档写入Elasticsearch时，会根据文档字段自动识别类型，这种机制称之为动态映射。<br>
+动态映射规则如下：</p>
+<figure><figcaption>img_112.png</figcaption></figure>
+<h4> 2.静态映射</h4>
+<p>静态映射是在Elasticsearch中也可以事先定义好映射，包含文档的各字段类型、分词器等，这种方式称之为静态映射。</p>
+<h4> 3.核心类型（Core datatype）</h4>
+<ul>
+<li>字符串：string，string类型包含 text 和 keyword。</li>
+<li>text：该类型被用来索引长文本，在创建索引前会将这些文本进行分词，转化为词的组合，建立索引；允许es来检索这些词，text类型不能用来排序和聚合。</li>
+<li>keyword：该类型不能分词，可以被用来检索过滤、排序和聚合，keyword类型不可用text进行分词模糊检索。</li>
+<li>数值型：long、integer、short、byte、double、float</li>
+<li>日期型：date</li>
+<li>布尔型：boolean</li>
+</ul>
+<h4> 4.数据建模</h4>
+<p>就是针对于关系型数据库的一对多数据模型，而我自己认为es的主要应用场景是全文搜索引擎，这种复杂的业务关系就应该由关系型数据库如mysql去完成数据建模和存储，而不是交给es去建模存储，当然es也是提供了Parent / Child相关机制继续数据建模，如果有场景使用到，自己去参考对应的官方文档了解即可，但我自己不建议这样做。</p>
+<h4> 5.分页查询</h4>
+<p>1.语法</p>
+<p>在存在大量数据时，一般我们进行查询都需要进行分页查询。例如：我们指定页码、并指定每页显示多少条数据，然后Elasticsearch返回对应页码的数据。</p>
+<p>在执行查询时，可以指定from（从第几条数据开始查起）和size（每页返回多少条）数据，就可以轻松完成分页。</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>2.scroll解决深分页问题</p>
+<p>前面使用from和size方式，查询在1W条数据以内都是OK的，但如果数据比较多的时候，会出现性能问题。Elasticsearch做了一个限制，不允许查询的是10000条以后的数据。如果要查询1W条以后的数据，需要使用Elasticsearch中提供的scroll游标来查询。</p>
+<p>在进行大量分页时，每次分页都需要将要查询的数据进行重新排序，这样非常浪费性能。</p>
+<p>使用scroll是将要用的数据一次性排序好，然后分批取出,性能要比from + size好得多。</p>
+<p>使用scroll查询后，排序后的数据会保持一定的时间，后续的分页查询都从该快照取数据即可。</p>
+<p>第一次使用scroll分页查询</p>
+<p>此处，我们让排序的数据保持1分钟，所以设置scroll为1m</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>执行后，我们注意到，在响应结果中有一项：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>后续，我们需要根据这个_scroll_id来进行查询</p>
+<p>第二次直接使用scroll id进行查询</p>
+<h3> 6.suggest search</h3>
+<p>suggest search（completion suggest）：就是建议搜索或称为搜索建议，也可以叫做自动完成-auto completion。类似百度中的搜索联想提示功能。</p>
+<p>ES实现suggest的时候，性能非常高，其构建的不是倒排索引，也不是正排索引，就是纯的用于进行前缀搜索的一种特殊的数据结构，而且会全部放在内存中，所以suggest search进行的前缀搜索提示，性能是非常高。</p>
+<p>需要使用suggest的时候，必须在定义index时，为其mapping指定开启suggest。</p>
+<p>具体如下:</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>suggest 搜索：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 二、ES核心原理</h2>
+<p>ES存储模型</p>
+<p>Elasticsearch与关系数据库结构对应</p>
+<figure><figcaption>img_113.png</figcaption></figure>
+<p>ElasticSearch的对象模型，跟关系型数据库模型相比：</p>
+<h3> 1.索引（Index）</h3>
+<p>相当于数据库，用于定义文档类型的存储；在同一个索引中，同一个字段只能定义一个数据类型；</p>
+<p>一个索引就是一个拥有几分相似特征的文档的集合。比如说，可以有一个客户数据的索引，另一个产品目录的索引，还有一个订单数据的索引<br>
+一个索引由一个名字来标识（必须全部是小写字母的），并且当我们要对对应于这个索引中的文档进行索引、搜索、更新和删除的时候，都要使用到这个名字</p>
+<h3> 2.文档类型（Type）</h3>
+<p>相当于关系表，用于描述文档中的各个字段的定义；不同的文档类型，能够存储不同的字段，服务于不同的查询请求；</p>
+<p>每一个字段都应该有一个对应的类型，例如：Text、Keyword、Byte等</p>
+<h3> 3.文档（Document）</h3>
+<p>相当于关系表的数据行，存储数据的载体，包含一个或多个存有数据的字段；</p>
+<p>一个文档是一个可被索引的基础信息单元，类似一条记录。文档以JSON（Javascript Object Notation）格式来表示；</p>
+<h3> 4.字段（Field）</h3>
+<p>文档的一个Key/Value对；</p>
+<ul>
+<li>词（Term）：表示文本中的一个单词；</li>
+<li>标记（Token）：表示在字段中出现的词，由该词的文本、偏移量（开始和结束）以及类型组成；</li>
+</ul>
+<p>相当于是数据表的字段|列</p>
+<h3> 5.倒排索引</h3>
+<p>全文搜索引擎的技术原理被称为“倒排索引”（Inverted index），也常被称为反向索引、置入档案或反向档案，是一种索引方法，其基本原理是建立单词到文档的索引。</p>
+<p>之所以被称为“倒排”索引，是和“正排“索引相对的，“正排索引”的基本原理是建立文档到单词的索引。我们通过一个简单的样例来说明这两种索引的差异。</p>
+<p>假设我们有一个技术文章的网站，里面收集了各种技术文章，用户可以在网站浏览或者搜索文章。</p>
+<p>正排索引示例：</p>
+<figure><figcaption>img_114.png</figcaption></figure>
+<p>（注：文章内容仅为示范，文章内容实际上存储的是几千字的内容。）</p>
+<p>正排索引适用于根据文档名称来查询文档内容。例如，用户在网站上单击了“面向对象葵花宝典是什么”，网站根据文章标题查询文章的内容展示给用户。</p>
+<p>倒排索引示例：</p>
+<figure><figcaption>img_115.png</figcaption></figure>
+<p>（注：表格仅为示范，不是完整的倒排索引表格，实际上的倒排索引有成千上万行，因为每个单词就是一个索引。）</p>
+<p>倒排索引适用于根据关键词来查询文档内容，它是根据文章内容中的关键字建立索引，而值对应于文档ID，而搜索出来的结果就是文档ID所在行的所有内容。</p>
+<p>例如，用户只是想看“设计”相关的文章，网站需要将文章内容中包含“设计”一词的文章都搜索出来展示给用户。</p>
+<p>要注意倒排索引的两个重要细节：</p>
+<ul>
+<li>倒排索引中的所有词项对应一个或多个文档；</li>
+<li>倒排索引中的词项根据字典顺序升序排列<br>
+Elasticsearch 也是 Master-slave 架构，也实现了数据的分片和备份。</li>
+</ul>
+<h3> 6.分词器</h3>
+<p>对于英文来说，分词比较简单，只需要按照单词的空格来进行分词。<br>
+如下所示<br>
+</p>
+<p>如果要搜索hello这个关键词，则匹配的结果将是下面两个内容</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>ES的默认分词设置是standard，这个在中文分词时就比较尴尬了，会单字拆分，比如我搜索关键词“清华大学”，这时候会按“清”，“华”，“大”，“学”去分词，然后搜出来的都是些“清清的河水”，“中华儿女”，“地大物博”，“学而不思则罔”之类的莫名其妙的结果。</p>
+<p>这里我们就想把这个分词方式修改一下，于是呢，就想到了ik分词器，有两种ik_smart和ik_max_word。</p>
+<p>ik_smart会将“清华大学”整个分为一个词，而ik_max_word会将“清华大学”分为“清华大学”，“清华”和“大学”，按需选其中之一就可以了。</p>
+<p>修改默认分词方法(这里修改school_index索引的默认分词为：ik_max_word)：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>分词器工作流程<br>
+<br>
+分词器由三部分组成：</p>
+<ul>
+<li>Character Filter：将文本中html标签剔除掉。</li>
+<li>Tokenizer：按照规则进行分词，在英文中按照空格分词</li>
+<li>Token Filter：将切分的单词进行加工，小写，删除 stopwords(停顿词，a、an、the、is等),增加同义词</li>
+</ul>
+<p>每个组件的作用，可参考下面的例子</p>
+<p>character filter：在一段文本进行分词之前，先进行预处理，比如说最常见的就是，过滤html标签</p>
+<p>tokenizer：分词，hello you and me --&gt; hello, you, and, me</p>
+<p>token filter：lowercase，stop word，synonymom，liked --&gt; like，Tom --&gt; tom，a/the/an --&gt; 干掉，small --&gt; little</p>
+<p>ES内置分词器</p>
+<ul>
+<li>Standard Analyzer - 默认分词器，按词切分，小写处理</li>
+<li>Simple Analyzer - 按照非字母切分(符号被过滤), 小写处理</li>
+<li>Stop Analyzer - 小写处理，停用词过滤(the,a,is)</li>
+<li>Whitespace Analyzer - 按照空格切分，不转小写</li>
+<li>Keyword Analyzer - 不分词，直接将输入当作输出</li>
+<li>Patter Analyzer - 正则表达式，默认\W+(非字符分割)</li>
+<li>Language - 提供了30多种常见语言的分词器</li>
+<li>Customer Analyzer 自定义分词器</li>
+</ul>
+<p>每个内置分词器的作用，可参考下面的例子</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>定制分词器</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>定制化自己的分词器</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>IK热更新</p>
+<p>每次都是在es的扩展词典中，手动添加新词语，很坑</p>
+<p>（1）每次添加完，都要重启es才能生效，非常麻烦</p>
+<p>（2）es是分布式的，可能有数百个节点，你不能每次都一个一个节点上面去修改</p>
+<p>es不停机，直接我们在外部某个地方添加新的词语，es中立即热加载到这些新词语<br>
+IKAnalyzer.cfg.xml</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 7.es评分机制</h3>
+<p>当你通过关键字搜索相关文档时，可能会出现多个文档，这些文档的顺序是通过一个max_score属性的大小从高到低顺序展现出来的，max_score属性就是我们所说的评分。</p>
+<p>打分算法</p>
+<p>relevance score算法，简单来说，就是计算出，一个索引中的文本，与搜索文本，他们之间的关联匹配程度</p>
+<p>Elasticsearch使用的是 term frequency/inverse document frequency算法，简称为TF/IDF算法</p>
+<p>总公式</p>
+<p>max_score = boost * idf * tf</p>
+<figure><figcaption>img_118.png</figcaption></figure>
+<p>对于查询权重我们可以自己定义</p>
+<p>如下面所示：</p>
+<figure><figcaption>img_119.png</figcaption></figure>
+<p>TF算法</p>
+<p>Term frequency：搜索文本中的各个词条在field文本中出现了多少次，出现次数越多，就越相关</p>
+<ul>
+<li>搜索请求：hello world</li>
+<li>doc1：hello you, and world is very good</li>
+<li>doc2：hello, how are you</li>
+</ul>
+<p>doc1这个文档匹配了2个单词，所以doc1的得分要高一些。</p>
+<p>2.IDF算法<br>
+Inverse document frequency：搜索文本中的各个词条在整个索引的所有文档中出现了多少次，出现的次数越多，就越不相关</p>
+<ul>
+<li>搜索请求：hello world</li>
+<li>doc1：hello, tuling is very good</li>
+<li>doc2：hi world, how are you</li>
+</ul>
+<p>比如说，在index中有1万条document，hello这个单词在所有的document中，一共出现了1000次；world这个单词在所有的document中，一共出现了100次，所以world这个单词得分就更高。</p>
+<p>那么匹配world的doc得分就越高,越有可能排在搜索结果前面。</p>
+<p>Field-length norm：field长度，field越长，相关度越弱<br>
+搜索请求：hello world</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>hello world在整个index中出现的次数是一样多的，那么doc1更相关，title field更短</p>
+<p><strong>2.空间向量模型（vector space model）</strong></p>
+<p>每个doc vector计算出对query vector的弧度，最后基于这个弧度给出一个doc相对于query中多个term的总分数</p>
+<p>弧度越大，分数月底; 弧度越小，分数越高</p>
+<p>如果是多个term，那么就是线性代数来计算，无法用图表示</p>
+<figure><figcaption>img_120.png</figcaption></figure>
+<p>了解即可，掌握对应的打分算法我自己认为就足够了，不用砖牛角尖</p>
+<h2> 三、ElasticSearch架构设计</h2>
+<p>es集群架构</p>
+<p>如下图 ，就是一个三个节点组成的es集群，p0、p1、p2表示一个节点中的分片，R0、R1、R2表示分片对应的副本<br>
+<br>
+在Elasticsearch主要分成两类节点，一类是Master，一类是DataNode。</p>
+<h3> 1.Master节点</h3>
+<p>在Elasticsearch启动时，会选举出来一个Master节点。</p>
+<p>当某个节点启动后，然后使用Zen Discovery机制找到集群中的其他节点，并建立连接。</p>
+<p>discovery.seed_hosts: [“192.168.21.130”, “192.168.21.131”, “192.168.21.132”]</p>
+<p>并从候选主节点中选举出一个主节点。</p>
+<p>cluster.initial_master_nodes: [“node1”, “node2”,“node3”]</p>
+<p>Master节点主要负责</p>
+<ul>
+<li>管理索引（创建索引、删除索引）、分配分片</li>
+<li>维护元数据</li>
+<li>管理集群节点状态</li>
+<li>不负责数据写入和查询，比较轻量级</li>
+</ul>
+<p>一个Elasticsearch集群中，只有一个Master节点。在生产环境中，内存可以相对小一点，但机器要稳定。</p>
+<h3> 2.DataNode节点</h3>
+<p>在Elasticsearch集群中，会有N个DataNode节点。</p>
+<p>DataNode节点主要负责：</p>
+<p>数据写入、数据检索，</p>
+<p>大部分Elasticsearch的压力都在DataNode节点上在生产环境中，内存最好配置大一些</p>
+<h3> 3.分片</h3>
+<p>Elasticsearch是一个分布式的搜索引擎，索引的数据也是分成若干部分，分布在不同的服务器节点中，分布在不同服务器节点中的索引数据，就是分片（Shard）。</p>
+<p>Elasticsearch会自动管理分片，如果发现分片分布不均衡，就会自动迁移一个索引（index）由多个shard（分片）组成，而分片是分布在不同的服务器上的.</p>
+<h3> 4.副本</h3>
+<p>为了对Elasticsearch的分片进行容错，假设某个节点不可用，会导致整个索引库都将不可用。所以，需要对分片进行副本容错，每一个分片都会有对应的副本。</p>
+<p>在Elasticsearch中，默认创建的索引为1个分片、每个分片有1个主分片和1个副本分片。</p>
+<p>每个分片都会有一个Primary Shard（主分片），也会有若干个Replica Shard（副本分片）</p>
+<p>Primary Shard和Replica Shard不在同一个节点上</p>
+<h3> 5.es集群读写流程</h3>
+<p>es 写数据流程</p>
+<figure><figcaption>img_122.png</figcaption></figure>
+<p>1.选择任意一个DataNode发送请求，例如：node2。此时，node2就成为一个coordinating node（协调节点）</p>
+<p>2.计算得到文档要写入的分片</p>
+<p><code>shard = hash(routing) % number_of_primary_shards</code><br>
+routing 是一个可变值，默认是文档的 _id</p>
+<p>3.coordinating node会进行路由，将请求转发给对应的primary shard所在的DataNode（假设primary shard在node1、replica shard在node2）</p>
+<p>4.node1节点上的Primary Shard处理请求，写入数据到索引库中，并将数据同步到Replica shard</p>
+<p>5.Primary Shard和Replica Shard都保存好了文档，返回client</p>
+<p>es 读数据流程</p>
+<figure><figcaption>img_123.png</figcaption></figure>
+<p>1.client发起查询请求，某个DataNode接收到请求，该DataNode就会成为协调节点（Coordinating Node）</p>
+<p>2.协调节点（Coordinating Node）将查询请求广播到每一个数据节点，这些数据节点的分片会处理该查询请求</p>
+<p>3.每个分片进行数据查询，将符合条件的数据放在一个优先队列中，并将这些数据的文档ID、节点信息、分片信息返回给协调节点</p>
+<p>4.协调节点将所有的结果进行汇总，并进行全局排序</p>
+<p>5.协调节点向包含这些文档ID的分片发送get请求，对应的分片将文档数据返回给协调节点，最后协调节点将数据返回给客户端</p>
+<p>注意：写请求是写入 primary shard，然后同步给所有的 replica shard；读请求可以从 primary shard 或 replica shard 读取，采用的是随机轮询算法。</p>
+<p>自己总结：es的检索流程和mysql数据表查询非主键索引的思路有些相似，先从索引表查询出对应的主键索引值，在进行回表查询具体的行数据。</p>
+<p>es删除/更新数据底层原理</p>
+<p>如果是删除操作，commit 的时候会生成一个 .del 文件，里面将某个 doc 标识为 deleted 状态，那么搜索的时候根据 .del 文件就知道这个 doc 是否被删除了。</p>
+<p>如果是更新操作，就是将原来的 doc 标识为 deleted 状态，然后新写入一条数据。</p>
+<p>es 底层写数据原理</p>
+<figure><figcaption>img_124.png</figcaption></figure>
+<p>简述：先写入内存 buffer，在 buffer 里的时候数据是搜索不到的；然后刷新到os cache中（同时将数据备份到translog日志文件），最后刷新到 segment file磁盘文件中</p>
+<p>总结一下，数据先写入内存 buffer，然后每隔 1s，将数据 refresh 到 os cache，到了 os cache 数据就能被搜索到（所以我们才说 es 从写入到能被搜索到，中间有 1s 的延迟）。每隔 5s，将数据写入 translog 文件作备份（这样如果机器宕机，内存数据全没，最多会有 5s 的数据丢失），translog 大到一定程度，或者默认每隔 30mins，会触发 commit 操作，将缓冲区的数据都 flush 到 segment file 磁盘文件中。最后存入到commit point磁盘文件中。</p>
+<p>refresh到文件系统缓存</p>
+<p>当数据写入到ES分片时，会首先写入到内存中，然后通过内存的buffer生成一个segment，并刷到文件系统缓存中。</p>
+<p>如果 buffer 快满了，或者到一定时间，就会将内存 buffer 数据 refresh 到一个新的 segment file中，但是此时数据不是直接进入 segment file 磁盘文件，而是先进入 os cache 。</p>
+<p>这个过程就是 refresh 。</p>
+<p>只要 buffer 中的数据被 refresh 操作刷入 os cache 中，这个数据就可以被搜索到了。</p>
+<p>定时 refresh到文件系统缓存机制</p>
+<p>每隔 1 秒钟，es 将 buffer 中的数据写入一个新的 segment file ，每秒钟会产生一个新的磁盘文件 segment file ，这个 segment file 中就存储最近 1 秒内 buffer 中写入的数据。<br>
+但是如果 buffer 里面此时没有数据，那当然不会执行 refresh 操作，如果 buffer 里面有数据，默认 1 秒钟执行一次 refresh 操作，刷入一个新的 segment file 中。</p>
+<p>segment file合并</p>
+<p>buffer 每 refresh 一次，就会产生一个 segment file ，所以默认情况下是 1 秒钟一个 segment file ，这样下来 segment file 会越来越多，此时会定期执行 merge，减少索引查询时IO开销。<br>
+每次 merge 的时候，会将多个 segment file 合并成一个，同时这里会将标识为 deleted 的 doc 给物理删除掉（之前执行过的delete的数据），然后将新的 segment file 写入到一个 commit point磁盘 。</p>
+<p>知识扩展</p>
+<p>操作系统里面，磁盘文件其实都有一个东西，叫做 os cache ，即操作系统缓存，就是说数据写入磁盘文件之前，会先进入 os cache ，先进入操作系统级别的一个内存缓存中去。</p>
+<p>备份到translog磁盘</p>
+<p>刷新到translog文件以保障数据不丢失，translog的设计思想和mysql的redo log是相似的。</p>
+<p>每隔5s,从os cache 中同步到translog磁盘里面去做备份。</p>
+<p>那么translog 日志文件的作用是什么？</p>
+<p>你执行 commit 操作之前，数据要么是停留在 buffer 中，要么是停留在 os cache 中，无论是 buffer 还是 os cache 都是内存，一旦这台机器死了，内存中的数据就全丢了。所以需要将数据对应的操作写入一个专门的日志文件 translog 中，一旦此时机器宕机，再次重启的时候，es 会自动读取 translog 日志文件中的数据，恢复到内存 buffer 和 os cache 中去。</p>
+<p>flush到磁盘文件</p>
+<p>重复上面的步骤，新的数据不断进入 buffer 和 translog，不断将 buffer 数据写入一个又一个新的 segment file文件系统缓存中去，每次 refresh 完 buffer 清空，translog 保留。随着这个过程推进，translog 会变得越来越大。当 translog 达到一定长度的时候，就会触发 commit 操作。</p>
+<p>数据最终被flush到磁盘文件就完成了数据的最终归宿。</p>
+<figure><figcaption>img_125.png</figcaption></figure>
+<p>commit操作流程</p>
+<p>commit 操作首先就是将 buffer 中现有数据 refresh 到 os cache 中去，清空 buffer。<br>
+然后，将一个 commit point 写入磁盘文件，里面标识着这个 commit point 对应的所有 segment file ，同时强行将 os cache 中目前所有的数据都 fsync 到磁盘文件中去。<br>
+最后清空 现有 translog 日志文件，重启一个 translog，此时 commit 操作完成。</p>
+<p>这个 commit 操作叫做 flush 。</p>
+<p>默认 30 分钟自动执行一次 flush ，将文件系统缓存的数据刷入到磁盘。<br>
+但如果 translog 过大，也会触发 flush 。</p>
+<p>flush 操作就对应着 commit 的全过程，我们可以通过 es api，手动执行 flush 操作，手动将 os cache 中的数据 fsync 强刷到磁盘上去。</p>
+<p>es准实时机制</p>
+<p>为什么叫 es 是准实时的？</p>
+<p>NRT ，全称 near real-time 。默认是每隔 1 秒 refresh 一次的，所以 es 是准实时的，因为写入的数据 1 秒之后才能被看到。</p>
+<p>可以通过 es 的 restful api 或者 java api ，手动执行一次 refresh 操作，就是手动将 buffer 中的数据刷入 os cache 中，让数据立马就可以被搜索到。只要数据被输入 os cache 中，buffer 就会被清空了，因为不需要保留 buffer 了，数据在 translog 里面已经持久化到磁盘去一份了。</p>
+<p>es会数据丢失吗？</p>
+<p>可能会丢失有 5 秒的数据，停留在 buffer、translog os cache、segment file os cache 中，而不在磁盘上，此时如果备份到translog过程中宕机，会导致 5 秒的数据丢失。</p>
+<p>translog 其实也是先写入 os cache 的，默认每隔 5 秒刷一次到磁盘中去，所以默认情况下，可能有 5 秒的数据会仅仅停留在 buffer 或者 translog 文件的 os cache 中，如果此时机器挂了，会丢失 5 秒钟的数据。但是这样性能比较好，最多丢 5 秒的数据。<br>
+也可以将 translog 设置成每次写操作必须是直接 fsync 到磁盘，但是性能会差很多。</p>
+<p>es集群脑裂</p>
+<p>关于集群脑裂的定义请参考我的另一篇博文</p>
+<p><a href="https://blog.csdn.net/sinat_34814635/article/details/129914369" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/sinat_34814635/article/details/129914369</a></p>
+<p>那么es是如何解决脑裂问题的？</p>
+<p>es是直到有足够的master候选节点时，才可以选举出一个master，否则就不要选举出一个master。</p>
+<p>这个参数必须被设置为集群中master候选节点的quorum数量，也就是大多数，至于quorum的算法，就是：master候选节点数量 / 2 + 1。</p>
+<p>综上所述，一个生产环境的es集群，至少要有3个节点，同时将这个参数设置为quorum，也就是2。discovery.zen.minimum_master_nodes设置为2</p>
+<p>那么这个是参数是如何避免脑裂问题的产生的呢？比如我们有3个节点，quorum是2.现在网络故障，1个节点在一个网络区域，另外2个节点在另外一个网络区域，不同的网络区域内无法通信。</p>
+<p>这个时候有两种情况情况：</p>
+<p>（1）如果master是单独的那个节点，另外2个节点是master候选节点，那么此时那个单独的master节点因为没有指定数量的候选master node在自己当前所在的集群内，因此就会取消当前master的角色，尝试重新选举，但是无法选举成功。然后另外一个网络区域内的node因为无法连接到master，就会发起重新选举，因为有两个master候选节点，满足了quorum，因此可以成功选举出一个master。此时集群中就会还是只有一个master。</p>
+<p>（2）如果master和另外一个node在一个网络区域内，然后一个node单独在一个网络区域内。那么此时那个单独的node因为连接不上master，会尝试发起选举，但是因为master候选节点数量不到quorum，因此无法选举出master。而另外一个网络区域内，原先的那个master还会继续工作。这也可以保证集群内只有一个master节点。</p>
+<p>综上所述，集群中master节点的数量至少3台，三台主节点通过在elasticsearch.yml中配置discovery.zen.minimum_master_nodes: 2，就可以避免脑裂问题的产生。</p>
+<h2> 四、ElasticSearch应用</h2>
+<h3> 1.Elasticsearch SQL</h3>
+<figure><figcaption>img_126.png</figcaption></figure>
+<p>Elasticsearch SQL允许执行类SQL的查询，可以使用REST接口、命令行或者是JDBC，都可以使用SQL来进行数据的检索和数据的聚合。</p>
+<p>Elasticsearch SQL特点：</p>
+<p>本地集成</p>
+<p>Elasticsearch SQL是专门为Elasticsearch构建的。每个SQL查询都根据底层存储对相关节点有效执行。</p>
+<p>没有额外的要求</p>
+<p>不依赖其他的硬件、进程、运行时库，Elasticsearch SQL可以直接运行在Elasticsearch集群上</p>
+<p>轻量且高效</p>
+<p>像SQL那样简洁、高效地完成查询</p>
+<p>Elasticsearch SQL提供了sql转换的功能，但是只能满足一些简单的查询，例如：不支持JOIN、不支持较复杂的子查询。官方还是推荐使用DSL语句来实现</p>
+<h3> 2.Java客户端</h3>
+<p>这个就自己看官网吧</p>
+<h3> 3.es和mysql的双写</h3>
+<p>双写的流程：</p>
+<ul>
+<li>1.先写数据库，然后写es，es只存常搜索的索引字段。</li>
+<li>2.读取时先读es，找到对应主键后，然后根据主键在读mysql。（这种场景主要出现在mysql是分表的，而主键配置的是分片键，非分片键的查询将扫描全表）<br>
+首先不建议进行双写，因为会造成数据不一致这样新的问题。造成不一致的原因为写入es或者更新es字段失败，加上补充机制后也没有成功。</li>
+</ul>
+<p>双写的同步</p>
+<p>分页查询mysql中的数据，放入mq中（放入mq中的原因，为读取mysql的线程会远比执行同步的线程速度快），同步线程从mq中拉起数据，然后和es对比，如果不同，与mysql中的数据为准，进行删除复制。</p>
+<p>补偿机制</p>
+<p>我认为任何对es写失败，更新失败，删除失败都应该纪录下来，然后去手动操作使其同步。</p>
+<h2> 五、ElasticSearch安装配置</h2>
+<h3> 1.安装ElasticSearch</h3>
+<p>解压下载的压缩包，本次使用7.14.0版本</p>
+<p>从v7开始，elasticsearch不用单独安装JDK，因为它在下载时会自动下载对应的jdk包。因此不用额外下载jdk和配置环境变量。</p>
+<p>在终端cd到elasticsearch的bin目录，运行命令./elasticsearch即可开启es数据库服务（在终端通过按control + c可停止服务）。在网页中访问localhost:9200看到json结果即启动成功。</p>
+<p>如下图所示：</p>
+<figure><figcaption>img_127.png</figcaption></figure>
+<h3> 2.安装Kibana</h3>
+<p>下载可视化工具Kibanahttps://www.elastic.co/cn/downloads/kibana</p>
+<p>解压下载的压缩包，并将其复制粘贴至自己想要存放的目录。Kibana的版本最好和es保持一致，如这次同样使用7.14.0版本</p>
+<p>启动Kibana</p>
+<p>在终端cd到Kibana目录下，运行命令./Kibana即可开启Kibana的端口访问。在网页中访问http://localhost:5601跳转到如下界面即访问成功。</p>
+<p>访问下面地址：<a href="http://localhost:5601/app/dev_tools#/console" target="_blank" rel="noopener noreferrer">http://localhost:5601/app/dev_tools#/console</a> 可进入管理后台</p>
+<figure><figcaption>img_128.png</figcaption></figure>
+<p>ElasticSearch可视化工具之cerebro</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>组件Jenkins</title>
+      <link>https://ujava.cn/assembly/jenkins.html</link>
+      <guid>https://ujava.cn/assembly/jenkins.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件Jenkins</source>
+      <description>1.背景 在实际开发中，我们经常要一边开发一边测试，当然这里说的测试并不是程序员对自己代码的单元测试，而是同组程序员将代码提交后，由测试人员测试； 或者前后端分离后，经常会修改接口，然后重新部署； 这些情况都会涉及到频繁的打包部署； 手动打包常规步骤： 1.提交代码 2.问一下同组小伙伴有没有要提交的代码 3.拉取代码并打包（war包，或者jar包） 4.上传到Linux服务器 5.查看当前程序是否在运行 6.关闭当前程序 7.启动新的jar包 8.观察日志看是否启动成功 9.如果有同事说，自己还有代码没有提交......再次重复1到8的步骤！！！！！（一上午没了）</description>
+      <category>设计组件</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 1.背景</h2>
+<p>在实际开发中，我们经常要一边开发一边测试，当然这里说的测试并不是程序员对自己代码的单元测试，而是同组程序员将代码提交后，由测试人员测试；</p>
+<p>或者前后端分离后，经常会修改接口，然后重新部署；</p>
+<p>这些情况都会涉及到频繁的打包部署；</p>
+<p>手动打包常规步骤：</p>
+<ul>
+<li>1.提交代码</li>
+<li>2.问一下同组小伙伴有没有要提交的代码</li>
+<li>3.拉取代码并打包（war包，或者jar包）</li>
+<li>4.上传到Linux服务器</li>
+<li>5.查看当前程序是否在运行</li>
+<li>6.关闭当前程序</li>
+<li>7.启动新的jar包</li>
+<li>8.观察日志看是否启动成功</li>
+<li>9.如果有同事说，自己还有代码没有提交......再次重复1到8的步骤！！！！！（一上午没了）</li>
+</ul>
+<p>那么，有一种工具能够实现，将代码提交到git后就自动打包部署勒，答案是肯定的：Jenkins</p>
+<p>当然除了Jenkins以外，也还有其他的工具可以实现自动化部署，如Hudson等</p>
+<p>只是Jenkins相对来说，使用得更广泛。</p>
+<h2> 2.Jenkins服务器搭建及基本配置</h2>
+<h3> 2.1.简介</h3>
+<p>Jenkins是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
+<h3> 2.2.Jenkins自动化部署实现原理</h3>
+<figure><figcaption>img_70.png</figcaption></figure>
+<h3> 2.3.Jenkins部署环境</h3>
+<p>基本环境：</p>
+<ul>
+<li>1.jdk环境，Jenkins是java语言开发的，因需要jdk环境。</li>
+<li>2.git/svn客户端，因一般代码是放在git/svn服务器上的，我们需要拉取代码。</li>
+<li>3.maven客户端，因一般java程序是由maven工程，需要maven打包，当然也有其他打包方式，如：gradle</li>
+</ul>
+<p>以上是自动化部署java程序jenkins需要的基本环境，请自己提前安装好，下面着重讲解Jenkins的安装部署配置。</p>
+<h3> 2.4.Jenkins安装</h3>
+<ul>
+<li>1.下载安装包jenkins.war；</li>
+<li>2.在安装包根路径下，运行命令 java -jar jenkins.war --httpPort=8080，（linux环境、Windows环境都一样）； 补充:一个童鞋遇到的问题,反馈说,git自动触发时报错403,启动加如下参数可以解决问题 nohup java -jar -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION=true /usr/local/jenkins/jenkins.war --httpPort=8080 &amp;</li>
+<li>3.打开浏览器进入链接 <a href="http://localhost:8080" target="_blank" rel="noopener noreferrer">http://localhost:8080</a>.</li>
+<li>4.填写初始密码，激活系统</li>
+</ul>
+<figure><figcaption>img_71.png</figcaption></figure>
+<ul>
+<li>5.进入插件安装选择</li>
+</ul>
+<p>这里建议选择，推荐安装的插件，保证基本常用的功能可以使用。</p>
+<figure><figcaption>img_72.png</figcaption></figure>
+<p>选择后，进入插件安装页面<br>
+</p>
+<ul>
+<li>
+<p>6.设置初始用户和密码<br>
+</p>
+</li>
+<li>
+<p>7.进入系统，安装完成<br>
+</p>
+</li>
+</ul>
+<p>注意，如果还是进入不了系统，需要稍等一下，或者刷新页面，如果还是进入不了，需要重新启动jenkinds服务器。</p>
+<h3> 2.5.Jenkins基本配置</h3>
+<h4> 2.5.1.系统初始化配置</h4>
+<figure><figcaption>img_76.png</figcaption></figure>
+<p><strong>1.Configure System (系统设置)</strong></p>
+<p>在系统设置这里，我们只需要设置最后面的一项，配置远程服务器地址，</p>
+<p>即我们代码最终运行的服务器地址信息，就像我们之前手动部署时使用xshell登录Linux服务器一样，</p>
+<p>当然这里是可以配置多台远程Linux服务器的，配置完成后点击保存即可，为后面我们配置自动化部署做准备，配置如下图<br>
+</p>
+<p><strong>2.Configure Global Security (全局安全配置)</strong></p>
+<p>a.配置用户相关的权限</p>
+<figure><figcaption>img_78.png</figcaption></figure>
+<p>b.配置钩子程序（当用代码更新时通知）访问权限，避免报403错误</p>
+<p>默认是勾选上了的，这里去掉勾选</p>
+<figure><figcaption>img_79.png</figcaption></figure>
+<p><strong>3.Global Tool Configuration (全局工具配置 )</strong></p>
+<p>a.配置maven的全局settings路径<br>
+</p>
+<p>b.配置jdk<br>
+</p>
+<p>c.配置git</p>
+<figure><figcaption>img_82.png</figcaption></figure>
+<p>d.配置maven的安装路径</p>
+<figure><figcaption>img_83.png</figcaption></figure>
+<p><strong>4.配置必要插件</strong></p>
+<p>主要是检查如下这两个插件是否已安装</p>
+<ul>
+<li>插件1：Publish over SSH</li>
+<li>插件2：Deploy to container Plugin</li>
+</ul>
+<figure><figcaption>img_84.png</figcaption></figure>
+<p>添加图片注释，不超过 140 字（可选）</p>
+<p>到这里，我们配置一个自动化部署的的java程序（springBoot+maven+gitHub），基本必要配置就差不多了，后面配置过程中如果需要在配置。</p>
+<h2> 3.Jenkins自动化部署（springBoot+maven+gitHub）项目</h2>
+<h3> 3.1.Jenkins服务器上创建项目和配置</h3>
+<p>大体步骤：General(基础配置)--》源码管理--》构建触发器--》构建环境--》构建--》构建后操作</p>
+<p><strong>1.创建一个工程</strong></p>
+<figure><figcaption>img_85.png</figcaption></figure>
+<p><strong>2.General(基础配置)</strong></p>
+<p>仅需填写标准部分，其他可不填写</p>
+<figure><figcaption>img_86.png</figcaption></figure>
+<p><strong>3.源码管理</strong><br>
+</p>
+<p>上图中点击“添加”按钮添加一组账号和密码<br>
+</p>
+<p><strong>4.构建触发器</strong></p>
+<figure><figcaption>img_89.png</figcaption></figure>
+<p>如上图：当前项目的回调地址为：</p>
+<p><a href="http://localhost:8080/job/jenkinsSpringBootDemo/build?token=token_demo2" target="_blank" rel="noopener noreferrer">http://localhost:8080/job/jenkinsSpringBootDemo/build?token=token_demo2</a></p>
+<p>只要执行这个地址（在浏览器上访问改地址），该项目就会发起一次构建项目，即拉取代码打包部署操作，</p>
+<p>在实际中，是由git服务器回调改地址，在后面讲git服务器配置时详细讲解 ，</p>
+<p>值得注意的是，如果你是学习测试，使用的是GitHub服务，要确保你的回调地址已经试外网映射过的，即往外网可以访问</p>
+<p><strong>5.构建环境（无需配置）</strong></p>
+<p><strong>6.构建</strong></p>
+<figure><figcaption>img_90.png</figcaption></figure>
+<p><strong>7.构建后操作</strong></p>
+<p>构建后操作的意思是，jar打包好后，要将jar发送到哪里去，发送后去和启动等</p>
+<p>这里需要提前在需要部署的服务器上配置好路径，写好启动和停止项目的脚本，并设置为可以执行的脚本，</p>
+<p>其实就是我们平时在Linux上手动部署项目操作的脚本<br>
+</p>
+<p>案例中给出的stop.sh脚本如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>案例中给出的start.sh脚本如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>到此，Jenkinds服务器配置完成，接下来我还有要配置Linux服务器和Git服务器。</p>
+<h3> 3.2.Linux服务器配置</h3>
+<p>在Liux服务上，上传上文中的两个脚本，用于启动和停止</p>
+<figure><figcaption>img_92.png</figcaption></figure>
+<h3> 3.3.GitHub服务器配置</h3>
+<p>在GitHub服务器上的指定项目里面配置上文中提到的回调地址</p>
+<p>特别注意：为了保证回调地址网可以使用，</p>
+<p>我已经将地址：<a href="http://localhost:8080/job/jenkinsSpringBootDemo/build?token=token_demo2%EF%BC%8C" target="_blank" rel="noopener noreferrer">http://localhost:8080/job/jenkinsSpringBootDemo/build?token=token_demo2，</a></p>
+<p>通过花生壳进行外网映射为：<a href="http://zhishidi.imwork.net/job/jenkinsSpringBootDemo/build?token=token_demo2" target="_blank" rel="noopener noreferrer">http://zhishidi.imwork.net/job/jenkinsSpringBootDemo/build?token=token_demo2</a></p>
+<p>所以，下面配置的是外网映射地址。</p>
+<figure><figcaption>img_93.png</figcaption></figure>
+<p>到这里所有配置搞定，只需修改代码，提交到git,然后访问程序看是否生效。</p>
+<h2> 4.测试</h2>
+<p><strong>1.测试代码</strong><br>
+</p>
+<p><strong>2.提交代码到git,触发构建</strong></p>
+<p><strong>3.在GitHub服务器上去看，是否已经触发</strong><br>
+</p>
+<p><strong>4.在Jenkins的控制台查看是否，正在构建</strong></p>
+<p>从下图中可以看出，正在构建</p>
+<figure><figcaption>img_96.png</figcaption></figure>
+<p><strong>5.查看当次构建的控制台日志</strong></p>
+<figure><figcaption>img_97.png</figcaption></figure>
+<p>说明已经启动成功</p>
+<p><strong>6.查看Linux服务器，是否上传代码</strong></p>
+<figure><figcaption>img_98.png</figcaption></figure>
+<p><strong>7.在Linux上使用命令jps，查看是否启动</strong></p>
+<figure><figcaption>img_99.png</figcaption></figure>
+<p><strong>8.浏览器上访问，看是否能用</strong></p>
+<figure><figcaption>img_100.png</figcaption></figure>
+<p>说明，已经正常启动可以使用。</p>
+<p><strong>9.再次确认是否能自动化部署</strong></p>
+<p>修改代码，重新提交代码，循环1到8步查看。</p>
+<p>如果测试结果是你预期的，那么自动化部署成功。</p>
+<h2> 5.总结&amp;资料下载</h2>
+<h3> 5.1.总结</h3>
+<p>自动化部署Jenkins，作为一款工具，有着非常强大的功能，</p>
+<p>上面我们只是讲了生产上做Java自动化部署的一个主要流程，</p>
+<p>其他的功能，大家可以参看官方文档：Jenkins 用户手册</p>
+<p>但是，本着学习是为了解决生产的原则，</p>
+<p>个人建议，用到Jenkins的什么功能就学什么就可以了，</p>
+<p>没必要把Jenkins的所有功能都学完在使用，</p>
+<p>就如同我们使用word文档一样，并没有系统的他word文档学完后，在开始使用，而是用到什么功能就学习什么功能！</p>
+<h3> 5.2.相关资料</h3>
+<ul>
+<li>1.案例中的源码地址：<a href="https://github.com/processfactory/demo01.git" target="_blank" rel="noopener noreferrer">https://github.com/processfactory/demo01.git</a></li>
+<li>2.官方文档：Jenkins 用户手册</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>组件K8S</title>
+      <link>https://ujava.cn/assembly/k8s.html</link>
+      <guid>https://ujava.cn/assembly/k8s.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件K8S</source>
+      <description>一、K8S简介 Kubernetes中文官网：Kubernetes GitHub：github.com/kubernetes/kubernetes Kubernetes简称为K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统，起源于Google 集群管理工具Borg。</description>
+      <category>设计组件</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 一、K8S简介</h2>
+<p>Kubernetes中文官网：<a href="https://kubernetes.io/zh/" target="_blank" rel="noopener noreferrer">Kubernetes</a></p>
+<p>GitHub：<a href="http://github.com/kubernetes/kubernetes" target="_blank" rel="noopener noreferrer">github.com/kubernetes/kubernetes</a></p>
+<p>Kubernetes简称为K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统，起源于Google 集群管理工具Borg。</p>
+<p>Kubernetes集群组件逻辑图<br>
+</p>
+<p>k8s集群属于Master-Slave主从架构，Master节点负责集群管理和资源调度，用于运行控制平面组件(Control Plane Components)，Slave节点就是工作负载节点，一般称为Node节点，也叫Worker节点，主要负责运行Pod，一个Pod里可以同时运行多个容器，而容器一般封装的就是基于Dokcer打包的应用，Pod英文叫豌豆荚，每个容器就像是一颗豌豆，简单来说Pod就是一组容器。</p>
+<p>Master节点组件及功能<br>
+</p>
+<p>Slave节点组件及功能<br>
+</p>
+<p>安装部署</p>
+<p>生产环境部署k8s主要有两种方式：</p>
+<p>二进制包</p>
+<p>Github下载稳定版的二进制包，手动部署每个组件组成k8s集群。</p>
+<p>kubeadm工具</p>
+<p>使用Kubeadm工具可以快速搭建一个k8s集群，主要包括初始化控制平面节点和加入Worker节点，提供的主要功能如下：</p>
+<ul>
+<li>kubeadm init：初始化一个Master节点</li>
+<li>kubeadm join：将Worker节点加入集群</li>
+<li>kubeadm upgrade：升级K8s版本</li>
+<li>kubeadm token：管理 kubeadm join 使用的令牌</li>
+<li>kubeadm reset：清空 kubeadm init 或者 kubeadm join 对主机所做的任何更改</li>
+<li>kubeadm version：打印 kubeadm 版本</li>
+<li>kubeadm alpha：预览可用的新功能</li>
+</ul>
+<h2> 二、准备工作</h2>
+<p>软硬件要求</p>
+<ul>
+<li>Linux操作系统，Ubuntu 或 CentOS</li>
+<li>每台节点至少2G</li>
+<li>Master节点至少2C</li>
+<li>集群节点网络互通</li>
+</ul>
+<p>集群规划</p>
+<figure><figcaption>img_104.png</figcaption></figure>
+<p>环境配置</p>
+<p>修改hosts配置</p>
+<p>配置所有节点的IP和域名映射</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置SSH免密登录</p>
+<p>先生成公钥对，再把公钥远程复制到所有节点。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>关闭Swap分区</p>
+<p>kubelet要求必须禁用交换分区，所以kubeadm初始化时回检测swap是否关闭，如果没有关闭会报错，如果不想关闭安装时命令行可以指定-ignore-preflight-errors=Swap，关闭Swap分区在所有节点上执行如下命令:</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>禁用SELinux</p>
+<p>所有节点执行如下命令：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>关闭防火墙</p>
+<p>所有节点执行如下命令：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>修改内核参数</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置集群时钟同步</p>
+<p>Centos7默认使用Chrony工具而非NTP进行时间同步，修改硬件时钟为UTC，时区为本地时区，所有节点执行如下修改：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置k8s的Yum源</p>
+<p>国外yum源因为网络问题下载比较慢，此处修改为国内aliyun，用于安装k8s各个组件。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 三、安装Docker</h2>
+<p>k8s运行需要容器运行环境，每个节点都需要安装Docker</p>
+<h2> 四、安装K8S集群</h2>
+<p>安装三大组件-kubeadm、kubelet、kubectl</p>
+<ul>
+<li>kubeadm：用来初始化k8s集群的指令。</li>
+<li>kubelet：在集群的每个节点上用来启动 Pod 和容器等。</li>
+<li>kubectl：用来与k8s集群通信的命令行工具，查看、创建、更新和删除各种资源。</li>
+</ul>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>初始化k8s集群</p>
+<ul>
+<li>apiserver-advertise-address：apiserver监听地址</li>
+<li>control-plane-endpoint：控制平面的IP地址或DNS名称</li>
+<li>image-repository：镜像仓库，此处为国内阿里云镜像仓库加速下载</li>
+<li>service-cidr：为Service分配的IP地址段</li>
+<li>pod-network-cidr：为pod分配的IP地址段</li>
+</ul>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>初始化需要下载多个镜像，可能时间比较久，最终安装的镜像如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>成功界面：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>要使非root用户运行kubectl，请执行以下命令，这也是上面kubeadm init输出的一部分：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果是root用户，则可以执行以下命令：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>记住上面输出的kubeadm join命令，下面用该命令将节点加入集群。</p>
+<p>加入节点</p>
+<p>所有Node节点执行如下命令：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>查看token列表，可观察到每个token的剩余有效时间</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>默认token有效期为24小时，过期之后token失效，可重新生成token：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>修改角色：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>安装网络插件</p>
+<p>Calico是一套开源的纯三层的虚拟化网络解决方案，是目前K8s主流的网络方案。它把每个节点都作为一个虚拟路由器，把Pod当做路由器上一个终端设备为其分配一个IP地址，通过BGP协议生成路由规则，实现不同节点上的Pod网络互通。<br>
+</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 五、测试K8S集群</h2>
+<p>创建nginx pod</p>
+<p>默认会在默认命名空间default中创建一个名称为mynignx的deployment，同时会创建一个名称以myniginx为前缀，叫mynginx-5b686ccd46-wshz6的Pod。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>对外暴露访问</p>
+<p>基于第一步创建的deployment再创建一个名叫mynginx的Service，资源类型由--type=ClusterIP修改为--type=NodePort，会在每个Node节点上监听30161端口，用于接收集群外部访问。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>访问nginx</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><figcaption>img_106.png</figcaption></figure>
+<h2> 六、安装Dashboard</h2>
+<p>k8s官方提供了一个简单的Dashboard，主要提供工作负载，服务，配置和存储，集群等管理功能。</p>
+<p>Github：<a href="http://github.com/kubernetes/dashboard" target="_blank" rel="noopener noreferrer">github.com/kubernetes/dashboard</a></p>
+<p>通过kubectl命令安装</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>对外暴露访问端口，由--type=ClusterIP修改为--type=NodePort</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>查看service</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>浏览器输入访问地址：<a href="https://192.168.5.10:31128/%EF%BC%8C%E9%9C%80%E8%A6%81token%E6%89%8D%E8%83%BD%E8%AE%BF%E9%97%AE%E3%80%82" target="_blank" rel="noopener noreferrer">https://192.168.5.10:31128/，需要token才能访问。</a></p>
+<figure><figcaption>img_107.png</figcaption></figure>
+<p>创建访问账号</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>获取token</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>登录界面</p>
+<p>输入上面的token，进入dashboard首页</p>
+<figure><figcaption>img_108.png</figcaption></figure>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>组件Mock</title>
+      <link>https://ujava.cn/assembly/mock.html</link>
+      <guid>https://ujava.cn/assembly/mock.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件Mock</source>
+      <description>简介 通过Mock方式，测试编写的程序 通用类定义 @SpringBootTest(classes = Application.class) @RunWith(SpringJUnit4ClassRunner.class) @Slf4j public class BaseTest { @BeforeClass public static void before() { } }</description>
+      <category>设计组件</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 简介</h2>
+<p>通过Mock方式，测试编写的程序</p>
+<p>通用类定义</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 方式一（直接操作库表）</h2>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 方式二（启动容器）</h2>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 方式三（不启动容器）</h2>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Mock静态数据</h2>
+<p>在实际工作当中，我们经常会遇到需要对静态方法进行 mock 的情况。在 mockito 2.x 的时代，我们需要借助 powmock 才能实现。当<br>
+mockito 进化到了 3.4.0 版本以后，也开始对静态方法 mock 进行了支持（主要是通过 mockito-inline 包）。</p>
+<p>简单的介绍就到这里，下面让我们进入主题吧。</p>
+<p>首先确保 pom 文件中 mockito 相关 jar 包的版本（这里我用的版本是 3.7.7），如下：</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>使用方式</p>
+<p>Mockito.mockStatic(Class mockClass)，如下：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样基本上就 OK 了。唯一需要注意下的就是 httpClient.close()。</p>
+<p>如果项目中未引入 mockito-inline，会出现如下错误信息：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>错误提示 static mocking is already registered in the current thread To create a new mock, the existing static mock<br>
+registration must be deregistered</p>
+<p>当多个单元测试都使用了同一个 static mock 对象，且使用完成后都没有进行 close。此时，若这几个单元测试用一起执行，第一个单元测试占用了<br>
+static mock 对象，第二个单元测试就没有办法再占用了。</p>
+<p>如果出现了这种情况，解决办法也很简单，就是关闭 static mock 对象，如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果你的很多单元测试中都用到了 mockStatic(HTTPClient.class)，且觉得在每个单元测试当中都写一遍 mockStatic()…close()<br>
+很低效，可以采用下边的方式：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Mock缓存数据</h2>
+<p>在Mockito中，你可以使用Mockito.when配合相应的调用记录方法来模拟缓存场景。以下是一个简单的例子，展示了如何使用Mockito来模拟一个缓存方法的行为：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在这个例子中，我们首先通过ConcurrentHashMap模拟了一个简单的缓存。然后我们使用Mockito.spy创建了一个被测试方法所在类的模拟实例。通过Mockito.doReturn我们配置了当调用getFromCache方法并传递特定的key时，模拟方法返回预先定义的值。最后，我们使用Mockito.verify来验证缓存访问方法是否被调用了。这个例子展示了如何使用Mockito来模拟和验证缓存相关的行为。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>组件Reactor</title>
+      <link>https://ujava.cn/assembly/reactor.html</link>
+      <guid>https://ujava.cn/assembly/reactor.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件Reactor</source>
+      <description>前言 说到NIO、Netty，Reactor模型一定是绕不开的，因为这种模式架构太经典了，但是好多人在学习的时候，往往会忽视基础的学习，一上来就是Netty，各种高大上，但是却没有静下心来好好看看Netty的基石——Reactor模型。本文就带着大家看看Reactor模型，让大家对Reactor模型有个浅显而又感性的认识。 一、经典的同步阻塞模型 img_46.png 这是最为传统的Socket服务设计，有多个客户端连接服务端，服务端会开启很多线程，一个线程为一个客户端服务。</description>
+      <category>设计组件</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 前言</h2>
+<p>说到NIO、Netty，Reactor模型一定是绕不开的，因为这种模式架构太经典了，但是好多人在学习的时候，往往会忽视基础的学习，一上来就是Netty，各种高大上，但是却没有静下心来好好看看Netty的基石——Reactor模型。本文就带着大家看看Reactor模型，让大家对Reactor模型有个浅显而又感性的认识。</p>
+<h2> 一、经典的同步阻塞模型</h2>
+<figure><figcaption>img_46.png</figcaption></figure>
+<p>这是最为传统的Socket服务设计，有多个客户端连接服务端，服务端会开启很多线程，一个线程为一个客户端服务。</p>
+<p>在绝大多数场景下，处理一个网络请求有如下几个步骤：</p>
+<ul>
+<li>read：从socket读取数据。</li>
+<li>decode：解码，因为网络上的数据都是以byte的形式进行传输的，要想获取真正的请求，必定需要解码。</li>
+<li>compute：计算，也就是业务处理，你想干啥就干啥。</li>
+<li>encode：编码，同理，因为网络上的数据都是以byte的形式进行传输的，也就是socket只接收byte，所以必定需要编码。<br>
+1.下面看传统的BIO代码：</li>
+</ul>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这个设计的问题就是：需要开启大量的线程。因为一个客户端独占一个线程</p>
+<p>我们的目标是：</p>
+<ul>
+<li>随着负载的增加可以优雅降级；</li>
+<li>能够随着资源的改进，性能可以持续提升；</li>
+<li>同时还要满足可用性和性能指标：</li>
+<li>低延迟</li>
+<li>满足高峰需求</li>
+<li>可调节的服务质量</li>
+</ul>
+<p>阻塞 （针对的是被调用方）</p>
+<p>不管是等待客户端的连接，还是等待客户的数据，都是阻塞的，一夫当关，万夫莫开，不管你什么时候连接我，不管你什么时候给我数据，我都依然等着你。<br>
+让我们试想下：如果accept()、read()这两个方法都是不阻塞的，是不是传统的Socket问题就解决一半了？</p>
+<p>同步 （针对的是调用方）</p>
+<p>服务端是死死的盯着客户端，看客户端有没有连接我，有没有给我发数据。<br>
+如果我可以喝着茶，打着农药，而你发了数据，连接了我，系统通知我一下，我再去处理，那该多好，这样传统的Socket问题又解决了一半。</p>
+<p>NIO就很好的解决了传统Socket问题：</p>
+<ul>
+<li>一个线程可以监听多个Socket，不再是一夫当关，万夫莫开；</li>
+<li>基于事件驱动：等发生了各种事件，系统可以通知我，我再去处理。</li>
+</ul>
+<p>2.client端代码：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>3.因此，我们要引出我们今日的主角: reactor</p>
+<h2> 二、单reactor单线程设计</h2>
+<figure><figcaption>img_47.png</figcaption></figure>
+<p>这是最简单的Reactor模型，可以看到有多个客户端连接到Reactor，Reactor内部有一个dispatch（分发器）。</p>
+<p>有连接请求后，Reactor会通过dispatch把请求交给Acceptor进行处理，有IO读写事件之后，又会通过dispatch交给具体的Handler进行处理。</p>
+<p>此时一个Reactor既然负责处理连接请求，又要负责处理读写请求，一般来说处理连接请求是很快的，但是处理具体的读写请求就要涉及到业务逻辑处理了，相对慢太多了。Reactor正在处理读写请求的时候，其他请求只能等着，只有等处理完了，才可以处理下一个请求。</p>
+<p>单线程Reactor模型编程简单，比较适用于每个请求都可以快速完成的场景，但是不能发挥出多核CPU的优势，在一般情况下，不会使用单Reactor单线程模型。</p>
+<p>代码示例</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>定义了一个Reactor类。</p>
+<p>在构造方法中，注册了连接事件，并且在selectionKey对象附加了一个Acceptor对象，这是用来处理连接请求的类。</p>
+<p>Reactor类实现了Runnable接口，并且实现了run方法，在run方法中，<br>
+监听各种事件，有了事件后，调用dispatcher方法，在dispatcher方法中，拿到了selectionKey附加的对象，随后调用run方法，注意此时是调用run方法，并没有开启线程，只是一个普通的调用而已。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>目前如果有事件发生，那一定是连接事件，因为在Reactor类的构造方法中只注册了连接事件，还没有注册读写事件。</p>
+<p>发生了连接事件后，Reactor类的dispatcher方法拿到了Acceptor附加对象，调用了Acceptor的run方法，在run方法中又注册了读事件，然后在selectionKey附加了一个WorkHandler对象。</p>
+<p>Acceptor的run方法执行完毕后，就会继续回到Reactor类中的run方法，负责监听事件。</p>
+<p>此时，Reactor监听了两个事件，一个是连接事件，一个是读事件。</p>
+<p>当客户端写事件发生后，Reactor又会调用dispatcher方法，此时拿到的附加对象是WorkHandler，所以又跑到了WorkHandler中的run方法。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>WorkHandler就是真正负责处理客户端写事件的了。</p>
+<p>下面我们可以进行测试了：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们知道了单Reactor单线程模型有那么多缺点，就可以有针对性的去解决了。让我们再回顾下单Reactor单线程模型有什么缺点：<strong>在处理一个客户端的请求的时候，其他请求只能等着。</strong><br>
+那么我们只要+上多线程的概念不就可以了吗？没错，这就是单Reactor多线程模型。</p>
+<h2> 三、单reactor多线程设计</h2>
+<figure><figcaption>img_48.png</figcaption></figure>
+<p>可以看到，Reactor还是既要负责处理连接事件，又要负责处理客户端的写事件，不同的是，多了一个线程池的概念。</p>
+<p>当客户端发起连接请求后，Reactor会把任务交给acceptor处理，如果客户端发起了写请求，Reactor会把任务交给线程池进行处理，这样一个服务端就可以同时为N个客户端服务了。</p>
+<p>让我们继续敲敲键盘，实现一个单Reactor多线程模型把：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>查看测试结果：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以很清楚的看到acceptor、workHandler还是主线程，但是到了process就开启多线程了。</p>
+<p>单Reactor多线程模型看起来是很不错了，但是还是有缺点：一个Reactor还是既然负责连接请求，又要负责读写请求，连接请求是很快的，而且一个客户端一般只要连接一次就可以了，但是会发生很多次写请求，如果可以有多个Reactor，其中一个Reactor负责处理连接事件，多个Reactor负责处理客户端的写事件就好了，这样更符合单一职责，所以主从Reactor模型诞生了。</p>
+<h2> 四、多reactor多线程设计</h2>
+<figure><figcaption>img_49.png</figcaption></figure>
+<p>这就是主从Reactor模型了，可以看到mainReactor只负责连接请求，而subReactor<br>
+只负责处理客户端的写事件。</p>
+<p>下面来实现一个主从Reactor模型，需要注意的是，我实现的主从Reactor模型和图片上有区别。图片上是一主一从，而我实现的是一主八从，图片上一个subReactor下面开了一个线程池，而我实现的subReactor之下没有线程池，虽然有所不同，但是核心思路是一样的。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>查看结果：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以很清楚的看到，从始至终，acceptor都只有一个main线程，而负责处理客户端写请求的是不同的线程，而且还是不同的reactor、selector。</p>
+<h2> 五、Reactor模型结构图</h2>
+<figure><figcaption>img_50.png</figcaption></figure>
+<ul>
+<li>Synchronous Event Demultiplexer：同步事件分离器，用于监听各种事件，调用方调用监听方法的时候会被阻塞，直到有事件发生，才会返回。对于Linux来说，同步事件分离器指的就是IO多路复用模型，比如epoll，poll 等， 对于Java NIO来说， 同步事件分离器对应的组件就是selector，对应的阻塞方法就是select。</li>
+<li>Handler：本质上是文件描述符，是一个抽象的概念，可以简单的理解为一个一个事件，该事件可以来自于外部，比如客户端连接事件，客户端的写事件等等，也可以是内部的事件，比如操作系统产生的定时器事件等等。</li>
+<li>Event Handler：事件处理器，本质上是回调方法，当有事件发生后，框架会根据Handler调用对应的回调方法，在大多数情况下，是虚函数，需要用户自己实现接口，实现具体的方法。</li>
+<li>Concrete Event Handler： 具体的事件处理器，是Event Handler的具体实现。</li>
+<li>Initiation Dispatcher：初始分发器，实际上就是Reactor角色，提供了一系列方法，对Event Handler进行注册和移除；还会调用Synchronous Event Demultiplexer监听各种事件；当有事件发生后，还要调用对应的Event Handler。</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>组件SpringCloud</title>
+      <link>https://ujava.cn/assembly/springcloud.html</link>
+      <guid>https://ujava.cn/assembly/springcloud.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件SpringCloud</source>
+      <description>SpringCloud是一个基于SpringBoot的分布式系统开发框架，它能够帮助我们快速、稳定地构建分布式系统。本篇博客将对SpringCloud进行详细解析，介绍SpringCloud的主要组件和相关应用场景，同时提供代码示例以帮助读者更好地掌握SpringCloud的实际开发应用。 一、SpringCloud概述 SpringCloud：SpringCloud官网</description>
+      <category>设计组件</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<p>SpringCloud是一个基于SpringBoot的分布式系统开发框架，它能够帮助我们快速、稳定地构建分布式系统。本篇博客将对SpringCloud进行详细解析，介绍SpringCloud的主要组件和相关应用场景，同时提供代码示例以帮助读者更好地掌握SpringCloud的实际开发应用。</p>
+<h2> 一、SpringCloud概述</h2>
+<p>SpringCloud：<a href="https://spring.io/projects/spring-cloud" target="_blank" rel="noopener noreferrer">SpringCloud官网</a></p>
+<p>SpringCloud是一个由Spring公司维护的分布式系统开发框架，它是基于SpringBoot的微服务框架。SpringCloud提供了一系列的组件和开发工具，用于构建分布式系统的各个方面，如服务发现、服务注册、服务调用、负载均衡、分布式配置中心等。</p>
+<h2> 二、Spring Cloud 和 Dubbo 对比</h2>
+<p>Spring Cloud和Dubbo都是目前比较流行的微服务框架，它们各自有着不同的特点和优势。<br>
+Spring Cloud是基于Spring Boot的一套微服务框架，提供了一系列工具和组件来快速构建和部署微服务应用。<br>
+Dubbo则是阿里巴巴的开源RPC框架，专门为分布式服务架构设计，提供了高性能和可靠性的服务注册、发现和调用机制。<br>
+下面是Spring Cloud和Dubbo的一些比较：<br>
+</p>
+<p>总的来说，Spring Cloud更注重整个微服务架构的可扩展性和协调性，适合复杂业务场景。Dubbo则更注重性能和可靠性，适合高并发、大规模、分布式的场景。</p>
+<p>需要根据具体的业务需求来选择合适的微服务框架。</p>
+<h2> 三、Spring Cloud 优缺点</h2>
+<p>其主要优点有：</p>
+<ul>
+<li>
+<p>集大成者，Spring Cloud 包含了微服务架构的方方面面。</p>
+</li>
+<li>
+<p>约定优于配置，基于注解，没有配置文件。</p>
+</li>
+<li>
+<p>轻量级组件，Spring Cloud 整合的组件大多比较轻量级，且都是各自领域的佼佼者。</p>
+</li>
+<li>
+<p>开发简便，Spring Cloud 对各个组件进行了大量的封装，从而简化了开发。</p>
+</li>
+<li>
+<p>开发灵活，Spring Cloud 的组件都是解耦的，开发人员可以灵活按需选择组件。<br>
+接下来，我们看下它的缺点：</p>
+</li>
+<li>
+<p>项目结构复杂，每一个组件或者每一个服务都需要创建一个项目。</p>
+</li>
+<li>
+<p>部署门槛高，项目部署需要配合 Docker 等容器技术进行集群部署，而要想深入了解 Docker，学习成本高。<br>
+Spring Cloud 的优势是显而易见的。因此对于想研究微服务架构的同学来说，学习 Spring Cloud 是一个不错的选择。</p>
+</li>
+</ul>
+<h2> 四、SpringCloud组件</h2>
+<h3> 1、Eureka</h3>
+<p>Eureka是SpringCloud提供的服务发现组件，它能够将所有微服务以易于管理的方式注册到一个注册中心，并且能够自动检测失效的服务并从服务列表中剔除。下面是一个简单的Eureka注册中心示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 2、Feign</h3>
+<p>Feign是一个声明式的REST客户端，它能够简化我们的代码开发，Feign会根据我们定义的接口生成实现类，并且自动进行负载均衡和服务发现等操作。下面是一个简单的Feign客户端示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 3、Ribbon</h3>
+<p>Ribbon是一个负载均衡组件，它能够帮助我们将请求分配到不同的微服务中，从而实现负载均衡的目的。下面是一个简单的Ribbon负载均衡示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 4、Hystrix</h3>
+<p>Hystrix是一个熔断器组件，在微服务架构中，一些服务可能出现故障或者超时，Hystrix能够帮助我们实现服务的熔断、降级等操作，从而保证服务的稳定性和可用性。下面是一个简单的Hystrix熔断器示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 5、Config</h3>
+<p>Config是SpringCloud提供的配置中心，它能够将各个微服务的配置信息集中管理，并且能够进行动态刷新。下面是一个简单的Config配置中心示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 五、SpringCloud应用场景</h2>
+<h3> 1、微服务架构</h3>
+<p>SpringCloud提供了一系列的组件和工具，能够帮助我们实现微服务架构，从而将一个大型的应用系统拆分为多个小的服务单元，各个服务之间可以独立开发、部署、运行，从而提高开发效率和应用性能。</p>
+<h3> 2、分布式配置中心</h3>
+<p>Config组件能够将各个微服务的配置信息集中管理，这样一方面可以统一管理配置，同时也可以快速进行配置变更并将变更信息更新到各个微服务中，大大提高了系统的可维护性和可扩展性。</p>
+<h3> 3、服务调用和负载均衡</h3>
+<p>Ribbon和Feign组件能够帮助我们实现服务调用和负载均衡等操作，使得我们可以在不同的微服务之间进行数据交互和调用，从而实现整个系统的功能。</p>
+<h3> 4、高可用和容错机制</h3>
+<p>Hystrix组件能够帮助我们实现服务的熔断和降级等操作，从而实现系统的自愈能力，同时也可以增强系统的容错能力和高可用性，保证系统的稳定性和可用性。</p>
+<h2> 六、结语</h2>
+<p>本文详细介绍了SpringCloud的概述、主要组件和应用场景，并提供了相应的代码示例，希望能够帮助读者更好地理解和掌握SpringCloud的实际开发应用。在分布式系统的开发中，SpringCloud作为一个强大的分布式框架，为我们提供了不少有力的工具和支持，能够使得我们更加高效地开发分布式应用，提高开发效率和应用性能。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>组件WebFlux</title>
+      <link>https://ujava.cn/assembly/webflux.html</link>
+      <guid>https://ujava.cn/assembly/webflux.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件WebFlux</source>
+      <description>因为想学习 Spring Cloud Gateway 来着，然后发现它是基于 Spring5.0+SpringBoot2.0+WebFlux等技术开发的。所以学之前才要来简单了解下 WebFlux 技术。 然后要学习 WebFlux 时我发现又需要 Java 8 中的函数式编程、Stream 流等技术作为前置知识。环环相扣啊，套娃一样。 所以前面还有两篇学习的文章：来系统学习下 lambda 表达式吧和来一起学习下 Java 8 的 Stream 流。 我只是想学下 Spring Cloud Gateway 而已，作为前置知识，WebFlux 我暂时也不打算深深的研究了，就先简单学习下吧。</description>
+      <category>设计组件</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<p>因为想学习 Spring Cloud Gateway 来着，然后发现它是基于 Spring5.0+SpringBoot2.0+WebFlux等技术开发的。所以学之前才要来简单了解下 WebFlux 技术。</p>
+<p>然后要学习 WebFlux 时我发现又需要 Java 8 中的函数式编程、Stream 流等技术作为前置知识。环环相扣啊，套娃一样。</p>
+<p>所以前面还有两篇学习的文章：来系统学习下 lambda 表达式吧和来一起学习下 Java 8 的 Stream 流。</p>
+<p>我只是想学下 Spring Cloud Gateway 而已，作为前置知识，WebFlux 我暂时也不打算深深的研究了，就先简单学习下吧。</p>
+<p>话说这么多，开始今天的学习吧。</p>
+<h2> 什么是 WebFlux</h2>
+<p>Spring Framework 中包含的原始 Web 框架 Spring Web MVC 是专门为 Servlet API 和 Servlet 容器构建的。反应式堆栈 Web 框架 Spring WebFlux 是在 5.0 版的后期添加的。它是完全非阻塞的，支持反应式流(Reactive Stream)背压，并在Netty，Undertow和Servlet 3.1 +容器等服务器上运行。</p>
+<figure><figcaption>img_51.png</figcaption></figure>
+<p>上面的文字和图片都是来自官网的。从中我们可以大概知道 Spring WebFlux 是对标 Spring MVC 的。</p>
+<p>Spring WebFlux 是一个异步非阻塞式 IO 模型，通过少量的容器线程就可以支撑大量的并发访问。底层使用的是 Netty 容器，这点也和传统的 SpringMVC 不一样，SpringMVC 是基于 Servlet 的。</p>
+<p>接口的响应时间并不会因为使用了 WebFlux 而缩短，服务端的处理结果还是得由 worker 线程处理完成之后再返回给前端。</p>
+<h2> 反应式库</h2>
+<h3> 1. Reactive Stream</h3>
+<p>相信你应该注意到上面的一个名词 反应式流(Reactive Stream)。是什么意思呐？</p>
+<p>我们先看下这个概念：</p>
+<p>反应式编程（Reactive Programming） ，这是微软为了应对 高并发环境下 的服务端编程，提出的一个实现 异步编程 的方案。</p>
+<p>反应式流（Reactive Stream） 就是反应式编程相关的规范，在 Java 平台上，由Netflix（开发了 RxJava）、TypeSafe（开发了 Scala、Akka）、Pivatol（开发了 Spring、Reactor）共同制定。</p>
+<p>它由以下几个组件组成：</p>
+<ul>
+<li>发布者：发布元素到订阅者</li>
+<li>订阅者：消费元素</li>
+<li>订阅：在发布者中，订阅被创建时，将与订阅者共享</li>
+<li>处理器：发布者与订阅者之间处理数据</li>
+</ul>
+<h3> 2. Reactor</h3>
+<p>Reactive Stream 是一套反应式编程的规范，但作为应用程序 API，应用程序肯定还是需要一个更高级、更丰富的功能 API 来编写异步逻辑。这就是 反应式库 所扮演的角色。</p>
+<p>Reactor 框架是 Pivotal 基于 Reactive Programming 思想实现的。它符合 Reactive Streams 规范。它提供了Mono和Flux API 类型，通过一组与 ReactiveX 运算符词汇表一致的丰富运算符来处理 0…1 （） 和 0…N （）的数据序列。是一个用于 JVM 的完全非阻塞的响应式编程框架，具备高效的需求管理，可以很好的处理 “backpressure”。<br>
+Reactor 就是 Spring WebFlux 的首选 反应式库。</p>
+<p>在上面的概念中，大家最重要是要记住 Flux 和 Mono 这两个 Reactor 的核心类：</p>
+<ul>
+<li>Mono：实现发布者 Publisher，并返回 0 或 1 个元素。</li>
+<li>Flux：实现发布者 Publisher，并返回 N 个元素。<br>
+两个都是发布者 Publisher。</li>
+</ul>
+<h3> 3. Reactive Stream、Reactor 和 WebFlux 关系</h3>
+<p>上面概念性的东西可能看起来有些头疼，说了这么多，Reactive Stream、Reactor 和 WebFlux 三者之间到底是什么关系呐？</p>
+<ul>
+<li>Reactive Stream 是一套反应式编程 标准 和 规范；</li>
+<li>Reactor 是基于 Reactive Streams 一套 反应式编程框架；</li>
+<li>WebFlux 以 Reactor 为基础，实现 Web 领域的 反应式编程框架。</li>
+</ul>
+<p>代码初体验</p>
+<p>上面说了那么多的概念，终于到了代码环节了，就先来简单的体验下代码是什么样子的吧。</p>
+<p>首先我们创建一个 Spring Boot 工程，需要注意的是，以往创建 Spring Boot 时我们都是选择 Spring Web 依赖，但是这次我们选择 Spring Reactive Web 依赖:<br>
+</p>
+<ol>
+<li>Mono</li>
+</ol>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>启动项目，浏览器访问这个<code> /hello</code> 接口，控制台输出如下：</p>
+<ul>
+<li>接口耗时：0</li>
+<li>可以看到：在 WebFlux 接口中，请求不会被阻塞，所以服务端的接口耗时为 0。</li>
+</ul>
+<ol start="2">
+<li>Flux</li>
+</ol>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Flux 也是一个 Publisher，它可以由一个数组产生，需要注意的是，这里返回的 Content-Type 是 MediaType.TEXT_EVENT_STREAM_VALUE，即<code> text/event-stream</code>。 <code>text/event-stream</code> 是服务器向浏览器推送消息的一种方案，这种方案和我们所熟知的 WebSocket 有一些差别。暂时先不写了。</p>
+<h2> 操作数据库</h2>
+<p>Spring Boot 2.3.0.RELEASE 开始才正式支持基于 R2DBC 的 MySQL 驱动。</p>
+<p>R2DBC：R2DBC 是 Spring 官方在 Spring5 发布了响应式 Web 框架 Spring WebFlux 之后急需能够满足异步响应的数据库交互 API，不过由于缺乏标准和驱动，Pivotal 团队开始自己研究响应式关系型数据库连接 Reactive Relational Database Connectivity，并提出了 R2DBC 规范 API 用来评估可行性并讨论数据库厂商是否有兴趣支持响应式的异步非阻塞驱动程序。最早只有 PostgreSQL 、H2、MSSQL 三家数据库厂商，现在 MySQL也加入进来了。</p>
+<p>今天就学习一下基于 R2DBC 来操作 MySQL 数据库。</p>
+<h3> 1. 创建项目</h3>
+<p>选择这几个依赖，创建新的 project:</p>
+<figure><figcaption>img_53.png</figcaption></figure>
+<p>pom.xml 文件里是这样的：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后是 application.properties:</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 2. 创建数据库表</h3>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>创建一个简单的 test_user 表。</p>
+<h3> 3. 创建相关类</h3>
+<p>实体类</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>UserRepository，就相当于 DAO</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>UserController 控制器</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>大功告成，接下来就该启动项目，测试一下了。</p>
+<h3> 4. 启动测试</h3>
+<p>项目启动之后，我们使用 Postman 测试一下。</p>
+<h3> 请求地址路由</h3>
+<p>还使用上一步的数据库表和实体类，但这次我们不用 UserController，而是换成了 UserHandler 和 RouterConfiguration。</p>
+<p>创建 Userhandler.java</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>创建 RouterConfiguration</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>这个配置类的作用有点像 SpringMVC 中的 DispatcherServlet，负责请求的分发，根据不同的请求 URL，找到对应的处理器去处理。</li>
+<li>通过 RouterFunctions 这样一个工具类来创建 RouterFunction 实例。</li>
+<li>首先调用 nest 方法，第一个参数配置的相当于是接下来配置的地址的一个前缀，这有点类似于我们在 Controller 类上直接写 @RequestMapping 注解去配置地址。</li>
+<li>nest 方法的第二个参数就是 RouterFunction 实例了，每一个 RouterFunction 实例通过 RouterFunctions.route 方法来构建，它的第一个参数就是请求的 URL 地址（注意这个时候配置的地址都是有一个共同的前缀），第二个参数我们通过方法引用的方式配置了一个 HandlerFunction，这个就是当前请求的处理器了。</li>
+<li>通过 addRoute 方法可以配置多个路由策略。<br>
+测试</li>
+</ul>
+<p>修改：</p>
+<p>查询和前面一样：</p>
+<h3> 适用性</h3>
+<p>官网上是这样建议的：</p>
+<ul>
+<li>如果原先使用用SpringMVC好好的话，则没必要迁移。因为命令式编程是编写、理解和调试代码的最简单方法。因为老项目的类库与代码都是基于阻塞式的。</li>
+<li>如果你的团队打算使用非阻塞式web框架，WebFlux确实是一个可考虑的技术路线，而且它支持类似于SpringMvc的Annotation的方式实现编程模式，也可以在微服务架构中让WebMvc与WebFlux共用Controller，切换使用的成本相当小。</li>
+<li>在SpringMVC项目里如果需要调用远程服务的话，你不妨考虑一下使用WebClient，而且方法的返回值可以考虑使用Reactive Type类型的，当每个调用的延迟时间越长，或者调用之间的相互依赖程度越高，其好处就越大。</li>
+<li>在微服务架构中，您可以混合使用Spring MVC或Spring WebFlux控制器或Spring WebFlux功能端点的应用程序。在两个框架中支持相同的基于注释的编程模型，可以更轻松地重用知识，同时为正确的工作选择正确的工具。</li>
+</ul>
+<p>Spring WebFlux 并不是让你的程序运行的更快(相对于SpringMVC来说)，而是在有限的资源下提高系统的伸缩性，因此当你对响应式编程非常熟练的情况下并将其应用于新的系统中，还是值得考虑的，否则还是老老实实的使用WebMVC。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>架构分类</title>
+      <link>https://ujava.cn/attention/attention1.html</link>
+      <guid>https://ujava.cn/attention/attention1.html</guid>
+      <source url="https://ujava.cn/rss.xml">架构分类</source>
+      <description>架构的本质 其实总结下来就一句话：**架构本质上其实就是一种指导型的约束，约定整体和部分、部分和部分之间的关系，以使整体更加稳定，更加可靠。 ** 分为三部分： 整体：部分的组成，强调合力。 规则：强调部分之前有关联关系，有规则，有约束。 通信：强调部分之间有往来，有交互。 img_18.png 架构的分类 实际上架构有很多种类型，比如业务架构，应用架构，技术架构，数据架构等，甚至单个架构，我们站在不同的角度上，也会有不同的看法，其中的复杂度也是各不一样的。</description>
+      <category>设计注意</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 架构的本质</h2>
+<p>其实总结下来就一句话：**架构本质上其实就是一种指导型的约束，约定整体和部分、部分和部分之间的关系，以使整体更加稳定，更加可靠。<br>
+**</p>
+<p>分为三部分：</p>
+<ul>
+<li>整体：部分的组成，强调合力。</li>
+<li>规则：强调部分之前有关联关系，有规则，有约束。</li>
+<li>通信：强调部分之间有往来，有交互。</li>
+</ul>
+<figure><figcaption>img_18.png</figcaption></figure>
+<h2> 架构的分类</h2>
+<p>实际上架构有很多种类型，比如业务架构，应用架构，技术架构，数据架构等，甚至单个架构，我们站在不同的角度上，也会有不同的看法，其中的复杂度也是各不一样的。</p>
+<h2> 业务架构</h2>
+<p>业务架构是指企业或机构的业务逻辑、流程、组织结构等方面的设计。它着重于企业业务运营的需求和目标，将业务需求转化为技术解决方案。业务架构的设计需要考虑企业的战略规划、组织结构、业务流程、客户需求等多个方面。</p>
+<p>例如：一个银行的业务架构设计需要考虑银行的基本业务逻辑、流程和组织结构，如存款、贷款、投资、支付等，以及银行的安全性、可靠性和效率等方面的需求。</p>
+<h2> 应用架构</h2>
+<p>应用架构是指企业或机构的信息系统中的应用程序、系统、服务等方面的设计。它着重于解决企业业务运营中的具体问题，将业务需求转化为具体的应用程序。应用架构的设计需要考虑企业的业务需求、用户体验、系统性能、安全风险等多个方面。</p>
+<p>例如：一个电商网站的应用架构设计需要考虑用户购物、订单管理、库存管理、支付等多个应用程序的设计，以及这些应用程序之间的交互和集成。</p>
+<h2> 技术架构</h2>
+<p>技术架构是指企业或机构的信息系统中的技术实现、系统架构、软件设计等方面的设计。它着重于解决企业业务运营中的技术问题，如系统的稳定性、可扩展性、可维护性等。</p>
+<p>例如：一个电商网站的技术架构设计需要考虑系统的负载均衡、容错容灾、CDN缓存、自动化部署等多个方面的技术实现。</p>
+<h2> 数据架构</h2>
+<p>数据架构是指企业或机构的信息系统中的数据存储、数据处理、数据安全等方面的设计。它着重于解决企业业务运营中的数据问题，如数据的一致性、完整性、安全性等。</p>
+<p>例如：一个电商网站的数据架构设计需要考虑数据的分层存储、数据备份和恢复、数据加密和权限管理等多个方面的设计，以确保数据的安全和可靠性。</p>
+<h2> 架构设计要考虑的因素</h2>
+<p>架构设计过程中我们要考虑的因素，整体可以分为两大类，一类是功能性因素，一类是非功能性因素。</p>
+<h2> 功能性因素</h2>
+<p>无论什么架构设计，我们首先是要考虑必须满足我们的业务需求，否则我们的设计都是空中楼阁。功能需求会直接决定我们的业务架构设计。所以我们的架构必须完整性地，正确地对业务实现支撑。</p>
+<h2> 非功能性因素</h2>
+<p>满足了功能性因素以后，我们就得要考虑怎么能够稳定地，可靠地，可持续性地支持我们的业务功能，比如性能，可靠性，扩展性，兼容性等等。</p>
+<ul>
+<li>可靠性
+<ul>
+<li>为了更好的服务于功能，我们需要确保架构能够稳定、高效的运行。不会时不时的出现服务崩溃或者不可用的情况。</li>
+</ul>
+</li>
+<li>可用性
+<ul>
+<li>同样的，服务对外要始终处于可用的状态，即使单个服务实例出现问题，我们依然可以正常的对外提供服务。</li>
+</ul>
+</li>
+<li>扩展性
+<ul>
+<li>功能性需求不是一层不变的，尤其在当今盛行敏捷的时代，需求不是一次性提出的。我们需要对系统、服务的整体能力有全面的定位和把控。这就需要我们的架构在新的需求出现的时候，可以方便的进行扩展支持。</li>
+</ul>
+</li>
+<li>治理能力
+<ul>
+<li>好的架构一定是方便运营、管理和监控的。甚至微观到工程管理，代码一定是易于维护、扩展、协同的。</li>
+</ul>
+</li>
+<li>响应性能
+<ul>
+<li>一般的，功能性需求都会对性能有一定的预期。这个业务要我们在架构上做很多工作，比如读写分离、缓存、异步等等的介入，以满足整体架构的响应能力。</li>
+</ul>
+</li>
+</ul>
+<figure><figcaption>img_19.png</figcaption></figure>
+<h2> 设计原则</h2>
+<ul>
+<li>价值为王：系统架构设计应该以实现业务价值为目标，始终关注用户需求和业务场景，确保设计出的系统能够满足用户需求和业务场景，为企业创造价值。</li>
+<li>以终为始：在进行系统架构设计时，需要明确系统的目标和愿景，并以此为起点，进行设计和实现。以确保系统的设计和实现都是为了实现业务价值，满足用户需求。</li>
+<li>分治原则：将系统划分为多个子系统或模块，每个子系统或模块都可以独立地进行开发、测试、部署和维护。这样可以降低系统的复杂度，提高系统的可维护性和可扩展性。</li>
+<li>服务自治：每个服务都应该具备独立的能力，能够独立地进行开发、测试、部署和维护。这样可以提高服务的可用性和可靠性，降低系统的耦合度。</li>
+<li>拥抱变化：系统架构设计应该能够适应业务需求的变化和市场的变化，具备快速响应和灵活应变的能力。</li>
+<li>系统安全性：系统架构设计应该充分考虑系统的安全性，包括数据安全、应用安全、系统安全等方面，确保系统的安全性和稳定性。</li>
+<li>不作不死：系统架构设计应该遵循“最小化变更范围”原则，避免过度设计和复杂度的出现，从而提高系统的可维护性和可扩展性。</li>
+</ul>
+<h2> 常见的架构设计方案</h2>
+<p>之前比较流行的是MVC，MVC有很多的优点，但是缺点也不少：</p>
+<ul>
+<li>视图与控制器的连接过紧，视图如果不依赖控制器，那么它的应用就会十分有限，这妨碍了他们的独立。</li>
+<li>模型对视图数据的访问效率较低，工作量大，并且有一些高级的界面工具或构造器不支持MVC框架。</li>
+<li>MVC架构使得我们面向视图开发，但是视图的变化是不可控的，容易受到用户主观的影响。同时复杂系统必然存在纷繁复杂的依赖，依赖不可能存在于视图，最终表现为接口依赖。</li>
+</ul>
+<p>所以现在比较流行如下几种方案：</p>
+<figure><figcaption>img_20.png</figcaption></figure>
+<h2> 领域驱动架构</h2>
+<p>领域驱动设计是通过将软件实现与核心业务概念的演进紧密相连，从而实现复杂需求的软件开发方法。</p>
+<p>领域驱动设计包括三要素：</p>
+<ul>
+<li>专业知识：就是前期在与客户沟通需求过程中，学习到的关于业务方面的知识。 这类知识并不仅仅只是对需求的理解，更多的要思考业务需求实际要解决的是什么问题。</li>
+<li>抽象能力：一般指发现核心业务对象，简化问题空间的能力。</li>
+<li>细分问题：把业务问题细化为更小更容易处理的子问题。<br>
+领域驱动设计，使得我们不再用数据进行驱动，而是使用领域进行驱动。遇到问题，我们先进行领域上的划分和拆解。这个问题属于哪个问题域，或者需要拆解到哪些问题域里面去，然后再通过领域的组合以及依赖，完成最终问题的解决。</li>
+</ul>
+<h2> 微服务架构</h2>
+<p>微服务架构是一种软件开发架构，它将应用程序拆分成小型、独立的微服务，每个微服务都有自己的功能集，并运行在其独立的进程中。</p>
+<p>微服务架构有以下优点：</p>
+<ul>
+<li>开发人员可以只关注整个结构中的其中某一层，可以很容易的用新的实现来替换原有层次的实现，可以降低层与层之间的依赖，有利于标准化。</li>
+<li>有利于各层逻辑的复用，如PetShop可经过简单的配置实现Sqlserver和Oracle之间的转换。</li>
+<li>扩展性强，不同层负责不同的层面，有利于系统的扩展和维护。</li>
+<li>安全性高，用户端只能通过逻辑层来访问数据层，减少了入口点，把很多危险的系统功能都屏蔽了。</li>
+<li>项目结构更清楚，分工更明确，有利于后期的维护和升级。</li>
+</ul>
+<h2> 云原生架构</h2>
+<figure><figcaption>img_21.png</figcaption></figure>
+<p>云原生架构是一种创新的软件开发方法，专为充分利用云计算模型而设计。</p>
+<p>云原生架构通过结合使用云计算和各种云服务来创建具有更大可扩展性的可定制模块化基础架构，从而提高了团队的效率，生产力和协作能力。</p>
+<p>云原生架构的核心原则：</p>
+<ul>
+<li>云原生架构是一种设计方法，利用AWS等EC2，S3，Lambda等云服务来支持动态，敏捷的应用程序开发技术，这些技术采用模块化方法通过一套基于云的套件来构建，运行和更新软件微服务与整体应用程序基础架构。</li>
+<li>微服务和容器化通过简化云提供商之间的转移或独立地以不同的语言或框架部署服务而没有冲突或停机的情况，从而支持云本机应用程序的敏捷性和动态性。</li>
+<li>将微服务架构集成到应用程序开发中可支持协作，效率和生产力，因为DevOps团队能够同时独立处理应用程序的不同组件或实现新功能而又不牺牲稳定性。</li>
+</ul>
+<h2> DevOps架构</h2>
+<figure><figcaption>img_22.png</figcaption></figure>
+<p>DevOps架构，它旨在加强软件产品开发与交付过程中的协作、自动化、持续性和监控等方面，以实现更高效、更迅速和更可靠的软件交付。</p>
+<p>DevOps通常包括以下核心组成部分：</p>
+<ul>
+<li>持续集成：将代码频繁地集成到一个共享的代码库中，并对代码进行自动化测试，以确保代码质量和稳定性，并及时发现和解决错误。</li>
+<li>持续交付：通过自动化测试、构建、部署和运行环节，实现快速、可靠和可重复的软件发布，从而减少手动操作和人工干预带来的错误和风险。</li>
+<li>自动化运维：将基础设施的管理、配置和维护工作自动化，并将其作为代码、脚本或配置文件存储在版本控制系统中，以便快速搭建、复制和修改环境。</li>
+<li>容器化技术：使用容器化技术（如Docker）将应用程序和其依赖项打包成独立的、可移植的容器，在不同的环境中快速部署和运行。</li>
+<li>监控和日志分析：通过对软件运行时数据进行采集、储存、分析和可视化，监控系统状态、性能和安全等方面的指标，并及时发现和修复问题。</li>
+</ul>
+<h2> 大数据架构</h2>
+<figure><figcaption>img_23.png</figcaption></figure>
+<p>大数据架构是一种面向海量数据、高并发、高可靠、高性能的计算和存储系统架构，用于管理和处理大规模的结构化、半结构化和非结构化数据。它具有以下几个特点：</p>
+<ul>
+<li>高可扩展性：大数据架构应该能够轻松地扩展到海量数据和高并发请求下。</li>
+<li>高容错性：大数据架构应该在硬件、网络和软件故障等异常情况下保证系统稳定性。</li>
+<li>实时计算：大数据架构需要支持实时计算和流式处理，以满足复杂的业务场景。</li>
+<li>数据安全：大数据架构需要保证数据的机密性、完整性和可用性，避免数据泄露和损坏。</li>
+<li>成本效益：大数据架构应该充分考虑成本问题，尽可能利用开源技术和云平台来降低系统运维和资源开销。<br>
+比如常见的大数据架构包括<code>Hadoop、Spark、Storm、Kafka</code><br>
+等开源软件，它们可以被组合在一起形成一个完整的数据处理流水线。例如，Hadoop可以提供分布式文件系统HDFS和MapReduce计算模型，Spark可以提供内存计算和机器学习功能，Storm可以提供实时数据处理功能，Kafka可以提供高可靠的消息队列服务。使用这些开源软件和云平台，企业可以构建出适合自己场景的大数据处理系统，提升自身的业务竞争力。</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>架构原则</title>
+      <link>https://ujava.cn/attention/attention2.html</link>
+      <guid>https://ujava.cn/attention/attention2.html</guid>
+      <source url="https://ujava.cn/rss.xml">架构原则</source>
+      <description>一.设计原则 架构设计我我们平时写代码不一样，两者的差异主要体现在“不确定性”上。对于编程来说，本质上是确定的，对于同样一段代码，不管是谁写的，不管什么时候执行，执行的结果应该都是确定的；而对于架构设计来说，本质上是不确定，并没有像编程语言那样的语法来进行约束，更多的时候是面对多种可能性时进行选择。 示例： 是要选择业界最先进的技术，还是选择团队目前最熟悉的技术？ 是要选 MySQL 还是 MongoDB？团队对 MySQL 很熟悉，但是 MongoDB 更加适合业务场景？ 淘宝的电商网站架构很完善，我们新做一个电商网站，是否简单地照搬淘宝就可以了？</description>
+      <category>设计注意</category>
+      <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 一.设计原则</h2>
+<p>架构设计我我们平时写代码不一样，两者的差异主要体现在“不确定性”上。对于编程来说，本质上是确定的，对于同样一段代码，不管是谁写的，不管什么时候执行，执行的结果应该都是确定的；而对于架构设计来说，本质上是不确定，并没有像编程语言那样的语法来进行约束，更多的时候是面对多种可能性时进行选择。</p>
+<p>示例：</p>
+<ul>
+<li>是要选择业界最先进的技术，还是选择团队目前最熟悉的技术？</li>
+<li>是要选 MySQL 还是 MongoDB？团队对 MySQL 很熟悉，但是 MongoDB 更加适合业务场景？</li>
+<li>淘宝的电商网站架构很完善，我们新做一个电商网站，是否简单地照搬淘宝就可以了？</li>
+</ul>
+<h4> 1.合适原则</h4>
+<blockquote>
+<p>合适优于业界领先。</p>
+</blockquote>
+<p>在进行架构设计的同时，需要考虑自身业务，而不是一味的去参照业界顶尖的规模，如：QQ、微信、淘宝架构。真正优秀的架构都是在企业当前人力、条件、业务等各种约束下设计出来的，能够合理地将资源整合在一起并发挥出最大功效，并且能够快速落地。</p>
+<h4> 2.简单原则</h4>
+<blockquote>
+<p>简单优于复杂。</p>
+</blockquote>
+<p>软件架构设计是一门技术活，当我们进行架构设计时，会自然而然地想把架构做精美、做复杂，这样才能体现我们的技术实力，也才能够将架构做成一件艺术品。然而，“复杂”在制造领域代表先进，在建筑领域代表领先，但在软件领域，却恰恰相反，代表的是“问题”。</p>
+<p>软件复杂度的体现，主要有以下两个方面：</p>
+<p>结构的复杂性<br>
+– 组成复杂系统的组件数量更多；<br>
+– 组件之间的关系也更加复杂。</p>
+<p>其问题主要有：</p>
+<ul>
+<li>（1）组件越多，就越有可能其中某个组件出现故障，从而导致系统故障。</li>
+<li>（2）某个组件改动，会影响关联的所有组件。</li>
+<li>（3）定位一个复杂系统中的问题总是比简单系统更加困难。</li>
+</ul>
+<h4> 逻辑的复杂性</h4>
+<p>逻辑的复杂性来源于一个组件集中了太多的功能，修改协作困难；并且，其中某些业务还可能使用了一些复杂的算法，导致难以理解、修改困难。</p>
+<p>一个组件集中了太多功能，就会表现出一些逻辑复杂性的特征，为了解决这个问题，一般的手段是进行组件的拆分，但随着组件的细化，又会引入结构复杂性的一些特征，所以，在做结构设计的时候，需要权衡这两者。</p>
+<h4> 3.演化原则</h4>
+<blockquote>
+<p>演化优于一步到位。</p>
+</blockquote>
+<p>维基百科对“软件架构”的定义如下：</p>
+<blockquote>
+<p>从和目的、主题、材料和结构的联系上来说，软件架构可以和建筑物的架构相比拟。</p>
+</blockquote>
+<p>这个定义中，将建筑和软件架构做了一个比较，但是，两者之间是有一个本质区别的：对于建筑来说，永恒是主题；而对于软件来说，变化才是主题。<br>
+也就是说，软件架构的本质是：软件架构需要根据业务发展不断变化，所以，我们在做软件架构设计的时候，不要试图一步到位设计一个软件架构，期望不管业务如何变化，架构都稳如磐石。</p>
+<p>架构设计的过程基本上可以总结为下面三个历程：</p>
+<ul>
+<li>首先，设计出来的架构要满足当时的业务需要。</li>
+<li>其次，架构要不断地在实际应用过程中迭代，保留优秀的设计，修复有缺陷的设计，改正错误的设计，去掉无用的设计，使得架构逐渐完善。--<br>
+小重构</li>
+<li>最后，当业务发生变化时，架构要扩展、重构，甚至重写；代码也许会重写，但有价值的经验、教训、逻辑、设计等（类似生物体内的基因）却可以在新架构中延续。--<br>
+大重构</li>
+</ul>
+<p>我们在做架构设计的时候，切勿贪大求全，或者盲目的照搬大公司的做法，而是要牢记软件架构的本质（软件架构需要根据业务发展不断变化）。认真分析当前业务的特点，明确业务面临的主要问题，设计合理的架构，快速落地以满足业务需要，然后在运行过程中不断完善架构，不断随着业务演化架构。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>服务器高并发之提高TCP连接数</title>
       <link>https://ujava.cn/highfreq/tcpcount.html</link>
@@ -422,418 +1645,6 @@ Reduce<br>
 <h3> 拓展阅读</h3>
 <h2> 分布式是否属于微服务？</h2>
 <p>答案是属于。微服务的意思也就是将模块拆分成一个独立的服务单元通过接口来实现数据的交互。但是微服务不一定是分布式，因为微服务的应用不一定是分散在多个服务器上，他也可以是同一个服务器。这也是分布式和微服务的一个细微差别。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>ElasticSearch架构设计</title>
-      <link>https://ujava.cn/highfreq/elasticsearch.html</link>
-      <guid>https://ujava.cn/highfreq/elasticsearch.html</guid>
-      <source url="https://ujava.cn/rss.xml">ElasticSearch架构设计</source>
-      <description>一、 简介 Elasticsearch 是一个分布式可扩展的实时搜索和分析引擎,一个建立在全文搜索引擎 Apache Lucene™ 基础上的搜索引擎.当然 Elasticsearch 并不仅仅是 Lucene 那么简单，它不仅包括了全文搜索功能，还可以进行以下工作: 一个分布式的实时文档存储，每个字段可以被索引与搜索 一个分布式实时分析搜索引擎 能胜任上百个服务节点的扩展，并支持 PB 级别的结构化或者非结构化数据 1.ES优点 1.支持全文搜索，并基于倒排索引，检索速度特别快 2.高可用性，支持集群部署，任何节点失效系统自动调整。</description>
-      <category>设计高频</category>
-      <pubDate>Wed, 10 Apr 2024 08:44:25 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 一、 简介</h2>
-<p>Elasticsearch 是一个分布式可扩展的实时搜索和分析引擎,一个建立在全文搜索引擎 Apache Lucene™ 基础上的搜索引擎.当然 Elasticsearch 并不仅仅是 Lucene 那么简单，它不仅包括了全文搜索功能，还可以进行以下工作:</p>
-<ul>
-<li>一个分布式的实时文档存储，每个字段可以被索引与搜索</li>
-<li>一个分布式实时分析搜索引擎</li>
-<li>能胜任上百个服务节点的扩展，并支持 PB 级别的结构化或者非结构化数据</li>
-</ul>
-<h3> 1.ES优点</h3>
-<ul>
-<li>1.支持全文搜索，并基于倒排索引，检索速度特别快</li>
-<li>2.高可用性，支持集群部署，任何节点失效系统自动调整。</li>
-</ul>
-<h3> 2.ES缺点</h3>
-<ul>
-<li>1.对硬件要求较高，es比较吃内存，需要存储资源来支持大量数据的处理。</li>
-<li>2.不支持事务等ACID属性。</li>
-</ul>
-<h3> 3.ES使用场景</h3>
-<p>1.聊天消息</p>
-<ul>
-<li>数据量大，业务关系简单，会通过关键字搜索聊天信息</li>
-<li>非核心业务，不会频繁crud</li>
-<li>没有事务的场景，可以不用支持事务</li>
-</ul>
-<p>2.日志纪录</p>
-<p>Elasticsearch 一个典型应用就是 ELK 日志分析系统。如nginx接入请求的访问日志纪录。</p>
-<p>3.热点数据搜索</p>
-<p>如电商业务的商品搜索等。</p>
-<h3> 4.DSL语言高级查询</h3>
-<h4> 1.Query DSL概述</h4>
-<p>Domain Specific Language 领域专用语言</p>
-<ul>
-<li>Elasticsearch provides a ful1 Query DSL based on JSON to define queries</li>
-<li>Elasticsearch提供了基于JSON的DSL来定义查询。</li>
-</ul>
-<p>DSL由叶子查询子句和复合查询子句两种子句组成。</p>
-<figure><figcaption>img_111.png</figcaption></figure>
-<h4> 2.模糊匹配</h4>
-<p>模糊匹配主要是针对文本类型的字段，文本类型的字段会对内容进行分词，对查询时，也会对搜索条件进行分词，然后通过倒排索引查找到匹配的数据，模糊匹配主要通过match等参数来实现</p>
-<ul>
-<li>match : 通过match关键词模糊匹配条件内容</li>
-<li>prefix : 前缀匹配</li>
-<li>regexp : 通过正则表达式来匹配数据</li>
-</ul>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 3.精确匹配</h4>
-<ul>
-<li>term : 单个条件相等</li>
-<li>terms : 单个字段属于某个值数组内的值</li>
-<li>range : 字段属于某个范围内的值</li>
-<li>exists : 某个字段的值是否存在</li>
-<li>ids : 通过ID批量查询</li>
-</ul>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 4.聚合搜索</h4>
-<p><strong>1.bucket和metric</strong></p>
-<p>bucket就是一个聚合搜索时的数据分组。</p>
-<p>如：销售部门有员工张三和李四，开发部门有员工王五和赵六。那么根据部门分组聚合得到结果就是两个bucket。销售部门bucket中有张三和李四，开发部门 bucket中有王五和赵六。</p>
-<p>metric就是对一个bucket数据执行的统计分析。如上述案例中，开发部门有2个员工，销售部门有2个员工，这就是metric。</p>
-<p>metric有多种统计，如：求和，最大值，最小值，平均值等。</p>
-<p>用一个大家容易理解的SQL语法来解释，如：select count() from table group by column。那么group by column分组后的每组数据就是bucket。对每个分组执行的count()就是metric。</p>
-<p>es最重要的核心功能是数据检索，统计分析我认为不是es最核心的功能，想这种离线统计应该由其他的替代方案去做，所以如果想了解更多es聚合搜索相关知识可以参考官网或者其他博客</p>
-<h3> 5.文档映射</h3>
-<p>ES中映射可以分为动态映射和静态映射</p>
-<h4> 1.动态映射</h4>
-<p>在关系数据库中，需要事先创建数据库，然后在该数据库下创建数据表，并创建表字段、类型、长度、主键等，最后才能基于表插入数据。而Elasticsearch中不需要定义Mapping映射（即关系型数据库的表、字段等），在文档写入Elasticsearch时，会根据文档字段自动识别类型，这种机制称之为动态映射。<br>
-动态映射规则如下：</p>
-<figure><figcaption>img_112.png</figcaption></figure>
-<h4> 2.静态映射</h4>
-<p>静态映射是在Elasticsearch中也可以事先定义好映射，包含文档的各字段类型、分词器等，这种方式称之为静态映射。</p>
-<h4> 3.核心类型（Core datatype）</h4>
-<ul>
-<li>字符串：string，string类型包含 text 和 keyword。</li>
-<li>text：该类型被用来索引长文本，在创建索引前会将这些文本进行分词，转化为词的组合，建立索引；允许es来检索这些词，text类型不能用来排序和聚合。</li>
-<li>keyword：该类型不能分词，可以被用来检索过滤、排序和聚合，keyword类型不可用text进行分词模糊检索。</li>
-<li>数值型：long、integer、short、byte、double、float</li>
-<li>日期型：date</li>
-<li>布尔型：boolean</li>
-</ul>
-<h4> 4.数据建模</h4>
-<p>就是针对于关系型数据库的一对多数据模型，而我自己认为es的主要应用场景是全文搜索引擎，这种复杂的业务关系就应该由关系型数据库如mysql去完成数据建模和存储，而不是交给es去建模存储，当然es也是提供了Parent / Child相关机制继续数据建模，如果有场景使用到，自己去参考对应的官方文档了解即可，但我自己不建议这样做。</p>
-<h4> 5.分页查询</h4>
-<p>1.语法</p>
-<p>在存在大量数据时，一般我们进行查询都需要进行分页查询。例如：我们指定页码、并指定每页显示多少条数据，然后Elasticsearch返回对应页码的数据。</p>
-<p>在执行查询时，可以指定from（从第几条数据开始查起）和size（每页返回多少条）数据，就可以轻松完成分页。</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>2.scroll解决深分页问题</p>
-<p>前面使用from和size方式，查询在1W条数据以内都是OK的，但如果数据比较多的时候，会出现性能问题。Elasticsearch做了一个限制，不允许查询的是10000条以后的数据。如果要查询1W条以后的数据，需要使用Elasticsearch中提供的scroll游标来查询。</p>
-<p>在进行大量分页时，每次分页都需要将要查询的数据进行重新排序，这样非常浪费性能。</p>
-<p>使用scroll是将要用的数据一次性排序好，然后分批取出,性能要比from + size好得多。</p>
-<p>使用scroll查询后，排序后的数据会保持一定的时间，后续的分页查询都从该快照取数据即可。</p>
-<p>第一次使用scroll分页查询</p>
-<p>此处，我们让排序的数据保持1分钟，所以设置scroll为1m</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>执行后，我们注意到，在响应结果中有一项：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>后续，我们需要根据这个_scroll_id来进行查询</p>
-<p>第二次直接使用scroll id进行查询</p>
-<h3> 6.suggest search</h3>
-<p>suggest search（completion suggest）：就是建议搜索或称为搜索建议，也可以叫做自动完成-auto completion。类似百度中的搜索联想提示功能。</p>
-<p>ES实现suggest的时候，性能非常高，其构建的不是倒排索引，也不是正排索引，就是纯的用于进行前缀搜索的一种特殊的数据结构，而且会全部放在内存中，所以suggest search进行的前缀搜索提示，性能是非常高。</p>
-<p>需要使用suggest的时候，必须在定义index时，为其mapping指定开启suggest。</p>
-<p>具体如下:</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>suggest 搜索：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 二、ES核心原理</h2>
-<p>ES存储模型</p>
-<p>Elasticsearch与关系数据库结构对应</p>
-<figure><figcaption>img_113.png</figcaption></figure>
-<p>ElasticSearch的对象模型，跟关系型数据库模型相比：</p>
-<h3> 1.索引（Index）</h3>
-<p>相当于数据库，用于定义文档类型的存储；在同一个索引中，同一个字段只能定义一个数据类型；</p>
-<p>一个索引就是一个拥有几分相似特征的文档的集合。比如说，可以有一个客户数据的索引，另一个产品目录的索引，还有一个订单数据的索引<br>
-一个索引由一个名字来标识（必须全部是小写字母的），并且当我们要对对应于这个索引中的文档进行索引、搜索、更新和删除的时候，都要使用到这个名字</p>
-<h3> 2.文档类型（Type）</h3>
-<p>相当于关系表，用于描述文档中的各个字段的定义；不同的文档类型，能够存储不同的字段，服务于不同的查询请求；</p>
-<p>每一个字段都应该有一个对应的类型，例如：Text、Keyword、Byte等</p>
-<h3> 3.文档（Document）</h3>
-<p>相当于关系表的数据行，存储数据的载体，包含一个或多个存有数据的字段；</p>
-<p>一个文档是一个可被索引的基础信息单元，类似一条记录。文档以JSON（Javascript Object Notation）格式来表示；</p>
-<h3> 4.字段（Field）</h3>
-<p>文档的一个Key/Value对；</p>
-<ul>
-<li>词（Term）：表示文本中的一个单词；</li>
-<li>标记（Token）：表示在字段中出现的词，由该词的文本、偏移量（开始和结束）以及类型组成；</li>
-</ul>
-<p>相当于是数据表的字段|列</p>
-<h3> 5.倒排索引</h3>
-<p>全文搜索引擎的技术原理被称为“倒排索引”（Inverted index），也常被称为反向索引、置入档案或反向档案，是一种索引方法，其基本原理是建立单词到文档的索引。</p>
-<p>之所以被称为“倒排”索引，是和“正排“索引相对的，“正排索引”的基本原理是建立文档到单词的索引。我们通过一个简单的样例来说明这两种索引的差异。</p>
-<p>假设我们有一个技术文章的网站，里面收集了各种技术文章，用户可以在网站浏览或者搜索文章。</p>
-<p>正排索引示例：</p>
-<figure><figcaption>img_114.png</figcaption></figure>
-<p>（注：文章内容仅为示范，文章内容实际上存储的是几千字的内容。）</p>
-<p>正排索引适用于根据文档名称来查询文档内容。例如，用户在网站上单击了“面向对象葵花宝典是什么”，网站根据文章标题查询文章的内容展示给用户。</p>
-<p>倒排索引示例：</p>
-<figure><figcaption>img_115.png</figcaption></figure>
-<p>（注：表格仅为示范，不是完整的倒排索引表格，实际上的倒排索引有成千上万行，因为每个单词就是一个索引。）</p>
-<p>倒排索引适用于根据关键词来查询文档内容，它是根据文章内容中的关键字建立索引，而值对应于文档ID，而搜索出来的结果就是文档ID所在行的所有内容。</p>
-<p>例如，用户只是想看“设计”相关的文章，网站需要将文章内容中包含“设计”一词的文章都搜索出来展示给用户。</p>
-<p>要注意倒排索引的两个重要细节：</p>
-<ul>
-<li>倒排索引中的所有词项对应一个或多个文档；</li>
-<li>倒排索引中的词项根据字典顺序升序排列<br>
-Elasticsearch 也是 Master-slave 架构，也实现了数据的分片和备份。</li>
-</ul>
-<h3> 6.分词器</h3>
-<p>对于英文来说，分词比较简单，只需要按照单词的空格来进行分词。<br>
-如下所示<br>
-</p>
-<p>如果要搜索hello这个关键词，则匹配的结果将是下面两个内容</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>ES的默认分词设置是standard，这个在中文分词时就比较尴尬了，会单字拆分，比如我搜索关键词“清华大学”，这时候会按“清”，“华”，“大”，“学”去分词，然后搜出来的都是些“清清的河水”，“中华儿女”，“地大物博”，“学而不思则罔”之类的莫名其妙的结果。</p>
-<p>这里我们就想把这个分词方式修改一下，于是呢，就想到了ik分词器，有两种ik_smart和ik_max_word。</p>
-<p>ik_smart会将“清华大学”整个分为一个词，而ik_max_word会将“清华大学”分为“清华大学”，“清华”和“大学”，按需选其中之一就可以了。</p>
-<p>修改默认分词方法(这里修改school_index索引的默认分词为：ik_max_word)：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>分词器工作流程<br>
-<br>
-分词器由三部分组成：</p>
-<ul>
-<li>Character Filter：将文本中html标签剔除掉。</li>
-<li>Tokenizer：按照规则进行分词，在英文中按照空格分词</li>
-<li>Token Filter：将切分的单词进行加工，小写，删除 stopwords(停顿词，a、an、the、is等),增加同义词</li>
-</ul>
-<p>每个组件的作用，可参考下面的例子</p>
-<p>character filter：在一段文本进行分词之前，先进行预处理，比如说最常见的就是，过滤html标签</p>
-<p>tokenizer：分词，hello you and me --&gt; hello, you, and, me</p>
-<p>token filter：lowercase，stop word，synonymom，liked --&gt; like，Tom --&gt; tom，a/the/an --&gt; 干掉，small --&gt; little</p>
-<p>ES内置分词器</p>
-<ul>
-<li>Standard Analyzer - 默认分词器，按词切分，小写处理</li>
-<li>Simple Analyzer - 按照非字母切分(符号被过滤), 小写处理</li>
-<li>Stop Analyzer - 小写处理，停用词过滤(the,a,is)</li>
-<li>Whitespace Analyzer - 按照空格切分，不转小写</li>
-<li>Keyword Analyzer - 不分词，直接将输入当作输出</li>
-<li>Patter Analyzer - 正则表达式，默认\W+(非字符分割)</li>
-<li>Language - 提供了30多种常见语言的分词器</li>
-<li>Customer Analyzer 自定义分词器</li>
-</ul>
-<p>每个内置分词器的作用，可参考下面的例子</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>定制分词器</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>定制化自己的分词器</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>IK热更新</p>
-<p>每次都是在es的扩展词典中，手动添加新词语，很坑</p>
-<p>（1）每次添加完，都要重启es才能生效，非常麻烦</p>
-<p>（2）es是分布式的，可能有数百个节点，你不能每次都一个一个节点上面去修改</p>
-<p>es不停机，直接我们在外部某个地方添加新的词语，es中立即热加载到这些新词语<br>
-IKAnalyzer.cfg.xml</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 7.es评分机制</h3>
-<p>当你通过关键字搜索相关文档时，可能会出现多个文档，这些文档的顺序是通过一个max_score属性的大小从高到低顺序展现出来的，max_score属性就是我们所说的评分。</p>
-<p>打分算法</p>
-<p>relevance score算法，简单来说，就是计算出，一个索引中的文本，与搜索文本，他们之间的关联匹配程度</p>
-<p>Elasticsearch使用的是 term frequency/inverse document frequency算法，简称为TF/IDF算法</p>
-<p>总公式</p>
-<p>max_score = boost * idf * tf</p>
-<figure><figcaption>img_118.png</figcaption></figure>
-<p>对于查询权重我们可以自己定义</p>
-<p>如下面所示：</p>
-<figure><figcaption>img_119.png</figcaption></figure>
-<p>TF算法</p>
-<p>Term frequency：搜索文本中的各个词条在field文本中出现了多少次，出现次数越多，就越相关</p>
-<ul>
-<li>搜索请求：hello world</li>
-<li>doc1：hello you, and world is very good</li>
-<li>doc2：hello, how are you</li>
-</ul>
-<p>doc1这个文档匹配了2个单词，所以doc1的得分要高一些。</p>
-<p>2.IDF算法<br>
-Inverse document frequency：搜索文本中的各个词条在整个索引的所有文档中出现了多少次，出现的次数越多，就越不相关</p>
-<ul>
-<li>搜索请求：hello world</li>
-<li>doc1：hello, tuling is very good</li>
-<li>doc2：hi world, how are you</li>
-</ul>
-<p>比如说，在index中有1万条document，hello这个单词在所有的document中，一共出现了1000次；world这个单词在所有的document中，一共出现了100次，所以world这个单词得分就更高。</p>
-<p>那么匹配world的doc得分就越高,越有可能排在搜索结果前面。</p>
-<p>Field-length norm：field长度，field越长，相关度越弱<br>
-搜索请求：hello world</p>
-<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>hello world在整个index中出现的次数是一样多的，那么doc1更相关，title field更短</p>
-<p><strong>2.空间向量模型（vector space model）</strong></p>
-<p>每个doc vector计算出对query vector的弧度，最后基于这个弧度给出一个doc相对于query中多个term的总分数</p>
-<p>弧度越大，分数月底; 弧度越小，分数越高</p>
-<p>如果是多个term，那么就是线性代数来计算，无法用图表示</p>
-<figure><figcaption>img_120.png</figcaption></figure>
-<p>了解即可，掌握对应的打分算法我自己认为就足够了，不用砖牛角尖</p>
-<h2> 三、ElasticSearch架构设计</h2>
-<p>es集群架构</p>
-<p>如下图 ，就是一个三个节点组成的es集群，p0、p1、p2表示一个节点中的分片，R0、R1、R2表示分片对应的副本<br>
-<br>
-在Elasticsearch主要分成两类节点，一类是Master，一类是DataNode。</p>
-<h3> 1.Master节点</h3>
-<p>在Elasticsearch启动时，会选举出来一个Master节点。</p>
-<p>当某个节点启动后，然后使用Zen Discovery机制找到集群中的其他节点，并建立连接。</p>
-<p>discovery.seed_hosts: [“192.168.21.130”, “192.168.21.131”, “192.168.21.132”]</p>
-<p>并从候选主节点中选举出一个主节点。</p>
-<p>cluster.initial_master_nodes: [“node1”, “node2”,“node3”]</p>
-<p>Master节点主要负责</p>
-<ul>
-<li>管理索引（创建索引、删除索引）、分配分片</li>
-<li>维护元数据</li>
-<li>管理集群节点状态</li>
-<li>不负责数据写入和查询，比较轻量级</li>
-</ul>
-<p>一个Elasticsearch集群中，只有一个Master节点。在生产环境中，内存可以相对小一点，但机器要稳定。</p>
-<h3> 2.DataNode节点</h3>
-<p>在Elasticsearch集群中，会有N个DataNode节点。</p>
-<p>DataNode节点主要负责：</p>
-<p>数据写入、数据检索，</p>
-<p>大部分Elasticsearch的压力都在DataNode节点上在生产环境中，内存最好配置大一些</p>
-<h3> 3.分片</h3>
-<p>Elasticsearch是一个分布式的搜索引擎，索引的数据也是分成若干部分，分布在不同的服务器节点中，分布在不同服务器节点中的索引数据，就是分片（Shard）。</p>
-<p>Elasticsearch会自动管理分片，如果发现分片分布不均衡，就会自动迁移一个索引（index）由多个shard（分片）组成，而分片是分布在不同的服务器上的.</p>
-<h3> 4.副本</h3>
-<p>为了对Elasticsearch的分片进行容错，假设某个节点不可用，会导致整个索引库都将不可用。所以，需要对分片进行副本容错，每一个分片都会有对应的副本。</p>
-<p>在Elasticsearch中，默认创建的索引为1个分片、每个分片有1个主分片和1个副本分片。</p>
-<p>每个分片都会有一个Primary Shard（主分片），也会有若干个Replica Shard（副本分片）</p>
-<p>Primary Shard和Replica Shard不在同一个节点上</p>
-<h3> 5.es集群读写流程</h3>
-<p>es 写数据流程</p>
-<figure><figcaption>img_122.png</figcaption></figure>
-<p>1.选择任意一个DataNode发送请求，例如：node2。此时，node2就成为一个coordinating node（协调节点）</p>
-<p>2.计算得到文档要写入的分片</p>
-<p><code>shard = hash(routing) % number_of_primary_shards</code><br>
-routing 是一个可变值，默认是文档的 _id</p>
-<p>3.coordinating node会进行路由，将请求转发给对应的primary shard所在的DataNode（假设primary shard在node1、replica shard在node2）</p>
-<p>4.node1节点上的Primary Shard处理请求，写入数据到索引库中，并将数据同步到Replica shard</p>
-<p>5.Primary Shard和Replica Shard都保存好了文档，返回client</p>
-<p>es 读数据流程</p>
-<figure><figcaption>img_123.png</figcaption></figure>
-<p>1.client发起查询请求，某个DataNode接收到请求，该DataNode就会成为协调节点（Coordinating Node）</p>
-<p>2.协调节点（Coordinating Node）将查询请求广播到每一个数据节点，这些数据节点的分片会处理该查询请求</p>
-<p>3.每个分片进行数据查询，将符合条件的数据放在一个优先队列中，并将这些数据的文档ID、节点信息、分片信息返回给协调节点</p>
-<p>4.协调节点将所有的结果进行汇总，并进行全局排序</p>
-<p>5.协调节点向包含这些文档ID的分片发送get请求，对应的分片将文档数据返回给协调节点，最后协调节点将数据返回给客户端</p>
-<p>注意：写请求是写入 primary shard，然后同步给所有的 replica shard；读请求可以从 primary shard 或 replica shard 读取，采用的是随机轮询算法。</p>
-<p>自己总结：es的检索流程和mysql数据表查询非主键索引的思路有些相似，先从索引表查询出对应的主键索引值，在进行回表查询具体的行数据。</p>
-<p>es删除/更新数据底层原理</p>
-<p>如果是删除操作，commit 的时候会生成一个 .del 文件，里面将某个 doc 标识为 deleted 状态，那么搜索的时候根据 .del 文件就知道这个 doc 是否被删除了。</p>
-<p>如果是更新操作，就是将原来的 doc 标识为 deleted 状态，然后新写入一条数据。</p>
-<p>es 底层写数据原理</p>
-<figure><figcaption>img_124.png</figcaption></figure>
-<p>简述：先写入内存 buffer，在 buffer 里的时候数据是搜索不到的；然后刷新到os cache中（同时将数据备份到translog日志文件），最后刷新到 segment file磁盘文件中</p>
-<p>总结一下，数据先写入内存 buffer，然后每隔 1s，将数据 refresh 到 os cache，到了 os cache 数据就能被搜索到（所以我们才说 es 从写入到能被搜索到，中间有 1s 的延迟）。每隔 5s，将数据写入 translog 文件作备份（这样如果机器宕机，内存数据全没，最多会有 5s 的数据丢失），translog 大到一定程度，或者默认每隔 30mins，会触发 commit 操作，将缓冲区的数据都 flush 到 segment file 磁盘文件中。最后存入到commit point磁盘文件中。</p>
-<p>refresh到文件系统缓存</p>
-<p>当数据写入到ES分片时，会首先写入到内存中，然后通过内存的buffer生成一个segment，并刷到文件系统缓存中。</p>
-<p>如果 buffer 快满了，或者到一定时间，就会将内存 buffer 数据 refresh 到一个新的 segment file中，但是此时数据不是直接进入 segment file 磁盘文件，而是先进入 os cache 。</p>
-<p>这个过程就是 refresh 。</p>
-<p>只要 buffer 中的数据被 refresh 操作刷入 os cache 中，这个数据就可以被搜索到了。</p>
-<p>定时 refresh到文件系统缓存机制</p>
-<p>每隔 1 秒钟，es 将 buffer 中的数据写入一个新的 segment file ，每秒钟会产生一个新的磁盘文件 segment file ，这个 segment file 中就存储最近 1 秒内 buffer 中写入的数据。<br>
-但是如果 buffer 里面此时没有数据，那当然不会执行 refresh 操作，如果 buffer 里面有数据，默认 1 秒钟执行一次 refresh 操作，刷入一个新的 segment file 中。</p>
-<p>segment file合并</p>
-<p>buffer 每 refresh 一次，就会产生一个 segment file ，所以默认情况下是 1 秒钟一个 segment file ，这样下来 segment file 会越来越多，此时会定期执行 merge，减少索引查询时IO开销。<br>
-每次 merge 的时候，会将多个 segment file 合并成一个，同时这里会将标识为 deleted 的 doc 给物理删除掉（之前执行过的delete的数据），然后将新的 segment file 写入到一个 commit point磁盘 。</p>
-<p>知识扩展</p>
-<p>操作系统里面，磁盘文件其实都有一个东西，叫做 os cache ，即操作系统缓存，就是说数据写入磁盘文件之前，会先进入 os cache ，先进入操作系统级别的一个内存缓存中去。</p>
-<p>备份到translog磁盘</p>
-<p>刷新到translog文件以保障数据不丢失，translog的设计思想和mysql的redo log是相似的。</p>
-<p>每隔5s,从os cache 中同步到translog磁盘里面去做备份。</p>
-<p>那么translog 日志文件的作用是什么？</p>
-<p>你执行 commit 操作之前，数据要么是停留在 buffer 中，要么是停留在 os cache 中，无论是 buffer 还是 os cache 都是内存，一旦这台机器死了，内存中的数据就全丢了。所以需要将数据对应的操作写入一个专门的日志文件 translog 中，一旦此时机器宕机，再次重启的时候，es 会自动读取 translog 日志文件中的数据，恢复到内存 buffer 和 os cache 中去。</p>
-<p>flush到磁盘文件</p>
-<p>重复上面的步骤，新的数据不断进入 buffer 和 translog，不断将 buffer 数据写入一个又一个新的 segment file文件系统缓存中去，每次 refresh 完 buffer 清空，translog 保留。随着这个过程推进，translog 会变得越来越大。当 translog 达到一定长度的时候，就会触发 commit 操作。</p>
-<p>数据最终被flush到磁盘文件就完成了数据的最终归宿。</p>
-<figure><figcaption>img_125.png</figcaption></figure>
-<p>commit操作流程</p>
-<p>commit 操作首先就是将 buffer 中现有数据 refresh 到 os cache 中去，清空 buffer。<br>
-然后，将一个 commit point 写入磁盘文件，里面标识着这个 commit point 对应的所有 segment file ，同时强行将 os cache 中目前所有的数据都 fsync 到磁盘文件中去。<br>
-最后清空 现有 translog 日志文件，重启一个 translog，此时 commit 操作完成。</p>
-<p>这个 commit 操作叫做 flush 。</p>
-<p>默认 30 分钟自动执行一次 flush ，将文件系统缓存的数据刷入到磁盘。<br>
-但如果 translog 过大，也会触发 flush 。</p>
-<p>flush 操作就对应着 commit 的全过程，我们可以通过 es api，手动执行 flush 操作，手动将 os cache 中的数据 fsync 强刷到磁盘上去。</p>
-<p>es准实时机制</p>
-<p>为什么叫 es 是准实时的？</p>
-<p>NRT ，全称 near real-time 。默认是每隔 1 秒 refresh 一次的，所以 es 是准实时的，因为写入的数据 1 秒之后才能被看到。</p>
-<p>可以通过 es 的 restful api 或者 java api ，手动执行一次 refresh 操作，就是手动将 buffer 中的数据刷入 os cache 中，让数据立马就可以被搜索到。只要数据被输入 os cache 中，buffer 就会被清空了，因为不需要保留 buffer 了，数据在 translog 里面已经持久化到磁盘去一份了。</p>
-<p>es会数据丢失吗？</p>
-<p>可能会丢失有 5 秒的数据，停留在 buffer、translog os cache、segment file os cache 中，而不在磁盘上，此时如果备份到translog过程中宕机，会导致 5 秒的数据丢失。</p>
-<p>translog 其实也是先写入 os cache 的，默认每隔 5 秒刷一次到磁盘中去，所以默认情况下，可能有 5 秒的数据会仅仅停留在 buffer 或者 translog 文件的 os cache 中，如果此时机器挂了，会丢失 5 秒钟的数据。但是这样性能比较好，最多丢 5 秒的数据。<br>
-也可以将 translog 设置成每次写操作必须是直接 fsync 到磁盘，但是性能会差很多。</p>
-<p>es集群脑裂</p>
-<p>关于集群脑裂的定义请参考我的另一篇博文</p>
-<p><a href="https://blog.csdn.net/sinat_34814635/article/details/129914369" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/sinat_34814635/article/details/129914369</a></p>
-<p>那么es是如何解决脑裂问题的？</p>
-<p>es是直到有足够的master候选节点时，才可以选举出一个master，否则就不要选举出一个master。</p>
-<p>这个参数必须被设置为集群中master候选节点的quorum数量，也就是大多数，至于quorum的算法，就是：master候选节点数量 / 2 + 1。</p>
-<p>综上所述，一个生产环境的es集群，至少要有3个节点，同时将这个参数设置为quorum，也就是2。discovery.zen.minimum_master_nodes设置为2</p>
-<p>那么这个是参数是如何避免脑裂问题的产生的呢？比如我们有3个节点，quorum是2.现在网络故障，1个节点在一个网络区域，另外2个节点在另外一个网络区域，不同的网络区域内无法通信。</p>
-<p>这个时候有两种情况情况：</p>
-<p>（1）如果master是单独的那个节点，另外2个节点是master候选节点，那么此时那个单独的master节点因为没有指定数量的候选master node在自己当前所在的集群内，因此就会取消当前master的角色，尝试重新选举，但是无法选举成功。然后另外一个网络区域内的node因为无法连接到master，就会发起重新选举，因为有两个master候选节点，满足了quorum，因此可以成功选举出一个master。此时集群中就会还是只有一个master。</p>
-<p>（2）如果master和另外一个node在一个网络区域内，然后一个node单独在一个网络区域内。那么此时那个单独的node因为连接不上master，会尝试发起选举，但是因为master候选节点数量不到quorum，因此无法选举出master。而另外一个网络区域内，原先的那个master还会继续工作。这也可以保证集群内只有一个master节点。</p>
-<p>综上所述，集群中master节点的数量至少3台，三台主节点通过在elasticsearch.yml中配置discovery.zen.minimum_master_nodes: 2，就可以避免脑裂问题的产生。</p>
-<h2> 四、ElasticSearch应用</h2>
-<h3> 1.Elasticsearch SQL</h3>
-<figure><figcaption>img_126.png</figcaption></figure>
-<p>Elasticsearch SQL允许执行类SQL的查询，可以使用REST接口、命令行或者是JDBC，都可以使用SQL来进行数据的检索和数据的聚合。</p>
-<p>Elasticsearch SQL特点：</p>
-<p>本地集成</p>
-<p>Elasticsearch SQL是专门为Elasticsearch构建的。每个SQL查询都根据底层存储对相关节点有效执行。</p>
-<p>没有额外的要求</p>
-<p>不依赖其他的硬件、进程、运行时库，Elasticsearch SQL可以直接运行在Elasticsearch集群上</p>
-<p>轻量且高效</p>
-<p>像SQL那样简洁、高效地完成查询</p>
-<p>Elasticsearch SQL提供了sql转换的功能，但是只能满足一些简单的查询，例如：不支持JOIN、不支持较复杂的子查询。官方还是推荐使用DSL语句来实现</p>
-<h3> 2.Java客户端</h3>
-<p>这个就自己看官网吧</p>
-<h3> 3.es和mysql的双写</h3>
-<p>双写的流程：</p>
-<ul>
-<li>1.先写数据库，然后写es，es只存常搜索的索引字段。</li>
-<li>2.读取时先读es，找到对应主键后，然后根据主键在读mysql。（这种场景主要出现在mysql是分表的，而主键配置的是分片键，非分片键的查询将扫描全表）<br>
-首先不建议进行双写，因为会造成数据不一致这样新的问题。造成不一致的原因为写入es或者更新es字段失败，加上补充机制后也没有成功。</li>
-</ul>
-<p>双写的同步</p>
-<p>分页查询mysql中的数据，放入mq中（放入mq中的原因，为读取mysql的线程会远比执行同步的线程速度快），同步线程从mq中拉起数据，然后和es对比，如果不同，与mysql中的数据为准，进行删除复制。</p>
-<p>补偿机制</p>
-<p>我认为任何对es写失败，更新失败，删除失败都应该纪录下来，然后去手动操作使其同步。</p>
-<h2> 五、ElasticSearch安装配置</h2>
-<h3> 1.安装ElasticSearch</h3>
-<p>解压下载的压缩包，本次使用7.14.0版本</p>
-<p>从v7开始，elasticsearch不用单独安装JDK，因为它在下载时会自动下载对应的jdk包。因此不用额外下载jdk和配置环境变量。</p>
-<p>在终端cd到elasticsearch的bin目录，运行命令./elasticsearch即可开启es数据库服务（在终端通过按control + c可停止服务）。在网页中访问localhost:9200看到json结果即启动成功。</p>
-<p>如下图所示：</p>
-<figure><figcaption>img_127.png</figcaption></figure>
-<h3> 2.安装Kibana</h3>
-<p>下载可视化工具Kibanahttps://www.elastic.co/cn/downloads/kibana</p>
-<p>解压下载的压缩包，并将其复制粘贴至自己想要存放的目录。Kibana的版本最好和es保持一致，如这次同样使用7.14.0版本</p>
-<p>启动Kibana</p>
-<p>在终端cd到Kibana目录下，运行命令./Kibana即可开启Kibana的端口访问。在网页中访问http://localhost:5601跳转到如下界面即访问成功。</p>
-<p>访问下面地址：<a href="http://localhost:5601/app/dev_tools#/console" target="_blank" rel="noopener noreferrer">http://localhost:5601/app/dev_tools#/console</a> 可进入管理后台</p>
-<figure><figcaption>img_128.png</figcaption></figure>
-<p>ElasticSearch可视化工具之cerebro</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Mock单测方式</title>
-      <link>https://ujava.cn/highfreq/mock.html</link>
-      <guid>https://ujava.cn/highfreq/mock.html</guid>
-      <source url="https://ujava.cn/rss.xml">Mock单测方式</source>
-      <description>简介 通过Mock方式，测试编写的程序 通用类定义 @SpringBootTest(classes = Application.class) @RunWith(SpringJUnit4ClassRunner.class) @Slf4j public class BaseTest { @BeforeClass public static void before() { } }</description>
-      <category>设计高频</category>
-      <pubDate>Mon, 25 Mar 2024 03:10:48 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 简介</h2>
-<p>通过Mock方式，测试编写的程序</p>
-<p>通用类定义</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 方式一（直接操作库表）</h2>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 方式二（启动容器）</h2>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 方式三（不启动容器）</h2>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Mock静态数据</h2>
-<p>在实际工作当中，我们经常会遇到需要对静态方法进行 mock 的情况。在 mockito 2.x 的时代，我们需要借助 powmock 才能实现。当<br>
-mockito 进化到了 3.4.0 版本以后，也开始对静态方法 mock 进行了支持（主要是通过 mockito-inline 包）。</p>
-<p>简单的介绍就到这里，下面让我们进入主题吧。</p>
-<p>首先确保 pom 文件中 mockito 相关 jar 包的版本（这里我用的版本是 3.7.7），如下：</p>
-<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>使用方式</p>
-<p>Mockito.mockStatic(Class mockClass)，如下：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>示例：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样基本上就 OK 了。唯一需要注意下的就是 httpClient.close()。</p>
-<p>如果项目中未引入 mockito-inline，会出现如下错误信息：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>错误提示 static mocking is already registered in the current thread To create a new mock, the existing static mock<br>
-registration must be deregistered</p>
-<p>当多个单元测试都使用了同一个 static mock 对象，且使用完成后都没有进行 close。此时，若这几个单元测试用一起执行，第一个单元测试占用了<br>
-static mock 对象，第二个单元测试就没有办法再占用了。</p>
-<p>如果出现了这种情况，解决办法也很简单，就是关闭 static mock 对象，如下：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果你的很多单元测试中都用到了 mockStatic(HTTPClient.class)，且觉得在每个单元测试当中都写一遍 mockStatic()…close()<br>
-很低效，可以采用下边的方式：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Mock缓存数据</h2>
-<p>在Mockito中，你可以使用Mockito.when配合相应的调用记录方法来模拟缓存场景。以下是一个简单的例子，展示了如何使用Mockito来模拟一个缓存方法的行为：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在这个例子中，我们首先通过ConcurrentHashMap模拟了一个简单的缓存。然后我们使用Mockito.spy创建了一个被测试方法所在类的模拟实例。通过Mockito.doReturn我们配置了当调用getFromCache方法并传递特定的key时，模拟方法返回预先定义的值。最后，我们使用Mockito.verify来验证缓存访问方法是否被调用了。这个例子展示了如何使用Mockito来模拟和验证缓存相关的行为。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -1932,110 +2743,6 @@ AB 测试，其中功能是根据位置或设备等属性推出的。实现此�
       <pubDate>Sun, 03 Mar 2024 03:36:58 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 概述</h2>
 <p>预计将来需要扩展对象的接口。其他接口由扩展对象定义。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>扇出扇入模式</title>
-      <link>https://ujava.cn/design/other/fanoutfanin.html</link>
-      <guid>https://ujava.cn/design/other/fanoutfanin.html</guid>
-      <source url="https://ujava.cn/rss.xml">扇出扇入模式</source>
-      <description>概述 (Fan-Out/Fan-In) 当源系统需要运行一个或多个将提取某些数据的长时间运行的进程时，将使用该模式。源不会阻止自己等待回复。 该模式将在多个服务或计算机中运行相同的函数来获取数据。这相当于在不同的数据块上多次调用该函数。</description>
-      <category>设计模式</category>
-      <pubDate>Sun, 03 Mar 2024 03:36:58 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>(Fan-Out/Fan-In)</p>
-<p>当源系统需要运行一个或多个将提取某些数据的长时间运行的进程时，将使用该模式。源不会阻止自己等待回复。<br><br>
-该模式将在多个服务或计算机中运行相同的函数来获取数据。这相当于在不同的数据块上多次调用该函数。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>事件异步模式</title>
-      <link>https://ujava.cn/design/other/eventasynchronous.html</link>
-      <guid>https://ujava.cn/design/other/eventasynchronous.html</guid>
-      <source url="https://ujava.cn/rss.xml">事件异步模式</source>
-      <description>概述 基于事件的异步模式提供了多线程应用程序的优势，同时隐藏了多线程设计中固有的许多复杂问题。使用支持此模式的类可以： 在“后台”执行耗时的任务，例如下载和数据库操作，而不会中断应用程序。 同时执行多个操作，每个操作完成后接收通知。 等待资源可用，而不停止（“挂起”）您的应用程序。 使用熟悉的事件和委托模型与挂起的异步操作进行通信。</description>
-      <category>设计模式</category>
-      <pubDate>Sun, 03 Mar 2024 03:14:23 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>基于事件的异步模式提供了多线程应用程序的优势，同时隐藏了多线程设计中固有的许多复杂问题。使用支持此模式的类可以：</p>
-<ol>
-<li>在“后台”执行耗时的任务，例如下载和数据库操作，而不会中断应用程序。</li>
-<li>同时执行多个操作，每个操作完成后接收通知。</li>
-<li>等待资源可用，而不停止（“挂起”）您的应用程序。</li>
-<li>使用熟悉的事件和委托模型与挂起的异步操作进行通信。</li>
-</ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>事件驱动架构模式</title>
-      <link>https://ujava.cn/design/other/eventdrivenarchitecture.html</link>
-      <guid>https://ujava.cn/design/other/eventdrivenarchitecture.html</guid>
-      <source url="https://ujava.cn/rss.xml">事件驱动架构模式</source>
-      <description>概述 使用事件驱动架构向其他应用程序发送和通知对象的状态更改。</description>
-      <category>设计模式</category>
-      <pubDate>Sun, 03 Mar 2024 03:14:23 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>使用事件驱动架构向其他应用程序发送和通知对象的状态更改。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>事件队列模式</title>
-      <link>https://ujava.cn/design/other/eventqueue.html</link>
-      <guid>https://ujava.cn/design/other/eventqueue.html</guid>
-      <source url="https://ujava.cn/rss.xml">事件队列模式</source>
-      <description>概述 事件队列设计模式（也称为消息队列）的目的是解耦系统内事件的发送方和接收方之间的关系。通过将双方解耦，它们不会同时与事件队列交互。从本质上讲，事件队列以异步方式处理和处理请求，因此，该系统可以被描述为先进先出的设计模式模型。如果存在可访问性有限的资源（即音频或数据库），则事件队列是一种合适的模式，但是，您需要提供对查找此资源的所有请求的访问权限。从队列中访问事件时，程序还会将其从队列中删除。</description>
-      <category>设计模式</category>
-      <pubDate>Sun, 03 Mar 2024 03:14:23 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>事件队列设计模式（也称为消息队列）的目的是解耦系统内事件的发送方和接收方之间的关系。通过将双方解耦，它们不会同时与事件队列交互。从本质上讲，事件队列以异步方式处理和处理请求，因此，该系统可以被描述为先进先出的设计模式模型。如果存在可访问性有限的资源（即音频或数据库），则事件队列是一种合适的模式，但是，您需要提供对查找此资源的所有请求的访问权限。从队列中访问事件时，程序还会将其从队列中删除。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>事件溯源模式</title>
-      <link>https://ujava.cn/design/other/eventsourcing.html</link>
-      <guid>https://ujava.cn/design/other/eventsourcing.html</guid>
-      <source url="https://ujava.cn/rss.xml">事件溯源模式</source>
-      <description>概述 不要只在域中存储数据的当前状态，而是使用仅追加存储来记录对该数据执行的一系列操作。存储充当记录系统，可用于具体化域对象。这可以简化复杂域中的任务，避免同步数据模型和业务域，同时提高性能、可伸缩性和响应能力。它还可以为事务数据提供一致性，并维护完整的审计跟踪和历史记录，从而实现补偿操作。</description>
-      <category>设计模式</category>
-      <pubDate>Sun, 03 Mar 2024 03:14:23 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>不要只在域中存储数据的当前状态，而是使用仅追加存储来记录对该数据执行的一系列操作。存储充当记录系统，可用于具体化域对象。这可以简化复杂域中的任务，避免同步数据模型和业务域，同时提高性能、可伸缩性和响应能力。它还可以为事务数据提供一致性，并维护完整的审计跟踪和历史记录，从而实现补偿操作。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>事件聚合器模式</title>
-      <link>https://ujava.cn/design/other/eventaggregator.html</link>
-      <guid>https://ujava.cn/design/other/eventaggregator.html</guid>
-      <source url="https://ujava.cn/rss.xml">事件聚合器模式</source>
-      <description>概述 当客户端想要订阅事件时，具有大量对象的系统可能会导致复杂性。客户端必须为每个对象单独查找和注册，如果每个对象都有多个事件，则每个事件都需要单独的订阅。</description>
-      <category>设计模式</category>
-      <pubDate>Sun, 03 Mar 2024 03:00:03 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>当客户端想要订阅事件时，具有大量对象的系统可能会导致复杂性。客户端必须为每个对象单独查找和注册，如果每个对象都有多个事件，则每个事件都需要单独的订阅。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>委托模式</title>
-      <link>https://ujava.cn/design/other/delegate.html</link>
-      <guid>https://ujava.cn/design/other/delegate.html</guid>
-      <source url="https://ujava.cn/rss.xml">委托模式</source>
-      <description>概述 委托模式提供了一种机制，用于抽象出所需操作的实现和控制。</description>
-      <category>设计模式</category>
-      <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>委托模式提供了一种机制，用于抽象出所需操作的实现和控制。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>依赖注入模式</title>
-      <link>https://ujava.cn/design/other/dependencyinjection.html</link>
-      <guid>https://ujava.cn/design/other/dependencyinjection.html</guid>
-      <source url="https://ujava.cn/rss.xml">依赖注入模式</source>
-      <description>概述 依赖注入模式处理对象如何处理其依赖关系。该模式实现了所谓的反转控制原理。控制反转有两个具体规则： - 高级模块不应依赖于低级模块。两者都应该依赖于抽象。- 抽象不应依赖于细节。细节应取决于抽象。</description>
-      <category>设计模式</category>
-      <pubDate>Fri, 01 Mar 2024 02:50:49 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>依赖注入模式处理对象如何处理其依赖关系。该模式实现了所谓的反转控制原理。控制反转有两个具体规则： - 高级模块不应依赖于低级模块。两者都应该依赖于抽象。- 抽象不应依赖于细节。细节应取决于抽象。</p>
 ]]></content:encoded>
     </item>
   </channel>
