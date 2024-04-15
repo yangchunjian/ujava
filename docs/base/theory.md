@@ -5,8 +5,6 @@ tag:
   - 基础
 ---
 
-## 简介
-
 ## 一、单一职责原则
 
 单一职责原则：英文名称是Single Responsiblity Principle，简称是SRP。定义：应该有且仅有一个原因引起类的变更。
