@@ -1,8 +1,10 @@
 ---
-title: 设计算法:常见算法
+title: 算法分类
 icon: laptop-code
 category:
   - 设计算法
+tag:
+  - 算法
 ---
 
 ## 设计算法
