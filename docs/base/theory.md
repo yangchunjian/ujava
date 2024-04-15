@@ -1,8 +1,8 @@
 ---
-title: 六大设计原则
+title: 设计原则
 icon: laptop-code
-category:
-  - 设计原理
+tag:
+  - 基础
 ---
 
 ## 简介

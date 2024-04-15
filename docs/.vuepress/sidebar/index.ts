@@ -40,6 +40,13 @@ export default sidebar({
             children: "structure",
         },
         {
+            text: "设计基础",
+            icon: "star",
+            collapsible: true,
+            prefix: "base/",
+            children: "structure",
+        },
+        {
             text: "设计原理",
             icon: "star",
             collapsible: true,
