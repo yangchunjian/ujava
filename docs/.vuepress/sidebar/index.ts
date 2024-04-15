@@ -110,13 +110,6 @@ export default sidebar({
             children: "structure",
         },
         {
-            text: "设计高频",
-            icon: "star",
-            collapsible: true,
-            prefix: "highfreq/",
-            children: "structure",
-        },
-        {
             text: "设计算法",
             icon: "star",
             collapsible: true,
@@ -128,6 +121,13 @@ export default sidebar({
             icon: "star",
             collapsible: true,
             prefix: "java/",
+            children: "structure",
+        },
+        {
+            text: "设计综合",
+            icon: "star",
+            collapsible: true,
+            prefix: "synthesis/",
             children: "structure",
         }
     ],
