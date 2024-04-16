@@ -4,17 +4,57 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-04-15T11:12:27.737Z</updated>
+  <updated>2024-04-16T01:53:40.979Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
+  <category term="设计组件"/>
   <category term="设计综合"/>
   <category term="设计基础"/>
-  <category term="设计组件"/>
   <category term="设计算法"/>
   <category term="设计高频"/>
   <category term="设计注意"/>
   <category term="设计模式"/>
+  <entry>
+    <title type="text">组件Dubbo</title>
+    <id>https://ujava.cn/assembly/dubbo.html</id>
+    <link href="https://ujava.cn/assembly/dubbo.html"/>
+    <updated>2024-04-16T01:53:26.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-16T01:53:26.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件MySQL</title>
+    <id>https://ujava.cn/assembly/mysql.html</id>
+    <link href="https://ujava.cn/assembly/mysql.html"/>
+    <updated>2024-04-16T01:53:26.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-16T01:53:26.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件Redis</title>
+    <id>https://ujava.cn/assembly/redis.html</id>
+    <link href="https://ujava.cn/assembly/redis.html"/>
+    <updated>2024-04-16T01:53:26.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-16T01:53:26.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件Spring</title>
+    <id>https://ujava.cn/assembly/spring.html</id>
+    <link href="https://ujava.cn/assembly/spring.html"/>
+    <updated>2024-04-16T01:53:26.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-16T01:53:26.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件ZooKeeper</title>
+    <id>https://ujava.cn/assembly/zookeeper.html</id>
+    <link href="https://ujava.cn/assembly/zookeeper.html"/>
+    <updated>2024-04-16T01:53:26.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-16T01:53:26.000Z</published>
+  </entry>
   <entry>
     <title type="text">MySQL慢查询</title>
     <id>https://ujava.cn/synthesis/mysqlslow.html</id>
@@ -6394,88 +6434,6 @@ java中的继承</p>
 ]]></summary>
     <content type="html"><![CDATA[<h2> 概述</h2>
 <p>保存元数据中对象关系映射的详细信息。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">模块模式</title>
-    <id>https://ujava.cn/design/other/module.html</id>
-    <link href="https://ujava.cn/design/other/module.html"/>
-    <updated>2024-03-04T07:11:24.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>模块模式用于实现软件模块的概念，由模块化编程定义，在对概念的不完全直接支持的编程语言中。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>模块模式用于实现软件模块的概念，由模块化编程定义，在对概念的不完全直接支持的编程语言中。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">单体(monad)模式</title>
-    <id>https://ujava.cn/design/other/monad.html</id>
-    <link href="https://ujava.cn/design/other/monad.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>基于线性代数的单子模式代表了将运算逐步链接在一起的方式。绑定函数可以描述为基于“相同类型”合约将一个人的输出传递给另一个人的输入。</p>
-<p>从形式上讲，monad 由一个类型构造函数 M 和两个操作组成：</p>
-<ul>
-<li>bind - 将 monadic 对象和一个函数从普通对象转换为 monadic 值并返回 monadic value</li>
-<li>return - 它接受普通类型对象并返回包装在 monadic 值中的此对象。</li>
-</ul>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>基于线性代数的单子模式代表了将运算逐步链接在一起的方式。绑定函数可以描述为基于“相同类型”合约将一个人的输出传递给另一个人的输入。</p>
-<p>从形式上讲，monad 由一个类型构造函数 M 和两个操作组成：</p>
-<ul>
-<li>bind - 将 monadic 对象和一个函数从普通对象转换为 monadic 值并返回 monadic value</li>
-<li>return - 它接受普通类型对象并返回包装在 monadic 值中的此对象。</li>
-</ul>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">单态(MonoState)模式</title>
-    <id>https://ujava.cn/design/other/monostate.html</id>
-    <link href="https://ujava.cn/design/other/monostate.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>强制执行一种行为，例如在所有实例之间共享相同的状态。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>强制执行一种行为，例如在所有实例之间共享相同的状态。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">多态(Multiton)模式</title>
-    <id>https://ujava.cn/design/other/multiton.html</id>
-    <link href="https://ujava.cn/design/other/multiton.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>确保类只有有限数量的实例，并提供对它们的全局访问点。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>确保类只有有限数量的实例，并提供对它们的全局访问点。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">静音(Mute Idiom)模式</title>
-    <id>https://ujava.cn/design/other/muteidiom.html</id>
-    <link href="https://ujava.cn/design/other/muteidiom.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>提供一个模板来抑制任何已声明但不能发生或只应记录的异常；<br>
-同时执行一些业务逻辑。该模板消除了重复写入“try-catch”块的需要。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>提供一个模板来抑制任何已声明但不能发生或只应记录的异常；<br>
-同时执行一些业务逻辑。该模板消除了重复写入“try-catch”块的需要。</p>
 ]]></content>
     <category term="设计模式"/>
     <published>2024-03-04T01:48:41.000Z</published>

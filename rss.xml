@@ -6,17 +6,57 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Mon, 15 Apr 2024 11:12:27 GMT</pubDate>
-    <lastBuildDate>Mon, 15 Apr 2024 11:12:27 GMT</lastBuildDate>
+    <pubDate>Tue, 16 Apr 2024 01:53:40 GMT</pubDate>
+    <lastBuildDate>Tue, 16 Apr 2024 01:53:40 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>设计组件</category>
     <category>设计综合</category>
     <category>设计基础</category>
-    <category>设计组件</category>
     <category>设计算法</category>
     <category>设计高频</category>
     <category>设计注意</category>
     <category>设计模式</category>
+    <item>
+      <title>组件Dubbo</title>
+      <link>https://ujava.cn/assembly/dubbo.html</link>
+      <guid>https://ujava.cn/assembly/dubbo.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件Dubbo</source>
+      <category>设计组件</category>
+      <pubDate>Tue, 16 Apr 2024 01:53:26 GMT</pubDate>
+    </item>
+    <item>
+      <title>组件MySQL</title>
+      <link>https://ujava.cn/assembly/mysql.html</link>
+      <guid>https://ujava.cn/assembly/mysql.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件MySQL</source>
+      <category>设计组件</category>
+      <pubDate>Tue, 16 Apr 2024 01:53:26 GMT</pubDate>
+    </item>
+    <item>
+      <title>组件Redis</title>
+      <link>https://ujava.cn/assembly/redis.html</link>
+      <guid>https://ujava.cn/assembly/redis.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件Redis</source>
+      <category>设计组件</category>
+      <pubDate>Tue, 16 Apr 2024 01:53:26 GMT</pubDate>
+    </item>
+    <item>
+      <title>组件Spring</title>
+      <link>https://ujava.cn/assembly/spring.html</link>
+      <guid>https://ujava.cn/assembly/spring.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件Spring</source>
+      <category>设计组件</category>
+      <pubDate>Tue, 16 Apr 2024 01:53:26 GMT</pubDate>
+    </item>
+    <item>
+      <title>组件ZooKeeper</title>
+      <link>https://ujava.cn/assembly/zookeeper.html</link>
+      <guid>https://ujava.cn/assembly/zookeeper.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件ZooKeeper</source>
+      <category>设计组件</category>
+      <pubDate>Tue, 16 Apr 2024 01:53:26 GMT</pubDate>
+    </item>
     <item>
       <title>MySQL慢查询</title>
       <link>https://ujava.cn/synthesis/mysqlslow.html</link>
@@ -5974,72 +6014,6 @@ java中的继承</p>
       <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 概述</h2>
 <p>保存元数据中对象关系映射的详细信息。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>模块模式</title>
-      <link>https://ujava.cn/design/other/module.html</link>
-      <guid>https://ujava.cn/design/other/module.html</guid>
-      <source url="https://ujava.cn/rss.xml">模块模式</source>
-      <description>概述 模块模式用于实现软件模块的概念，由模块化编程定义，在对概念的不完全直接支持的编程语言中。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>模块模式用于实现软件模块的概念，由模块化编程定义，在对概念的不完全直接支持的编程语言中。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>单体(monad)模式</title>
-      <link>https://ujava.cn/design/other/monad.html</link>
-      <guid>https://ujava.cn/design/other/monad.html</guid>
-      <source url="https://ujava.cn/rss.xml">单体(monad)模式</source>
-      <description>概述 基于线性代数的单子模式代表了将运算逐步链接在一起的方式。绑定函数可以描述为基于“相同类型”合约将一个人的输出传递给另一个人的输入。 从形式上讲，monad 由一个类型构造函数 M 和两个操作组成： bind - 将 monadic 对象和一个函数从普通对象转换为 monadic 值并返回 monadic value return - 它接受普通类型对象并返回包装在 monadic 值中的此对象。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>基于线性代数的单子模式代表了将运算逐步链接在一起的方式。绑定函数可以描述为基于“相同类型”合约将一个人的输出传递给另一个人的输入。</p>
-<p>从形式上讲，monad 由一个类型构造函数 M 和两个操作组成：</p>
-<ul>
-<li>bind - 将 monadic 对象和一个函数从普通对象转换为 monadic 值并返回 monadic value</li>
-<li>return - 它接受普通类型对象并返回包装在 monadic 值中的此对象。</li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>单态(MonoState)模式</title>
-      <link>https://ujava.cn/design/other/monostate.html</link>
-      <guid>https://ujava.cn/design/other/monostate.html</guid>
-      <source url="https://ujava.cn/rss.xml">单态(MonoState)模式</source>
-      <description>概述 强制执行一种行为，例如在所有实例之间共享相同的状态。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>强制执行一种行为，例如在所有实例之间共享相同的状态。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>多态(Multiton)模式</title>
-      <link>https://ujava.cn/design/other/multiton.html</link>
-      <guid>https://ujava.cn/design/other/multiton.html</guid>
-      <source url="https://ujava.cn/rss.xml">多态(Multiton)模式</source>
-      <description>概述 确保类只有有限数量的实例，并提供对它们的全局访问点。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>确保类只有有限数量的实例，并提供对它们的全局访问点。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>静音(Mute Idiom)模式</title>
-      <link>https://ujava.cn/design/other/muteidiom.html</link>
-      <guid>https://ujava.cn/design/other/muteidiom.html</guid>
-      <source url="https://ujava.cn/rss.xml">静音(Mute Idiom)模式</source>
-      <description>概述 提供一个模板来抑制任何已声明但不能发生或只应记录的异常； 同时执行一些业务逻辑。该模板消除了重复写入“try-catch”块的需要。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 01:48:41 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>提供一个模板来抑制任何已声明但不能发生或只应记录的异常；<br>
-同时执行一些业务逻辑。该模板消除了重复写入“try-catch”块的需要。</p>
 ]]></content:encoded>
     </item>
   </channel>
