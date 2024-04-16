@@ -259,5 +259,5 @@ highlights:
 #        link: https://theme-hope.vuejs.press/zh/guide/advanced/pwa.html
 #
 copyright: false
-footer: 版权所有 © 2023-present ujava
+footer: 版权所有 © 2020-present ujava
 ---
