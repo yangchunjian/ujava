@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-04-17T01:12:28.946Z</updated>
+  <updated>2024-04-17T03:53:01.515Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -1086,7 +1086,372 @@ transaction-isolation = READ-COMMITTED</p>
     <title type="text">组件Redis</title>
     <id>https://ujava.cn/assembly/redis.html</id>
     <link href="https://ujava.cn/assembly/redis.html"/>
-    <updated>2024-04-16T01:53:26.000Z</updated>
+    <updated>2024-04-17T03:53:01.000Z</updated>
+    <summary type="html"><![CDATA[<p>NoSQL:即Not-OnlySQL(泛指非关系型的数据库)，作为关系型数据库的补充。<br>
+作用:应对基于海量用户和海量数据前提下的数据处理问题。</p>
+<h2> Redis介绍</h2>
+<h4> 概念</h4>
+<p>Redis(REmote DlctionaryServer)是用C语言开发的一个开源的高性能键值对(key-value)数据库</p>
+<h4> 特征</h4>
+<p>1.数据间没有必然的关联关系</p>
+<p>2.内部采用单线程机制进行工作</p>
+<p>3.高性能</p>
+<p>4.支持多种数据类型</p>
+<p>5.支持持久化，可以存硬盘。</p>
+<h4> 应用</h4>]]></summary>
+    <content type="html"><![CDATA[<p>NoSQL:即Not-OnlySQL(泛指非关系型的数据库)，作为关系型数据库的补充。<br>
+作用:应对基于海量用户和海量数据前提下的数据处理问题。</p>
+<h2> Redis介绍</h2>
+<h4> 概念</h4>
+<p>Redis(REmote DlctionaryServer)是用C语言开发的一个开源的高性能键值对(key-value)数据库</p>
+<h4> 特征</h4>
+<p>1.数据间没有必然的关联关系</p>
+<p>2.内部采用单线程机制进行工作</p>
+<p>3.高性能</p>
+<p>4.支持多种数据类型</p>
+<p>5.支持持久化，可以存硬盘。</p>
+<h4> 应用</h4>
+<p>热点信息，时效性信息，分布式数据共享，消息队列，即使信息查询。</p>
+<h3> 在虚拟机上启动redis服务</h3>
+<p>通过指定的配置文件启动redis服务，</p>
+<ol>
+<li>查看进程：ps -ef | grep redis</li>
+<li>进入配置文件的目录cd /usr/local/redis/bin/</li>
+<li>输入 ./redis-server redis.conf</li>
+<li>输入 ./redis-cli</li>
+<li>关闭服务并退出：shutdown 然后：exit</li>
+</ol>
+<h3> 键值对</h3>
+<p>设置键值对</p>
+<p>​ 语法：set key value</p>
+<p>获取键值对</p>
+<p>​ 语法：get key</p>
+<p>判断键是否存在：exist key</p>
+<p><strong>设置过期时间</strong>： expire key 时间</p>
+<p>查看过期时间： ttl key</p>
+<p>查看当前key的数据类型：&gt; type key</p>
+<p>删除key：del key</p>
+<h3> 库</h3>
+<p>redis共有16个库</p>
+<h4> 选择数据库</h4>
+<p>语法：select 数字</p>
+<h4> 查看</h4>
+<p>查看大小：dbsize</p>
+<p>查看数据库所有的键：keys *</p>
+<h4> 清空</h4>
+<p>清空当前数据库：flushdb</p>
+<p>清空所有：flushall</p>
+<h3> 基本数据类型</h3>
+<h4> String</h4>
+<p>追加字符串，不存在则新建：append key1 "hello"</p>
+<p>获取字符串长度：strlen key1</p>
+<p>初始浏览量为0 ：set views 0</p>
+<p>设置自增1：incr views</p>
+<p>设置自减1：decr views</p>
+<p>可以设置步长。每次的增长值 : INCRBY views 10 #</p>
+<p>获取指定范围的值: GETRANGE key 起始点 结束点</p>
+<p>获取所有长度的值: GETRANGE key 0 -1</p>
+<p>设置多个值:</p>
+<p>mset key value key value ……</p>
+<p>mget key key key</p>
+<p>msetnx 原子性操作设置多个值</p>
+<p><strong>设置过期时间和值:</strong></p>
+<p>设置key3 的值为 he11o,30秒后过期: setex key3 30 "he1lo"</p>
+<p>先get然后在set: getset</p>
+<h2> List</h2>
+<p>LPuSH key value</p>
+<p>LPUSH list one #将一个值或者多个值，插入到列表头部(左)</p>
+<p>RPUSH key value</p>
+<p>Rpush list righr #将一个值或者多个值，插入到列表位部(右)</p>
+<p>lrange key start end</p>
+<p>LRANGE list 0 1 #通过区间获取具体的值!</p>
+<p>LROR key #移出并获取列表的第一个元素</p>
+<p>lindex list 1 #通过下标获得list 中的某一个值!</p>
+<p>Llen list # 返回列表的长度</p>
+<p>lrem key count value</p>
+<p>lrem list 1 one # 移除list集合中指定个数的value，精确匹配</p>
+<p>ltrim list 1 2 #截取指定的长度!</p>
+<p>lset 将列表中指定下标的值替换为另外一个值，更新操作</p>
+<p>lset list 0 item #如果存在，更新当前下标的值</p>
+<p>在指定元素前后插入指定的值</p>
+<p>LINSERT mylist after world new</p>
+<h2> set</h2>
+<p>set集合中添加</p>
+<p>sadd key value</p>
+<p>sadd myset "hello"</p>
+<p>查看指定set的所有值</p>
+<p>smembers key</p>
+<p>SMEMBERS myset</p>
+<p>判断某一个值是不是在set集合中!</p>
+<p>sismember key value</p>
+<p>SISMEMBER myset hello</p>
+<p>查看个数</p>
+<p>scard key</p>
+<p>scard myset</p>
+<p>移除set集合中的指定元素</p>
+<p>srem key value</p>
+<p>srem myset hello</p>
+<p>获取随机</p>
+<p>SRANDMEMBER myset</p>
+<p>SRANDMEMBER myset 2</p>
+<p>smove myset myset2 "kuangshen"# 将一个指定的值，移动到另外一个set集合!</p>
+<p>SDIFF key1 key2 差集</p>
+<p>SINTER key1 key2 交集</p>
+<p>SUNION key1 key2 并集</p>
+<h2> hash</h2>
+<p>hset 集合名 key value</p>
+<p>hset myhash field1 hello</p>
+<h1> set一个具体key-vlaue</h1>
+<p>获取一个字段值</p>
+<p>hget 集合名 key键</p>
+<p>hget myhash field1</p>
+<p>添加多个 key-vlaue</p>
+<p>hmset 集合 key键1 key键2</p>
+<p>hmset myhash field1 hello field2 world</p>
+<p>获取多个字段值</p>
+<p>hmget 集合名 key1 key2</p>
+<p>hmget myhash field1 field2</p>
+<p>获取全部的数据</p>
+<p>hget 集合名</p>
+<p>hgetall myhash</p>
+<p>删除hash指定key字段!对应的value值也就消失了!</p>
+<p>hdel 集合名 key</p>
+<p>hdel myhash field1</p>
+<p>判断hash中指定字段是否存在!</p>
+<p>HEXISTS myhash field1</p>
+<p>只获得所有field</p>
+<p>hkeys 集合名</p>
+<p>hkeys myhash</p>
+<p>只获得所有value</p>
+<p>hvals 集合名</p>
+<p>hvals myhash</p>
+<p>设置自动增长</p>
+<p>HINCRBY myhash field3 1</p>
+<p>HINCRBY myhash field3 -1</p>
+<p>如果不存在则可以设置</p>
+<p>hsetnx myhash field4 hello</p>
+<p>如果存在则不能设置</p>
+<p>hsetnx myhash field4 world</p>
+<h2> zset</h2>
+<p>zset在set的基础上增加了一个值，set k1 v1 zset k1 score1 v1</p>
+<p>添加一个值</p>
+<p>zadd key score value</p>
+<p>zadd myset 1 one</p>
+<p>添加多个值</p>
+<p>zadd myset 2 two 3 three</p>
+<p>获取范围值</p>
+<p>zrange key start end</p>
+<p>zrange myset 0 -1</p>
+<p>显示全部内容从小到大</p>
+<p>ZRANGEBYSCORE key min max [WITHSCORES] [LIMIT offset count]</p>
+<p>移除元素</p>
+<p>zrem key value</p>
+<hr>
+<h2> 特殊数据类型</h2>
+<h3> 地理位置geostital</h3>
+<p>创建一个元素</p>
+<p>geoadd key 纬度 经度 成员</p>
+<p>geoadd city 116.40 39.90 beijing</p>
+<p>获取坐标</p>
+<p>geopos city beijing</p>
+<p>获取两者之间的距离</p>
+<p>geodist key value1 value2 单位</p>
+<p>geodist city beijing shanghai km</p>
+<p>相关范围内的城市</p>
+<p>georadius key 纬度 经度 距离 单位 withdist</p>
+<p>找出指定位置内的其他元素</p>
+<p>georadiusbymember key value 距离 单位</p>
+<h3> bitmaps</h3>
+<p>位存储</p>
+<p>统计用户信息，活跃，不活跃!登录、未登录!打卡，365打卡!两个状态的，都可以使用Bitmaps!</p>
+<p>Bitmaps位图，数据结构!都是操作二进制位来进行记录，就只有0和1两个状态!</p>
+<p>365天=365 bit 1字节=8bit46个字节左右!</p>
+<p>设置一个元素</p>
+<p>setbit key offset value</p>
+<p>查看</p>
+<p>getbit sign offset</p>
+<hr>
+<h2> 事务</h2>
+<p>Redis 事务本质:一组命令的集合!一个事务中的所有命令都会被序列化，在事务执行过程的中，会按照顺序执行! 一次性、顺序性、排他性!执行一系列的命令!</p>
+<p>Redis命令保证原子性，但是事务不保证原子性！</p>
+<p>redis事务：</p>
+<p>1 开启事务：开启一个事务</p>
+<blockquote>
+<p>multi</p>
+</blockquote>
+<p>2 命令入队：将命令放入事务</p>
+<blockquote>
+<p>set key value</p>
+</blockquote>
+<p>3 执行事务：执行事务中的命令</p>
+<blockquote>
+<p>exec</p>
+</blockquote>
+<p>4 取消事务:事务中的命令都不会被执行</p>
+<blockquote>
+<p>discard</p>
+</blockquote>
+<p>eg：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果在入队的命令中有错误的命令，</p>
+<p>如果是编译时异常，那么所有命令都不会被执行。</p>
+<p>如果是运行时异常，那么其他命令正常执行，仅有错误的命令抛出错误信息。</p>
+<hr>
+<h2> 锁</h2>
+<h4> 悲观锁</h4>
+<p>很悲观，什么时候都要加锁。</p>
+<h4> 乐观锁</h4>
+<p>很乐观，认为什么时候都不会出问题，所以不会上锁!更新数据的时候去判断一下，在此期间是否有人修改过这个数据，<br>
+获取version<br>
+更新的时候比较version</p>
+<p>使用watch命令当作redis的乐观锁操作</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>unwatch</p>
+</blockquote>
+<p>如果发现事务执行失败，就先解锁</p>
+<hr>
+<h2> jedis</h2>
+<p>Jedis是redis的java版本的客户端实现，使用Jedis提供的Java API对Redis进行操作，是Redis官方推崇的方式；并且，使用Jedis提供的对Redis的支持也最为灵活、全面；不足之处，就是编码复杂度较高。</p>
+<h4> 导入依赖</h4>
+<figure><figcaption>img_84.png</figcaption></figure>
+<h4> 简单语法：</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr>
+<h2> SpringBoot整合</h2>
+<figure><figcaption>img_83.png</figcaption></figure>
+<p><strong>修改配置文件：</strong></p>
+<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>测试：</strong></p>
+<p>redisTemplate 操作不同的数据类型，api和我们的指令是一样的<br>
+opsForValue 操作字符串 类似String<br>
+opsForList 操作List 类似List<br>
+opsForSet<br>
+opsForHash<br>
+opsForzset<br>
+opsForGeo<br>
+opsForHyperLogLog</p>
+<p>除了基本的操作，我们常用的方法都可以直接通过redisTemplate操作，比如事务，和基本的CRUD</p>
+<h4> 获取redis的连接对象</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 配置自己的序列化方式</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr>
+<h2> Redis配置文件</h2>
+<p>redis里的单位配置，忽略大小写。</p>
+<blockquote>
+<p><strong>导入其他配置文件：</strong></p>
+</blockquote>
+<h1> include /path/to/local.conf</h1>
+<h1> include /path/to/other.conf</h1>
+<blockquote>
+<p>网络</p>
+</blockquote>
+<p>bind 127.0.0.1 #绑定的ip</p>
+<p>protected-mode yes #保护模式<br>
+port 6379 #端口设置</p>
+<blockquote>
+<p>通用 general</p>
+</blockquote>
+<p>daemonize yes #以守护进程的方式运行，默认是no，我们需要自己开启为yes!</p>
+<p>pidfile /var/run/redis_6379.pid #如果以后台的方式运行，我们就需要指定一个pid 文件!</p>
+<p>#日志</p>
+<p>#specify the server verbosity level.</p>
+<p>#This can be one of:</p>
+<p>#debug (a lot of information, useful for development/testing)</p>
+<p>#verbose (many rarely useful info, but not a mess like the debug level)</p>
+<p>#notice (moderately verbose, what you want in production probably) #生产环境</p>
+<p>#warning (only very important / critical messages are 1ogged)</p>
+<p>loglevel notice</p>
+<p>logfile,"" #日志的文件位置名</p>
+<p>databases 16 #数据库的数量，默认是16个数据库</p>
+<p>always-show-logo yes #是否总是显示LOGO</p>
+<h2> 持久化</h2>
+<p>持久化，在规定的时间内，执行了多少次操作，则会持久化到文件.rdb.aof<br>
+redis是内存数据库，如果没有持久化，那么数据断电及失!</p>
+<blockquote>
+<p>RDB配置：</p>
+</blockquote>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p><strong>设置密码</strong></p>
+</blockquote>
+<p>获取当前的密码：config get requirepass</p>
+<p>设置redis的密码：config set requirepass "123456"</p>
+<p>使用密码进行登录: auth 123456</p>
+<blockquote>
+<p>客户端</p>
+</blockquote>
+<p>设置能连接上redis的最大客户端的数量 : maxclients 10000</p>
+<p>redis 配置最大的内存容量: maxmemory (bytes)</p>
+<p>maxmemory-policy noeviction #内存到达上限之后的处理策略</p>
+<p>1、volatile-lru:只对设置了过期时间的key进行LRU(默认值)<br>
+2、al1keys-lru:删除1ru算法的key<br>
+3、volatile-random:随机删除即将过期key<br>
+4、a11keys-random:随机删除<br>
+5、volatile-ttl:删除即将过期的<br>
+6、noeviction :永不过期，返回错误</p>
+<blockquote>
+<p>触发机制</p>
+</blockquote>
+<p>1、save的规则满足的情况下，会自动触发rdb规则<br>
+2、执行 flushall命令，也会触发我们的rdb规则!<br>
+3、退出redis，也会产生rdb文件!<br>
+备份就自动生成一个dump</p>
+<blockquote>
+<p>如何恢复rdb文件</p>
+</blockquote>
+<p>1、只需要将rdb文件放在我们redis启动目录就可以，redis启动的时候会自动检查dump.rdb恢复其中的内容<br>
+2、查看需要存在的位置</p>
+<p>config get dir</p>
+<p>1)"dir"<br>
+2)"/usr/local/bin" # 如果在这个目录下存在dump.rdb 文件，启动就会自动恢复其中的数据</p>
+<p>优点:<br>
+1、适合大规模的数据恢复!<br>
+2、对数据的完整性要不高!<br>
+缺点:<br>
+1、需要一定的时间间隔进程操作!如果redis意外宕机了，这个最后一次修改数据就没有的了<br>
+2、fork进程的时候，会占用一定的内容空间!!</p>
+<blockquote>
+<p>AOF配置</p>
+</blockquote>
+<p>appendonly no #默认是不开启aof模式的，默认是使用rdb方式持久化的，在大部分所有的情况下，rdb完全够用!</p>
+<p>appendfilename "appendonly.aof" #持久化的文件的名字</p>
+<p>appendfsync always #每次修改都会 sync。消耗性能<br>
+appendfsync everysec #每秒执行一次sync，可能会丢失这1s的数据!</p>
+<p>appendfsync no #不执行 sync，这个时候操作系统自己同步数据，速度最快!</p>
+<blockquote>
+<p>搜索配置文件内容：</p>
+</blockquote>
+<p>vim 文件</p>
+<p>:/搜索内容 n下一个</p>
+<p>如果这个 aof 文件有错误，这时候redis 是启动不起来的吗，我们需要修复这个aof文件redis 给我们提供了一个工具 redis-check-aof --fix</p>
+<h3> 消息订阅</h3>
+<p>关注消息后，消息发出者可以发出订阅者都收到的消息。</p>
+<blockquote>
+<p>发送端：</p>
+</blockquote>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>接收端</p>
+</blockquote>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> redis主从复制</h2>
+<p>主从复制，读写分离!80%的情况下都是在进行读操作!减缓服务器的压力!架构中经常使用!一主二从!</p>
+<p>主从复制，是指将一台Redis服务器的数据，复制到其他的Redis服务器。前者称为主节点(master/leader)，后者称为从节点(slave/follower);数据的复制是单向的，只能由主节点到从节点。Master以写为主，Slave以读为主。</p>
+<p>注意：只配从库不配主库</p>
+<p>查看当前库的信息： info replication</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以测试：</p>
+<p>复制3个配置文件，然后修改对应的信息<br>
+1、端口<br>
+2、pid 名字<br>
+3、log文件名字<br>
+4、dump.rdb 名字</p>
+<p>默认情况下，每台Redis服务器都是主节点</p>
+<p>配置从节点，认老大：</p>
+<blockquote>
+<p>Slaveof host port</p>
+</blockquote>
+<p>真实的从主配置应该在配置文件中配置，这样的话是永久的，我们这里使用的是命令，暂时的!</p>
+<p>主机负责写，从机负责读</p>
+<p>Slave 启动成功连接到master后会发送一个sync同步命令</p>
+<p>Master 接到命令，启动后台的存盘进程，同时收集所有接收到的用于修改数据集命令，在后台进程执行完毕之后，master将传送</p>
+<p>整个数据文件到slave，并完成一次完全同步。</p>
+<p>全量复制:而slave服务在接收到数据库文件数据后，将其存盘并加载到内存中。</p>
+<p>增量复制:Master继续将新的所有收集到的修改命令依次传给slave，完成同步</p>
+<p>但是只要是重新连接master，一次完全同步(全量复制)将被自动执行</p>
+]]></content>
     <category term="设计组件"/>
     <published>2024-04-16T01:53:26.000Z</published>
   </entry>
