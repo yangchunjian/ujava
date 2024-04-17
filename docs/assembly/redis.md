@@ -800,7 +800,7 @@ dir ./   #rdb 文件保存的目录!
 
 设置能连接上redis的最大客户端的数量 : maxclients 10000
 
-redis 配置最大的内存容量: maxmemory <bytes>
+redis 配置最大的内存容量: maxmemory (bytes)
 
 maxmemory-policy noeviction #内存到达上限之后的处理策略
 
