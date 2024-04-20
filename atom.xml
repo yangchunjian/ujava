@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-04-17T03:53:01.515Z</updated>
+  <updated>2024-04-20T07:56:18.190Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -15,6 +15,62 @@
   <category term="设计高频"/>
   <category term="设计注意"/>
   <category term="设计模式"/>
+  <entry>
+    <title type="text">组件Flink</title>
+    <id>https://ujava.cn/assembly/flink.html</id>
+    <link href="https://ujava.cn/assembly/flink.html"/>
+    <updated>2024-04-20T07:53:29.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-20T07:53:29.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件Flume</title>
+    <id>https://ujava.cn/assembly/flume.html</id>
+    <link href="https://ujava.cn/assembly/flume.html"/>
+    <updated>2024-04-20T07:53:29.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-20T07:53:29.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件Hadoop</title>
+    <id>https://ujava.cn/assembly/hadoop.html</id>
+    <link href="https://ujava.cn/assembly/hadoop.html"/>
+    <updated>2024-04-20T07:53:29.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-20T07:53:29.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件Hbase</title>
+    <id>https://ujava.cn/assembly/hbase.html</id>
+    <link href="https://ujava.cn/assembly/hbase.html"/>
+    <updated>2024-04-20T07:53:29.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-20T07:53:29.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件Hive</title>
+    <id>https://ujava.cn/assembly/hive.html</id>
+    <link href="https://ujava.cn/assembly/hive.html"/>
+    <updated>2024-04-20T07:53:29.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-20T07:53:29.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件MongoDB</title>
+    <id>https://ujava.cn/assembly/mongodb.html</id>
+    <link href="https://ujava.cn/assembly/mongodb.html"/>
+    <updated>2024-04-20T07:53:29.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-20T07:53:29.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">组件Spark</title>
+    <id>https://ujava.cn/assembly/spark.html</id>
+    <link href="https://ujava.cn/assembly/spark.html"/>
+    <updated>2024-04-20T07:53:29.000Z</updated>
+    <category term="设计组件"/>
+    <published>2024-04-20T07:53:29.000Z</published>
+  </entry>
   <entry>
     <title type="text">组件MQ</title>
     <id>https://ujava.cn/assembly/mq.html</id>
@@ -7738,104 +7794,6 @@ java中的继承</p>
     <content type="html"><![CDATA[<h2> 概述</h2>
 <p>层是一种体系结构模式，其中软件职责在不同的</p>
 <p>应用程序的层。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">懒加载模式</title>
-    <id>https://ujava.cn/design/other/lazyloading.html</id>
-    <link href="https://ujava.cn/design/other/lazyloading.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>延迟加载是一种设计模式，通常用于将对象的初始化推迟到需要它的时间点。如果使用得当，它有助于提高程序运行的效率。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>延迟加载是一种设计模式，通常用于将对象的初始化推迟到需要它的时间点。如果使用得当，它有助于提高程序运行的效率。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">领导者选举模式</title>
-    <id>https://ujava.cn/design/other/leaderelection.html</id>
-    <link href="https://ujava.cn/design/other/leaderelection.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>领导者选举模式通常用于云系统设计。它有助于确保任务实例正确选择领导实例，并且不会相互冲突、导致共享资源争用或无意中干扰其他任务实例正在执行的工作。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>领导者选举模式通常用于云系统设计。它有助于确保任务实例正确选择领导实例，并且不会相互冲突、导致共享资源争用或无意中干扰其他任务实例正在执行的工作。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">领导者跟随者模式</title>
-    <id>https://ujava.cn/design/other/leaderfollowers.html</id>
-    <link href="https://ujava.cn/design/other/leaderfollowers.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>领导者/跟随者（Leader/Followers） 模式提供了一个并发模型，在该模型中，多个线程可以有效地取消多路复用事件，并调度处理线程共享的 IO 句柄的事件处理程序。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>领导者/跟随者（Leader/Followers） 模式提供了一个并发模型，在该模型中，多个线程可以有效地取消多路复用事件，并调度处理线程共享的 IO 句柄的事件处理程序。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">锁定对象模式</title>
-    <id>https://ujava.cn/design/other/lockableobject.html</id>
-    <link href="https://ujava.cn/design/other/lockableobject.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>可锁定对象设计模式可确保只有一个用户使用目标对象。与内置的同步机制（例如使用“synchronized”关键字）相比，此模式可以在不确定的时间内锁定对象，并且与请求的持续时间无关。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>可锁定对象设计模式可确保只有一个用户使用目标对象。与内置的同步机制（例如使用“synchronized”关键字）相比，此模式可以在不确定的时间内锁定对象，并且与请求的持续时间无关。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">日志整合模式</title>
-    <id>https://ujava.cn/design/other/logaggregation.html</id>
-    <link href="https://ujava.cn/design/other/logaggregation.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>集中、简化和优化日志管理流程，以便快速获得见解，快速识别和解决问题，并有效监控系统的整体运行状况。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>集中、简化和优化日志管理流程，以便快速获得见解，快速识别和解决问题，并有效监控系统的整体运行状况。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">标记接口模式</title>
-    <id>https://ujava.cn/design/other/markerinterface.html</id>
-    <link href="https://ujava.cn/design/other/markerinterface.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>使用空界面作为标记来区分经过特殊处理的对象。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>使用空界面作为标记来区分经过特殊处理的对象。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T01:48:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">主从模式</title>
-    <id>https://ujava.cn/design/other/masterworker.html</id>
-    <link href="https://ujava.cn/design/other/masterworker.html"/>
-    <updated>2024-03-04T01:48:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 概述</h2>
-<p>当手头的问题可以通过划分为多个部分来解决时，可以使用Master Worker模式，这些部分需要经过相同的计算，并且可能需要聚合才能得到最终结果。并行处理是使用一个由一个主机和一些工人组成的系统来执行的，其中主机在工人之间分配工作，从他们那里得到结果，并同化所有结果以给出最终结果。唯一的通信是在主机和工作程序之间——没有工作程序在彼此之间通信，用户只与主机通信以完成所需的工作。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 概述</h2>
-<p>当手头的问题可以通过划分为多个部分来解决时，可以使用Master Worker模式，这些部分需要经过相同的计算，并且可能需要聚合才能得到最终结果。并行处理是使用一个由一个主机和一些工人组成的系统来执行的，其中主机在工人之间分配工作，从他们那里得到结果，并同化所有结果以给出最终结果。唯一的通信是在主机和工作程序之间——没有工作程序在彼此之间通信，用户只与主机通信以完成所需的工作。</p>
 ]]></content>
     <category term="设计模式"/>
     <published>2024-03-04T01:48:41.000Z</published>
