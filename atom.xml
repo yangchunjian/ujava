@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-04-22T01:01:56.351Z</updated>
+  <updated>2024-04-22T01:08:21.917Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -19,7 +19,84 @@
     <title type="text">组件Flink</title>
     <id>https://ujava.cn/assembly/flink.html</id>
     <link href="https://ujava.cn/assembly/flink.html"/>
-    <updated>2024-04-20T07:53:29.000Z</updated>
+    <updated>2024-04-22T01:07:39.000Z</updated>
+    <summary type="html"><![CDATA[<h4> Flink前言</h4>
+<blockquote>
+<p>Flink和spark的功能很相似，spark能做的flink也能做，flink能做的spark也能做；</p>
+</blockquote>
+<h5> 1、flink和spark本质的区别</h5>
+<div class="language-undefined line-numbers-mode" data-ext="undefined"><pre class="language-undefined"><code>flink：侧重于做实时计算
+spark：侧重于做离线计算
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h4> Flink前言</h4>
+<blockquote>
+<p>Flink和spark的功能很相似，spark能做的flink也能做，flink能做的spark也能做；</p>
+</blockquote>
+<h5> 1、flink和spark本质的区别</h5>
+<div class="language-undefined line-numbers-mode" data-ext="undefined"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>实时计算和离线计算的特点<br>
+</li>
+</ul>
+<h5> 2、流处理和批处理</h5>
+<blockquote>
+<p>流处理和批处理：也可以叫做实时计算和离线计算</p>
+</blockquote>
+<div class="language-undefined line-numbers-mode" data-ext="undefined"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>
+<p>流处理<br>
+</p>
+</li>
+<li>
+<p>批处理<br>
+</p>
+</li>
+</ul>
+<h5> 3、无界流和有界流</h5>
+<blockquote>
+<p>从一开始不断地有数据过来-----无界流</p>
+<p>有界流可以称为无界流的特例</p>
+</blockquote>
+<div class="language-lua line-numbers-mode" data-ext="lua"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_93.png</figcaption></figure>
+<h5> 4、实时计算需要考虑的问题</h5>
+<div class="language-scss line-numbers-mode" data-ext="scss"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> Flink简介</h4>
+<h5> 1、什么是Flink</h5>
+<div class="language-scss line-numbers-mode" data-ext="scss"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h5> 2、Flink的特征</h5>
+<blockquote>
+<p>1、可以做批处理（处理历史数据集）<br>
+2、可以做流处理（处理实时数据流）<br>
+3、事件驱动应用（监控事件的服务），spark是时间驱动</p>
+</blockquote>
+<div class="language-scss line-numbers-mode" data-ext="scss"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h5> 3、Blink--基于Flink开发的一个分支</h5>
+<div class="language-mipsasm line-numbers-mode" data-ext="mipsasm"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h5> 4、Flink技术栈</h5>
+<figure><figcaption>img_94.png</figcaption></figure>
+<p><strong>部署方式：Deploy</strong></p>
+<ul>
+<li>
+<p>Local本地模式<br>
+Flink部署在单个JVM进程上，主要用于调试</p>
+</li>
+<li>
+<p>Cluster集群模式<br>
+StandAlone模式：不依赖第三方资源管理框架，JobManager负责任务调度和资源管理，通过ZK保障高可用性；</p>
+</li>
+</ul>
+<p>​ YARN模式：YARN负责资源管理，JobManager负责任务调度；</p>
+<ul>
+<li>Cloud模式<br>
+Flink上云，发挥云的优势：弹性（快速的硬件升级以及扩容和缩容等），比如Amazon的EC2、Alibaba的ECS等；</li>
+</ul>
+<p><strong>Runtime</strong><br>
+  Flink引擎，负责计算逻辑（流计算和批处理）的执行；</p>
+<p><strong>API &amp; Libraries</strong><br>
+  Flink的目标是批流一体，很可惜API层并没有做到统一。</p>
+<p>​ DataStremAPI为流处理的API，DataSetAPI为批处理的API，以及基于API的各种Libraries，用户在使用时需要 感知流计算和批处理。</p>
+<h5> 5、Flink APIs</h5>
+<figure><figcaption>img_95.png</figcaption></figure>
+<h5> 6、数据流编程模型</h5>
+<figure><figcaption>img_96.png</figcaption></figure>
+<h5> 7、Flink的代码结构</h5>
+<figure><figcaption>img_97.png</figcaption></figure>
+]]></content>
     <category term="设计组件"/>
     <published>2024-04-20T07:53:29.000Z</published>
   </entry>
