@@ -1,0 +1,1 @@
+import{_ as o}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as e,c as t}from"./app-fCn2d75O.js";const c={};function r(n,_){return e(),t("div")}const a=o(c,[["render",r],["__file","mongodb.html.vue"]]);export{a as default};
