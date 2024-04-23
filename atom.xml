@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-04-23T01:24:08.791Z</updated>
+  <updated>2024-04-23T01:29:20.945Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -73,7 +73,7 @@
     <title type="text">组件Nocas</title>
     <id>https://ujava.cn/assembly/nocas.html</id>
     <link href="https://ujava.cn/assembly/nocas.html"/>
-    <updated>2024-04-23T01:24:22.000Z</updated>
+    <updated>2024-04-23T01:29:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> <strong>1、Nacos概述</strong></h2>
 <h3> <strong>1.1、什么是Nacos</strong></h3>
 <p>Nacos 是阿里巴巴推出来的一个新开源项目，这是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。（英文全称Dynamic Naming and Configuration Service，Na为naming/nameServer即注册中心，co为configuration即配置中心，service是指该注册/配置中心都是以服务为核心。服务在nacos是一等公民）</p>
@@ -151,11 +151,10 @@
 <h2> 3、整合外部的mysql（单节点）</h2>
 <h3> 3.1、建库建表</h3>
 <p>可以直接根据里面的内容创建建表链接</p>
-<p><strong>注</strong>：对应nacos版本建表可能出现的问题</p>
-<figure><img src="https://img-blog.csdnimg.cn/31ab9e081b1d40fbb2ac9a2846933f03.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p><strong>注</strong>：对应nacos版本建表可能出现的问题<br>
+</p>
 <h3> 3.2、修改数据卷挂载出来的nacos配置</h3>
 <p>进入数据卷保存路面<br>
-<br>
 此处我们nacos配置保存在宿主机的/home/nacos/conf中<br>
 </p>
 <p>修改下面内容即可<br>

@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Tue, 23 Apr 2024 01:24:08 GMT</pubDate>
-    <lastBuildDate>Tue, 23 Apr 2024 01:24:08 GMT</lastBuildDate>
+    <pubDate>Tue, 23 Apr 2024 01:29:20 GMT</pubDate>
+    <lastBuildDate>Tue, 23 Apr 2024 01:29:20 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计组件</category>
@@ -147,11 +147,10 @@
 <h2> 3、整合外部的mysql（单节点）</h2>
 <h3> 3.1、建库建表</h3>
 <p>可以直接根据里面的内容创建建表链接</p>
-<p><strong>注</strong>：对应nacos版本建表可能出现的问题</p>
-<figure><img src="https://img-blog.csdnimg.cn/31ab9e081b1d40fbb2ac9a2846933f03.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p><strong>注</strong>：对应nacos版本建表可能出现的问题<br>
+</p>
 <h3> 3.2、修改数据卷挂载出来的nacos配置</h3>
 <p>进入数据卷保存路面<br>
-<br>
 此处我们nacos配置保存在宿主机的/home/nacos/conf中<br>
 </p>
 <p>修改下面内容即可<br>
