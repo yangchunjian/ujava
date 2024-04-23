@@ -1,39 +1,10 @@
 ---
-title: JDK源码中用到的23种设计模式
+title: Java中设计模式
 category: Java
 icon: laptop-code
 tag:
   - 设计Java
 ---
-
-<!-- TOC -->
-* [创建模式](#创建模式)
-  * [Singleton(单例)](#singleton单例)
-  * [Abstract factory(抽象工厂)](#abstract-factory抽象工厂)
-  * [Factory(工厂方法)](#factory工厂方法)
-  * [Builder(建造者)](#builder建造者)
-  * [Prototype(原型)](#prototype原型)
-* [结构模式](#结构模式)
-  * [Adapter(适配器)](#adapter适配器)
-  * [Composite(组合)](#composite组合)
-  * [Decorator(装饰器)](#decorator装饰器)
-  * [Facade(门面)](#facade门面)
-  * [Flyweight(享元模式)](#flyweight享元模式)
-  * [Proxy(代理)](#proxy代理)
-* [行为模式](#行为模式)
-  * [Chain of Responsibility(责任链)](#chain-of-responsibility责任链)
-  * [Command(命令)](#command命令)
-  * [Interpreter(解释器)](#interpreter解释器)
-  * [Iterator(迭代器)](#iterator迭代器)
-  * [Mediator(中介)](#mediator中介)
-  * [Memento(快照-备忘录模式)](#memento快照-备忘录模式)
-  * [Observer(观察者)](#observer观察者)
-  * [State(状态)](#state状态)
-  * [Strategy(策略)](#strategy策略)
-  * [Template(模板)](#template模板)
-  * [Visitor(访问者)](#visitor访问者)
-<!-- TOC -->
-
 
 # 创建模式
 

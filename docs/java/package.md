@@ -1,5 +1,5 @@
 ---
-title: Java核心包结构设计思想
+title: Java核心包
 category: Java
 icon: laptop-code
 tag:
