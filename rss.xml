@@ -6,10 +6,11 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Tue, 23 Apr 2024 06:59:41 GMT</pubDate>
-    <lastBuildDate>Tue, 23 Apr 2024 06:59:41 GMT</lastBuildDate>
+    <pubDate>Tue, 23 Apr 2024 07:26:51 GMT</pubDate>
+    <lastBuildDate>Tue, 23 Apr 2024 07:26:51 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>Java</category>
     <category>设计组件</category>
     <category>设计综合</category>
     <category>设计基础</category>
@@ -17,6 +18,191 @@
     <category>设计高频</category>
     <category>设计注意</category>
     <category>设计模式</category>
+    <item>
+      <title>Java原子类</title>
+      <link>https://ujava.cn/java/atomic.html</link>
+      <guid>https://ujava.cn/java/atomic.html</guid>
+      <source url="https://ujava.cn/rss.xml">Java原子类</source>
+      <description>一、原子类简介 1 什么是原子类 Java中提供了一些原子类，原子类包装了一个变量，并且提供了一系列对变量进行原子性操作的方法。原子性的意思是对于一组操作，要么全部执行成功，要么全部执行失败，不能只有其中某几个执行成功。在多线程的情况下能够保证操作&amp;nbsp;不会被中断，从而能保证并发安全 2. 与锁的区别 原子类作用和锁挺像，都可以保证并发情况下的线程安全。但是原子类比锁更具有优势： 粒度更细： 原子变量可以把多线程竞争范围缩小到变量级别，这是我们可以获得的最细粒度的情况，通常锁的粒度都要比原子变量的粒度大 效率更高： 通常，使用原子类的效率会比使用锁的效率更高，除了高度竞争的情况</description>
+      <category>Java</category>
+      <pubDate>Tue, 23 Apr 2024 07:07:33 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 一、原子类简介</h2>
+<h3> 1 什么是原子类</h3>
+<p>Java中提供了一些原子类，原子类包装了一个变量，并且提供了一系列对变量进行原子性操作的方法。原子性的意思是对于一组操作，要么全部执行成功，要么全部执行失败，不能只有其中某几个执行成功。在多线程的情况下能够保证操作&nbsp;<code>不会被中断</code>，从而能保证并发安全</p>
+<h3> 2. 与锁的区别</h3>
+<p>原子类作用和锁挺像，都可以保证并发情况下的<code>线程安全</code>。但是原子类比锁更<code>具有优势</code>：</p>
+<ul>
+<li>
+<p>粒度更细：</p>
+<p>原子变量可以把多线程竞争范围缩小到变量级别，这是我们可以获得的最细粒度的情况，通常锁的粒度都要比原子变量的粒度大</p>
+</li>
+<li>
+<p>效率更高：</p>
+<p>通常，使用原子类的效率会比使用锁的效率更高，除了高度竞争的情况</p>
+</li>
+</ul>
+<h3> 3. 原子类的底层实现</h3>
+<p>目前Java中提供的原子类大部分底层使用了CAS锁（CompareAndSet自旋锁），如AtomicInteger、AtomicLong等；也有使用了分段锁+CAS锁的原子类，如LongAdder等。</p>
+<h3> 4. 原子类种类</h3>
+<p>在JDK中J.U.C包下提供了种类丰富的原子类，以下所示：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>具体类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atomic* 基本类型原子类</td>
+<td>AtomicInteger、AtomicLong、AtomicBoolean</td>
+</tr>
+<tr>
+<td>Atomic*Array 数组类型原子类</td>
+<td>AtomicIntegerArray、AtomicLongArray、AtomicReferenceArray</td>
+</tr>
+<tr>
+<td>Atomic*Reference 引用类型原子类</td>
+<td>AtomicReference、AtomicStampedReference、AtomicMarkableReference</td>
+</tr>
+<tr>
+<td>Atomic*FieldUpdater 升级类型原子类</td>
+<td>AtomicIntegerfieldupdater、AtomicLongFieldUpdater、AtomicReferenceFieldUpdater</td>
+</tr>
+<tr>
+<td>Adder 累加器</td>
+<td>LongAdder、DoubleAdder</td>
+</tr>
+<tr>
+<td>Accumulator 积累器</td>
+<td>LongAccumulator、DoubleAccumulator</td>
+</tr>
+</tbody>
+</table>
+<h2> 二、原子类使用案例</h2>
+<h3> 1. Atomic* 基本类型原子类</h3>
+<p>这里以 AtomicInteger 为例，下面是 AtomicInteger常用方法 ，其他的两种AtomicLong、AtomicBoolean和它相似：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public final int get()</td>
+<td>获取当前的值</td>
+</tr>
+<tr>
+<td>public final int getAndSet(int newValue)</td>
+<td>获取当前的值，并设置新的值</td>
+</tr>
+<tr>
+<td>public final int getAndIncrement()</td>
+<td>获取当前的值，并自增+1</td>
+</tr>
+<tr>
+<td>public final int getAndDecrement()</td>
+<td>获取当前的值，并自减-1</td>
+</tr>
+<tr>
+<td>public final int getAndAdd(int delta)</td>
+<td>获取当前的值，并加上预期的值。getAndIncrement和getAndDecrement不满足，可使用当前方法</td>
+</tr>
+<tr>
+<td>boolean compareAndSet(int expect, int update)</td>
+<td>如果输入的数值等于预期值，则以原子方式将该值更新为输入值（update）</td>
+</tr>
+</tbody>
+</table>
+<p>代码演示：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_25.png</figcaption></figure>
+<p>以上截图可以看出，普通基本类型由于多线程冲突，导致累加结果不准确，但是如果使用<code>synchronized</code>修饰普通变量的自增，那么就和原子变量atomicInteger 的数据结果一致了，如下</p>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_26.png</figcaption></figure>
+<h3> 2. Atomic*Array数组类型原子类</h3>
+<p>代码演示：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_27.png</figcaption></figure>
+<p>长度为1000的数组，使用100个线程执行自增，100个线程执行自减，执行完毕后，数组内的所有元素的值均为0，可见，AtomicIntegerArray的每一个元素的操作都是原子性的。</p>
+<h3> 3. Atomic*Reference引用类型原子类</h3>
+<p>代码演示如下，这是一个实现自旋锁的例子，该例子出自&nbsp;<a href="https://mp.weixin.qq.com/s?__biz=MzU3NDgyMTIxMw==&amp;mid=2247484834&amp;idx=1&amp;sn=21a528f8abdfca34c1759f778f69eb2c&amp;chksm=fd2dc390ca5a4a868e2f15126ae9fc87df6db082dc51b7c13d6b7042e5b07a1263631300f46c#rd" target="_blank" rel="noopener noreferrer">Java并发之 Lock 锁</a>：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_28.png</figcaption></figure>
+<p>其中，compareAndSet() 方法的源码如下：<br>
+</p>
+<h3> 4. Atomic*FieldUpdater 升级类型原子类</h3>
+<p>以AtomicIntegerFieldUpdater 为例，&nbsp;<code>AtomicIntegerFieldUpdater</code>可以对普通变量进行<code>升级</code>。</p>
+<p><strong>使用场景</strong></p>
+<ul>
+<li>这个普通变量，只偶尔需要一个原子get/set操作（如晚上某个时刻他存在大量并发修改，其他时刻就正常）</li>
+<li>这个变量是其他人定义的，我们无权将他定义为原子类型，只能对他进行临时升级</li>
+</ul>
+<p><strong>代码演示</strong></p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_30.png</figcaption></figure>
+<p>被升级的变量有两个<strong>限制</strong>：</p>
+<ul>
+<li>不支持<code>被static修饰</code>的变量</li>
+<li>可见范围，<code>由public修饰的变量</code>，private不行</li>
+</ul>
+<h2> 三、Adder累加器</h2>
+<p>这里以 LongAdder 为例，</p>
+<h3> 1. LongAdder 简介：</h3>
+<ul>
+<li>Java8引入</li>
+<li>高并发下LongAdder比AtomicLong<code>效率高</code>，本质还是<code>空间换时间</code></li>
+<li>竞争激烈的情况下，LongAdder会把不同线程对应到不同的Cell上进行修改，降低冲突的概率，是<code>多段锁</code>的理念，提高了并发性</li>
+</ul>
+<h3> 2. 代码演示</h3>
+<p>对比AddderLong &amp; AtomicLong的高并发性能：</p>
+<h4> （1）AtomicLong，20个线程并发，每个线程执行10000次</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_31.png</figcaption></figure>
+<h4> (2) LongAdder，20个线程并发，每个线程执行10000次</h4>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><br>
+通过两个代码的耗时对比，可以得出结论：在多线程的情况下，LongAdder比AtomicLong的性能更好</p>
+<h3> 3. LongAdder 高并发性能好的原因</h3>
+<h4> （1）<strong>AtomicLong</strong></h4>
+<p>AtomicLong每次执行加法，都需要flush和refresh，导致消耗资源更多。<br>
+</p>
+<h4> （2）<strong>LongAdder</strong></h4>
+<p>LongAdder中，每个线程他自己有<code>独立的计数器</code>，只有在执行&nbsp;<code>sum()</code>方法时才会将各个线程德计数器汇总<br>
+</p>
+<p>LongAdder引入了分段累加的概念，内部有一个base变量和一个Cell[] 数组共同参与计数:</p>
+<ul>
+<li>base变量：在竞争不激烈的时候，加法运算会直接累加到该变量上</li>
+<li>Cel[]数组：在竞争激烈的时候，LongAdder内部的&nbsp;<code>Cell[]</code>数组就会派上用场，各个线程都会有一个对应的<code>Cell[i]</code>,计数的结果会存到各自的<code>Cell[i]</code>中.</li>
+<li>在执行<code>sum</code>方法时，会将 base变量和 Cel[]数组中的结果都汇总。<br>
+</li>
+</ul>
+<p><strong>sum() 源码如下</strong></p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面源码中会判断，如果as变量不为null 也就是cell[]数组中有值，就会对<code>Cell[]</code>和<code>base</code>一起相加后返回最后的结果</p>
+<blockquote>
+<p>上面的源码看出，这个方法没有加锁，也就是说如果之前已经汇总了的数组元素发生了变动，他就不会实时的反映在最终返回的sum总和中，也就是说<code>返回的sum结果可能不是最新的值</code></p>
+</blockquote>
+<h4> （3）AtomicLong &amp; LongAdder对比</h4>
+<p>LongAdder的特点：</p>
+<ul>
+<li>消耗更多的空间；</li>
+<li>在高并发的情况下性能更好；</li>
+<li>适用于统计求和计数场景；</li>
+<li>类方法相对较少</li>
+</ul>
+<p>在低争用下，AtomicLong和LongAdder这两个类的性能差不多。但是在竞争激烈的情况下，LongAdder的预期吞吐量要高得多，但要消耗更多的空间；</p>
+<p>LongAdder适合的场景是统计求和计数的场景，而且LongAdder基本只提供了加法，而AtomicLong还具有&nbsp;<a href="https://mp.weixin.qq.com/s?__biz=MzU3NDgyMTIxMw==&amp;mid=2247484848&amp;idx=1&amp;sn=2af8f0a333f8f87c053fc7c5e067ce24&amp;chksm=fd2dc382ca5a4a943f3869625f06af461d97cd7613ea4bb39867a40c4fee0e68557a32c6a3c6#rd" target="_blank" rel="noopener noreferrer">CAS</a>&nbsp;方法</p>
+<h2> 四. Accumulator累加器</h2>
+<p>Accumulator 和 Adder 非常相似，实际上 Accumulator 就是一个更通用版本的 Adder，比如 LongAccumulator 是 LongAdder 的功能增强版，因为 LongAdder 的 API 只有对数值的加减，而 LongAccumulator 提供了自定义的函数操作。</p>
+<h3> 1. 基本用法演示</h3>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_36.png</figcaption></figure>
+<h3> 2. 灵活使用</h3>
+<p>自定义表达式：&nbsp;<em>求1加到9中最大的数</em></p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_37.png</figcaption></figure>
+<h3> 3.&nbsp;<strong>使用场景</strong>：</h3>
+<p>并行计算，且不要求计算有顺序，也就是即使执行顺序不同，结果依然一样的情况。比如以下场景：</p>
+<ul>
+<li>相加</li>
+<li>相乘</li>
+<li>最大值、最小值</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>组件Hystrix</title>
       <link>https://ujava.cn/assembly/hystrix.html</link>
@@ -8342,18 +8528,6 @@ java中的继承</p>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 概述</h2>
 <p>Promise 表示创建 Promise 时不一定知道的值的代理。它允许您将依赖承诺与异步操作的最终成功值或失败原因相关联。Promise 是一种编写异步代码的方法，该代码看起来仍然像是以同步方式执行。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>属性(Property)模式</title>
-      <link>https://ujava.cn/design/other/property.html</link>
-      <guid>https://ujava.cn/design/other/property.html</guid>
-      <source url="https://ujava.cn/rss.xml">属性(Property)模式</source>
-      <description>概述 使用现有对象作为父对象创建对象和新对象的层次结构。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>使用现有对象作为父对象创建对象和新对象的层次结构。</p>
 ]]></content:encoded>
     </item>
   </channel>
