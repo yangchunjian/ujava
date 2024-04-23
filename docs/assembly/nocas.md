@@ -185,13 +185,11 @@ spring.cloud.nacos.discovery.server-addr=ip:端口
 可以直接根据里面的内容创建建表链接
 
 **注**：对应nacos版本建表可能出现的问题
-
-![](https://img-blog.csdnimg.cn/31ab9e081b1d40fbb2ac9a2846933f03.png)
+![img_123.png](img_123.png)
 
 ### 3.2、修改数据卷挂载出来的nacos配置
 
 进入数据卷保存路面
-![img_123.png](img_123.png)
 此处我们nacos配置保存在宿主机的/home/nacos/conf中
 ![img_124.png](img_124.png)
 
