@@ -7,6 +7,31 @@
   "favicon": "https://ujava.cn/favicon.ico",
   "items": [
     {
+      "title": "组件MyBatis",
+      "url": "https://ujava.cn/assembly/mybatis.html",
+      "id": "https://ujava.cn/assembly/mybatis.html",
+      "content_html": "",
+      "date_published": "2024-04-24T02:36:00.000Z",
+      "date_modified": "2024-04-24T02:36:00.000Z",
+      "authors": [],
+      "tags": [
+        "设计组件"
+      ]
+    },
+    {
+      "title": "MySQL死锁SQL",
+      "url": "https://ujava.cn/synthesis/mysqllocksql.html",
+      "id": "https://ujava.cn/synthesis/mysqllocksql.html",
+      "summary": "在MySQL中，死锁通常发生在多个事务相互占用对方需要的资源，导致每个事务都在等待其他事务释放资源时无法向前推进。 解决死锁问题通常需要调整事务的隔离级别、保持事务尽可能短、避免事务中的锁竞争、使用索引来加快查询速度，并确保应用程序能够处理事务回滚。 以下是一个简单的例子，演示如何通过索引来减少死锁的可能性： 假设有两个表&nbsp;orders&nbsp;和&nbsp;inventory，以下SQL可能导致死锁： -- 事务A BEGIN; UPDATE orders SET status = 'shipped' WHERE order_id = 100; UPDATE inventory SET quantity = quantity - 1 WHERE product_id = 5; COMMIT; -- 事务B BEGIN; UPDATE inventory SET quantity = quantity - 1 WHERE product_id = 5; UPDATE orders SET status = 'shipped' WHERE order_id = 100; COMMIT;",
+      "content_html": "<p>在MySQL中，死锁通常发生在多个事务相互占用对方需要的资源，导致每个事务都在等待其他事务释放资源时无法向前推进。</p>\n<p>解决死锁问题通常需要调整事务的隔离级别、保持事务尽可能短、避免事务中的锁竞争、使用索引来加快查询速度，并确保应用程序能够处理事务回滚。</p>\n<p>以下是一个简单的例子，演示如何通过索引来减少死锁的可能性：</p>\n<p>假设有两个表&nbsp;<code>orders</code>&nbsp;和&nbsp;<code>inventory</code>，以下SQL可能导致死锁：</p>\n<div class=\"language-sql line-numbers-mode\" data-ext=\"sql\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>为了减少死锁的风险，可以确保对于经常出现在一起的操作的字段建立索引：</p>\n<div class=\"language-sql line-numbers-mode\" data-ext=\"sql\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>索引可以帮助数据库优化查询，并且通常按顺序存储数据，减少了不同事务之间互相锁定对方所需资源的可能性。</p>\n<p>此外，确保事务尽可能小，并尽快提交，也有助于减少死锁的发生。</p>\n",
+      "date_published": "2024-04-24T02:36:00.000Z",
+      "date_modified": "2024-04-24T02:36:00.000Z",
+      "authors": [],
+      "tags": [
+        "设计高频"
+      ]
+    },
+    {
       "title": "Java锁机制",
       "url": "https://ujava.cn/java/lock.html",
       "id": "https://ujava.cn/java/lock.html",
@@ -1267,32 +1292,6 @@
       "id": "https://ujava.cn/design/other/priorityqueue.html",
       "summary": "概述 对发送到服务的请求进行优先级排序，以便比优先级较低的请求更快地接收和处理优先级较高的请求。此模式在为各个客户端提供不同服务级别保证的应用程序中非常有用。",
       "content_html": "<h2> 概述</h2>\n<p>对发送到服务的请求进行优先级排序，以便比优先级较低的请求更快地接收和处理优先级较高的请求。此模式在为各个客户端提供不同服务级别保证的应用程序中非常有用。</p>\n",
-      "date_published": "2024-03-04T03:06:02.000Z",
-      "date_modified": "2024-03-04T07:11:24.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "私有类数据模式",
-      "url": "https://ujava.cn/design/other/privateclassdata.html",
-      "id": "https://ujava.cn/design/other/privateclassdata.html",
-      "summary": "概述 私有类数据设计模式旨在通过限制属性的可见性来减少属性的暴露。它通过将类属性封装在单个 Data 对象中来减少类属性的数量。",
-      "content_html": "<h2> 概述</h2>\n<p>私有类数据设计模式旨在通过限制属性的可见性来减少属性的暴露。它通过将类属性封装在单个 Data 对象中来减少类属性的数量。</p>\n",
-      "date_published": "2024-03-04T03:06:02.000Z",
-      "date_modified": "2024-03-04T07:11:24.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "生产者消费者模式",
-      "url": "https://ujava.cn/design/other/producerconsumer.html",
-      "id": "https://ujava.cn/design/other/producerconsumer.html",
-      "summary": "概述 生产者消费者设计模式是一种经典的并发模式，它通过将工作标识与工作执行分开来减少生产者和消费者之间的耦合。",
-      "content_html": "<h2> 概述</h2>\n<p>生产者消费者设计模式是一种经典的并发模式，它通过将工作标识与工作执行分开来减少生产者和消费者之间的耦合。</p>\n",
       "date_published": "2024-03-04T03:06:02.000Z",
       "date_modified": "2024-03-04T07:11:24.000Z",
       "authors": [],

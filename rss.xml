@@ -6,18 +6,43 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Tue, 23 Apr 2024 09:35:21 GMT</pubDate>
-    <lastBuildDate>Tue, 23 Apr 2024 09:35:21 GMT</lastBuildDate>
+    <pubDate>Wed, 24 Apr 2024 02:35:46 GMT</pubDate>
+    <lastBuildDate>Wed, 24 Apr 2024 02:35:46 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>Java</category>
     <category>设计组件</category>
+    <category>设计高频</category>
+    <category>Java</category>
     <category>设计综合</category>
     <category>设计基础</category>
     <category>设计算法</category>
-    <category>设计高频</category>
     <category>设计注意</category>
     <category>设计模式</category>
+    <item>
+      <title>组件MyBatis</title>
+      <link>https://ujava.cn/assembly/mybatis.html</link>
+      <guid>https://ujava.cn/assembly/mybatis.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件MyBatis</source>
+      <category>设计组件</category>
+      <pubDate>Wed, 24 Apr 2024 02:36:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>MySQL死锁SQL</title>
+      <link>https://ujava.cn/synthesis/mysqllocksql.html</link>
+      <guid>https://ujava.cn/synthesis/mysqllocksql.html</guid>
+      <source url="https://ujava.cn/rss.xml">MySQL死锁SQL</source>
+      <description>在MySQL中，死锁通常发生在多个事务相互占用对方需要的资源，导致每个事务都在等待其他事务释放资源时无法向前推进。 解决死锁问题通常需要调整事务的隔离级别、保持事务尽可能短、避免事务中的锁竞争、使用索引来加快查询速度，并确保应用程序能够处理事务回滚。 以下是一个简单的例子，演示如何通过索引来减少死锁的可能性： 假设有两个表&amp;nbsp;orders&amp;nbsp;和&amp;nbsp;inventory，以下SQL可能导致死锁： -- 事务A BEGIN; UPDATE orders SET status = &amp;apos;shipped&amp;apos; WHERE order_id = 100; UPDATE inventory SET quantity = quantity - 1 WHERE product_id = 5; COMMIT; -- 事务B BEGIN; UPDATE inventory SET quantity = quantity - 1 WHERE product_id = 5; UPDATE orders SET status = &amp;apos;shipped&amp;apos; WHERE order_id = 100; COMMIT;</description>
+      <category>设计高频</category>
+      <pubDate>Wed, 24 Apr 2024 02:36:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>在MySQL中，死锁通常发生在多个事务相互占用对方需要的资源，导致每个事务都在等待其他事务释放资源时无法向前推进。</p>
+<p>解决死锁问题通常需要调整事务的隔离级别、保持事务尽可能短、避免事务中的锁竞争、使用索引来加快查询速度，并确保应用程序能够处理事务回滚。</p>
+<p>以下是一个简单的例子，演示如何通过索引来减少死锁的可能性：</p>
+<p>假设有两个表&nbsp;<code>orders</code>&nbsp;和&nbsp;<code>inventory</code>，以下SQL可能导致死锁：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>为了减少死锁的风险，可以确保对于经常出现在一起的操作的字段建立索引：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>索引可以帮助数据库优化查询，并且通常按顺序存储数据，减少了不同事务之间互相锁定对方所需资源的可能性。</p>
+<p>此外，确保事务尽可能小，并尽快提交，也有助于减少死锁的发生。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Java锁机制</title>
       <link>https://ujava.cn/java/lock.html</link>
@@ -8683,30 +8708,6 @@ java中的继承</p>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 概述</h2>
 <p>对发送到服务的请求进行优先级排序，以便比优先级较低的请求更快地接收和处理优先级较高的请求。此模式在为各个客户端提供不同服务级别保证的应用程序中非常有用。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>私有类数据模式</title>
-      <link>https://ujava.cn/design/other/privateclassdata.html</link>
-      <guid>https://ujava.cn/design/other/privateclassdata.html</guid>
-      <source url="https://ujava.cn/rss.xml">私有类数据模式</source>
-      <description>概述 私有类数据设计模式旨在通过限制属性的可见性来减少属性的暴露。它通过将类属性封装在单个 Data 对象中来减少类属性的数量。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>私有类数据设计模式旨在通过限制属性的可见性来减少属性的暴露。它通过将类属性封装在单个 Data 对象中来减少类属性的数量。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>生产者消费者模式</title>
-      <link>https://ujava.cn/design/other/producerconsumer.html</link>
-      <guid>https://ujava.cn/design/other/producerconsumer.html</guid>
-      <source url="https://ujava.cn/rss.xml">生产者消费者模式</source>
-      <description>概述 生产者消费者设计模式是一种经典的并发模式，它通过将工作标识与工作执行分开来减少生产者和消费者之间的耦合。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>生产者消费者设计模式是一种经典的并发模式，它通过将工作标识与工作执行分开来减少生产者和消费者之间的耦合。</p>
 ]]></content:encoded>
     </item>
   </channel>
