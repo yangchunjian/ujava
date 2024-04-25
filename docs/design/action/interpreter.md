@@ -35,4 +35,65 @@ Spring 框架中 SpelExpressionParser 就使用解释器模式。日常项目中
 * 2.会引起类膨胀。解释器模式中的每条规则至少需要定义一个类，当包含的文法规则很多时，类的个数将急剧增加，导致系统难以管理与维护。
 * 3.可应用的场景比较少。在软件开发中，需要定义语言文法的应用实例非常少，所以这种模式很少被使用到。
 
+**具体示例**
 
+```java
+// 抽象表达式角色
+interface Expression {
+    int interpret(Context context);
+}
+ 
+// 终结符表达式角色
+class TerminalExpression implements Expression {
+    private int value;
+ 
+    public TerminalExpression(int value) {
+        this.value = value;
+    }
+ 
+    @Override
+    public int interpret(Context context) {
+        return value;
+    }
+}
+ 
+// 非终结符表达式角色
+class NonterminalExpression implements Expression {
+    private Expression left;
+    private Expression right;
+ 
+    public NonterminalExpression(Expression left, Expression right) {
+        this.left = left;
+        this.right = right;
+    }
+ 
+    @Override
+    public int interpret(Context context) {
+        // 实现相应的逻辑，例如加法
+        return left.interpret(context) + right.interpret(context);
+    }
+}
+ 
+// 环境角色
+class Context {
+    // 可能包含解释器运行需要的全局信息
+}
+ 
+// 客户端代码
+public class InterpreterPatternExample {
+    public static void main(String[] args) {
+        // 创建表达式对象
+        Expression expr = new NonterminalExpression(
+            new TerminalExpression(10), 
+            new TerminalExpression(20)
+        );
+ 
+        // 执行解释操作
+        Context context = new Context();
+        int result = expr.interpret(context);
+ 
+        System.out.println("解释器计算结果: " + result);  // 输出 30
+    }
+}
+```
+在这个例子中，Expression是抽象表达式角色，它声明了interpret方法来解释表达式。TerminalExpression是终结符表达式角色，它实现了具体的解释操作。NonterminalExpression是非终结符表达式角色，它通过组合方式将两个表达式组合起来，实现了逻辑运算。Context类可以用来传递解释器运行时的上下文信息。客户端代码创建了一个加法表达式并执行了解释操作。

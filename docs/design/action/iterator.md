@@ -25,4 +25,70 @@ JAVA 中的 iterator。
 
 **不足**：由于迭代器模式将存储数据和遍历数据的职责分离，**增加新的聚合类需要对应增加新的迭代器类，类的个数成对增加，这在一定程度上增加了系统的复杂性**
 
+**具体示例**
+
+```java
+// 迭代器接口
+interface Iterator {
+    boolean hasNext();
+    Object next();
+}
+ 
+// 容器接口
+interface Container {
+    Iterator getIterator();
+}
+ 
+// 具体容器类
+class ConcreteContainer implements Container {
+    private String[] items = {"item1", "item2", "item3"};
+ 
+    @Override
+    public Iterator getIterator() {
+        return new ConcreteIterator(this);
+    }
+ 
+    public String[] getItems() {
+        return items;
+    }
+}
+ 
+// 具体迭代器类
+class ConcreteIterator implements Iterator {
+    private ConcreteContainer container;
+    private int position = 0;
+ 
+    public ConcreteIterator(ConcreteContainer container) {
+        this.container = container;
+    }
+ 
+    @Override
+    public boolean hasNext() {
+        return position < container.getItems().length && container.getItems()[position] != null;
+    }
+ 
+    @Override
+    public Object next() {
+        if (this.hasNext()) {
+            return container.getItems()[position++];
+        }
+        return null;
+    }
+}
+ 
+// 使用示例
+public class Main {
+    public static void main(String[] args) {
+        Container container = new ConcreteContainer();
+        Iterator iterator = container.getIterator();
+ 
+        while (iterator.hasNext()) {
+            Object item = iterator.next();
+            System.out.println(item);
+        }
+    }
+}
+```
+这个代码示例展示了如何在Java中实现迭代器模式。Iterator接口定义了迭代器应有的方法，Container接口定义了容器应有的方法，而ConcreteContainer和ConcreteIterator分别是具体的容器和迭代器实现。在Main类的main方法中，我们创建了一个具体容器的实例，并获取了它的迭代器实例，然后通过迭代器遍历容器中的元素。
+
 

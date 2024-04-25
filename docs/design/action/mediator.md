@@ -26,8 +26,63 @@ tag:
 
 **不足**：组件的可扩展、可维护，是将复杂度转移到中介对象上为代价，因此如果不加控制和设计，**中介对象很容已成为一个“上帝对象”，啥都要管，谁都不敢改动**
 
+**具体示例**
 
-
+```java
+// 抽象同事类
+abstract class Colleague {
+    protected Mediator mediator;
+    
+    public Colleague(Mediator mediator) {
+        this.mediator = mediator;
+    }
+}
+ 
+// 具体同事类，实现具体操作
+class ConcreteColleague extends Colleague {
+    public ConcreteColleague(Mediator mediator) {
+        super(mediator);
+    }
+    
+    public void operation() {
+        // 执行操作
+        // ...
+        // 通知中介者
+        mediator.operation(this);
+    }
+}
+ 
+// 抽象中介者，定义同事对象之间交互的接口
+abstract class Mediator {
+    public abstract void operation(Colleague colleague);
+}
+ 
+// 具体中介者，实现协调同事对象之间的交互
+class ConcreteMediator extends Mediator {
+    private ConcreteColleague1 c1;
+    private ConcreteColleague2 c2;
+    
+    public ConcreteMediator() {
+        c1 = new ConcreteColleague1(this);
+        c2 = new ConcreteColleague2(this);
+    }
+    
+    @Override
+    public void operation(Colleague colleague) {
+        // 实现协调操作
+        // ...
+    }
+}
+ 
+// 客户端代码
+public class Client {
+    public static void main(String[] args) {
+        Mediator mediator = new ConcreteMediator();
+        // 客户端不需要直接与具体同事类交互，中介者模式解耦了同事类之间的直接交互
+    }
+}
+```
+这个代码示例展示了如何在Java中实现中介者模式。同事类ConcreteColleague实现了具体的操作，而中介者ConcreteMediator协调两个同事类之间的交互。客户端代码中，我们创建了中介者对象，同事类之间的交互被中介者所解耦，客户端不需要直接与具体的同事类进行交互。
 
 
 

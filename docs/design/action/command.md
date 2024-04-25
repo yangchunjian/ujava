@@ -22,5 +22,59 @@ tag:
 
 **不足**：使用命令模式可能会导致某些系统有过多的具体命令类。因为针对每一个命令都需要设计一个具体命令类，因此某些系统可能需要大量具体命令类，这将影响命令模式的使用
 
+**具体示例**
+
+```java
+// 命令接口
+interface Command {
+    void execute();
+}
+
+// 具体命令类
+class ConcreteCommand implements Command {
+    private Receiver receiver;
+
+    public ConcreteCommand(Receiver receiver) {
+        this.receiver = receiver;
+    }
+
+    @Override
+    public void execute() {
+        receiver.action();
+    }
+}
+
+// 接收者类
+class Receiver {
+    public void action() {
+        System.out.println("Action performed.");
+    }
+}
+
+// 调用者类
+class Invoker {
+    private Command command;
+
+    public Invoker(Command command) {
+        this.command = command;
+    }
+
+    public void invoke() {
+        command.execute();
+    }
+}
+
+// 客户端代码
+public class CommandPatternExample {
+    public static void main(String[] args) {
+        Receiver receiver = new Receiver();
+        Command command = new ConcreteCommand(receiver);
+        Invoker invoker = new Invoker(command);
+
+        invoker.invoke(); // 执行命令，将调用receiver的action方法
+    }
+}
+```
+在这个例子中，Command是一个接口，定义了一个方法execute。ConcreteCommand是Command的一个具体实现，它包含了一个Receiver的引用，并在execute方法中调用了Receiver的action方法。Receiver是一个接收者，它知道如何执行一个具体的动作。Invoker是一个调用者，它持有一个命令对象，并在其invoke方法中调用命令对象的execute方法。客户端代码创建了一个Receiver、一个ConcreteCommand、一个Invoker，并最终通过Invoker来执行命令。
 
 
