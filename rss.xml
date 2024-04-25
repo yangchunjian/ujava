@@ -6,18 +6,80 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Wed, 24 Apr 2024 02:35:46 GMT</pubDate>
-    <lastBuildDate>Wed, 24 Apr 2024 02:35:46 GMT</lastBuildDate>
+    <pubDate>Thu, 25 Apr 2024 01:38:53 GMT</pubDate>
+    <lastBuildDate>Thu, 25 Apr 2024 01:38:53 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>Java</category>
     <category>设计组件</category>
     <category>设计高频</category>
-    <category>Java</category>
     <category>设计综合</category>
     <category>设计基础</category>
     <category>设计算法</category>
     <category>设计注意</category>
     <category>设计模式</category>
+    <item>
+      <title>Future和CompletableFuture的区别</title>
+      <link>https://ujava.cn/java/future.html</link>
+      <guid>https://ujava.cn/java/future.html</guid>
+      <source url="https://ujava.cn/rss.xml">Future和CompletableFuture的区别</source>
+      <description>1.Future 在执行多个任务的时候，使用Java标准库提供的线程池是非常方便的。我们提交的任务只需要实现Runnable接口，就可以让线程池去执行： class Task implements Runnable { public String result; public void run() { this.result = longTimeCalculation(); } }</description>
+      <category>Java</category>
+      <pubDate>Thu, 25 Apr 2024 01:39:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 1.Future</h1>
+<p>在执行多个任务的时候，使用Java标准库提供的线程池是非常方便的。我们提交的任务只需要实现<code>Runnable</code>接口，就可以让线程池去执行：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>Runnable</code>接口有个问题，它的方法没有返回值。如果任务需要一个返回结果，那么只能保存到变量，还要提供额外的方法读取，非常不便。所以，Java标准库还提供了一个<code>Callable</code>接口，和<code>Runnable</code>接口比，它多了一个返回值：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>并且<code>Callable</code>接口是一个泛型接口，可以返回指定类型的结果。</p>
+<p>现在的问题是，如何获得异步执行的结果？</p>
+<p>如果仔细看<code>ExecutorService.submit()</code>方法，可以看到，它返回了一个<code>Future</code>类型，一个<code>Future</code>类型的实例代表一个未来能获取结果的对象：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>当我们提交一个<code>Callable</code>任务后，我们会同时获得一个<code>Future</code>对象，然后，我们在主线程某个时刻调用<code>Future</code>对象的<code>get()</code>方法，就可以获得异步执行的结果。在调用<code>get()</code>时，如果异步任务已经完成，我们就直接获得结果。如果异步任务还没有完成，那么<code>get()</code>会阻塞，直到任务完成后才返回结果。</p>
+<p>一个<code>Future&lt;V&gt;</code>接口表示一个未来可能会返回的结果，它定义的方法有：</p>
+<ul>
+<li><code>get()</code>：获取结果（可能会等待）</li>
+<li><code>get(long timeout, TimeUnit unit)</code>：获取结果，但只等待指定的时间；</li>
+<li><code>cancel(boolean mayInterruptIfRunning)</code>：取消当前任务；</li>
+<li><code>isDone()</code>：判断任务是否已完成。</li>
+</ul>
+<h3> 小结</h3>
+<p>对线程池提交一个<code>Callable</code>任务，可以获得一个<code>Future</code>对象；</p>
+<p>可以用<code>Future</code>在将来某个时刻获取结果。</p>
+<h1> 2.CompletableFuture</h1>
+<p>使用<code>Future</code>获得异步执行结果时，要么调用阻塞方法<code>get()</code>，要么轮询看<code>isDone()</code>是否为<code>true</code>，这两种方法都不是很好，因为主线程也会*等待。</p>
+<p>从Java 8开始引入了<code>CompletableFuture</code>，它针对<code>Future</code>做了改进，可以传入回调对象，当异步任务完成或者发生异常时，自动调用回调对象的回调方法。</p>
+<p>我们以获取股票价格为例，看看如何使用<code>CompletableFuture</code>：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>price: 7.468336731107743</p>
+<p>创建一个<code>CompletableFuture</code>是通过<code>CompletableFuture.supplyAsync()</code>实现的，它需要一个实现了<code>Supplier</code>接口的对象：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里我们用lambda语法简化了一下，直接传入<code>Main::fetchPrice</code>，因为<code>Main.fetchPrice()</code>静态方法的签名符合<code>Supplier</code>接口的定义（除了方法名外）。</p>
+<p>紧接着，<code>CompletableFuture</code>已经被提交给默认的线程池执行了，我们需要定义的是<code>CompletableFuture</code>完成时和异常时需要回调的实例。完成时，<code>CompletableFuture</code>会调用<code>Consumer</code>对象：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>异常时，<code>CompletableFuture</code>会调用<code>Function</code>对象：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里我们都用lambda语法简化了代码。</p>
+<p>可见<code>CompletableFuture</code>的优点是：</p>
+<ul>
+<li>异步任务结束时，会自动回调某个对象的方法；</li>
+<li>异步任务出错时，会自动回调某个对象的方法；</li>
+<li>主线程设置好回调后，不再关心异步任务的执行。</li>
+</ul>
+<p>如果只是实现了异步回调机制，我们还看不出<code>CompletableFuture</code>相比<code>Future</code>的优势。<code>CompletableFuture</code>更强大的功能是，多个<code>CompletableFuture</code>可以串行执行，例如，定义两个<code>CompletableFuture</code>，第一个<code>CompletableFuture</code>根据证券名称查询证券代码，第二个<code>CompletableFuture</code>根据证券代码查询证券价格，这两个<code>CompletableFuture</code>实现串行操作如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>price: 21.019102834733275</p>
+<p>除了串行执行外，多个<code>CompletableFuture</code>还可以并行执行。例如，我们考虑这样的场景：</p>
+<p>同时从新浪和网易查询证券代码，只要任意一个返回结果，就进行下一步查询价格，查询价格也同时从新浪和网易查询，只要任意一个返回结果，就完成操作：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上述逻辑实现的异步查询规则实际上是：</p>
+<div class="language-ascii line-numbers-mode" data-ext="ascii"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>除了<code>anyOf()</code>可以实现“任意个<code>CompletableFuture</code>只要一个成功”，<code>allOf()</code>可以实现“所有<code>CompletableFuture</code>都必须成功”，这些组合操作可以实现非常复杂的异步流程控制。</p>
+<p>最后我们注意<code>CompletableFuture</code>的命名规则：</p>
+<ul>
+<li><code>xxx()</code>：表示该方法将继续在已有的线程中执行；</li>
+<li><code>xxxAsync()</code>：表示将异步在线程池中执行。</li>
+</ul>
+<h3> 小结</h3>
+<p><code>CompletableFuture</code>可以指定异步处理流程：</p>
+<ul>
+<li><code>thenAccept()</code>处理正常结果；</li>
+<li><code>exceptional()</code>处理异常结果；</li>
+<li><code>thenApplyAsync()</code>用于串行化另一个<code>CompletableFuture</code>；</li>
+<li><code>anyOf()</code>和<code>allOf()</code>用于并行化多个<code>CompletableFuture</code>。</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>组件MyBatis</title>
       <link>https://ujava.cn/assembly/mybatis.html</link>
@@ -8696,18 +8758,6 @@ java中的继承</p>
       <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 概述</h2>
 <p>演示模型将视图的状态和行为拉出到作为演示的一部分的模型类中。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>优先级队列模式</title>
-      <link>https://ujava.cn/design/other/priorityqueue.html</link>
-      <guid>https://ujava.cn/design/other/priorityqueue.html</guid>
-      <source url="https://ujava.cn/rss.xml">优先级队列模式</source>
-      <description>概述 对发送到服务的请求进行优先级排序，以便比优先级较低的请求更快地接收和处理优先级较高的请求。此模式在为各个客户端提供不同服务级别保证的应用程序中非常有用。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>对发送到服务的请求进行优先级排序，以便比优先级较低的请求更快地接收和处理优先级较高的请求。此模式在为各个客户端提供不同服务级别保证的应用程序中非常有用。</p>
 ]]></content:encoded>
     </item>
   </channel>
