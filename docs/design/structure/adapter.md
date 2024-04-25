@@ -14,8 +14,6 @@ tag:
 适配器模式的核心思想是创建一个适配器类，该适配器类实现了客户端期望的目标接口，并持有一个对被适配者对象的引用。适配器类通过调用被适配者对象的方法来实现目标接口的方法，从而完成接口的适配。它允许不兼容的接口之间进行通信。适配器模式通过将一个类的接口转换为客户端所期望的另一个接口来实现这一点。这种模式可以在不修改现有代码的情况下重用现有类。
 适配器模式可以帮助我们在不修改现有代码的情况下重用现有类，并且可以使不兼容的接口之间进行通信。
 
-
-
 **场景**：
 适配器模式将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。
 * 1.封装有缺陷的接口设计
@@ -34,6 +32,39 @@ tag:
 
 **不足**：过多的使用适配器，会让系统非常零乱，不易整体进行把握
 
+**具体示例**
 
+```java
+// 目标接口
+interface Target {
+    void request();
+}
+ 
+// 需要适配的类
+class Adaptee {
+    public void specificRequest() {
+        System.out.println("特定请求被处理");
+    }
+}
+ 
+// 适配器类
+class Adapter implements Target {
+    private Adaptee adaptee = new Adaptee();
+    
+    @Override
+    public void request() {
+        adaptee.specificRequest();
+    }
+}
+ 
+// 测试适配器
+public class Main {
+    public static void main(String[] args) {
+        Target target = new Adapter();
+        target.request();  // 输出: 特定请求被处理
+    }
+}
+```
+在这个例子中，Target接口定义了一个方法request()，而Adaptee类有一个特定的方法specificRequest()，我们需要创建一个适配器Adapter，它实现了Target接口，并且内部包含了Adaptee的实例。这样，当我们调用适配器的request()方法时，它就会调用被适配对象的specificRequest()方法。这样，我们就可以在不修改现有代码的情况下，将现有的类集成到我们的系统中。
 
 

@@ -27,3 +27,57 @@ tag:
 * 1.策略类会增多
 * 2.**所有策略类都需要对外暴露**
 
+**具体示例**
+
+```java
+// 策略接口
+public interface Strategy {
+    void execute();
+}
+ 
+// 策略实现
+public class ConcreteStrategyA implements Strategy {
+    @Override
+    public void execute() {
+        System.out.println("执行策略 A");
+    }
+}
+ 
+public class ConcreteStrategyB implements Strategy {
+    @Override
+    public void execute() {
+        System.out.println("执行策略 B");
+    }
+}
+ 
+// 策略上下文
+public class Context {
+    private Strategy strategy;
+ 
+    public Context(Strategy strategy) {
+        this.strategy = strategy;
+    }
+ 
+    public void execute() {
+        strategy.execute();
+    }
+}
+ 
+// 使用策略模式的示例
+public class Main {
+    public static void main(String[] args) {
+        // 创建策略对象
+        Strategy strategyA = new ConcreteStrategyA();
+        Strategy strategyB = new ConcreteStrategyB();
+ 
+        // 使用策略A
+        Context contextA = new Context(strategyA);
+        contextA.execute();
+ 
+        // 使用策略B
+        Context contextB = new Context(strategyB);
+        contextB.execute();
+    }
+}
+```
+这个例子展示了如何在Java中实现策略模式。策略模式允许你在运行时更改对象的行为，将算法的定义抽象为类，从而可以使用继承来改变行为。在这个例子中，Context类依赖于Strategy接口，而具体的策略（如ConcreteStrategyA和ConcreteStrategyB）实现了这个接口。通过将具体策略的实例注入到上下文中，我们可以动态地改变上下文的行为。

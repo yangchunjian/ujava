@@ -33,6 +33,63 @@ tag:
 
 在Java模板模式中，有两种类型的方法：抽象方法和具体方法。抽象方法由子类实现，而具体方法由父类实现。模板方法是由具体方法和抽象方法组成的，它定义了程序的骨架，而具体方法则实现了算法的部分步骤。
 
+**具体示例**
+
+```java
+abstract class CoffeeTemplate {
+    // 模板方法，定义了制作咖啡的基本步骤
+    final void makeCoffee() {
+        boilWater();
+        brewCoffeeGrinds();
+        pourInCup();
+        addSugarAndMilk();
+    }
+ 
+    // 以下是模板方法中定义的具体方法，子类可以重写它们
+    void boilWater() {
+        System.out.println("Boiling water");
+    }
+ 
+    void brewCoffeeGrinds() {
+        System.out.println("Brewing coffee grinds");
+    }
+ 
+    void pourInCup() {
+        System.out.println("Pouring into cup");
+    }
+ 
+    // 子类可以添加额外的方法或重写这个方法
+    abstract void addSugarAndMilk();
+}
+ 
+class AmericanCoffee extends CoffeeTemplate {
+    @Override
+    void addSugarAndMilk() {
+        System.out.println("Adding sugar and milk");
+    }
+}
+ 
+class FrenchCoffee extends CoffeeTemplate {
+    @Override
+    void addSugarAndMilk() {
+        System.out.println("Adding sugar and cream");
+    }
+}
+ 
+public class TemplatePatternExample {
+    public static void main(String[] args) {
+        CoffeeTemplate americanCoffee = new AmericanCoffee();
+        americanCoffee.makeCoffee();
+ 
+        CoffeeTemplate frenchCoffee = new FrenchCoffee();
+        frenchCoffee.makeCoffee();
+    }
+}
+```
+在这个例子中，CoffeeTemplate 类定义了一个名为 makeCoffee 的模板方法，它是一个 final 方法，以确保子类不会更改其结构。CoffeeTemplate 同时定义了四个抽象方法，这些方法必须在子类中被实现。AmericanCoffee 和 FrenchCoffee 类分别实现了 addSugarAndMilk 方法，提供了不同的咖啡添加糖和奶油的方式。
+
+在 main 方法中，我们创建了 AmericanCoffee 和 FrenchCoffee 的实例，并调用它们的 makeCoffee 方法，这将执行定义在 CoffeeTemplate 中的模板方法。每个子类都按照自己的方式实现了添加糖和奶油的方法，但是都遵循了统一的制作咖啡的流程。
+
 总之，Java模板模式适用于那些需要在程序中定义骨架，并且在子类中实现具体步骤的情况。它可以提高代码的复用性和可维护性，同时也可以使代码更加灵活和可扩展。
 
 

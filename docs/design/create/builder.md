@@ -20,3 +20,93 @@ tag:
 **不足**：
 * 1.产品的组成部分必须相同，这限制了其使用范围
 * 2.如果产品的内部变化复杂，该模式会增加很多的建造者类
+
+**具体示例**
+
+```java
+// 建造者模式示例：建造一辆汽车
+ 
+// 车辆类
+class Car {
+    private String engine;
+    private String wheel;
+    private String body;
+ 
+    public void setEngine(String engine) {
+        this.engine = engine;
+    }
+ 
+    public void setWheel(String wheel) {
+        this.wheel = wheel;
+    }
+ 
+    public void setBody(String body) {
+        this.body = body;
+    }
+ 
+    @Override
+    public String toString() {
+        return "车辆{" +
+                "引擎='" + engine + '\'' +
+                ", 轮子='" + wheel + '\'' +
+                ", 车身='" + body + '\'' +
+                '}';
+    }
+}
+ 
+// 建造者接口
+interface CarBuilder {
+    void buildEngine();
+    void buildWheel();
+    void buildBody();
+    Car getCar();
+}
+ 
+// 具体的建造者实现
+class ConcreteCarBuilder implements CarBuilder {
+    private Car car = new Car();
+ 
+    @Override
+    public void buildEngine() {
+        car.setEngine("V8引擎");
+    }
+ 
+    @Override
+    public void buildWheel() {
+        car.setWheel("大轮子");
+    }
+ 
+    @Override
+    public void buildBody() {
+        car.setBody("豪华车身");
+    }
+ 
+    @Override
+    public Car getCar() {
+        return car;
+    }
+}
+ 
+// 指挥者类
+class Director {
+    public void construct(CarBuilder builder) {
+        builder.buildEngine();
+        builder.buildWheel();
+        builder.buildBody();
+    }
+}
+ 
+// 使用示例
+public class BuilderPatternExample {
+    public static void main(String[] args) {
+        Director director = new Director();
+        CarBuilder builder = new ConcreteCarBuilder();
+        director.construct(builder);
+        Car car = builder.getCar();
+        System.out.println(car);
+    }
+}
+```
+
+这段代码首先定义了一个Car类，它代表了要构建的汽车实体。然后定义了一个CarBuilder接口，该接口规定了构建汽车的不同部分的方法。ConcreteCarBuilder是CarBuilder的具体实现，负责实际构建汽车的各个部分。Director类负责安排如何构建汽车，它接受一个CarBuilder实例作为参数，并调用其方法来构建汽车。最后，在BuilderPatternExample类的main方法中，我们创建了Director、ConcreteCarBuilder，并通过Director来构建一辆汽车，然后打印出汽车的信息。
+

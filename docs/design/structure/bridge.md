@@ -24,5 +24,65 @@ tag:
 
 **不足**：由于聚合关系建立在抽象层，要求开发者针对抽象化进行设计与编程，能正确地识别出系统中两个独立变化的维度，这`增加了系统的理解与设计难度`
 
+**具体示例**
+
+```java
+// 抽象类部分
+abstract class Abstraction {
+    protected Implementor implementor;
+ 
+    public Abstraction(Implementor implementor) {
+        this.implementor = implementor;
+    }
+ 
+    public void operation() {
+        implementor.operationImpl();
+    }
+}
+ 
+// 修正抽象类
+class RefinedAbstraction extends Abstraction {
+    public RefinedAbstraction(Implementor implementor) {
+        super(implementor);
+    }
+ 
+    public void operation() {
+        // 可以在这里添加一些额外的操作
+        super.operation();
+    }
+}
+ 
+// 实现类接口
+interface Implementor {
+    void operationImpl();
+}
+ 
+// 具体实现类
+class ConcreteImplementorA implements Implementor {
+    public void operationImpl() {
+        System.out.println("ConcreteImplementorA operation.");
+    }
+}
+ 
+class ConcreteImplementorB implements Implementor {
+    public void operationImpl() {
+        System.out.println("ConcreteImplementorB operation.");
+    }
+}
+ 
+// 客户端代码
+public class BridgePatternExample {
+    public static void main(String[] args) {
+        // 使用具体实现类A
+        Abstraction abstractionWithA = new RefinedAbstraction(new ConcreteImplementorA());
+        abstractionWithA.operation();
+ 
+        // 使用具体实现类B
+        Abstraction abstractionWithB = new RefinedAbstraction(new ConcreteImplementorB());
+        abstractionWithB.operation();
+    }
+}
+```
+在这个例子中，Abstraction类是一个抽象类，它通过组合方式引用了Implementor接口。RefinedAbstraction是一个修正抽象类，可以进一步扩展抽象类的行为。Implementor接口定义了实现类需要实现的操作。ConcreteImplementorA和ConcreteImplementorB是具体的实现类，实现了operationImpl方法。客户端代码中，我们创建了使用不同实现类的抽象类对象，并调用了操作方法。
 
 

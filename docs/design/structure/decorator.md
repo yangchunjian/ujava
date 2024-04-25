@@ -32,5 +32,59 @@ tag:
 * 装饰器类应该在调用被装饰对象的方法之前或之后添加新的行为。
 * 不要创建过多的装饰器对象，否则会导致代码变得复杂难以维护。
 
+**具体示例**
 
-
+```java
+// 定义一个接口，表示组件
+interface Component {
+    void operation();
+}
+ 
+// 实现组件的具体类
+class ConcreteComponent implements Component {
+    public void operation() {
+        System.out.println("具体对象的操作");
+    }
+}
+ 
+// 定义装饰者接口
+interface Decorator extends Component {
+    void setComponent(Component component);
+}
+ 
+// 实现装饰者的具体类
+class ConcreteDecorator implements Decorator {
+    private Component component;
+ 
+    public void setComponent(Component component) {
+        this.component = component;
+    }
+ 
+    public void operation() {
+        if (component != null) {
+            System.out.println("具体装饰者的操作前");
+            // 委托给组件处理请求
+            component.operation();
+            System.out.println("具体装饰者的操作后");
+        }
+    }
+}
+ 
+// 使用示例
+public class DecoratorPatternDemo {
+    public static void main(String[] args) {
+        // 创建一个具体的组件实例
+        Component concreteComponent = new ConcreteComponent();
+ 
+        // 创建一个装饰者实例
+        Decorator decorator = new ConcreteDecorator();
+ 
+        // 设置装饰者的组件
+        decorator.setComponent(concreteComponent);
+ 
+        // 通过装饰者调用操作
+        decorator.operation();
+    }
+}
+```
+这段代码定义了一个Component接口和一个具体的实现类ConcreteComponent，还定义了一个Decorator接口和一个具体的实现类ConcreteDecorator。在main方法中，我们创建了一个ConcreteComponent实例和一个ConcreteDecorator实例，将ConcreteComponent实例设置到ConcreteDecorator实例中，并调用了operation方法，演示了装饰者模式的使用。

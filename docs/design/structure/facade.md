@@ -21,3 +21,52 @@ tag:
 **不足**：
 * 1.`没有面向抽象编程`，而是通过增加中介层，转换服务提供方的服务接口；
 * 2.`不符合开闭原则`，如果要改东西很麻烦，`继承重写都不合适`
+
+**具体示例**
+
+```java
+// 子系统的类A
+class SubSystemA {
+    void operationA() {
+        System.out.println("子系统A的操作");
+    }
+}
+ 
+// 子系统的类B
+class SubSystemB {
+    void operationB() {
+        System.out.println("子系统B的操作");
+    }
+}
+ 
+// 子系统的类C
+class SubSystemC {
+    void operationC() {
+        System.out.println("子系统C的操作");
+    }
+}
+ 
+// 门面类
+class Facade {
+    private SubSystemA obj1 = new SubSystemA();
+    private SubSystemB obj2 = new SubSystemB();
+    private SubSystemC obj3 = new SubSystemC();
+ 
+    void operation() {
+        obj1.operationA();
+        obj2.operationB();
+        obj3.operationC();
+    }
+}
+ 
+// 客户端代码
+public class Main {
+    public static void main(String[] args) {
+        Facade facade = new Facade();
+        facade.operation();
+    }
+}
+```
+
+在这个例子中，Facade类封装了对子系统A、B、C的操作。客户端代码只需要与Facade类交互，无需了解子系统内部的复杂性。这就是门面模式的一个简单应用。
+
