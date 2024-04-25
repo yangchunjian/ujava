@@ -1,1 +1,0 @@
-import{_ as o}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as t,c,a as e}from"./app-yMnkNbBs.js";const s={},r=e("blockquote",null,[e("p",null,"架构内容持续在更新迭代")],-1),_=[r];function n(l,a){return t(),c("div",null,_)}const m=o(s,[["render",n],["__file","history.html.vue"]]);export{m as default};
