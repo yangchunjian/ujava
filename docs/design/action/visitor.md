@@ -32,7 +32,66 @@ JDK源码中，Files 类提供了 walkFileTree() 方法。Spring源码中Propert
 * 1.**增加新的元素类很困难**。在访问者模式中，每增加一个新的元素类都意味着要在抽象访问者角色中增加一个新的抽象操作，并在每一个具体访问者类中增加相应的具体操作，这违背了开闭原则的要求。
 * 2.**破坏封装**。访问者模式要求访问者对象访问并调用每一个元素对象的操作，这意味着元素对象有时候必须暴露一些自己的内部操作和内部状态，否则无法供访问者访问。
 
+## 具体示例
 
-
+```java
+// Element接口
+interface Element {
+    void accept(Visitor visitor);
+}
+ 
+// 具体的ElementA类
+class ConcreteElementA implements Element {
+    public void accept(Visitor visitor) {
+        visitor.visitConcreteElementA(this);
+    }
+ 
+    public void operationA() {
+        // 具体操作
+    }
+}
+ 
+// 具体的ElementB类
+class ConcreteElementB implements Element {
+    public void accept(Visitor visitor) {
+        visitor.visitConcreteElementB(this);
+    }
+ 
+    public void operationB() {
+        // 具体操作
+    }
+}
+ 
+// Visitor接口
+interface Visitor {
+    void visitConcreteElementA(ConcreteElementA element);
+    void visitConcreteElementB(ConcreteElementB element);
+}
+ 
+// 具体的Visitor类
+class ConcreteVisitor implements Visitor {
+    public void visitConcreteElementA(ConcreteElementA element) {
+        // 对ConcreteElementA的具体操作
+        element.operationA();
+    }
+ 
+    public void visitConcreteElementB(ConcreteElementB element) {
+        // 对ConcreteElementB的具体操作
+        element.operationB();
+    }
+}
+ 
+// 使用访问者模式的示例
+public class Main {
+    public static void main(String[] args) {
+        ConcreteElementA elementA = new ConcreteElementA();
+        ConcreteElementB elementB = new ConcreteElementB();
+        Visitor visitor = new ConcreteVisitor();
+ 
+        elementA.accept(visitor);
+        elementB.accept(visitor);
+    }
+}
+```
 
 

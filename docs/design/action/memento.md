@@ -27,5 +27,90 @@ Spring源码，类StateManageableMessageContext中
 **不足**：
 * 1.**消耗资源**。如果类的成员变量过多，势必会占用比较大的资源，而且每一次保存都会消耗一定的内存。
 * 2.在实际的系统中，可能需要维护多个备份，需要额外的资源，这样对资源的消耗比较严重。资源消耗过大，如果类的成员变量太多，就不可避免占用大量的内存，而且每保存一次对象的状态都需要消耗内存资源，如果知道这一点大家就容易理解为什么一些提供了撤销功能的软件在运行时所需的内存和硬盘空间比较大了
+
+## 具体示例
+
+
+```java
+// 备忘录模式：备份和恢复对象状态
  
+// Originator 类，负责创建一个备忘录来保存其状态
+class Originator {
+    private String state;
+ 
+    public Originator(String state) {
+        this.state = state;
+    }
+ 
+    public String getState() {
+        return state;
+    }
+ 
+    public void setState(String state) {
+        this.state = state;
+    }
+ 
+    // 创建备忘录对象
+    public Memento createMemento() {
+        return new Memento(state);
+    }
+ 
+    // 恢复备忘录对象的状态
+    public void restoreMemento(Memento memento) {
+        this.state = memento.getState();
+    }
+}
+ 
+// Memento 类，负责保存 Originator 对象的状态
+class Memento {
+    private String state;
+ 
+    public Memento(String state) {
+        this.state = state;
+    }
+ 
+    public String getState() {
+        return state;
+    }
+ 
+    public void setState(String state) {
+        this.state = state;
+    }
+}
+ 
+// Caretaker 类，负责保存好备忘录对象，不应该对它的内容进行操作或检查
+class Caretaker {
+    private Memento memento;
+ 
+    public Memento retrieveMemento() {
+        return memento;
+    }
+ 
+    public void saveMemento(Memento memento) {
+        this.memento = memento;
+    }
+}
+ 
+// 使用示例
+public class MementoPatternExample {
+    public static void main(String[] args) {
+        Originator originator = new Originator("State #1");
+        System.out.println("Originator initial state: " + originator.getState());
+ 
+        // 保存状态
+        Caretaker caretaker = new Caretaker();
+        caretaker.saveMemento(originator.createMemento());
+ 
+        // 改变原始对象的状态
+        originator.setState("State #2");
+        System.out.println("Originator new state: " + originator.getState());
+ 
+        // 恢复状态
+        originator.restoreMemento(caretaker.retrieveMemento());
+        System.out.println("Originator restored state: " + originator.getState());
+    }
+}
+```
+
+这段代码展示了如何在Java中实现备忘录模式。Originator类负责保存其状态，Memento类负责保存Originator的状态，而Caretaker类负责保存好Memento对象，不应该对其进行操作或检查。使用示例中，我们创建了一个Originator对象，并改变了它的状态。然后我们保存了这个状态，并再次更改了Originator的状态。最后，我们从Caretaker恢复了原始状态。
 

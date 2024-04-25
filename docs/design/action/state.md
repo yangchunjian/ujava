@@ -34,3 +34,61 @@ tag:
 * 状态模式可以增加类的数量，因此需要在设计时考虑类的数量和复杂性。
 * 状态模式需要对状态进行封装，因此需要在设计时考虑状态的可扩展性和可维护性。
 
+## 具体示例
+
+```java
+// 状态接口
+interface State {
+    void doAction(Context context);
+}
+ 
+// 具体状态A
+class ConcreteStateA implements State {
+    public void doAction(Context context) {
+        System.out.println("当前状态是 A.");
+        // 可以执行状态 A 下的一些操作
+        context.setState(new ConcreteStateB()); // 可以设置新的状态
+    }
+}
+ 
+// 具体状态B
+class ConcreteStateB implements State {
+    public void doAction(Context context) {
+        System.out.println("当前状态是 B.");
+        // 可以执行状态 B 下的一些操作
+        context.setState(new ConcreteStateA()); // 可以设置新的状态
+    }
+}
+ 
+// 环境类
+class Context {
+    private State state;
+ 
+    public Context(State state) {
+        this.state = state;
+    }
+ 
+    public void setState(State state) {
+        this.state = state;
+    }
+ 
+    public void request() {
+        state.doAction(this);
+    }
+}
+ 
+// 客户端代码
+public class StatePatternExample {
+    public static void main(String[] args) {
+        Context context = new Context(new ConcreteStateA());
+        
+        // 客户端操作会导致状态改变
+        context.request();
+        context.request();
+        context.request();
+        context.request();
+    }
+}
+```
+在这个例子中，Context类维护一个State对象的引用。request方法会委托给当前的状态对象去执行。根据不同的状态，可以执行不同的操作，并在必要时设置新的状态。这样，通过改变状态对象，Context可以改变它的行为。这就是状态模式的一个简单示例。
+

@@ -42,75 +42,93 @@ Observable类是一个抽象类，它表示一个可观察的对象，具有添�
 
 Observer接口表示观察者对象，具有更新状态的方法update()。当Observable对象的状态发生改变时，会调用观察者对象的update()方法，传递更新的数据。
 
+## 具体示例
+
 ```java
-import java.util.Observable;
-import java.util.Observer;
- 
-// 具体主题类
-class WeatherStation extends Observable {
+import java.util.ArrayList;
+import java.util.List;
+
+interface Observer {
+    void update(float temp, float humidity, float pressure);
+}
+
+interface Subject {
+    void registerObserver(Observer o);
+    void removeObserver(Observer o);
+    void notifyObservers();
+}
+
+class WeatherData implements Subject {
+    private List<Observer> observers;
     private float temperature;
     private float humidity;
     private float pressure;
- 
+
+    public WeatherData() {
+        observers = new ArrayList<>();
+    }
+
+    @Override
+    public void registerObserver(Observer o) {
+        observers.add(o);
+    }
+
+    @Override
+    public void removeObserver(Observer o) {
+        int i = observers.indexOf(o);
+        if (i >= 0) {
+            observers.remove(i);
+        }
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update(temperature, humidity, pressure);
+        }
+    }
+
+    public void measurementsChanged() {
+        notifyObservers();
+    }
+
     public void setMeasurements(float temperature, float humidity, float pressure) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
-        setChanged();
-        notifyObservers();
-    }
- 
-    public float getTemperature() {
-        return temperature;
-    }
- 
-    public float getHumidity() {
-        return humidity;
-    }
- 
-    public float getPressure() {
-        return pressure;
-    }
-}
- 
-// 具体观察者类
-class Display implements Observer {
-    private float temperature;
-    private float humidity;
-    private float pressure;
- 
-    public void update(Observable o, Object arg) {
-        if (o instanceof WeatherStation) {
-            WeatherStation weatherStation = (WeatherStation) o;
-            this.temperature = weatherStation.getTemperature();
-            this.humidity = weatherStation.getHumidity();
-            this.pressure = weatherStation.getPressure();
-            display();
-        }
-    }
- 
-    public void display() {
-        System.out.println("Temperature: " + temperature);
-        System.out.println("Humidity: " + humidity);
-        System.out.println("Pressure: " + pressure);
-    }
-}
- 
-// 使用JDK自带观察者模式实现气象站
-public class Main {
-    public static void main(String[] args) {
-        WeatherStation weatherStation = new WeatherStation();
-        Display display1 = new Display();
-        Display display2 = new Display();
-        weatherStation.addObserver(display1);
-        weatherStation.addObserver(display2);
-        weatherStation.setMeasurements(25.0f, 60.0f, 1013.0f);
-        weatherStation.deleteObserver(display2);
-        weatherStation.setMeasurements(26.0f, 65.0f, 1012.0f);
+        measurementsChanged();
     }
 }
 
+class CurrentConditionsDisplay implements Observer {
+    private float temperature;
+    private float humidity;
+
+    public void update(float temp, float humidity, float pressure) {
+        this.temperature = temp;
+        this.humidity = humidity;
+        display();
+    }
+
+    public void display() {
+        System.out.println("Current conditions: " + temperature + "F degrees and " + humidity + "% humidity");
+    }
+}
+
+public class WeatherStation {
+    public static void main(String[] args) {
+        WeatherData weatherData = new WeatherData();
+
+        Observer currentDisplay = new CurrentConditionsDisplay();
+        weatherData.registerObserver(currentDisplay);
+
+        // 模拟气象数据变化
+        weatherData.setMeasurements(30, 65, 30.4f);
+    }
+}
 ```
+
+在这个例子中，WeatherData类实现了Subject接口，维护了观察者列表。当气象数据改变时，它会通知所有观察者。CurrentConditionsDisplay类实现了Observer接口，并更新了气象数据。当WeatherData的气象数据改变时，观察者会收到更新并打印出当前的气象状况。
 
 
 
