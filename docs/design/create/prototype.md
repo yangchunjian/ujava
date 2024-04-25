@@ -20,8 +20,45 @@ tag:
 * 1.覆盖 clone 方法 ( 必须 ) : 必须重写对象的 clone 方法 , Java 中提供了 cloneable 标识该对象可以被拷贝 , 但是必须覆盖 Object 的 clone 方法才能被拷贝 ; 
 * 2.深拷贝 与 浅拷贝 风险 : 克隆对象时进行的一些修改 , 容易出错 ; 需要灵活运用深拷贝与浅拷贝操作 ;
 
+## 具体示例
 
-
-
+```java
+public class PrototypeExample implements Cloneable {
+    private int count;
+ 
+    public PrototypeExample(int count) {
+        this.count = count;
+    }
+ 
+    // 实现克隆方法
+    @Override
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError(); // Can never happen
+        }
+    }
+ 
+    public void printCount() {
+        System.out.println("Count: " + count);
+    }
+ 
+    public static void main(String[] args) {
+        PrototypeExample prototype = new PrototypeExample(10);
+        prototype.printCount(); // 输出 Count: 10
+ 
+        // 使用克隆方法复制对象
+        PrototypeExample copy = (PrototypeExample) prototype.clone();
+        copy.printCount(); // 输出 Count: 10
+ 
+        // 修改复制对象的值，不会影响原对象
+        copy.count = 20;
+        copy.printCount(); // 输出 Count: 20
+        prototype.printCount(); // 输出 Count: 10
+    }
+}
+```
+在这个例子中，PrototypeExample 类实现了 Cloneable 接口，并覆盖了 clone() 方法。在 main 方法中，我们创建了一个 PrototypeExample 对象，然后使用 clone() 方法复制了一个副本。这样我们就有了两个独立的对象，并且修改副本的值不会影响原对象。
 
 

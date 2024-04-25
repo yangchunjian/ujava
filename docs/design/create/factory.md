@@ -23,7 +23,50 @@ tag:
 * 1.简单工厂，耦合度高，如果有变动就需要修改唯一的工厂
 * 2.工厂方法，优点符合开闭（具体的业务类有具体工厂），缺点是每增加一个产品，相应的也要增加一个子工厂，加大了额外的开发量
 
+## 具体示例
 
+```java
+// Shape.java 接口
+public interface Shape {
+    void draw();
+}
+ 
+// Rectangle.java 类
+public class Rectangle implements Shape {
+    @Override
+    public void draw() {
+        System.out.println("Inside Rectangle::draw() method.");
+    }
+}
+ 
+// ShapeFactory.java 工厂类
+public class ShapeFactory {
+ 
+    // 使用 getShape 方法获取形状对象
+    public Shape getShape(String shapeType){
+        if(shapeType == null){
+            return null;
+        }        
+        if(shapeType.equalsIgnoreCase("RECTANGLE")){
+            return new Rectangle();
+        }
+        return null;
+    }
+}
+ 
+// 测试工厂模式
+public class FactoryPatternDemo {
+    public static void main(String[] args) {
+        ShapeFactory shapeFactory = new ShapeFactory();
+ 
+        // 获取 Rectangle 对象，并调用它的 draw 方法
+        Shape shape1 = shapeFactory.getShape("RECTANGLE");
+ 
+        // 调用 Rectangle 的 draw 方法
+        shape1.draw();
+    }
+}
+```
 
-
+在这个例子中，ShapeFactory类负责创建Shape类型的对象。当需要创建新的形状类型时，我们可以在ShapeFactory中添加相应的条件判断和创建逻辑。这就是简单的工厂模式实现。
 

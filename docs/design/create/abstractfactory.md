@@ -31,7 +31,65 @@ Spring 中，BeanFactory 是用于管理 Bean 的一个工厂，所有工厂都�
 * 1.规定了所有可能被创建的产品集合，**产品族中扩展新的产品困难**
 * 2.增加了系统的抽象性和理解难度
 
+## 具体示例
 
+```java
+// 车辆接口
+interface Vehicle {
+    void start();
+}
+ 
+// 汽车类实现
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("汽车启动。");
+    }
+}
+ 
+// 自行车类实现
+class Bicycle implements Vehicle {
+    public void start() {
+        System.out.println("自行车启动。");
+    }
+}
+ 
+// 抽象工厂接口
+interface VehicleFactory {
+    Vehicle createVehicle();
+}
+ 
+// 汽车工厂实现
+class CarFactory implements VehicleFactory {
+    public Vehicle createVehicle() {
+        return new Car();
+    }
+}
+ 
+// 自行车工厂实现
+class BicycleFactory implements VehicleFactory {
+    public Vehicle createVehicle() {
+        return new Bicycle();
+    }
+}
+ 
+// 客户端代码
+public class AbstractFactoryPattern {
+    public static void main(String[] args) {
+        // 创建汽车工厂
+        VehicleFactory carFactory = new CarFactory();
+        // 使用汽车工厂创建汽车
+        Vehicle car = carFactory.createVehicle();
+        car.start();
+ 
+        // 创建自行车工厂
+        VehicleFactory bicycleFactory = new BicycleFactory();
+        // 使用自行车工厂创建自行车
+        Vehicle bicycle = bicycleFactory.createVehicle();
+        bicycle.start();
+    }
+}
+```
 
+这个例子中，我们定义了一个Vehicle接口和两个实现类Car和Bicycle，它们都实现了start方法。然后我们定义了一个VehicleFactory接口和两个实现工厂类CarFactory和BicycleFactory，它们负责创建相应的车辆对象。在客户端代码中，我们创建了汽车工厂和自行车工厂，并用它们分别创建汽车和自行车，然后启动它们。这就是抽象工厂模式的一个简单应用。
 
 
