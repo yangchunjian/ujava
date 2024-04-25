@@ -93,5 +93,7 @@ public class Main {
     }
 }
 ```
+在这个例子中，ConcreteElementA和ConcreteElementB类实现了Element接口，并且每个类都有一个accept方法，该方法接受一个Visitor对象作为参数。ConcreteVisitor类实现了Visitor接口，并且为每个Element子类提供了具体的访问操作。在main方法中，我们创建了一个ConcreteElementA和ConcreteElementB对象，以及一个ConcreteVisitor对象，然后通过调用accept方法，将元素对象传递给访问者对象，从而实现了不同的操作。
+
 
 
