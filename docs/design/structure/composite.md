@@ -30,5 +30,64 @@ tag:
 * 1.限制类型复杂 : `限制类型时 , 比较复杂` 
 * 2.使设计变得更加抽象 
 
+**具体示例**
 
-
+```java
+interface Component {
+    void operation();
+}
+ 
+class Leaf implements Component {
+    private String name;
+ 
+    public Leaf(String name) {
+        this.name = name;
+    }
+ 
+    @Override
+    public void operation() {
+        System.out.println("Leaf " + name + " operation.");
+    }
+}
+ 
+class Composite implements Component {
+    private String name;
+    private List<Component> children = new ArrayList<>();
+ 
+    public Composite(String name) {
+        this.name = name;
+    }
+ 
+    public void add(Component component) {
+        children.add(component);
+    }
+ 
+    public void remove(Component component) {
+        children.remove(component);
+    }
+ 
+    @Override
+    public void operation() {
+        System.out.println("Composite " + name + " operation.");
+        for (Component component : children) {
+            component.operation();
+        }
+    }
+}
+ 
+public class CompositePatternExample {
+    public static void main(String[] args) {
+        Composite root = new Composite("Root");
+        root.add(new Leaf("Leaf A"));
+        root.add(new Leaf("Leaf B"));
+ 
+        Composite branch = new Composite("Branch");
+        branch.add(new Leaf("Leaf C"));
+        branch.add(new Leaf("Leaf D"));
+ 
+        root.add(branch);
+        root.operation();
+    }
+}
+```
+在这个例子中，Component是组合中对象的接口，Leaf是叶节点，不能有子节点，Composite是组合，可以有子节点。Composite实现了operation方法，它会遍历并调用所有子节点的operation方法。这样，无论是叶节点还是组合，它们的处理方式都是一致的。
