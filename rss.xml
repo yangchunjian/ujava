@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Sat, 27 Apr 2024 13:55:48 GMT</pubDate>
-    <lastBuildDate>Sat, 27 Apr 2024 13:55:48 GMT</lastBuildDate>
+    <pubDate>Sat, 27 Apr 2024 14:06:50 GMT</pubDate>
+    <lastBuildDate>Sat, 27 Apr 2024 14:06:50 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -18,6 +18,41 @@
     <category>设计算法</category>
     <category>设计注意</category>
     <category>设计模式</category>
+    <item>
+      <title>组件ERP</title>
+      <link>https://ujava.cn/assembly/erp.html</link>
+      <guid>https://ujava.cn/assembly/erp.html</guid>
+      <source url="https://ujava.cn/rss.xml">组件ERP</source>
+      <description>一、ERP是什么？ ERP是企业资源计划（Enterpise Resource Planning）的简称，蕴含现代企业管理理念，其核心是在制造资源计划基础上进一步发展而成的面向供应链的管理思想。 二、ERP的宗旨是什么？ ERP的主要宗旨是将企业的各方面资源（人力、资金、信息、物料、设备、时间、方法等）进行科学地计划、管理和控制。为企业加强资产管理、提高资金运营水平、建立高效率供应链、规范管理流、提高精益化管理水平、提高客户 服务水平，为实现设备全生命周期管理奠定基础。 三、ERP蕴含的先进理念是什么？</description>
+      <category>设计高频</category>
+      <pubDate>Sat, 27 Apr 2024 14:03:48 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 一、ERP是什么？</h2>
+<p>ERP是企业资源计划（Enterpise Resource Planning）的简称，蕴含现代企业管理理念，其核心是在制造资源计划基础上进一步发展而成的面向供应链的管理思想。</p>
+<h2> 二、ERP的宗旨是什么？</h2>
+<p>ERP的主要宗旨是将企业的各方面资源（人力、资金、信息、物料、设备、时间、方法等）进行科学地计划、管理和控制。为企业加强资产管理、提高资金运营水平、建立高效率供应链、规范管理流、提高精益化管理水平、提高客户</p>
+<p>服务水平，为实现设备全生命周期管理奠定基础。</p>
+<h2> 三、ERP蕴含的先进理念是什么？</h2>
+<p>ERP应用当前国际上最为先进的企业管理模式和理念，主要宗旨是：将企业各方面包括人、财、物、产、供销等在内的资源充分调配和平衡，使企业在激烈的市场竞争中有效</p>
+<p>调动各方资源、充分发挥各方能力，从而取得最好的经济效益。</p>
+<h2> 四、ERP包括以下五个模块</h2>
+<p>（1）项目管理模块（PS）</p>
+<p>项目是指把各种系统、方法和人员结合在一起，在规定的时间、预算、质量和目标范围内完成的各项工作。有效的</p>
+<p>项目管理是指：在规定用来实现具体目标和指标的时间内，</p>
+<p>对组织机构中的资源进行计划、引导和控制工作。</p>
+<p>SAP的项目管理PS是SAP ECC的一个集成解决方案，它具有基础管理、项目结构管理、规划管理、预算管理、项目实现、信息系统等功能，它与其它MM、PM、FICO模块有高度的集成性。</p>
+<p>MM模块是解决项目物资和服务采购过程的管理，</p>
+<p>PM模块解决项目竣工后移交生产设备的管理，</p>
+<p>FICO模块是实现项目成本核算和结算等，通过PS的集成性可以实现项目的立项申请、计划、执行、结算和决算管理和控制。</p>
+<p>（2） 人资管理模块（HR）</p>
+<p>主要由组织管理、职务岗位管理、人事管理、档案、合同管理、时间管理、工资核算、薪酬和福利管理、培训管理、招聘管理、绩效管理、人才保留、继任计划管理、职业发展管理等功能组成。</p>
+<p>（3） 物资管理模块（MM）</p>
+<p>是指基于物料（含服务）的物流管理操作。主要由物料主数据管理、计划管理、供应商管理、采购管理、库存管理、仓储管理以及票据管理（发票校验）等功能组成。</p>
+<p>（4） 财务管理模块（FI）</p>
+<p>是指必须能够按照有关规定向股东、债权人、以及社会公众披露并提供所需的信息。主要由总分类账、应收帐、固定资产、法定合并报表以及特殊目的的分类账等会计功能组成。</p>
+<p>（5）设备管理模块（PM）</p>
+<p>作为SAP集成系统中的一个功能子模块，涵盖了一个工厂系统的所有维护任务。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>运筹学</title>
       <link>https://ujava.cn/synthesis/operational.html</link>
@@ -7782,22 +7817,15 @@ Memory Analyzer（MAT）等工具进行进一步的分析，而无需执行正�
 <p>常用应用服务器：WebLogic、WebSphere、Apache、JBoss、GlassFish</p>
 <p>Jboss作为Java EE应用服务器，它不但是Servlet容器，而且是EJB容器，从而受到企业级开发人员的欢迎，从而弥补了Tomcat只是一个Servlet容器的缺憾。</p>
 <p>在商用应用服务器里主要有：Weblogic、Websphere，其中Weblogic我也使用过很长一段时间，当时也只用其当Servlet容器，然而就在同等条件下，在性能及易用性等方面，要比Tomcat优秀很多。</p>
-<p>glassfish是Sun公司推出的Java EE服务器，一个比较活跃的开源社区，不断的通过社区的反馈来提高其的可用性，经过glassfish<br>
-v1、glassfish v2 到今天的glassfish v3，它已经走向成熟。Glassfish是一个免费、开放源代码的应用服务，它实现了Java EE 5，Java EE 5<br>
-平台包括了以下最新技术：EJB 3.0、JSF 1.2、Servlet 2.5、JSP 2.1、JAX-WS 2.0、JAXB 2.0、 Java Persistence 1.0、Common Annonations<br>
-1.0、StAX<br>
-1.0等。支持集群，通过内存中会话状态复制，增强了部署体系结构的可用性与可伸缩性，它对集群有着很好的支持，可以简单到通过添加机器，就可轻松的提高网站的带负载能力。在解析能力方面，它对html的吞吐能力与apache服务器不分上下，就是tomcat所不能比的，支持目录部署，热部署，解决了tomcat对热部署能力的缺陷。在版本方面做的更加人性化，有开发时用的简化版，专门用于部署web项目的版本，还要完全符合j2ee标准的版本。</p>
+<p>glassfish是Sun公司推出的Java EE服务器，一个比较活跃的开源社区，不断的通过社区的反馈来提高其的可用性，经过glassfish v1、glassfish v2 到今天的glassfish v3，它已经走向成熟。Glassfish是一个免费、开放源代码的应用服务，它实现了Java EE 5，Java EE 5 平台包括了以下最新技术：EJB 3.0、JSF 1.2、Servlet 2.5、JSP 2.1、JAX-WS 2.0、JAXB 2.0、 Java Persistence 1.0、Common Annonations 1.0、StAX 1.0等。支持集群，通过内存中会话状态复制，增强了部署体系结构的可用性与可伸缩性，它对集群有着很好的支持，可以简单到通过添加机器，就可轻松的提高网站的带负载能力。在解析能力方面，它对html的吞吐能力与apache服务器不分上下，就是tomcat所不能比的，支持目录部署，热部署，解决了tomcat对热部署能力的缺陷。在版本方面做的更加人性化，有开发时用的简化版，专门用于部署web项目的版本，还要完全符合j2ee标准的版本。</p>
 <h2> webSphere</h2>
 <p>WebSphere是 IBM 的集成软件平台。它包含了编写、运行和监视全天候的工业强度的随需应变 Web<br>
 应用程序和跨平台、跨产品解决方案所需要的整个中间件基础设施，如服务器、服务和工具。WebSphere 提供了可靠、灵活和健壮的集成软件。</p>
 <h2> JBoss</h2>
 <p>JBoss是一个管理EJB的容器和服务器，支持EJB1.1、EJB2.0和EJB3.0的规范。但JBoss核心服务不包括支持servlet/JSP的WEB容器，一般与Tomcat或Jetty绑定使用。2006年,Jboss公司被Redhat公司收购。</p>
 <h2> Tomcat</h2>
-<p>Tomcat是Apache 软件基金会的Jakarta 项目中的一个核心项目，由Apache、Sun 和其他一些公司及个人共同开发而成。由于有了Sun<br>
-的参与和支持，最新的Servlet 和JSP 规范总是能在Tomcat 中得到体现，Tomcat 5 支持最新的Servlet 2.4 和JSP 2.0 规范。因为Tomcat<br>
-技术先进、性能稳定，而且免费，因而深受Java 爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web 应用服务器。</p>
-<p>JBoss与Tomcat的是完全开源的</p>
-<p>WebLogic与WebSphere都是对业内多种标准的全面支持，包括EJB、JSB、JMS、JDBC、XML和WML，使Web应用系统的实施更为简单，并且保护了投资，同时也使基于标准的解决方案的开发更加简便。</p>
+<p>Tomcat是Apache 软件基金会的Jakarta 项目中的一个核心项目，由Apache、Sun 和其他一些公司及个人共同开发而成。由于有了Sun的参与和支持，最新的Servlet 和JSP 规范总是能在Tomcat 中得到体现，Tomcat 5 支持最新的Servlet 2.4 和JSP 2.0 规范。因为Tomcat技术先进、性能稳定，而且免费，因而深受Java 爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web 应用服务器。</p>
+<p>JBoss与Tomcat的是完全开源的WebLogic与WebSphere都是对业内多种标准的全面支持，包括EJB、JSB、JMS、JDBC、XML和WML，使Web应用系统的实施更为简单，并且保护了投资，同时也使基于标准的解决方案的开发更加简便。</p>
 <h4> 扩展性的不同：</h4>
 <p>WebLogic和WebSphere都是以其高扩展的架构体系闻名于业内，包括客户机连接的共享、资源 pooling以及动态网页和EJB组件群集。</p>
 <h4> 应用范围的区别：</h4>
@@ -7813,16 +7841,11 @@ v1、glassfish v2 到今天的glassfish v3，它已经走向成熟。Glassfish�
 <p>6、用户可以直接实施J2EE-EAR，而不是以前分别实施EJB-JAR和Web-WAR，非常方便。</p>
 <p>JBoss的安装和配置可以直接拷贝使用，但是要改动 %JBoss-HOME%\bin\run.bat里JAVA-HOME的设置，改成本机JDK的目录。运行run.bat来启动JBoss</p>
 <h2> Weblogic</h2>
-<p>WebLogic是美国bea公司出品的一个application<br>
-server确切的说是一个基于j2ee架构的中间件，webserver是用来构建网站的必要软件用来解析发布网页等功能，它是用纯java开发的。weblogic本来不是由bea发明的，是它从别人手中买过来，然后再加工扩展。目前weblogic在世界application<br>
-server市场上占有最大的份额，其他还有象IBM的websphere，免费的tomcat、resin等中间件。</p>
-<p>BEA WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。将Java的动态功能和Java<br>
-Enterprise标准的安全性引入大型网络应用的开发、集成、部署和管理之中。</p>
-<p>BEA WebLogic Server拥有处理关键Web应用系统问题所需的性能 、可扩展性和高可用性。</p>
-<p>与BEA WebLogic Commerce ServerTM配合使用， BEA WebLogic Server可为部署适应性个性化电子商务应用系统提供完善的解决方案。</p>
+<p>WebLogic是美国bea公司出品的一个application server确切的说是一个基于j2ee架构的中间件，webserver是用来构建网站的必要软件用来解析发布网页等功能，它是用纯java开发的。weblogic本来不是由bea发明的，是它从别人手中买过来，然后再加工扩展。目前weblogic在世界application server市场上占有最大的份额，其他还有象IBM的websphere，免费的tomcat、resin等中间件。</p>
+<p>BEA WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。将Java的动态功能和Java Enterprise标准的安全性引入大型网络应用的开发、集成、部署和管理之中。</p>
+<p>BEA WebLogic Server拥有处理关键Web应用系统问题所需的性能 、可扩展性和高可用性。与BEA WebLogic Commerce ServerTM配合使用， BEA WebLogic Server可为部署适应性个性化电子商务应用系统提供完善的解决方案。</p>
 <p>BEA WebLogic Server具有开发和部署关键任务电子商务Web应用系统 所需的多种特色和优势</p>
-<p>WebLogic: WebLogic<br>
-是一套基于JAVA功能强大的电子商务套件，提供了许多功能强大的中间件以方便编程人员编写的JSP、SERVLET等电子商务应用，可以为企业提供一个完整的商务应用解决方案。不适合开发阶段，太慢了，适合于运行环境（收费）。</p>
+<p>WebLogic: WebLogic是一套基于JAVA功能强大的电子商务套件，提供了许多功能强大的中间件以方便编程人员编写的JSP、SERVLET等电子商务应用，可以为企业提供一个完整的商务应用解决方案。不适合开发阶段，太慢了，适合于运行环境（收费）。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -9633,19 +9656,6 @@ java中的继承</p>
       <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 概述</h2>
 <p>版本号模式有助于解决应用程序中的并发冲突。通常，当多个客户端试图同时更新同一记录时，这些冲突会出现在数据库操作中。解决此类冲突需要确定对象是否已更改。因此，我们需要一个版本号，该版本号随着底层数据（例如数据库）的每次更改而递增。存储库可以使用版本号来检查外部更改并向用户报告并发问题。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>页面对象模式</title>
-      <link>https://ujava.cn/design/other/pageobject.html</link>
-      <guid>https://ujava.cn/design/other/pageobject.html</guid>
-      <source url="https://ujava.cn/rss.xml">页面对象模式</source>
-      <description>概述 Page 对象封装 UI，隐藏应用程序（通常是 Web 应用程序）的基础 UI 小组件，并提供特定于应用程序的 API，以允许操作测试所需的 UI 组件。这样一来，它允许测试类本身专注于测试逻辑。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 03:06:02 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>Page 对象封装 UI，隐藏应用程序（通常是 Web 应用程序）的基础 UI 小组件，并提供特定于应用程序的 API，以允许操作测试所需的 UI<br>
-组件。这样一来，它允许测试类本身专注于测试逻辑。</p>
 ]]></content:encoded>
     </item>
   </channel>
