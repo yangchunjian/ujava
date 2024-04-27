@@ -7,6 +7,31 @@
   "favicon": "https://ujava.cn/favicon.ico",
   "items": [
     {
+      "title": "Java Arrays类",
+      "url": "https://ujava.cn/java/arrays.html",
+      "id": "https://ujava.cn/java/arrays.html",
+      "summary": "在 Java 中，java.util.Arrays类提供的多种数组操作功能，可以有效地执行各种数组相关的操作，使得数组处理变得简单和高效。 打印数组 String[] arr = new String[] {\"a\", \"b\", \"c\", \"d\"}; System.out.println(Arrays.toString(arr)); // 输出 [a, b, c, d]",
+      "content_html": "<p>在 Java 中，<code>java.util.Arrays</code>类提供的多种数组操作功能，可以有效地执行各种数组相关的操作，使得数组处理变得简单和高效。</p>\n<h2> 打印数组</h2>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p><code>Arrays.toString(arr)</code>，不过是简单的一个调用，却让你的数组输出从一串地址，变成了清晰可辨的字符。</p>\n<h2> 复制数组</h2>\n<p>要复制一个新的数组么？<code>copyOf</code>&nbsp;和&nbsp;<code>copyOfRange</code>&nbsp;给你全方位的选择：</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>这&nbsp;<code>copyOf</code>，<code>copyOfRange</code>，无异于为数组之尺，想要复制前 N 个元素，使用&nbsp;<code>copyOf</code>，想要取其中一段，使用&nbsp;<code>copyOfRange</code>。</p>\n<blockquote>\n<p>注意：若范围大于原数组，多出位置以 null 填充。</p>\n</blockquote>\n<h2> 填充数组</h2>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>如若数组空空如也，可用&nbsp;<code>Arrays.fill(arr, \"str\")</code>&nbsp;将它填满。每一个元素，都被赋予相同的值。</p>\n<p>也可以使用&nbsp;<code>Arrays.setAll</code>&nbsp;填充，它允许传入一个函数，生成填充值。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2> 数组比较</h2>\n<p>数据比较有两种方式，一是使用&nbsp;<code>Arrays.equals</code>，二是使用&nbsp;<code>Arrays.hashCode</code>。</p>\n<h3> Arrays.equals</h3>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>如果是一维数组比较，直接&nbsp;<code>Arrays.equals</code>&nbsp;比较没有问题。如果是多维数组，<code>Arrays.equals</code>&nbsp;并不会比较子数组中的元素值，此时需要使用<code>deepEquals</code>&nbsp;比较。</p>\n<h3> Arrays.hashCode</h3>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>元素可能会变，如何捕捉这一瞬间的改变？<code>hashCode()</code>，<code>deepHashCode()</code>，便是这捕风捉影的法宝。<code>hashCode</code>&nbsp;方法会根据数组元素值计算出一个数字，如果元素值发生改变，则数字改变。但是同样对于多维数字，在计算数字时不会计算子数组中的元素，这种情况应该使用&nbsp;<code>deepHashCode</code>判断。</p>\n<p>输出：</p>\n<div class=\"language-bash line-numbers-mode\" data-ext=\"sh\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2> 数组排序</h2>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p><code>Arrays.sort</code>&nbsp;方法可以将元素排序。而&nbsp;<code>parallelSort()</code>可以并发排序，但是在数据量比较小的情况下，<code>Arrays.sort</code>&nbsp;可能效率更高。</p>\n<h2> 二分查找</h2>\n<p>二分搜索可以快速找到数组中的指定元素的利器。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><blockquote>\n<p>注意事项：使用&nbsp;<code>binarySearch()</code>&nbsp;前确保数组是排序过的，否则结果将不可预知。</p>\n</blockquote>\n<h2> 数组转 Stream</h2>\n<p>Java 8 引入的 Stream API 让数组操作更加现代化，可以链式操作。使用&nbsp;<code>Arrays.stream</code>&nbsp;可以让数组共享这一便利。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2> 数组转换</h2>\n<p>如果你想把数组转成 List 怎么办？<code>Arrays.asList()</code>&nbsp;就是你需要的。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>注意事项：<code>asList()</code>&nbsp;返回的列表<strong>不支持增删操作</strong>，它和原始数组是共享数据的。</p>\n<h2> 并行前缀计算</h2>\n<p>使用&nbsp;<code>parallelPrefix</code>&nbsp;函数并行地累积给定数组中的每个元素。对于大型数组，并行前缀计算通常比顺序循环更有效。</p>\n<p>示例：每一个元素转换成当前以及之前所有元素的和。</p>\n<div class=\"language-java line-numbers-mode\" data-ext=\"java\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>输出：<code>[0, 1, 3, 6, 10, 15, 21, 28, 36, 45]</code></p>\n",
+      "date_published": "2024-04-27T01:32:45.000Z",
+      "date_modified": "2024-04-27T01:32:45.000Z",
+      "authors": [],
+      "tags": [
+        "Java"
+      ]
+    },
+    {
+      "title": "Java CollectionUtils类",
+      "url": "https://ujava.cn/java/collectionutils.html",
+      "id": "https://ujava.cn/java/collectionutils.html",
+      "content_html": "",
+      "date_published": "2024-04-27T01:32:45.000Z",
+      "date_modified": "2024-04-27T01:32:45.000Z",
+      "authors": [],
+      "tags": [
+        "Java"
+      ]
+    },
+    {
       "title": "Interceptor、Filter、AOP区别",
       "url": "https://ujava.cn/synthesis/interceptorfilter.html",
       "id": "https://ujava.cn/synthesis/interceptorfilter.html",
@@ -1268,32 +1293,6 @@
       "content_html": "<h2> 概述</h2>\n<p>根据需要将部分响应从服务器发送到客户端。客户端将指定它需要服务器的字段，而不是提供资源的所有详细信息。</p>\n",
       "date_published": "2024-03-04T03:06:02.000Z",
       "date_modified": "2024-03-04T07:11:24.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "管道(Pipeline)模式",
-      "url": "https://ujava.cn/design/other/pipeline.html",
-      "id": "https://ujava.cn/design/other/pipeline.html",
-      "summary": "概述 通过提供初始输入并将处理后的输出传递给下一阶段使用，允许在一系列阶段中处理数据。",
-      "content_html": "<h2> 概述</h2>\n<p>通过提供初始输入并将处理后的输出传递给下一阶段使用，允许在一系列阶段中处理数据。</p>\n",
-      "date_published": "2024-03-04T03:06:02.000Z",
-      "date_modified": "2024-03-04T03:06:02.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "毒丸(Poison Pill)模式",
-      "url": "https://ujava.cn/design/other/poisonpill.html",
-      "id": "https://ujava.cn/design/other/poisonpill.html",
-      "summary": "概述 毒丸（Poison Pill）是已知的预定义数据项，允许为单独的分布式消费过程提供正常关闭。",
-      "content_html": "<h2> 概述</h2>\n<p>毒丸（Poison Pill）是已知的预定义数据项，允许为单独的分布式消费过程提供正常关闭。</p>\n",
-      "date_published": "2024-03-04T03:06:02.000Z",
-      "date_modified": "2024-03-04T03:06:02.000Z",
       "authors": [],
       "tags": [
         "设计模式"
