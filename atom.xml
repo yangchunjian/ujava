@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-04-27T02:46:43.758Z</updated>
+  <updated>2024-04-27T03:00:44.213Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -8358,15 +8358,15 @@ routing 是一个可变值，默认是文档的 _id</p>
     <published>2024-04-15T03:25:51.000Z</published>
   </entry>
   <entry>
-    <title type="text">组件K8S</title>
+    <title type="text">组件Kubernetes</title>
     <id>https://ujava.cn/assembly/k8s.html</id>
     <link href="https://ujava.cn/assembly/k8s.html"/>
-    <updated>2024-04-15T03:42:50.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 一、K8S简介</h2>
+    <updated>2024-04-27T02:45:40.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 一、Kubernetes简介</h2>
 <p>Kubernetes中文官网：<a href="https://kubernetes.io/zh/" target="_blank" rel="noopener noreferrer">Kubernetes</a></p>
 <p>GitHub：<a href="http://github.com/kubernetes/kubernetes" target="_blank" rel="noopener noreferrer">github.com/kubernetes/kubernetes</a></p>
 <p>Kubernetes简称为K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统，起源于Google 集群管理工具Borg。</p>]]></summary>
-    <content type="html"><![CDATA[<h2> 一、K8S简介</h2>
+    <content type="html"><![CDATA[<h2> 一、Kubernetes简介</h2>
 <p>Kubernetes中文官网：<a href="https://kubernetes.io/zh/" target="_blank" rel="noopener noreferrer">Kubernetes</a></p>
 <p>GitHub：<a href="http://github.com/kubernetes/kubernetes" target="_blank" rel="noopener noreferrer">github.com/kubernetes/kubernetes</a></p>
 <p>Kubernetes简称为K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统，起源于Google 集群管理工具Borg。</p>

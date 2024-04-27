@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Sat, 27 Apr 2024 02:46:43 GMT</pubDate>
-    <lastBuildDate>Sat, 27 Apr 2024 02:46:43 GMT</lastBuildDate>
+    <pubDate>Sat, 27 Apr 2024 03:00:44 GMT</pubDate>
+    <lastBuildDate>Sat, 27 Apr 2024 03:00:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Java</category>
@@ -7962,14 +7962,14 @@ routing 是一个可变值，默认是文档的 _id</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>组件K8S</title>
+      <title>组件Kubernetes</title>
       <link>https://ujava.cn/assembly/k8s.html</link>
       <guid>https://ujava.cn/assembly/k8s.html</guid>
-      <source url="https://ujava.cn/rss.xml">组件K8S</source>
-      <description>一、K8S简介 Kubernetes中文官网：Kubernetes GitHub：github.com/kubernetes/kubernetes Kubernetes简称为K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统，起源于Google 集群管理工具Borg。</description>
+      <source url="https://ujava.cn/rss.xml">组件Kubernetes</source>
+      <description>一、Kubernetes简介 Kubernetes中文官网：Kubernetes GitHub：github.com/kubernetes/kubernetes Kubernetes简称为K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统，起源于Google 集群管理工具Borg。</description>
       <category>设计组件</category>
       <pubDate>Mon, 15 Apr 2024 03:25:51 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 一、K8S简介</h2>
+      <content:encoded><![CDATA[<h2> 一、Kubernetes简介</h2>
 <p>Kubernetes中文官网：<a href="https://kubernetes.io/zh/" target="_blank" rel="noopener noreferrer">Kubernetes</a></p>
 <p>GitHub：<a href="http://github.com/kubernetes/kubernetes" target="_blank" rel="noopener noreferrer">github.com/kubernetes/kubernetes</a></p>
 <p>Kubernetes简称为K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统，起源于Google 集群管理工具Borg。</p>
