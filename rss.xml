@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Sat, 27 Apr 2024 14:09:17 GMT</pubDate>
-    <lastBuildDate>Sat, 27 Apr 2024 14:09:17 GMT</lastBuildDate>
+    <pubDate>Sat, 27 Apr 2024 14:47:55 GMT</pubDate>
+    <lastBuildDate>Sat, 27 Apr 2024 14:47:55 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -18,6 +18,180 @@
     <category>设计算法</category>
     <category>设计注意</category>
     <category>设计模式</category>
+    <item>
+      <title>线性规划</title>
+      <link>https://ujava.cn/synthesis/linear.html</link>
+      <guid>https://ujava.cn/synthesis/linear.html</guid>
+      <source url="https://ujava.cn/rss.xml">线性规划</source>
+      <description>1、线性规划 1.1 线性规划的定义 线性规划的标准形式： 其中的 c 和 x 均为 n 维列向量，A、 Aeq 为适当维数的矩阵，b 、beq 为适当维数的列向量。 例如：x1 和 x2 称为决策变量，整个式子分为了目标函数和约束条件 总之， 线性规划问题是在一组线性约束条件的限制下， 求一线性目标函数最大或最小的问题。 1.2 线性规划的解 线性规划问题的标准数学形式： 满足（4）并使（3）达到最大值的可行解称为最优解；可行解构成的域称为可行域。</description>
+      <category>设计高频</category>
+      <pubDate>Sat, 27 Apr 2024 14:45:18 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 1、线性规划</h1>
+<h2> 1.1 线性规划的定义</h2>
+<p>线性规划的标准形式：<br>
+</p>
+<p>其中的 c 和 x 均为 n 维列向量，A、 Aeq 为适当维数的矩阵，b 、beq 为适当维数的列向量。</p>
+<p>例如：x1 和 x2 称为决策变量，整个式子分为了目标函数和约束条件<br>
+</p>
+<p>总之， 线性规划问题是在一组<strong>线性约束条件</strong>的限制下， 求一线性目标函数最大或最小的问题。</p>
+<h2> 1.2 线性规划的解</h2>
+<p>线性规划问题的标准数学形式：<br>
+</p>
+<p>满足（4）并使（3）达到最大值的可行解称为最优解；可行解构成的域称为可行域。</p>
+<h3> 1.2.1 图解法</h3>
+<p>1.1 中例子的约束条件 x1 和 x2 可用域如下，显然，对于目标函数来说，x1 和 x2<br>
+越大，目标函数值越大，最优解为<img src="https://gitee.com/sgkurisu/pic-go/raw/master/picture2/20210804193538.png" alt="image-20210804193538356" loading="lazy"><br>
+，最优目标值为 z* = 26。<br>
+</p>
+<p>有如下结论：</p>
+<ol>
+<li>可行域可出现多种情况，既可能有界，也可能无界。</li>
+<li>可行域非空时，既可存在有限最优解，也可不存在最优解。</li>
+<li>若存在最优解，则必可找到具有可行域的“顶点” 。</li>
+</ol>
+<h3> 1.2.2 MATLAB 解法</h3>
+<p>MATLAB 线性规划标准形式为<br>
+</p>
+<p>线性规划的函数为 linprog ，注意，linprog 求解的为线性规划最小值 min，若想求线性规划最大值，则需要对向量 c 取符号</p>
+<div class="language-matlab line-numbers-mode" data-ext="matlab"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>fval 返回目标函数的值， LB 和 UB 分别是变量 x 的下界和上界，x0 是 x 的初始值，</p>
+<blockquote>
+<p>例 1<br>
+</p>
+</blockquote>
+<p>m 文件：注意 linprog 中 c 取了负号<br>
+</p>
+<blockquote>
+<p>例 2<br>
+</p>
+</blockquote>
+<p>m 文件：<br>
+</p>
+<h2> 1.3 可转换为线性规划的问题</h2>
+<figure><figcaption>img_184.png</figcaption></figure>
+<p>可取<br>
+</p>
+<figure><figcaption>img_186.png</figcaption></figure>
+<p>那么问题转化为<br>
+</p>
+<blockquote>
+<p>例 3<br>
+</p>
+</blockquote>
+<p>其中 </p>
+<p>对于以上问题，取  ，那么问题变为线性规划问题<br>
+</p>
+<h2> 1.4 运输问题</h2>
+<p>某产品有 m 个产地，n 个销地，各地产量为 a1，a2 ... am，各地需求量为 b1，b2 ... bn，从 i 到 j 的<strong>单价</strong>运费为<br>
+cij，问如何调度才可使总运费最省？</p>
+<p>解：</p>
+<p>引入 xij，其取值为由 i 产地运往 j 销地的该商品数量，有<br>
+</p>
+<p>对于产销平衡问题，有以下关系：<br>
+</p>
+<h2> 1.5 指派问题</h2>
+<p>n 个人干 n 项工作，若第 i 个人去干第 j 项工作，需要花费 cij 时间，给定矩阵 C = (cij) 问如何分配才可使花费总时间最短？</p>
+<p>解：</p>
+<p>引入变量 xij，用来表示第 i 个人是否做第 j 项工作，xij = 1 表示做，xij = 0 表示不做，那么可得到如下数学模型：<br>
+</p>
+<figure><figcaption>img_195.png</figcaption></figure>
+<p>同理，xij 也可使用矩阵来表示，每行每列仅有一个为 1，其余为 0，因此这为 0-1 规划问题，针对指派问题，可将约束条件写为 xij &gt;= 0<br>
+，m = n = n，ai = bi = 1 ，因此可发现，这个问题进一步简化为了运输问题。<br>
+</p>
+<figure><figcaption>img_197.png</figcaption></figure>
+<h3> 1.5.1 指派问题的匈牙利算法</h3>
+<p>对系数矩阵 C 行或列进行线性变换，得到新的矩阵 B，矩阵 B 和 C 具有相同的最优指派。</p>
+<blockquote>
+<p>例 4</p>
+</blockquote>
+<p>指派问题的系数矩阵为<br>
+</p>
+<p>对其进行行列变换得到：<br>
+</p>
+<p>可发现，最优指派为 x12 = 1, x21 = 1, x33 = 1, x44 = 1<br>
+</p>
+<blockquote>
+<p>例 5</p>
+</blockquote>
+<p>对于较为复杂的指派问题<br>
+</p>
+<p>对其进行线性变换，有<br>
+</p>
+<p>对于第 3 行和第 5 行，都只在第 1 个元素的位置为 0，那么这时无法得到最优指派，只能继续进行线性变换，有<br>
+</p>
+<p>这时，可发现，最优指派为 x12 = 1, x24 = 1, x31 = 1, x43 = 1, x55 = 1<br>
+</p>
+<h2> 1.6 对偶理论与灵敏度分析</h2>
+<h3> 1.6.1 原始问题和对偶问题</h3>
+<figure><figcaption>img_205.png</figcaption></figure>
+<p>称（P）为原始问题， （D）为它的对偶问题。 注意变换时 c 和 b 的位置。</p>
+<p>对于如下线性规划问题：<br>
+</p>
+<p>可改写为<br>
+</p>
+<p>那么对偶问题为<br>
+</p>
+<p>令 y = y1 - y2 ，又可写成<br>
+</p>
+<p>可将原始问题转化为对偶问题进行求解，在求出最优解后，再根据性质反求出原始问题的最优解。</p>
+<h3> 4.2 灵敏度分析</h3>
+<p>灵敏度分析就是系数、常数等发生变化时， 已求得的线性规划问题的最优解会有什么变化；或者这些系数在什么范围内变化时，<br>
+线性规划问题的最优解或最优解不变。也可理解为鲁棒性。</p>
+<h2> 1.7 投资的收益和风险</h2>
+<p>以一个题目为例对本知识点进行总结。</p>
+<h3> 1.7.1 问题描述</h3>
+<p>市场上有 n 种资产 si(i = 1, 2, ..., n)，目前资金总数为 M，资产 si 的收益率为 ri，亏损率为 qi，交易费率为 pi，在不超过金额 ui<br>
+时，交易费按 ui 计算，假设银行存款利率为 r0。r0 = 5%</p>
+<p>n = 4 时<br>
+</p>
+<p>目标是使净收益尽可能大，总风险尽可能小。</p>
+<h3> 1.7.2 符号规定</h3>
+<p>定义 xi 为投资 si 的资金，a 为投资风险度，Q 为总体收益。</p>
+<p>基本假设：</p>
+<ol>
+<li>投资数额 M 相当大，为了便于计算，假设 M = 1</li>
+<li>投资越分散，总的风险越小</li>
+<li>总体风险用所投资的所有项目中最大的一个风险来度量</li>
+<li>n 种资产之间是相互独立的</li>
+<li>ri，pi，qi，r0 为定值，不受外界影响</li>
+</ol>
+<h3> 1.7.3 建模与分析</h3>
+<p>模型为：目标函数第一个为收益，第二个为风险</p>
+<figure><figcaption>img_211.png</figcaption></figure>
+<h3> 1.7.4 模型简化</h3>
+<blockquote>
+<p>固定风险水平，优化收益</p>
+</blockquote>
+<p>在实际中，由于承受风险能力不同，因此规定一个风险界限 a，使得  ，那么模型变为</p>
+<p>模型一：<br>
+</p>
+<blockquote>
+<p>固定盈利水平，极小化风险</p>
+</blockquote>
+<p>若希望总盈利到达 k 以上，则目标函数变为了极小化风险</p>
+<p>模型二：<br>
+</p>
+<blockquote>
+<p>权衡资产风险和预期收益</p>
+</blockquote>
+<p>对风险和收益进行权衡，设置权重 s (0 &lt; s &lt; 1)，s 称为投资偏好系数</p>
+<p>模型三：</p>
+<figure><figcaption>img_215.png</figcaption></figure>
+<h3> 1.7.5 模型的求解</h3>
+<p>以上模型的求解可使用 MATLAB 解法进行解决，以模型一为例<br>
+<br>
+</p>
+<p>从 a = 0 开始，以步长 0.001 循环搜索，MATLAB 代码如下：<br>
+</p>
+<h3> 1.7.6 结果分析</h3>
+<ol>
+<li>风险大，收益也大。</li>
+<li>当投资越分散时，投资者承担的风险越小，冒险的投资者会出现集中投资的情况，保守的投资者则尽量分散投资。</li>
+<li>（根据 MATLAB 图形进行说明）在 a = 0.006<br>
+附近有转折点，在这一点左边，风险增加很少时，利润增长很快。在这一点右边，风险增加很大时，利润增长很缓慢，所以对于风险和收益没有特殊偏好的投资者来说，应该选择曲线的拐点作为最优投资组合，大约<br>
+a = 0.6%，Q = 20%，（然后计算投入各个资产的资金数量）x0 = 0, x1 = 0.24, x2 = 0.4, x3 = 0.1091, x4 = 0.2212.</li>
+</ol>
+]]></content:encoded>
+    </item>
     <item>
       <title>组件ERP</title>
       <link>https://ujava.cn/assembly/erp.html</link>
@@ -9640,18 +9814,6 @@ java中的继承</p>
 <p>提供遵循值语义而不是引用语义的对象。<br>
 这意味着值对象的相等性不是基于身份的。两个值对象是<br>
 当它们具有相同的值时相等，而不一定是同一对象。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>版本号模式</title>
-      <link>https://ujava.cn/design/other/versionnumber.html</link>
-      <guid>https://ujava.cn/design/other/versionnumber.html</guid>
-      <source url="https://ujava.cn/rss.xml">版本号模式</source>
-      <description>概述 版本号模式有助于解决应用程序中的并发冲突。通常，当多个客户端试图同时更新同一记录时，这些冲突会出现在数据库操作中。解决此类冲突需要确定对象是否已更改。因此，我们需要一个版本号，该版本号随着底层数据（例如数据库）的每次更改而递增。存储库可以使用版本号来检查外部更改并向用户报告并发问题。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 概述</h2>
-<p>版本号模式有助于解决应用程序中的并发冲突。通常，当多个客户端试图同时更新同一记录时，这些冲突会出现在数据库操作中。解决此类冲突需要确定对象是否已更改。因此，我们需要一个版本号，该版本号随着底层数据（例如数据库）的每次更改而递增。存储库可以使用版本号来检查外部更改并向用户报告并发问题。</p>
 ]]></content:encoded>
     </item>
   </channel>
