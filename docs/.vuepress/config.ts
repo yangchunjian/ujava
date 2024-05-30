@@ -18,6 +18,7 @@ export default defineUserConfig({
     // meta
     ["meta", { name: "robots", content: "all" }],
     ["meta", { name: "author", content: "ujava" }],
+    ["meta", { name: "baidu-site-verification", content: "codeva-rMmYdTuAVV" }],
     [
       "meta",
       {
