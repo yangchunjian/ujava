@@ -1,5 +1,5 @@
 ---
-title: 组件K8S
+title: 组件Kubernetes
 icon: laptop-code
 category:
   - 设计组件
@@ -7,7 +7,7 @@ tag:
   - 组件
 ---
 
-## 一、K8S简介
+## 一、Kubernetes简介
 
 Kubernetes中文官网：[Kubernetes](https://kubernetes.io/zh/)
 
