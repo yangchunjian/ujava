@@ -136,6 +136,13 @@ export default sidebar({
             collapsible: true,
             prefix: "synthesis/",
             children: "structure",
+        },
+        {
+            text: "设计管理",
+            icon: "star",
+            collapsible: true,
+            prefix: "manage/",
+            children: "structure",
         }
     ],
 });
