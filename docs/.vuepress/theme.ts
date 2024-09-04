@@ -53,14 +53,6 @@ export default hopeTheme({
     },
   },
   plugins: {
-    // You should generate and use your own comment service
-    // comment: {
-    //   provider: "Giscus",
-    //   repo: "vuepress-theme-hope/giscus-discussions",
-    //   repoId: "R_kgDOG_Pt2A",
-    //   category: "Announcements",
-    //   categoryId: "DIC_kwDOG_Pt2M4COD69",
-    // },
 
 
     components: {
@@ -96,7 +88,7 @@ export default hopeTheme({
     blog: true,
     copyright: {
       author: "UJava(ujava.cn)",
-      license: "MIT",
+      // license: "MIT",
       triggerLength: 100,
       maxLength: 700,
       canonical: "https://ujava.cn/",
@@ -128,7 +120,6 @@ export default hopeTheme({
       playground: {
         presets: ["ts", "vue"],
       },
-      presentation: ["highlight", "math", "search", "notes", "zoom"],
       stylize: [
         {
           matcher: "Recommended",
@@ -148,6 +139,9 @@ export default hopeTheme({
       vPre: true,
       vuePlayground: true,
     },
-
+    search: {
+      isSearchable: (page) => page.path !== "/",
+      maxSuggestions: 10,
+    },
   },
 });
