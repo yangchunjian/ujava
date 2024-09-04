@@ -87,7 +87,7 @@ export default hopeTheme({
     },
     blog: true,
     copyright: {
-      author: "UJava(ujava.cn)",
+      author: "UJava",
       // license: "MIT",
       triggerLength: 100,
       maxLength: 700,
