@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Wed, 04 Sep 2024 12:00:27 GMT</pubDate>
-    <lastBuildDate>Wed, 04 Sep 2024 12:00:27 GMT</lastBuildDate>
+    <pubDate>Wed, 04 Sep 2024 12:15:23 GMT</pubDate>
+    <lastBuildDate>Wed, 04 Sep 2024 12:15:23 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计高频</category>
@@ -5980,10 +5980,16 @@ ChannelHandler 可以通过添加、删除或者替换其他的 ChannelHandler �
       <link>https://ujava.cn/algorithm/program.html</link>
       <guid>https://ujava.cn/algorithm/program.html</guid>
       <source url="https://ujava.cn/rss.xml">算法试题</source>
-      <description>算法试题</description>
+      <description>算法题</description>
       <category>设计算法</category>
       <pubDate>Mon, 15 Apr 2024 04:22:41 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> <a href="https://javainterview.cn/categories/?category=algorithm" target="_blank" rel="noopener noreferrer">算法试题</a></h2>
+      <content:encoded><![CDATA[<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://javainterview.cn/categories/?category=algorithm" target="_blank" rel="noopener noreferrer">算法题</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
 ]]></content:encoded>
     </item>
     <item>

@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-09-04T12:00:27.115Z</updated>
+  <updated>2024-09-04T12:15:23.156Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -6305,10 +6305,22 @@ ChannelHandler 可以通过添加、删除或者替换其他的 ChannelHandler �
     <title type="text">算法试题</title>
     <id>https://ujava.cn/algorithm/program.html</id>
     <link href="https://ujava.cn/algorithm/program.html"/>
-    <updated>2024-04-15T04:22:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> <a href="https://javainterview.cn/categories/?category=algorithm" target="_blank" rel="noopener noreferrer">算法试题</a></h2>
+    <updated>2024-09-04T12:12:30.000Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://javainterview.cn/categories/?category=algorithm" target="_blank" rel="noopener noreferrer">算法题</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
 ]]></summary>
-    <content type="html"><![CDATA[<h2> <a href="https://javainterview.cn/categories/?category=algorithm" target="_blank" rel="noopener noreferrer">算法试题</a></h2>
+    <content type="html"><![CDATA[<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://javainterview.cn/categories/?category=algorithm" target="_blank" rel="noopener noreferrer">算法题</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
 ]]></content>
     <category term="设计算法"/>
     <published>2024-04-15T04:22:41.000Z</published>

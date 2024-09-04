@@ -619,10 +619,10 @@
       "title": "算法试题",
       "url": "https://ujava.cn/algorithm/program.html",
       "id": "https://ujava.cn/algorithm/program.html",
-      "summary": "算法试题",
-      "content_html": "<h2> <a href=\"https://javainterview.cn/categories/?category=algorithm\" target=\"_blank\" rel=\"noopener noreferrer\">算法试题</a></h2>\n",
+      "summary": "算法题",
+      "content_html": "<blockquote>\n<blockquote>\n<blockquote>\n<p><a href=\"https://javainterview.cn/categories/?category=algorithm\" target=\"_blank\" rel=\"noopener noreferrer\">算法题</a></p>\n</blockquote>\n</blockquote>\n</blockquote>\n",
       "date_published": "2024-04-15T04:22:41.000Z",
-      "date_modified": "2024-04-15T04:22:41.000Z",
+      "date_modified": "2024-09-04T12:12:30.000Z",
       "authors": [],
       "tags": [
         "设计算法"
