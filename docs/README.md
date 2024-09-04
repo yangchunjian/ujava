@@ -3,8 +3,8 @@ home: true
 icon: home
 title: 架构设计
 heroImage: /logo/logo.svg
-bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
-bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
+bgImage: /bg/light2.svg
+bgImageDark: /bg/light10.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: 架构设计
