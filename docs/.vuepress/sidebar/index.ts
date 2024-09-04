@@ -14,7 +14,6 @@ export default sidebar({
             icon: "star",
             collapsible: true,
             children: [
-                "/required/README",
                 "/home",
                 "/required/faq",
                 "/required/history",
