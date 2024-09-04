@@ -13,7 +13,7 @@ actions:
   - text: 架构设计 💡
     link: ./design/
     
-footer: 版权所有 © 2020-present UJava
+#footer: 版权所有 © 2020-present UJava
 ---
 
 ## 关于网站
