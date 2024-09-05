@@ -79,16 +79,16 @@ Add the following content to the dependencies of pom.xml in the project:
 <dependency>
     <groupId>cn.ujava</groupId>
     <artifactId>ujava-all</artifactId>
-    <version>6.0.0</version>
+    <version>7.0.0</version>
 </dependency>
 ```
 ### 🍐 Gradle
 ```
-implementation 'cn.ujava:ujava-all:6.0.0'
+implementation 'cn.ujava:ujava-all:7.0.0'
 ```
 ### 📥 Download jar
 Click on the following link to download 'ujava-all-X.X.X.jar':
--[Maven Central Library](https://repo1.maven.org/maven2/cn/ujava/ujava-all/6.0.0/)
+-[Maven Central Library](https://repo1.maven.org/maven2/cn/ujava/ujava-all/7.0.0/)
 > 🔔 Attention
 >UJava 3. x supports JDK8+.
 ### 🚽 Compile and install
