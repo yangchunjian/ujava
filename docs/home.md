@@ -10,7 +10,7 @@ UJava(架构设计)持续更新中~
 
 <div align="center">
 
-[GitHub](https://github.com/yangchunjian/ujava) | [Gitee](https://gitee.com/yangchunjian/ujava)
+[//]: # ([GitHub]&#40;https://github.com/yangchunjian/ujava&#41; | [Gitee]&#40;https://gitee.com/yangchunjian/ujava&#41;)
 
 </div>
 

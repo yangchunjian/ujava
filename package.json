@@ -2,7 +2,7 @@
   "name": "ujava",
   "version": "2.0.0",
   "description": "ujava tool",
-  "license": "MIT",
+  "license": "MulanPSL2",
   "type": "module",
   "scripts": {
     "docs:build": "vuepress build docs",

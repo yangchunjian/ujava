@@ -49,8 +49,7 @@
 -------------------------------------------------------------------------------
 
 ## 📚 Brief Introduction
-`UJava` is a feature rich and easy-to-use Java design pattern library designed to help developers quickly and conveniently use design patterns to complete various development tasks.
-It can meet various development needs.
+`UJava` is a feature rich and easy to use the best Java architecture design tool **, designed to help developers quickly and easily use various types of design to complete development tasks to meet various business needs.
 ### 🎁 The Origin of UJava Names
 UJava=U+Java, is an open-source library based on design experience, where "U" represents You and Java represents the language. UJava sounds like "your language", simple and easy to understand.
 ### 🍺 UJava philosophy
