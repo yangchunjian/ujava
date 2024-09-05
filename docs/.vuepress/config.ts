@@ -1,4 +1,5 @@
 // @ts-ignore
+import { getDirname, path } from "vuepress/utils";
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
@@ -53,6 +54,13 @@ export default defineUserConfig({
   ],
   bundler: viteBundler(),
   theme,
+  alias: {
+    // 你可以在这里将别名定向到自己的组件
+    "@theme-hope/components/NormalPage": path.resolve(
+        __dirname,
+        "./components/NormalPage.vue",
+    ),
+  },
 
   plugins: [
     watermarkPlugin({

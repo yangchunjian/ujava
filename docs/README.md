@@ -23,7 +23,9 @@ actions:
 - [网站历史](./required/history)
 
 ## 公众号
-
 最新更新会第一时间同步在公众号，推荐关注！另外，公众号上有很多干货不会同步在线阅读网站。
+
+<br/>
+<div style="text-align: center">公众号更有货，推荐关注！</div>
 
 ![UJava 官方公众号](https://ujava.cn/logo/gzh-wz.png)

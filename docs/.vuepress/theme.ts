@@ -144,4 +144,4 @@ export default hopeTheme({
       maxSuggestions: 10,
     },
   },
-});
+},{custom: true});
