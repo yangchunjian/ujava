@@ -1,6 +1,6 @@
 <template>
   <HopeNormalPage>
-    <!-- 使用 bottom 插槽引入评论组件 -->
+    <!-- 使用 contentAfter 插槽引入组件 -->
     <template #contentAfter>
       <div style="text-align: center">
         <h4>公众号更有货，推荐关注！</h4>
