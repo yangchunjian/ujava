@@ -50,6 +50,7 @@ export default hopeTheme({
       Github: "https://github.com/yangchunjian",
       Gitee: "https://gitee.com/yangchunjian",
       Wechat: "https://www.yjava.cn/imgs/dearlocation.jpeg",
+      Rss: "https://ujava.cn/rss.xml",
     },
   },
   plugins: {
