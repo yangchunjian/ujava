@@ -90,8 +90,8 @@ export default hopeTheme({
     copyright: {
       author: "UJava",
       // license: "MIT",
-      triggerLength: 100,
-      maxLength: 700,
+      // triggerLength: 100,
+      // maxLength: 700,
       canonical: "https://ujava.cn/",
       global: true,
     },
