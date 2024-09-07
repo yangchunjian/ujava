@@ -137,23 +137,11 @@ export default sidebar({
             children: "structure",
         },
         {
-            text: "设计管理",
+            text: "项目管理",
             icon: "star",
             collapsible: true,
             prefix: "manage/",
-            children: [
-                "design",
-                "project1",
-                "project2",
-                "project3",
-                "project4",
-                "project5",
-                "project6",
-                "project7",
-                "project8",
-                "project9",
-                "project10",
-            ],
+            children: "structure",
 
         }
     ],

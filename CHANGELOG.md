@@ -24,4 +24,4 @@
 
 
 # 7.0.x 或更早版本
-* [https://gitee.com/yangchunjian/ujava/blob/v7-master/CHANGELOG_1.0-7.0.md](https://gitee.com/yangchunjian/ujava/blob/v7-master/CHANGELOG_1.0-7.0.md)
+* [7.0.x 或更早版本](https://ujava.cn/project/changelog.html)

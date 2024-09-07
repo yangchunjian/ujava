@@ -5,6 +5,23 @@ export default navbar([
   { text: "设计思想", icon: "star", link: "/mind/" },
   { text: "设计模式", icon: "star", link: "/design/" },
   {
+    text: "项目相关",
+    icon: "star",
+    children: [
+      { text: "项目介绍", icon: "star", link: "/home.html" },
+      {
+        text: "更新记录",
+        icon: "star",
+        link: "/project/changelog.html",
+      },
+      {
+        text: "管理经验",
+        icon: "star",
+        link: "/manage/",
+      },
+    ],
+  },
+  {
     text: "网站相关",
     icon: "star",
     children: [
