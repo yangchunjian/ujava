@@ -4,7 +4,8 @@ import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
 import { watermarkPlugin } from '@vuepress/plugin-watermark'
-
+// @ts-ignore
+const __dirname = getDirname(import.meta.url);
 // import { searchProPlugin } from 'vuepress-plugin-search-pro';
 
 export default defineUserConfig({
