@@ -61,10 +61,10 @@ export default defineUserConfig({
         "./components/NormalPage.vue",
     ),
     // 你可以在这里将别名定向到自己的组件
-    "@theme-hope/components/CommonWrapper": path.resolve(
-        __dirname,
-        "./components/CommonWrapper.vue",
-    ),
+    // "@theme-hope/components/CommonWrapper": path.resolve(
+    //     __dirname,
+    //     "./components/CommonWrapper.vue",
+    // ),
   },
 
   plugins: [
