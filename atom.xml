@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-09-08T07:06:31.288Z</updated>
+  <updated>2024-09-08T09:22:35.935Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -277,7 +277,7 @@
     <title type="text">更新记录</title>
     <id>https://ujava.cn/project/changelog.html</id>
     <link href="https://ujava.cn/project/changelog.html"/>
-    <updated>2024-09-07T16:29:26.000Z</updated>
+    <updated>2024-09-08T09:20:13.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">友情提示</p>
 <p>UJava(架构设计)持续更新中~</p>
