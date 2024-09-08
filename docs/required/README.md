@@ -27,6 +27,8 @@ category:
 
 - [项目介绍](/home.md)
 
+- [更新记录](/project/changelog.md)
+
 - [常见问题](faq.md)
 
 - [网站历史](history.md)
