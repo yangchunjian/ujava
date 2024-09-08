@@ -16,8 +16,9 @@ UJava(架构设计)持续更新中~
 <!-- @include: ../../CHANGELOG.md -->
 </div>
 @tab 7.0.x 或更早版本#beforeversion
+<div class="keep-whitespace">
 <!-- @include: ../../CHANGELOG_1.0-7.0.md -->
-
+</div>
 :::
 
 
