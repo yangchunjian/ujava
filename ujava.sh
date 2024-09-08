@@ -80,7 +80,7 @@ parse_arguments()
         exit 0
         ;;
         --push)
-        bin/push.sh
+        bin/push_dev.sh
         exit 0
         ;;
         -v|--version)
