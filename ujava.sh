@@ -11,28 +11,36 @@ Usage:
     $0 [-h] [--help]
        [-d] [--deploy]
        [-v <value>] [--version <value>]
-       [-p] [--package][--push]
-       [--doc] [--install]
-       [-r]
+       [-p] [--package]
+       [-r] [--run]
+       [--push]
+       [--push_dev]
+       [--push_main]
+       [--doc]
+       [--install]
 Options and Arguments:
  -h,--help                      Print usage
  -d,--deploy                    deploy to central repository
  -v,--version <value>           update version to value
  -p,--package                   Make jar package by Maven
+ -r,--run                       run project
     --doc                       Generate Java doc api for UJava, you can see it in target dir
     --install                   Install UJava to your local Maven repository
     --push                      push to origin main
- -r,--run                       run project
+    --push_dev                  push to origin v7-dev
+    --push_main                 push to origin v7-main
 
 EXAMPLES:
   ./ujava.sh --help
   ./ujava.sh --deploy
   ./ujava.sh --version 7.0.0
   ./ujava.sh --package
+  ./ujava.sh --run
   ./ujava.sh --doc
   ./ujava.sh --install
   ./ujava.sh --push
-  ./ujava.sh --run
+  ./ujava.sh --push_dev
+  ./ujava.sh --push_main
 
 WIKI:
   https://ujava.cn/
@@ -80,7 +88,15 @@ parse_arguments()
         exit 0
         ;;
         --push)
+        bin/push.sh
+        exit 0
+        ;;
+        --push_dev)
         bin/push_dev.sh
+        exit 0
+        ;;
+        --push_main)
+        bin/push_main.sh
         exit 0
         ;;
         -v|--version)
