@@ -5,7 +5,7 @@ git checkout v7-dev
 
 echo -e "\033[32mAdd to v7-dev\033[0m"
 git add .
-echo -e "\033[32mACommit to v7-dev\033[0m"
+echo -e "\033[32mCommit to v7-dev\033[0m"
 git commit -m "更新成功~"
 
 
