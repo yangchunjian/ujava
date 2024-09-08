@@ -23,13 +23,13 @@
 		<img src="https://img.shields.io/badge/JDK-8+-green.svg" />
 	</a>
 	<a target="_blank" href="https://travis-ci.com/yangchunjian/ujava">
-		<img src="https://travis-ci.com/yangchunjian/ujava.svg?branch=main" />
+		<img src="https://travis-ci.com/yangchunjian/ujava.svg?branch=v7-main" />
 	</a>
 	<a href="https://www.codacy.com/gh/yangchunjian/ujava/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yangchunjian/ujava&amp;utm_campaign=Badge_Grade">
 		<img src="https://app.codacy.com/project/badge/Grade/8a6897d9de7440dd9de8804c28d2871d"/>
 	</a>
 	<a href="https://codecov.io/gh/yangchunjian/ujava">
-		<img src="https://codecov.io/gh/yangchunjian/ujava/branch/main/graph/badge.svg" />
+		<img src="https://codecov.io/gh/yangchunjian/ujava/branch/v7-main/graph/badge.svg" />
 	</a>
 	<a target="_blank" href="https://gitter.im/ujava/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
 		<img src="https://badges.gitter.im/ujava/Lobby.svg" />
@@ -71,11 +71,12 @@ UJava = U + Java，是基于设计经验的开源库，“U”是You的表示，
 ## 🛠️包含组件
 提供以下组件：
 
-| 模块            | 介绍                                             |
-|---------------|------------------------------------------------|
-| ujava-design  | 设计模式                                           |
-| ujava-script  | 脚本                                             |
-| ujava-common  | 通用组件                                           |
+| 模块           | 介绍    |
+|--------------|-------|
+| ujava-common | 通用组件  |
+| ujava-design | 设计模式  |
+| ujava-script | 脚本    |
+| ujava-web    | WEB组件 |
 
 
 可以根据需求对每个模块单独引入，也可以通过引入`ujava-all`方式引入所有模块。
@@ -130,7 +131,7 @@ implementation 'cn.ujava:ujava-all:7.0.0'
 
 ### 🚽编译安装
 
-访问UJava的Gitee主页：[https://gitee.com/yangchunjian/ujava](https://gitee.com/yangchunjian/ujava) 下载整个项目源码（main或dev分支都可）然后进入UJava项目目录执行：
+访问UJava的Gitee主页：[https://gitee.com/yangchunjian/ujava](https://gitee.com/yangchunjian/ujava) 下载整个项目源码（v7-main或v7-dev分支都可）然后进入UJava项目目录执行：
 
 ```sh
 ./ujava.sh --install
@@ -148,8 +149,8 @@ UJava的源码分为两个分支，功能如下：
 
 | 分支       | 作用                                                          |
 |-----------|---------------------------------------------------------------|
-| main | 主分支，release版本使用的分支，与中央库提交的jar一致，不接收任何pr或修改 |
-| dev    | 开发分支，默认为下个版本的SNAPSHOT版本，接受修改或pr                 |
+| v7-main | 主分支，release版本使用的分支，与中央库提交的jar一致，不接收任何pr或修改 |
+| v7-dev    | 开发分支，默认为下个版本的SNAPSHOT版本，接受修改或pr                 |
 
 ### 🐞提供bug反馈或建议
 
@@ -163,8 +164,8 @@ UJava的源码分为两个分支，功能如下：
 
 1. 在Gitee或者Github上fork项目到自己的repo
 2. 把fork过去的项目也就是你的项目clone到你的本地
-3. 修改代码（记得一定要修改dev分支）
-4. commit后push到自己的库（dev分支）
+3. 修改代码（记得一定要修改v7-dev分支）
+4. commit后push到自己的库（v7-dev分支）
 5. 登录Gitee或Github在你首页可以看到一个 pull request 按钮，点击它，填写一些说明信息，然后提交即可。
 6. 等待维护者合并
 
@@ -174,7 +175,7 @@ UJava欢迎任何人为UJava添砖加瓦，贡献代码，不过维护者是一�
 
 1. 注释完备，尤其每个新增的方法应按照Java文档规范标明方法说明、参数说明、返回值说明等信息，必要时请添加单元测试，如果愿意，也可以加上你的大名。
 2. 新加的方法不要使用第三方库的方法，UJava遵循无依赖原则（除非在extra模块中加方法工具）。
-3. 请pull request到`dev`分支。UJava在5.x版本后使用了新的分支：`main`是主分支，表示已经发布中央库的版本，这个分支不允许pr，也不允许修改。
+3. 请pull request到`v7-dev`分支。UJava在7.x版本后使用了新的分支：`v7-main`是主分支，表示已经发布中央库的版本，这个分支不允许pr，也不允许修改。
 4. 我们如果关闭了你的issue或pr，请不要诧异，这是我们保持问题处理整洁的一种方式，你依旧可以继续讨论，当有讨论结果时我们会重新打开。
 
 -------------------------------------------------------------------------------
