@@ -19,6 +19,7 @@ actions:
 ## 关于网站
 
 - [项目介绍](./home)
+- [更新记录](./project/changelog)
 - [常见问题](./required/faq)
 - [网站历史](./required/history)
 

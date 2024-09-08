@@ -21,13 +21,13 @@
 		<img src="https://img.shields.io/badge/JDK-8+-green.svg" />
 	</a>
 	<a target="_blank" href="https://travis-ci.com/yangchunjian/ujava">
-		<img src="https://travis-ci.com/yangchunjian/ujava.svg?branch=main" />
+		<img src="https://travis-ci.com/yangchunjian/ujava.svg?branch=v7-main" />
 	</a>
 	<a href="https://www.codacy.com/gh/yangchunjian/ujava/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yangchunjian/ujava&amp;utm_campaign=Badge_Grade">
 		<img src="https://app.codacy.com/project/badge/Grade/8a6897d9de7440dd9de8804c28d2871d"/>
 	</a>
 	<a href="https://codecov.io/gh/yangchunjian/ujava">
-		<img src="https://codecov.io/gh/yangchunjian/ujava/branch/main/graph/badge.svg" />
+		<img src="https://codecov.io/gh/yangchunjian/ujava/branch/v7-main/graph/badge.svg" />
 	</a>
 	<a target="_blank" href="https://gitter.im/ujava/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
 		<img src="https://badges.gitter.im/ujava/Lobby.svg" />
@@ -61,9 +61,10 @@ UJava=U+Java, is an open-source library based on design experience, where "U" re
 Provide the following components:
 |Module | Introduction|
 |---------------|------------------------------------------------|
+|UJava common | General components|
 |UJava design | Design pattern|
 |UJava script | Script|
-|UJava common | General components|
+|UJava web    | Web components|
 Each module can be introduced separately according to requirements, or all modules can be introduced through the 'uJava all' method.
 -------------------------------------------------------------------------------
 ## 📝 Document
@@ -92,7 +93,7 @@ Click on the following link to download 'ujava-all-X.X.X.jar':
 > 🔔 Attention
 >UJava 3. x supports JDK8+.
 ### 🚽 Compile and install
-Visit UJava's Gitee homepage:[ https://gitee.com/yangchunjian/ujava ](https://gitee.com/yangchunjian/ujava)Download the entire project source code (either main or dev branch) and then enter the UJava project directory to execute:
+Visit UJava's Gitee homepage:[ https://gitee.com/yangchunjian/ujava ](https://gitee.com/yangchunjian/ujava)Download the entire project source code (either v7-main or v7-dev branch) and then enter the UJava project directory to execute:
 ```Sh
 ./ujava. sh -- install
 ```
@@ -114,8 +115,8 @@ Please provide feedback on the JDK version, UJava version, and related dependenc
 ### 🧬Steps to contribute code
 1. Fork the project to your own repo on Gitee or Github
 2. Clone forked past projects, which are also your projects, to your local location
-3. Modify the code (remember to modify the dev branch)
-4. After commit, push to your own library (dev branch)
+3. Modify the code (remember to modify the v7-dev branch)
+4. After commit, push to your own library (v7-dev branch)
 5. Log in to Gitee or Github and you will see a pull request button on your homepage. Click on it, fill in some explanatory information, and then submit it.
 6. Waiting for maintainers to merge
 
@@ -123,7 +124,7 @@ Please provide feedback on the JDK version, UJava version, and related dependenc
 UJava welcomes anyone to contribute code and contribute to it, but the maintainer is an OCD patient. In order to take care of the patient, the PR (pull request) that needs to be submitted meets some standards, as follows:
 1. The comments should be complete, especially for each newly added method, which should be marked with method description, parameter description, return value description, and other information according to Java documentation specifications. If necessary, please add unit tests, and if desired, you can also add your name.
 2. Do not use methods from third-party libraries for newly added methods. UJava follows the principle of no dependencies (unless method tools are added in the extra module).
-3. Please pull the request to the 'dev' branch. UJava has used a new branch after version 5. x: 'main' is the main branch, indicating that a version of the central repository has already been released. This branch does not allow PR or modification.
+3. Please pull the request to the 'v7-dev' branch. UJava has used a new branch after version 7. x: 'v7-main' is the main branch, indicating that a version of the central repository has already been released. This branch does not allow PR or modification.
 4. If we close your issue or PR, please don't be surprised. This is one way for us to keep the problem handling clean. You can still continue the discussion, and we will reopen it when there are discussion results.
 -------------------------------------------------------------------------------
 

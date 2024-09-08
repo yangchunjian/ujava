@@ -15,6 +15,7 @@ export default sidebar({
             collapsible: true,
             children: [
                 "/home",
+                "/project/changelog",
                 "/required/faq",
                 "/required/history",
             ],
