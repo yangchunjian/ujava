@@ -16,6 +16,7 @@ Usage:
        [--push]
        [--push_dev]
        [--push_main]
+       [--push_all]
        [--doc]
        [--install]
 Options and Arguments:
@@ -29,6 +30,7 @@ Options and Arguments:
     --push                      push to origin main
     --push_dev                  push to origin v7-dev
     --push_main                 push to origin v7-main
+    --push_all                  push to execute push_dev push_main push
 
 EXAMPLES:
   ./ujava.sh --help
@@ -41,6 +43,7 @@ EXAMPLES:
   ./ujava.sh --push
   ./ujava.sh --push_dev
   ./ujava.sh --push_main
+  ./ujava.sh --push_all
 
 WIKI:
   https://ujava.cn/
@@ -97,6 +100,10 @@ parse_arguments()
         ;;
         --push_main)
         bin/push_main.sh
+        exit 0
+        ;;
+        --push_all)
+        bin/push_all.sh
         exit 0
         ;;
         -v|--version)
