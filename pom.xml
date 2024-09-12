@@ -18,6 +18,7 @@
         <module>ujava-common</module>
         <module>ujava-design</module>
         <module>ujava-script</module>
+        <module>ujava-web</module>
     </modules>
 
     <properties>
