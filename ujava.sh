@@ -2,7 +2,6 @@
 
 UJAVA_SCRIPT_VERSION=7.0.0
 
-
 # the usage
 usage()
 {

@@ -2,11 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>cn.ujava</groupId>
+    <packaging>jar</packaging>
+    <parent>
+        <groupId>cn.ujava</groupId>
+        <artifactId>ujava-parent</artifactId>
+        <version>7.0.0</version>
+    </parent>
     <artifactId>ujava-web</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>ujava-web</name>
-    <description>ujava-web</description>
+    <name>${project.artifactId}</name>
+    <description>ujava web等工具</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
