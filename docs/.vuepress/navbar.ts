@@ -33,4 +33,16 @@ export default navbar([
       },
     ],
   },
+  {
+    text: "游戏相关",
+    icon: "star",
+    children: [
+      { text: "2048", icon: "star", link: "/2048/" },
+      {
+        text: "吃豆人",
+        icon: "star",
+        link: "/pacman/",
+      },
+    ],
+  },
 ]);
