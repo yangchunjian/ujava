@@ -1049,6 +1049,21 @@
 				context.fillText('FINAL SCORE: '+(_SCORE+50*Math.max(_LIFE-1,0)),this.x,this.y);
 			}
 		});
+		// 提示
+		stage.createItem({
+			x:game.width/2,
+			y:game.height*.64,
+			frames:28,
+			draw:function(context){
+				if(this.times%2){
+					context.font = 'bold 14px PressStart2P';
+					context.textAlign = 'center';
+					context.textBaseline = 'middle';
+					context.fillStyle = '#AAA';
+					context.fillText('按enter重新开始',this.x,this.y);
+				}
+			}
+		});
 		//事件绑定
 		stage.bind('keydown',function(e){
 			switch(e.keyCode){
