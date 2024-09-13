@@ -28,7 +28,8 @@ export default navbar([
       { text: "关于作者", icon: "star", link: "/author/" },
       {
         text: "更新历史",
-        icon: "history",
+        // icon: "history",
+        icon: "star",
         link: "/timeline/",
       },
     ],
@@ -37,11 +38,11 @@ export default navbar([
     text: "游戏相关",
     icon: "star",
     children: [
-      { text: "2048", icon: "star", link: "/2048/" },
+      { text: "2048", icon: "star", link: "/2048" },
       {
         text: "吃豆人",
         icon: "star",
-        link: "/pacman/",
+        link: "/pacman",
       },
     ],
   },
