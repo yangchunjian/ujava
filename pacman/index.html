@@ -7,17 +7,7 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="./static/style/index.css">
         <style>
-            /* 默认隐藏input */
-            input[type="text"] {
-                display: none;
-            }
-            /* 在宽度小于767像素的设备上显示input */
-            @media (max-width: 767px) {
-                input[type="text"] {
-                    display: block;
-                    /* 其他样式 */
-                }
-            }
+
         </style>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
 	</head>
@@ -32,10 +22,7 @@
 					<div class="info">
                         <p>按<b> [空格键]</b> 暂停或继续</p>
                         <p>在玩的过程中，您会发现这些精灵似乎很有想法，它们知道如何彼此协作对您穷追不舍。</p>
-                        <div style="justify-content:center;display:flex;">
-<!--                            <button onclick="showKeyboard()">点击弹出键盘</button>-->
-                            <input type="text" id="myInput" style="display:none;"/>
-                        </div>
+
                     </div>
 				</div>
 			</div>
@@ -44,13 +31,7 @@
 		<script src="./static/script/index.js"></script>
 		<script src="./static/script/buttons.js"></script>
         <script>
-            function showKeyboard() {
-                document.getElementById('myInput').focus();
-            }
 
-            // document.getElementById('myInput').addEventListener('focus',function () {
-            //     this.focus();
-            // })
         </script>
     </body>
 </html>
