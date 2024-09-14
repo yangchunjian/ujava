@@ -44,6 +44,11 @@ export default navbar([
         icon: "star",
         link: "https://ujava.cn/pacman",
       },
+      {
+        text: "跳一跳",
+        icon: "star",
+        link: "https://ujava.cn/jump",
+      },
     ],
   },
 ]);
