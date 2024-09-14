@@ -3,8 +3,16 @@
 <head>
     <title>跳一跳</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="UJava">
     <style>
+        * {
+            -moz-user-select:none; /*火狐*/
+            -webkit-user-select:none; /*webkit浏览器*/
+            -ms-user-select:none; /*IE10*/
+            -khtml-user-select:none; /*早期浏览器*/
+            user-select:none;
+        }
         @font-face{font-family: 'numjump';src : url('source/num.ttf');}
         body{
             margin: 0;
