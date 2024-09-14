@@ -36,7 +36,7 @@
           s.parentNode.insertBefore(hm, s);
         })();</script><link rel="alternate" type="application/atom+xml" href="https://ujava.cn/atom.xml" title="UJava Atom Feed"><link rel="alternate" type="application/json" href="https://ujava.cn/feed.json" title="UJava JSON Feed"><link rel="alternate" type="application/rss+xml" href="https://ujava.cn/rss.xml" title="UJava RSS Feed"><link rel="icon" href="/favicon.ico"><title>MySQL死锁SQL | UJava</title><meta name="description" content="在MySQL中，死锁通常发生在多个事务相互占用对方需要的资源，导致每个事务都在等待其他事务释放资源时无法向前推进。 解决死锁问题通常需要调整事务的隔离级别、保持事务尽可能短、避免事务中的锁竞争、使用索引来加快查询速度，并确保应用程序能够处理事务回滚。 以下是一个简单的例子，演示如何通过索引来减少死锁的可能性： 假设有两个表 orders 和 inven...">
     <link rel="preload" href="/assets/style-caUhHhY2.css" as="style"><link rel="stylesheet" href="/assets/style-caUhHhY2.css">
-    <link rel="modulepreload" href="/assets/app-BS1KzMkc.js"><link rel="modulepreload" href="/assets/mysqllocksql.html-QBXBZE_C.js">
+    <link rel="modulepreload" href="/assets/app-BW6Enwe3.js"><link rel="modulepreload" href="/assets/mysqllocksql.html-CS8lBwGp.js">
     
   </head>
   <body>
@@ -57,6 +57,6 @@
 <span class="token comment">-- 对product_id字段在inventory表上建立索引</span>
 <span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> inventory <span class="token keyword">ADD</span> <span class="token keyword">INDEX</span> <span class="token punctuation">(</span>product_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>索引可以帮助数据库优化查询，并且通常按顺序存储数据，减少了不同事务之间互相锁定对方所需资源的可能性。</p><p>此外，确保事务尽可能小，并尽快提交，也有助于减少死锁的发生。</p></div><!--[--><div style="text-align:center;"><h4>公众号更有货，推荐关注！</h4><img src="https://ujava.cn/logo/gzh-wz.png"></div><!--]--><footer class="page-meta"><!----><div class="meta-item git-info"><!----><!----></div></footer><nav class="vp-page-nav"><a class="route-link nav-link prev" href="/synthesis/mysqlslow.html" aria-label="MySQL慢查询"><div class="hint"><span class="arrow start"></span>上一页</div><div class="link"><span class="font-icon icon fa-fw fa-sm fas fa-laptop-code" style=""></span>MySQL慢查询</div></a><a class="route-link nav-link next" href="/synthesis/business.html" aria-label="一文搞懂业务架构、技术架构、数据架构、运维架构、物理架构理清不同视角的架构"><div class="hint">下一页<span class="arrow end"></span></div><div class="link">一文搞懂业务架构、技术架构、数据架构、运维架构、物理架构理清不同视角的架构<span class="font-icon icon fa-fw fa-sm fas fa-laptop-code" style=""></span></div></a></nav><!----><!----><!--]--></main><!--]--><footer class="vp-footer-wrapper"><!----><div class="vp-copyright">Copyright © 2024 UJava </div></footer></div><!--]--><!--[--><!----><!--]--><!--]--></div>
-    <script type="module" src="/assets/app-BS1KzMkc.js" defer></script>
+    <script type="module" src="/assets/app-BW6Enwe3.js" defer></script>
   </body>
 </html>
