@@ -1020,6 +1020,28 @@
 					break;
 				}
 			});
+			document.getElementById('ps').addEventListener('click', function(e) {
+				_SCORE = 0;
+				_LIFE = 5;
+				game.setStage(1);
+
+			});
+
+			document.getElementById('up').addEventListener('click', function() {
+				player.control = {orientation:3};
+			});
+
+			document.getElementById('left').addEventListener('click', function() {
+				player.control = {orientation:2};
+			});
+
+			document.getElementById('down').addEventListener('click', function() {
+				player.control = {orientation:1};
+			});
+
+			document.getElementById('right').addEventListener('click', function() {
+				player.control = {orientation:0};
+			});
 		});
 	})();
 	//结束画面
