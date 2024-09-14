@@ -36,7 +36,7 @@
           s.parentNode.insertBefore(hm, s);
         })();</script><link rel="alternate" type="application/atom+xml" href="https://ujava.cn/atom.xml" title="UJava Atom Feed"><link rel="alternate" type="application/json" href="https://ujava.cn/feed.json" title="UJava JSON Feed"><link rel="alternate" type="application/rss+xml" href="https://ujava.cn/rss.xml" title="UJava RSS Feed"><link rel="icon" href="/favicon.ico"><title>组件Redis | UJava</title><meta name="description" content="NoSQL:即Not-OnlySQL(泛指非关系型的数据库)，作为关系型数据库的补充。 作用:应对基于海量用户和海量数据前提下的数据处理问题。 Redis介绍 概念 Redis(REmote DlctionaryServer)是用C语言开发的一个开源的高性能键值对(key-value)数据库 特征 1.数据间没有必然的关联关系 2.内部采用单线程机制进...">
     <link rel="preload" href="/assets/style-caUhHhY2.css" as="style"><link rel="stylesheet" href="/assets/style-caUhHhY2.css">
-    <link rel="modulepreload" href="/assets/app-DvdfbZbo.js"><link rel="modulepreload" href="/assets/redis.html-BZo-7BAJ.js">
+    <link rel="modulepreload" href="/assets/app-BUH4TzIy.js"><link rel="modulepreload" href="/assets/redis.html-D_S7plHo.js">
     
   </head>
   <body>
@@ -352,6 +352,6 @@ repl_backlog_first_byte_offset:0
 repl_backlog_histlen:0
 
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以测试：</p><p>复制3个配置文件，然后修改对应的信息<br> 1、端口<br> 2、pid 名字<br> 3、log文件名字<br> 4、dump.rdb 名字</p><p>默认情况下，每台Redis服务器都是主节点</p><p>配置从节点，认老大：</p><blockquote><p>Slaveof host port</p></blockquote><p>真实的从主配置应该在配置文件中配置，这样的话是永久的，我们这里使用的是命令，暂时的!</p><p>主机负责写，从机负责读</p><p>Slave 启动成功连接到master后会发送一个sync同步命令</p><p>Master 接到命令，启动后台的存盘进程，同时收集所有接收到的用于修改数据集命令，在后台进程执行完毕之后，master将传送</p><p>整个数据文件到slave，并完成一次完全同步。</p><p>全量复制:而slave服务在接收到数据库文件数据后，将其存盘并加载到内存中。</p><p>增量复制:Master继续将新的所有收集到的修改命令依次传给slave，完成同步</p><p>但是只要是重新连接master，一次完全同步(全量复制)将被自动执行</p></div><!--[--><div style="text-align:center;"><h4>公众号更有货，推荐关注！</h4><img src="https://ujava.cn/logo/gzh-wz.png"></div><!--]--><footer class="page-meta"><!----><div class="meta-item git-info"><!----><!----></div></footer><nav class="vp-page-nav"><a class="route-link nav-link prev" href="/assembly/reactor.html" aria-label="组件Reactor"><div class="hint"><span class="arrow start"></span>上一页</div><div class="link"><span class="font-icon icon fa-fw fa-sm fas fa-laptop-code" style=""></span>组件Reactor</div></a><a class="route-link nav-link next" href="/assembly/serverless.html" aria-label="组件Serverless"><div class="hint">下一页<span class="arrow end"></span></div><div class="link">组件Serverless<span class="font-icon icon fa-fw fa-sm fas fa-laptop-code" style=""></span></div></a></nav><!----><!----><!--]--></main><!--]--><footer class="vp-footer-wrapper"><!----><div class="vp-copyright">Copyright © 2024 UJava </div></footer></div><!--]--><!--[--><!----><!--]--><!--]--></div>
-    <script type="module" src="/assets/app-DvdfbZbo.js" defer></script>
+    <script type="module" src="/assets/app-BUH4TzIy.js" defer></script>
   </body>
 </html>
