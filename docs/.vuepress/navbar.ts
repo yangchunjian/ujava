@@ -26,6 +26,7 @@ export default navbar([
     icon: "star",
     children: [
       { text: "关于作者", icon: "star", link: "/author/" },
+      { text: "关于公告", icon: "star", link: "/notice/notice" },
       {
         text: "更新历史",
         // icon: "history",
@@ -38,6 +39,7 @@ export default navbar([
     text: "应用相关",
     icon: "star",
     children: [
+      { text: "公众号", icon: "star", link: "/app/wechat" },
       { text: "小程序", icon: "star", link: "/app/applet" },
       {
         text: "安装包",

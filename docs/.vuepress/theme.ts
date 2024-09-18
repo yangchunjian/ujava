@@ -63,16 +63,16 @@ export default hopeTheme({
         // notice: [
         //   {
         //     path: "/",
-        //     title: "项目介绍",
-        //     showOnce: true,
+        //     title: "公众号",
+        //     showOnce: false,
         //     content:
-        //         "项目介绍相关内容~",
+        //         "<img style='width: 100%' src=\"https://ujava.cn/logo/gzh.png\"/>",
         //     actions: [
-        //       {
-        //         text: "开始阅读",
-        //         link: "/home.html",
-        //         type: "primary",
-        //       },
+        //       // {
+        //       //   text: "开始阅读",
+        //       //   link: "/home.html",
+        //       //   type: "primary",
+        //       // },
         //     ],
         //   },
         // ],
