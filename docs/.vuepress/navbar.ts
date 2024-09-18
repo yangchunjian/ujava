@@ -25,10 +25,10 @@ export default navbar([
     text: "网站相关",
     icon: "star",
     children: [
-      { text: "关于作者", icon: "star", link: "/author/" },
-      { text: "关于公告", icon: "star", link: "/notice/notice" },
+      { text: "网站分类", icon: "star", link: "/category/" },
+      { text: "网站标签", icon: "star", link: "/tag/" },
       {
-        text: "更新历史",
+        text: "网站历史",
         // icon: "history",
         icon: "star",
         link: "/timeline/",
