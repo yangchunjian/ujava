@@ -35,6 +35,18 @@ export default navbar([
     ],
   },
   {
+    text: "应用相关",
+    icon: "star",
+    children: [
+      { text: "小程序", icon: "star", link: "/app/applet" },
+      {
+        text: "安装包",
+        icon: "star",
+        link: "/app/pack",
+      }
+    ],
+  },
+  {
     text: "游戏相关",
     icon: "star",
     children: [
@@ -50,5 +62,5 @@ export default navbar([
         link: "https://ujava.cn/jump",
       },
     ],
-  },
+  }
 ]);
