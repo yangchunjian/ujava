@@ -6,11 +6,12 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Wed, 18 Sep 2024 07:58:32 GMT</pubDate>
-    <lastBuildDate>Wed, 18 Sep 2024 07:58:32 GMT</lastBuildDate>
+    <pubDate>Wed, 18 Sep 2024 08:47:17 GMT</pubDate>
+    <lastBuildDate>Wed, 18 Sep 2024 08:47:17 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>应用相关</category>
+    <category>公告</category>
     <category>Java</category>
     <category>设计高频</category>
     <category>设计基础</category>
@@ -19,6 +20,47 @@
     <category>设计算法</category>
     <category>设计注意</category>
     <category>设计模式</category>
+    <item>
+      <title>公众号</title>
+      <link>https://ujava.cn/app/wechat.html</link>
+      <guid>https://ujava.cn/app/wechat.html</guid>
+      <source url="https://ujava.cn/rss.xml">公众号</source>
+      <description>微信公众号 微信搜索公众号UJava</description>
+      <category>应用相关</category>
+      <pubDate>Wed, 18 Sep 2024 08:45:41 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>微信公众号</h2>
+<blockquote>
+<p>微信搜索公众号<code>UJava</code></p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>公告</title>
+      <link>https://ujava.cn/notice/notice.html</link>
+      <guid>https://ujava.cn/notice/notice.html</guid>
+      <source url="https://ujava.cn/rss.xml">公告</source>
+      <description>网站更新 项目更新 公众号 微信搜索公众号UJava 小程序 微信搜索小程序UJava 安装包 小游戏 2048 吃豆人 跳一跳</description>
+      <category>公告</category>
+      <pubDate>Wed, 18 Sep 2024 08:45:41 GMT</pubDate>
+      <content:encoded><![CDATA[<h2><a class="header-anchor" href="#网站更新"><span></span></a><a href="https://ujava.cn/timeline/" target="_blank" rel="noopener noreferrer">网站更新</a></h2>
+<h2><a class="header-anchor" href="#项目更新"><span></span></a><a href="https://ujava.cn/project/changelog.html" target="_blank" rel="noopener noreferrer">项目更新</a></h2>
+<h2><a class="header-anchor" href="#公众号"><span></span></a><a href="/app/wechat">公众号</a></h2>
+<blockquote>
+<p>微信搜索公众号<code>UJava</code></p>
+</blockquote>
+<h2><a class="header-anchor" href="#小程序"><span></span></a><a href="/app/applet">小程序</a></h2>
+<blockquote>
+<p>微信搜索小程序<code>UJava</code></p>
+</blockquote>
+<h2><a class="header-anchor" href="#安装包"><span></span></a><a href="/app/pack">安装包</a></h2>
+<h2><a class="header-anchor" href="#小游戏"><span></span></a><a href="">小游戏</a></h2>
+<ul>
+<li><a href="https://ujava.cn/2048/" target="_blank" rel="noopener noreferrer">2048</a></li>
+<li><a href="https://ujava.cn/pacman/" target="_blank" rel="noopener noreferrer">吃豆人</a></li>
+<li><a href="https://ujava.cn/jump/" target="_blank" rel="noopener noreferrer">跳一跳</a></li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>小程序</title>
       <link>https://ujava.cn/app/applet.html</link>
@@ -11836,33 +11878,6 @@ spring<span class="token punctuation">.</span>r2dbc<span class="token punctuatio
 <p>Servant用于为一组类提供一些行为。<br>
 而不是在每个类中定义这种行为——或者当我们无法将其排除在外时<br>
 公共父类中的这种行为-它在Servant中定义过一次。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>服务层模式</title>
-      <link>https://ujava.cn/design/other/servicelayer.html</link>
-      <guid>https://ujava.cn/design/other/servicelayer.html</guid>
-      <source url="https://ujava.cn/rss.xml">服务层模式</source>
-      <description>概述 Servant用于为一组类提供一些行为。 而不是在每个类中定义这种行为——或者当我们无法将其排除在外时 公共父类中的这种行为-它在Servant中定义过一次。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>概述</h2>
-<p>Servant用于为一组类提供一些行为。<br>
-而不是在每个类中定义这种行为——或者当我们无法将其排除在外时<br>
-公共父类中的这种行为-它在Servant中定义过一次。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>服务定位模式</title>
-      <link>https://ujava.cn/design/other/servicelocator.html</link>
-      <guid>https://ujava.cn/design/other/servicelocator.html</guid>
-      <source url="https://ujava.cn/rss.xml">服务定位模式</source>
-      <description>概述 使用封装获取服务所涉及的过程 强抽象层。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>概述</h2>
-<p>使用封装获取服务所涉及的过程<br>
-强抽象层。</p>
 ]]></content:encoded>
     </item>
   </channel>
