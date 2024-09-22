@@ -15,11 +15,15 @@ tag:
 
 ## [公众号](/app/wechat)
 
-> 微信搜索公众号`UJava`
+> 微信搜索公众号`UJava`，或直接扫下面`公众号`
+
+<img style='width: 200px' src="/logo/gzh.png"/>
 
 ## [小程序](/app/applet)
 
-> 微信搜索小程序`UJava`
+> 微信搜索小程序`UJava`，或直接扫下面`小程序码`
+
+<img style='width: 200px' src="/logo/xcx.jpg"/> 
 
 ## [安装包](/app/pack)
 
