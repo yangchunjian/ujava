@@ -10,10 +10,10 @@
       "title": "公众号",
       "url": "https://ujava.cn/app/wechat.html",
       "id": "https://ujava.cn/app/wechat.html",
-      "summary": "微信公众号 微信搜索公众号UJava",
-      "content_html": "<h2>微信公众号</h2>\n<blockquote>\n<p>微信搜索公众号<code>UJava</code></p>\n</blockquote>\n",
+      "summary": "微信公众号 微信搜索公众号UJava，或直接扫下面公众号",
+      "content_html": "<h2>微信公众号</h2>\n<blockquote>\n<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>\n</blockquote>\n<img style=\"width: 200px\" src=\"/logo/gzh.png\"> ",
       "date_published": "2024-09-18T08:45:41.000Z",
-      "date_modified": "2024-09-18T08:45:41.000Z",
+      "date_modified": "2024-09-22T01:54:11.000Z",
       "authors": [],
       "tags": [
         "应用相关"
@@ -23,10 +23,10 @@
       "title": "公告",
       "url": "https://ujava.cn/notice/notice.html",
       "id": "https://ujava.cn/notice/notice.html",
-      "summary": "网站更新 项目更新 公众号 微信搜索公众号UJava 小程序 微信搜索小程序UJava 安装包 小游戏 2048 吃豆人 跳一跳",
-      "content_html": "<h2><a class=\"header-anchor\" href=\"#网站更新\"><span></span></a><a href=\"https://ujava.cn/timeline/\" target=\"_blank\" rel=\"noopener noreferrer\">网站更新</a></h2>\n<h2><a class=\"header-anchor\" href=\"#项目更新\"><span></span></a><a href=\"https://ujava.cn/project/changelog.html\" target=\"_blank\" rel=\"noopener noreferrer\">项目更新</a></h2>\n<h2><a class=\"header-anchor\" href=\"#公众号\"><span></span></a><a href=\"/app/wechat\">公众号</a></h2>\n<blockquote>\n<p>微信搜索公众号<code>UJava</code></p>\n</blockquote>\n<h2><a class=\"header-anchor\" href=\"#小程序\"><span></span></a><a href=\"/app/applet\">小程序</a></h2>\n<blockquote>\n<p>微信搜索小程序<code>UJava</code></p>\n</blockquote>\n<h2><a class=\"header-anchor\" href=\"#安装包\"><span></span></a><a href=\"/app/pack\">安装包</a></h2>\n<h2><a class=\"header-anchor\" href=\"#小游戏\"><span></span></a><a href=\"\">小游戏</a></h2>\n<ul>\n<li><a href=\"https://ujava.cn/2048/\" target=\"_blank\" rel=\"noopener noreferrer\">2048</a></li>\n<li><a href=\"https://ujava.cn/pacman/\" target=\"_blank\" rel=\"noopener noreferrer\">吃豆人</a></li>\n<li><a href=\"https://ujava.cn/jump/\" target=\"_blank\" rel=\"noopener noreferrer\">跳一跳</a></li>\n</ul>\n",
+      "summary": "网站更新 项目更新 公众号 微信搜索公众号UJava，或直接扫下面公众号 小程序 微信搜索小程序UJava，或直接扫下面小程序码 安装包 小游戏 2048 吃豆人 跳一跳",
+      "content_html": "<h2><a class=\"header-anchor\" href=\"#网站更新\"><span></span></a><a href=\"https://ujava.cn/timeline/\" target=\"_blank\" rel=\"noopener noreferrer\">网站更新</a></h2>\n<h2><a class=\"header-anchor\" href=\"#项目更新\"><span></span></a><a href=\"https://ujava.cn/project/changelog.html\" target=\"_blank\" rel=\"noopener noreferrer\">项目更新</a></h2>\n<h2><a class=\"header-anchor\" href=\"#公众号\"><span></span></a><a href=\"/app/wechat\">公众号</a></h2>\n<blockquote>\n<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>\n</blockquote>\n<img style=\"width: 200px\" src=\"/logo/gzh.png\">\n<h2><a class=\"header-anchor\" href=\"#小程序\"><span></span></a><a href=\"/app/applet\">小程序</a></h2>\n<blockquote>\n<p>微信搜索小程序<code>UJava</code>，或直接扫下面<code>小程序码</code></p>\n</blockquote>\n<img style=\"width: 200px\" src=\"/logo/xcx.jpg\"> \n<h2><a class=\"header-anchor\" href=\"#安装包\"><span></span></a><a href=\"/app/pack\">安装包</a></h2>\n<h2><a class=\"header-anchor\" href=\"#小游戏\"><span></span></a><a href=\"\">小游戏</a></h2>\n<ul>\n<li><a href=\"https://ujava.cn/2048/\" target=\"_blank\" rel=\"noopener noreferrer\">2048</a></li>\n<li><a href=\"https://ujava.cn/pacman/\" target=\"_blank\" rel=\"noopener noreferrer\">吃豆人</a></li>\n<li><a href=\"https://ujava.cn/jump/\" target=\"_blank\" rel=\"noopener noreferrer\">跳一跳</a></li>\n</ul>\n",
       "date_published": "2024-09-18T08:45:41.000Z",
-      "date_modified": "2024-09-18T08:45:41.000Z",
+      "date_modified": "2024-09-22T01:54:11.000Z",
       "authors": [],
       "tags": [
         "公告"
@@ -36,10 +36,10 @@
       "title": "小程序",
       "url": "https://ujava.cn/app/applet.html",
       "id": "https://ujava.cn/app/applet.html",
-      "summary": "微信小程序 微信搜索小程序UJava",
-      "content_html": "<h2>微信小程序</h2>\n<blockquote>\n<p>微信搜索小程序<code>UJava</code></p>\n</blockquote>\n",
+      "summary": "微信小程序 微信搜索小程序UJava，或直接扫下面小程序码",
+      "content_html": "<h2>微信小程序</h2>\n<blockquote>\n<p>微信搜索小程序<code>UJava</code>，或直接扫下面<code>小程序码</code></p>\n</blockquote>\n<img style=\"width: 200px\" src=\"/logo/xcx.jpg\"> ",
       "date_published": "2024-09-18T07:56:37.000Z",
-      "date_modified": "2024-09-18T07:56:37.000Z",
+      "date_modified": "2024-09-22T01:54:11.000Z",
       "authors": [],
       "tags": [
         "应用相关"

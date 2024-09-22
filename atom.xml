@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-09-18T09:46:55.006Z</updated>
+  <updated>2024-09-22T01:56:44.759Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -22,17 +22,17 @@
     <title type="text">公众号</title>
     <id>https://ujava.cn/app/wechat.html</id>
     <link href="https://ujava.cn/app/wechat.html"/>
-    <updated>2024-09-18T08:45:41.000Z</updated>
+    <updated>2024-09-22T01:54:11.000Z</updated>
     <summary type="html"><![CDATA[<h2>微信公众号</h2>
 <blockquote>
-<p>微信搜索公众号<code>UJava</code></p>
+<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>
 </blockquote>
-]]></summary>
+<img style="width: 200px" src="/logo/gzh.png"> ]]></summary>
     <content type="html"><![CDATA[<h2>微信公众号</h2>
 <blockquote>
-<p>微信搜索公众号<code>UJava</code></p>
+<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>
 </blockquote>
-]]></content>
+<img style="width: 200px" src="/logo/gzh.png"> ]]></content>
     <category term="应用相关"/>
     <published>2024-09-18T08:45:41.000Z</published>
   </entry>
@@ -40,19 +40,21 @@
     <title type="text">公告</title>
     <id>https://ujava.cn/notice/notice.html</id>
     <link href="https://ujava.cn/notice/notice.html"/>
-    <updated>2024-09-18T08:45:41.000Z</updated>
+    <updated>2024-09-22T01:54:11.000Z</updated>
     <summary type="html"><![CDATA[<h2><a class="header-anchor" href="#网站更新"><span></span></a><a href="https://ujava.cn/timeline/" target="_blank" rel="noopener noreferrer">网站更新</a></h2>
 <h2><a class="header-anchor" href="#项目更新"><span></span></a><a href="https://ujava.cn/project/changelog.html" target="_blank" rel="noopener noreferrer">项目更新</a></h2>]]></summary>
     <content type="html"><![CDATA[<h2><a class="header-anchor" href="#网站更新"><span></span></a><a href="https://ujava.cn/timeline/" target="_blank" rel="noopener noreferrer">网站更新</a></h2>
 <h2><a class="header-anchor" href="#项目更新"><span></span></a><a href="https://ujava.cn/project/changelog.html" target="_blank" rel="noopener noreferrer">项目更新</a></h2>
 <h2><a class="header-anchor" href="#公众号"><span></span></a><a href="/app/wechat">公众号</a></h2>
 <blockquote>
-<p>微信搜索公众号<code>UJava</code></p>
+<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>
 </blockquote>
+<img style="width: 200px" src="/logo/gzh.png">
 <h2><a class="header-anchor" href="#小程序"><span></span></a><a href="/app/applet">小程序</a></h2>
 <blockquote>
-<p>微信搜索小程序<code>UJava</code></p>
+<p>微信搜索小程序<code>UJava</code>，或直接扫下面<code>小程序码</code></p>
 </blockquote>
+<img style="width: 200px" src="/logo/xcx.jpg"> 
 <h2><a class="header-anchor" href="#安装包"><span></span></a><a href="/app/pack">安装包</a></h2>
 <h2><a class="header-anchor" href="#小游戏"><span></span></a><a href="">小游戏</a></h2>
 <ul>
@@ -68,17 +70,17 @@
     <title type="text">小程序</title>
     <id>https://ujava.cn/app/applet.html</id>
     <link href="https://ujava.cn/app/applet.html"/>
-    <updated>2024-09-18T07:56:37.000Z</updated>
+    <updated>2024-09-22T01:54:11.000Z</updated>
     <summary type="html"><![CDATA[<h2>微信小程序</h2>
 <blockquote>
-<p>微信搜索小程序<code>UJava</code></p>
+<p>微信搜索小程序<code>UJava</code>，或直接扫下面<code>小程序码</code></p>
 </blockquote>
-]]></summary>
+<img style="width: 200px" src="/logo/xcx.jpg"> ]]></summary>
     <content type="html"><![CDATA[<h2>微信小程序</h2>
 <blockquote>
-<p>微信搜索小程序<code>UJava</code></p>
+<p>微信搜索小程序<code>UJava</code>，或直接扫下面<code>小程序码</code></p>
 </blockquote>
-]]></content>
+<img style="width: 200px" src="/logo/xcx.jpg"> ]]></content>
     <category term="应用相关"/>
     <published>2024-09-18T07:56:37.000Z</published>
   </entry>

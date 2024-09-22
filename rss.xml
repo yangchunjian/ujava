@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Wed, 18 Sep 2024 09:46:55 GMT</pubDate>
-    <lastBuildDate>Wed, 18 Sep 2024 09:46:55 GMT</lastBuildDate>
+    <pubDate>Sun, 22 Sep 2024 01:56:44 GMT</pubDate>
+    <lastBuildDate>Sun, 22 Sep 2024 01:56:44 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>应用相关</category>
@@ -25,33 +25,35 @@
       <link>https://ujava.cn/app/wechat.html</link>
       <guid>https://ujava.cn/app/wechat.html</guid>
       <source url="https://ujava.cn/rss.xml">公众号</source>
-      <description>微信公众号 微信搜索公众号UJava</description>
+      <description>微信公众号 微信搜索公众号UJava，或直接扫下面公众号</description>
       <category>应用相关</category>
       <pubDate>Wed, 18 Sep 2024 08:45:41 GMT</pubDate>
       <content:encoded><![CDATA[<h2>微信公众号</h2>
 <blockquote>
-<p>微信搜索公众号<code>UJava</code></p>
+<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>
 </blockquote>
-]]></content:encoded>
+<img style="width: 200px" src="/logo/gzh.png"> ]]></content:encoded>
     </item>
     <item>
       <title>公告</title>
       <link>https://ujava.cn/notice/notice.html</link>
       <guid>https://ujava.cn/notice/notice.html</guid>
       <source url="https://ujava.cn/rss.xml">公告</source>
-      <description>网站更新 项目更新 公众号 微信搜索公众号UJava 小程序 微信搜索小程序UJava 安装包 小游戏 2048 吃豆人 跳一跳</description>
+      <description>网站更新 项目更新 公众号 微信搜索公众号UJava，或直接扫下面公众号 小程序 微信搜索小程序UJava，或直接扫下面小程序码 安装包 小游戏 2048 吃豆人 跳一跳</description>
       <category>公告</category>
       <pubDate>Wed, 18 Sep 2024 08:45:41 GMT</pubDate>
       <content:encoded><![CDATA[<h2><a class="header-anchor" href="#网站更新"><span></span></a><a href="https://ujava.cn/timeline/" target="_blank" rel="noopener noreferrer">网站更新</a></h2>
 <h2><a class="header-anchor" href="#项目更新"><span></span></a><a href="https://ujava.cn/project/changelog.html" target="_blank" rel="noopener noreferrer">项目更新</a></h2>
 <h2><a class="header-anchor" href="#公众号"><span></span></a><a href="/app/wechat">公众号</a></h2>
 <blockquote>
-<p>微信搜索公众号<code>UJava</code></p>
+<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>
 </blockquote>
+<img style="width: 200px" src="/logo/gzh.png">
 <h2><a class="header-anchor" href="#小程序"><span></span></a><a href="/app/applet">小程序</a></h2>
 <blockquote>
-<p>微信搜索小程序<code>UJava</code></p>
+<p>微信搜索小程序<code>UJava</code>，或直接扫下面<code>小程序码</code></p>
 </blockquote>
+<img style="width: 200px" src="/logo/xcx.jpg"> 
 <h2><a class="header-anchor" href="#安装包"><span></span></a><a href="/app/pack">安装包</a></h2>
 <h2><a class="header-anchor" href="#小游戏"><span></span></a><a href="">小游戏</a></h2>
 <ul>
@@ -66,14 +68,14 @@
       <link>https://ujava.cn/app/applet.html</link>
       <guid>https://ujava.cn/app/applet.html</guid>
       <source url="https://ujava.cn/rss.xml">小程序</source>
-      <description>微信小程序 微信搜索小程序UJava</description>
+      <description>微信小程序 微信搜索小程序UJava，或直接扫下面小程序码</description>
       <category>应用相关</category>
       <pubDate>Wed, 18 Sep 2024 07:56:37 GMT</pubDate>
       <content:encoded><![CDATA[<h2>微信小程序</h2>
 <blockquote>
-<p>微信搜索小程序<code>UJava</code></p>
+<p>微信搜索小程序<code>UJava</code>，或直接扫下面<code>小程序码</code></p>
 </blockquote>
-]]></content:encoded>
+<img style="width: 200px" src="/logo/xcx.jpg"> ]]></content:encoded>
     </item>
     <item>
       <title>安装包</title>
