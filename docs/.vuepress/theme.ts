@@ -85,6 +85,13 @@ export default hopeTheme({
         "VPBanner",
         "VPCard",
       ],
+
+      componentOptions: {
+        // share: {
+        //   services: componentsPlugin,
+        // },
+      },
+
     },
     blog: true,
     copyright: {
