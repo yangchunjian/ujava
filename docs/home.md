@@ -5,7 +5,8 @@ icon: laptop-code
 
 ::: tip 友情提示
 
-UJava(架构设计)持续更新中~
+<!-- @include: @article-header.snippet.md -->
+
 :::
 
 ::: tabs
