@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Sun, 29 Sep 2024 14:58:11 GMT</pubDate>
-    <lastBuildDate>Sun, 29 Sep 2024 14:58:11 GMT</lastBuildDate>
+    <pubDate>Sun, 29 Sep 2024 15:34:43 GMT</pubDate>
+    <lastBuildDate>Sun, 29 Sep 2024 15:34:43 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计组件</category>
@@ -32,10 +32,208 @@
       <link>https://ujava.cn/assembly/apollo.html</link>
       <guid>https://ujava.cn/assembly/apollo.html</guid>
       <source url="https://ujava.cn/rss.xml">组件Apollo</source>
-      <description>基础概念 部署是区分环境的 设置不同的namespace，作用不同，类似不同的property文件 key、value对应关系，替换工程变量值</description>
+      <description>思维导图 img_193.pngimg_193.png 一、概述 Apollo（阿波罗）是携程框架部门研发的开源配置管理中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性。部署是区分环境的 设置不同的namespace，作用不同，类似不同的property文件 key、value对应关系...</description>
       <category>设计组件</category>
       <pubDate>Sun, 29 Sep 2024 14:43:20 GMT</pubDate>
-      <content:encoded><![CDATA[<p>基础概念 部署是区分环境的 设置不同的namespace，作用不同，类似不同的property文件 key、value对应关系，替换工程变量值</p>
+      <content:encoded><![CDATA[<h2><strong>思维导图</strong></h2>
+<figure><figcaption>img_193.png</figcaption></figure>
+<h2><strong>一、概述</strong></h2>
+<p>Apollo（阿波罗）是携程框架部门研发的开源配置管理中心，能够集中化管理应用<strong>不同环境、不同集群</strong>的配置，配置修改后能够<strong>实时推送到应用端，并且具备规范的权限、流程治理</strong>等特性。部署是区分环境的 设置不同的namespace，作用不同，类似不同的property文件 key、value对应关系，替换工程变量值。</p>
+<p>目前Apollo在github有22.6k颗星，在官网登记的使用的公司有451家，算是很流行的配置中心的框架技术。所以接下来跟着我一起学习Apollo配置中心吧。<br>
+</p>
+<h2><strong>二、为什么使用配置中心</strong></h2>
+<p>首先，没有配置中心之前传统的配置都是写在配置文件中，比如各种yml、perproties、xml文件。</p>
+<p>写在各种文件里最大的问题在于<strong>如果需要改配置信息，需要重新部署发布应用才能生效</strong>，这是第一个问题。</p>
+<p>后面为了做到动态读取配置信息，后面有人改进一下把配置信息存储在数据库的一张表，程序读取表中的配置信息，这种方式很多公司都还在使用，因为简单，而且灵活(修改配置只需要执行个SQL语句，不需要重新部署发布)。但是也不是最完美的，因为<strong>缺少了权限控制，没有管理界面进行统一配置，没有历史版本的配置信息，不支持回滚(防止误操作)</strong>。</p>
+<p>实际上配置中心在市面上已经有很多，比如Nacos、Consul、spring-cloud-config、Apollo等等。</p>
+<p>相对其他的，我觉得选择Apollo的原因是，界面比较美观，操作简便，部署简单，依赖较少，开箱即用。</p>
+<h2><strong>三、安装部署</strong></h2>
+<h3><strong>3.1 获取安装包</strong></h3>
+<p>先到官网下载安装包。<br>
+</p>
+<p>下载后解压，如下：<br>
+</p>
+<h3><strong>3.2 创建数据库</strong></h3>
+<p>使用MySQL数据库(版本要求:5.6.5+)。</p>
+<h4><strong>3.2.1 创建ApolloPortalDB数据库</strong></h4>
+<p>使用github上面的sql脚本创建ApolloPortalDB数据库，导入相关的表以及数据。<br>
+</p>
+<h4><strong>3.2.2 创建ApolloConfigDB数据库</strong></h4>
+<p>使用github上面的sql脚本创建ApolloConfigDB数据库，导入相关的表以及数据。<br>
+</p>
+<h3><strong>3.3 修改配置</strong></h3>
+<p>需要改一下数据库连接信息，路径在/config下。</p>
+<h4><strong>3.3.1 apollo-configservice配置</strong></h4>
+<p>修改apollo-configservice的数据库连接信息application-github.properties，如下：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># </span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">DataSource</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">url</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> jdbc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">mysql</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//192.168.0.107:3306/ApolloConfigDB?characterEncoding=utf8</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">username</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 账号</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">password</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 密码</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4><strong>3.3.2 apollo-adminservice配置</strong></h4>
+<p>修改apollo-adminservice的数据库连接信息application-github.properties，如下：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># </span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">DataSource</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">url</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> jdbc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">mysql</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//192.168.0.107:3306/ApolloConfigDB?characterEncoding=utf8</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">username</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 账号</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">password</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 密码</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4><strong>3.3.3 apollo-portal配置</strong></h4>
+<p>修改apollo-portal的数据库连接信息application-github.properties，如下：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># </span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">DataSource</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">url</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> jdbc</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">mysql</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//192.168.0.107:3306/ApolloPortalDB?characterEncoding=utf8</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">username</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 账号</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">password</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 密码</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>再修改apollo-env.properties配置，这是关于环境配置的，如下：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">local</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">http</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//localhost:8080</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">## 开发环境</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">dev</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">http</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//192.168.0.107:8080</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">## 不需要配置的环境参考</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">${</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">lpt_meta</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">}</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">配置</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">fat</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">${</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">fat_meta</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">}</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">uat</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">${</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">uat_meta</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">}</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">lpt</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">${</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">lpt_meta</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">}</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">pro</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">${</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">pro_meta</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3><strong>3.4 部署</strong></h3>
+<p>然后把三个文件夹都上传到Linux服务器。<br>
+</p>
+<h4><strong>3.4.1 部署发布apollo-configservice</strong></h4>
+<p>部署发布服务有顺序，首先发布apollo-configservice，直接执行scripts/startup.sh。<br>
+</p>
+<p>有可能会出现这个错误(我就出现了)，不用担心，实际上进程还没有结束，还在启动，我们可以到日志记录的文件夹(下图来源于startup.sh脚本)查看日志。<br>
+</p>
+<p>启动时间比较长，因为这个服务包括启动Eureka注册中心，需要耐心等待。观察apollo-configservice.log文件，当看到如下信息后，表示启动成功。<br>
+</p>
+<p>Eureka注册中心启动成功，可以打开<a href="http://192.168.0.107:8080/%E6%9F%A5%E7%9C%8B%EF%BC%9A" target="_blank" rel="noopener noreferrer">http://192.168.0.107:8080/查看：</a><br>
+</p>
+<h4><strong>3.4.2 部署发布apollo-adminservice</strong></h4>
+<p>接着发布apollo-adminservice，直接执行scripts/startup.sh。查看日志的方式跟上面一样。启动成功后，可以看到Eureka的服务列表中多了一个服务。<br>
+</p>
+<h4><strong>3.4.3 部署发布apollo-portal</strong></h4>
+<p>接着发布apollo-portal，直接执行scripts/startup.sh。portal是提供Web界面的服务，所以启动成功后，可以打开<a href="http://192.168.0.107:8070/%E7%99%BB%E5%BD%95web%E7%95%8C%E9%9D%A2%EF%BC%8C%E9%BB%98%E8%AE%A4%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%98%AFapollo/admin%E3%80%82" target="_blank" rel="noopener noreferrer">http://192.168.0.107:8070/登录web界面，默认账号密码是apollo/admin。</a><br>
+<br>
+</p>
+<p>到此，安装就完成了！</p>
+<h2><strong>四、SpringBoot整合Apollo</strong></h2>
+<p>接下来，整一个Demo(相当于java客户端)，使用SpringBoot整合Apollo，实现动态读取配置。</p>
+<h3><strong>4.1 Mave依赖</strong></h3>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dependency</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;com.ctrip.framework.apollo&lt;/</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;apollo-client&lt;/</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">version</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;1.1.0&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">version</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dependency</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3><strong>4.2 AppId</strong></h3>
+<p>在classpath路径下，创建/META-INF/app.properties文件。如下：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># 应用的唯一标识，后面创建工程需要用到</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">app</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">id</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">apollo</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">demo</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3><strong>4.3 Apollo Meta Server</strong></h3>
+<p>其实就是配置Apollo服务器的地址。官网提供的方式有很多，我这里选其中一种比较简单的方式。在classpath路径下创建apollo-env.properties文件，配置如下：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">dev</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">http</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//192.168.0.107:8080</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># </span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">fat</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">http</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//apollo.fat.xxx.com</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># </span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">uat</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">http</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//apollo.uat.xxx.com</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"># </span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">pro</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">meta</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">http</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//apollo.xxx.com</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3><strong>4.4 Environment</strong></h3>
+<p>其实是配置环境，因为上面可以配置四种环境，这里配置具体选择哪个环境。这里介绍两种方式：</p>
+<p>第一种通过Java System Property。<br>
+</p>
+<p>第二种通过配置文件。<br>
+</p>
+<p>到相对应的路径下创建server.properties，配置如下：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">env</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">DEV</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3><strong>4.5 @EnableApolloConfig</strong></h3>
+<p>在启动类上加上注解@EnableApolloConfig。</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">@</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">SpringBootApplication</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//开启apollo配置</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">@</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">EnableApolloConfig</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> ApolloDemoApplication</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> static</span><span style="--shiki-light:#0184BC;--shiki-dark:#C678DD"> void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> main</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">String</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[] </span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">args</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) {</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">        SpringApplication</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">run</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">ApolloDemoApplication</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">class</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">args</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3><strong>4.6 测试类</strong></h3>
+<p>这样就完成了，接下来再创建一个Controller进行测试一下。</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="shiki" data-ext="javascript" data-title="javascript" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">@</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">RestController</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> ApolloController</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">    //冒号后面的是默认值</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    @</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">Value</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"${configValue:default}"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    private</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> String</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> configValue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    @</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">RequestMapping</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"/apollo/getConfig"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    public</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> String</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> getConfig</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">() {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> configValue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3><strong>4.7 管理界面创建对应的配置</strong></h3>
+<p>第一步，创建项目。<br>
+<br>
+</p>
+<p>第二步，创建配置。<br>
+</p>
+<p>第三步，发布。<br>
+</p>
+<h3><strong>4.8 测试</strong></h3>
+<p>启动项目apollo-demo，然后请求路径<a href="http://localhost:8888/apollo/getConfig%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E9%A1%B5%E9%9D%A2%E3%80%82" target="_blank" rel="noopener noreferrer">http://localhost:8888/apollo/getConfig，可以看到页面。</a></p>
+<p>控制台可以看到推送配置信息的日志：<br>
+</p>
+<h2><strong>五、架构设计</strong></h2>
+<p>讲完了安装和SpringBoot整合的demo后，我们是时候探究一下原理，为什么要有三个服务，又是如何做到配置信息发布后，客户端实时获取到最新的配置的。继续往下看。</p>
+<p>首先看一张官网的架构设计图。</p>
+<h3><strong>5.1 基础模型</strong></h3>
+<p>作者在官网上有个基础模型的架构图，忽略掉很多细节后实际上非常简单：<br>
+</p>
+<ol>
+<li>用户在配置中心对配置进行修改并发布。</li>
+<li>配置中心通知Apollo客户端有配置更新。</li>
+<li>Apollo客户端从配置中心拉取最新的配置、更新本地配置并通知到应用。</li>
+</ol>
+<h3><strong>5.2 架构模块</strong></h3>
+<p>如果我们把Apollo配置中心服务端展开的话，架构图如下：<br>
+</p>
+<p>看到这里，整个架构看起来就比较清晰了。接下来从上往下简单介绍一下：</p>
+<p><strong>Portal服务</strong>：提供Web界面供用户管理配置，通过MetaServer获取AdminService服务列表（IP+Port），通过IP+Port访问AdminService服务。</p>
+<p><strong>Client</strong>：实际上就是我们创建的SpringBoot项目，引入ApolloClient的maven依赖，为应用提供配置获取、实时更新等功能。</p>
+<p><strong>Meta Server</strong>：从Eureka获取Config Service和Admin Service的服务信息，相当于是一个Eureka Client。主要是为了封装服务发现的细节，对Portal和Client而言，永远通过一个Http接口获取Admin Service和Config Service的服务信息，而不需要关心背后实际的服务注册和发现组件。Meta Server只是一个逻辑角色，在部署时和Config Service是在一个JVM进程中的，所以IP、端口和Config Service一致。</p>
+<p><strong>Eureka</strong>：注册中心。Config Service和Admin Service会向Eureka注册服务。为了简单起见，目前Eureka在部署时和Config Service是在一个JVM进程中的。</p>
+<p><strong>Config Service</strong>：提供配置获取接口。提供配置更新推送接口(基于Http long polling)。服务对象为Apollo客户端(Client)。</p>
+<p><strong>Admin Service</strong>：提供配置管理接口。提供配置发布、修改等接口。服务对象为Portal。</p>
+<h3><strong>5.3 配置发布后的实时推送设计</strong></h3>
+<p>上面讲完各个角色的用途，那这些角色是怎么配合一起工作的呢，我们来看一张图：<br>
+</p>
+<p>上图简要描述了配置发布的大致过程：</p>
+<ol>
+<li>用户在Portal操作配置发布。</li>
+<li>Portal调用Admin Service的接口操作发布。</li>
+<li>Admin Service发布配置后，发送ReleaseMessage给各个Config Service。</li>
+<li>Config Service收到ReleaseMessage后，通知对应的客户端(Client)。</li>
+</ol>
+<p>关键点在于AdminService发送ReleaseMessage给ConfigService，这一步是如何异步发送的呢，一般异步发送我们很容易想到消息队列，但是实际上我们在安装部署时并没有使用到消息队列。</p>
+<p>答案在于：</p>
+<ul>
+<li>Admin Service在配置发布后会往ReleaseMessage表插入一条消息记录，消息内容就是配置发布的AppId+Cluster+Namespace。</li>
+<li>然后Config Service有一个线程会每秒扫描一次ReleaseMessage表，看看是否有新的消息记录。</li>
+<li>Config Service如果发现有新的消息记录，那么就会通知到所有的消息监听器，监听器得到配置发布的AppId+Cluster+Namespace后，会通知对应的客户端。<br>
+</li>
+</ul>
+<blockquote>
+<p>在实现上，考虑到Apollo的实际使用场景，以及为了尽可能减少外部依赖，我们没有采用外部的消息中间件，而是通过数据库实现了一个简单的消息队列。</p>
+</blockquote>
 ]]></content:encoded>
     </item>
     <item>
@@ -51,32 +249,874 @@
       <link>https://ujava.cn/assembly/kafka.html</link>
       <guid>https://ujava.cn/assembly/kafka.html</guid>
       <source url="https://ujava.cn/rss.xml">组件Kafka</source>
+      <description>简介 在大数据领域开发者常常会听到MQ这个术语，该术语便是消息队列的意思， Kafka是分布式的发布—订阅消息系统。它最初由LinkedIn(领英)公司发布，使用Scala语言编写，与2010年12月份开源，成为Apache的顶级项目。Kafka是一个高吞吐量的、持久性的、分布式发布订阅消息系统。它主要用于处理活跃的数据(登录、浏览、点击、分享、喜欢等...</description>
       <category>设计组件</category>
       <pubDate>Sun, 29 Sep 2024 14:43:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>简介</h2>
+<p>在大数据领域开发者常常会听到MQ这个术语，该术语便是消息队列的意思，<br>
+Kafka是分布式的发布—订阅消息系统。它最初由LinkedIn(领英)公司发布，使用Scala语言编写，与2010年12月份开源，成为Apache的顶级项目。Kafka是一个高吞吐量的、持久性的、分布式发布订阅消息系统。它主要用于处理活跃的数据(登录、浏览、点击、分享、喜欢等用户行为产生的数据)。</p>
+<h3>1.消息 Message</h3>
+<p>网络中的两台计算机或者两个通讯设备之间传递的数据。例如说：文本、音乐、视频等内容。</p>
+<h3>2.队列 Queue(栈的特点FILO 队列FIFO)</h3>
+<p>一种特殊的线性表（数据元素首尾相接），特殊之处在于只允许在首部删除元素和在尾部追加元素。入队、出队</p>
+<h3>3.消息队列 MQ</h3>
+<p>消息+队列，保存消息的队列。消息的传输过程中的容器；主要提供生产、消费接口供外部调用做数据的存储和获取。</p>
+<h2>消息队列分类</h2>
+<p>MQ主要分为两类：点对点(p2p)、发布订阅(Pub/Sub)</p>
+<h3>1.共同点</h3>
+<p>消息生产者生产消息发送到queue中，然后消息消费者从queue中读取并且消费消息。</p>
+<h3>2.不同点</h3>
+<p>p2p模型包括：消息队列(Queue)、发送者(Sender)、接收者(Receiver) ，一个生产者生产的消息只有一个消费者(Consumer)(即一旦被消费，消息就不在消息队列中)。比如说打电话。</p>
+<p>Pub/Sub包含：消息队列(Queue)、主题(Topic)、发布者(Publisher)、订阅者(Subscriber)每个消息可以有多个消费者，彼此互不影响。比如我发布一个微博：关注我的人都能够看到。</p>
+<h2>Kafka的特点</h2>
+<p>Kafka如此受欢迎，而且有越来越多的系统支持与Kafka的集成，主要由于Kafka具有如下特性。<br>
+● 高吞吐量、低延迟：Kafka每秒可以处理几十万条消息，它的延迟最低只有几毫秒。<br>
+● 可扩展性：Kafka集群同Hadoop集群一样，支持横向扩展。<br>
+● 持久性、可靠性：Kafka消息可以被持久化到本地磁盘，并且支持Partition数据备份，防止数据丢失。<br>
+● 容错性：允许Kafka集群中的节点失败，如果Partition（分区）副本数量为n，则最多允许n-1个节点失败。<br>
+● 高并发：单节点支持上千个客户端同时读写，每秒钟有上百MB的吞吐量，基本上达到了网卡的极限</p>
+<h2>Kafka组成</h2>
+<ol>
+<li>Topic：主题，Kafka处理的消息的不同分类。</li>
+<li>Broker：消息代理，Kafka集群中的一个kafka服务节点称为一个broker，主要存储消息数据。存在硬盘中每个topic都是有分区的。</li>
+<li>Partition：Topic物理上的分组，一个topic在broker中被分为1个或者多个partition，分区在创建topic的时候指定。</li>
+<li>Replica：数据副本，可以为保存在Kafka中的数据指定副本数，以提高数据冗余性，防止数据丢失；</li>
+<li>Message：消息，是通信的基本单位，每个消息都属于一个partition</li>
+</ol>
+<h3>Kafka服务相关</h3>
+<ol>
+<li>Producer：消息和数据的生产者，向Kafka的一个topic发布消息。</li>
+<li>Consumer：消息和数据的消费者，定于topic并处理其发布的消息。</li>
+<li>Zookeeper：协调kafka的正常运行。</li>
+<li>KRaft：Kafka的KRaft模式在2.8.0版本中被引入。从2.8.0版本开始，Kafka提供了对KRaft的支持，其中最大的变化之一就是不再依赖外部的ZooKeeper来管理Kafka的元数据。因此，如果你使用2.8.0版本或更高版本的Kafka，你将能够使用KRaft模式，无需安装和配置ZooKeeper。<br>
+</li>
+</ol>
+<h3>Kafka架构设计</h3>
+<p>一个典型的Kafka集群包含若干个生产者（Producer）、若干Kafka集群节点（Broker）、若干消费者（Consumer）以及一个Zookeeper集群或者KRaft模式。Kafka通过Zookeeper管理集群配置，选举Leader以及在消费者发生变化时进行负载均衡。生产者使用推（Push）模式将消息发布到集群节点，而消费者使用拉（Pull）模式从集群节点中订阅并消费消息。</p>
+<h3>主题和分区的具体定义如下。</h3>
+<p>● 主题是生产者发布到Kafka集群的每条信息所属的类别，即Kafka是面向主题的，一个主题可以分布在多个节点上。<br>
+● 分区是Kafka集群横向扩展和一切并行化的基础，每个Topic可以被切分为一个或多个分区。一个分区只对应一个集群节点，每个分区内部的消息是强有序的。<br>
+● Offset（即偏移量）是消息在分区中的编号，每个分区中的编号是独立的。<br>
+</p>
+<h2>Kafka分布式集群的构建</h2>
+<p>在kafka2.0版本以前是依赖于zookeeper集群中安装<br>
+·|| Kafka使用Zookeeper作为其分布式协调框架，能很好地将消息生产、消息存储、消息消费的过程结合在一起。同时借助Zookeeper,Kafka能够将生产者、消费者和集群节点在内的所有组件，在无状态的情况下建立起生产者和消费者的订阅关系，并实现生产者与消费者的负载均衡。<br>
+可以看出Kafka集群依赖于Zookeeper，所以在安装Kafka之前需要提前安装Zookeeper。Zookeeper集群在前面Hadoop集群的构建过程中已经在使用，Kafka可以共用之前安装的Zookeeper集群，接下来只需要安装Kafka集群即可。<br>
+</p>
+<p>·|| 较新版本的 Apache Kafka（从2.8.0版本开始）引入了KRaft，这是一个内置的分布式存储 系统，用于管理Kafka的元数据信息，不再需要依赖外部的 ZooKeeper。因此，你在使用较新版本的Kafka时，不再需要单独安装和配置 ZooKeeper。<br>
+在KRaft模式下，Kafka内部有自己的元数据存储，这消除了对外部 ZooKeeper 的依赖。这样做的目的是简化 Kafka 集群的维护和部署，以及提高可用性。<br>
+<br>
+在基于zookeeper和kraft两种集群管理机制下，200万分区数据量下的耗时比较。基于自带的KRaft，性能表现会更优。<br>
+</p>
+<h3>基于KRaft下的kafka安装</h3>
+<p>解压压缩包</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>tar -zxvf kafka_2.12-3.6.0.tgz -C kafka</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>编辑环境变量</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>export KAFKA_HOME=/home/hadoop/kafka/kafka_2.12-3.6.0</span></span>
+<span class="line"><span>export PATH=$KAFKA_HOME/bin:PATH</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>编辑配置文件server.properties<br>
+文件所在路径${KAFKA_HOME}/config/kraft/server.properties<br>
+该文件中几个重点参数</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>process.roles=broker,controller ##broker相当于从节点，controller相当于主节点</span></span>
+<span class="line"><span>node.id=2 ##节点ID 每个节点必须唯一</span></span>
+<span class="line"><span>controller.quorum.voters=1@vm02:9093,2@vm03:9093,3@vm04:9093</span></span>
+<span class="line"><span>##参与主节点选举，格式(node.id)@(hostname):(port)</span></span>
+<span class="line"><span>advertised.listeners=PLAINTEXT://hostname:9092 ##对外服务地址，消费者、生产者对该节点的访问</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>生成集群ID</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-storage.sh random-uuid</span></span>
+<span class="line"><span>6foHn9NLQpiMAirIK7EG4A</span></span>
+<span class="line"><span>##生成6foHn9NLQpiMAirIK7EG4A 的uuid</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>所有节点执行，kafka初始化</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-storage.sh format -t 6foHn9NLQpiMAirIK7EG4A -c ./$KAFKA_HOME/config/kraft/server.properties</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>所有节点执行，启动kafka</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-server-start.sh -daemon $KAFKA_HOME/config/kraft/server.properties</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>查看kafka进程</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>jps</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption>img_234.png</figcaption></figure>
+<h2>使用示例</h2>
+<h3>创建topic</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-topics.sh --create --topic your_topic --bootstrap-server vm02:9092,vm03:9092,vm04:9092 --partitions 3 --replication-factor 2</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>注： --bootstrap-server vm02:9092,vm03:9092,vm04:9092 此处参数可以指定集群所有节点，也可以指定localhost:9092,创建的主题并不意味着后期的消费者和生产者只能指定在 localhost 节点上。这里的 --bootstrap-server 参数在创建主题时主要是为了指定初始的 Kafka 节点，它告诉 Kafka 工具在哪里查找集群的元数据。</p>
+<p>后期的消费者和生产者在连接到 Kafka 集群时，会从指定的初始节点获取集群的元数据，然后与整个集群建立连接。一旦获取了元数据，消费者和生产者就可以与整个 Kafka 集群进行通信，而不仅仅限制在初始指定的节点上。因此，使用 --bootstrap-server localhost:9092 创建的主题对于后期的消费者和生产者，仍然可以在整个 Kafka 集群的任何节点上进行使用，只要它们能够连接到集群并获取到正确的元数据信息。</p>
+<h3>查看已创建的topic的详细信息</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-topics.sh --describe --bootstrap-server vm02:9092,vm03:9092,vm04:9092  --topic your_topic</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><figure><figcaption>img_235.png</figcaption></figure>
+<h3>修改已创建topic</h3>
+<p>在官方对于alter参数的解释中，</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>--alter                                  Alter the number of partitions and     </span></span>
+<span class="line"><span>                                           replica assignment. Update the       </span></span>
+<span class="line"><span>                                           configuration of an existing topic   </span></span>
+<span class="line"><span>                                           via --alter is no longer supported   </span></span>
+<span class="line"><span>                                           here (the kafka-configs CLI supports </span></span>
+<span class="line"><span>                                           altering topic configs with a --     </span></span>
+<span class="line"><span>                                           bootstrap-server option).</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><a href="http://kafka-topics.sh" target="_blank" rel="noopener noreferrer">kafka-topics.sh</a> --alter选项在最新版本中已不再支持更新现有主题的配置，这意味着一旦主题被创建，就不能使用–alter选项来更改其分区数和副本分配。<a href="http://xn--kafka-configs-vm3u73ej03aci7k2e8dbkb.sh" target="_blank" rel="noopener noreferrer">可以通过使用kafka-configs.sh</a></p>
+<h4>修改主题的配置参数。</h4>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-configs.sh --bootstrap-server vm02:9092,vm03:9092,vm04:9092 \</span></span>
+<span class="line"><span>--entity-type topics --entity-name your_topic \</span></span>
+<span class="line"><span>--alter --add-config retention.ms=86400000</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4>查看topic 定义相关参数信息。</h4>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-configs.sh --bootstrap-server \</span></span>
+<span class="line"><span>vm02:9092,vm03:9092,vm04:9092 \</span></span>
+<span class="line"><span>--entity-type topics --entity-name your_topic --describe</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><figcaption>img_236.png</figcaption></figure>
+<h4>删除已创建topic</h4>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-topics.sh --delete --topic your_topic --bootstrap-server vm02:9092,vm03:9092,vm04:9092</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h4>创建生产者producer</h4>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-console-producer.sh --broker-list 192.168.56.101:9092 --topic mrt</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>场景应用示例</h2>
+<p>以postgresql数据库中的public.conn_fdw表作为生产者producer身份把数据推向kafka，然后在使用kafka把数据推推向消费者数据库Oracle</p>
+<h3>在postgresql数据库中创建测试数据表，</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>CREATE TABLE public.conn_fdw (</span></span>
+<span class="line"><span>	id int4 NULL,</span></span>
+<span class="line"><span>	"name" varchar(50) NULL,</span></span>
+<span class="line"><span>	age int4 NULL,</span></span>
+<span class="line"><span>	city varchar(50) NULL,</span></span>
+<span class="line"><span>	salary int4 NULL</span></span>
+<span class="line"><span>);</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>在Oracle中创建同样的表结构</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>create table SYSTEM.CONN_FDW</span></span>
+<span class="line"><span>(</span></span>
+<span class="line"><span>  id     NUMBER,</span></span>
+<span class="line"><span>  name   VARCHAR2(50),</span></span>
+<span class="line"><span>  age    NUMBER,</span></span>
+<span class="line"><span>  city   VARCHAR2(50),</span></span>
+<span class="line"><span>  salary NUMBER,</span></span>
+<span class="line"><span>  load_time timestamp default current_timestamp</span></span>
+<span class="line"><span>);</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4>创建主题conn_fdw</h4>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-topics.sh --create --topic conn_fdw \</span></span>
+<span class="line"><span>--bootstrap-server vm02:9092,vm03:9092,vm04:9092 \</span></span>
+<span class="line"><span>--partitions 3 \</span></span>
+<span class="line"><span>--replication-factor 2</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4>查看已经创建的主题conn_fdw</h4>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>kafka-topics.sh --describe \</span></span>
+<span class="line"><span>--bootstrap-server vm02:9092,vm03:9092,vm04:9092  \</span></span>
+<span class="line"><span>--topic conn_fdw</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><br>
+在此图中有</p>
+<h3>添加maven依赖</h3>
+<p>添加相应的依赖包，以作为java代码class的支持</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>    &lt;dependency&gt;</span></span>
+<span class="line"><span>      &lt;groupId&gt;org.apache.kafka&lt;/groupId&gt;</span></span>
+<span class="line"><span>      &lt;artifactId&gt;kafka_2.12&lt;/artifactId&gt;</span></span>
+<span class="line"><span>      &lt;version&gt;2.3.0&lt;/version&gt;</span></span>
+<span class="line"><span>    &lt;/dependency&gt;</span></span>
+<span class="line"><span>    &lt;dependency&gt;</span></span>
+<span class="line"><span>      &lt;groupId&gt;org.postgresql&lt;/groupId&gt;</span></span>
+<span class="line"><span>      &lt;artifactId&gt;postgresql&lt;/artifactId&gt;</span></span>
+<span class="line"><span>      &lt;version&gt;42.2.23&lt;/version&gt; &lt;!-- 使用你的 PostgreSQL 版本 --&gt;</span></span>
+<span class="line"><span>    &lt;/dependency&gt;</span></span>
+<span class="line"><span>    &lt;dependency&gt;</span></span>
+<span class="line"><span>      &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span></span>
+<span class="line"><span>      &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;</span></span>
+<span class="line"><span>      &lt;version&gt;1.2.3&lt;/version&gt; &lt;!-- 请使用最新版本 --&gt;</span></span>
+<span class="line"><span>    &lt;/dependency&gt;</span></span>
+<span class="line"><span>    &lt;dependency&gt;</span></span>
+<span class="line"><span>      &lt;groupId&gt;com.oracle.database.jdbc&lt;/groupId&gt;</span></span>
+<span class="line"><span>      &lt;artifactId&gt;ojdbc10&lt;/artifactId&gt; &lt;!-- 使用你的 Oracle JDBC 版本 --&gt;</span></span>
+<span class="line"><span>      &lt;version&gt;19.8.0.0&lt;/version&gt;</span></span>
+<span class="line"><span>    &lt;/dependency&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>Kafka生产者代码</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>import org.apache.kafka.clients.producer.KafkaProducer;</span></span>
+<span class="line"><span>import org.apache.kafka.clients.producer.Producer;</span></span>
+<span class="line"><span>import org.apache.kafka.clients.producer.ProducerConfig;</span></span>
+<span class="line"><span>import org.apache.kafka.clients.producer.ProducerRecord;</span></span>
+<span class="line"><span>import java.sql.Connection;</span></span>
+<span class="line"><span>import java.sql.DriverManager;</span></span>
+<span class="line"><span>import java.sql.ResultSet;</span></span>
+<span class="line"><span>import java.sql.Statement;</span></span>
+<span class="line"><span>import java.util.Properties;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>public class PgKafkaProducer {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        // Kafka 配置</span></span>
+<span class="line"><span>        Properties props = new Properties();</span></span>
+<span class="line"><span>        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "10.0.0.102:9092,10.0.0.103:9092,10.0.0.104:9092");</span></span>
+<span class="line"><span>        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");</span></span>
+<span class="line"><span>        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        // PostgreSQL 连接配置</span></span>
+<span class="line"><span>        String jdbcUrl = "jdbc:postgresql://10.0.0.108:5432/postgres";</span></span>
+<span class="line"><span>        String username = "postgres";</span></span>
+<span class="line"><span>        String password = "postgres";</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);</span></span>
+<span class="line"><span>             Statement statement = connection.createStatement()) {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>            // 查询 PostgreSQL 数据</span></span>
+<span class="line"><span>            String query = "SELECT id,name,age,city,salary FROM public.conn_fdw";</span></span>
+<span class="line"><span>            ResultSet resultSet = statement.executeQuery(query);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>            // Kafka 生产者</span></span>
+<span class="line"><span>            try (Producer&lt;String, String&gt; producer = new KafkaProducer&lt;&gt;(props)) {</span></span>
+<span class="line"><span>                while (resultSet.next()) {</span></span>
+<span class="line"><span>                    // 将每一行数据作为消息发送到 Kafka 主题</span></span>
+<span class="line"><span>                    String key = String.valueOf(resultSet.getInt("id"));</span></span>
+<span class="line"><span>                    String value = resultSet.getString("name") + "," +</span></span>
+<span class="line"><span>                            resultSet.getInt("age") + "," +</span></span>
+<span class="line"><span>                            resultSet.getString("city") + "," +</span></span>
+<span class="line"><span>                            resultSet.getInt("salary");</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>                    ProducerRecord&lt;String, String&gt; record = new ProducerRecord&lt;&gt;("conn_fdw", key, value);</span></span>
+<span class="line"><span>                    producer.send(record);</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        } catch (Exception e) {</span></span>
+<span class="line"><span>            e.printStackTrace();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>消费者代码</h3>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>import org.apache.kafka.clients.consumer.Consumer;</span></span>
+<span class="line"><span>import org.apache.kafka.clients.consumer.ConsumerConfig;</span></span>
+<span class="line"><span>import org.apache.kafka.clients.consumer.ConsumerRecords;</span></span>
+<span class="line"><span>import org.apache.kafka.clients.consumer.KafkaConsumer;</span></span>
+<span class="line"><span>import java.sql.Connection;</span></span>
+<span class="line"><span>import java.sql.DriverManager;</span></span>
+<span class="line"><span>import java.sql.PreparedStatement;</span></span>
+<span class="line"><span>import java.util.Collections;</span></span>
+<span class="line"><span>import java.util.Properties;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>public class KafkaToOracleConsumer {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public static void main(String[] args) {</span></span>
+<span class="line"><span>        // Kafka 配置</span></span>
+<span class="line"><span>        Properties kafkaProps = new Properties();</span></span>
+<span class="line"><span>        kafkaProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "10.0.0.102:9092,10.0.0.103:9092,10.0.0.104:9092");</span></span>
+<span class="line"><span>        kafkaProps.put(ConsumerConfig.GROUP_ID_CONFIG, "conn_fdw_groupid");</span></span>
+<span class="line"><span>        kafkaProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");</span></span>
+<span class="line"><span>        kafkaProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        // Oracle 连接配置</span></span>
+<span class="line"><span>        String jdbcUrl = "jdbc:oracle:thin:@192.168.48.1:1521:orcl";</span></span>
+<span class="line"><span>        String username = "system";</span></span>
+<span class="line"><span>        String password = "system";</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);</span></span>
+<span class="line"><span>             PreparedStatement preparedStatement = connection.prepareStatement(</span></span>
+<span class="line"><span>                     "INSERT INTO SYSTEM.CONN_FDW (id, name, age, city, salary) VALUES (?, ?, ?, ?, ?)")) {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>            // Kafka 消费者</span></span>
+<span class="line"><span>            try (Consumer&lt;String, String&gt; consumer = new KafkaConsumer&lt;&gt;(kafkaProps)) {</span></span>
+<span class="line"><span>                consumer.subscribe(Collections.singletonList("conn_fdw"));</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>                while (true) {</span></span>
+<span class="line"><span>                    ConsumerRecords&lt;String, String&gt; records = consumer.poll(100);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>                    records.forEach(record -&gt; {</span></span>
+<span class="line"><span>                        // 解析 Kafka 消息</span></span>
+<span class="line"><span>                        String[] values = record.value().split(",");</span></span>
+<span class="line"><span>                        int id = Integer.parseInt(values[0]);</span></span>
+<span class="line"><span>                        String name = values[1];</span></span>
+<span class="line"><span>                        int age = Integer.parseInt(values[2]);</span></span>
+<span class="line"><span>                        String city = values[3];</span></span>
+<span class="line"><span>                        int salary = Integer.parseInt(values[4]);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>                        // 插入到 Oracle 数据库</span></span>
+<span class="line"><span>                        try {</span></span>
+<span class="line"><span>                            preparedStatement.setInt(1, id);</span></span>
+<span class="line"><span>                            preparedStatement.setString(2, name);</span></span>
+<span class="line"><span>                            preparedStatement.setInt(3, age);</span></span>
+<span class="line"><span>                            preparedStatement.setString(4, city);</span></span>
+<span class="line"><span>                            preparedStatement.setInt(5, salary);</span></span>
+<span class="line"><span>                            preparedStatement.executeUpdate();</span></span>
+<span class="line"><span>                        } catch (Exception e) {</span></span>
+<span class="line"><span>                            e.printStackTrace();</span></span>
+<span class="line"><span>                        }</span></span>
+<span class="line"><span>                    });</span></span>
+<span class="line"><span>                }</span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        } catch (Exception e) {</span></span>
+<span class="line"><span>            e.printStackTrace();</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此时可以通过同时执行两段代码，在跑起来的过程中向生产者PG数据库插入以下数据库，然后到Oracle 数据库中观察数据流的流入情况。</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(1, 'John', 30, 'New York', 50000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(2, 'Alice', 25, 'Los Angeles', 60000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(3, 'Bob', 35, 'Chicago', 70000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(4, 'Eva', 28, 'San Francisco', 55000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(5, 'Mike', 32, 'Seattle', 65000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(6, 'Sophia', 29, 'Boston', 75000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(7, 'David', 27, 'Denver', 52000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(8, 'Emily', 31, 'Austin', 68000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(9, 'Daniel', 26, 'Phoenix', 58000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(10, 'Olivia', 33, 'Houston', 72000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(11, 'Liam', 24, 'Portland', 49000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(12, 'Ava', 34, 'Atlanta', 71000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(13, 'Logan', 30, 'Miami', 62000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(14, 'Mia', 28, 'Dallas', 54000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(15, 'Jackson', 29, 'Minneapolis', 67000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(16, 'Sophie', 31, 'Detroit', 59000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(17, 'William', 27, 'Philadelphia', 70000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(18, 'Emma', 32, 'San Diego', 66000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(19, 'James', 26, 'Raleigh', 63000);</span></span>
+<span class="line"><span>INSERT INTO public.conn_fdw</span></span>
+<span class="line"><span>(id, "name", age, city, salary)</span></span>
+<span class="line"><span>VALUES(20, 'Avery', 35, 'Tampa', 71000);</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>组件Rocket</title>
       <link>https://ujava.cn/assembly/rocket.html</link>
       <guid>https://ujava.cn/assembly/rocket.html</guid>
       <source url="https://ujava.cn/rss.xml">组件Rocket</source>
+      <description>简介 RocketMQ是由阿里捐赠给Apache的一款低延迟、高并发、高可用、高可靠的分布式消息中间件。经历了淘宝双十一的洗礼。RocketMQ既可为分布式应用系统提供异步解耦和削峰填谷的能力，同时也具备互联网应用所需的海量消息堆积、高吞吐、可靠重试等特性。 核心概念 Topic：消息主题，一级消息类型，生产者向其发送消息。 Message：生产者向T...</description>
       <category>设计组件</category>
       <pubDate>Sun, 29 Sep 2024 14:43:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>简介</h2>
+<p>RocketMQ是由阿里捐赠给Apache的一款低延迟、高并发、高可用、高可靠的分布式消息中间件。经历了淘宝双十一的洗礼。RocketMQ既可为分布式应用系统提供异步解耦和削峰填谷的能力，同时也具备互联网应用所需的海量消息堆积、高吞吐、可靠重试等特性。</p>
+<h2>核心概念</h2>
+<ul>
+<li>
+<p><strong>Topic</strong>：消息主题，一级消息类型，生产者向其发送消息。</p>
+</li>
+<li>
+<p><strong>Message</strong>：生产者向Topic发送并最终传送给消费者的数据消息的载体。</p>
+</li>
+<li>
+<p><strong>消息属性</strong>：生产者可以为消息定义的属性，包含Message Key和Tag。</p>
+</li>
+<li>
+<p><strong>Message Key</strong>：消息的业务标识，由消息生产者（Producer）设置，唯一标识某个业务逻辑。</p>
+</li>
+<li>
+<p><strong>Message ID</strong>：消息的全局唯一标识，由消息队列RocketMQ系统自动生成，唯一标识某条消息。</p>
+</li>
+<li>
+<p><strong>Tag</strong>：消息标签，二级消息类型，用来进一步区分某个Topic下的消息分类</p>
+</li>
+<li>
+<p><strong>Producer</strong>：也称为消息发布者，负责生产并发送消息至Topic。</p>
+</li>
+<li>
+<p><strong>Consumer</strong>：也称为消息订阅者，负责从Topic接收并消费消息。</p>
+</li>
+<li>
+<p><strong>分区</strong>：即Topic Partition，物理上的概念。每个Topic包含一个或多个分区。</p>
+</li>
+<li>
+<p><strong>消费位点</strong>：每个Topic会有多个分区，每个分区会统计当前消息的总条数，这个称为最大位点MaxOffset；分区的起始位置对应的位置叫做起始位点MinOffset。</p>
+</li>
+<li>
+<p><strong>Group</strong>：一类生产者或消费者，这类生产者或消费者通常生产或消费同一类消息，且消息发布或订阅的逻辑一致。</p>
+</li>
+<li>
+<p><strong>Group ID</strong>：Group的标识。</p>
+</li>
+<li>
+<p><strong>队列</strong>：个Topic下会由一到多个队列来存储消息。</p>
+</li>
+<li>
+<p><strong>Exactly-Once投递语义</strong>：Exactly-Once投递语义是指发送到消息系统的消息只能被Consumer处理且仅处理一次，即使Producer重试消息发送导致某消息重复投递，该消息在Consumer也只被消费一次。</p>
+</li>
+<li>
+<p><strong>集群消费</strong>：一个Group ID所标识的所有Consumer平均分摊消费消息。例如某个Topic有9条消息，一个Group ID有3个Consumer实例，那么在集群消费模式下每个实例平均分摊，只消费其中的3条消息。</p>
+</li>
+<li>
+<p><strong>广播消费</strong>：一个Group ID所标识的所有Consumer都会各自消费某条消息一次。例如某个Topic有9条消息，一个Group ID有3个Consumer实例，那么在广播消费模式下每个实例都会各自消费9条消息。</p>
+</li>
+<li>
+<p><strong>定时消息</strong>：Producer将消息发送到消息队列RocketMQ服务端，但并不期望这条消息立马投递，而是推迟到在当前时间点之后的某一个时间投递到Consumer进行消费，该消息即定时消息。</p>
+</li>
+<li>
+<p><strong>延时消息</strong>：Producer将消息发送到消息队列RocketMQ服务端，但并不期望这条消息立马投递，而是延迟一定时间后才投递到Consumer进行消费，该消息即延时消息。</p>
+</li>
+<li>
+<p><strong>事务消息</strong>：RocketMQ提供类似X/Open XA的分布事务功能，通过消息队列RocketMQ的事务消息能达到分布式事务的最终一致。</p>
+</li>
+<li>
+<p><strong>顺序消息</strong>：RocketMQ提供的一种按照顺序进行发布和消费的消息类型，分为全局顺序消息和分区顺序消息。</p>
+</li>
+<li>
+<p><strong>全局顺序消息</strong>：对于指定的一个Topic，所有消息按照严格的先入先出（FIFO）的顺序进行发布和消费。</p>
+</li>
+<li>
+<p><strong>分区顺序消息</strong>：对于指定的一个Topic，所有消息根据Sharding Key进行区块分区。同一个分区内的消息按照严格的FIFO顺序进行发布和消费。Sharding Key是顺序消息中用来区分不同分区的关键字段，和普通消息的Message Key是完全不同的概念。</p>
+</li>
+<li>
+<p><strong>消息堆积</strong>：Producer已经将消息发送到消息队列RocketMQ的服务端，但由于Consumer消费能力有限，未能在短时间内将所有消息正确消费掉，此时在消息队列RocketMQ的服务端保存着未被消费的消息，该状态即消息堆积。</p>
+</li>
+<li>
+<p><strong>消息过滤</strong>：Consumer可以根据消息标签（Tag）对消息进行过滤，确保Consumer最终只接收被过滤后的消息类型。消息过滤在消息队列RocketMQ的服务端完成。</p>
+</li>
+<li>
+<p><strong>消息轨迹</strong>：在一条消息从Producer发出到Consumer消费处理过程中，由各个相关节点的时间、地点等数据汇聚而成的完整链路信息。通过消息轨迹，您能清晰定位消息从Producer发出，经由消息队列RocketMQ服务端，投递给Consumer的完整链路，方便定位排查问题。</p>
+</li>
+<li>
+<p><strong>重置消费位点</strong>：以时间轴为坐标，在消息持久化存储的时间范围内（默认3天），重新设置Consumer对已订阅的Topic的消费进度，设置完成后Consumer将接收设定时间点之后由Producer发送到消息队列RocketMQ服务端的消息。</p>
+</li>
+<li>
+<p><strong>死信队列</strong>：死信队列用于处理无法被正常消费的消息。当一条消息初次消费失败，消息队列RocketMQ会自动进行消息重试；达到最大重试次数后，若消费依然失败，则表明Consumer在正常情况下无法正确地消费该消息。此时，消息队列RocketMQ不会立刻将消息丢弃，而是将这条消息发送到该Consumer对应的特殊队列中。 &nbsp;消息队列RocketMQ将这种正常情况下无法被消费的消息称为死信消息（Dead-Letter Message），将存储死信消息的特殊队列称为死信队列（Dead-Letter Queue）。</p>
+</li>
+</ul>
+<h2>消息收发模型</h2>
+<p>消息队列RocketMQ支持发布和订阅模型，消息生产者应用创建Topic并将消息发送到Topic。消费者应用创建对Topic的订阅以便从其接收消息。通信可以是一对多（扇出）、多对一（扇入）和多对多。具体通信如下图所示。<br>
+</p>
+<ul>
+<li>
+<p><strong>生产者集群</strong>：用来表示发送消息应用，一个生产者集群下包含多个生产者实例，可以是多台机器，也可以是一台机器的多个进程，或者一个进程的多个生产者对象。 &nbsp;一个生产者集群可以发送多个Topic消息。发送分布式事务消息时，如果生产者中途意外宕机，消息队列RocketMQ服务端会主动回调生产者集群的任意一台机器来确认事务状态。</p>
+</li>
+<li>
+<p><strong>消费者集群</strong>：用来表示消费消息应用，一个消费者集群下包含多个消费者实例，可以是多台机器，也可以是多个进程，或者是一个进程的多个消费者对象。一个消费者集群下的多个消费者以均摊方式消费消息。如果设置的是广播方式，那么这个消费者集群下的每个实例都消费全量数据。 &nbsp;一个消费者集群对应一个Group ID，一个Group ID可以订阅多个Topic，如上图中的Group 2所示。Group和Topic的订阅关系可以通过直接在程序中设置即可。</p>
+</li>
+</ul>
+<h2>应用场景</h2>
+<ul>
+<li>
+<p><strong>削峰填谷</strong>：诸如秒杀、抢红包、企业开门红等大型活动时皆会带来较高的流量脉冲，或因没做相应的保护而导致系统超负荷甚至崩溃，或因限制太过导致请求大量失败而影响用户体验，消息队列RocketMQ可提供削峰填谷的服务来解决该问题。</p>
+</li>
+<li>
+<p><strong>异步解耦</strong>：交易系统作为淘宝和天猫主站最核心的系统，每笔交易订单数据的产生会引起几百个下游业务系统的关注，包括物流、购物车、积分、流计算分析等等，整体业务系统庞大而且复杂，消息队列RocketMQ可实现异步通信和应用解耦，确保主站业务的连续性。</p>
+</li>
+<li>
+<p><strong>顺序收发</strong>：细数日常中需要保证顺序的应用场景非常多，例如证券交易过程时间优先原则，交易系统中的订单创建、支付、退款等流程，航班中的旅客登机消息处理等等。与先进先出FIFO（First In First Out）原理类似，消息队列RocketMQ提供的顺序消息即保证消息FIFO。</p>
+</li>
+<li>
+<p><strong>分布式事务一致性</strong>：交易系统、支付红包等场景需要确保数据的最终一致性，大量引入消息队列RocketMQ的分布式事务，既可以实现系统之间的解耦，又可以保证最终的数据一致性。</p>
+</li>
+<li>
+<p><strong>大数据分析</strong>：数据在“流动”中产生价值，传统数据分析大多是基于批量计算模型，而无法做到实时的数据分析，利用阿里云消息队列RocketMQ与流式计算引擎相结合，可以很方便的实现业务数据的实时分析。</p>
+</li>
+<li>
+<p><strong>分布式缓存同步</strong>：天猫双11大促，各个分会场琳琅满目的商品需要实时感知价格变化，大量并发访问数据库导致会场页面响应时间长，集中式缓存因带宽瓶颈，限制了商品变更的访问流量，通过消息队列RocketMQ构建分布式缓存，实时通知商品数据的变化。</p>
+</li>
+</ul>
+<p>下文先以用户注册为场景说明消息队列RocketMQ如何实现以下功能：</p>
+<ul>
+<li>
+<p>异步解耦</p>
+</li>
+<li>
+<p>分布式事务的数据一致性</p>
+</li>
+<li>
+<p>消息的顺序收发</p>
+</li>
+</ul>
+<p>最后，再以电商的秒杀场景和价格同步场景分别说明消息队列RocketMQ所实现的削峰填谷和大规模机器的缓存同步。</p>
+<h3>异步解耦</h3>
+<h4>传统处理</h4>
+<p>最常见的一个场景是用户注册后，需要发送注册邮件和短信通知，以告知用户注册成功。传统的做法有以下两种：</p>
+<p><strong>串行方式</strong><br>
+</p>
+<p>数据流动如下所述：</p>
+<ol>
+<li>
+<p>您在注册页面填写账号和密码并提交注册信息，这些注册信息首先会被写入注册系统。</p>
+</li>
+<li>
+<p>注册信息写入注册系统成功后，再发送请求至邮件通知系统。邮件通知系统收到请求后向用户发送邮件通知。</p>
+</li>
+<li>
+<p>邮件通知系统接收注册系统请求后再向下游的短信通知系统发送请求。短信通知系统收到请求后向用户发送短信通知。</p>
+</li>
+</ol>
+<p>以上三个任务全部完成后，才返回注册结果到客户端，用户才能使用账号登录。<br>
+假设每个任务耗时分别为50 ms，则用户需要在注册页面等待总共150 ms才能登录。</p>
+<p><strong>并行方式</strong><br>
+</p>
+<p>数据流动如下所述：</p>
+<ol>
+<li>
+<p>用户在注册页面填写账号和密码并提交注册信息，这些注册信息首先会被写入注册系统。</p>
+</li>
+<li>
+<p>注册信息写入注册系统成功后，再同时发送请求至邮件和短信通知系统。邮件和短信通知系统收到请求后分别向用户发送邮件和短信通知。</p>
+</li>
+</ol>
+<p>以上两个任务全部完成后，才返回注册结果到客户端，用户才能使用账号登录。 &nbsp;假设每个任务耗时分别为50 ms，其中，邮件和短信通知并行完成，则用户需要在注册页面等待总共100 ms才能登录。</p>
+<h4>异步解耦</h4>
+<p>对于用户来说，注册功能实际只需要注册系统存储用户的账户信息后，该用户便可以登录，后续的注册短信和邮件不是即时需要关注的步骤。</p>
+<p>对于注册系统而言，发送注册成功的短信和邮件通知并不一定要绑定在一起同步完成，所以实际当数据写入注册系统后，注册系统就可以把其他的操作放入对应的消息队列RocketMQ中然后马上返回用户结果，由消息队列RocketMQ异步地进行这些操作。<br>
+</p>
+<p>数据流动如下所述：</p>
+<ol>
+<li>
+<p>用户在注册页面填写账号和密码并提交注册信息，这些注册信息首先会被写入注册系统。</p>
+</li>
+<li>
+<p>注册信息写入注册系统成功后，再发送消息至消息队列RocketMQ。消息队列RocketMQ会马上返回响应给注册系统，注册完成。用户可立即登录。</p>
+</li>
+<li>
+<p>下游的邮件和短信通知系统订阅消息队列RocketMQ的此类注册请求消息，即可向用户发送邮件和短信通知，完成所有的注册流程。</p>
+</li>
+</ol>
+<p>用户只需在注册页面等待注册数据写入注册系统和消息队列RocketMQ的时间，即等待55 ms即可登录。</p>
+<p>异步解耦是消息队列RocketMQ的主要特点，主要目的是减少请求响应时间和解耦。主要的适用场景就是将比较耗时而且不需要即时（同步）返回结果的操作作为消息放入消息队列。同时，由于使用了消息队列RocketMQ，只要保证消息格式不变，消息的发送方和接收方并不需要彼此联系，也不需要受对方的影响，即解耦。</p>
+<h3>分布式事务的数据一致性</h3>
+<p>注册系统注册的流程中，用户入口在网页注册系统，通知系统在邮件系统，两个系统之间的数据需要保持最终一致。</p>
+<h4>普通消息处理</h4>
+<p>如上所述，注册系统和邮件通知系统之间通过消息队列进行异步处理。注册系统将注册信息写入注册系统之后，发送一条注册成功的消息到消息队列RocketMQ，邮件通知系统订阅消息队列RocketMQ的注册消息，做相应的业务处理，发送注册成功或者失败的邮件。<br>
+</p>
+<p>流程说明如下：</p>
+<ol>
+<li>
+<p>注册系统发起注册。</p>
+</li>
+<li>
+<p>注册系统向消息队列RocketMQ发送注册消息成功与否的消息。</p>
+</li>
+</ol>
+<p>2.1. 消息发送成功，进入3。</p>
+<p>2.2. 消息发送失败，导致邮件通知系统未收到消息队列RocketMQ发送的注册成功与否的消 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 息，而无法发送邮件，最终邮件通知系统和注册系统之间的状态数据不一致。</p>
+<ol start="3">
+<li>
+<p>邮件通知系统收到消息队列RocketMQ的注册成功消息。</p>
+</li>
+<li>
+<p>邮件通知系统发送注册成功邮件给用户。</p>
+</li>
+</ol>
+<p>在这样的情况下，虽然实现了系统间的解耦，上游系统不需要关心下游系统的业务处理结果；但是数据一致性不好处理，如何保证邮件通知系统状态与注册系统状态的最终一致。</p>
+<h4>事务消息处理</h4>
+<p>此时，需要利用消息队列RocketMQ所提供的事务消息来实现系统间的状态数据一致性。<br>
+</p>
+<p>流程说明如下：</p>
+<ol>
+<li>注册系统向消息队列RocketMQ发送半事务消息。</li>
+</ol>
+<p>1.1. 半事务消息发送成功，进入2。</p>
+<p>1.2. 半事务消息发送失败，注册系统不进行注册，流程结束。（最终注册系统与邮件通知系统数据一致）</p>
+<ol start="2">
+<li>注册系统开始注册。</li>
+</ol>
+<p>2.1. 注册成功，进入3.1。</p>
+<p>2.2. 注册失败，进入3.2。</p>
+<ol start="3">
+<li>注册系统向消息队列RocketMQ发送半消息状态。</li>
+</ol>
+<p>3.1. 提交半事务消息，产生注册成功消息，进入4。</p>
+<p>3.2. 回滚半事务消息，未产生注册成功消息，流程结束。 &nbsp;说明 最终注册系统与邮件通知系 &nbsp; &nbsp;统数据一致。</p>
+<ol start="4">
+<li>
+<p>邮件通知系统接收消息队列RocketMQ的注册成功消息。</p>
+</li>
+<li>
+<p>邮件通知系统发送注册成功邮件。（最终注册系统与邮件通知系统数据一致）关于分布式事务消息的更多详细内容，请参见事务消息。</p>
+</li>
+</ol>
+<h3>消息的顺序收发</h3>
+<p>消息队列RocketMQ顺序消息分为两种情况：</p>
+<ul>
+<li>
+<p>全局顺序：对于指定的一个Topic，所有消息将按照严格的先入先出（FIFO）的顺序，进行顺序发布和顺序消费。</p>
+</li>
+<li>
+<p>分区顺序：对于指定的一个Topic，所有消息根据Sharding Key进行区块分区，同一个分区内的消息将按照严格的FIFO的顺序，进行顺序发布和顺序消费，可以保证一个消息被一个进程消费。在注册场景中，可使用用户ID作为Sharding Key来进行分区，同一个分区下的新建、更新或删除注册信息的消息必须按照FIFO的顺序发布和消费。</p>
+</li>
+</ul>
+<h3>削峰填谷</h3>
+<p>流量削峰也是消息队列RocketMQ的常用场景，一般在秒杀或团队抢购活动中使用广泛。</p>
+<p>在秒杀或团队抢购活动中，由于用户请求量较大，导致流量暴增，秒杀的应用在处理如此大量的访问流量后，下游的通知系统无法承载海量的调用量，甚至会导致系统崩溃等问题而发生漏通知的情况。为解决这些问题，可在应用和下游通知系统之间加入消息队列RocketMQ。<br>
+</p>
+<p>秒杀处理流程如下所述：</p>
+<ol>
+<li>
+<p>用户发起海量秒杀请求到秒杀业务处理系统。</p>
+</li>
+<li>
+<p>秒杀处理系统按照秒杀处理逻辑将满足秒杀条件的请求发送至消息队列RocketMQ。</p>
+</li>
+<li>
+<p>下游的通知系统订阅消息队列RocketMQ的秒杀相关消息，再将秒杀成功的消息发送到相应用户。</p>
+</li>
+<li>
+<p>用户收到秒杀成功的通知。</p>
+</li>
+</ol>
+<h3>大规模机器的缓存同步</h3>
+<p>双十一大促时，各个分会场会有玲琅满目的商品，每件商品的价格都会实时变化。使用缓存技术也无法满足对商品价格的访问需求，缓存服务器网卡满载。访问较多次商品价格查询影响会场页面的打开速度。</p>
+<p>此时需要提供一种广播机制，一条消息本来只可以被集群的一台机器消费，如果使用消息队列RocketMQ的广播消费模式，那么这条消息会被所有节点消费一次，相当于把价格信息同步到需要的每台机器上，取代缓存的作用。</p>
+<h2>系统部署架构</h2>
+<p>系统部署架构如下图所示。<br>
+</p>
+<p>图中所涉及到的概念如下所述：</p>
+<ul>
+<li>
+<p><strong>Name Server</strong>：是一个几乎无状态节点，可集群部署，在消息队列RocketMQ版中提供命名服务，更新和发现Broker服务。</p>
+</li>
+<li>
+<p><strong>Broker</strong>：消息中转角色，负责存储消息，转发消息。分为Master Broker和Slave Broker，一个Master Broker可以对应多个Slave Broker，但是一个Slave Broker只能对应一个Master Broker。Broker启动后需要完成一次将自己注册至Name Server的操作；随后每隔30s定期向Name Server上报Topic路由信息。</p>
+</li>
+<li>
+<p><strong>生产者</strong>：与Name Server集群中的其中一个节点（随机）建立长链接（Keep-alive），定期从Name Server读取Topic路由信息，并向提供Topic服务的Master Broker建立长链接，且定时向Master Broker发送心跳。</p>
+</li>
+<li>
+<p><strong>消费者</strong>：与Name Server集群中的其中一个节点（随机）建立长连接，定期从Name Server拉取Topic路由信息，并向提供Topic服务的Master Broker、Slave Broker建立长连接，且定时向Master Broker、Slave Broker发送心跳。Consumer既可以从Master Broker订阅消息，也可以从Slave Broker订阅消息，订阅规则由Broker配置决定。</p>
+</li>
+</ul>
+]]></content:encoded>
     </item>
     <item>
       <title>组件SpringBoot</title>
       <link>https://ujava.cn/assembly/springboot.html</link>
       <guid>https://ujava.cn/assembly/springboot.html</guid>
       <source url="https://ujava.cn/rss.xml">组件SpringBoot</source>
+      <description>1、SpringBoot简介 Spring Boot(英文中是“引导”的意思)，是用来简化Spring应用的搭建到开发的过程。应用开箱即用，只要通过 “just run”（可能是 java -jar 或 tomcat 或 maven插件run 或 shell脚本），就可以启动项目。 简化了j2ee开发 整合了spring技术栈(springmvc sp...</description>
       <category>设计组件</category>
       <pubDate>Sun, 29 Sep 2024 14:43:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>1、SpringBoot简介</h2>
+<p>Spring Boot(英文中是“引导”的意思)，是用来简化Spring应用的搭建到开发的过程。应用开箱即用，只要通过 “just run”（可能是 java -jar 或 tomcat 或 maven插件run 或 shell脚本），就可以启动项目。</p>
+<ul>
+<li>
+<p>简化了j2ee开发</p>
+</li>
+<li>
+<p>整合了spring技术栈(springmvc springweb)</p>
+</li>
+<li>
+<p>整合了 mybatis等</p>
+<p>Spring Boot将各个第三方框架 设置成一个个场景 Starter，会将场景所依赖的所有依赖自动加载注入。例如：选择Web，会把tomcat\json\web-mvc\web 自动注入</p>
+</li>
+</ul>
+<p>父项目中导入SpringBoot-starter，其中包括2.5版本对应的所有相关依赖包及版本号</p>
+<h3>1.1 依赖管理</h3>
+<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">parent</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;org.springframework.boot&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;spring-boot-starter-parent&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">version</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;2.5.0&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">version</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">relativePath</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/&gt; </span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">parent</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1、引入依赖默认都可以不写版本<br>
+2、引入非版本仲裁的jar，要写版本号<br>
+可以通过porm.xml中增加配置自定义版本号<br>
+1、查看spring-boot-dependencies里面规定当前依赖的版本 用的 key。<br>
+2、在当前项目里面重写配置</p>
+<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">properties</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">mybatis-plus.version</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;3.4.1&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">mybatis-plus.version</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">properties</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>1.2 自动配置</h3>
+<ul>
+<li>自动配置好SpringMVC
+<ul>
+<li>自动引入SpringMC所有组件</li>
+<li>自动配置好SpringMVC常用组件</li>
+</ul>
+</li>
+<li>自动配置好Web常用组件
+<ul>
+<li>配置好了常用组件(例如：字符集等)</li>
+</ul>
+</li>
+<li>默认的包结构
+<ul>
+<li>主程序所在包及其结构下方所有自包都会默认扫描加载</li>
+<li>想要改变扫描包可以通过以下两种注解方式变更</li>
+</ul>
+</li>
+</ul>
+<div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" data-title="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">) </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">@</span><span style="--shiki-light:#A626A4;--shiki-dark:#E5C07B">SpringBootApplication</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">scanBasePackages</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "com.capinfo"</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">) </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">@</span><span style="--shiki-light:#A626A4;--shiki-dark:#E5C07B">ComponentScan</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">basePackages</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "com.capinfo"</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>各种默认配置值
+<ul>
+<li>默认配置最终都映射到对应的配置类中，例如：ServerProperties,MutiPartProperties</li>
+<li>配置文件的值最终会绑定到配置类上，这个类在容器中创建对象</li>
+</ul>
+</li>
+<li>按需加载所有配置项
+<ul>
+<li>所有的配置都在<strong>spring-boot-autoconfigure中</strong>##**</li>
+<li>引入了哪个场景才会加载相关配置项(Prom中引入Starter例如Starter-WEB)</li>
+<li>按照条件装配规则，符合的才会装备，@ConditionalOnClass(Advice.class)</li>
+</ul>
+</li>
+</ul>
+<h3>1.3 自动配置原理</h3>
+<p>Springboot主配置类,实际会加载一套配置，三个配置项:</p>
+<ul>
+<li>
+<p><strong>1）@SpringBootConfiguration：</strong><br>
+包含@Configuration:加了此注解的类为配置配置类，会自动纳入Spring容器(注解@Component、@Service等)</p>
+</li>
+<li>
+<p><strong>2）@EnableAutoConfiguration</strong>：**<br>
+实现自动配置，主要为其中的以下两个注解</p>
+<ul>
+<li><strong>@AutoConfigurationPackage</strong></li>
+</ul>
+<div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" data-title="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    @</span><span style="--shiki-light:#A626A4;--shiki-dark:#E5C07B">Import</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">AutoConfigurationPackages</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">Registrar</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">class</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//给容器中导入Registrar组件</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">   </span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">    //Registrar中给容器中导入一系列组件</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">    //将Main中配置的包中所有组件导入</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    @</span><span style="--shiki-light:#A626A4;--shiki-dark:#E5C07B">Override</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">	public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> registerBeanDefinitions</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">AnnotationMetadata</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> metadata</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> BeanDefinitionRegistry</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> registry) {</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">		register</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(registry</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> new</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> PackageImports</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(metadata)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">getPackageNames</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">().</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">toArray</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">new</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> String</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">])</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">	}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li><strong>@Import(AutoConfigurationImportSelector.class)</strong></li>
+</ul>
+<div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" data-title="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">@</span><span style="--shiki-light:#A626A4;--shiki-dark:#E5C07B">Override</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">public</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> String</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">[] </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">selectImports</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">AnnotationMetadata</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> annotationMetadata) {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">	if</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> (</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">!</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">isEnabled</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(annotationMetadata)) {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">		return</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> NO_IMPORTS</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">	}</span></span>
+<span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">	AutoConfigurationEntry</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> autoConfigurationEntry </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> getAutoConfigurationEntry</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(annotationMetadata)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">//加载所有组件入口</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">	return</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> StringUtils</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">toStringArray</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">autoConfigurationEntry</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">getConfigurations</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">());</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>具体内部实现顺序</p>
+<p>1、getAutoConfigurationEntry(annotationMetadata);给容器中加载组件<br>
+2、List&nbsp;configurations = getCandidateConfigurations(annotationMetadata, attributes);获取所有需要导入的包<br>
+3、Map&lt;String, List&gt; loadSpringFactories(ClassLoader classLoader) {<br>
+getBeanClassLoader());//工厂加载<br>
+4、可以查询到最终是从中META-INF/spring.factories中加载</p>
+<ul>
+<li>默认扫描当前系统中所有依赖包中META-INF/spring.factories文件</li>
+<li>org.springframework.boot.autoconfigure:2.5.0中EnableAutoConfiguration为spring所有配置包</li>
+</ul>
+</li>
+<li>
+<p><strong>3）@ComponentScan:</strong>&nbsp;指定要扫描哪些包</p>
+</li>
+</ul>
+<h2>SpringBoot实践</h2>
+<h3>1、引入依赖</h3>
+<p>引入场景依赖org.springframework.boot<br>
+[官方文档](<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using" target="_blank" rel="noopener noreferrer">https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using</a>.</p>
+<h3>2、查看自动配置</h3>
+<p>自己分析，引入场景对应的自动配置一般都生效了<br>
+配置文件debug=true,可看到开启配置报告Negative（未生效）、Positive（生效）<br>
+xxxxProperties绑定了配置文件的哪些。<br>
+自定义加入或者替换组件<br>
+@Bean、@Component…<br>
+自定义器 XXXXXCustomizer；</p>
+<h3>3、是否需要修改</h3>
+<p>参照官方文档配置&nbsp;<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#common-application-properties" target="_blank" rel="noopener noreferrer">配置官方文档</a>build-systems.starters)<br>
+自定义加入或者替换组件</p>
+<h3>4、自定义组件</h3>
+<h4>1）Lombok</h4>
+<p>Lombok用标签方式代替构造器、getter/setter、toString()等鸡肋代码。简化javabean开发，会在编译时生成相关代码，保持代码整洁。<br>
+1)引入依赖</p>
+<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dependency</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;org.projectlombok&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;lombok&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dependency</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>2)安装lombok插件</p>
+<ul>
+<li>IDEA中File-&gt;Settings-&gt;Plugins，搜索安装Lombok插件。</li>
+</ul>
+<p>3)注解</p>
+<ul>
+<li>@AllArgsConstructor //生成有参构造函数</li>
+<li>@NoArgsConstructor //生成无参构造函数</li>
+<li>@Data //生成get，set方法</li>
+<li>@ToString //生成ToString方法</li>
+<li>@Slf4j //注入日志 log.info直接使用</li>
+</ul>
+<h4>2) dev-tools 自动加载功能</h4>
+<p>1)引入依赖</p>
+<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dependency</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;org.springframework.boot&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;spring-boot-devtools&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">optional</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;true&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">optional</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dependency</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>2)代码变更后只需要Build就可以看到结果，相当于重新启动项目，静态页面开发时不重启就能看到效果了</p>
+<h4>3) 配置提示</h4>
+<p>自定义的类和配置文件绑定一般没有提示。添加此依赖增加提示</p>
+<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">//依赖关系配置</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dependency</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;org.springframework.boot&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;spring-boot-configuration-processor&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">optional</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;true&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">optional</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        &lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">dependency</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4>4) 打包配置</h4>
+<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">build</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">plugins</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">plugin</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;org.springframework.boot&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;spring-boot-maven-plugin&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">configuration</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                    &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">excludes</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                        &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">exclude</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                            &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;org.springframework.boot&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">groupId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                            &lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;spring-boot-configuration-processor&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">artifactId</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                        &lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">exclude</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                    &lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">excludes</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">                &lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">configuration</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">            &lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">plugin</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        &lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">plugins</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">build</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>组件SpringMVC</title>
       <link>https://ujava.cn/assembly/springmvc.html</link>
       <guid>https://ujava.cn/assembly/springmvc.html</guid>
       <source url="https://ujava.cn/rss.xml">组件SpringMVC</source>
+      <description>spring mvc是一种基于java的web应用程序开发框架，它是spring框架的一部分，提供了一种模型、视图、控制器的架构模式，用于构建灵活、可扩展和高效的web应用程序。spring mvc的核心组件包括dispatcherservlet、handlermapping、handler、viewresolver和view等。 img_192.pn...</description>
       <category>设计组件</category>
       <pubDate>Sun, 29 Sep 2024 14:43:20 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>spring mvc是一种基于java的web应用程序开发框架，它是spring框架的一部分，提供了一种模型、视图、控制器的架构模式，用于构建灵活、可扩展和高效的web应用程序。spring mvc的核心组件包括dispatcherservlet、handlermapping、handler、viewresolver和view等。</p>
+</blockquote>
+<figure><figcaption>img_192.png</figcaption></figure>
+<p>Spring MVC是一种基于Java的Web应用程序开发框架，它是Spring框架的一部分。Spring MVC提供了一种模型-视图-控制器（Model-View-Controller，MVC）的架构模式，用于构建灵活、可扩展和高效的Web应用程序。</p>
+<p>在Spring MVC中，模型（Model）代表应用程序的数据和业务逻辑。视图（View）负责展示数据给用户，并接受用户的输入。控制器（Controller）处理用户的请求，协调模型和视图之间的交互。这种分离的架构模式使得代码的组织和维护更加清晰和可控。</p>
+<p>Spring MVC的核心组件包括：</p>
+<ol>
+<li>
+<p>DispatcherServlet：DispatcherServlet是Spring MVC的前端控制器，它接收所有的HTTP请求，并将请求分发给相应的处理器（Handler）进行处理。DispatcherServlet还负责协调处理器、模型和视图之间的交互。</p>
+</li>
+<li>
+<p>HandlerMapping：HandlerMapping负责将请求映射到相应的处理器。它根据请求的URL和其他条件确定要执行的处理器，并返回给DispatcherServlet。</p>
+</li>
+<li>
+<p>Handler：Handler是实际处理请求的组件。它可以是一个Controller类，也可以是一个处理请求的方法。Handler执行所需的业务逻辑，并返回一个ModelAndView对象，该对象包含要在视图中展示的数据和视图的名称。</p>
+</li>
+<li>
+<p>ViewResolver：ViewResolver负责将逻辑视图名称解析为实际的视图对象。它根据视图名称查找并返回一个具体的视图实现，如JSP、Thymeleaf或FreeMarker等。</p>
+</li>
+<li>
+<p>View：View负责将模型中的数据渲染到具体的输出格式，如HTML、JSON或XML。它负责将模型的数据呈现给用户，并生成最终的响应。</p>
+</li>
+</ol>
+<p>除了以上核心组件，Spring MVC还提供了许多其他功能和特性，如数据绑定、表单处理、文件上传、拦截器、国际化等。它还支持RESTful风格的Web服务开发，并与其他Spring框架模块（如Spring Boot、Spring Security和Spring Data等）无缝集成。</p>
+<p>使用Spring MVC可以带来许多好处。首先，它提供了一种清晰的架构模式，使得代码的组织和维护更加简单和可控。其次，Spring MVC具有高度可扩展性和灵活性，可以根据应用程序的需求进行定制和扩展。此外，它还提供了丰富的功能和特性，使得开发Web应用程序更加高效和便捷。</p>
+<p>总结而言，Spring MVC是一种基于Java的Web应用程序开发框架，它采用了模型-视图-控制器（MVC）的架构模式。它提供了一种清晰、可扩展和高效的方式来构建Web应用程序。Spring MVC的核心组件包括DispatcherServlet、HandlerMapping、Handler、ViewResolver和View等。使用Spring MVC可以使开发Web应用程序更加简单、高效和可控。</p>
+]]></content:encoded>
     </item>
     <item>
       <title>组件XXL-JOB</title>
