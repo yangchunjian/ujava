@@ -9,7 +9,8 @@ tag:
 
 ## 一、 简介
 
-Elasticsearch 是一个分布式可扩展的实时搜索和分析引擎,一个建立在全文搜索引擎 Apache Lucene™ 基础上的搜索引擎.当然 Elasticsearch 并不仅仅是 Lucene 那么简单，它不仅包括了全文搜索功能，还可以进行以下工作:
+Elasticsearch是一个分布式可扩展的实时搜索和分析引擎,一个建立在全文搜索引擎 Apache Lucene™ 基础上的搜索引擎.当然 Elasticsearch 并不仅仅是 Lucene 那么简单，它不仅包括了全文搜索功能，还可以进行以下工作:
+Elasticsearch主要解决大数据量的存储及查询问题。索引：index。
 
 * 一个分布式的实时文档存储，每个字段可以被索引与搜索
 * 一个分布式实时分析搜索引擎
