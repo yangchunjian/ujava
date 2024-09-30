@@ -4,6 +4,7 @@ export default navbar([
   { text: "快速上手", icon: "star", link: "/required/" },
   { text: "设计思想", icon: "star", link: "/mind/" },
   { text: "设计模式", icon: "star", link: "/design/" },
+  { text: "设计组件", icon: "star", link: "/assembly/" },
   {
     text: "项目相关",
     icon: "star",
