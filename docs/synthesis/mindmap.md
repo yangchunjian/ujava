@@ -20,8 +20,8 @@ markmap:
 
 ## 链接
 
-- <https://markmap.js.org/>
-- [GitHub](https://github.com/markmap/markmap)
+- <https://ujava.cn/>
+- [UJava](https://ujava.cn/)
 
 ## 功能
 
