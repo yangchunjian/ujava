@@ -15,7 +15,9 @@ NoSQL:即Not-OnlySQL(泛指非关系型的数据库)，作为关系型数据库�
 
 #### 概念
 
-Redis(REmote DlctionaryServer)是用C语言开发的一个开源的高性能键值对(key-value)数据库
+Redis(REmote DlctionaryServer)是用C语言开发的一个开源的高性能键值对(key-value)数据库。
+
+Redis是缓存型数据库，解决数据的快速存储及查询的问题。
 
 #### 特征
 
@@ -84,6 +86,13 @@ redis共有16个库
 清空所有：flushall
 
 ### 基本数据类型
+
+
+1. String类型
+2. List类型
+3. Set类型
+4. ZSet类型
+5. Hash类型
 
 #### String
 
