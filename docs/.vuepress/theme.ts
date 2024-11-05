@@ -4,6 +4,11 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar/index.js";
 // @ts-ignore
 import { componentsPlugin } from "vuepress-plugin-components";
+// @ts-ignore
+import { getDirname, path } from "vuepress/utils";
+// @ts-ignore
+const __dirname = getDirname(import.meta.url);
+
 
 export default hopeTheme({
   hostname: "https://ujava.cn",
@@ -21,6 +26,9 @@ export default hopeTheme({
   lastUpdated: false,
   contributors: false,
   docsDir: "docs",
+  // 纯净模式：https://theme-hope.vuejs.press/zh/guide/interface/pure.html
+  pure: true,
+  breadcrumb: false,
 
   // navbar
   navbar,
@@ -30,7 +38,6 @@ export default hopeTheme({
   footer: "",
   fullscreen: true,
   displayFooter: true,
-  breadcrumb: false,
   encrypt: {
     config: {
       "/encrypt/": ["654321"],
@@ -42,6 +49,7 @@ export default hopeTheme({
   // metaLocales: {
   //   editLink: "编辑此页",
   // },
+  pageInfo: ["Author", "Category", "Tag", "Original", "Word", "ReadingTime"],
 
   blog: {
     intro: "/author/",
@@ -54,8 +62,6 @@ export default hopeTheme({
     },
   },
   plugins: {
-
-
     components: {
 
       rootComponents: {
@@ -63,16 +69,16 @@ export default hopeTheme({
         // notice: [
         //   {
         //     path: "/",
-        //     title: "项目介绍",
-        //     showOnce: true,
+        //     title: "公众号",
+        //     showOnce: false,
         //     content:
-        //         "项目介绍相关内容~",
+        //         "<img style='width: 100%' src=\"https://ujava.cn/logo/gzh.png\"/>",
         //     actions: [
-        //       {
-        //         text: "开始阅读",
-        //         link: "/home.html",
-        //         type: "primary",
-        //       },
+        //       // {
+        //       //   text: "开始阅读",
+        //       //   link: "/home.html",
+        //       //   type: "primary",
+        //       // },
         //     ],
         //   },
         // ],
@@ -85,6 +91,13 @@ export default hopeTheme({
         "VPBanner",
         "VPCard",
       ],
+
+      componentOptions: {
+        // share: {
+        //   services: componentsPlugin,
+        // },
+      },
+
     },
     blog: true,
     copyright: {
@@ -101,20 +114,17 @@ export default hopeTheme({
       json: true,
       rss: true,
     },
+    markdownTab: {
+      codeTabs: true,
+      tabs: true
+    },
+
     // All features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
-      attrs: true,
-      chart: true,
-      codetabs: true,
-      demo: true,
-      echarts: true,
-      figure: true,
-      flowchart: true,
       gfm: true,
       imgLazyload: true,
       imgSize: true,
-      include: true,
       katex: true,
       mark: true,
       mermaid: true,
@@ -136,9 +146,21 @@ export default hopeTheme({
       ],
       sub: true,
       sup: true,
-      tabs: true,
       vPre: true,
       vuePlayground: true,
+      include: {
+        resolvePath: (file, cwd) => {
+          if (file.startsWith("@"))
+            return path.resolve(
+                __dirname,
+                "../snippets",
+                file.replace("@", "./"),
+            );
+
+          return path.resolve(cwd, file);
+        },
+      },
+      tasklist: true,
     },
     search: {
       isSearchable: (page) => page.path !== "/",

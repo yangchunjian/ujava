@@ -7,6 +7,7 @@ import { watermarkPlugin } from '@vuepress/plugin-watermark'
 // @ts-ignore
 const __dirname = getDirname(import.meta.url);
 // import { searchProPlugin } from 'vuepress-plugin-search-pro';
+import { socialSharePlugin } from 'vuepress-plugin-social-share'
 
 export default defineUserConfig({
   base: "/",
@@ -69,6 +70,9 @@ export default defineUserConfig({
   },
 
   plugins: [
+    socialSharePlugin({
+      networks: ['qrcode', 'wechat', 'qq', 'weibo'],
+    }),
     watermarkPlugin({
       // options
       enabled: true,

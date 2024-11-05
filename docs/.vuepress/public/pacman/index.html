@@ -6,6 +6,38 @@
 		<meta name="keywords" content="吃豆人,FC吃豆子,吃豆游戏,Pac-Man,HTML5游戏,Javascript游戏引擎">
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="./static/style/index.css">
+        <style>
+            /* 默认隐藏input */
+            .button-container {
+                display: none;
+                //display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+            }
+            /* 在宽度小于767像素的设备上显示input */
+            @media (max-width: 767px) {
+                .button-container {
+                    display: block;
+                    /* 其他样式 */
+                }
+            }
+            .button {
+                width: 60px;
+                height: 60px;
+                border: none;
+                border-radius: 50%;
+                background-color: #4CAF50;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                margin: 10px;
+            }
+            .button:hover {
+                background-color: #45a049;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -16,8 +48,20 @@
 				</div>
 				<div class="ft">
 					<div class="info">
-                        <p>按<b> [空格键]</b> 暂停或继续</p>
+                        <p>按<b> [空格键 或 enter]</b> 暂停或继续</p>
                         <p>在玩的过程中，您会发现这些精灵似乎很有想法，它们知道如何彼此协作对您穷追不舍。</p>
+
+                        <div class="button-container">
+                            <button class="button" id="ps">开始</button>
+                        </div>
+                        <div class="button-container">
+                            <button class="button" id="up">↑</button>
+                        </div>
+                        <div class="button-container">
+                            <button class="button" id="left">←</button>
+                            <button class="button" id="down">↓</button>
+                            <button class="button" id="right">→</button>
+                        </div>
                     </div>
 				</div>
 			</div>
@@ -25,5 +69,8 @@
 		<script src="./static/script/game.js"></script>
 		<script src="./static/script/index.js"></script>
 		<script src="./static/script/buttons.js"></script>
-	</body>
+        <script>
+
+        </script>
+    </body>
 </html>
