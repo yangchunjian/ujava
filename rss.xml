@@ -6,19 +6,30 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Tue, 05 Nov 2024 06:41:49 GMT</pubDate>
-    <lastBuildDate>Tue, 05 Nov 2024 06:41:49 GMT</lastBuildDate>
+    <pubDate>Tue, 05 Nov 2024 06:54:26 GMT</pubDate>
+    <lastBuildDate>Tue, 05 Nov 2024 06:54:26 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>设计高频</category>
     <category>设计组件</category>
     <category>应用相关</category>
     <category>公告</category>
     <category>Java</category>
-    <category>设计高频</category>
     <category>设计基础</category>
     <category>设计综合</category>
     <category>设计算法</category>
     <category>设计模式</category>
+    <item>
+      <title>设计脑图</title>
+      <link>https://ujava.cn/synthesis/mindmap.html</link>
+      <guid>https://ujava.cn/synthesis/mindmap.html</guid>
+      <source url="https://ujava.cn/rss.xml">设计脑图</source>
+      <description>脑图样例</description>
+      <category>设计高频</category>
+      <pubDate>Tue, 05 Nov 2024 06:48:40 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>脑图样例</h2>
+]]></content:encoded>
+    </item>
     <item>
       <title>组件Linux</title>
       <link>https://ujava.cn/assembly/linux.html</link>
@@ -10217,19 +10228,6 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
       <content:encoded><![CDATA[<h2>概述</h2>
 <p>Trampoline模式用于在不破坏堆栈的情况下在Java中递归地实现算法<br>
 并且交织功能的执行而不将它们硬编码在一起。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>事务脚本模式</title>
-      <link>https://ujava.cn/design/other/transactionscript.html</link>
-      <guid>https://ujava.cn/design/other/transactionscript.html</guid>
-      <source url="https://ujava.cn/rss.xml">事务脚本模式</source>
-      <description>概述 事务脚本按过程组织业务逻辑，其中每个过程处理一个 来自演示文稿的请求。</description>
-      <category>设计模式</category>
-      <pubDate>Mon, 04 Mar 2024 06:36:55 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>概述</h2>
-<p>事务脚本按过程组织业务逻辑，其中每个过程处理一个<br>
-来自演示文稿的请求。</p>
 ]]></content:encoded>
     </item>
   </channel>

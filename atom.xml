@@ -4,19 +4,31 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2024-11-05T06:41:49.681Z</updated>
+  <updated>2024-11-05T06:54:26.051Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
+  <category term="设计高频"/>
   <category term="设计组件"/>
   <category term="应用相关"/>
   <category term="公告"/>
   <category term="Java"/>
-  <category term="设计高频"/>
   <category term="设计基础"/>
   <category term="设计综合"/>
   <category term="设计算法"/>
   <category term="设计模式"/>
+  <entry>
+    <title type="text">设计脑图</title>
+    <id>https://ujava.cn/synthesis/mindmap.html</id>
+    <link href="https://ujava.cn/synthesis/mindmap.html"/>
+    <updated>2024-11-05T06:48:40.000Z</updated>
+    <summary type="html"><![CDATA[<h2>脑图样例</h2>
+]]></summary>
+    <content type="html"><![CDATA[<h2>脑图样例</h2>
+]]></content>
+    <category term="设计高频"/>
+    <published>2024-11-05T06:48:40.000Z</published>
+  </entry>
   <entry>
     <title type="text">组件Linux</title>
     <id>https://ujava.cn/assembly/linux.html</id>
@@ -11044,22 +11056,6 @@ Bob Nystrom认为，空间分区模式通过将对象存储在<br>
     <content type="html"><![CDATA[<h2>概述</h2>
 <p>Trampoline模式用于在不破坏堆栈的情况下在Java中递归地实现算法<br>
 并且交织功能的执行而不将它们硬编码在一起。</p>
-]]></content>
-    <category term="设计模式"/>
-    <published>2024-03-04T06:36:55.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">事务脚本模式</title>
-    <id>https://ujava.cn/design/other/transactionscript.html</id>
-    <link href="https://ujava.cn/design/other/transactionscript.html"/>
-    <updated>2024-03-04T07:11:24.000Z</updated>
-    <summary type="html"><![CDATA[<h2>概述</h2>
-<p>事务脚本按过程组织业务逻辑，其中每个过程处理一个<br>
-来自演示文稿的请求。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h2>概述</h2>
-<p>事务脚本按过程组织业务逻辑，其中每个过程处理一个<br>
-来自演示文稿的请求。</p>
 ]]></content>
     <category term="设计模式"/>
     <published>2024-03-04T06:36:55.000Z</published>

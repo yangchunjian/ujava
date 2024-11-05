@@ -7,6 +7,19 @@
   "favicon": "https://ujava.cn/favicon.ico",
   "items": [
     {
+      "title": "设计脑图",
+      "url": "https://ujava.cn/synthesis/mindmap.html",
+      "id": "https://ujava.cn/synthesis/mindmap.html",
+      "summary": "脑图样例",
+      "content_html": "<h2>脑图样例</h2>\n",
+      "date_published": "2024-11-05T06:48:40.000Z",
+      "date_modified": "2024-11-05T06:48:40.000Z",
+      "authors": [],
+      "tags": [
+        "设计高频"
+      ]
+    },
+    {
       "title": "组件Linux",
       "url": "https://ujava.cn/assembly/linux.html",
       "id": "https://ujava.cn/assembly/linux.html",
@@ -1264,19 +1277,6 @@
       "content_html": "<h2>概述</h2>\n<p>Trampoline模式用于在不破坏堆栈的情况下在Java中递归地实现算法<br>\n并且交织功能的执行而不将它们硬编码在一起。</p>\n",
       "date_published": "2024-03-04T06:36:55.000Z",
       "date_modified": "2024-03-04T06:36:55.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "事务脚本模式",
-      "url": "https://ujava.cn/design/other/transactionscript.html",
-      "id": "https://ujava.cn/design/other/transactionscript.html",
-      "summary": "概述 事务脚本按过程组织业务逻辑，其中每个过程处理一个 来自演示文稿的请求。",
-      "content_html": "<h2>概述</h2>\n<p>事务脚本按过程组织业务逻辑，其中每个过程处理一个<br>\n来自演示文稿的请求。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T07:11:24.000Z",
       "authors": [],
       "tags": [
         "设计模式"
