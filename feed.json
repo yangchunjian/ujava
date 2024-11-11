@@ -7,13 +7,114 @@
   "favicon": "https://ujava.cn/favicon.ico",
   "items": [
     {
+      "title": "项目管理经验11",
+      "url": "https://ujava.cn/manage/project11.html",
+      "id": "https://ujava.cn/manage/project11.html",
+      "summary": "一、项目管理的一些经验 二、项目管理的经典法则 三、6W3H 6W3H是一个非常实用的工具，它包含了项目管理中需要考虑的重要问题。下面，我们就一一解析这些问题。 - What（什么）： 首要明确项目具体要做什么，这包括项目的目标，预期的结果，需要完成的任务等。 - Why（为什么）： 为什么要做这个项目？这个问题帮助我们明确项目背后的动机、理由和价值。...",
+      "content_html": "<h2>一、项目管理的一些经验</h2>\n<p>|                                                                                                                                                                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |<br>\n|</p>\n",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "项目管理经验12",
+      "url": "https://ujava.cn/manage/project12.html",
+      "id": "https://ujava.cn/manage/project12.html",
+      "content_html": "",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "项目管理经验13",
+      "url": "https://ujava.cn/manage/project13.html",
+      "id": "https://ujava.cn/manage/project13.html",
+      "content_html": "",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "项目管理经验14",
+      "url": "https://ujava.cn/manage/project14.html",
+      "id": "https://ujava.cn/manage/project14.html",
+      "content_html": "",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "项目管理经验15",
+      "url": "https://ujava.cn/manage/project15.html",
+      "id": "https://ujava.cn/manage/project15.html",
+      "content_html": "",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "项目管理经验16",
+      "url": "https://ujava.cn/manage/project16.html",
+      "id": "https://ujava.cn/manage/project16.html",
+      "content_html": "",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "项目管理经验17",
+      "url": "https://ujava.cn/manage/project17.html",
+      "id": "https://ujava.cn/manage/project17.html",
+      "content_html": "",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "项目管理经验18",
+      "url": "https://ujava.cn/manage/project18.html",
+      "id": "https://ujava.cn/manage/project18.html",
+      "content_html": "",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "项目管理经验19",
+      "url": "https://ujava.cn/manage/project19.html",
+      "id": "https://ujava.cn/manage/project19.html",
+      "content_html": "",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "项目管理经验20",
+      "url": "https://ujava.cn/manage/project20.html",
+      "id": "https://ujava.cn/manage/project20.html",
+      "content_html": "",
+      "date_published": "2024-11-11T07:04:30.000Z",
+      "date_modified": "2024-11-11T07:04:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
       "title": "设计脑图",
       "url": "https://ujava.cn/synthesis/mindmap.html",
       "id": "https://ujava.cn/synthesis/mindmap.html",
       "summary": "脑图样例",
       "content_html": "<h2>脑图样例</h2>\n",
       "date_published": "2024-11-05T06:48:40.000Z",
-      "date_modified": "2024-11-05T06:48:40.000Z",
+      "date_modified": "2024-11-05T07:00:02.000Z",
       "authors": [],
       "tags": [
         "设计高频"
@@ -1145,136 +1246,6 @@
       "id": "https://ujava.cn/design/other/specification.html",
       "summary": "概述 规范模式将如何匹配候选对象的语句与候选对象分开 与之匹配的。它不仅在选择中有用，而且对 验证和按订单建造。",
       "content_html": "<h2>概述</h2>\n<p>规范模式将如何匹配候选对象的语句与候选对象分开<br>\n与之匹配的。它不仅在选择中有用，而且对<br>\n验证和按订单建造。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T06:36:55.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "步骤建立者模式",
-      "url": "https://ujava.cn/design/other/stepbuilder.html",
-      "id": "https://ujava.cn/design/other/stepbuilder.html",
-      "summary": "概述 Builder模式的扩展，它完全指导用户创建对象，不会出现混淆。 用户体验将得到更大的改善，因为他只会看到下一步可用的方法，在正确的时间构建对象之前没有构建方法。",
-      "content_html": "<h2>概述</h2>\n<p>Builder模式的扩展，它完全指导用户创建对象，不会出现混淆。<br>\n用户体验将得到更大的改善，因为他只会看到下一步可用的方法，在正确的时间构建对象之前没有构建方法。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T07:11:24.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "扼杀者(Strangler)模式",
-      "url": "https://ujava.cn/design/other/strangler.html",
-      "id": "https://ujava.cn/design/other/strangler.html",
-      "summary": "概述 通过逐步替换特定的功能，逐步迁移遗留系统 新的应用程序和服务。随着旧系统的功能被替换 系统最终覆盖了旧系统的所有功能，并可能具有自己的新功能，然后 扼杀旧系统，让你退役。",
-      "content_html": "<h2>概述</h2>\n<p>通过逐步替换特定的功能，逐步迁移遗留系统<br>\n新的应用程序和服务。随着旧系统的功能被替换<br>\n系统最终覆盖了旧系统的所有功能，并可能具有自己的新功能，然后<br>\n扼杀旧系统，让你退役。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T06:36:55.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "子类沙盒模式",
-      "url": "https://ujava.cn/design/other/subclasssandbox.html",
-      "id": "https://ujava.cn/design/other/subclasssandbox.html",
-      "summary": "概述 子类沙盒模式描述了一个基本思想，但没有很多详细的机制。当您有几个类似的子类时，您将需要该模式。如果你必须做一个微小的改变，那么就改变基类，而所有的子类都不应该被触及。因此基类必须能够提供派生类需要执行的所有操作。",
-      "content_html": "<h2>概述</h2>\n<p>子类沙盒模式描述了一个基本思想，但没有很多详细的机制。当您有几个类似的子类时，您将需要该模式。如果你必须做一个微小的改变，那么就改变基类，而所有的子类都不应该被触及。因此基类必须能够提供派生类需要执行的所有操作。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T07:11:24.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "表模块(Table Module)模式",
-      "url": "https://ujava.cn/design/other/tablemodule.html",
-      "id": "https://ujava.cn/design/other/tablemodule.html",
-      "summary": "概述 表模块通过数据库中每个表一个类来组织域逻辑，并且类的单个实例包含将对数据进行操作的各种过程。",
-      "content_html": "<h2>概述</h2>\n<p>表模块通过数据库中每个表一个类来组织域逻辑，并且类的单个实例包含将对数据进行操作的各种过程。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T06:36:55.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "模版方法模式",
-      "url": "https://ujava.cn/design/other/templatemethod.html",
-      "id": "https://ujava.cn/design/other/templatemethod.html",
-      "summary": "概述 在操作中定义算法的骨架，将一些步骤推迟到子类中。样板 方法允许子类在不更改算法的情况下重新定义算法的某些步骤 结构",
-      "content_html": "<h2>概述</h2>\n<p>在操作中定义算法的骨架，将一些步骤推迟到子类中。样板<br>\n方法允许子类在不更改算法的情况下重新定义算法的某些步骤<br>\n结构</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T07:22:04.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "本地线程存储模式",
-      "url": "https://ujava.cn/design/other/threadlocalstorage.html",
-      "id": "https://ujava.cn/design/other/threadlocalstorage.html",
-      "summary": "概述 提供为每个线程提供一个变量副本的功能，使其线程安全。",
-      "content_html": "<h2>概述</h2>\n<p>提供为每个线程提供一个变量副本的功能，使其线程安全。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T07:11:24.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "线程池模式",
-      "url": "https://ujava.cn/design/other/threadpool.html",
-      "id": "https://ujava.cn/design/other/threadpool.html",
-      "summary": "概述 通常情况下，要执行的任务是短暂的，并且任务数量很大。 为每个任务创建一个新线程会使系统花费更多的时间来创建和销毁 线程而不是执行实际任务。线程池通过重用现有的 线程，并消除创建新线程的延迟。",
-      "content_html": "<h2>概述</h2>\n<p>通常情况下，要执行的任务是短暂的，并且任务数量很大。<br>\n为每个任务创建一个新线程会使系统花费更多的时间来创建和销毁<br>\n线程而不是执行实际任务。线程池通过重用现有的<br>\n线程，并消除创建新线程的延迟。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T07:11:24.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "节流(Throttling)模式",
-      "url": "https://ujava.cn/design/other/throttling.html",
-      "id": "https://ujava.cn/design/other/throttling.html",
-      "summary": "概述 确保给定的客户端访问服务资源的次数不能超过指定的限制。",
-      "content_html": "<h2>概述</h2>\n<p>确保给定的客户端访问服务资源的次数不能超过指定的限制。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T06:36:55.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "读者容错模式",
-      "url": "https://ujava.cn/design/other/tolerantreader.html",
-      "id": "https://ujava.cn/design/other/tolerantreader.html",
-      "summary": "概述 Tolerant Reader是一种集成模式，有助于创建健壮的通信系统。这个想法 是在从另一个服务读取数据时尽可能宽容。这样，当 交流模式发生变化，读者一定不能断。",
-      "content_html": "<h2>概述</h2>\n<p>Tolerant Reader是一种集成模式，有助于创建健壮的通信系统。这个想法<br>\n是在从另一个服务读取数据时尽可能宽容。这样，当<br>\n交流模式发生变化，读者一定不能断。</p>\n",
-      "date_published": "2024-03-04T06:36:55.000Z",
-      "date_modified": "2024-03-04T07:22:04.000Z",
-      "authors": [],
-      "tags": [
-        "设计模式"
-      ]
-    },
-    {
-      "title": "蹦床(Trampoline)模式",
-      "url": "https://ujava.cn/design/other/trampoline.html",
-      "id": "https://ujava.cn/design/other/trampoline.html",
-      "summary": "概述 Trampoline模式用于在不破坏堆栈的情况下在Java中递归地实现算法 并且交织功能的执行而不将它们硬编码在一起。",
-      "content_html": "<h2>概述</h2>\n<p>Trampoline模式用于在不破坏堆栈的情况下在Java中递归地实现算法<br>\n并且交织功能的执行而不将它们硬编码在一起。</p>\n",
       "date_published": "2024-03-04T06:36:55.000Z",
       "date_modified": "2024-03-04T06:36:55.000Z",
       "authors": [],
