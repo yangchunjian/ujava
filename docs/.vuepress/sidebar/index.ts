@@ -124,6 +124,13 @@ export default sidebar({
             children: "structure",
         },
         {
+            text: "设计模型",
+            icon: "star",
+            collapsible: true,
+            prefix: "model/",
+            children: "structure",
+        },
+        {
             text: "设计Java",
             icon: "star",
             collapsible: true,
