@@ -138,6 +138,13 @@ export default sidebar({
             children: "structure",
         },
         {
+            text: "设计Python",
+            icon: "star",
+            collapsible: true,
+            prefix: "python/",
+            children: "structure",
+        },
+        {
             text: "设计综合",
             icon: "star",
             collapsible: true,
