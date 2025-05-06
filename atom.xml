@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2025-04-16T06:45:23.493Z</updated>
+  <updated>2025-05-06T13:06:12.185Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -161,8 +161,9 @@
     <title type="text">蒸馏原理</title>
     <id>https://ujava.cn/model/distill.html</id>
     <link href="https://ujava.cn/model/distill.html"/>
-    <updated>2025-02-13T12:31:16.000Z</updated>
-    <summary type="html"><![CDATA[<p><mark>‌**[知识蒸馏]**‌</mark>是一种机器学习技术，其核心思想是将一个大型、复杂的模型（通常称为“教师”模型）的知识转移到一个小型、简单的模型（称为“学生”模型）中。这个过程不仅涉及模型输出的复制，更重要的是教学生模型模仿教师模型的内部处理方式和数据分布见解。‌12</p>
+    <updated>2025-05-06T13:02:56.000Z</updated>
+    <summary type="html"><![CDATA[<p>蒸馏原理<br>
+<mark>‌**[知识蒸馏]**‌</mark>是一种机器学习技术，其核心思想是将一个大型、复杂的模型（通常称为“教师”模型）的知识转移到一个小型、简单的模型（称为“学生”模型）中。这个过程不仅涉及模型输出的复制，更重要的是教学生模型模仿教师模型的内部处理方式和数据分布见解。‌12</p>
 <h3>知识蒸馏的基本原理</h3>
 <ol>
 <li><mark>‌<strong>教师模型训练</strong>‌</mark>：首先，教师模型在一个大型数据集上进行训练，以达到高精度。教师模型通常是一个大型、复杂的深度学习模型，如深度卷积神经网络（CNN）或变换器（Transformer），经过充分训练，具有较高的准确率和鲁棒性。</li>
@@ -170,7 +171,8 @@
 <li><mark>‌<strong>知识转移</strong>‌</mark>：学生模型从原始训练数据和教师模型生成的软目标中学习。这些软目标提供了比硬标签更丰富的信息，因为它们包含了教师模型对数据分布的见解。通过最小化学生模型预测与教师模型输出之间的差异（通常使用KL散度作为损失函数），学生模型能够逐渐逼近教师模型的性能。</li>
 <li><mark>‌<strong>损失函数计算</strong>‌</mark>：知识蒸馏中的损失函数通常由两个部分组成：蒸馏损失和学生损失。蒸馏损失衡量教师模型产生的软目标与学生模型预测之间的差异，通常通过Kullback-Leibler散度或交叉熵来计算；学生损失是学生模型预测与真实标签之间的标准交叉熵损失。</li>
 </ol>]]></summary>
-    <content type="html"><![CDATA[<p><mark>‌**[知识蒸馏]**‌</mark>是一种机器学习技术，其核心思想是将一个大型、复杂的模型（通常称为“教师”模型）的知识转移到一个小型、简单的模型（称为“学生”模型）中。这个过程不仅涉及模型输出的复制，更重要的是教学生模型模仿教师模型的内部处理方式和数据分布见解。‌12</p>
+    <content type="html"><![CDATA[<p>蒸馏原理<br>
+<mark>‌**[知识蒸馏]**‌</mark>是一种机器学习技术，其核心思想是将一个大型、复杂的模型（通常称为“教师”模型）的知识转移到一个小型、简单的模型（称为“学生”模型）中。这个过程不仅涉及模型输出的复制，更重要的是教学生模型模仿教师模型的内部处理方式和数据分布见解。‌12</p>
 <h3>知识蒸馏的基本原理</h3>
 <ol>
 <li><mark>‌<strong>教师模型训练</strong>‌</mark>：首先，教师模型在一个大型数据集上进行训练，以达到高精度。教师模型通常是一个大型、复杂的深度学习模型，如深度卷积神经网络（CNN）或变换器（Transformer），经过充分训练，具有较高的准确率和鲁棒性。</li>

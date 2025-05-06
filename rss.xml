@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Wed, 16 Apr 2025 06:45:23 GMT</pubDate>
-    <lastBuildDate>Wed, 16 Apr 2025 06:45:23 GMT</lastBuildDate>
+    <pubDate>Tue, 06 May 2025 13:06:12 GMT</pubDate>
+    <lastBuildDate>Tue, 06 May 2025 13:06:12 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计模型</category>
@@ -128,10 +128,11 @@
       <link>https://ujava.cn/model/distill.html</link>
       <guid>https://ujava.cn/model/distill.html</guid>
       <source url="https://ujava.cn/rss.xml">蒸馏原理</source>
-      <description>‌**[知识蒸馏]**‌是一种机器学习技术，其核心思想是将一个大型、复杂的模型（通常称为“教师”模型）的知识转移到一个小型、简单的模型（称为“学生”模型）中。这个过程不仅涉及模型输出的复制，更重要的是教学生模型模仿教师模型的内部处理方式和数据分布见解。‌12 知识蒸馏的基本原理 ‌教师模型训练‌：首先，教师模型在一个大型数据集上进行训练，以达到高精度。...</description>
+      <description>蒸馏原理 ‌**[知识蒸馏]**‌是一种机器学习技术，其核心思想是将一个大型、复杂的模型（通常称为“教师”模型）的知识转移到一个小型、简单的模型（称为“学生”模型）中。这个过程不仅涉及模型输出的复制，更重要的是教学生模型模仿教师模型的内部处理方式和数据分布见解。‌12 知识蒸馏的基本原理 ‌教师模型训练‌：首先，教师模型在一个大型数据集上进行训练，以达...</description>
       <category>设计模型</category>
       <pubDate>Thu, 13 Feb 2025 12:31:16 GMT</pubDate>
-      <content:encoded><![CDATA[<p><mark>‌**[知识蒸馏]**‌</mark>是一种机器学习技术，其核心思想是将一个大型、复杂的模型（通常称为“教师”模型）的知识转移到一个小型、简单的模型（称为“学生”模型）中。这个过程不仅涉及模型输出的复制，更重要的是教学生模型模仿教师模型的内部处理方式和数据分布见解。‌12</p>
+      <content:encoded><![CDATA[<p>蒸馏原理<br>
+<mark>‌**[知识蒸馏]**‌</mark>是一种机器学习技术，其核心思想是将一个大型、复杂的模型（通常称为“教师”模型）的知识转移到一个小型、简单的模型（称为“学生”模型）中。这个过程不仅涉及模型输出的复制，更重要的是教学生模型模仿教师模型的内部处理方式和数据分布见解。‌12</p>
 <h3>知识蒸馏的基本原理</h3>
 <ol>
 <li><mark>‌<strong>教师模型训练</strong>‌</mark>：首先，教师模型在一个大型数据集上进行训练，以达到高精度。教师模型通常是一个大型、复杂的深度学习模型，如深度卷积神经网络（CNN）或变换器（Transformer），经过充分训练，具有较高的准确率和鲁棒性。</li>
