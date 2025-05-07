@@ -42,16 +42,16 @@ AI模型的鲁棒可以理解为模型对数据变化的容忍度。假设数据
 #### 1、Dropout
 
 解决的问题：co-adaptation（在神经网络中，隐藏层单元之间有很高的相关性）。Dropout可以看作一个噪声 [公式] 和全连接矩阵 [公式] 作乘积，随机导致一部分连接权重为0。Dropout能够有效缓解神经元之间的co-adaptation（之前一起发挥作用的神经元现在可能单独出现了）。训练时，每次dropout都会得到一个新的子网络。预测时，所有的神经元都会发生作用，可以看作多个子网络的平均。因此dropout类似于bagging和 [公式] 正则，不同之处在于dropout的多个子网络之间共享参数，同时神经元是被随机丢弃的。  
-![img_18.png](img_18.png)
+![img_14.png](img_14.png)
 
 #### 2、Batch/Layer Normalization
 
-Normalization将激活层的输入标准化，使得标准化后的输入能够落在激活函数的非饱和区。  
-![img_17.png](img_17.png)
+Normalization将激活层的输入标准化，使得标准化后的输入能够落在激活函数的非饱和区。
+![img_13.png](img_13.png)
 #### 3、Label Smoothing
 
 label smoothing就是把原来的one-hot表示，在每一维上都添加了一个随机噪音。这是一种简单粗暴，但又十分有效的方法，目前已经使用在很多的图像分类模型中了。
-![img_16.png](img_16.png)
+![img_16.jpeg](img_16.jpeg)
 **Label Smoothing 优势：**
 
 > 1、一定程度上，可以缓解模型过于武断的问题，也有一定的抗噪能力  
@@ -70,10 +70,10 @@ label smoothing就是把原来的one-hot表示，在每一维上都添加了一�
 
 mixup是一种非常规的数据增强方法，一个和数据无关的简单数据增强原则，其以线性插值的方式来构建新的训练样本和标签。最终对标签的处理如下公式所示，这很简单但对于增强策略来说又很不一般。
 
-![img_15.png](img_15.png)
+![img_15.jpeg](img_15.jpeg)
 ( x i , y i ) \left ( x_{i},y_{i} \right ) (xi​,yi​), ( x j , y j ) \left ( x_{j},y_{j} \right ) (xj​,yj​)两个数据对是原始数据集中的训练样本对（训练样本和其对应的标签）。其中 λ \lambda λ是一个服从B分布的参数, λ ∼ B e t a ( α , α ) \lambda\sim Beta\left ( \alpha ,\alpha \right ) λ∼Beta(α,α) 。Beta分布的概率密度函数如下图所示，其中 α ∈ [ 0 , + ∞ ] \alpha \in \left [ 0,+\infty \right ] α∈[0,+∞]
 
-![img_14.png](img_14.png)
+![img_14.jpeg](img_14.jpeg)
 因此 α \alpha α是一个超参数，随着 α \alpha α的增大，网络的训练误差就会增加，而其泛化能力会随之增强。而当 α → ∞ \alpha \rightarrow \infty α→∞时，模型就会退化成最原始的训练策略。参考：https://www.jianshu.com/p/d22fcd86f36d
 
 #### 5、半监督学习，利用伪标签增加模型的泛化性
@@ -81,4 +81,4 @@ mixup是一种非常规的数据增强方法，一个和数据无关的简单数
 #### 6、Focal Loss
 
 Focal loss 主要是为了解决目标检测中正负样本比例严重失衡的问题，并不是通常的正则化化方法。该损失函数降低了大量简单样本在训练中所占的权重，让模型更加关注困难、错分的样本。  
-![img_13.png](img_13.png)
+![img_13.jpeg](img_13.jpeg)
