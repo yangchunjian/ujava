@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2025-05-07T11:32:54.323Z</updated>
+  <updated>2025-05-08T09:28:10.289Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -15,6 +15,93 @@
   <category term="应用相关"/>
   <category term="公告"/>
   <category term="Java"/>
+  <entry>
+    <title type="text">Python数据类型操作</title>
+    <id>https://ujava.cn/python/dataopt.html</id>
+    <link href="https://ujava.cn/python/dataopt.html"/>
+    <updated>2025-05-08T09:25:10.000Z</updated>
+    <summary type="html"><![CDATA[<h2>一、常用内置类型（Built - in Types）</h2>
+<p>Python&nbsp;拥有多种内置[数据类型]，这些类型满足了各种编程需求，从简单的数据存储到复杂的数据结构表示。</p>
+<h4>1. 数值类型（Numeric Types）</h4>
+<p><strong>整数（int）</strong>：整数在 Python 中可以表示任意大小的整数值，不受特定字节数的限制。例如，<code>x = 10</code>就定义了一个简单的整数变量。整数可用于计数、索引等多种场景。</p>
+<p><strong>浮点数（float）</strong>：用于表示带有小数点的数字，采用&nbsp;IEEE&nbsp;754 双精度浮点数格式。如<code>y = 3.14</code>。浮点数在科学计算、金融计算等需要处理小数的场景中非常有用。</p>]]></summary>
+    <content type="html"><![CDATA[<h2>一、常用内置类型（Built - in Types）</h2>
+<p>Python&nbsp;拥有多种内置[数据类型]，这些类型满足了各种编程需求，从简单的数据存储到复杂的数据结构表示。</p>
+<h4>1. 数值类型（Numeric Types）</h4>
+<p><strong>整数（int）</strong>：整数在 Python 中可以表示任意大小的整数值，不受特定字节数的限制。例如，<code>x = 10</code>就定义了一个简单的整数变量。整数可用于计数、索引等多种场景。</p>
+<p><strong>浮点数（float）</strong>：用于表示带有小数点的数字，采用&nbsp;IEEE&nbsp;754 双精度浮点数格式。如<code>y = 3.14</code>。浮点数在科学计算、金融计算等需要处理小数的场景中非常有用。</p>
+<p><strong>复数（complex）</strong>：以<code>a + bj</code>的形式表示，其中<code>a</code>为实部，<code>b</code>为虚部，<code>j</code>表示虚数单位。例如，<code>z = 2 + 3j</code>。复数在数学和工程领域的特定计算中发挥作用。</p>
+<h4>2. 序列类型（Sequence Types）</h4>
+<p><strong>列表（list）</strong>：列表是一种可变的有序序列，可以包含不同类型的元素。例如，<code>my_list = [1, 'hello', True]</code>。通过索引可以访问列表中的元素，并且可以对列表进行修改、添加或删除元素等操作。</p>
+<p><strong>元组（tuple）</strong>：元组是不可变的有序序列，与列表类似，但一旦创建就不能修改。如<code>my_tuple = (1, 'world', False)</code>。元组常用于表示固定结构的数据，如函数返回多个值时。</p>
+<p><strong>字符串（string）</strong>：字符串是由字符组成的不可变序列。在 Python 中，字符串可以使用单引号、双引号或三引号（用于多行字符串）来表示。例如，<code>s = "Python is great"</code>。字符串支持多种操作，如切片、连接、查找等。</p>
+<h4>3. 映射类型（Mapping Types）</h4>
+<p><strong>字典（dictionary）</strong>：字典是一种无序的键 - 值对[数据结构]，其中键必须是唯一的。例如，<code>my_dict = {'name': 'John', 'age': 25}</code>。通过键可以快速查找对应的值，常用于存储和查询相关联的数据。</p>
+<h4>4. 集合类型（Set Types）</h4>
+<p><strong>集合（set）</strong>：集合是无序的、不包含重复元素的数据结构。例如，<code>my_set = {1, 2, 3}</code>。集合支持交集、并集、差集等操作，可用于数据去重、元素关系判断等场景。</p>
+<h4>5. 布尔类型（Boolean Type）</h4>
+<p>布尔类型只有两个值：<code>True</code>和<code>False</code>。它在条件判断、逻辑运算中起着关键作用。例如，<code>x = 5; y = 10; result = x &lt; y</code>，这里<code>result</code>的值为<code>True</code>。</p>
+<h3>二、常用内置常数（Built - in Constants）</h3>
+<p>Python 提供了一些内置常数，这些常数在编程过程中具有特殊的意义和用途。</p>
+<p><strong><code>None</code></strong>：表示空值或者缺失值。在函数没有明确返回值时，默认返回<code>None</code>。例如，一个函数只是执行一些操作而不需要返回特定结果时，可以使用<code>None</code>。</p>
+<p><strong><code>True</code>和<code>False</code></strong>：这是布尔类型的两个值，在逻辑判断中使用。例如，在<code>if</code>语句中判断条件的真假。</p>
+<p><strong><code>Ellipsis</code>（<code>...</code>）</strong>：这个常数在特定的语法结构中有特殊用途，比如在定义多维数组时可以作为占位符。</p>
+<h3>三、常用内置运算符（Built - in Operators）</h3>
+<h4>1. 算术运算符</h4>
+<p><strong>加法（<code>+</code>）</strong>：用于数值相加，也可用于字符串连接和列表、元组等序列的连接。例如，<code>2 + 3</code>得到<code>5</code>，<code>"hello" + "world"</code>得到<code>"helloworld"</code>。</p>
+<p><strong>减法（<code>-</code>）</strong>：用于数值相减。如<code>5 - 2</code>得到<code>3</code>。</p>
+<p><strong>乘法（<code>*</code>）</strong>：对于数值是乘法运算，对于字符串和序列可以实现重复操作。例如，<code>3 * 4</code>得到<code>12</code>，<code>"a" * 3</code>得到<code>"aaa"</code>。</p>
+<p><strong>除法（<code>/</code>）</strong>：执行浮点数除法，结果总是浮点数。例如，<code>5 / 2</code>得到<code>2.5</code>。</p>
+<h4>2. 比较运算符</h4>
+<p><strong>等于（<code>==</code>）</strong>：判断两个值是否相等。例如，<code>2 == 2</code>返回<code>True</code>，<code>"hello" == "world"</code>返回<code>False</code>。</p>
+<p><strong>不等于（<code>!=</code>）</strong>：判断两个值是否不相等。</p>
+<p><strong>大于（<code>&gt;</code>）、小于（<code>&lt;</code>）、大于等于（<code>&gt;=</code>）、小于等于（<code>&lt;=</code>）</strong>：用于比较数值的大小关系，也可以用于比较字符串按照字典序的大小关系。</p>
+<h4>3. 逻辑运算符</h4>
+<p><strong>与（<code>and</code>）</strong>：当两个操作数都为<code>True</code>时，结果为<code>True</code>；否则为<code>False</code>。例如，<code>True and False</code>得到<code>False</code>。</p>
+<p><strong>或（<code>or</code>）</strong>：只要有一个操作数为<code>True</code>，结果就为<code>True</code>。例如，<code>True or False</code>得到<code>True</code>。</p>
+<p><strong>非（<code>not</code>）</strong>：对操作数取反，<code>not True</code>得到<code>False</code>，<code>not False</code>得到<code>True</code>。</p>
+<h3>四、整除（Integer Division (<code>//</code>)）</h3>
+<p>整除运算符<code>//</code>用于计算两个数相除并向下取整得到整数结果。例如，<code>7 // 3</code>得到<code>2</code>，<code>-7 // 3</code>得到<code>-3</code>。整除在处理需要得到整数部分结果的场景中非常有用，比如计算将一定数量的物品平均分配到若干个容器中时，每个容器能得到的物品数量。与普通除法（<code>/</code>）不同，<code>//</code>操作更关注整数部分的结果，并且在处理负数时遵循向下取整的规则。</p>
+<h3>五、模运算或余数运算符（<code>%</code>）</h3>
+<p>模运算（<code>%</code>）用于计算两个数相除的余数。例如，<code>7 % 3</code>得到<code>1</code>，<code>10 % 2</code>得到<code>0</code>。在很多实际应用中都非常有用，比如判断一个数是否能被另一个数整除（余数为 0 时表示能整除），或者在循环队列、哈希表等数据结构中确定索引位置等场景。例如，在一个长度为<code>n</code>的循环队列中，如果当前位置为<code>pos</code>，要向前移动<code>m</code>个位置，可以通过<code>(pos + m) % n</code>来计算新的位置。</p>
+<h3>六、类型影响语义（Types Affect Semantics）</h3>
+<p>在 Python 中，数据类型对操作的语义有着重要的影响。</p>
+<p><strong>数值类型</strong>：不同的数值类型之间进行操作时，可能会发生类型转换。例如，整数和浮点数进行算术运算时，整数会自动转换为浮点数，然后进行计算。这确保了计算结果的准确性和一致性。</p>
+<p><strong>序列类型</strong>：对于列表、元组等序列类型，虽然它们有一些相似的操作（如索引、切片），但由于列表是可变的而元组是不可变的，在对它们进行修改操作时语义完全不同。对列表可以使用诸如<code>append</code>、<code>pop</code>等方法来改变列表的内容，但这些操作在元组上是不允许的。</p>
+<p><strong>布尔类型与其他类型</strong>：布尔类型在逻辑运算中的语义是明确的，但当与其他类型进行操作时，也会遵循一定的规则。例如，在条件判断中，很多数据类型都可以被转换为布尔值，非零数值、非空字符串、非空列表等都被视为<code>True</code>，而<code>0</code>、<code>""</code>、<code>[]</code>等被视为<code>False</code>。</p>
+<h3>七、运算符优先级（Operator&nbsp;Order）</h3>
+<p>Python 中的运算符有明确的优先级顺序。当一个表达式中包含多个不同类型的运算符时，按照优先级顺序进行计算。</p>
+<p><strong>括号优先级最高</strong>：可以使用括号来改变运算顺序，括号内的表达式先进行计算。例如，<code>(2 + 3) * 4</code>，先计算<code>2 + 3</code>得到<code>5</code>，然后再乘以<code>4</code>得到<code>20</code>。</p>
+<p><strong>算术运算符优先级</strong>：先乘除后加减。例如，<code>2 + 3 * 4</code>，先计算<code>3 * 4 = 12</code>，然后再加上<code>2</code>得到<code>14</code>。其中，幂运算（<code>**</code>）优先级高于乘除运算。</p>
+<p><strong>比较运算符优先级低于算术运算符</strong>：例如，<code>2 + 3 &gt; 4</code>，先计算<code>2 + 3 = 5</code>，然后再比较<code>5 &gt; 4</code>得到<code>True</code>。</p>
+<p><strong>逻辑运算符优先级</strong>：<code>not</code>的优先级最高，然后是<code>and</code>，最后是<code>or</code>。例如，<code>True or False and not True</code>，先计算<code>not True</code>得到<code>False</code>，然后<code>False and False</code>得到<code>False</code>，最后<code>True or False</code>得到<code>True</code>。</p>
+<h3>八、短路求值（Short - Circuit Evaluation）</h3>
+<p>短路求值是逻辑运算符<code>and</code>和<code>or</code>的一个重要特性。</p>
+<p><strong><code>and</code>的短路求值</strong>：当使用<code>and</code>连接两个表达式时，如果第一个表达式为<code>False</code>，则不会再计算第二个表达式，因为整个表达式必然为<code>False</code>。例如，<code>False and some_function()</code>，这里<code>some_function()</code>不会被调用。</p>
+<p><strong><code>or</code>的短路求值</strong>：当使用<code>or</code>连接两个表达式时，如果第一个表达式为<code>True</code>，则不会再计算第二个表达式，因为整个表达式已经为<code>True</code>。例如，<code>True or some_function()</code>，<code>some_function()</code>不会被调用。这种特性在编写条件判断和优化代码性能时非常有用，可以避免不必要的计算。</p>
+<p>Python 的数据类型和操作是其编程的基础，深入理解这些概念对于编写高效、准确的 Python 程序至关重要。</p>
+]]></content>
+    <category term="设计模型"/>
+    <published>2025-05-08T09:25:10.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Python数据类型</title>
+    <id>https://ujava.cn/python/datatype.html</id>
+    <link href="https://ujava.cn/python/datatype.html"/>
+    <updated>2025-05-08T09:25:10.000Z</updated>
+    <summary type="html"><![CDATA[<figure><figcaption>img_12.png</figcaption></figure>
+<figure><figcaption>img_13.png</figcaption></figure>
+<figure><figcaption>img_14.png</figcaption></figure>
+<figure><figcaption>img_15.png</figcaption></figure>
+]]></summary>
+    <content type="html"><![CDATA[<figure><figcaption>img_12.png</figcaption></figure>
+<figure><figcaption>img_13.png</figcaption></figure>
+<figure><figcaption>img_14.png</figcaption></figure>
+<figure><figcaption>img_15.png</figcaption></figure>
+]]></content>
+    <category term="设计模型"/>
+    <published>2025-05-08T09:25:10.000Z</published>
+  </entry>
   <entry>
     <title type="text">Python基础—集合</title>
     <id>https://ujava.cn/python/set.html</id>
@@ -10114,130 +10201,5 @@ xxxxProperties绑定了配置文件的哪些。<br>
 <p>通过深入实施细化的行动步骤和规避策略，软件行业的项目团队可以更加有效地管理项目、提高质量、降低风险，并提升项目评级。项目管理不仅仅是一门科学，更是一门艺术，需要团队在实践中不断探索和改进。希望本文提供的指南能对软件行业的项目团队在项目管理方面提供一些有益的启示和帮助。</p>
 ]]></content>
     <published>2024-08-29T08:28:27.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">项目管理经验6</title>
-    <id>https://ujava.cn/manage/project6.html</id>
-    <link href="https://ujava.cn/manage/project6.html"/>
-    <updated>2024-09-07T16:20:07.000Z</updated>
-    <summary type="html"><![CDATA[<h2><strong>01 认识项目经理</strong></h2>
-<p>为了成功管理一个项目，项目经理通常承担着管理者和领导者的双重角色，但也有着说不完的辛酸和无奈。</p>
-<p>1、项目经理的词汇中最有价值也是最少用到的是“不”。</p>
-<p>2、他有业绩；如果你恨一个人，你就让他去当项目经理，因为十有八九他会被失败的项目毁了。</p>
-<p>3、卓有成效的管理者善于用人之长。</p>
-<p>4、 “专才”对越来越少的事物了解得越来越多，直到最后他对不存在的事物无所不知；然而，“通才”对越来越多的事物了解得越来越少，直到最后他对一切事物一无所知。</p>
-<h2><strong>02 项目启动</strong></h2>]]></summary>
-    <content type="html"><![CDATA[<h2><strong>01 认识项目经理</strong></h2>
-<p>为了成功管理一个项目，项目经理通常承担着管理者和领导者的双重角色，但也有着说不完的辛酸和无奈。</p>
-<p>1、项目经理的词汇中最有价值也是最少用到的是“不”。</p>
-<p>2、他有业绩；如果你恨一个人，你就让他去当项目经理，因为十有八九他会被失败的项目毁了。</p>
-<p>3、卓有成效的管理者善于用人之长。</p>
-<p>4、 “专才”对越来越少的事物了解得越来越多，直到最后他对不存在的事物无所不知；然而，“通才”对越来越多的事物了解得越来越少，直到最后他对一切事物一无所知。</p>
-<h2><strong>02 项目启动</strong></h2>
-<p>1、项目不是在结束时失败，而是在开始时失败。</p>
-<p>2、花大量的时间来确定需求，需求将会消失。</p>
-<p>3、“我说不清我的需求是什么，但我能说清，你给我的不是我想要的”</p>
-<p>——这就是客户的需求</p>
-<p>4、大变更用迭代型和增量型，你和我说要造飞船，后面才知道要造的是宇宙飞船</p>
-<p>密集的小变更用敏捷型，比如造一个敞篷车改为造一个SUV。</p>
-<p>5、你可以冻结用户的要求，但你不能阻止他的期望。</p>
-<h2><strong>03 项目计划/项目目标</strong></h2>
-<p>1、领导不应该直接管人管事儿，而应该管计划；项目不应该被领导惯着，而应该被计划惯着；员工不应该按领导的指示做事，而应该按计划的安排做事。</p>
-<p>2、如果你，不知道要到哪里去，即使给你张地图，也没有任何帮助</p>
-<p>——项目的目标管理</p>
-<p>3、计划细节永远不要超出你的控制范围。</p>
-<p>4、计划的首要原则就是让具体做事的人参与到计划的制定中来。</p>
-<p>5、Plan is nothing, planning is everything.</p>
-<p>——拿破仑</p>
-<p>6、不能纪录下来的诺言，等于什么也没说，签字就意味着牵制。</p>
-<h2><strong>04 项目执行</strong></h2>
-<p>1、我们应该将行动纳入决策当中，否则就是纸上谈兵。</p>
-<p>——管理学大师彼得·德鲁克</p>
-<p>2、我们不能用产生问题的思维方式来解决问题。</p>
-<p>——爱因斯坦</p>
-<p>3、慢慢计划，快速执行。</p>
-<p>4、问题再大、再复杂，也不会让你跑都跑不掉。</p>
-<p>——Charles Schultz</p>
-<p>5、当事情进展顺利的时候，某些事情将会出问题。</p>
-<p>6、最危险的常用语就是“我们一直是专业做的。”</p>
-<h2><strong>05 项目控制/监督</strong></h2>
-<p>1、眼睛盯住细节的，是工程师；眼睛盯住结果的，是老板；眼睛盯住过程的，是项目经理</p>
-<p>2、无法评估，就无法管理。</p>
-<p>3、随着时间增长，改变行动方向所需的努力成几何倍增长。</p>
-<p>4、项目团队的成员憎恶每周报告项目进度，因为它生动地表明项目进展甚微。</p>
-<p>5、每个大型项目内总有一个想要脱离出去的小项目。</p>
-<p>6、正是那些不可测量的事物，才使可测量得以诞生。</p>
-<h2><strong>06 项目风险管理</strong></h2>
-<p>1、如果你担心某种情况发生，那么它就更有可能发生。</p>
-<p>2、两个可能发生事件，只有那个不期望发生的事件会发生。</p>
-<p>3、不仅每一个项目是唯一的，它的相关风险也是唯一的。</p>
-<p>4、当你觉得一切正常时，某个差错已发生。</p>
-<h2><strong>07 相关方沟通管理</strong></h2>
-<p>1、项目运作成功的秘密在于，要让所有的决策者，对全部事实，都有相同的理解。</p>
-<p>2、说服别人最好的方法是使用我们的耳朵。</p>
-<p>3、解决项目冲突的办法总是存在的，问题是我们不一定能找到它。</p>
-<p>4、人们只会告诉你问的东西，而不会告诉你他想的东西。</p>
-<p>5、如果你不能说服他们，那就把他们弄糊涂。</p>
-]]></content>
-    <published>2024-08-25T01:33:22.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">项目管理经验3</title>
-    <id>https://ujava.cn/manage/project3.html</id>
-    <link href="https://ujava.cn/manage/project3.html"/>
-    <updated>2024-09-07T16:20:07.000Z</updated>
-    <summary type="html"><![CDATA[<h2>前言</h2>
-<p>优秀的软件质量意味着少量的错误和 Bug，减少了重复开发和调试的时间，提高开发效率，有利于按时交付项目。</p>
-<p>而且，软件项目质量低下可能导致频繁的修复，这将会使维护成本增加，所以，高质量的软件在长期运行中可以降低维护成本，减少资源浪费。</p>
-<p>对于用户而言，高质量的软件能够很好地满足用户的需求，提供良好的用户体验，从而增强用户对产品的信任和满意度。</p>
-<p>软件项目质量对于软件产品的重要性不言而喻，</p>
-<p>作为一名软件项目经理，如何把控好项目质量呢？</p>
-<h2>1. 分解任务时，任务要足够小而且可测量</h2>
-<p>两个关键词: “足够小” 和 “可测量”。</p>]]></summary>
-    <content type="html"><![CDATA[<h2>前言</h2>
-<p>优秀的软件质量意味着少量的错误和 Bug，减少了重复开发和调试的时间，提高开发效率，有利于按时交付项目。</p>
-<p>而且，软件项目质量低下可能导致频繁的修复，这将会使维护成本增加，所以，高质量的软件在长期运行中可以降低维护成本，减少资源浪费。</p>
-<p>对于用户而言，高质量的软件能够很好地满足用户的需求，提供良好的用户体验，从而增强用户对产品的信任和满意度。</p>
-<p>软件项目质量对于软件产品的重要性不言而喻，</p>
-<p>作为一名软件项目经理，如何把控好项目质量呢？</p>
-<h2>1. 分解任务时，任务要足够小而且可测量</h2>
-<p>两个关键词: “足够小” 和 “可测量”。</p>
-<p>这两个关键词非常重要，</p>
-<p>“足够小” 保证任务可以管控，</p>
-<p>“可测量” 保证任务可以质控，</p>
-<p>这两点确保任务完成的可靠性。</p>
-<h2>2. 建立 Code Review 制度</h2>
-<p>重视和建立代码审查制度，有两点好处：</p>
-<ol>
-<li>
-<p>让程序员有意识地提高和改进代码的质量，毕竟程序员们的自尊心都是很强的，谁也不想被别人说自己的代码不行；</p>
-</li>
-<li>
-<p>通过让有经验的技术骨干审查初级程序员的代码，可以有效地发现问题，和帮助初级程序员成长。</p>
-</li>
-</ol>
-<h2>3. 将程序员和测试员分开</h2>
-<p>多年的经验告诉我，让程序员做测试的工作，并不是一个好主意。</p>
-<p>有条件的情况，尽可能地保持开发和测试团队的独立性，让测试员从独立的角度审视软件质量，减少开发人员的偏见，可以有效地提升发现问题的效率。</p>
-<h2>4. 丰富测试知识，尤其是边界测试</h2>
-<p>测试团队需要丰富自身的测试知识，尤其是要了解和重视边界测试，确保软件在各种极端情况下也能正常运行。</p>
-<h2>5. 做好单元测试和集成测试</h2>
-<p>首先要让程序员做好单元测试，单元测试要确保覆盖到所有路径，有条件可以尝试测试驱动进行开发，这可以有效地减少程序的 Bug。</p>
-<p>其次在程序员实现和交付功能后，要组织测试团队有计划地做好集成测试，确保各个模块和组件之间的正确交互，提前发现和解决潜在的问题，保障整体功能的稳定性。</p>
-<h2>6. 尽可能让开发环境跟生产环境一致</h2>
-<p>在我多年的开发和项目管理经验中，环境和数据问题至少占软件产品质量问题的一半。</p>
-<p>所以，在软件开发的过程中，确保开发、测试和生产环境的一致性，可以有效地避免因环境差异引发的环境和数据问题，保障软件在生产环境下的稳定性和兼容性。</p>
-<h2>7. 设定明确的里程碑</h2>
-<p>设定明确的里程碑和项目进度规划，可以有效地监控项目进展情况，出现问题时能够及时调整计划，确保项目按时交付且质量可控。</p>
-<h2>8. 建立程序质量奖罚制度</h2>
-<p>对于程序质量好的程序员要给予一定的奖励，而对于经常被测试人员 ReOpen 的程序员要给予一定的惩罚。</p>
-<p>公开公正透明的程序质量奖罚制度，对于提高软件质量的作用是非常巨大的。</p>
-<h2>9. 周末或节假日尽可能不上线新功能</h2>
-<p>这主要是一个心理知识的应用，对于用户而言，使用过程中出现问题，有没有人进行及时处理，用户体验的差别是很大的，如果没有人进行及时处理，就会扩大用户对软件产品质量的看法。所以，避免在周末或节假日上线新功能，以免因人手不足或其他因素导致问题难以及时处理，影响用户对软件质量的观感。</p>
-<h2>写在末尾</h2>
-<p>高质量的软件产品可以提升用户体验、增强竞争力，维护企业形象，以及降低运营风险。</p>
-<p>它直接关系到软件产品的成功与否、用户满意度、企业的声誉以及整体业务运营的效率和稳定性。</p>
-]]></content>
-    <published>2024-08-22T06:10:00.000Z</published>
   </entry>
 </feed>
