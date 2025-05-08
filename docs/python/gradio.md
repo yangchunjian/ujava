@@ -2,9 +2,9 @@
 title: Gradio库
 icon: laptop-code
 category:
-- 设计模型
+   - 设计Python
 tag:
-- 模型
+   - Python
 ---
 
 ## Python的一个非常cool的库Gradio

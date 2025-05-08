@@ -1,9 +1,10 @@
 ---
 title: Python常用库
-category: Python
 icon: laptop-code
-tag:
+category:
   - 设计Python
+tag:
+  - Python
 ---
 
 Python作为一门功能强大的编程语言，拥有丰富的第三方库，能够大大提升开发效率。在本文中，我们将介绍30个实用的[Python库]，并提供相应的实例代码，帮助你更好地掌握它们的用法。

@@ -2,9 +2,9 @@
 title: Python数据类型操作
 icon: laptop-code
 category:
-- 设计模型
+  - 设计Python
 tag:
-- 模型
+  - Python
 ---
 
 ## 一、常用内置类型（Built - in Types）

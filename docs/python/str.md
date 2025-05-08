@@ -2,9 +2,9 @@
 title: Python字符串拼接
 icon: laptop-code
 category:
-- 设计模型
+  - 设计Python
 tag:
-- 模型
+  - Python
 ---
 
 ## 一、使用加号（+）[运算符]

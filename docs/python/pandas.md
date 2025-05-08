@@ -2,9 +2,9 @@
 title: Python Pandas库
 icon: laptop-code
 category:
-- 设计模型
+   - 设计Python
 tag:
-- 模型
+   - Python
 ---
 ## 对象的创建
 

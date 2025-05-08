@@ -2,9 +2,9 @@
 title: Python字符串操作：拼接、分割、查找、替换
 icon: laptop-code
 category:
-- 设计模型
+  - 设计Python
 tag:
-- 模型
+  - Python
 ---
 
 ### 一、字符串拼接

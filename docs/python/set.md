@@ -2,9 +2,9 @@
 title: Python基础—集合
 icon: laptop-code
 category:
-- 设计模型
+  - 设计Python
 tag:
-- 模型
+  - Python
 ---
 
 Python中的集合是一种无序、可变、元素唯一的数据结构。它常用于去重、成员检测以及数学运算（如并集、交集、差集等）。集合与列表和元组的主要区别是它不允许重复元素，且没有顺序。

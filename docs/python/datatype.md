@@ -2,9 +2,9 @@
 title: Python数据类型
 icon: laptop-code
 category:
-- 设计模型
+  - 设计Python
 tag:
-- 模型
+  - Python
 ---
 
 ![img_12.png](img_12.png)

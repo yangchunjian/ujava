@@ -2,9 +2,9 @@
 title: 默认值
 icon: laptop-code
 category:
-- 设计模型
+  - 设计Python
 tag:
-- 模型
+  - Python
 ---
 
 

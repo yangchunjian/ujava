@@ -2,9 +2,9 @@
 title: Python JSON库
 icon: laptop-code
 category:
-- 设计模型
+   - 设计Python
 tag:
-- 模型
+   - Python
 ---
 
 ### 一、json库概述
