@@ -44,7 +44,7 @@ tag:
 - ###### **获得总和：sum()**
 
     ```
-    sun(list)
+    sum(list)
     ```
 
 
