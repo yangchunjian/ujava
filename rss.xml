@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Wed, 21 May 2025 11:42:21 GMT</pubDate>
-    <lastBuildDate>Wed, 21 May 2025 11:42:21 GMT</lastBuildDate>
+    <pubDate>Thu, 22 May 2025 10:50:15 GMT</pubDate>
+    <lastBuildDate>Thu, 22 May 2025 10:50:15 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计Python</category>
@@ -17,6 +17,36 @@
     <category>设计高频</category>
     <category>应用相关</category>
     <category>公告</category>
+    <item>
+      <title>Python文件操作</title>
+      <link>https://ujava.cn/python/file.html</link>
+      <guid>https://ujava.cn/python/file.html</guid>
+      <source url="https://ujava.cn/rss.xml">Python文件操作</source>
+      <description>1 文件操作 1.1 文件打开与关闭 1.1.1 打开文件-open 在上述示例中： &amp;apos;example.txt&amp;apos; 是文件的路径和名称，你可以根据实际情况修改为你想要打开的文件。 &amp;apos;r&amp;apos; 表示只读模式。如果你想要写入文件，可以使用 &amp;apos;w&amp;apos; 模式，如果想要追加内容，可以使用 &amp;apos;a&amp;apos; 模式等。 with open(...) as file : 是使用上下文管...</description>
+      <category>设计Python</category>
+      <pubDate>Thu, 22 May 2025 10:46:34 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>1 文件操作</h2>
+<h3>1.1 文件打开与关闭</h3>
+<h4>1.1.1 打开文件-open</h4>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 打开文件（默认为只读模式）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">file_path </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 'example.txt'</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">with</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> open</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(file_path, </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'r'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">as</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">  # 执行文件操作，例如读取文件内容</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  file_content </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">read</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">  print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(file_content)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 文件在with块结束后会自动关闭，无需显式关闭文件</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在上述示例中：</p>
+<ul>
+<li>'example.txt' 是文件的路径和名称，你可以根据实际情况修改为你想要打开的文件。</li>
+<li>'r' 表示只读模式。如果你想要写入文件，可以使用 'w' 模式，如果想要追加内容，可以使用 'a' 模式等。</li>
+<li>with open(...) as file : 是使用上下文管理器的方式，确保文件在使用后被正确关闭，即使在处理文件时发生异常也能保证关闭。</li>
+</ul>
+<h4>1.1.2 访问模式及说明</h4>
+<p>|              |                                                                                   |<br>
+|</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Python类型转换</title>
       <link>https://ujava.cn/python/changetype.html</link>
@@ -9353,20 +9383,6 @@ xxxxProperties绑定了配置文件的哪些。<br>
     </li>
   </ul>
 </div>]]></content:encoded>
-    </item>
-    <item>
-      <title>更新记录</title>
-      <link>https://ujava.cn/project/changelog.html</link>
-      <guid>https://ujava.cn/project/changelog.html</guid>
-      <source url="https://ujava.cn/rss.xml">更新记录</source>
-      <description>友情提示 UJava(架构设计)持续更新中~</description>
-      <pubDate>Sat, 07 Sep 2024 16:20:07 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">友情提示</p>
-<p>UJava(架构设计)持续更新中~</p>
-</div>
-
-]]></content:encoded>
     </item>
   </channel>
 </rss>

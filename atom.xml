@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2025-05-21T11:42:21.570Z</updated>
+  <updated>2025-05-22T10:50:15.738Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -15,6 +15,47 @@
   <category term="设计高频"/>
   <category term="应用相关"/>
   <category term="公告"/>
+  <entry>
+    <title type="text">Python文件操作</title>
+    <id>https://ujava.cn/python/file.html</id>
+    <link href="https://ujava.cn/python/file.html"/>
+    <updated>2025-05-22T10:46:34.000Z</updated>
+    <summary type="html"><![CDATA[<h2>1 文件操作</h2>
+<h3>1.1 文件打开与关闭</h3>
+<h4>1.1.1 打开文件-open</h4>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 打开文件（默认为只读模式）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">file_path </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 'example.txt'</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">with</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> open</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(file_path, </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'r'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">as</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">  # 执行文件操作，例如读取文件内容</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  file_content </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">read</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">  print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(file_content)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 文件在with块结束后会自动关闭，无需显式关闭文件</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2>1 文件操作</h2>
+<h3>1.1 文件打开与关闭</h3>
+<h4>1.1.1 打开文件-open</h4>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 打开文件（默认为只读模式）</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">file_path </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 'example.txt'</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">with</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> open</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(file_path, </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'r'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">as</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic">  # 执行文件操作，例如读取文件内容</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  file_content </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">read</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">  print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(file_content)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 文件在with块结束后会自动关闭，无需显式关闭文件</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在上述示例中：</p>
+<ul>
+<li>'example.txt' 是文件的路径和名称，你可以根据实际情况修改为你想要打开的文件。</li>
+<li>'r' 表示只读模式。如果你想要写入文件，可以使用 'w' 模式，如果想要追加内容，可以使用 'a' 模式等。</li>
+<li>with open(...) as file : 是使用上下文管理器的方式，确保文件在使用后被正确关闭，即使在处理文件时发生异常也能保证关闭。</li>
+</ul>
+<h4>1.1.2 访问模式及说明</h4>
+<p>|              |                                                                                   |<br>
+|</p>
+]]></content>
+    <category term="设计Python"/>
+    <published>2025-05-22T10:46:34.000Z</published>
+  </entry>
   <entry>
     <title type="text">Python类型转换</title>
     <id>https://ujava.cn/python/changetype.html</id>
@@ -10708,25 +10749,6 @@ xxxxProperties绑定了配置文件的哪些。<br>
     </li>
   </ul>
 </div>]]></content>
-    <published>2024-09-07T16:20:07.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">更新记录</title>
-    <id>https://ujava.cn/project/changelog.html</id>
-    <link href="https://ujava.cn/project/changelog.html"/>
-    <updated>2024-09-08T10:17:36.000Z</updated>
-    <summary type="html"><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">友情提示</p>
-<p>UJava(架构设计)持续更新中~</p>
-</div>
-
-]]></summary>
-    <content type="html"><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">友情提示</p>
-<p>UJava(架构设计)持续更新中~</p>
-</div>
-
-]]></content>
     <published>2024-09-07T16:20:07.000Z</published>
   </entry>
 </feed>
