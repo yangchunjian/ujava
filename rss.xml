@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Thu, 29 May 2025 11:55:54 GMT</pubDate>
-    <lastBuildDate>Thu, 29 May 2025 11:55:54 GMT</lastBuildDate>
+    <pubDate>Wed, 25 Jun 2025 11:02:11 GMT</pubDate>
+    <lastBuildDate>Wed, 25 Jun 2025 11:02:11 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计Python</category>
@@ -17,6 +17,155 @@
     <category>设计高频</category>
     <category>应用相关</category>
     <category>公告</category>
+    <item>
+      <title>Python模型蒸馏</title>
+      <link>https://ujava.cn/python/distill.html</link>
+      <guid>https://ujava.cn/python/distill.html</guid>
+      <source url="https://ujava.cn/rss.xml">Python模型蒸馏</source>
+      <description>蒸馏（Distillation）是一种在机器学习和深度学习中广泛应用的技术，特别是在模型压缩和知识迁移方面。蒸馏的目的是创建一个较小的、计算效率更高的模型，同时尽可能保持原始大模型的性能。这种方法通常用于将一个复杂的模型（如一个大模型或预训练模型）的知识转移到一个小模型上，而小模型通常更容易部署和运行在资源受限的环境中。 蒸馏的基本原理 蒸馏的基本思想...</description>
+      <category>设计Python</category>
+      <pubDate>Wed, 25 Jun 2025 10:58:22 GMT</pubDate>
+      <content:encoded><![CDATA[<p>蒸馏（Distillation）是一种在机器学习和深度学习中广泛应用的技术，特别是在模型压缩和知识迁移方面。蒸馏的目的是创建一个较小的、计算效率更高的模型，同时尽可能保持原始大模型的性能。这种方法通常用于将一个复杂的模型（如一个大模型或预训练模型）的知识转移到一个小模型上，而小模型通常更容易部署和运行在资源受限的环境中。</p>
+<p>蒸馏的基本原理</p>
+<p>蒸馏的基本思想是通过最小化一个教师模型（通常是原始大模型）和学生模型（较小或较简单模型）之间的差异来训练学生模型。这种差异通常是通过某种形式的损失函数来衡量的，例如最常见的有温度缩放（Temperature Scaling）方法。</p>
+<p>温度缩放<br>
+温度缩放是蒸馏中最常用的方法之一。在这种方法中，教师模型的输出通过一个温度参数 $T$ 进行缩放，然后使用softmax函数的输出作为目标分布。学生模型的输出也使用相同的温度进行缩放，然后通过交叉熵损失函数与教师模型的输出进行比较。</p>
+<p>数学表达式如下：</p>
+<p>$$ P_{teacher}(y|x) = \frac{e^{logits_y / T}}{\sum_i e^{logits_i / T}} $$</p>
+<p>其中 $logits$ 是教师模型的原始输出（通常是未经softmax处理的），$T$ 是温度参数，$y$ 是真实标签。</p>
+<p>实现蒸馏的步骤<br>
+选择教师模型和学生模型：教师模型通常是预先训练好的复杂模型，而学生模型则是需要训练的较小模型。</p>
+<p>训练教师模型：首先确保教师模型已经充分训练并达到预期的性能。</p>
+<p>定义损失函数：使用交叉熵损失函数，并结合温度缩放策略。</p>
+<p>训练学生模型：使用教师模型的输出作为目标，通过最小化损失函数来训练学生模型。</p>
+<p>示例代码（使用PyTorch）<br>
+以下是一个简单的示例，展示如何使用PyTorch进行蒸馏：</p>
+<p>import torch<br>
+import torch.nn as nn<br>
+import torch.nn.functional as F</p>
+<h1>假设 teacher_model 和 student_model 已经定义并初始化</h1>
+<p>teacher_model = ...  # 已经训练好的大模型<br>
+student_model = ...  # 小模型，结构简单，参数少</p>
+<h1>损失函数定义，使用交叉熵损失和温度缩放</h1>
+<p>def distillation_loss(outputs, labels, T):<br>
+outputs = F.log_softmax(outputs/T, dim=1)<br>
+labels = F.softmax(labels/T, dim=1)<br>
+return F.kl_div(outputs, labels, reduction='batchmean') * (T * T)</p>
+<h1>假设 data_loader 是已经定义好的数据加载器</h1>
+<p>for data, target in data_loader:<br>
+teacher_output = teacher_model(data)<br>
+student_output = student_model(data)<br>
+loss = distillation_loss(student_output, teacher_output, T=2.0)  # T=2.0 是温度参数的一个例子<br>
+loss.backward()<br>
+optimizer.step()  # 确保有一个优化器在运行中</p>
+<p>注意事项</p>
+<p>选择合适的温度参数 $T$ 对蒸馏的效果有显著影响。通常需要一些实验来确定最佳的温度值。</p>
+<p>在实际应用中，可能还需要考虑其他因素，如数据增强、正则化等，以进一步提高蒸馏的效果。</p>
+<p>确保教师模型和学生模型的输入输出维度匹配。</p>
+<p>通过以上步骤和示例代码，你可以开始在自己的项目中应用蒸馏技术来优化和简化深度学习模型。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Python怎么开发大模型程序</title>
+      <link>https://ujava.cn/model/model.html</link>
+      <guid>https://ujava.cn/model/model.html</guid>
+      <source url="https://ujava.cn/rss.xml">Python怎么开发大模型程序</source>
+      <description>在Python中开发一个大模型程序通常涉及以下几个步骤： 1. 选择合适的库 对于机器学习或深度学习项目，常用的库有： TensorFlow 和 Keras：由Google开发，非常适合构建深度学习模型。 PyTorch：由Facebook开发，提供了灵活的张量操作和自动求导功能。 Scikit-learn：适合传统的机器学习任务。 2. 数据准备 数...</description>
+      <category>设计模型</category>
+      <pubDate>Tue, 10 Jun 2025 07:27:24 GMT</pubDate>
+      <content:encoded><![CDATA[<p>在Python中开发一个大模型程序通常涉及以下几个步骤：</p>
+<h3>1. 选择合适的库</h3>
+<p>对于机器学习或深度学习项目，常用的库有：</p>
+<ul>
+<li>
+<p><strong>TensorFlow</strong>&nbsp;和&nbsp;<strong>Keras</strong>：由Google开发，非常适合构建深度学习模型。</p>
+</li>
+<li>
+<p><strong>PyTorch</strong>：由Facebook开发，提供了灵活的张量操作和自动求导功能。</p>
+</li>
+<li>
+<p><strong>Scikit-learn</strong>：适合传统的机器学习任务。</p>
+</li>
+</ul>
+<h3>2. 数据准备</h3>
+<ul>
+<li>
+<p><strong>数据收集</strong>：收集或获取你的数据集。</p>
+</li>
+<li>
+<p><strong>数据清洗</strong>：处理缺失值、异常值等。</p>
+</li>
+<li>
+<p><strong>数据预处理</strong>：如归一化、标准化、编码等。</p>
+</li>
+<li>
+<p><strong>数据分割</strong>：通常分为训练集、验证集和测试集。</p>
+</li>
+</ul>
+<h3>3. 模型设计与实现</h3>
+<p>根据任务选择合适的模型架构。例如，对于图像分类可以使用卷积神经网络（CNN），对于序列数据可以使用循环神经网络（RNN）或长短期记忆网络（LSTM）。</p>
+<h4>示例：使用TensorFlow和Keras构建一个简单的CNN模型</h4>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> tensorflow </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">as</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> tf</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> tensorflow.keras </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> layers, models</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 创建模型</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> models.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Sequential</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">add</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(layers.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Conv2D</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">32</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, (</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">), </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">activation</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'relu'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">input_shape</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">64</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">64</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)))</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">add</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(layers.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">MaxPooling2D</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">((</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)))</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">add</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(layers.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Conv2D</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">64</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, (</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">), </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">activation</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'relu'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">add</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(layers.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">MaxPooling2D</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">((</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)))</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">add</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(layers.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Conv2D</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">64</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, (</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">), </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">activation</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'relu'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">add</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(layers.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Flatten</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">())</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">add</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(layers.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Dense</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">64</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">activation</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'relu'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">add</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(layers.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">Dense</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">10</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">activation</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'softmax'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">))  </span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 假设是10类分类问题</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 编译模型</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">compile</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">optimizer</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'adam'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">loss</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'sparse_categorical_crossentropy'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">metrics</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'accuracy'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">])</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>4. 训练模型</h3>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 假设 X_train 和 y_train 是你的训练数据和标签</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">fit</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(X_train, y_train, </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">epochs</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">10</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">validation_split</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3>5. 模型评估与调优</h3>
+<ul>
+<li>
+<p><strong>评估</strong>：使用测试集评估模型性能。</p>
+</li>
+<li>
+<p><strong>调优</strong>：根据性能反馈调整模型结构或参数。</p>
+</li>
+<li>
+<p><strong>超参数调优</strong>：使用如Grid Search、Random Search或Bayesian Optimization等技术来优化超参数。</p>
+</li>
+</ul>
+<h3>6. 模型部署与使用</h3>
+<ul>
+<li>
+<p><strong>保存模型</strong>：使用<code>model.save()</code>保存模型。</p>
+</li>
+<li>
+<p><strong>加载模型</strong>：在其他应用中加载模型进行预测。</p>
+</li>
+<li>
+<p><strong>部署</strong>：将模型部署到生产环境，例如使用Flask或FastAPI创建API服务。</p>
+</li>
+</ul>
+<h4>示例：使用Flask部署模型</h4>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> flask </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> Flask, request, jsonify</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> tensorflow </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">as</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> tf</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">app </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> Flask</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">__name__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">model </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> tf.keras.models.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">load_model</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'path_to_your_model'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)  </span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 加载模型</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">@app</span><span style="--shiki-light:#4078F2;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">route</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'/predict'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> methods</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'POST'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">])</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> predict</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">():</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  data </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> request.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">get_json</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">force</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">True</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)  </span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 获取JSON格式的数据</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  preds </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> model.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">predict</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(data[</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'input'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">])  </span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 进行预测</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  return</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> jsonify</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'prediction'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: preds.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">tolist</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()})  </span><span style="--shiki-light:#A0A1A7;--shiki-dark:#7F848E;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"># 返回预测结果</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">if</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> __name__</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> ==</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> '__main__'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  app.</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF">run</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">debug</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">True</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过以上步骤，你可以在Python中开发一个复杂的大规模机器学习或深度学习模型程序。每个步骤都可能需要根据具体任务和数据进行相应的调整和优化。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Python基础知识2</title>
       <link>https://ujava.cn/python/base3.html</link>
@@ -8800,34 +8949,6 @@ xxxxProperties绑定了配置文件的哪些。<br>
 <li><a href="https://ujava.cn/pacman/" target="_blank" rel="noopener noreferrer">吃豆人</a></li>
 <li><a href="https://ujava.cn/jump/" target="_blank" rel="noopener noreferrer">跳一跳</a></li>
 </ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>小程序</title>
-      <link>https://ujava.cn/app/applet.html</link>
-      <guid>https://ujava.cn/app/applet.html</guid>
-      <source url="https://ujava.cn/rss.xml">小程序</source>
-      <description>微信小程序 微信搜索小程序UJava，或直接扫下面小程序码</description>
-      <category>应用相关</category>
-      <pubDate>Wed, 18 Sep 2024 07:56:37 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>微信小程序</h2>
-<blockquote>
-<p>微信搜索小程序<code>UJava</code>，或直接扫下面<code>小程序码</code></p>
-</blockquote>
-<img style="width: 200px" src="/logo/xcx.jpg"> ]]></content:encoded>
-    </item>
-    <item>
-      <title>安装包</title>
-      <link>https://ujava.cn/app/pack.html</link>
-      <guid>https://ujava.cn/app/pack.html</guid>
-      <source url="https://ujava.cn/rss.xml">安装包</source>
-      <description>安卓安装包 安装包下载 IOS安装包 暂无</description>
-      <category>应用相关</category>
-      <pubDate>Wed, 18 Sep 2024 07:56:37 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>安卓安装包</h2>
-<p><a href="/weapp-data/com.tencent.weauth-0.0.1.apk">安装包下载</a></p>
-<h2>IOS安装包</h2>
-<p><a href="/weapp-data/com.tencent.weauth-0.0.1.apk">暂无</a></p>
 ]]></content:encoded>
     </item>
   </channel>
