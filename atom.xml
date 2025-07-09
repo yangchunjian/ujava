@@ -4,17 +4,55 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2025-06-25T11:02:11.751Z</updated>
+  <updated>2025-07-09T10:16:45.794Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
-  <category term="设计Python"/>
   <category term="设计模型"/>
+  <category term="设计Python"/>
   <category term="Python"/>
   <category term="设计组件"/>
   <category term="设计高频"/>
   <category term="应用相关"/>
-  <category term="公告"/>
+  <entry>
+    <title type="text">LLaMA-Factory</title>
+    <id>https://ujava.cn/model/llamafactory.html</id>
+    <link href="https://ujava.cn/model/llamafactory.html"/>
+    <updated>2025-07-09T10:13:54.000Z</updated>
+    <summary type="html"><![CDATA[<p>LLaMA-Factory&nbsp;是一个基于&nbsp;Hugging Face&nbsp;和&nbsp;DeepSeek&nbsp;模型的开源工具，主要用于大模型微调、推理及可视化操作。以下是其核心用法：</p>
+<h3>环境准备</h3>
+<ol>
+<li>‌<strong>安装&nbsp;Anaconda</strong>&nbsp;‌：创建Python环境（推荐Python 3.11），激活环境后安装依赖（如<code>torch</code>、<code>metrics</code>等）。</li>
+<li>‌<strong>下载模型</strong>‌：通过<code>pip install modelscope download --model Qwen/Qwen2.5-VL-7B-Instruct --local_dir /data2/users/yszhang/quickllm/qwen2.5-vl-instruct</code>命令下载模型参数。</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<p>LLaMA-Factory&nbsp;是一个基于&nbsp;Hugging Face&nbsp;和&nbsp;DeepSeek&nbsp;模型的开源工具，主要用于大模型微调、推理及可视化操作。以下是其核心用法：</p>
+<h3>环境准备</h3>
+<ol>
+<li>‌<strong>安装&nbsp;Anaconda</strong>&nbsp;‌：创建Python环境（推荐Python 3.11），激活环境后安装依赖（如<code>torch</code>、<code>metrics</code>等）。</li>
+<li>‌<strong>下载模型</strong>‌：通过<code>pip install modelscope download --model Qwen/Qwen2.5-VL-7B-Instruct --local_dir /data2/users/yszhang/quickllm/qwen2.5-vl-instruct</code>命令下载模型参数。</li>
+</ol>
+<h3>启动图形界面</h3>
+<p>运行<code>llamafactory-cli webui</code>启动Web界面（访问<code>http://127.0.0.1:7860</code>），通过以下步骤操作：</p>
+<ol>
+<li>‌<strong>选择语言</strong>‌：默认支持中文（zh）。</li>
+<li>‌<strong>模型选择</strong>‌：从Hugging Face或本地路径加载模型（如Qwen2.5-VL-7B-Instruct）。</li>
+<li>‌<strong>参数配置</strong>‌：支持微调、推理参数设置，支持多卡训练（需提前安装&nbsp;DeepSpeed&nbsp;）。</li>
+</ol>
+<h3>微调流程</h3>
+<ol>
+<li>‌<strong>数据准备</strong>‌：需自行准备训练数据（文本/代码补全模板）。</li>
+<li>‌<strong>训练启动</strong>‌：通过Web界面选择训练方法（如全量调参、&nbsp;LoRA&nbsp;等），指定GPU数量及输出路径。</li>
+<li>‌<strong>结果验证</strong>‌：根据日志文件选择最优checkpoint进行推理测试。</li>
+</ol>
+<h3>注意事项</h3>
+<ul>
+<li>需确保服务器支持GPU加速，安装驱动及CUDA环境。 ‌</li>
+<li>不同版本可能存在功能差异，建议参考官方GitHub更新日志。 ‌</li>
+</ul>
+]]></content>
+    <category term="设计模型"/>
+    <published>2025-07-09T10:13:54.000Z</published>
+  </entry>
   <entry>
     <title type="text">Python模型蒸馏</title>
     <id>https://ujava.cn/python/distill.html</id>
@@ -9737,36 +9775,6 @@ xxxxProperties绑定了配置文件的哪些。<br>
 </blockquote>
 <img style="width: 200px" src="/logo/gzh.png"> ]]></content>
     <category term="应用相关"/>
-    <published>2024-09-18T08:45:41.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">公告</title>
-    <id>https://ujava.cn/notice/notice.html</id>
-    <link href="https://ujava.cn/notice/notice.html"/>
-    <updated>2024-09-22T01:54:11.000Z</updated>
-    <summary type="html"><![CDATA[<h2><a class="header-anchor" href="#网站更新"><span></span></a><a href="https://ujava.cn/timeline/" target="_blank" rel="noopener noreferrer">网站更新</a></h2>
-<h2><a class="header-anchor" href="#项目更新"><span></span></a><a href="https://ujava.cn/project/changelog.html" target="_blank" rel="noopener noreferrer">项目更新</a></h2>]]></summary>
-    <content type="html"><![CDATA[<h2><a class="header-anchor" href="#网站更新"><span></span></a><a href="https://ujava.cn/timeline/" target="_blank" rel="noopener noreferrer">网站更新</a></h2>
-<h2><a class="header-anchor" href="#项目更新"><span></span></a><a href="https://ujava.cn/project/changelog.html" target="_blank" rel="noopener noreferrer">项目更新</a></h2>
-<h2><a class="header-anchor" href="#公众号"><span></span></a><a href="/app/wechat">公众号</a></h2>
-<blockquote>
-<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>
-</blockquote>
-<img style="width: 200px" src="/logo/gzh.png">
-<h2><a class="header-anchor" href="#小程序"><span></span></a><a href="/app/applet">小程序</a></h2>
-<blockquote>
-<p>微信搜索小程序<code>UJava</code>，或直接扫下面<code>小程序码</code></p>
-</blockquote>
-<img style="width: 200px" src="/logo/xcx.jpg"> 
-<h2><a class="header-anchor" href="#安装包"><span></span></a><a href="/app/pack">安装包</a></h2>
-<h2><a class="header-anchor" href="#小游戏"><span></span></a><a href="">小游戏</a></h2>
-<ul>
-<li><a href="https://ujava.cn/2048/" target="_blank" rel="noopener noreferrer">2048</a></li>
-<li><a href="https://ujava.cn/pacman/" target="_blank" rel="noopener noreferrer">吃豆人</a></li>
-<li><a href="https://ujava.cn/jump/" target="_blank" rel="noopener noreferrer">跳一跳</a></li>
-</ul>
-]]></content>
-    <category term="公告"/>
     <published>2024-09-18T08:45:41.000Z</published>
   </entry>
 </feed>
