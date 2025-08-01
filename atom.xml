@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2025-07-09T10:16:45.794Z</updated>
+  <updated>2025-08-01T08:08:58.097Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -18,7 +18,7 @@
     <title type="text">LLaMA-Factory</title>
     <id>https://ujava.cn/model/llamafactory.html</id>
     <link href="https://ujava.cn/model/llamafactory.html"/>
-    <updated>2025-07-09T10:13:54.000Z</updated>
+    <updated>2025-08-01T08:06:01.000Z</updated>
     <summary type="html"><![CDATA[<p>LLaMA-Factory&nbsp;是一个基于&nbsp;Hugging Face&nbsp;和&nbsp;DeepSeek&nbsp;模型的开源工具，主要用于大模型微调、推理及可视化操作。以下是其核心用法：</p>
 <h3>环境准备</h3>
 <ol>
@@ -48,6 +48,19 @@
 <ul>
 <li>需确保服务器支持GPU加速，安装驱动及CUDA环境。 ‌</li>
 <li>不同版本可能存在功能差异，建议参考官方GitHub更新日志。 ‌</li>
+</ul>
+<p>Llama-Factory&nbsp;内置的MMLU、&nbsp;CMMLU&nbsp;和&nbsp;CEVAL&nbsp;是针对大模型在不同场景下的评估工具，主要区别如下：</p>
+<h3>MMLU（多领域语言理解）</h3>
+<p>用于评估模型在多个学科领域的理解能力，包含数学、艺术、法律等67个主题的测试题，通过多项选择题形式考察模型对学科知识的掌握程度。</p>
+<h3>CMMLU（中文多选多学科理解）</h3>
+<p>专为中文设计，涵盖艺术、商业、文化等67个主题，侧重评估模型对中国文化、语言及跨学科推理能力的适应性。其题目设计更贴近中文语境，答案需针对中国背景。</p>
+<h3>CEVAL（&nbsp;C-Eval&nbsp;）</h3>
+<p>包含52个学科13948道题，通过不同难度等级（初级、中级、高级）评估模型在代码生成、数学推理等领域的专项能力。题型为填空题，需模型生成代码或数学解题步骤。</p>
+<p>‌<strong>适用场景对比</strong>‌</p>
+<ul>
+<li>‌<strong>MMLU</strong>‌：适合评估模型在多领域知识理解的泛化能力，类似&nbsp;SQUAD&nbsp;等通用语言理解测试。</li>
+<li>‌<strong>CMMLU</strong>‌：侧重中文语境下的跨学科推理与知识应用，适合评估模型对中国文化、法律的适配性。</li>
+<li>‌<strong>CEVAL</strong>‌：聚焦代码生成、数学推理等专项能力，通过填空题形式直接考察模型的编程与逻辑推导能力。</li>
 </ul>
 ]]></content>
     <category term="设计模型"/>
