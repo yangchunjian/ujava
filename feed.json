@@ -7,6 +7,19 @@
   "favicon": "https://ujava.cn/favicon.ico",
   "items": [
     {
+      "title": "Spring AI Alibaba",
+      "url": "https://ujava.cn/model/springaialibaba.html",
+      "id": "https://ujava.cn/model/springaialibaba.html",
+      "summary": "Spring AI Alibaba",
+      "content_html": "<blockquote>\n<p>Spring AI Alibaba</p>\n</blockquote>\n",
+      "date_published": "2026-02-25T07:07:05.000Z",
+      "date_modified": "2026-02-25T07:07:05.000Z",
+      "authors": [],
+      "tags": [
+        "设计模型"
+      ]
+    },
+    {
       "title": "LLaMA-Factory",
       "url": "https://ujava.cn/model/llamafactory.html",
       "id": "https://ujava.cn/model/llamafactory.html",
@@ -1206,19 +1219,6 @@
       "authors": [],
       "tags": [
         "设计组件"
-      ]
-    },
-    {
-      "title": "公众号",
-      "url": "https://ujava.cn/app/wechat.html",
-      "id": "https://ujava.cn/app/wechat.html",
-      "summary": "微信公众号 微信搜索公众号UJava，或直接扫下面公众号",
-      "content_html": "<h2>微信公众号</h2>\n<blockquote>\n<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>\n</blockquote>\n<img style=\"width: 200px\" src=\"/logo/gzh.png\"> ",
-      "date_published": "2024-09-18T08:45:41.000Z",
-      "date_modified": "2024-09-22T01:54:11.000Z",
-      "authors": [],
-      "tags": [
-        "应用相关"
       ]
     }
   ]

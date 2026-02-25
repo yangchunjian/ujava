@@ -4,7 +4,7 @@
   <title>UJava</title>
   <subtitle> 【Java学习 + Java面试】首选UJava！  </subtitle>
   <icon>https://ujava.cn/favicon.ico</icon>
-  <updated>2025-08-01T08:08:58.097Z</updated>
+  <updated>2026-02-25T07:11:10.040Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://ujava.cn/atom.xml"/>
   <link rel="alternate" href="https://ujava.cn/"/>
@@ -13,7 +13,22 @@
   <category term="Python"/>
   <category term="设计组件"/>
   <category term="设计高频"/>
-  <category term="应用相关"/>
+  <entry>
+    <title type="text">Spring AI Alibaba</title>
+    <id>https://ujava.cn/model/springaialibaba.html</id>
+    <link href="https://ujava.cn/model/springaialibaba.html"/>
+    <updated>2026-02-25T07:07:05.000Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<p>Spring AI Alibaba</p>
+</blockquote>
+]]></summary>
+    <content type="html"><![CDATA[<blockquote>
+<p>Spring AI Alibaba</p>
+</blockquote>
+]]></content>
+    <category term="设计模型"/>
+    <published>2026-02-25T07:07:05.000Z</published>
+  </entry>
   <entry>
     <title type="text">LLaMA-Factory</title>
     <id>https://ujava.cn/model/llamafactory.html</id>
@@ -9771,23 +9786,5 @@ xxxxProperties绑定了配置文件的哪些。<br>
 ]]></content>
     <category term="设计组件"/>
     <published>2024-09-29T14:43:20.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">公众号</title>
-    <id>https://ujava.cn/app/wechat.html</id>
-    <link href="https://ujava.cn/app/wechat.html"/>
-    <updated>2024-09-22T01:54:11.000Z</updated>
-    <summary type="html"><![CDATA[<h2>微信公众号</h2>
-<blockquote>
-<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>
-</blockquote>
-<img style="width: 200px" src="/logo/gzh.png"> ]]></summary>
-    <content type="html"><![CDATA[<h2>微信公众号</h2>
-<blockquote>
-<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>
-</blockquote>
-<img style="width: 200px" src="/logo/gzh.png"> ]]></content>
-    <category term="应用相关"/>
-    <published>2024-09-18T08:45:41.000Z</published>
   </entry>
 </feed>

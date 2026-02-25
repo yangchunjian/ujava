@@ -6,8 +6,8 @@
     <link>https://ujava.cn/</link>
     <description> 【Java学习 + Java面试】首选UJava！  </description>
     <language>zh-CN</language>
-    <pubDate>Fri, 01 Aug 2025 08:08:58 GMT</pubDate>
-    <lastBuildDate>Fri, 01 Aug 2025 08:08:58 GMT</lastBuildDate>
+    <pubDate>Wed, 25 Feb 2026 07:11:10 GMT</pubDate>
+    <lastBuildDate>Wed, 25 Feb 2026 07:11:10 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>设计模型</category>
@@ -15,7 +15,19 @@
     <category>Python</category>
     <category>设计组件</category>
     <category>设计高频</category>
-    <category>应用相关</category>
+    <item>
+      <title>Spring AI Alibaba</title>
+      <link>https://ujava.cn/model/springaialibaba.html</link>
+      <guid>https://ujava.cn/model/springaialibaba.html</guid>
+      <source url="https://ujava.cn/rss.xml">Spring AI Alibaba</source>
+      <description>Spring AI Alibaba</description>
+      <category>设计模型</category>
+      <pubDate>Wed, 25 Feb 2026 07:07:05 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>Spring AI Alibaba</p>
+</blockquote>
+]]></content:encoded>
+    </item>
     <item>
       <title>LLaMA-Factory</title>
       <link>https://ujava.cn/model/llamafactory.html</link>
@@ -8953,20 +8965,6 @@ xxxxProperties绑定了配置文件的哪些。<br>
 <span class="line"><span>&lt;/dependency&gt;</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>将xxl-job-executor-sample-springboot这个模块下的XxlJobConfig复制一份到项目中，然后将相关配置设置好即可</p>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>公众号</title>
-      <link>https://ujava.cn/app/wechat.html</link>
-      <guid>https://ujava.cn/app/wechat.html</guid>
-      <source url="https://ujava.cn/rss.xml">公众号</source>
-      <description>微信公众号 微信搜索公众号UJava，或直接扫下面公众号</description>
-      <category>应用相关</category>
-      <pubDate>Wed, 18 Sep 2024 08:45:41 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>微信公众号</h2>
-<blockquote>
-<p>微信搜索公众号<code>UJava</code>，或直接扫下面<code>公众号</code></p>
-</blockquote>
-<img style="width: 200px" src="/logo/gzh.png"> ]]></content:encoded>
     </item>
   </channel>
 </rss>
